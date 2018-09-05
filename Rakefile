@@ -48,6 +48,24 @@ task "pennydreadful:update" do
   system "wget -q http://pdmtgo.com/legal_cards.txt -O index/penny_dreadful_legal_cards.txt"
 end
 
+desc "Update Canadian Highlander points list"
+task "canlander:update" do
+  require "json"
+  require "nokogiri"
+  require "open-uri"
+  doc = Nokogiri::HTML(open("https://canadianhighlander.wordpress.com/rules-the-points-list-and-deck-construction/"))
+  points_text = doc.css(".text_exposed_show p").last.text
+  points_map = {}
+  points_text.lines.each do |line|
+    if line =~ /^(.*) – (\d+)\n?$/
+      points_map[$1] = $2.to_i
+    else
+      raise "Failed to parse line in Canadian Highlander points list: #{line}"
+    end
+  end
+  Pathname("index/canlander-points-list.json").write(points_map.to_json)
+end
+
 desc "Fetch Gatherer pics"
 task "pics:gatherer" do
   pics = Pathname("frontend/public/cards")

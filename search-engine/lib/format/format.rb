@@ -294,6 +294,8 @@ class Format
         "duel"                       => FormatDuelCommander,
         "mtgocommander"              => FormatMTGOCommander,
         "mtgoedh"                    => FormatMTGOCommander,
+        "canadianhighlander"         => FormatCanadianHighlander,
+        "canlander"                  => FormatCanadianHighlander,
         "customstandard"             => FormatCustomStandard,
         "custard"                    => FormatCustomStandard,
         "cstd"                       => FormatCustomStandard,
