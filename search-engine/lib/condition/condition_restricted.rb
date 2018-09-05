@@ -6,6 +6,6 @@ class ConditionRestricted < ConditionFormat
   private
 
   def legality_ok?(legality)
-    legality == "restricted"
+    legality.start_with? "restricted"
   end
 end
