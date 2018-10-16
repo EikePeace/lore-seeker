@@ -12,14 +12,26 @@ class DeckController < ApplicationController
     render plain: @deck.to_text
   end
 
+  def new
+    return render_404 #TODO
+  end
+
   def show
-    @set = $CardDatabase.sets[params[:set]] or return render_404
-    @deck = @set.decks.find{|d| d.slug == params[:id]} or return render_404
+    if params[:set] == "user"
+      @set = nil
+      @deck = UserDeck.find(params[:id]) or return render_404
+      @user = @deck.user
+      if !@deck.public and @user != current_user
+        return render_403
+      end
+    else
+      @set = $CardDatabase.sets[params[:set]] or return render_404
+      @user = nil
+      @deck = @set.decks.find{|d| d.slug == params[:id]} or return render_404
+    end
 
     @type = @deck.type
     @name = @deck.name
-    @set_code = @set.code
-    @set_name = @set.name
 
     @cards = @deck.cards
     @sideboard = @deck.sideboard
@@ -29,7 +41,11 @@ class DeckController < ApplicationController
     choose_default_preview_card
     group_cards
 
-    @title = "#{@deck.name} - #{@set.name} #{@deck.type}"
+    if @type == "user"
+      @title = "#{@deck.name} - deck by #{@user}"
+    else
+      @title = "#{@deck.name} - #{@set.name} #{@deck.type}"
+    end
   end
 
   private

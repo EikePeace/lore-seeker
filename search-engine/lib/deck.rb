@@ -52,7 +52,7 @@ class Deck
   def to_text
     output = []
     output << "// NAME: #{@name} - #{@set.name} #{@type}"
-    output << "// URL: http://mtg.wtf/deck/#{set.code}/#{slug}"
+    output << "// URL: https://loreseeker.fenhl.net/deck/#{set.code}/#{slug}"
     @cards.each do |count, card|
       output << "#{count} #{card}"
     end

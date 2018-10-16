@@ -10,9 +10,12 @@
   .row
     .col-12
       %div
-        = @set_name
-        &mdash;
-        = @type
+        - if @type == "user"
+          Created by #{@user}
+        - else
+          = @set.name
+          &mdash;
+          = @type
   .row
     .col-8.two-columns
       - @card_groups.each do |(i, group), cards|

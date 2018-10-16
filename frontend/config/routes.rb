@@ -14,12 +14,12 @@ Rails.application.routes.draw do
   get "help/rules" => "help#rules"
   get "help/contact" => "help#contact"
   get "list" => "card#list"
+  get "deck/new" => "deck#new"
   get "deck/:set/:id" => "deck#show"
   get "deck/:set/:id/download" => "deck#download"
   get "deck" => "deck#index"
   get "sealed" => "sealed#index"
   get "/" => "card#index"
-  # Lore Seeker extensions
   get "auth/discord/callback" => "session#create"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

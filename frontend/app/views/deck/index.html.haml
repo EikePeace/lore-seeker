@@ -1,5 +1,13 @@
 .row
   .col-12
+    %h3 My Decks
+      %a{class: "btn btn-outline-success", href: "/deck/new"} New
+    - if signed_in?
+      You have no decks.
+      /TODO
+    - else
+      %a{href: "/auth/discord"} Sign in with Discord
+      to see your decks.
     %h3 Preconstructed Decks
     - @sets.each do |set|
       %div= "#{set.name}"
