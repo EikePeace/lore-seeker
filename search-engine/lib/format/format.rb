@@ -72,7 +72,7 @@ class Format
       return "A maximum of one copy of the same nonbasic card is allowed, but this deck has #{count} copies of #{offending_card.name}."
     end
     deck_color_identity = deck.sideboard.map(&:last).map(&:color_identity).flat_map(&:chars).to_set
-    offending_card = deck.mainboard.map(&:last).find{|card| !(card.color_identity.chars.to_set <= deck_color_identity) }
+    offending_card = deck.cards.map(&:last).find{|card| !(card.color_identity.chars.to_set <= deck_color_identity) }
     return "The deck has a color identity of #{color_identity_name(deck_color_identity)}, but #{offending_card.name} has a color identity of #{color_identity_name(offending_card.color_identity.chars.to_set)}." unless offending_card.nil?
   end
 
@@ -101,19 +101,19 @@ class Format
     end
     deck_color_identity = deck.sideboard.map(&:last).map(&:color_identity).flat_map(&:chars).to_set
     if deck_color_identity.empty?
-      first_basic_land = deck.mainboard.map(&:last).find{|card| card.types.include?("basic") and card.types.include?("land") and ["plains", "island", "swamp", "mountain", "forest"].any?{|land_type| card.types.include?(land_type) } }
+      first_basic_land = deck.cards.map(&:last).find{|card| card.types.include?("basic") and card.types.include?("land") and ["plains", "island", "swamp", "mountain", "forest"].any?{|land_type| card.types.include?(land_type) } }
       unless first_basic_land.nil?
         first_basic_land_type = first_basic_land.types.find{|land_type| ["plains", "island", "swamp", "mountain", "forest"].include(land_type) }
-        second_basic_land = deck.mainboard.map(&:last).find{|card| card.types.include?("basic") and card.types.include?("land") and ["plains", "island", "swamp", "mountain", "forest"].any?{|land_type| land_type != first_basic_land_type && card.types.include?(land_type) } }
+        second_basic_land = deck.cards.map(&:last).find{|card| card.types.include?("basic") and card.types.include?("land") and ["plains", "island", "swamp", "mountain", "forest"].any?{|land_type| land_type != first_basic_land_type && card.types.include?(land_type) } }
         unless second_basic_land.nil?
           second_basic_land_type = second_basic_land.types.find{|land_type| land_type != first_basic_land_type && ["plains", "island", "swamp", "mountain", "forest"].include(land_type) }
           return "#{format_pretty_name} decks with a colorless color identity may only include basic lands of a single basic land type, but this deck has both #{first_basic_land_type} and #{second_basic_land_type}."
         end
       end
-      offending_card = deck.mainboard.map(&:last).find{|card| !card.color_identity.empty? and (!card.types.include?("basic") or !card.types.include?("land")) } # assumes that basic lands can only get their color identity from their basic land type
+      offending_card = deck.cards.map(&:last).find{|card| !card.color_identity.empty? and (!card.types.include?("basic") or !card.types.include?("land")) } # assumes that basic lands can only get their color identity from their basic land type
       return "The deck has a colorless color identity, but #{offending_card.name} has a color identity of #{color_identity_name(offending_card.color_identity.chars.to_set)}." unless offending_card.nil?
     else
-      offending_card = deck.mainboard.map(&:last).find{|card| !(card.color_identity.chars.to_set <= deck_color_identity) }
+      offending_card = deck.cards.map(&:last).find{|card| !(card.color_identity.chars.to_set <= deck_color_identity) }
       return "The deck has a color identity of #{color_identity_name(deck_color_identity)}, but #{offending_card.name} has a color identity of #{color_identity_name(offending_card.color_identity.chars.to_set)}." unless offending_card.nil?
     end
   end
