@@ -372,7 +372,10 @@ if __name__ == '__main__':
         was_running = subprocess.run(['systemctl', 'is-active', '--quiet', 'lore-seeker']).returncode == 0
         if was_running:
             subprocess.run(['sudo', 'systemctl', 'stop', 'lore-seeker'], check=True)
-        exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], cwd='/opt/git/github.com/fenhl/lore-seeker/stage/frontend').returncode
+        try:
+            exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], cwd='/opt/git/github.com/fenhl/lore-seeker/stage/frontend').returncode
+        except KeyboardInterrupt:
+            exit_code = 0
         if was_running:
             subprocess.run(['sudo', 'systemctl', 'start', 'lore-seeker'], check=True)
         sys.exit(exit_code)
