@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "auth/discord/callback" => "session#create"
   get "card/gallery/:set/:id" => "card#gallery"
   get "card/:set/:id" => "card#show"
   get "card/:set/:id/:name" => "card#show"
@@ -9,12 +10,17 @@ Rails.application.routes.draw do
   get "set" => "set#index"
   get "artist/:id" => "artist#show"
   get "artist" => "artist#index"
+  get "event" => "event#index"
+  get "event/cssl" => "event#cssl_index"
   get "format/:id" => "format#show"
   get "format" => "format#index"
   get "help/syntax" => "help#syntax"
   get "help/rules" => "help#rules"
   get "help/contact" => "help#contact"
   get "list" => "card#list"
+  get "logout" => "session#destroy"
+  get "deck/crawl/:id" => "deck#show_crawl"
+  get "deck/ech/:id" => "deck#show_ech"
   get "deck/:set/:id" => "deck#show"
   get "deck/:set/:id/download" => "deck#download"
   get "deck/visualize" => "deck#visualize"
@@ -22,12 +28,5 @@ Rails.application.routes.draw do
   get "deck" => "deck#index"
   get "sealed" => "sealed#index"
   get "/" => "card#index"
-  # Lore Seeker extensions
-  get "auth/discord/callback" => "session#create"
-  get "deck/crawl/:id" => "deck#show_crawl"
-  get "deck/ech/:id" => "deck#show_ech"
-  get "event" => "event#index"
-  get "event/cssl" => "event#cssl_index"
-  get "logout" => "session#destroy"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
