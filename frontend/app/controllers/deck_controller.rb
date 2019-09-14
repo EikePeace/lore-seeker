@@ -57,7 +57,7 @@ class DeckController < ApplicationController
 
     @legality = Format["custom brawl"].new.deck_legality(@deck)
 
-    @card_previews = @deck.physical_cards
+    @card_previews = @deck.physical_cards.grep(PhysicalCard)
 
     choose_default_preview_card
     group_cards
@@ -84,7 +84,7 @@ class DeckController < ApplicationController
 
     @legality = Format["elder cockatrice highlander"].new.deck_legality(@deck)
 
-    @card_previews = @deck.physical_cards
+    @card_previews = @deck.physical_cards.grep(PhysicalCard)
 
     choose_default_preview_card
     group_cards
