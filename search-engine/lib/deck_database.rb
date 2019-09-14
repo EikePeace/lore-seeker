@@ -12,9 +12,9 @@ class DeckDatabase
 
   def resolve_custom(count, set_code, set_version, card_number, card_name, foil=false)
     set = @db.sets[set_code] or raise "Set not found #{set_code}"
-    return [count, UnknownCard.new(name)] if set.custom? && set.custom_version != set_version
+    return [count, UnknownCard.new(card_name)] if set.custom? && set.custom_version != set_version
     printing = set.printings.find{|cp| cp.number == card_number}
-    return [count, UnknownCard.new(name)] unless printing && printing.name == card_name
+    return [count, UnknownCard.new(card_name)] unless printing && printing.name == card_name
     [count, PhysicalCard.for(printing, !!foil)]
   end
 
