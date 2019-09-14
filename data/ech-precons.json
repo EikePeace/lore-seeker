@@ -1,0 +1,4391 @@
+[
+    {
+        "cards": [
+            [
+                1,
+                "dms",
+                "3.00",
+                "229",
+                "Dreamheart Mox"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "239",
+                "Mana Confluence"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "237",
+                "Blurred Horizons"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "162",
+                "Behold the End"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "153",
+                "Bio-Research"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "153",
+                "Beckon Growth"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "180",
+                "Settle"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "155",
+                "Cultivate"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "201",
+                "Dohar Mana Vault"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "160",
+                "Expedition Corps"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "169",
+                "Farseek"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "180",
+                "Hopeful Horizons"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "167",
+                "Mirror Mirage"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "192",
+                "Ontarachie Dryad"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "172",
+                "Prepare a Hideout"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "185",
+                "Sylvan Ritualist"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "179",
+                "Redistricting"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "239",
+                "Evolving Wilds"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "245",
+                "Terramorphic Expanse"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "188",
+                "Sommeil Sage"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "187",
+                "Tanglevine"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "179a",
+                "Wealthy Man"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "209",
+                "Zoulev Rites"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "207",
+                "Fossilized Colossus"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "153",
+                "Acidic Slime"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "165",
+                "Ma'at, God of Harmony"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "148",
+                "Titan of Industry"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "121",
+                "Runestone Crucible"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "226",
+                "Possibility Titan"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "176",
+                "Nanobirther"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "225",
+                "Data Petal"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "233",
+                "Ornate Incense"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "231",
+                "Research Notes"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "225",
+                "Selfless Engineer"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "247",
+                "Spears of Valkas"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "247",
+                "Twisted Peaks"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "247",
+                "Lush Mesa"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "241",
+                "Rootbound Crag"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "226",
+                "Savage Wildlands"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "239",
+                "Enlightened Valley"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "240",
+                "Dangerous Territory"
+            ],
+            [
+                7,
+                "net",
+                "21",
+                "255",
+                "Forest"
+            ],
+            [
+                7,
+                "net",
+                "21",
+                "254",
+                "Mountain"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "216",
+                "Freight Train"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "168",
+                "Gunmetal Hydra"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "222",
+                "Roselyn's Viola"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "120",
+                "Burning Desire"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "177",
+                "Primal Insight"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "230",
+                "Solemn Simulacrum"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "227",
+                "Rod of Seasons"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "155",
+                "Duality of Destiny"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "138",
+                "Luma's Guidance"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "123",
+                "Caldera Tyrant"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "207",
+                "Soul of Aenyr"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "118",
+                "Cataclysmic Eruption"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "133",
+                "Kalanua's Wrath"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "240a",
+                "Lost Cavern"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "124",
+                "Crest the Waters"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "122",
+                "Action"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "129",
+                "Harbinger of Anarchy"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "147",
+                "Monument Crawler"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "132",
+                "Eregon's Masterpiece"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "129",
+                "Outlands Hellkite"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "158",
+                "Sunflare Dragon"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "133",
+                "Dreamfire Dragon"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "230",
+                "Stoneforge Titan"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "171",
+                "Evaldi, Genesis of Hope"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "250",
+                "Weald Formation"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "247",
+                "Opaku, Shifter's Stone"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "244",
+                "Mining Formation"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "230",
+                "Coral Barrens"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "238",
+                "Decaying Domain"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "248",
+                "Sprawling Coils"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "136",
+                "Massive Eruption"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "219",
+                "Quelana, Mother of Pyromancy"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "165",
+                "Garruk Wildspeaker"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "113",
+                "Chandra, Heart of the Revolt"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "179",
+                "Rotten to the Core"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "165",
+                "Grand Entrance"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "250",
+                "Vibrant Locale"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "247",
+                "Shadowed Pillar"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "236",
+                "Unicorn of the Vale"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "213",
+                "Radiant Skinmarks"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "153",
+                "Nezadar Sacrament"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "195",
+                "Coiling Matrix"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "176",
+                "Nomadic Druid"
+            ]
+        ],
+        "name": "Erollin Precon",
+        "release_date": "2019-09-14",
+        "set_code": "rak",
+        "set_name": "Rakoa",
+        "sideboard": [
+            [
+                1,
+                "eau",
+                "39",
+                "215",
+                "Erollin, Eccentric Collector"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "255",
+                "Forest"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "254",
+                "Mountain"
+            ]
+        ],
+        "type": "Commander Deck"
+    },
+    {
+        "cards": [
+            [
+                1,
+                "dms",
+                "3.00",
+                "229",
+                "Dreamheart Mox"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "222",
+                "Echoshells"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "239",
+                "Mana Confluence"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "237",
+                "Blurred Horizons"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "212",
+                "Intact Leystone"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "215",
+                "Ancient Prism"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "233",
+                "Evolving Wilds"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "245",
+                "Terramorphic Expanse"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "220",
+                "Mana Drone"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "85",
+                "Boiling Outflow"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "85",
+                "Deal at the Crossroads"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "104",
+                "Reassembler"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "108",
+                "Nito, the Gravelord"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "86",
+                "Nezadar Broodqueen"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "97",
+                "Mummify"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "64",
+                "Memetic Casting"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "65",
+                "Mark of the Scaleblight"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "120",
+                "Vibrant Rapture"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "94",
+                "Foredoom"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "153",
+                "Marionette Show"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "93",
+                "Fallen Aristocrat"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "94",
+                "Shadows of Oblivion"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "109",
+                "Sorin, Lord of Vengeance"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "40",
+                "Auspicial Sphinx"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "75",
+                "Spellslumber Mori"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "81",
+                "Wall of Mysteries"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "63",
+                "Lotus Debutante"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "75",
+                "Sensational Festivities"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "164",
+                "Persona Elemental"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "112",
+                "Profane Prelate"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "42",
+                "Ancestral Research"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "72",
+                "Titan of Cyclones"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "98",
+                "Jeama, Zoulev Queen"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "107",
+                "Perverse Demon"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "202",
+                "Notion Thief"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "235",
+                "Drowned Catacomb"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "242",
+                "Forlorn Ruin"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "222",
+                "Flooded Bog"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "245",
+                "Nightmare Lagoon"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "246",
+                "Nightmarish Morass"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "250",
+                "Poisoned Waterhole"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "249",
+                "Twisted Tundra"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "248",
+                "Watery Depths"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "74",
+                "Soul Confluence"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "78",
+                "Wade Through"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "249",
+                "Umbrous Depths"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "238",
+                "Decaying Domain"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "230",
+                "Coral Barrens"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "234a",
+                "Fangmarked Cave"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "242a",
+                "Luminescent Lake"
+            ],
+            [
+                8,
+                "net",
+                "21",
+                "253",
+                "Swamp"
+            ],
+            [
+                8,
+                "net",
+                "21",
+                "252",
+                "Island"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "54",
+                "Mind Control Trap"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "71",
+                "Trapmaker's Secret"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "51",
+                "Feathered Informants"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "42",
+                "Devastating Sandstorm"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "81",
+                "Ashiok's Becoming"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "76",
+                "Subconscious Recall"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "60",
+                "Kantra of the Third Eye"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "47",
+                "Dissipate"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "59",
+                "Negate"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "110",
+                "Reap the Dreamer"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "80",
+                "Abyssal Strike"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "108",
+                "Prophetic Tutor"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "70",
+                "Tall Tales"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "77",
+                "Accursed Mentoring"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "47",
+                "Duality of Truth"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "71",
+                "Sandwarp"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "69",
+                "Ruinous Recall"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "101",
+                "Lazaire's Altar"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "64",
+                "Mother Owl's Herald"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "84",
+                "Gravedebt Demon"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "134",
+                "Facestealer"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "229",
+                "Sapphire Soulstone"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "221",
+                "Jet Soulstone"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "235",
+                "Memory Conduit"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "236",
+                "Unicorn of the Vale"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "224",
+                "Paradise Gearwing"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "66",
+                "Repurpose"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "54",
+                "Gaile Hannidy"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "63",
+                "Peculate"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "60",
+                "Logan's Isolation"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "59",
+                "Mind Control"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "230",
+                "Solemn Simulacrum"
+            ]
+        ],
+        "name": "UB Spellocrats (Marad) - ECH Precon",
+        "release_date": "2019-09-14",
+        "set_code": "rak",
+        "set_name": "Rakoa",
+        "sideboard": [
+            [
+                1,
+                "dhm",
+                ".75",
+                "174",
+                "Marad, Truth Seeker"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "252",
+                "Island"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "253",
+                "Swamp"
+            ]
+        ],
+        "type": "Commander Deck"
+    },
+    {
+        "cards": [
+            [
+                1,
+                "dms",
+                "3.00",
+                "229",
+                "Dreamheart Mox"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "222",
+                "Echoshells"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "239",
+                "Mana Confluence"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "237",
+                "Blurred Horizons"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "212",
+                "Intact Leystone"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "215",
+                "Ancient Prism"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "236",
+                "Evolving Wilds"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "245",
+                "Terramorphic Expanse"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "220",
+                "Mana Drone"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "236",
+                "Unicorn of the Vale"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "223",
+                "Mystical Moai"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "228",
+                "Oracle Cauldron"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "229",
+                "Steel Stallion"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "1",
+                "Karn, Heart of Guilt"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "74",
+                "Soul Confluence"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "75",
+                "Sensational Festivities"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "139",
+                "Dazzling Festivities"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "123",
+                "Caldera Tyrant"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "41",
+                "Cloudcrash Skywhale"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "40",
+                "Auspicial Sphinx"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "47",
+                "Contemplate the Source"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "60",
+                "Kantra of the Third Eye"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "64",
+                "Mother Owl's Herald"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "61",
+                "Knowledge"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "71",
+                "Trapmaker's Secret"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "54",
+                "Mind Control Trap"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "51",
+                "Feathered Informants"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "148",
+                "Titan of Industry"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "72",
+                "Titan of Cyclones"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "113",
+                "Chandra, Heart of the Revolt"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "42",
+                "Devastating Sandstorm"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "60",
+                "Logan's Isolation"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "76",
+                "Subconscious Recall"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "45",
+                "Back Door"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "42",
+                "Ancestral Research"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "69",
+                "Ruinous Recall"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "219",
+                "Ral Zarek, Dream Artist"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "157",
+                "Shimmering Dunekite"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "234",
+                "Prophetic Prism"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "231",
+                "Research Notes"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "225",
+                "Data Petal"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "233",
+                "Ornate Incense"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "222",
+                "Roselyn's Viola"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "78",
+                "Wade Through"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "47",
+                "Duality of Truth"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "68",
+                "Snake Oil Salesman"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "121",
+                "Runestone Crucible"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "63",
+                "Lotus Debutante"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "70",
+                "Tall Tales"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "71",
+                "Sandwarp"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "118",
+                "Cataclysmic Eruption"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "133",
+                "Kalanua's Wrath"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "158",
+                "Sunflare Dragon"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "225",
+                "Pithing Needle"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "207",
+                "Blade of Choices"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "218",
+                "Jetpack"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "235",
+                "Desolate Lighthouse"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "241",
+                "Factory Reactor"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "240",
+                "Glacial Crevasse"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "246",
+                "Ritzy Parlor"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "251",
+                "Spindling Nimbus"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "251",
+                "Waterworn Gully"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "231",
+                "Totemic Waterfall"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "244",
+                "Mistfire Ridge"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "240",
+                "Ascending Spires"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "230",
+                "Coral Barrens"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "238",
+                "Decaying Domain"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "244",
+                "Sunset Pyramids"
+            ],
+            [
+                7,
+                "net",
+                "21",
+                "254",
+                "Mountain"
+            ],
+            [
+                8,
+                "net",
+                "21",
+                "252",
+                "Island"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "54",
+                "Gaile Hannidy"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "66",
+                "Sarasa, Adventuring Professor"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "195",
+                "Coiling Matrix"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "216",
+                "Freight Train"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "225",
+                "Selfless Engineer"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "230",
+                "Solemn Simulacrum"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "70",
+                "Scion Mimic"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "214",
+                "Delivery Automaton"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "122",
+                "Action"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "68",
+                "Quintessence Gorger"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "242",
+                "Field of Ruin"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "228",
+                "Archive of Kariro"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "240a",
+                "Lost Cavern"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "235",
+                "Timeless Eradicator"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "75",
+                "Wisdom"
+            ]
+        ],
+        "name": "UR Artifacts and Giants (Belit) Precon",
+        "release_date": "2019-09-14",
+        "set_code": "rak",
+        "set_name": "Rakoa",
+        "sideboard": [
+            [
+                1,
+                "dhm",
+                ".75",
+                "168",
+                "Belit, Tel'tor Emissary"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "252",
+                "Island"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "254",
+                "Mountain"
+            ]
+        ],
+        "type": "Commander Deck"
+    },
+    {
+        "cards": [
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "82",
+                "Blood Bairn"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "81",
+                "Chupacabra"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "9",
+                "Clockwork Battlecrafter"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "49",
+                "Blood Artist"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "234",
+                "Tinman Posse"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "230",
+                "Velka, Arbiter of Sin"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "204",
+                "Faceless Mob"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "225",
+                "Selfless Engineer"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "83",
+                "Bloodknight Countess"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "113",
+                "Yorona Banshee"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "92",
+                "Falkenrath Noble"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "92",
+                "Nothing Lost"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "85",
+                "Deal at the Crossroads"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "89",
+                "Deathplague"
+            ],
+            [
+                9,
+                "net",
+                "21",
+                "253",
+                "Swamp"
+            ],
+            [
+                11,
+                "net",
+                "21",
+                "251",
+                "Plains"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "239",
+                "Boom Town"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "239",
+                "Corrupt Courtroom"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "245",
+                "Parish Chapel"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "240",
+                "Slumbering Altar"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "229",
+                "Tattered Temple"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "249",
+                "Valley of Lost Souls"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "236",
+                "Forsaken Sanctuary"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "239",
+                "Evolving Wilds"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "236",
+                "Abandoned Bonfire"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "38",
+                "Vaen, Will of Law"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "8",
+                "Equity"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "12",
+                "Endless Encounters"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "207",
+                "Underworld Escort"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "27",
+                "Sahai Awakening"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "215",
+                "Ancient Prism"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "229",
+                "Dreamheart Mox"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "220",
+                "Mana Drone"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "224",
+                "Paradise Gearwing"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "77",
+                "Accursed Mentoring"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "14",
+                "Goat Herder"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "22",
+                "Young Dreamer"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "83",
+                "Blood Beggar"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "8",
+                "Duality of Purity"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "7",
+                "Doharum Retainers"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "6",
+                "Border Sentry"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "10",
+                "Farajo, Peacemaker"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "237",
+                "Blurred Horizons"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "93",
+                "Fallen Aristocrat"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "110",
+                "Voracious Wendigo"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "85",
+                "Boiling Outflow"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "5",
+                "Convoy Emissary"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "86",
+                "Nezadar Broodqueen"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "209",
+                "Sandstorm Sovereign"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "39",
+                "United in Survival"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "238",
+                "Timeworn Foundry"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "110",
+                "Parasitic Wallhugger"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "230",
+                "Coral Barrens"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "91",
+                "Doomed Temptation"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "88",
+                "Council of Vaya"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "97",
+                "Tomb of the Dohar"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "3",
+                "Ancestral Aid"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "101",
+                "Lazaire's Altar"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "236",
+                "Unicorn of the Vale"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "239",
+                "Mana Confluence"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "28",
+                "Reev's Realignment"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "24",
+                "Nomad's Wanderings"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "32",
+                "Seal of Judgment"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "103",
+                "Occult Tutor"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "120",
+                "Vibrant Rapture"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "19",
+                "N-FORCE Captain"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "23",
+                "Overgrowth Guardian"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "239",
+                "Blessed Mausoleum"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "130",
+                "Entry Fee"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "238",
+                "Hidden Harbor"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "250",
+                "Vibrant Locale"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "223",
+                "Wistful Sonnet"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "26",
+                "Suran Chief"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "40",
+                "Woopip Chef"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "25",
+                "Niala, Guide of Lost Souls"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "82",
+                "Assiduous Terror"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "116",
+                "Sin Cultist"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "35",
+                "Thorolund Healer"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "160",
+                "Nefarious Noble"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "104",
+                "Reassembler"
+            ]
+        ],
+        "name": "WB Aristocrats (Sarru) Precon",
+        "release_date": "2019-09-14",
+        "set_code": "rak",
+        "set_name": "Rakoa",
+        "sideboard": [
+            [
+                1,
+                "vln",
+                "updated2",
+                "213",
+                "Sarru, Stonecult Rector"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "253",
+                "Swamp"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "251",
+                "Plains"
+            ]
+        ],
+        "type": "Commander Deck"
+    },
+    {
+        "cards": [
+            [
+                1,
+                "eau",
+                "39",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "239",
+                "Mana Confluence"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "237",
+                "Blurred Horizons"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "160",
+                "Expedition Corps"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "192",
+                "Ontarachie Dryad"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "185",
+                "Sylvan Ritualist"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "233",
+                "Evolving Wilds"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "245",
+                "Terramorphic Expanse"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "188",
+                "Sommeil Sage"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "187",
+                "Tanglevine"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "179a",
+                "Wealthy Man"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "186",
+                "Kantra of Old Majik"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "198",
+                "Serpentdancer Kantra"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "179",
+                "Primal Eleon"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "207",
+                "Fossilized Colossus"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "153",
+                "Acidic Slime"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "165",
+                "Ma'at, God of Harmony"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "187",
+                "Kantra's Envoy"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "208",
+                "Soul of Jannada"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "117",
+                "Blazeheart Idealon"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "121",
+                "Chromaborn Muse"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "172",
+                "Exiled Channeler"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "167",
+                "Hiutha, Kelada Wildborn"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "173",
+                "Nature's Majesty"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "176",
+                "Nomadic Druid"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "194",
+                "Pyromantic Shaman"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "219",
+                "Quelana, Mother of Pyromancy"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "205",
+                "Ragefire Shaman"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "182",
+                "Speaker of Destinies"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "35",
+                "Thorolund Healer"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "181",
+                "Cypress, the Wayfarer"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "165",
+                "Grand Entrance"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "153",
+                "Nezadar Sacrament"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "183",
+                "The Circle of Life"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "245",
+                "Prayer Hall"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "254",
+                "Zephyr Peak"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "248",
+                "Sunlit Plaza"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "248",
+                "Sprawling Coils"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "250",
+                "Vibrant Locale"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "247",
+                "Shadowed Pillar"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "239",
+                "Enlightened Valley"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "240",
+                "Ethereal Gardens"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "242",
+                "Fenced Pasture"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "245",
+                "Hoodoo Valley"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "247",
+                "Lush Mesa"
+            ],
+            [
+                2,
+                "net",
+                "21",
+                "251",
+                "Plains"
+            ],
+            [
+                2,
+                "net",
+                "21",
+                "254",
+                "Mountain"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "255",
+                "Forest"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "246",
+                "Roil Garden"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "241",
+                "Rootbound Crag"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "247",
+                "Spears of Valkas"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "247",
+                "Sunlit Alley"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "244",
+                "Sunpetal Grove"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "247",
+                "Twisted Peaks"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "249",
+                "Weapons Cache"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "250",
+                "Twisted Valley"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "124",
+                "Crest the Waters"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "249",
+                "Shellback Tradepost"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "242",
+                "Heart of Inspiration"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "240a",
+                "Lost Cavern"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "152",
+                "Spice Den"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "187",
+                "Mokupe Fisher"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "192",
+                "Mushroom Family"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "157",
+                "Shimmering Dunekite"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "230",
+                "Solemn Simulacrum"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "153",
+                "Bio-Research"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "216",
+                "Burnished Hart"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "10",
+                "Farajo, Peacemaker"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "178",
+                "Kohea's Overseer"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "212",
+                "Titanic Crusher"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "158",
+                "Sunflare Dragon"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "168",
+                "Nurturer of the Old Ways"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "225",
+                "Selfless Engineer"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "207",
+                "Soul of Aenyr"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "136",
+                "Massive Eruption"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "182",
+                "Snapping Hydra"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "190",
+                "Vibrant Hydra"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "8",
+                "Duality of Purity"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "155",
+                "Duality of Destiny"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "133",
+                "Dreamfire Dragon"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "208",
+                "Woopip Wanderer"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "165",
+                "Garruk Wildspeaker"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "122",
+                "Action"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "170",
+                "Dust-Herd Ancient"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "136",
+                "Fires of the Mori"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "128",
+                "Band of Irregulars"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "38",
+                "Unity"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "197",
+                "Walker of Regrowth"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "2",
+                "Arbiter of Sanctions"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "31",
+                "Sanctity of Sleep"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "214",
+                "Uaria, King of Akuga"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "181",
+                "Steelborn Muse"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "236",
+                "Unicorn of the Vale"
+            ]
+        ],
+        "name": "Ramp Combo (Junmra) Precon",
+        "release_date": "2019-09-14",
+        "set_code": "rak",
+        "set_name": "Rakoa",
+        "sideboard": [
+            [
+                3,
+                "net",
+                "21",
+                "251",
+                "Plains"
+            ],
+            [
+                3,
+                "net",
+                "21",
+                "254",
+                "Mountain"
+            ],
+            [
+                4,
+                "net",
+                "21",
+                "255",
+                "Forest"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "196",
+                "Junmra, Wild Sovereign"
+            ]
+        ],
+        "type": "Commander Deck"
+    },
+    {
+        "cards": [
+            [
+                1,
+                "tsl",
+                "1.05",
+                "207",
+                "Blade of Choices"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "17",
+                "Gift of the Dohar"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "229",
+                "Dreamheart Mox"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "201",
+                "Dohar Mana Vault"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "13",
+                "Fort Redemption Ranger"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "167",
+                "Hiutha, Kelada Wildborn"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "176",
+                "Nomadic Druid"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "177",
+                "Untamed Hydra"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "9",
+                "Clockwork Battlecrafter"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "225",
+                "Selfless Engineer"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "187",
+                "Tanglevine"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "198",
+                "Druid of the Pack"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "208",
+                "Soul of Jannada"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "182",
+                "Speaker of Destinies"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "185",
+                "Sylvan Ritualist"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "186",
+                "Captain of Industry"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "3",
+                "Atun, God of the Sun"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "230",
+                "Solemn Simulacrum"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "157",
+                "Exploit the Outlands"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "153",
+                "Bio-Research"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "32",
+                "Seal of Judgment"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "27",
+                "People's Champion"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "3",
+                "Ancestral Aid"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "167",
+                "Mirror Mirage"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "199",
+                "Ancient Imprisonment"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "165",
+                "Grand Entrance"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "155",
+                "Duality of Destiny"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "153",
+                "Beckon Growth"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "37",
+                "Wander the Unknown"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "242",
+                "Fenced Pasture"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "241",
+                "Hedron Formation"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "250",
+                "Weald Formation"
+            ],
+            [
+                8,
+                "net",
+                "21",
+                "251",
+                "Plains"
+            ],
+            [
+                9,
+                "net",
+                "21",
+                "255",
+                "Forest"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "237",
+                "Blurred Horizons"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "244",
+                "Sunpetal Grove"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "240",
+                "Ethereal Gardens"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "246",
+                "Roil Garden"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "228",
+                "Splendid Oasis"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "245",
+                "Temephis Promenade"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "250",
+                "Twisted Valley"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "242",
+                "Hero's Rest"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "250a",
+                "Slumbering Grotto"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "168",
+                "Hohoja, One with the Jungle"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "10",
+                "Farajo, Peacemaker"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "38",
+                "Vaen, Will of Law"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "200",
+                "Yemma's Mandate"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "8",
+                "Chosen by the Lords"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "188",
+                "Communal Blessing"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "7",
+                "Empty Night"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "2",
+                "Alone in the World"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "180",
+                "Wisdom of the Mighty"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "8",
+                "Equity"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "12",
+                "Endless Encounters"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "166",
+                "Grootslang Stampede"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "27",
+                "Sahai Awakening"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "159",
+                "Cultivate"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "177",
+                "Primal Insight"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "161",
+                "Final Showdown"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "169",
+                "Farseek"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "180",
+                "Hopeful Horizons"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "209",
+                "Zoulev Rites"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "10",
+                "Glamorous Festivities"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "248",
+                "Sunlit Plaza"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "192",
+                "Ontarachie Dryad"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "22",
+                "Ontarachie Vagabond"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "14",
+                "Helena's Rebuff"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "190a",
+                "Mushroom Merchant"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "200",
+                "Sporeflow Protector"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "250",
+                "Vibrant Locale"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "171",
+                "Avatar of Plume de Val"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "35",
+                "Thorolund Healer"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "239",
+                "Mana Confluence"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "17",
+                "Martial Dictate"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "165",
+                "Garruk Wildspeaker"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "40",
+                "Wulani, Kahuna of Gifts"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "236",
+                "Evolving Wilds"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "245",
+                "Terramorphic Expanse"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "238",
+                "Decaying Domain"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "160",
+                "Expedition Corps"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "153",
+                "Acidic Slime"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "39",
+                "United in Survival"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "198",
+                "Serpentdancer Kantra"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "24",
+                "Nomad's Wanderings"
+            ]
+        ],
+        "name": "WG Counters (Jemmara) Precon",
+        "release_date": "2019-09-14",
+        "set_code": "rak",
+        "set_name": "Rakoa",
+        "sideboard": [
+            [
+                1,
+                "dms",
+                "3.00",
+                "215",
+                "Jemmara, Reality Steward"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "251",
+                "Plains"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "255",
+                "Forest"
+            ]
+        ],
+        "type": "Commander Deck"
+    },
+    {
+        "cards": [
+            [
+                1,
+                "dms",
+                "3.00",
+                "229",
+                "Dreamheart Mox"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "222",
+                "Echoshells"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "239",
+                "Mana Confluence"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "237",
+                "Blurred Horizons"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "212",
+                "Intact Leystone"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "215",
+                "Ancient Prism"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "239",
+                "Evolving Wilds"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "245",
+                "Terramorphic Expanse"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "220",
+                "Mana Drone"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "236",
+                "Unicorn of the Vale"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "223",
+                "Mystical Moai"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "228",
+                "Oracle Cauldron"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "229",
+                "Steel Stallion"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "245",
+                "Hoodoo Valley"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "242",
+                "Highland Path"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "227",
+                "Savannah Encampment"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "249",
+                "Weapons Cache"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "254",
+                "Zephyr Peak"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "247",
+                "Sunlit Alley"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "230",
+                "Coral Barrens"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "238",
+                "Decaying Domain"
+            ],
+            [
+                12,
+                "net",
+                "21",
+                "251",
+                "Plains"
+            ],
+            [
+                11,
+                "net",
+                "21",
+                "254",
+                "Mountain"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "35",
+                "Thorolund Healer"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "225",
+                "Selfless Engineer"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "38",
+                "Vaen, Will of Law"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "113",
+                "Chandra, Heart of the Revolt"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "10",
+                "Farajo, Peacemaker"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "15",
+                "Helena, the Awakener"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "211",
+                "Luma, Guiding Star"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "157",
+                "Shimmering Dunekite"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "134a",
+                "Revolutionary Herald"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "154",
+                "Minister of Zealots"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "27",
+                "Sahai Awakening"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "133",
+                "Dreamfire Dragon"
+            ],
+            [
+                1,
+                "tsl",
+                "1.05",
+                "9",
+                "Clockwork Battlecrafter"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "39",
+                "United in Survival"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "32",
+                "Seal of Judgment"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "3",
+                "Ancestral Aid"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "37",
+                "Wander the Unknown"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "17",
+                "Gift of the Dohar"
+            ],
+            [
+                1,
+                "vln",
+                "updated2",
+                "8",
+                "Equity"
+            ],
+            [
+                1,
+                "jan",
+                "EAU",
+                "24",
+                "Nomad's Wanderings"
+            ],
+            [
+                1,
+                "ank",
+                "2.3",
+                "8",
+                "Duality of Purity"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "12",
+                "Endless Encounters"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "17",
+                "Martial Dictate"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "10",
+                "Glamorous Festivities"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "16",
+                "Liberated Armory"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "24",
+                "Parish Paragon"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "27",
+                "People's Champion"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "124",
+                "Crest the Waters"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "136",
+                "Fires of the Mori"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "215",
+                "Raid Veteran"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "152",
+                "Spice Den"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "34",
+                "Tarkus, the Iron Knight"
+            ],
+            [
+                1,
+                "dhm",
+                ".75",
+                "30",
+                "Temple to the Dohar"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "38",
+                "Unity"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "40",
+                "Wondrous Incandescence"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "134a",
+                "Brash Hunter"
+            ],
+            [
+                1,
+                "dms",
+                "3.00",
+                "28",
+                "Reev's Realignment"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "224",
+                "Chromatic Brush"
+            ],
+            [
+                1,
+                "rak",
+                "37",
+                "224",
+                "Paradise Mantle"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "222",
+                "Roselyn's Viola"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "224",
+                "Pearl Soulstone"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "228",
+                "Ruby Soulstone"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "135",
+                "Burning Revelations"
+            ],
+            [
+                1,
+                "vst",
+                "1.53",
+                "138",
+                "Luma's Guidance"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "213",
+                "Triumphant Battleseraph"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "181",
+                "Steelborn Muse"
+            ],
+            [
+                1,
+                "hlw",
+                "84",
+                "202",
+                "Brilliant Phantom"
+            ],
+            [
+                1,
+                "ayr",
+                "DOM",
+                "112",
+                "Angelic Mentor"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "116",
+                "Bloodshot Desperada"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "5",
+                "Containment Priest"
+            ],
+            [
+                1,
+                "ldo",
+                "hd2",
+                "126",
+                "Goblin Sharpshooter"
+            ],
+            [
+                1,
+                "net",
+                "21",
+                "19",
+                "N-FORCE Captain"
+            ],
+            [
+                1,
+                "cc18",
+                "1.2.0",
+                "28",
+                "Raise the Alarm"
+            ],
+            [
+                1,
+                "eau",
+                "39",
+                "40",
+                "Woopip Chef"
+            ]
+        ],
+        "name": "WR Tokens (Gwyn) Precon",
+        "release_date": "2019-09-14",
+        "set_code": "rak",
+        "set_name": "Rakoa",
+        "sideboard": [
+            [
+                1,
+                "hlw",
+                "84",
+                "208",
+                "Gwyn, Lord of Sunlight"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "251",
+                "Plains"
+            ],
+            [
+                5,
+                "net",
+                "21",
+                "254",
+                "Mountain"
+            ]
+        ],
+        "type": "Commander Deck"
+    }
+]

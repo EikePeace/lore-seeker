@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   get "help/rules" => "help#rules"
   get "help/contact" => "help#contact"
   get "list" => "card#list"
-  get "deck/crawl/:id" => "deck#show_crawl"
   get "deck/:set/:id" => "deck#show"
   get "deck/:set/:id/download" => "deck#download"
   get "deck/visualize" => "deck#visualize"
@@ -25,8 +24,10 @@ Rails.application.routes.draw do
   get "/" => "card#index"
   # Lore Seeker extensions
   get "auth/discord/callback" => "session#create"
-  get "logout" => "session#destroy"
+  get "deck/crawl/:id" => "deck#show_crawl"
+  get "deck/ech/:id" => "deck#show_ech"
   get "event" => "event#index"
   get "event/cssl" => "event#cssl_index"
+  get "logout" => "session#destroy"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

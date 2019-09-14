@@ -6,6 +6,13 @@
       = link_to(controller: "deck", action: "show_crawl", id: deck.slug) do
         = "#{deck.name}"
       = "(#{deck.type}, #{deck.number_of_total_cards} cards)"
+%h4 Elder Cockatrice Highlander
+%ul
+  - @ech_precons.each do |deck|
+    %li
+      = link_to(controller: "deck", action: "show_ech", id: deck.slug) do
+        = "#{deck.name}"
+      = "(#{deck.type}, #{deck.number_of_total_cards} cards)"
 %h4 Sets
 - @sets.each do |set|
   %div= "#{set.name} (#{set.code.upcase})"

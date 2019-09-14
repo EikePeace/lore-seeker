@@ -44,7 +44,7 @@ class DeckDatabase
     return deck
   end
 
-  def load_custom(path=Pathname("#{__dir__}/../../data/crawl-precons.json"))
+  def load_custom(path)
     JSON.parse(path.read).map{ |deck| load_deck(deck, true) }
   end
 end

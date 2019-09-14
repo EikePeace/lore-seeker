@@ -4,7 +4,8 @@ class DeckController < ApplicationController
 
   def index
     @sets = $CardDatabase.sets.values.reject{|s| s.decks.empty?}.sort_by{|s| [-s.release_date.to_i_sort, s.name] }
-    @custom_brawl_precons = DeckDatabase.new($CardDatabase).load_custom
+    @custom_brawl_precons = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../../data/crawl-precons.json"))
+    @ech_precons = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../../data/ech-precons.json"))
     @title = "Preconstructed Decks"
   end
 
@@ -38,7 +39,7 @@ class DeckController < ApplicationController
   end
 
   def show_crawl
-    @deck = DeckDatabase.new($CardDatabase).load_custom.find{|d| d.slug == params[:id]} or return render_404
+    @deck = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../../data/crawl-precons.json")).find{|d| d.slug == params[:id]} or return render_404
     @set = @deck.set
 
     @type = @deck.type
@@ -51,6 +52,29 @@ class DeckController < ApplicationController
     @sideboard = @deck.sideboard.sort_by{|_,c| [c.name, c.set_code, c.number] }
 
     @legality = Format["custom brawl"].new.deck_legality(@deck)
+
+    @card_previews = @deck.physical_cards
+
+    choose_default_preview_card
+    group_cards
+
+    @title = "#{@deck.name} - #{@set.name} #{@deck.type}"
+  end
+
+  def show_ech
+    @deck = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../../data/ech-precons.json")).find{|d| d.slug == params[:id]} or return render_404
+    @set = @deck.set
+
+    @type = @deck.type
+    @name = @deck.name
+    @set_code = @set.code
+    @set_name = @set.name
+    @release_date = @deck.release_date
+
+    @cards = @deck.cards.sort_by{|_,c| [c.name, c.set_code, c.number] }
+    @sideboard = @deck.sideboard.sort_by{|_,c| [c.name, c.set_code, c.number] }
+
+    @legality = Format["elder cockatrice highlander"].new.deck_legality(@deck)
 
     @card_previews = @deck.physical_cards
 
@@ -99,7 +123,7 @@ class DeckController < ApplicationController
 
   def choose_default_preview_card
     # Choose best card to preview
-    if @sideboard.size == 1
+    if @sideboard.size == 1 #TODO ECH
       # Commander
       @default_preview_card = @sideboard.first.last
     else
