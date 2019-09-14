@@ -16,7 +16,7 @@ class FormatFDH < Format
   end
 
   def deck_legality(deck)
-    commander_legality(deck) #TODO sideboards
+    commander_legality(deck)
   end
 
   def build_included_sets

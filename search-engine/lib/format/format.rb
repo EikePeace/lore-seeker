@@ -29,6 +29,9 @@ class Format
 
   def deck_legality(deck)
     # Returns nil if the deck is legal, or an error message if it's not. If there are multiple issues that make the deck illegal, only one of them is returned.
+    num_names = deck.physical_cards.count{|card| card.is_a?(UnknownCard) }
+    return "This deck contains an entry that's just a name, not a card." if num_names == 1
+    return "This deck contains #{num_names} entries that are just names, not cards." unless num_names == 0
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card).nil? }
     return "#{offending_card.name} is not legal in #{format_pretty_name}." unless offending_card.nil?
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "banned" }
@@ -49,6 +52,9 @@ class Format
   end
 
   def commander_legality(deck)
+    num_names = deck.physical_cards.count{|card| card.is_a?(UnknownCard) }
+    return "This deck contains an entry that's just a name, not a card." if num_names == 1
+    return "This deck contains #{num_names} entries that are just names, not cards." unless num_names == 0
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card).nil? }
     return "#{offending_card.name} is not legal in #{format_pretty_name}." unless offending_card.nil?
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "banned" }
@@ -77,6 +83,9 @@ class Format
   end
 
   def brawl_legality(deck)
+    num_names = deck.physical_cards.count{|card| card.is_a?(UnknownCard) }
+    return "This deck contains an entry that's just a name, not a card." if num_names == 1
+    return "This deck contains #{num_names} entries that are just names, not cards." unless num_names == 0
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card).nil? }
     return "#{offending_card.name} is not legal in #{format_pretty_name}." unless offending_card.nil?
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "banned" }
