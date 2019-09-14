@@ -142,6 +142,9 @@ class Indexer
 
       # One more round of normalization, it throws away some information
       PatchNormalizeNames,
+
+      # custom patches
+      PatchCustomVersion,
     ]
   end
 
