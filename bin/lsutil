@@ -369,7 +369,13 @@ def yesno(question):
 
 if __name__ == '__main__':
     if sys.argv[1] == 'debug':
-        sys.exit(subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], cwd='/opt/git/github.com/fenhl/lore-seeker/stage/frontend').returncode)
+        was_running = subprocess.run(['systemctl', 'is-active', '--quiet', 'lore-seeker']).returncode == 0
+        if was_running:
+            subprocess.run(['sudo', 'systemctl', 'stop', 'lore-seeker'], check=True)
+        exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], cwd='/opt/git/github.com/fenhl/lore-seeker/stage/frontend').returncode
+        if was_running:
+            subprocess.run(['sudo', 'systemctl', 'start', 'lore-seeker'], check=True)
+        sys.exit(exit_code)
     elif sys.argv[1] == 'import':
         set_code = sys.argv[2]
         set_version = sys.argv[3]
