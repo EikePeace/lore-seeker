@@ -48,8 +48,12 @@ class DeckController < ApplicationController
     @set_name = @set.name
     @release_date = @deck.release_date
 
-    @cards = @deck.cards.sort_by{|_,c| [c.name, c.set_code, c.number] }
-    @sideboard = @deck.sideboard.sort_by{|_,c| [c.name, c.set_code, c.number] }
+    @cards = parser.main_cards.sort_by{|_,c|
+      c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
+    }
+    @sideboard = parser.sideboard_cards.sort_by{|_,c|
+      c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
+    }
 
     @legality = Format["custom brawl"].new.deck_legality(@deck)
 
@@ -71,8 +75,12 @@ class DeckController < ApplicationController
     @set_name = @set.name
     @release_date = @deck.release_date
 
-    @cards = @deck.cards.sort_by{|_,c| [c.name, c.set_code, c.number] }
-    @sideboard = @deck.sideboard.sort_by{|_,c| [c.name, c.set_code, c.number] }
+    @cards = parser.main_cards.sort_by{|_,c|
+      c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
+    }
+    @sideboard = parser.sideboard_cards.sort_by{|_,c|
+      c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
+    }
 
     @legality = Format["elder cockatrice highlander"].new.deck_legality(@deck)
 
