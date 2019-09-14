@@ -368,7 +368,9 @@ def yesno(question):
     return choose(question, ['yes', 'no']) == 'yes'
 
 if __name__ == '__main__':
-    if sys.argv[1] == 'import':
+    if sys.argv[1] == 'debug':
+        sys.exit(subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], cwd='/opt/git/github.com/fenhl/lore-seeker/stage/frontend').returncode)
+    elif sys.argv[1] == 'import':
         set_code = sys.argv[2]
         set_version = sys.argv[3]
         set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
