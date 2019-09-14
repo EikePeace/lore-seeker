@@ -51,7 +51,7 @@ class DeckController < ApplicationController
     @cards = @deck.cards.sort_by{|_,c|
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
-    @sideboard = @deck.cards.sort_by{|_,c|
+    @sideboard = @deck.sideboard.sort_by{|_,c|
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
 
@@ -78,7 +78,7 @@ class DeckController < ApplicationController
     @cards = @deck.cards.sort_by{|_,c|
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
-    @sideboard = @deck.cards.sort_by{|_,c|
+    @sideboard = @deck.sideboard.sort_by{|_,c|
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
 
