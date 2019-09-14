@@ -4,212 +4,296 @@
             [
                 1,
                 "rak",
-                "222"
+                "0.40",
+                "222",
+                "Echoshells"
             ],
             [
                 1,
                 "net",
-                "102"
+                "27",
+                "102",
+                "Phantom Walker"
             ],
             [
                 1,
                 "sou",
-                "245"
+                "2019-08-22",
+                "245",
+                "Voyager's Ark"
             ],
             [
                 1,
                 "hlw",
-                "84"
+                "1.08",
+                "84",
+                "Artorias, the Abyss-Walker"
             ],
             [
                 1,
                 "rak",
-                "81"
+                "0.40",
+                "81",
+                "Avatar of the Abyss"
             ],
             [
                 1,
                 "rak",
-                "82"
+                "0.40",
+                "82",
+                "Blind Ripper"
             ],
             [
                 1,
                 "cc18",
-                "83"
+                "1.2.0",
+                "83",
+                "Bloodknight Countess"
             ],
             [
                 1,
                 "jan",
-                "81"
+                "WAR",
+                "81",
+                "Bog Dweller"
             ],
             [
                 1,
                 "sou",
-                "89"
+                "2019-08-22",
+                "89",
+                "Churning Sandwurms"
             ],
             [
                 1,
                 "net",
-                "88"
+                "27",
+                "88",
+                "Data Demon"
             ],
             [
                 1,
                 "jan",
-                "91"
+                "WAR",
+                "91",
+                "Doom of Fools"
             ],
             [
                 1,
                 "sou",
-                "104a"
+                "2019-08-22",
+                "104a",
+                "Inishtu, Desert Healer"
             ],
             [
                 1,
                 "eau",
-                "99"
+                "2019-08-18",
+                "99",
+                "Kantra of Plagues"
             ],
             [
                 1,
                 "hlw",
-                "111"
+                "1.08",
+                "111",
+                "Nito, the Gravelord"
             ],
             [
                 1,
                 "eau",
-                "110"
+                "2019-08-18",
+                "110",
+                "Shaman of the First Pact"
             ],
             [
                 1,
                 "net",
-                "116"
+                "27",
+                "116",
+                "Szaro, Bounty Hunter"
             ],
             [
                 1,
                 "sou",
-                "84"
+                "2019-08-22",
+                "84",
+                "Ashen Persecutor"
             ],
             [
                 1,
                 "net",
-                "86"
+                "27",
+                "86",
+                "Corporate Confidant"
             ],
             [
                 1,
                 "eau",
-                "96"
+                "2019-08-18",
+                "96",
+                "Grim Festivities"
             ],
             [
                 1,
                 "hlw",
-                "114"
+                "1.08",
+                "114",
+                "Reign of the Dark Lord"
             ],
             [
                 1,
                 "net",
-                "111"
+                "27",
+                "111",
+                "Self-Destruct Sequence"
             ],
             [
                 1,
                 "sou",
-                "120"
+                "2019-08-22",
+                "120",
+                "Tradition"
             ],
             [
                 1,
                 "cc18",
-                "89"
+                "1.2.0",
+                "89",
+                "Deathplague"
             ],
             [
                 1,
                 "net",
-                "89"
+                "27",
+                "89",
+                "Deep Net"
             ],
             [
                 1,
                 "rak",
-                "80"
+                "0.40",
+                "80",
+                "Abyssal Strike"
             ],
             [
                 1,
                 "jan",
-                "83"
+                "WAR",
+                "83",
+                "Corpse Churn"
             ],
             [
                 1,
                 "jan",
-                "86"
+                "WAR",
+                "86",
+                "Dark Soothsaying"
             ],
             [
                 1,
                 "rak",
-                "233a"
+                "0.40",
+                "233a",
+                "Fangmarked Cave"
             ],
             [
                 1,
                 "rak",
-                "235"
+                "0.40",
+                "235",
+                "Haku Haku Market"
             ],
             [
                 1,
                 "eau",
-                "247"
+                "2019-08-18",
+                "247",
+                "Royal Domain"
             ],
             [
                 1,
                 "net",
-                "248"
+                "27",
+                "248",
+                "Shadowed Pillar"
             ],
             [
                 1,
                 "sou",
-                "257"
+                "2019-08-22",
+                "257",
+                "Wondrous Bazaar"
             ],
             [
                 18,
                 "eau",
-                "252"
+                "2019-08-18",
+                "252",
+                "Swamp"
             ],
             [
                 1,
                 "cc18",
-                "109"
+                "1.2.0",
+                "109",
+                "Sorin, Lord of Vengeance"
             ],
             [
                 1,
                 "sou",
-                "94"
+                "2019-08-22",
+                "94",
+                "Eli Windsors, Lone Gun"
             ],
             [
                 1,
                 "cc18",
-                "88"
+                "1.2.0",
+                "88",
+                "Dark Revival"
             ],
             [
                 1,
                 "sou",
-                "98"
+                "2019-08-22",
+                "98",
+                "Epic of Inishtu"
             ],
             [
                 1,
                 "net",
-                "106"
+                "27",
+                "106",
+                "Redeploy"
             ],
             [
                 1,
                 "rak",
-                "112"
+                "0.40",
+                "112",
+                "Reemergence"
             ],
             [
                 1,
                 "eau",
-                "120"
+                "2019-08-18",
+                "120",
+                "Vibrant Rapture"
             ],
             [
                 1,
                 "cc18",
-                "80"
+                "1.2.0",
+                "80",
+                "Bal'anak, Dreadlord"
             ],
             [
                 1,
                 "eau",
-                "100"
+                "2019-08-18",
+                "100",
+                "Lazaire's Altar"
             ]
         ],
         "name": "From the Shadows",
@@ -220,7 +304,9 @@
             [
                 1,
                 "net",
-                "114"
+                "27",
+                "114",
+                "Sick Nic, Baron of Crime"
             ]
         ],
         "type": "Brawl Deck"
@@ -230,257 +316,359 @@
             [
                 1,
                 "rak",
-                "222"
+                "0.40",
+                "222",
+                "Echoshells"
             ],
             [
                 1,
                 "cc18",
-                "227"
+                "1.2.0",
+                "227",
+                "Rod of Seasons"
             ],
             [
                 1,
                 "net",
-                "234"
+                "27",
+                "234",
+                "Scrap Market"
             ],
             [
                 1,
                 "sou",
-                "245"
+                "2019-08-22",
+                "245",
+                "Voyager's Ark"
             ],
             [
                 1,
                 "net",
-                "163"
+                "27",
+                "163",
+                "City Wrecker"
             ],
             [
                 1,
                 "net",
-                "173"
+                "27",
+                "173",
+                "Monstrous Apex"
             ],
             [
                 1,
                 "net",
-                "216"
+                "27",
+                "216",
+                "Switchflit"
             ],
             [
                 1,
                 "cc18",
-                "153"
+                "1.2.0",
+                "153",
+                "Acidic Slime"
             ],
             [
                 1,
                 "eau",
-                "215"
+                "2019-08-18",
+                "215",
+                "Erollin, Eccentric Collector"
             ],
             [
                 1,
                 "net",
-                "160"
+                "27",
+                "160",
+                "Arachdroid"
             ],
             [
                 1,
                 "cc18",
-                "154"
+                "1.2.0",
+                "154",
+                "Awakened Earth"
             ],
             [
                 1,
                 "eau",
-                "182"
+                "2019-08-18",
+                "182",
+                "Fungal Whomper"
             ],
             [
                 1,
                 "net",
-                "169"
+                "27",
+                "169",
+                "Gunmetal Hydra"
             ],
             [
                 1,
                 "sou",
-                "179a"
+                "2019-08-22",
+                "179a",
+                "Jobiah, Devoted Farmer"
             ],
             [
                 1,
                 "eau",
-                "186"
+                "2019-08-18",
+                "186",
+                "Kantra of Old Majik"
             ],
             [
                 1,
                 "net",
-                "141"
+                "27",
+                "141",
+                "Mecha Dragon"
             ],
             [
                 1,
                 "hlw",
-                "195"
+                "1.08",
+                "195",
+                "Mushroom Family"
             ],
             [
                 1,
                 "net",
-                "176"
+                "27",
+                "176",
+                "Nanobirther"
             ],
             [
                 1,
                 "eau",
-                "192"
+                "2019-08-18",
+                "192",
+                "Ontarachie Dryad"
             ],
             [
                 1,
                 "eau",
-                "193"
+                "2019-08-18",
+                "193",
+                "Ontarachie Emissary"
             ],
             [
                 1,
                 "hlw",
-                "223"
+                "1.08",
+                "223",
+                "Quelana, Mother of Pyromancy"
             ],
             [
                 1,
                 "jan",
-                "181"
+                "WAR",
+                "181",
+                "Shaman of the Cycle"
             ],
             [
                 1,
                 "cc18",
-                "230"
+                "1.2.0",
+                "230",
+                "Solemn Simulacrum"
             ],
             [
                 1,
                 "sou",
-                "241"
+                "2019-08-22",
+                "241",
+                "Splinter of Creation"
             ],
             [
                 1,
                 "cc18",
-                "186"
+                "1.2.0",
+                "186",
+                "Sylvan Ritualist"
             ],
             [
                 1,
                 "rak",
-                "125"
+                "0.40",
+                "125",
+                "Crest the Waters"
             ],
             [
                 1,
                 "sou",
-                "133"
+                "2019-08-22",
+                "133",
+                "Currency"
             ],
             [
                 1,
                 "eau",
-                "139"
+                "2019-08-18",
+                "139",
+                "Dazzling Festivities"
             ],
             [
                 1,
                 "sou",
-                "176"
+                "2019-08-22",
+                "176",
+                "Hila Emergence"
             ],
             [
                 1,
                 "sou",
-                "183"
+                "2019-08-22",
+                "183",
+                "Mythology"
             ],
             [
                 1,
                 "cc18",
-                "180"
+                "1.2.0",
+                "180",
+                "Resplendent Growth"
             ],
             [
                 1,
                 "hlw",
-                "202"
+                "1.08",
+                "202",
+                "The Road Ahead"
             ],
             [
                 1,
                 "eau",
-                "205"
+                "2019-08-18",
+                "205",
+                "Wild Festivities"
             ],
             [
                 1,
                 "sou",
-                "138"
+                "2019-08-22",
+                "138",
+                "Epic of the Lovers"
             ],
             [
                 1,
                 "rak",
-                "238a"
+                "0.40",
+                "238a",
+                "Lost Cavern"
             ],
             [
                 1,
                 "sou",
-                "254"
+                "2019-08-22",
+                "254",
+                "Mana Confluence"
             ],
             [
                 1,
                 "rak",
-                "231a"
+                "0.40",
+                "231a",
+                "Draconic Crevice"
             ],
             [
                 1,
                 "eau",
-                "247"
+                "2019-08-18",
+                "247",
+                "Royal Domain"
             ],
             [
                 1,
                 "rak",
-                "248a"
+                "0.40",
+                "248a",
+                "Slumbering Grotto"
             ],
             [
                 1,
                 "net",
-                "249"
+                "27",
+                "249",
+                "Sprawling Coils"
             ],
             [
                 1,
                 "eau",
-                "240"
+                "2019-08-18",
+                "240",
+                "Dangerous Territory"
             ],
             [
                 1,
                 "net",
-                "245"
+                "27",
+                "245",
+                "Holo-Den"
             ],
             [
                 1,
                 "rak",
-                "241"
+                "0.40",
+                "241",
+                "Meke Vista"
             ],
             [
                 1,
                 "sou",
-                "257"
+                "2019-08-22",
+                "257",
+                "Wondrous Bazaar"
             ],
             [
                 5,
                 "net",
-                "256"
+                "27",
+                "256",
+                "Forest"
             ],
             [
                 5,
                 "net",
-                "255"
+                "27",
+                "255",
+                "Mountain"
             ],
             [
                 1,
                 "cc18",
-                "166"
+                "1.2.0",
+                "166",
+                "Garruk Wildspeaker"
             ],
             [
                 1,
                 "cc18",
-                "163"
+                "1.2.0",
+                "163",
+                "Cultivate"
             ],
             [
                 1,
                 "rak",
-                "168"
+                "0.40",
+                "168",
+                "Farseek"
             ],
             [
                 1,
                 "rak",
-                "176"
+                "0.40",
+                "176",
+                "Kalanua's Renewal"
             ],
             [
                 1,
                 "rak",
-                "245"
+                "0.40",
+                "245",
+                "Opaku, Shifter's Stone"
             ]
         ],
         "name": "Onward to Greatness",
@@ -491,7 +679,9 @@
             [
                 1,
                 "rak",
-                "216"
+                "0.40",
+                "216",
+                "Toahanga, Shifter Champion"
             ]
         ],
         "type": "Brawl Deck"
@@ -501,232 +691,324 @@
             [
                 1,
                 "rak",
-                "222"
+                "0.40",
+                "222",
+                "Echoshells"
             ],
             [
                 1,
                 "hlw",
-                "235"
+                "1.08",
+                "235",
+                "Estus Flask"
             ],
             [
                 1,
                 "eau",
-                "231"
+                "2019-08-18",
+                "231",
+                "Gilded Lotus"
             ],
             [
                 1,
                 "cc18",
-                "227"
+                "1.2.0",
+                "227",
+                "Rod of Seasons"
             ],
             [
                 1,
                 "net",
-                "2"
+                "27",
+                "2",
+                "Atares Amplifier"
             ],
             [
                 1,
                 "net",
-                "234"
+                "27",
+                "234",
+                "Scrap Market"
             ],
             [
                 1,
                 "net",
-                "36"
+                "27",
+                "36",
+                "TR-12 Deliverer"
             ],
             [
                 1,
                 "cc18",
-                "25"
+                "1.2.0",
+                "25",
+                "Niala, Guide of Lost Souls"
             ],
             [
                 1,
                 "jan",
-                "2"
+                "WAR",
+                "2",
+                "Akugan War-Priest"
             ],
             [
                 1,
                 "rak",
-                "1"
+                "0.40",
+                "1",
+                "Ancestral Guardian"
             ],
             [
                 1,
                 "cc18",
-                "2"
+                "1.2.0",
+                "2",
+                "Angel of Mercy"
             ],
             [
                 1,
                 "cc18",
-                "5"
+                "1.2.0",
+                "5",
+                "Archangel of Salvation"
             ],
             [
                 1,
                 "rak",
-                "4"
+                "0.40",
+                "4",
+                "Avatar of the Expanse"
             ],
             [
                 1,
                 "hlw",
-                "10"
+                "1.08",
+                "10",
+                "Darkbreaker Angel"
             ],
             [
                 1,
                 "jan",
-                "14"
+                "WAR",
+                "14",
+                "Felidar Noble"
             ],
             [
                 1,
                 "jan",
-                "18"
+                "WAR",
+                "18",
+                "Inaki Sage"
             ],
             [
                 1,
                 "sou",
-                "31"
+                "2019-08-22",
+                "31",
+                "Scion of Empires"
             ],
             [
                 1,
                 "cc18",
-                "33"
+                "1.2.0",
+                "33",
+                "Seeker of the Way"
             ],
             [
                 1,
                 "cc18",
-                "230"
+                "1.2.0",
+                "230",
+                "Solemn Simulacrum"
             ],
             [
                 1,
                 "net",
-                "221"
+                "27",
+                "221",
+                "Butler Droid"
             ],
             [
                 1,
                 "sou",
-                "19"
+                "2019-08-22",
+                "19",
+                "Imperial Defenses"
             ],
             [
                 1,
                 "cc18",
-                "32"
+                "1.2.0",
+                "32",
+                "Seal of Judgment"
             ],
             [
                 1,
                 "net",
-                "37"
+                "27",
+                "37",
+                "Taken for Questioning"
             ],
             [
                 1,
                 "sou",
-                "7"
+                "2019-08-22",
+                "7",
+                "Epic of Hannaru"
             ],
             [
                 1,
                 "rak",
-                "11"
+                "0.40",
+                "11",
+                "Golden Revival"
             ],
             [
                 1,
                 "rak",
-                "13"
+                "0.40",
+                "13",
+                "Heroic Hunting"
             ],
             [
                 1,
                 "rak",
-                "37"
+                "0.40",
+                "37",
+                "Wander the Unknown"
             ],
             [
                 1,
                 "sou",
-                "42"
+                "2019-08-22",
+                "42",
+                "Water into Wine"
             ],
             [
                 1,
                 "net",
-                "28"
+                "27",
+                "28",
+                "Public Broadcast"
             ],
             [
                 1,
                 "hlw",
-                "239"
+                "1.08",
+                "239",
+                "Abandoned Bonfire"
             ],
             [
                 1,
                 "rak",
-                "230"
+                "0.40",
+                "230",
+                "Coral Barrens"
             ],
             [
                 1,
                 "rak",
-                "232"
+                "0.40",
+                "232",
+                "Elipo Ono, Shrouded Haven"
             ],
             [
                 1,
                 "rak",
-                "234a"
+                "0.40",
+                "234a",
+                "Fogwrapped Cliffs"
             ],
             [
                 1,
                 "rak",
-                "244"
+                "0.40",
+                "244",
+                "Omalu Coast"
             ],
             [
                 1,
                 "eau",
-                "247"
+                "2019-08-18",
+                "247",
+                "Royal Domain"
             ],
             [
                 1,
                 "sou",
-                "257"
+                "2019-08-22",
+                "257",
+                "Wondrous Bazaar"
             ],
             [
                 14,
                 "net",
-                "252"
+                "27",
+                "252",
+                "Plains"
             ],
             [
                 1,
                 "net",
-                "14"
+                "27",
+                "14",
+                "L3-T, Equalizer"
             ],
             [
                 1,
                 "jan",
-                "9"
+                "WAR",
+                "9",
+                "Dance of Healing"
             ],
             [
                 1,
                 "cc18",
-                "16"
+                "1.2.0",
+                "16",
+                "Final Verdict"
             ],
             [
                 1,
                 "hlw",
-                "26"
+                "1.08",
+                "26",
+                "Last Hope"
             ],
             [
                 1,
                 "rak",
-                "19"
+                "0.40",
+                "19",
+                "Level the Landscape"
             ],
             [
                 1,
                 "net",
-                "16"
+                "27",
+                "16",
+                "Martial Dictate"
             ],
             [
                 1,
                 "net",
-                "21"
+                "27",
+                "21",
+                "New World Order"
             ],
             [
                 1,
                 "jan",
-                "6"
+                "WAR",
+                "6",
+                "Commander's Coup"
             ],
             [
                 1,
                 "net",
-                "40"
+                "27",
+                "40",
+                "Wrath of Mod"
             ]
         ],
         "name": "True Supremacy",
@@ -737,7 +1019,9 @@
             [
                 1,
                 "net",
-                "38"
+                "27",
+                "38",
+                "Theos Artene, Demagogue"
             ]
         ],
         "type": "Brawl Deck"
@@ -747,242 +1031,338 @@
             [
                 1,
                 "eau",
-                "235"
+                "2019-08-18",
+                "235",
+                "Soul of New Alores"
             ],
             [
                 1,
                 "rak",
-                "222"
+                "0.40",
+                "222",
+                "Echoshells"
             ],
             [
                 1,
                 "cc18",
-                "229"
+                "1.2.0",
+                "229",
+                "Sapphire Soulstone"
             ],
             [
                 1,
                 "sou",
-                "245"
+                "2019-08-22",
+                "245",
+                "Voyager's Ark"
             ],
             [
                 1,
                 "eau",
-                "57"
+                "2019-08-18",
+                "57",
+                "Enthralling Actor"
             ],
             [
                 1,
                 "sou",
-                "73"
+                "2019-08-22",
+                "73",
+                "Primordial Manifestation"
             ],
             [
                 1,
                 "cc18",
-                "230"
+                "1.2.0",
+                "230",
+                "Solemn Simulacrum"
             ],
             [
                 1,
                 "eau",
-                "49"
+                "2019-08-18",
+                "49",
+                "Captivating Jester"
             ],
             [
                 1,
                 "eau",
-                "74"
+                "2019-08-18",
+                "74",
+                "Riverguide Harpist"
             ],
             [
                 1,
                 "jan",
-                "64"
+                "WAR",
+                "64",
+                "Rushriver Hunter"
             ],
             [
                 1,
                 "sou",
-                "55"
+                "2019-08-22",
+                "55",
+                "Emissary of Dark Tides"
             ],
             [
                 1,
                 "rak",
-                "42"
+                "0.40",
+                "42",
+                "Avatar of the Ocean"
             ],
             [
                 1,
                 "rak",
-                "55"
+                "0.40",
+                "55",
+                "Kalepa Sandpiper"
             ],
             [
                 1,
                 "sou",
-                "68"
+                "2019-08-22",
+                "68",
+                "Namuzzar's Disciple"
             ],
             [
                 1,
                 "eau",
-                "79"
+                "2019-08-18",
+                "79",
+                "Witch of Shifting Waters"
             ],
             [
                 1,
                 "net",
-                "44"
+                "27",
+                "44",
+                "Automated Archivist"
             ],
             [
                 1,
                 "net",
-                "221"
+                "27",
+                "221",
+                "Butler Droid"
             ],
             [
                 1,
                 "net",
-                "47"
+                "27",
+                "47",
+                "Cloud Colossus"
             ],
             [
                 1,
                 "net",
-                "61"
+                "27",
+                "61",
+                "Mat Harden, Detective"
             ],
             [
                 1,
                 "cc18",
-                "63"
+                "1.2.0",
+                "63",
+                "Overwhelming Portents"
             ],
             [
                 1,
                 "sou",
-                "81"
+                "2019-08-22",
+                "81",
+                "Writing"
             ],
             [
                 1,
                 "eau",
-                "66"
+                "2019-08-18",
+                "66",
+                "Marshcroaker Coaching"
             ],
             [
                 1,
                 "hlw",
-                "67"
+                "1.08",
+                "67",
+                "Petrification"
             ],
             [
                 1,
                 "hlw",
-                "42"
+                "1.08",
+                "42",
+                "Absorbed In Thought"
             ],
             [
                 1,
                 "rak",
-                "49"
+                "0.40",
+                "49",
+                "Deep Dive"
             ],
             [
                 1,
                 "sou",
-                "56"
+                "2019-08-22",
+                "56",
+                "Epic of Ekebram"
             ],
             [
                 1,
                 "jan",
-                "72"
+                "WAR",
+                "72",
+                "Stargazing"
             ],
             [
                 1,
                 "rak",
-                "240a"
+                "0.40",
+                "240a",
+                "Luminescent Lake"
             ],
             [
                 1,
                 "rak",
-                "242"
+                "0.40",
+                "242",
+                "Mohele, Magnetic Landmark"
             ],
             [
                 1,
                 "rak",
-                "237"
+                "0.40",
+                "237",
+                "Kalepa Cove"
             ],
             [
                 1,
                 "rak",
-                "238a"
+                "0.40",
+                "238a",
+                "Lost Cavern"
             ],
             [
                 1,
                 "eau",
-                "247"
+                "2019-08-18",
+                "247",
+                "Royal Domain"
             ],
             [
                 1,
                 "eau",
-                "238"
+                "2019-08-18",
+                "238",
+                "Art Studio"
             ],
             [
                 1,
                 "rak",
-                "247"
+                "0.40",
+                "247",
+                "Shellback Tradepost"
             ],
             [
                 1,
                 "rak",
-                "251"
+                "0.40",
+                "251",
+                "Unknown Shores"
             ],
             [
                 1,
                 "sou",
-                "257"
+                "2019-08-22",
+                "257",
+                "Wondrous Bazaar"
             ],
             [
                 12,
                 "net",
-                "253"
+                "27",
+                "253",
+                "Island"
             ],
             [
                 1,
                 "sou",
-                "256"
+                "2019-08-22",
+                "256",
+                "Rupture Spire"
             ],
             [
                 1,
                 "rak",
-                "65"
+                "0.40",
+                "65",
+                "Sarasa, Adventuring Professor"
             ],
             [
                 1,
                 "net",
-                "76"
+                "27",
+                "76",
+                "Talya, Cyber Wayfarer"
             ],
             [
                 1,
                 "sou",
-                "63"
+                "2019-08-22",
+                "63",
+                "Imperial Prosperity"
             ],
             [
                 1,
                 "jan",
-                "47"
+                "WAR",
+                "47",
+                "Eoncraft"
             ],
             [
                 1,
                 "sou",
-                "67"
+                "2019-08-22",
+                "67",
+                "Look to the Future"
             ],
             [
                 1,
                 "cc18",
-                "64"
+                "1.2.0",
+                "64",
+                "Seize Tomorrow"
             ],
             [
                 1,
                 "jan",
-                "75"
+                "WAR",
+                "75",
+                "Unearthly Exchange"
             ],
             [
                 1,
                 "rak",
-                "48"
+                "0.40",
+                "48",
+                "Coastal Discovery"
             ],
             [
                 1,
                 "jan",
-                "220"
+                "WAR",
+                "220",
+                "Savage's Boomerang"
             ],
             [
                 1,
                 "eau",
-                "80"
+                "2019-08-18",
+                "80",
+                "Witch's Invocation"
             ]
         ],
         "name": "Archiving Knowledge",
@@ -993,7 +1373,9 @@
             [
                 1,
                 "sou",
-                "53a"
+                "2019-08-22",
+                "53a",
+                "Ekebram the Scholar"
             ]
         ],
         "type": "Brawl Deck"

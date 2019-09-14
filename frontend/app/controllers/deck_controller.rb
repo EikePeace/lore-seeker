@@ -4,7 +4,7 @@ class DeckController < ApplicationController
 
   def index
     @sets = $CardDatabase.sets.values.reject{|s| s.decks.empty?}.sort_by{|s| [-s.release_date.to_i_sort, s.name] }
-    @custom_brawl_precons = DeckDatabase.new($CardDatabase).load_ech
+    @custom_brawl_precons = DeckDatabase.new($CardDatabase).load_custom
     @title = "Preconstructed Decks"
   end
 
@@ -38,7 +38,7 @@ class DeckController < ApplicationController
   end
 
   def show_crawl
-    @deck = DeckDatabase.new($CardDatabase).load_ech.find{|d| d.slug == params[:id]} or return render_404
+    @deck = DeckDatabase.new($CardDatabase).load_custom.find{|d| d.slug == params[:id]} or return render_404
     @set = @deck.set
 
     @type = @deck.type
