@@ -73,11 +73,11 @@ class Indexer
       "border",
       "code",
       "custom",
+      "custom_version",
       "foiling",
       "gatherer_code",
       "has_boosters",
       "in_other_boosters",
-      "meta",
       "name",
       "alternative_block_code",
       "alternative_code",
@@ -142,9 +142,6 @@ class Indexer
 
       # One more round of normalization, it throws away some information
       PatchNormalizeNames,
-
-      # custom patches
-      PatchCustomVersion,
     ]
   end
 
@@ -183,6 +180,8 @@ class Indexer
         "booster" => set_data["booster"] || set_data["boosterV3"],
         # Track v3 vs v4 for migration
         "v4" => !!set_data["baseSetSize"],
+        # custom extensions
+        "custom_version" => set_data["meta"] && set_data["meta"]["setVersion"],
       ).compact
       sets << set
       set_data["cards"].each_with_index do |card_data, i|
