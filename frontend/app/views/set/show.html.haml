@@ -8,9 +8,13 @@
   - if @set.block_name
     .col-12
       It is part of #{@set.block_name} block.
-  - if @set.release_date
+  - if @set.custom?
     .col-12
-      = "Released: #{@set.release_date.to_s}"
+      = "Current version: #{@set.custom_version}"
+  - unless @set.custom?
+    - if @set.release_date
+      .col-12
+        = "Released: #{@set.release_date.to_s}"
   - if @set.online_only?
     .col-12
       Is it an online only set.

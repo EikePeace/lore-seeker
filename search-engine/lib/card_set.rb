@@ -21,6 +21,7 @@ class CardSet
     @has_boosters  = !!data["has_boosters"]
     @in_other_boosters = !!data["in_other_boosters"]
     @custom        = !!data["custom"]
+    @custom_version = data["custom_version"]
     @decks         = []
   end
 
@@ -42,6 +43,11 @@ class CardSet
 
   def custom?
     !!@custom
+  end
+
+  def custom_version
+    return nil unless custom?
+    @custom_version
   end
 
   # counting MH1 in addition to core sets and expansions
