@@ -6,7 +6,7 @@
       - @warnings.each do |warning|
         .warning= warning
 - else
-  = "This deck is #{@format} legal."
+  = "This deck is #{@format.format_pretty_name} legal."
 
 - if @card_groups.present?
   .decklist

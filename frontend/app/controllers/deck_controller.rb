@@ -95,6 +95,7 @@ class DeckController < ApplicationController
   def visualize
     @title = "Deck Visualizer"
     @formats = Format.all_format_classes.map(&:new)
+    @warnings = []
 
     if params[:deck_upload]
       @deck = params[:deck_upload].read
@@ -102,7 +103,7 @@ class DeckController < ApplicationController
       if parser.valid?
         @deck = parser.deck
       else
-        @warnings = ["Can't parse uploaded deck."]
+        @warnings.push("Can't parse uploaded deck.")
         @deck = ""
       end
     else
@@ -119,6 +120,9 @@ class DeckController < ApplicationController
       @sideboard = parser.sideboard_cards.sort_by{|_,c|
         c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
       }
+
+      legality = @format.deck_legality(@deck)
+      @warnings.push(legality) unless legality.nil?
 
       @card_previews = [*@cards.map(&:last), *@sideboard.map(&:last)].uniq.grep(PhysicalCard)
 
