@@ -106,7 +106,7 @@ class Format
       return "#{first_partner.name} does not partner with #{second_partner.name}." unless first_partner.partner? and (first_partner.partner.nil? or first_partner.partner.card == second_partner.card)
       return "#{second_partner.name} does not partner with #{first_partner.name}." unless second_partner.partner? and (second_partner.partner.nil? or second_partner.partner.card == first_partner.card)
     end
-    offending_card = deck.sideboard.map(&:last).map(&:main_front).find{|card| !card.types.include?("legendary") or (!card.types.include?("creature") and !card.types.include?("planeswalker")) }
+    offending_card = deck.sideboard.map(&:last).map(&:main_front).find{|card| !card.is_brawler? }
     return "#{offending_card.name} can't be a commander." unless offending_card.nil?
     offending_card = deck.sideboard.map(&:last).map(&:main_front).find{|card| legality(card) == "restricted" }
     return "#{offending_card.name} is banned as commander in #{format_pretty_name}." unless offending_card.nil?
