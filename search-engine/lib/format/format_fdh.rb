@@ -16,7 +16,7 @@ class FormatFDH < Format
   end
 
   def deck_legality(deck)
-    commander_legality(deck)
+    commander_legality(deck) #TODO 15-card limit, custom commander requirement
   end
 
   def build_included_sets
