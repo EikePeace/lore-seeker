@@ -5,7 +5,7 @@
     .col-12.warnings
       - @warnings.each do |warning|
         .warning= warning
-- else
+- elsif !@format.nil?
   = "This deck is #{@format.format_pretty_name} legal."
 
 - if @card_groups.present?
