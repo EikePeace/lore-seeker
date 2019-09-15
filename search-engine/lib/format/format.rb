@@ -86,7 +86,7 @@ class Format
       count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.sum(&:first)
       return "A maximum of one copy of the same nonbasic card is allowed, but this deck has #{count} copies of #{offending_card.name}."
     end
-    deck_color_identity = commanders.map(&:color_identity).flat_map(&:chars).to_set
+    deck_color_identity = commanders.map(&:last).map(&:color_identity).flat_map(&:chars).to_set
     offending_card = deck.cards_with_sideboard.map(&:last).find{|card| !(card.color_identity.chars.to_set <= deck_color_identity) }
     return "The deck has a color identity of #{color_identity_name(deck_color_identity)}, but #{offending_card.name} has a color identity of #{color_identity_name(offending_card.color_identity.chars.to_set)}." unless offending_card.nil?
   end
