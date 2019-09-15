@@ -114,17 +114,17 @@ class DeckController < ApplicationController
     if @deck.present?
       parser = DeckParser.new($CardDatabase, @deck)
 
-      @cards = parser.main_cards.sort_by{|_,c|
+      @cards = parser.deck.cards.sort_by{|_,c|
         c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
       }
-      @sideboard = parser.sideboard_cards.sort_by{|_,c|
+      @sideboard = parser.deck.sideboard.sort_by{|_,c|
         c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
       }
 
-      legality = @format.deck_legality(@deck)
+      legality = @format.deck_legality(parser.deck)
       @warnings.push(legality) unless legality.nil?
 
-      @card_previews = [*@cards.map(&:last), *@sideboard.map(&:last)].uniq.grep(PhysicalCard)
+      @card_previews = parser.deck.physical_cards.uniq.grep(PhysicalCard)
 
       choose_default_preview_card
       group_cards
