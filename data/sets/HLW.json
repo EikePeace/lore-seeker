@@ -4369,7 +4369,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "Trample\nAt the beginning of each of your main phases, add {R}{R}{R}{R}{R}{R}{R}{R} (eight red mana).\nWhenever you lose unspent mana, Ceaseless Discharge deals that much damage to you.",
+            "text": "Trample\nAt the beginning of each of your main phases, add eight {R}.\nWhenever you lose unspent mana, Ceaseless Discharge deals that much damage to you.",
             "toughness": "8",
             "type": "Legendary Creature \u2014 Elemental Demon",
             "types": [
