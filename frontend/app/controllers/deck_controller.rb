@@ -109,7 +109,7 @@ class DeckController < ApplicationController
     else
       @deck = params[:deck]
     end
-    @format = Format[params[:format]]
+    @format = Format[params[:format]].new
 
     if @deck.present?
       parser = DeckParser.new($CardDatabase, @deck)
