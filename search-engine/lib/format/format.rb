@@ -51,7 +51,7 @@ class Format
     end
   end
 
-  def commander_legality(deck)
+  def commander_legality(deck, allow_sideboard=false)
     num_names = deck.physical_cards.count{|card| card.is_a?(UnknownCard) }
     return "This deck contains an entry that's just a name, not a card." if num_names == 1
     return "This deck contains #{num_names} entries that are just names, not cards." unless num_names == 0
@@ -60,25 +60,34 @@ class Format
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "banned" }
     return "#{offending_card.name} is banned in #{format_pretty_name}." unless offending_card.nil?
     return "The deck commander must be in the sideboard, but this deck's sideboard is empty." if deck.number_of_sideboard_cards == 0
-    return "A deck can only have one commander (or two partner commanders), but this deck has #{deck.number_of_sideboard_cards}." if deck.number_of_sideboard_cards > 2
-    if deck.number_of_sideboard_cards == 2
-      first_partner, second_partner = deck.sideboard.map(&:last).map(&:main_front)
+    if allow_sideboard
+      # guess which sideboard cards are the commander(s) #TODO allow explicitly marking cards as commander
+      commanders = deck.sideboard.select{|card| card.last.commander? }
+      sideboard = deck.sideboard.reject{|card| commanders.include?(card.last.main_front) }
+      return "A deck must have either exactly 0 or exactly 10 sideboard cards, but this deck has #{sideboard.sum(&:first)}." if sideboard.sum(&:first) != 0 && sideboard.sum(&:first) != 10
+    else
+      commanders = deck.sideboard
+    end
+    return "A deck can only have one commander (or two partner commanders), but this deck has #{commanders.sum(&:first)}." if commanders.sum(&:first) > 2
+    if commanders.sum(&:first) == 2
+      first_partner = commanders.first.last.main_front
+      second_partner = commanders.last.last.main_front
       return "#{first_partner.name} does not partner with #{second_partner.name}." unless first_partner.partner? and (first_partner.partner.nil? or first_partner.partner.card == second_partner.card)
       return "#{second_partner.name} does not partner with #{first_partner.name}." unless second_partner.partner? and (second_partner.partner.nil? or second_partner.partner.card == first_partner.card)
     end
-    offending_card = deck.sideboard.map(&:last).map(&:main_front).find{|card| (!card.types.include?("legendary") or !card.types.include?("creature")) and (!card.types.include?("planeswalker") or card.text !~ /\bcan be your commander\b/) }
+    offending_card = commanders.map(&:last).find{|card| !card.commander? }
     return "#{offending_card.name} can't be a commander." unless offending_card.nil?
-    offending_card = deck.sideboard.map(&:last).map(&:main_front).find{|card| legality(card) == "restricted" }
+    offending_card = commanders.map(&:last).map(&:main_front).find{|card| legality(card) == "restricted" }
     return "#{offending_card.name} is banned as commander in #{format_pretty_name}." unless offending_card.nil?
-    mainboard_size = 100 - deck.number_of_sideboard_cards
+    mainboard_size = 100 - commanders.length
     return "Mainboard must be exactly #{mainboard_size} cards, but this deck has #{deck.number_of_mainboard_cards}." if deck.number_of_mainboard_cards != mainboard_size
-    offending_card = deck.physical_cards.map(&:main_front).find{|card| !card.allowed_in_any_number? && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.map(&:first).inject(0, &:+) > 1 }
+    offending_card = deck.physical_cards.map(&:main_front).find{|card| !card.allowed_in_any_number? && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.sum(&:first) > 1 }
     unless offending_card.nil?
-      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.map(&:first).inject(0, &:+)
+      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.sum(&:first)
       return "A maximum of one copy of the same nonbasic card is allowed, but this deck has #{count} copies of #{offending_card.name}."
     end
-    deck_color_identity = deck.sideboard.map(&:last).map(&:color_identity).flat_map(&:chars).to_set
-    offending_card = deck.cards.map(&:last).find{|card| !(card.color_identity.chars.to_set <= deck_color_identity) }
+    deck_color_identity = commanders.map(&:color_identity).flat_map(&:chars).to_set
+    offending_card = deck.cards_with_sideboard.map(&:last).find{|card| !(card.color_identity.chars.to_set <= deck_color_identity) }
     return "The deck has a color identity of #{color_identity_name(deck_color_identity)}, but #{offending_card.name} has a color identity of #{color_identity_name(offending_card.color_identity.chars.to_set)}." unless offending_card.nil?
   end
 

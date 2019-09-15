@@ -8,7 +8,7 @@ class FormatECH < FormatStandard
   end
 
   def deck_legality(deck)
-    commander_legality(deck) #TODO sideboards
+    commander_legality(deck, true)
   end
 
   def rotation_schedule
