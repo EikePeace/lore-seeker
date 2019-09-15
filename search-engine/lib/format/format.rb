@@ -63,7 +63,7 @@ class Format
     if allow_sideboard
       # guess which sideboard cards are the commander(s) #TODO allow explicitly marking cards as commander
       commanders = deck.sideboard.select{|card| card.last.commander? }
-      sideboard = deck.sideboard.reject{|card| commanders.include?(card.last.main_front) }
+      sideboard = deck.sideboard.reject{|card| commanders.map(&:last).map(&:main_front).include?(card.last.main_front) }
       return "A deck must have either exactly 0 or exactly 10 sideboard cards, but this deck has #{sideboard.sum(&:first)}." if sideboard.sum(&:first) != 0 && sideboard.sum(&:first) != 10
     else
       commanders = deck.sideboard
