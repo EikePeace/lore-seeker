@@ -1,12 +1,20 @@
 %h1 Deck visualizer
 
 - if @warnings.present?
+  .alert.alert-danger
+    %p
+      %strong
+        - if @format.nil?
+          Warning:
+        - else
+          = "This deck is not legal in #{@format.format_pretty_name}."
+    - @warnings.each do |warning|
+      %p
+        = warning
+- elsif !@format.nil?
   .row
     .col-12.warnings
-      - @warnings.each do |warning|
-        .warning= warning
-- elsif !@format.nil?
-  = "This deck is #{@format.format_pretty_name} legal."
+      .warning= "This deck is #{@format.format_pretty_name} legal."
 
 - if @card_groups.present?
   .decklist
