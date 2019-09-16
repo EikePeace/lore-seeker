@@ -36,17 +36,17 @@ class Format
     return "#{offending_card.name} is not legal in #{format_pretty_name}." unless offending_card.nil?
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "banned" }
     return "#{offending_card.name} is banned in #{format_pretty_name}." unless offending_card.nil?
-    min_mainboard_size = 60 - 5 * deck.sideboard.select{|iter_card| iter_card.last.name == "Advantageous Proclamation"}.map(&:first).inject(0, &:+) # assumes all Proclamations in the sideboard are used
+    min_mainboard_size = 60 - 5 * deck.sideboard.select{|iter_card| iter_card.last.name == "Advantageous Proclamation"}.sum(&:first) # assumes all Proclamations in the sideboard are used
     return "Minimum mainboard size is #{min_mainboard_size} cards, but this deck only has #{deck.number_of_mainboard_cards}." if deck.number_of_mainboard_cards < min_mainboard_size
     return "Maximum sideboard size is 15 cards, but this deck has #{deck.number_of_sideboard_cards}." if deck.number_of_sideboard_cards > 15
-    offending_card = deck.physical_cards.map(&:main_front).find{|card| !card.allowed_in_any_number? && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.map(&:first).inject(0, &:+) > 4 }
+    offending_card = deck.physical_cards.map(&:main_front).find{|card| !card.allowed_in_any_number? && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.sum(&:first) > 4 }
     unless offending_card.nil?
-      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.map(&:first).inject(0, &:+)
+      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.sum(&:first)
       return "A maximum of 4 copies of the same nonbasic card are allowed, but this deck has #{count} copies of #{offending_card.name}."
     end
-    offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "restricted" && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.map(&:first).inject(0, &:+) > 1 }
+    offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "restricted" && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.sum(&:first) > 1 }
     unless offending_card.nil?
-      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.map(&:first).inject(0, &:+)
+      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.sum(&:first)
       return "#{offending_card.name} is restricted in #{format_pretty_name} so only one copy is allowed per deck, but this deck has #{count} copies."
     end
   end
@@ -112,9 +112,9 @@ class Format
     return "#{offending_card.name} is banned as commander in #{format_pretty_name}." unless offending_card.nil?
     mainboard_size = 60 - deck.number_of_sideboard_cards
     return "Mainboard must be exactly #{mainboard_size} cards, but this deck has #{deck.number_of_mainboard_cards}." if deck.number_of_mainboard_cards != mainboard_size
-    offending_card = deck.physical_cards.map(&:main_front).find{|card| !card.allowed_in_any_number? && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.map(&:first).inject(0, &:+) > 1 }
+    offending_card = deck.physical_cards.map(&:main_front).find{|card| !card.allowed_in_any_number? && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.sum(&:first) > 1 }
     unless offending_card.nil?
-      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.map(&:first).inject(0, &:+)
+      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.sum(&:first)
       return "A maximum of one copy of the same nonbasic card is allowed, but this deck has #{count} copies of #{offending_card.name}."
     end
     deck_color_identity = deck.sideboard.map(&:last).map(&:color_identity).flat_map(&:chars).to_set
