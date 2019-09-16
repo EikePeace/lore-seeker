@@ -15,7 +15,7 @@ class FormatCanadianHighlander < FormatVintage
 
   def self.load_points_list
     points_file = (Pathname(__dir__) + "../../../index/canlander-points-list.json")
-    JSON.parse(points_file.read) #TODO normalize apostrophes
+    JSON.parse(points_file.read)
   end
 
   PointsList = load_points_list

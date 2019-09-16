@@ -58,7 +58,7 @@ task "canlander:update" do
   points_map = {}
   points_text.lines.each do |line|
     if line =~ /^(.*) – (\d+)\n?$/
-      points_map[$1] = $2.to_i
+      points_map[$1.tr("\u2019", "'")] = $2.to_i
     else
       raise "Failed to parse line in Canadian Highlander points list: #{line}"
     end
