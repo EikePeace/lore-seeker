@@ -6,6 +6,7 @@ class ConditionRestricted < ConditionFormat
   private
 
   def legality_ok?(legality)
+    return false if legality.nil?
     legality.start_with? "restricted"
   end
 end
