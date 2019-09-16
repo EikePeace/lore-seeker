@@ -23,6 +23,10 @@ class Format
     end
   end
 
+  def build_excluded_sets
+    Set[]
+  end
+
   def include_custom_sets?
     false
   end
