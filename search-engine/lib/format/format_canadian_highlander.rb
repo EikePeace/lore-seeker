@@ -2,8 +2,8 @@ class FormatCanadianHighlander < FormatVintage
   def legality(card)
     status = super(card)
     return status if status != "legal"
-    if PointsList.has_key?(card)
-      "restricted-#{PointsList[card]}"
+    if PointsList.has_key?(card.name)
+      "restricted-#{PointsList[card.name]}"
     else
       status
     end
