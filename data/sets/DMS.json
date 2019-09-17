@@ -2894,7 +2894,7 @@
                 "Shapeshifter"
             ],
             "supertypes": [],
-            "text": "You may have Twisted Representation enter the battlefield as a copy of any creature on the battlefield, except it gains \"{1}: This creature gets +1/-1 or -1/+1 until end of turn.\"",
+            "text": "You may have Twisted Representation enter the battlefield as a copy of any creature on the battlefield, except it has \"{1}: This creature gets +1/-1 or -1/+1 until end of turn.\"",
             "toughness": "0",
             "type": "Creature \u2014 Shapeshifter",
             "types": [
