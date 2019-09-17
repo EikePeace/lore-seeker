@@ -329,7 +329,7 @@
                 "Nomad"
             ],
             "supertypes": [],
-            "text": "Worship {1}{W} ({1}{W}, {T}: If this isn't devout, put a +1/+1 counter on both this creature and target creature without worship, then this becomes devout. Worship only as a sorcery.)\nWhen Exodus Pilgrim worships a creature you own, you may exile Exodus Pilgrim and/or that creature. Return all cards exiled this way to the battlefield under your control at the beginning of the next end step.",
+            "text": "Worship {1}{W} ({1}{W}, {T}: If this isn't devout, put a +1/+1 counter on both this creature and target creature without worship, then this becomes devout. Worship only as a sorcery.)\nWhenever Exodus Pilgrim worships a creature you own, you may exile Exodus Pilgrim and/or that creature. Return all cards exiled this way to the battlefield under your control at the beginning of the next end step.",
             "toughness": "2",
             "type": "Creature \u2014 Human Nomad",
             "types": [
