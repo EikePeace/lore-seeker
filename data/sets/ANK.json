@@ -1151,7 +1151,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "At the beginning of your upkeep, return target Human creature card in your graveyard to the battlefield.",
+            "text": "At the beginning of your upkeep, return target Human creature card from your graveyard to the battlefield.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
