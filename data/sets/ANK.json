@@ -5762,7 +5762,7 @@
                 "Elephant"
             ],
             "supertypes": [],
-            "text": "Whenever Indomitable Elephant becomes blocked, it deals damage equal to its power to defending player or planeswalker (in addition to combat damage to its blockers).",
+            "text": "Whenever Indomitable Elephant becomes blocked, it deals damage equal to its power to the player or permanent it's attacking (in addition to combat damage to its blockers).",
             "toughness": "7",
             "type": "Creature \u2014 Elephant",
             "types": [
