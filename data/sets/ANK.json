@@ -8385,7 +8385,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Rotting Oasis enters the battlefield tapped with a respite counter on it.\n{T}: Add {B}.\n{5}, {T}, Remove a respite counter from Rotting Oasis: Exile up to three cards in a single graveyard.",
+            "text": "Rotting Oasis enters the battlefield tapped with a respite counter on it.\n{T}: Add {B}.\n{5}, {T}, Remove a respite counter from Rotting Oasis: Exile up to three cards from a single graveyard.",
             "type": "Land",
             "types": [
                 "Land"
