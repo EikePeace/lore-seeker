@@ -3401,7 +3401,7 @@
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.\nResonance {2}{G} (If you cast this spell for {2}{G}, exile it as it resolves. As you cast your next instant or sorcery spell, put this card into your graveyard and you may add its effects and colors to that spell.)",
+            "text": "Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.\nResonance {2}{G} (If you cast this spell for {2}{G}, exile it as it resolves. As you cast your next instant or sorcery spell, put this card into your graveyard and you may add its effects and colors to that spell.)",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
