@@ -7938,7 +7938,7 @@
                 "Equipment"
             ],
             "supertypes": [],
-            "text": "Equipped creature gets +1/+0, has first strike, and has \"Whenever this creature attacks, you may pay {R}{W}. If you do, target creature defending player controls untaps and blocks it this turn if able.\"\nEquip {2}",
+            "text": "Equipped creature gets +1/+0 and has first strike and \"Whenever this creature attacks, you may pay {R}{W}. If you do, target creature defending player controls untaps and blocks it this turn if able.\"\nEquip {2}",
             "type": "Artifact \u2014 Equipment",
             "types": [
                 "Artifact"
