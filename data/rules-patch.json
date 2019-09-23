@@ -1,6 +1,6 @@
 {
     "base": "2019-08-23",
-    "effective": "2019-08-23",
+    "effective": "2019-09-23",
     "patches": [
         {
             "sets": [
@@ -911,7 +911,7 @@
                     "rule": {
                         "text": "Waste",
                         "subrules": [
-                            "To waste a permanent means to create a continuous effect. The permanent's name is changed to Wastes, it loses all land types and abilities, and gains “{T}: Add {C}.”"
+                            "To waste a permanent means to create a continuous effect. The permanent's name is changed to Wastes, it becomes a basic land, gains “{T}: Add {C},” and loses all other supertypes, card types, subtypes, and abilities.”"
                         ]
                     }
                 }
