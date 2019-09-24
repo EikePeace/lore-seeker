@@ -17,6 +17,7 @@ class FormatEXH < FormatECH
   end
 
   def card_list(date)
+    date ||= Date.today
     until date <= Date.new(2019, 9, 23) do
       card_file = (Pathname(__dir__) + "../../../index/exh-cards/#{date}.json")
       return JSON.parse(card_file.read) if card_file.exist?
