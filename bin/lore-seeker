@@ -160,16 +160,15 @@ def run(*, do_name_check=True, path=None, port=18803, verbose=False):
     except Exception as e:
         notify_crash(e)
         raise
-    with (BASE_PATH / 'access.log').open('a') as access_log:
-        lore_seeker = cmd(['bundle', 'exec', 'rails', 'server', '-p', str(port)], env=env, cwd=str(path / 'frontend'), stdout=access_log, stderr=access_log, wait=False, announce=verbose)
-        with PIDFILE_PATH.open('w') as pidfile:
-            print(str(lore_seeker.pid), file=pidfile)
-        lore_seeker.wait()
-        if lore_seeker.returncode != 0 and PIDFILE_PATH.exists():
-            notify_crash()
-            return False
-        else:
-            return True
+    lore_seeker = cmd(['bundle', 'exec', 'rails', 'server', '-p', str(port)], env=env, cwd=str(path / 'frontend'), wait=False, announce=verbose)
+    with PIDFILE_PATH.open('w') as pidfile:
+        print(str(lore_seeker.pid), file=pidfile)
+    lore_seeker.wait()
+    if lore_seeker.returncode != 0 and PIDFILE_PATH.exists():
+        notify_crash()
+        return False
+    else:
+        return True
 
 if __name__ == '__main__':
     arguments = docopt.docopt(__doc__)
