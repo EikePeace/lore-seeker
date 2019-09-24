@@ -10,3 +10,4 @@ tmp
 # Lore Seeker extensions
 /frontend/db/schema.rb
 /index/canlander-points-list.json
+/index/exh-cards/

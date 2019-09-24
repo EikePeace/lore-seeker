@@ -320,6 +320,8 @@ class Format
         "customedh"                  => FormatECH,
         "cc"                         => FormatECH,
         "cedh"                       => FormatECH,
+        "elderxmagehighlander"       => FormatEXH,
+        "exh"                        => FormatEXH,
         "custompauper"               => FormatCustomPauper,
         "cp"                         => FormatCustomPauper,
         "custombrawl"                => FormatCustomBrawl,
@@ -345,4 +347,5 @@ require_relative "format_standard"
 require_relative "format_commander"
 require_relative "format_custom_standard"
 require_relative "format_custom_eternal"
+require_relative "format_ech"
 Dir["#{__dir__}/format_*.rb"].each do |path| require_relative path end

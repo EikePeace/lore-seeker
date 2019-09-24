@@ -1,6 +1,9 @@
 require "pathname"
 require "fileutils"
 
+XMAGE_ENV = {"XMAGE_MASTER" => "/opt/git/github.com/EikePeace/mage/branch/EXH"}
+XMAGE_MAINTENANCE = "/opt/git/github.com/magefree/xmage-maintenance/master/xmage_maintenance.py"
+
 def db
   @db ||= begin
     require_relative "search-engine/lib/card_database"
@@ -64,6 +67,26 @@ task "canlander:update" do
     end
   end
   Pathname("index/canlander-points-list.json").write(points_map.to_json)
+end
+
+desc "Generate the current card list for Elder XMage Highlander"
+task "exh:update" do
+  require "json"
+  require "open3"
+  require_relative "search-engine/lib/format/format.rb"
+  exh_cards = db.cards.values
+  puts "#{exh_cards.size} cards total"
+  stdout, status = Open3.capture2 XMAGE_ENV, XMAGE_MAINTENANCE, "implemented-list", "--pull", "--verbose"
+  implemented_cards = stdout.each_line.map{|line| line.chomp }.to_a
+  puts "#{implemented_cards.size} cards implemented"
+  ech = Format["elder cockatrice highlander"].new
+  exh_cards = exh_cards.select{|c| ech.in_format?(c) }
+  puts "#{exh_cards.size} cards in ECH"
+  exh_cards = exh_cards.select{|c| implemented_cards.include?(c.name) }
+  puts "#{exh_cards.size} cards in EXH"
+  #TODO only generate a new file if anything has changed
+  #TODO commit new file to repo
+  Pathname("index/exh-cards/#{Date.today}.json").write(exh_cards.map{|c| c.name}.to_json)
 end
 
 desc "Fetch Gatherer pics"
