@@ -38,6 +38,7 @@ class ConditionFormat < Condition
   private
 
   def legality_ok?(legality)
+    return false if legality.nil?
     legality == "legal" or legality.start_with? "restricted"
   end
 end
