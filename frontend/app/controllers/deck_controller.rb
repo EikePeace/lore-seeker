@@ -128,6 +128,10 @@ class DeckController < ApplicationController
 
       choose_default_preview_card
       group_cards
+    elsif @format.present? && @format.format_name != "freeform"
+      parser = DeckParser.new($CardDatabase, "")
+      legality = @format.deck_legality(parser.deck)
+      @warnings.push(legality) unless legality.nil?
     end
   end
 
