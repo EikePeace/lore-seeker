@@ -70,20 +70,20 @@ task "canlander:update" do
 end
 
 desc "Generate the current card list for Elder XMage Highlander"
-task "exh:update" do
+task "exh:update", [:verbose] do |task, args|
   require "json"
   require "open3"
   require_relative "search-engine/lib/format/format.rb"
   exh_cards = db.cards.values
-  puts "#{exh_cards.size} cards total"
-  stdout, status = Open3.capture2 XMAGE_ENV, XMAGE_MAINTENANCE, "implemented-list", "--pull", "--verbose"
+  puts "#{exh_cards.size} cards total" if args[:verbose]
+  stdout, status = Open3.capture2 XMAGE_ENV, XMAGE_MAINTENANCE, "implemented-list", "--pull", *(args[:verbose] ? ["--verbose"] : [])
   implemented_cards = stdout.each_line.map{|line| line.chomp }.to_a
-  puts "#{implemented_cards.size} cards implemented"
+  puts "#{implemented_cards.size} cards implemented" if args[:verbose]
   ech = Format["elder cockatrice highlander"].new
   exh_cards = exh_cards.select{|c| ech.in_format?(c) }
-  puts "#{exh_cards.size} cards in ECH"
+  puts "#{exh_cards.size} cards in ECH" if args[:verbose]
   exh_cards = exh_cards.select{|c| implemented_cards.include?(c.name) }
-  puts "#{exh_cards.size} cards in EXH"
+  puts "#{exh_cards.size} cards in EXH" if args[:verbose]
   #TODO only generate a new file if anything has changed
   #TODO commit new file to repo
   Pathname("index/exh-cards/#{Date.today}.json").write(exh_cards.map{|c| c.name}.to_json)
