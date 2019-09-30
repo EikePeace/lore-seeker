@@ -1,6 +1,6 @@
 {
-    "base": "2019-08-23",
-    "effective": "2019-09-23",
+    "base": "2019-10-04",
+    "effective": "2019-10-04",
     "patches": [
         {
             "sets": [
@@ -668,13 +668,13 @@
                 },
                 {
                     "type": "replace",
-                    "rule": "716.1d",
+                    "rule": "717.1d",
                     "find": "all creatures and planeswalkers",
                     "replace": "all creatures, planeswalkers, and Structures"
                 },
                 {
                     "type": "replace",
-                    "rule": "716.2d",
+                    "rule": "717.2d",
                     "find": "all creatures and planeswalkers",
                     "replace": "all creatures, planeswalkers, and Structures"
                 }
@@ -693,7 +693,7 @@
                 },
                 {
                     "type": "append",
-                    "rule": "716.1d",
+                    "rule": "717.1d",
                     "text": "If the remainder of the turn does not contain a cleanup step, a new ending phase which consists of only a cleanup step is added after the last phase of the turn."
                 }
             ]
@@ -723,12 +723,13 @@
             "sets": [
                 "SOU"
             ],
-            "comment": "For {card:Stolen Innovations}, this rule allows a spell which is cast as a copy of an instant spell to be cast at instant speed",
+            "comment": "For {card:Stolen Innovations}, this rule also considers copy effects. For example, a spell which is cast as a copy of an instant spell can be cast at instant speed",
             "rules": [
                 {
-                    "type": "add",
-                    "rule": "601.3",
-                    "text": "A spell that is or would be an instant spell only if an additional or alternative cost is paid, or only with certain choices made during that spell's proposal, or only if certain conditions are met, follows the same rules as a spell that has or would have flash in these situations."
+                    "type": "insertText",
+                    "rule": "601.3e",
+                    "after": "a rule or effect",
+                    "text": " allows a player to cast a spell as a copy of another object or"
                 }
             ]
         },
@@ -1362,7 +1363,7 @@
                         "subrules": [
                             "Seal is a static ability that functions in any zone from which you could play the card it's on, and the seal effect works any time the card is face down. “Seal [cost]” means “You may cast this card as a face-down Relic artifact with no text, no name, and no mana cost by paying {2} rather than paying its mana cost.” (See rule 707, “Face-Down Spells and Permanents.”)",
                             "To cast a card using its seal ability, turn it face down. It becomes a face-down Relic artifact card with no text, no name, and no mana cost. Any effects or prohibitions that would apply to casting a card with these characteristics (and not the face-up card's characteristics) are applied to casting this card. These values are the copiable values of that object's characteristics. (See rule 613, “Interaction of Continuous Effects,” and rule 706, “Copying Objects.”) Put it onto the stack (as a face-down spell with the same characteristics), and pay {2} rather than pay its mana cost. This follows the rules for paying alternative costs. You can use a seal ability to cast a card from any zone from which you could normally play it. When the spell resolves, it enters the battlefield with the same characteristics the spell had. The seal effect applies to the face-down object wherever it is, and it ends when the permanent is turned face up.",
-                            "Any time you have priority, you may exile a face-down permanent you control, then cast it for its seal cost. This is a special action; it doesn't use the stack (see rule 116). To do this, show all players what the permanent's seal cost would be if it were face up, exile it, then cast it for that cost. This follows the rules for paying alternative costs. (If the permanent wouldn't have a seal cost if it were face up, it can't be exiled this way.) The card is turned face up and the seal effect on it ends as soon as it's exiled, and it regains its normal characteristics. Exiling and casting the card is considered a single action for the purposes of reversing illegal spells. If the spell proposal of casting the card for its seal cost is reversed, the action of exiling it is also reversed, returning it to the battlefield. (See rule 721, “Handling Illegal Actions.”)",
+                            "Any time you have priority, you may exile a face-down permanent you control, then cast it for its seal cost. This is a special action; it doesn't use the stack (see rule 116). To do this, show all players what the permanent's seal cost would be if it were face up, exile it, then cast it for that cost. This follows the rules for paying alternative costs. (If the permanent wouldn't have a seal cost if it were face up, it can't be exiled this way.) The card is turned face up and the seal effect on it ends as soon as it's exiled, and it regains its normal characteristics. Exiling and casting the card is considered a single action for the purposes of reversing illegal spells. If the spell proposal of casting the card for its seal cost is reversed, the action of exiling it is also reversed, returning it to the battlefield. (See rule 722, “Handling Illegal Actions.”)",
                             "If a spell's controller declares the intention to pay that spell's seal cost, that spell has been “sealed.” If a spell has multiple seal costs, it may be sealed multiple times. See rule 601.2b.",
                             "Objects with seal may have additional abilities that check whether they were sealed. These abilities are linked to the seal ability printed on that object: they can refer only to its printed seal ability. See rule 607, “Linked Abilities.”",
                             "See rule 707, “Face-Down Spells and Permanents,” for more information about how to cast cards with seal."
@@ -1549,7 +1550,7 @@
             "rules": [
                 {
                     "type": "replace",
-                    "rule": "718.1",
+                    "rule": "719.1",
                     "find": "One card \\(Karn Liberated\\) restarts the game\\.",
                     "replace": "Some cards allow a player to restart the game."
                 }
