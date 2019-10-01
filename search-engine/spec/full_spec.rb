@@ -6,8 +6,8 @@ describe "Full Database Test" do
   # by changes which are not expected to, like updating to new mtgjson data for same sets,
   # indexer changes etc.
   it "stats" do
-    db.number_of_cards.should eq(20031)
-    db.number_of_printings.should eq(44771)
+    db.number_of_cards.should eq(20330)
+    db.number_of_printings.should eq(45222)
   end
 
   # I'm not even sure what good this test does, delete?
@@ -15,7 +15,7 @@ describe "Full Database Test" do
     # it's not totally clear what counts as "promo"
     # and different engines return different results
     # It might be a good idea to sort out edge cases someday
-    assert_count_printings "is:promo", 3920
+    assert_count_printings "is:promo", 4041
   end
 
   it "block codes" do
@@ -65,7 +65,14 @@ describe "Full Database Test" do
       "Failure", "Comply",
       "Heaven", "Earth",
       "Claim", "Fame",
-      "Appeal", "Authority"
+      "Appeal", "Authority",
+      "Curious Pair", "Treats to Share",
+      "Embereth Shieldbreaker", "Battle Display",
+      "Faerie Guidemother", "Gift of the Fae",
+      "Rimrock Knight", "Boulder Rush",
+      "Shepherd of the Flock", "Usher to Safety",
+      "Smitten Swordmaster", "Curry Favor"
+
     # Semantics of that changed
     assert_search_results "part:cmc=0 part:cmc=3 part:c:b"
   end
@@ -135,41 +142,7 @@ describe "Full Database Test" do
       "Tormenting Voice",
       "Unruly Mob"
 
-    assert_search_results "e:soi lastprint>soi lastprint<grn",
-      "Aim High",
-      "Angel of Deliverance",
-      "Anguished Unmaking",
-      "Archangel Avacyn",
-      "Arlinn Kord",
-      "Arlinn, Embraced by the Moon",
-      "Avacyn, the Purifier",
-      "Call the Bloodline",
-      "Dauntless Cathar",
-      "Drogskol Cavalry",
-      "Dual Shot",
-      "Elusive Tormentor",
-      "Engulf the Shore",
-      "Explosive Apparatus",
-      "Flameblade Angel",
-      "Forsaken Sanctuary",
-      "Grotesque Mutation",
-      "Incorrigible Youths",
-      "Insidious Mist",
-      "Jace, Unraveler of Secrets",
-      "Macabre Waltz",
-      "Magnifying Glass",
-      "Markov Dreadknight",
-      "Mindwrack Demon",
-      "Nephalia Moondrakes",
-      "Pyre Hound",
-      "Ravenous Bloodseeker",
-      "Rush of Adrenaline",
-      "Soul Swallower",
-      "Thornhide Wolves",
-      "Triskaidekaphobia",
-      "Vampire Noble",
-      "Vessel of Nascency",
-      "Warped Landscape"
+    assert_search_equal "in:soi lastprint>soi", "in:soi -lastprint<=soi"
   end
 
   it "firstprint" do
@@ -225,7 +198,8 @@ describe "Full Database Test" do
       "Twiddle",
       "Wall of Wood",
       "Wanderlust",
-      "Wood Elves"
+      "Wood Elves",
+      "Youthful Knight"
   end
 
   it "alt test of time" do

@@ -20,6 +20,7 @@ describe "CLI Frontend" do
         Cinder Glade
         Dryad Arbor
         Forest
+        Gingerbread Cabin
         Murmuring Bosk
         Overgrown Tomb
         Sapseep Forest
@@ -56,7 +57,7 @@ describe "CLI Frontend" do
       verbose: true,
       output: <<-EOF,
         Siege Rhino {1}{w}{b}{g}
-        [pktk ktk cp3 prm]
+        [ktk pktk cp3 prm]
         Creature - Rhino
         Trample
         When Siege Rhino enters the battlefield, each opponent loses 3 life and you gain 3 life.
