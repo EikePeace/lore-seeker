@@ -27,7 +27,7 @@
             "name": "Ancient Elemental",
             "number": "1",
             "originalText": "Ancient Elemental is all colors.",
-            "originalType": "Legendary Creature — Elemental",
+            "originalType": "Legendary Creature \u2014 Elemental",
             "rarity": "mythic",
             "rulings": [
                 {
@@ -42,7 +42,7 @@
                 "Legendary"
             ],
             "text": "Ancient Elemental is all colors.",
-            "type": "Legendary Creature — Elemental",
+            "type": "Legendary Creature \u2014 Elemental",
             "types": [
                 "Creature"
             ]

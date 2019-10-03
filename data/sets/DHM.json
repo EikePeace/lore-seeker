@@ -3609,7 +3609,12 @@
             "originalText": "Distribute two -1/-1 counters among one or two target creatures, then each creature with a -1/-1 counter on it deals 2 damage to its controller.",
             "originalType": "Sorcery",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-03",
+                    "text": "Creatures don't die to damage or to having 0 toughness while a spell is resolving, so the targets still deal damage to their controllers regardless of their fate."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Distribute two -1/-1 counters among one or two target creatures, then each creature with a -1/-1 counter on it deals 2 damage to its controller.",
