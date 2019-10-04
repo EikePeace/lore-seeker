@@ -3044,7 +3044,7 @@
                 "Rogue"
             ],
             "supertypes": [],
-            "text": "Whenever you cast a sealed spell, sacrifice Reckless Explorer. If you do, create a 4/4 black Horror creature token with no name.",
+            "text": "When you cast a sealed spell, sacrifice Reckless Explorer. If you do, create a 4/4 black Horror creature token with no name.",
             "toughness": "1",
             "type": "Creature \u2014 Human Rogue",
             "types": [
@@ -8254,7 +8254,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "{T}: Add {C}.\n{2}, {T}: Add {R}{R}{R}.\n{R}{R}{R}{R}, {T}, Discard a land card: Create a colorless Equipment artifact token named Stoneforged Weapon with \"Equipped creature gets +2/+2.\" and equip {0}.",
+            "text": "{T}: Add {C}.\n{2}, {T}: Add {R}{R}{R}.\n{R}{R}{R}{R}, {T}, Discard a land card: Create a colorless Equipment artifact token named Stoneforged Weapon with \"Equipped creature gets +2/+2\" and equip {0}.",
             "type": "Legendary Land",
             "types": [
                 "Land"
