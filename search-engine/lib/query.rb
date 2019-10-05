@@ -13,6 +13,7 @@ end
 class Query
   attr_reader :warnings, :seed
   attr_reader :cond, :metadata # for tests only
+  attr_writer :sorter # for EXH todo list
 
   def initialize(query_string, seed=nil)
     @query_string = query_string

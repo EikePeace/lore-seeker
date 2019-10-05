@@ -112,7 +112,7 @@ class CardPrinting
     display_power display_toughness display_mana_cost
     primary? secondary? front? back? partner? allowed_in_any_number?
     commander? brawler?
-    custom?
+    custom? num_exh_votes
   ].each do |m|
     eval("def #{m}; @card.#{m}; end")
   end

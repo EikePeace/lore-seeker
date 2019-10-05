@@ -1,4 +1,23 @@
 class ExhController < ApplicationController
+  def index
+    redirect_to(controller: "format", action: "show", id: "elder-xmage-highlander")
+  end
+
+  def todo
+    @title = "EXH card todo list"
+    @ech = Format["elder cockatrice highlander"].new
+    @exh = Format["elder xmage highlander"].new
+    #TODO special section for reprints of implemented cards, if any
+    search = "(f:ech or banned:ech) -f:exh sort:oldall" #TODO replace “sort:oldall” with sorter override below, include banned cards?
+    query = Query.new(search)
+    query.sorter = ExhSorter.new(@ech)
+    results = $CardDatabase.search(query)
+    @cards = results.card_groups.map do |printings|
+      choose_best_printing(printings)
+    end
+    #TODO special section for vanilla and french vanilla cards, if any
+  end
+
   def vote
     return redirect_to("/auth/discord") unless signed_in?
     card = exh_card(params[:name])

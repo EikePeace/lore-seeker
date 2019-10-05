@@ -106,6 +106,11 @@ class Card
     printings.all? { |printing| printing.set.custom? }
   end
 
+  def num_exh_votes
+    exh_card = ExhCard.find_by(name: @name)
+    exh_card.nil? ? 0 : exh_card.voter_ids.size
+  end
+
   def has_multiple_parts?
     !!@names
   end

@@ -12,9 +12,7 @@ class FormatEXH < FormatECH
     status = super(card)
     if status == "legal" or status == "restricted"
       unless card_list(@time).include?(card.name)
-        exh_card = ExhCard.find_by(name: card.name)
-        num_votes = exh_card.nil? ? 0 : exh_card.voter_ids.size
-        status = "banned-#{num_votes}"
+        status = "banned-#{card.num_exh_votes}"
       end
     end
     status
