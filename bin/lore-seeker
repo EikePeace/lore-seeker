@@ -166,9 +166,7 @@ def run(*, do_name_check=True, path=None, port=18803, verbose=False):
     lore_seeker.wait()
     if lore_seeker.returncode != 0 and PIDFILE_PATH.exists():
         notify_crash()
-        return False
-    else:
-        return True
+    PIDFILE_PATH.unlink()
 
 if __name__ == '__main__':
     arguments = docopt.docopt(__doc__)
@@ -183,11 +181,8 @@ if __name__ == '__main__':
         PIDFILE_PATH.unlink() # remove pidfile to silence crash notification and prevent automatic restart
         os.kill(pid, signal.SIGTERM)
     else:
-        while True:
-            if arguments['--path']:
-                path = pathlib.Path(arguments['--path'])
-            else:
-                path = None
-            if run(path=path, port=int(arguments['--port']), verbose=not arguments['--quiet']):
-                break
-            time.sleep(10)
+        if arguments['--path']:
+            path = pathlib.Path(arguments['--path'])
+        else:
+            path = None
+        run(path=path, port=int(arguments['--port']), verbose=not arguments['--quiet'])
