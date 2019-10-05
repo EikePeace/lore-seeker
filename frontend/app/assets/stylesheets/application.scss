@@ -157,32 +157,6 @@ form.search {
     text-align: center;
     margin: 1px;
   }
-  .legality-legal {
-    background-color: #8f8;
-    @media (prefers-color-scheme: dark) {
-      background-color: #080;
-    }
-  }
-  .legality-banned {
-    background-color: #f88;
-    @media (prefers-color-scheme: dark) {
-      background-color: #800;
-    }
-  }
-  a.legality-banned i::after,
-  a.legality-banned:hover i.voted::after {
-    content: " ⇧";
-  }
-  a.legality-banned i.voted::after,
-  a.legality-banned:hover i::after {
-    content: " ⬆︎";
-  }
-  .legality-restricted {
-    background-color: #fa4;
-    @media (prefers-color-scheme: dark) {
-      background-color: #880;
-    }
-  }
 }
 .foreign_names {
   font-size: small;
@@ -488,5 +462,31 @@ h3 .manacost {
   background-color: #d8d8d8;
   @media (prefers-color-scheme: dark) {
     background-color: #272727;
+  }
+}
+.legality-legal {
+  background-color: #8f8;
+  @media (prefers-color-scheme: dark) {
+    background-color: #080;
+  }
+}
+.legality-banned {
+  background-color: #f88;
+  @media (prefers-color-scheme: dark) {
+    background-color: #800;
+  }
+}
+a.legality-banned i::after,
+a.legality-banned:hover i.voted::after {
+  content: " ⇧";
+}
+a.legality-banned i.voted::after,
+a.legality-banned:hover i::after {
+  content: " ⬆︎";
+}
+.legality-restricted {
+  background-color: #fa4;
+  @media (prefers-color-scheme: dark) {
+    background-color: #880;
   }
 }
