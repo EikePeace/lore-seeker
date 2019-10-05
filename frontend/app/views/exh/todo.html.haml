@@ -23,4 +23,4 @@
         %i{class: (signed_in? && exh_card(card).voters.include?(current_user)) ? "voted" : ""}
           = "#{votes} vote#{votes == 1 ? "" : "s"}"
     .d-none.d-md-block.col-2
-      = render 'printings_short', card: card, printings: printings_view(card, printings)
+      = render 'card/printings_short', card: card, printings: printings_view(card, printings)
