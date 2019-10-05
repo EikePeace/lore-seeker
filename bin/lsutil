@@ -7,6 +7,7 @@ sys.path.append('/opt/py')
 import copy
 import io
 import json
+import os
 import pathlib
 import re
 import subprocess
@@ -369,11 +370,18 @@ def yesno(question):
 
 if __name__ == '__main__':
     if sys.argv[1] == 'debug':
+        with open('/usr/local/share/fenhl/lore-seeker/config.json') as config_f:
+            config = json.load(config_f)
+        env = {
+            'DISCORD_CLIENT_ID': config['clientID'],
+            'DISCORD_CLIENT_SECRET': config['clientSecret'],
+            **os.environ
+        }
         was_running = subprocess.run(['systemctl', 'is-active', '--quiet', 'lore-seeker']).returncode == 0
         if was_running:
             subprocess.run(['sudo', 'systemctl', 'stop', 'lore-seeker'], check=True)
         try:
-            exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], cwd='/opt/git/github.com/fenhl/lore-seeker/stage/frontend').returncode
+            exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], env=env, cwd='/opt/git/github.com/fenhl/lore-seeker/stage/frontend').returncode
         except KeyboardInterrupt:
             exit_code = 0
         if was_running:
