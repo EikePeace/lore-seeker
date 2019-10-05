@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get "exh" => "exh#index"
   get "exh/todo" => "exh#todo"
   get "exh/vote/:name" => "exh#vote"
+  get "preferences" => "session#preferences"
+  post "preferences" => "session#preferences"
   get "/" => "card#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
