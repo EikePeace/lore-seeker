@@ -17,6 +17,7 @@ import zipfile
 import mse_to_json # https://github.com/fenhl/mse-to-json
 
 CACHE = {'set_files': {}}
+CACHING_FLAG = pathlib.Path('/opt/git/github.com/fenhl/lore-seeker/stage/frontend/tmp/caching-dev.txt')
 
 PRINTING_SPECIFIC_FIELDS = {
     'artist',
@@ -370,6 +371,13 @@ def yesno(question):
 
 if __name__ == '__main__':
     if sys.argv[1] == 'debug':
+        if sys.argv[2] == '--cache':
+            if not CACHING_FLAG.exists():
+                with CACHING_FLAG.open('w'):
+                    pass # write empty file
+        else:
+            if CACHING_FLAG.exists():
+                CACHING_FLAG.unlink()
         with open('/usr/local/share/fenhl/lore-seeker/config.json') as config_f:
             config = json.load(config_f)
         env = {
