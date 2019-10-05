@@ -1,6 +1,6 @@
 class ExhController < ApplicationController
   def vote
-    return redirect_to(controller: "session", action: "create") unless signed_in?
+    return redirect_to("/auth/discord") unless signed_in?
     card = exh_card(params[:name])
     if card.voters.include?(current_user)
       card.remove_vote!(current_user)
