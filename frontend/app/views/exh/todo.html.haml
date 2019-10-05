@@ -1,7 +1,7 @@
 .row.results_summary
   .col-12
     - if @cards.present?
-      #{pluralize(@cards.total_entries, "card")} unimplemented cards
+      #{pluralize(@cards.count, "card")} unimplemented cards
     - else
       All cards are implemented!
 - @cards.each do |card, printings|
