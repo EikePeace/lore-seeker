@@ -371,7 +371,7 @@ def yesno(question):
 
 if __name__ == '__main__':
     if sys.argv[1] == 'debug':
-        if sys.argv[2] == '--cache':
+        if len(sys.argv) > 2 and sys.argv[2] == '--cache':
             if not CACHING_FLAG.exists():
                 with CACHING_FLAG.open('w'):
                     pass # write empty file
