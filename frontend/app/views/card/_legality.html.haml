@@ -20,4 +20,5 @@
               = "#{votes} point#{votes == 1 ? "" : "s"}"
         - else
           %i{class: "legality-#{status}"}= status
+        = " " # make sure there's a space here since sequential a tags normally aren't spaced
         = link_to format_name, controller: "format", action: "show", id: format_name.parameterize

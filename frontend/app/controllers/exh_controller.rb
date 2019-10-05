@@ -1,4 +1,4 @@
-class CardController < ApplicationController
+class ExhController < ApplicationController
   def vote
     redirect_to(controller: "session", action: "create") unless signed_in?
     card = exh_card(params[:name])
