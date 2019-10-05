@@ -4,5 +4,4 @@
   = f.text_field(:sort)
   = label_tag(:sort, "Default view")
   = f.select(:view, options_for_select(@views.map{|view| [view, view] }, @user.view))
-  = f.text_field(:view)
   = f.submit("Save")
