@@ -7,9 +7,8 @@ class ExhSorter
     results.sort_by do |c|
       [
         -c.num_exh_votes,
-        @ech.legality(c).start_with?("banned"),
-        @ech.legality(c).start_with?("restricted"),
-        !c.commander?,
+        @ech.legality(c).start_with?("banned") ? 2 : (@ech.legality(c).start_with?("restricted") ? 1 : 0),
+        c.commander? ? 0 : 1,
         c.release_date_i,
         c.color_identity.size,
         c.default_sort_index
