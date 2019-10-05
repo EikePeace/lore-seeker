@@ -1,7 +1,7 @@
 .row.results_summary
   .col-12
     - if @cards.present?
-      = pluralize(@cards.count, "unimplemented card")
+      = pluralize(@cards.total_entries, "unimplemented card")
     - else
       All cards are implemented!
 - @cards.each do |card, printings|
@@ -23,4 +23,5 @@
         %i{class: (signed_in? && exh_card(card).voters.include?(current_user)) ? "voted" : ""}
           = "#{votes} vote#{votes == 1 ? "" : "s"}"
     .d-none.d-md-block.col-2
-      = render 'card/printings_short', card: card, printings: printings_view(card, printings)
+      = render "card/printings_short", card: card, printings: printings_view(card, printings)
+= render "card/pagination", cards: @cards

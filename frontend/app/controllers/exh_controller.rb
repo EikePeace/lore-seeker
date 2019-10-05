@@ -30,6 +30,7 @@ class ExhController < ApplicationController
     @title = "EXH card todo list"
     @ech = Format["elder cockatrice highlander"].new
     @exh = Format["elder xmage highlander"].new
+    page = [1, params[:page].to_i].max
     #TODO special section for reprints of implemented cards, if any
     search = "(f:ech or banned:ech) -f:exh sort:oldall" #TODO replace “sort:oldall” with sorter override below, include banned cards?
     query = Query.new(search)
@@ -38,6 +39,7 @@ class ExhController < ApplicationController
     @cards = results.card_groups.map do |printings|
       choose_best_printing(printings)
     end
+    @cards = @cards.paginate(page: page, per_page: 100)
     #TODO special section for vanilla and french vanilla cards, if any
   end
 
