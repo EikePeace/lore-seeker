@@ -1,5 +1,5 @@
 %h1 Preferences
-= form_with url: {controller: "session", action: "preferences"}, model: @user do |f|
+= form_with method: :post, url: {controller: "session", action: "preferences"}, model: @user do |f|
   = label_tag(:sort, "Default sorting")
   = f.text_field(:sort)
   = label_tag(:sort, "Default view")
