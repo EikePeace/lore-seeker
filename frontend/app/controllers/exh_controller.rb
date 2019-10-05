@@ -51,4 +51,11 @@ class ExhController < ApplicationController
     end
     redirect_back fallback_location: {controller: "card", action: "index", params: {q: card.name}}
   end
+
+  private
+
+  def choose_best_printing(printings)
+    best_printing = printings.find{|cp| ApplicationHelper.card_picture_path(cp) } || printings[0]
+    [best_printing, printings]
+  end
 end
