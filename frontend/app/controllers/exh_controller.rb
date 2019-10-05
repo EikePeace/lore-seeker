@@ -11,7 +11,7 @@ class ExhSorter
         @ech.legality(c).start_with?("restricted"),
         !c.commander?,
         c.release_date_i,
-        .color_identity.size,
+        c.color_identity.size,
         c.default_sort_index
       ]
     end
