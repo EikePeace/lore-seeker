@@ -13,7 +13,7 @@ class Sorter
   attr_reader :warnings, :sort_order
 
   def initialize(sort_order, seed)
-    known_sort_orders = ["ci", "cmc", "color", "name", "new", "newall", "number", "old", "oldall", "pow", "rand", "rarity", "tou", "artist", "released", "set"]
+    known_sort_orders = ["default", "ci", "cmc", "color", "name", "new", "newall", "number", "old", "oldall", "pow", "rand", "rarity", "tou", "artist", "released", "set"]
     known_sort_orders += known_sort_orders.map{|s| "-#{s}"}
 
     @seed = seed
@@ -46,6 +46,10 @@ class Sorter
   def card_key(c)
     @sort_order.flat_map do |part|
       case part
+      when "default"
+        [c.default_sort_index]
+      when "-default"
+        [-c.default_sort_index]
       when "new", "-old"
         [c.set.regular? ? 0 : 1, -c.release_date_i]
       when "old", "-new"

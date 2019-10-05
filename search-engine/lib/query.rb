@@ -15,7 +15,7 @@ class Query
   attr_reader :cond, :metadata # for tests only
   attr_writer :sorter # for EXH todo list
 
-  def initialize(query_string, seed=nil)
+  def initialize(query_string, seed=nil, user=nil)
     @query_string = query_string
     @cond, @metadata, @warnings = QueryParser.new.parse(query_string)
     if needs_seed?
@@ -23,12 +23,13 @@ class Query
     else
       @seed = nil
     end
-    @sorter = Sorter.new(@metadata[:sort], @seed)
+    @user = user
+    @sorter = Sorter.new(sort, @seed)
     @warnings += @sorter.warnings
   end
 
   def needs_seed?
-    @metadata[:sort] && @metadata[:sort] =~ /\brand\b/
+    sort =~ /\brand\b/
   end
 
   def search(db)
@@ -71,8 +72,13 @@ class Query
       }
   end
 
+  def sort
+    #TODO patch user sorting order instead of overriding it
+    @metadata[:sort] || (@user && @user.sort) || "default"
+  end
+
   def view
-    @metadata[:view]
+    @metadata[:view] || (@user && @user.view) || "default"
   end
 
   private
