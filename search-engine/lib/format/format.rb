@@ -83,7 +83,7 @@ class Format
     return "#{offending_card.name} can't be a commander." unless offending_card.nil?
     offending_card = commanders.map(&:last).map(&:main_front).find{|card| legality(card) == "restricted" }
     return "#{offending_card.name} is banned as commander in #{format_pretty_name}." unless offending_card.nil?
-    mainboard_size = 100 - commanders.length
+    mainboard_size = 100 - commanders.size
     return "Mainboard must be exactly #{mainboard_size} cards, but this deck has #{deck.number_of_mainboard_cards}." if deck.number_of_mainboard_cards != mainboard_size
     offending_card = deck.physical_cards.map(&:main_front).find{|card| !card.allowed_in_any_number? && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.sum(&:first) > 1 }
     unless offending_card.nil?

@@ -22,7 +22,11 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  helper_method :current_user, :signed_in?
+  def exh_card(card)
+    ExhCard.find_or_create_by!(name: card.name)
+  end
+
+  helper_method :current_user, :signed_in?, :exh_card
 
   def current_user=(user)
     @current_user = user

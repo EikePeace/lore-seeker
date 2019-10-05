@@ -43,6 +43,7 @@ class FormatFDH < Format
   def legality(card)
     status = super(card)
     return status if status != "legal"
+    card = card.main_front if card.is_a?(PhysicalCard)
     if card.custom?
       @custom_ban_list.legality(card.name, @time)
     else

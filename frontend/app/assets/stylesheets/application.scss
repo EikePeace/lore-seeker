@@ -169,6 +169,14 @@ form.search {
       background-color: #800;
     }
   }
+  a.legality-banned i::after,
+  a.legality-banned:hover i.voted::after {
+    content: " ⇧";
+  }
+  a.legality-banned i.voted::after,
+  a.legality-banned:hover i::after {
+    content: " ⬆︎";
+  }
   .legality-restricted {
     background-color: #fa4;
     @media (prefers-color-scheme: dark) {

@@ -6,6 +6,7 @@ class ConditionBanned < ConditionFormat
   private
 
   def legality_ok?(legality)
-    legality == "banned"
+    return false if legality.nil?
+    legality.start_with? "banned"
   end
 end

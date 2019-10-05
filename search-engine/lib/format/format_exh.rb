@@ -8,12 +8,14 @@ class FormatEXH < FormatECH
     "Elder XMage Highlander"
   end
 
-  def in_format?(card)
-    card.printings.each do |printing|
-      next if @time and printing.release_date > @time
-      return true if card_list(@time).include?(printing.name)
+  def legality(card)
+    status = super(card)
+    if status == "legal" or status == "restricted"
+      unless card_list(@time).include?(card.name)
+        status = "banned-#{ExhCard.find_by(name: card.name).voter_ids.size}"
+      end
     end
-    false
+    status
   end
 
   def card_list(date)

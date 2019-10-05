@@ -13,6 +13,11 @@
         - if status.start_with? "restricted-"
           - points = status.split("-")[1].to_i
           %i{class: "legality-restricted"}= "#{points} point#{points == 1 ? "" : "s"}"
+        - elsif status.start_with? "banned-"
+          - votes = status.split("-")[1].to_i
+          = link_to class: "legality-banned", {controller: "exh", action: "vote", name: card.name} do
+            %i{class: (signed_in? && exh_card(card).voters.include?(current_user)) ? "voted" : ""}
+              = "#{votes} point#{votes == 1 ? "" : "s"}"
         - else
           %i{class: "legality-#{status}"}= status
         = link_to format_name, controller: "format", action: "show", id: format_name.parameterize
