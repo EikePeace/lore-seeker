@@ -11,7 +11,7 @@
           - if signed_in?
             signed in as #{current_user}
             %br
-            = link_to controller: "session" action: "preferences" do
+            = link_to controller: "session", action: "preferences" do
               Preferences
             &bullet;
             %a{href: "/logout"} Sign out
