@@ -23,7 +23,8 @@ class ApplicationController < ActionController::Base
   end
 
   def exh_card(card)
-    ExhCard.find_or_create_by!(name: card.name)
+    card_name = card.respond_to?(:name) ? card.name : card
+    ExhCard.find_or_create_by!(name: card_name)
   end
 
   helper_method :current_user, :signed_in?, :exh_card
