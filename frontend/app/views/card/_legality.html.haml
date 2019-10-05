@@ -17,7 +17,7 @@
           - votes = status.split("-")[1].to_i
           = link_to({controller: "exh", action: "vote", name: card.name}, class: "legality-banned") do
             %i{class: (signed_in? && exh_card(card).voters.include?(current_user)) ? "voted" : ""}
-              = "#{votes} point#{votes == 1 ? "" : "s"}"
+              = "#{votes} vote#{votes == 1 ? "" : "s"}"
         - else
           %i{class: "legality-#{status}"}= status
         = " " # make sure there's a space here since sequential a tags normally aren't spaced
