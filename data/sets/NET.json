@@ -90,7 +90,7 @@
             ]
         },
         {
-            "artist": "Broly1337",
+            "artist": "Marek Okon",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -120,7 +120,7 @@
             ]
         },
         {
-            "artist": "hideyoshi (DeviantArt)",
+            "artist": "Wenjuinn Png",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -151,7 +151,7 @@
             ]
         },
         {
-            "artist": "katmachieavelli (DeviantArt)",
+            "artist": "katmachieavelli",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -159,30 +159,35 @@
             "colors": [
                 "W"
             ],
-            "convertedManaCost": 3.0,
+            "convertedManaCost": 2.0,
             "flavorText": "Half of all battles are won by experience.",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
-            "manaCost": "{2}{W}",
+            "manaCost": "{1}{W}",
             "name": "Battle Tested",
             "number": "5",
             "originalName": "Battle Tested",
-            "originalText": "Target creature gets +2/+4 until end of turn. If it's equipped, it also gains lifelink until end of turn.",
+            "originalText": "Target creature gets +2/+2 until end of turn. If it's equipped, draw a card.",
             "originalType": "Instant",
             "rarity": "common",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "If the creature is no longer a legal target as Battle Tested starts to resolve, you don't draw a card."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
-            "text": "Target creature gets +2/+4 until end of turn. If it's equipped, it also gains lifelink until end of turn.",
+            "text": "Target creature gets +2/+2 until end of turn. If it's equipped, draw a card.",
             "type": "Instant",
             "types": [
                 "Instant"
             ]
         },
         {
-            "artist": "MichaelBroussard (DeviantArt)",
+            "artist": "Michael Broussard",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -215,7 +220,7 @@
             ]
         },
         {
-            "artist": "madspartan013 (DeviantArt)",
+            "artist": "madspartan013",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -251,43 +256,7 @@
             ]
         },
         {
-            "artist": "Adam Kuczek",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 2.0,
-            "flavorText": "Netropolis airspace is tightly regulated, but that doesn't stop everyone.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{W}",
-            "name": "Cyber Glider",
-            "number": "8",
-            "originalName": "Cyber Glider",
-            "originalText": "Whenever an artifact enters the battlefield under your control, Cyber Glider gains flying until end of turn.",
-            "originalType": "Creature \u2014 Human Pilot",
-            "power": "2",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Pilot"
-            ],
-            "supertypes": [],
-            "text": "Whenever an artifact enters the battlefield under your control, Cyber Glider gains flying until end of turn.",
-            "toughness": "2",
-            "type": "Creature \u2014 Human Pilot",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "GeorgeLovesyArt (DeviantArt)",
+            "artist": "GeorgeLovesyArt",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -303,9 +272,9 @@
             "layout": "normal",
             "manaCost": "{1}{W}{W}",
             "name": "Cymurai Blademaster",
-            "number": "9",
+            "number": "8",
             "originalName": "Cymurai Blademaster",
-            "originalText": "Double strike\nSuperiority \u2014 Whenever Cymurai Blademaster attacks, it gains indestructible until end of turn if you have more life than an opponent.",
+            "originalText": "Double strike\nSuperiority \u2014 At the beginning of combat on your turn, Cymurai Blademaster gains indestructible until end of turn if you have more life than an opponent.",
             "originalType": "Artifact Creature \u2014 Construct Samurai",
             "power": "2",
             "rarity": "rare",
@@ -315,7 +284,7 @@
                 "Samurai"
             ],
             "supertypes": [],
-            "text": "Double strike\nSuperiority \u2014 Whenever Cymurai Blademaster attacks, it gains indestructible until end of turn if you have more life than an opponent.",
+            "text": "Double strike\nSuperiority \u2014 At the beginning of combat on your turn, Cymurai Blademaster gains indestructible until end of turn if you have more life than an opponent.",
             "toughness": "2",
             "type": "Artifact Creature \u2014 Construct Samurai",
             "types": [
@@ -324,7 +293,7 @@
             ]
         },
         {
-            "artist": "adamkuczek",
+            "artist": "Adam Kuczek",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -340,7 +309,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "District Raid",
-            "number": "10",
+            "number": "9",
             "originalName": "District Raid",
             "originalText": "Creatures you control get +2/+1 until end of turn.",
             "originalType": "Sorcery",
@@ -355,7 +324,7 @@
             ]
         },
         {
-            "artist": "duster13208 (DeviantArt)",
+            "artist": "duster132",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -371,7 +340,7 @@
             "layout": "normal",
             "manaCost": "{7}{W}{W}",
             "name": "Dominator Droid",
-            "number": "11",
+            "number": "10",
             "originalName": "Dominator Droid",
             "originalText": "This spell costs {1} less to cast for each artifact you control.\nIndestructible",
             "originalType": "Artifact Creature \u2014 Giant Construct",
@@ -392,7 +361,7 @@
             ]
         },
         {
-            "artist": "fxEVo (DeviantArt)",
+            "artist": "fxEVo",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -407,7 +376,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Force Deployment",
-            "number": "12",
+            "number": "11",
             "originalName": "Force Deployment",
             "originalText": "Create three 1/1 white Soldier creature tokens.\nSuperiority \u2014 If you have more life than an opponent, target player skips their next combat phase.",
             "originalType": "Sorcery",
@@ -422,7 +391,7 @@
             ]
         },
         {
-            "artist": "djahal (DeviantArt)",
+            "artist": "Eva Kosmos",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -430,29 +399,31 @@
             "colors": [
                 "W"
             ],
-            "convertedManaCost": 3.0,
+            "convertedManaCost": 5.0,
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
-            "manaCost": "{1}{W}{W}",
-            "name": "Forward Arsenal",
-            "number": "13",
-            "originalName": "Forward Arsenal",
-            "originalText": "Arm up to three creatures you control. They gain vigilance until end of turn. (Create colorless Equipment artifact tokens named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to those creatures.)",
-            "originalType": "Sorcery",
-            "rarity": "uncommon",
+            "manaCost": "{4}{W}",
+            "name": "Freedom Fighters",
+            "number": "12",
+            "power": "1",
+            "rarity": "common",
             "rulings": [],
-            "subtypes": [],
+            "subtypes": [
+                "Human",
+                "Rebel"
+            ],
             "supertypes": [],
-            "text": "Arm up to three creatures you control. They gain vigilance until end of turn. (Create colorless Equipment artifact tokens named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to those creatures.)",
-            "type": "Sorcery",
+            "text": "When Freedom Fighters enters the battlefield, arm it twice. (Create two colorless Equipment artifact tokens named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to this creature.)",
+            "toughness": "3",
+            "type": "Creature \u2014 Human Rebel",
             "types": [
-                "Sorcery"
+                "Creature"
             ]
         },
         {
-            "artist": "duster132 (DeviantArt)",
+            "artist": "duster132",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -468,26 +439,35 @@
             "loyalty": "4",
             "manaCost": "{2}{W}{W}",
             "name": "L3-T, Equalizer",
-            "number": "14",
+            "number": "13",
             "originalName": "L3-T, Equalizer",
-            "originalText": "+2: Each player gains 3 life.\n-2: Choose a nonland permanent type. Each player who controls the most permanents of that type sacrifices one of them.\n-12: Target opponent gets an emblem with \"You can't cast spells during your turn unless an opponent cast a spell last turn\" and \"Skip your combat phase unless you were attacked last turn.\"",
+            "originalText": "[+2]: Each player gains 3 life.\n[-2]: Choose a nonland permanent type. Each player who controls the most permanents of that type sacrifices one of them.\n[-10]: Target opponent gets an emblem with \"You can't cast spells during your turn unless an opponent cast a spell last turn\" and \"Skip your combat phase unless you were attacked last turn.\"",
             "originalType": "Legendary Planeswalker \u2014 L3-T",
             "rarity": "mythic",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "Even though land can't be chosen as the permanent type for the [-2], lands are still counted (e.g. artifact lands or land creatures) and can be sacrificed."
+                },
+                {
+                    "date": "2019-10-07",
+                    "text": "In a multiplayer game, the emblem only cares about the last turn (usually the turn of the player to your right), not all of your opponents' turns."
+                }
+            ],
             "subtypes": [
                 "L3-T"
             ],
             "supertypes": [
                 "Legendary"
             ],
-            "text": "+2: Each player gains 3 life.\n-2: Choose a nonland permanent type. Each player who controls the most permanents of that type sacrifices one of them.\n-12: Target opponent gets an emblem with \"You can't cast spells during your turn unless an opponent cast a spell last turn\" and \"Skip your combat phase unless you were attacked last turn.\"",
+            "text": "[+2]: Each player gains 3 life.\n[-2]: Choose a nonland permanent type. Each player who controls the most permanents of that type sacrifices one of them.\n[-10]: Target opponent gets an emblem with \"You can't cast spells during your turn unless an opponent cast a spell last turn\" and \"Skip your combat phase unless you were attacked last turn.\"",
             "type": "Legendary Planeswalker \u2014 L3-T",
             "types": [
                 "Planeswalker"
             ]
         },
         {
-            "artist": "Shimmering-Sword (DeviantArt)",
+            "artist": "Shimmering-Sword",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -503,7 +483,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "Liberated Armory",
-            "number": "15",
+            "number": "14",
             "originalName": "Liberated Armory",
             "originalText": "Whenever a creature enters the battlefield under your control, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to that creature.)",
             "originalType": "Enchantment",
@@ -534,7 +514,7 @@
             "layout": "normal",
             "manaCost": "{X}{W}{W}",
             "name": "Martial Dictate",
-            "number": "16",
+            "number": "15",
             "originalName": "Martial Dictate",
             "originalText": "Create X 1/1 white Soldier creature tokens. You gain X life.",
             "originalType": "Sorcery",
@@ -565,7 +545,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Mecha Technician",
-            "number": "17",
+            "number": "16",
             "originalName": "Mecha Technician",
             "originalText": "Whenever Mecha Technician becomes tapped, you gain 2 life.",
             "originalType": "Creature \u2014 Human Artificer",
@@ -585,7 +565,7 @@
             ]
         },
         {
-            "artist": "Djahal",
+            "artist": "Geoffroy Thoorens",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -600,9 +580,9 @@
             "layout": "normal",
             "manaCost": "{2}{W}{W}",
             "name": "N-FORCE Captain",
-            "number": "18",
+            "number": "17",
             "originalName": "N-FORCE Captain",
-            "originalText": "When N-FORCE Captain enters the battlefield, create two 1/1 white Soldier creature tokens.\nSuperiority \u2014 Whenever N-FORCE Captain attacks, creatures you control get +1/+1 until end of turn if you have more life than an opponent.",
+            "originalText": "When N-FORCE Captain enters the battlefield, create two 1/1 white Soldier creature tokens.\nSuperiority \u2014 At the beginning of combat on your turn, creatures you control get +1/+1 until end of turn if you have more life than an opponent.",
             "originalType": "Creature \u2014 Human Soldier",
             "power": "2",
             "rarity": "uncommon",
@@ -612,7 +592,7 @@
                 "Soldier"
             ],
             "supertypes": [],
-            "text": "When N-FORCE Captain enters the battlefield, create two 1/1 white Soldier creature tokens.\nSuperiority \u2014 Whenever N-FORCE Captain attacks, creatures you control get +1/+1 until end of turn if you have more life than an opponent.",
+            "text": "When N-FORCE Captain enters the battlefield, create two 1/1 white Soldier creature tokens.\nSuperiority \u2014 At the beginning of combat on your turn, creatures you control get +1/+1 until end of turn if you have more life than an opponent.",
             "toughness": "2",
             "type": "Creature \u2014 Human Soldier",
             "types": [
@@ -620,7 +600,7 @@
             ]
         },
         {
-            "artist": "Austin Roberts",
+            "artist": "Yvan Quinet",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -628,18 +608,16 @@
             "colors": [
                 "W"
             ],
-            "convertedManaCost": 2.0,
+            "convertedManaCost": 3.0,
+            "flavorText": "\"Citizens need protection, but in my experience it's the law that needs protection from the citizens.\"",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
-            "manaCost": "{1}{W}",
-            "name": "N-FORCE Recruit",
-            "number": "19",
-            "originalName": "N-FORCE Recruit",
-            "originalText": "When N-FORCE Recruit enters the battlefield, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to this creature.)",
-            "originalType": "Creature \u2014 Human Soldier",
-            "power": "1",
+            "manaCost": "{2}{W}",
+            "name": "N-FORCE Trooper",
+            "number": "18",
+            "power": "2",
             "rarity": "common",
             "rulings": [],
             "subtypes": [
@@ -647,43 +625,8 @@
                 "Soldier"
             ],
             "supertypes": [],
-            "text": "When N-FORCE Recruit enters the battlefield, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to this creature.)",
-            "toughness": "1",
-            "type": "Creature \u2014 Human Soldier",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "duster13201 (DeviantArt)",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 5.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{4}{W}",
-            "name": "N-FORCE Squadron",
-            "number": "20",
-            "originalName": "N-FORCE Squadron",
-            "originalText": "When N-FORCE Squadron enters the battlefield, arm it twice. (Create two colorless Equipment artifact tokens named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to this creature.)",
-            "originalType": "Creature \u2014 Human Soldier",
-            "power": "1",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Soldier"
-            ],
-            "supertypes": [],
-            "text": "When N-FORCE Squadron enters the battlefield, arm it twice. (Create two colorless Equipment artifact tokens named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to this creature.)",
-            "toughness": "3",
+            "text": "Superiority \u2014 At the beginning of combat on your turn, N-FORCE Trooper gets +2/+2 until end of turn if you have more life than an opponent.",
+            "toughness": "2",
             "type": "Creature \u2014 Human Soldier",
             "types": [
                 "Creature"
@@ -706,7 +649,7 @@
             "layout": "normal",
             "manaCost": "{4}{W}{W}",
             "name": "New World Order",
-            "number": "21",
+            "number": "19",
             "originalName": "New World Order",
             "originalText": "Exchange life totals with target player.",
             "originalType": "Sorcery",
@@ -721,7 +664,7 @@
             ]
         },
         {
-            "artist": "Reza-Ilyasa (DeviantArt)",
+            "artist": "Reza-ilyasa",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -736,7 +679,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Overwatch Droid",
-            "number": "22",
+            "number": "20",
             "originalName": "Overwatch Droid",
             "originalText": "Flying\nWhenever another artifact enters the battlefield under your control, Overwatch Droid gains indestructible until end of turn.",
             "originalType": "Artifact Creature \u2014 Construct",
@@ -756,7 +699,7 @@
             ]
         },
         {
-            "artist": "wyv1 (DeviantArt)",
+            "artist": "Yvan Quinet",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -765,13 +708,14 @@
                 "W"
             ],
             "convertedManaCost": 3.0,
+            "flavorText": "\"Satisfactorily equitable.\"\n\u2014L3-T",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "Parameter Halo",
-            "number": "23",
+            "number": "21",
             "originalName": "Parameter Halo",
             "originalText": "Enchant artifact or creature\nEnchanted permanent can't attack or block, and its activated abilities can't be activated.",
             "originalType": "Enchantment \u2014 Aura",
@@ -788,7 +732,7 @@
             ]
         },
         {
-            "artist": "ptitvinc (DeviantArt)",
+            "artist": "ptitvinc",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -804,9 +748,8 @@
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "Peacekeeper Droid",
-            "number": "24",
+            "number": "22",
             "originalName": "Peacekeeper Droid",
-            "originalText": "",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "3",
             "rarity": "common",
@@ -815,7 +758,6 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "",
             "toughness": "2",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -840,7 +782,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "Police Discretion",
-            "number": "25",
+            "number": "23",
             "originalName": "Police Discretion",
             "originalText": "Choose one \u2014\n\u2022 Prevent all damage that would be dealt to you and creatures you control this turn.\n\u2022 Destroy target creature that dealt damage to you or a creature you controlled this turn.",
             "originalType": "Instant",
@@ -871,7 +813,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Precog Pilot",
-            "number": "26",
+            "number": "24",
             "originalName": "Precog Pilot",
             "originalText": "Double strike\nWhenever Precog Pilot becomes tapped, scry 1.",
             "originalType": "Creature \u2014 Human Pilot",
@@ -907,7 +849,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "Psychic Obligator",
-            "number": "27",
+            "number": "25",
             "originalName": "Psychic Obligator",
             "originalText": "Whenever an artifact enters the battlefield under your control, you may tap target creature.",
             "originalType": "Creature \u2014 Human",
@@ -942,7 +884,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Public Broadcast",
-            "number": "28",
+            "number": "26",
             "originalName": "Public Broadcast",
             "originalText": "You gain 4 life.\nSuperiority \u2014 Then if you have more life than an opponent, draw a card.",
             "originalType": "Instant",
@@ -957,7 +899,39 @@
             ]
         },
         {
-            "artist": "happy-mutt (DeviantArt)",
+            "artist": "tnounsy",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 3.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{W}{W}",
+            "name": "Rebel Advance",
+            "number": "27",
+            "rarity": "uncommon",
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "Creatures that enter the battlefield, come under your control, or become creatures after Rebel Advance resolves don't gain vigilance."
+                }
+            ],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Arm each creature you control. They gain vigilance until end of turn. (Create colorless Equipment artifact tokens named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to those creatures.)",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
+            ]
+        },
+        {
+            "artist": "Grey Hues",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -972,28 +946,90 @@
             "hasNonFoil": true,
             "layout": "normal",
             "manaCost": "{W}",
-            "name": "Rooftop Sniper",
-            "number": "29",
-            "originalName": "Rooftop Sniper",
-            "originalText": "As long as Rooftop Sniper is equipped, it has first strike.",
-            "originalType": "Creature \u2014 Human Soldier",
+            "name": "Rebel Sniper",
+            "number": "28",
             "power": "2",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [
                 "Human",
-                "Soldier"
+                "Rebel"
             ],
             "supertypes": [],
-            "text": "As long as Rooftop Sniper is equipped, it has first strike.",
+            "text": "As long as Rebel Sniper is equipped, it has first strike.",
             "toughness": "1",
-            "type": "Creature \u2014 Human Soldier",
+            "type": "Creature \u2014 Human Rebel",
             "types": [
                 "Creature"
             ]
         },
         {
-            "artist": "zhangx (DeviantArt)",
+            "artist": "Concept Art House",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 2.0,
+            "flavorText": "Netropolis airspace is tightly regulated, but that doesn't stop everyone.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{W}",
+            "name": "Rocketeer",
+            "number": "29",
+            "power": "2",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Pilot"
+            ],
+            "supertypes": [],
+            "text": "Whenever an artifact enters the battlefield under your control, Rocketeer gains flying until end of turn.",
+            "toughness": "2",
+            "type": "Creature \u2014 Human Pilot",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "genessis-d4nkphq",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 2.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{W}",
+            "name": "Rooftop Rebel",
+            "number": "30",
+            "power": "1",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Rebel"
+            ],
+            "supertypes": [],
+            "text": "When Rooftop Rebel enters the battlefield, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to this creature.)",
+            "toughness": "1",
+            "type": "Creature \u2014 Human Rebel",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "zhangx",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1008,7 +1044,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}{W}",
             "name": "Scion Mark IV",
-            "number": "30",
+            "number": "31",
             "originalName": "Scion Mark IV",
             "originalText": "Vigilance\nCrew 2 (Tap any number of creatures you control with total power 2 or greater: This Vehicle becomes an artifact creature until end of turn.)",
             "originalType": "Artifact \u2014 Vehicle",
@@ -1027,7 +1063,7 @@
             ]
         },
         {
-            "artist": "wyv1 (DeviantArt)",
+            "artist": "Yvan Quinet",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1043,7 +1079,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Skilled Protector",
-            "number": "31",
+            "number": "32",
             "originalName": "Skilled Protector",
             "originalText": "Lifelink",
             "originalType": "Creature \u2014 Human Ninja",
@@ -1063,7 +1099,7 @@
             ]
         },
         {
-            "artist": "Fredaugis (DeviantArt)",
+            "artist": "Fredaugis",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1079,7 +1115,7 @@
             "layout": "normal",
             "manaCost": "{W}",
             "name": "Sonic Scream",
-            "number": "32",
+            "number": "33",
             "originalName": "Sonic Scream",
             "originalText": "Destroy target artifact or enchantment with converted mana cost 3 or less.",
             "originalType": "Instant",
@@ -1110,7 +1146,7 @@
             "layout": "normal",
             "manaCost": "{4}{W}{W}",
             "name": "Sovereign Droid",
-            "number": "33",
+            "number": "34",
             "originalName": "Sovereign Droid",
             "originalText": "Flying, lifelink",
             "originalType": "Artifact Creature \u2014 Construct",
@@ -1130,7 +1166,7 @@
             ]
         },
         {
-            "artist": "ShareCG",
+            "artist": "Adam Kuczek",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1139,16 +1175,16 @@
                 "W"
             ],
             "convertedManaCost": 1.0,
-            "flavorText": "The Skyguard's Sting units are programmed for superior reconnaissance and policing.",
+            "flavorText": "N-FORCE's Sting units are programmed for superior reconnaissance and policing.",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
             "manaCost": "{W}",
             "name": "Sting Droid",
-            "number": "34",
+            "number": "35",
             "originalName": "Sting Droid",
-            "originalText": "Flying",
+            "originalText": "Flying\n{W}, {T}, Sacrifice Sting Droid: Tap target creature.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "1",
             "rarity": "common",
@@ -1157,7 +1193,7 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "Flying",
+            "text": "Flying\n{W}, {T}, Sacrifice Sting Droid: Tap target creature.",
             "toughness": "2",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -1166,43 +1202,7 @@
             ]
         },
         {
-            "artist": "Marko-Djurdjevic (DeviantArt)",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 3.0,
-            "flavorText": "\"Citizens need protection, but in my experience it's the law that needs protection from the citizens.\"",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{2}{W}",
-            "name": "Street Enforcer",
-            "number": "35",
-            "originalName": "Street Enforcer",
-            "originalText": "Superiority \u2014 Whenever Street Enforcer attacks, it gets +2/+2 until end of turn if you have more life than an opponent.",
-            "originalType": "Creature \u2014 Human Soldier",
-            "power": "2",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Soldier"
-            ],
-            "supertypes": [],
-            "text": "Superiority \u2014 Whenever Street Enforcer attacks, it gets +2/+2 until end of turn if you have more life than an opponent.",
-            "toughness": "2",
-            "type": "Creature \u2014 Human Soldier",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "ukitakumuki (DeviantArt)",
+            "artist": "ukitakumuki",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1253,20 +1253,41 @@
             "name": "Taken for Questioning",
             "number": "37",
             "originalName": "Taken for Questioning",
-            "originalText": "When Taken for Questioning enters the battlefield, exile another target nonland permanent.\nSuperiority \u2014 When Taken for Questioning leaves the battlefield, return the exiled card to the battlefield under its owner's control unless you have more life than an opponent.",
+            "originalText": "Superiority \u2014 As long as you have more life than an opponent, you may cast Taken for Questioning as though it had flash.\nWhen Taken for Questioning enters the battlefield, exile target nonland permanent an opponent controls until Taken for Questioning leaves the battlefield.",
             "originalType": "Enchantment",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "If Taken for Questioning leaves the battlefield before its triggered ability resolves, the target permanent won't be exiled."
+                },
+                {
+                    "date": "2019-10-07",
+                    "text": "Auras attached to the exiled permanent will be put into their owners' graveyards. Any Equipment will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+                },
+                {
+                    "date": "2019-10-07",
+                    "text": "If a token is exiled this way, it will cease to exist and won't return to the battlefield."
+                },
+                {
+                    "date": "2019-10-07",
+                    "text": "The exiled card returns to the battlefield immediately after Taken for Questioning leaves the battlefield. Nothing happens between the two events, including state-based actions."
+                },
+                {
+                    "date": "2019-10-07",
+                    "text": "In a multiplayer game, if Taken for Questioning's owner leaves the game and another player owns the exiled card, the exiled card will return to the battlefield under its owner's control. Because the one-shot effect that returns the card isn't an ability that goes on the stack, it won't cease to exist along with the leaving player's spells and abilities on the stack."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
-            "text": "When Taken for Questioning enters the battlefield, exile another target nonland permanent.\nSuperiority \u2014 When Taken for Questioning leaves the battlefield, return the exiled card to the battlefield under its owner's control unless you have more life than an opponent.",
+            "text": "Superiority \u2014 As long as you have more life than an opponent, you may cast Taken for Questioning as though it had flash.\nWhen Taken for Questioning enters the battlefield, exile target nonland permanent an opponent controls until Taken for Questioning leaves the battlefield.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
             ]
         },
         {
-            "artist": "cakeypigdog (DeviantArt)",
+            "artist": "Jake Gumbleton",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1303,7 +1324,7 @@
             ]
         },
         {
-            "artist": "ortheza (DeviantArt)",
+            "artist": "ortheza",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1334,7 +1355,7 @@
             ]
         },
         {
-            "artist": "Torvenius (DeviantArt)",
+            "artist": "Torvenius",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1343,7 +1364,7 @@
                 "W"
             ],
             "convertedManaCost": 4.0,
-            "flavorText": "After thousands of warnings and bans, one day the moderator had had enough.",
+            "flavorText": "One day, after thousands of warnings and bans, the moderator had enough.",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -1409,7 +1430,7 @@
             ]
         },
         {
-            "artist": "Jesse van Dijk",
+            "artist": "Alexandr Elichev",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1418,7 +1439,7 @@
                 "U"
             ],
             "convertedManaCost": 1.0,
-            "flavorText": "\"This data is older than Netropolis itself. How is that possible? Where did the Net come from?\"\n\u2014Talya",
+            "flavorText": "Genetics are just another way that the Netropolis elite claim power and privilege.",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -1440,7 +1461,7 @@
             ]
         },
         {
-            "artist": "Reza-ilyasa (DeviantArt)",
+            "artist": "Reza-ilyasa",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1474,7 +1495,7 @@
             ]
         },
         {
-            "artist": "DarkGeometryArt (DeviantArt)",
+            "artist": "DarkGeometryArt",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1510,7 +1531,7 @@
             ]
         },
         {
-            "artist": "DarkGeometryArt (DeviantArt)",
+            "artist": "DarkGeometryArt",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1554,7 +1575,7 @@
             ]
         },
         {
-            "artist": "Freemind93 (DeviantArt)",
+            "artist": "Phelan Davion",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1621,7 +1642,7 @@
             ]
         },
         {
-            "artist": "moonworker101 (DeviantArt)",
+            "artist": "moonworker1",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1720,7 +1741,7 @@
             ]
         },
         {
-            "artist": "Bluefley (DeviantArt)",
+            "artist": "Marc Brunet",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1752,7 +1773,7 @@
             ]
         },
         {
-            "artist": "wyv1 (DeviantArt)",
+            "artist": "Yvan Quinet",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1788,7 +1809,7 @@
             ]
         },
         {
-            "artist": "ianllanas (DeviantArt)",
+            "artist": "Ian Llanas",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1854,7 +1875,7 @@
             ]
         },
         {
-            "artist": "wyv (DeviantArt)",
+            "artist": "Yvan Quinet",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1895,7 +1916,7 @@
             ]
         },
         {
-            "artist": "piligrim951 (DeviantArt)",
+            "artist": "Nickolay Taranenko",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1912,7 +1933,7 @@
             "name": "Flutter Droid",
             "number": "56",
             "originalName": "Flutter Droid",
-            "originalText": "Flying\nWhenever Flutter Droid attacks, if an artifact entered the battlefield under your control this turn, Flutter Droid gets +1/+1 until end of turn.",
+            "originalText": "Flying\nAt the beginning of combat on your turn, if an artifact entered the battlefield under your control this turn, Flutter Droid gets +1/+1 until end of turn.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "1",
             "rarity": "uncommon",
@@ -1921,7 +1942,7 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "Flying\nWhenever Flutter Droid attacks, if an artifact entered the battlefield under your control this turn, Flutter Droid gets +1/+1 until end of turn.",
+            "text": "Flying\nAt the beginning of combat on your turn, if an artifact entered the battlefield under your control this turn, Flutter Droid gets +1/+1 until end of turn.",
             "toughness": "1",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -1930,7 +1951,7 @@
             ]
         },
         {
-            "artist": "BMJ-Metalik (DeviantArt)",
+            "artist": "BMJ Metalik",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1961,7 +1982,7 @@
             ]
         },
         {
-            "artist": "Hybridgothica (deviantart)",
+            "artist": "Hybridgothica",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1997,7 +2018,7 @@
             ]
         },
         {
-            "artist": "AKIRAwrong (DeviantArt)",
+            "artist": "AKIRAwrong",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2069,7 +2090,7 @@
             ]
         },
         {
-            "artist": "Jonasdero (DeviantArt)",
+            "artist": "Jonas De Ro",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2088,26 +2109,26 @@
             "number": "61",
             "originalName": "Mat Harden, Detective",
             "originalText": "Whenever a creature dies, look at the top card of your library. You may put it into your graveyard.\n{U}, {T}: Draw a card. Activate this ability only if there is a creature card, an artifact card, and a land card in your graveyard.",
-            "originalType": "Legendary Creature \u2014 Human Advisor",
+            "originalType": "Legendary Creature \u2014 Human Scout",
             "power": "1",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [
                 "Human",
-                "Advisor"
+                "Scout"
             ],
             "supertypes": [
                 "Legendary"
             ],
             "text": "Whenever a creature dies, look at the top card of your library. You may put it into your graveyard.\n{U}, {T}: Draw a card. Activate this ability only if there is a creature card, an artifact card, and a land card in your graveyard.",
             "toughness": "3",
-            "type": "Legendary Creature \u2014 Human Advisor",
+            "type": "Legendary Creature \u2014 Human Scout",
             "types": [
                 "Creature"
             ]
         },
         {
-            "artist": "udonnodu (DeviantArt)",
+            "artist": "udonnodu",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2137,7 +2158,7 @@
             ]
         },
         {
-            "artist": "ianllanas (DeviantArt)",
+            "artist": "Ian Llanas",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2168,7 +2189,7 @@
             ]
         },
         {
-            "artist": "rawwad (DeviantArt)",
+            "artist": "Tibor Bedats",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2186,20 +2207,20 @@
             "name": "Net Run",
             "number": "64",
             "originalName": "Net Run",
-            "originalText": "Target creature gains \"Whenever this creature deals combat damage to an opponent, draw a card\" until end of turn.\nDraw a card.",
+            "originalText": "Until end of turn, whenever target creature deals combat damage to an opponent, draw a card.\nDraw a card.",
             "originalType": "Sorcery",
             "rarity": "common",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Target creature gains \"Whenever this creature deals combat damage to an opponent, draw a card\" until end of turn.\nDraw a card.",
+            "text": "Until end of turn, whenever target creature deals combat damage to an opponent, draw a card.\nDraw a card.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
             ]
         },
         {
-            "artist": "noistromo (DeviantArt)",
+            "artist": "noistromo",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2217,7 +2238,6 @@
             "name": "NuGolem",
             "number": "65",
             "originalName": "NuGolem",
-            "originalText": "",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "3",
             "rarity": "common",
@@ -2226,7 +2246,6 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "",
             "toughness": "4",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -2235,7 +2254,7 @@
             ]
         },
         {
-            "artist": "nathantwist (DeviantArt)",
+            "artist": "nathantwist",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2271,7 +2290,7 @@
             ]
         },
         {
-            "artist": "hybridgothica (DeviantArt)",
+            "artist": "hybridgothica",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2302,7 +2321,7 @@
             ]
         },
         {
-            "artist": "KypcaHT (DeviantArt)",
+            "artist": "KypcaHT",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2333,7 +2352,7 @@
             ]
         },
         {
-            "artist": "sbalac (DeviantArt)",
+            "artist": "sbalac",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2367,7 +2386,7 @@
             ]
         },
         {
-            "artist": "Fantasy Flight Games",
+            "artist": "Hybridgothica",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2398,7 +2417,7 @@
             ]
         },
         {
-            "artist": "Remton (DeviantArt)",
+            "artist": "DarkGeometryArt",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2435,7 +2454,7 @@
             ]
         },
         {
-            "artist": "Reza-ilyasa (DeviantArt)",
+            "artist": "Davis Engel",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2471,7 +2490,7 @@
             ]
         },
         {
-            "artist": "duster132 (DeviantArt)",
+            "artist": "duster132",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2506,7 +2525,7 @@
             ]
         },
         {
-            "artist": "Remton (DeviantArt)",
+            "artist": "Remton",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2573,7 +2592,7 @@
             ]
         },
         {
-            "artist": "Hybridgothica (DeviantArt)",
+            "artist": "Hybridgothica",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2591,17 +2610,22 @@
             "name": "Talya, Cyber Wayfarer",
             "number": "76",
             "originalName": "Talya, Cyber Wayfarer",
-            "originalText": "+1: Exile another target permanent you control, then return it to the battlefield.\n-2: Return another target permanent you control to your hand and draw two cards.\n-7: Gain control of all permanents until end of turn. Permanents you don't own don't untap during their controllers' next untap steps.",
+            "originalText": "[+1]: Exile another target permanent you control, then return it to the battlefield under its owner's control.\n[-2]: Return another target permanent you control to its owner's hand and draw two cards.\n[-7]: Untap all permanents and gain control of them until end of turn. Permanents you don't own don't untap during their controllers' next untap steps.",
             "originalType": "Legendary Planeswalker \u2014 Talya",
             "rarity": "mythic",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "The [-7] doesn't give anything haste, so creatures you gained control of will have summoning sickness."
+                }
+            ],
             "subtypes": [
                 "Talya"
             ],
             "supertypes": [
                 "Legendary"
             ],
-            "text": "+1: Exile another target permanent you control, then return it to the battlefield.\n-2: Return another target permanent you control to its owner's hand and draw two cards.\n-7: Gain control of all permanents until end of turn. Permanents you don't own don't untap during their controllers' next untap steps.",
+            "text": "[+1]: Exile another target permanent you control, then return it to the battlefield under its owner's control.\n[-2]: Return another target permanent you control to its owner's hand and draw two cards.\n[-7]: Untap all permanents and gain control of them until end of turn. Permanents you don't own don't untap during their controllers' next untap steps.",
             "type": "Legendary Planeswalker \u2014 Talya",
             "types": [
                 "Planeswalker"
@@ -2644,7 +2668,7 @@
             ]
         },
         {
-            "artist": "Thomas Anderson",
+            "artist": "Vombavr",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2691,17 +2715,22 @@
             "name": "Vat-Grown Infiltrator",
             "number": "79",
             "originalName": "Vat-Grown Infiltrator",
-            "originalText": "Vat-Grown Infiltrator is each creature type among creatures you control in addition to its other types.\nWhenever Vat-Grown Infiltrator deals combat damage to an opponent, upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
+            "originalText": "As Vat-Grown Infiltrator enters the battlefield, choose a creature type.\nVat-Grown Infiltrator is the chosen type in addition to its other types.\nWhenever a creature you control of the chosen type deals combat damage to an opponent, upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
             "originalType": "Creature \u2014 Mutant Rogue",
             "power": "2",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "If no creature type was chosen (for example because something already on the battlefield became a Vat-Grown Infiltrator), none of the abilities do anything."
+                }
+            ],
             "subtypes": [
                 "Mutant",
                 "Rogue"
             ],
             "supertypes": [],
-            "text": "Vat-Grown Infiltrator is each creature type among creatures you control in addition to its other types.\nWhenever Vat-Grown Infiltrator deals combat damage to an opponent, upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
+            "text": "As Vat-Grown Infiltrator enters the battlefield, choose a creature type.\nVat-Grown Infiltrator is the chosen type in addition to its other types.\nWhenever a creature you control of the chosen type deals combat damage to an opponent, upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
             "toughness": "1",
             "type": "Creature \u2014 Mutant Rogue",
             "types": [
@@ -2709,7 +2738,7 @@
             ]
         },
         {
-            "artist": "OmeN2501 (DeviantArt)",
+            "artist": "OmeN2501",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2740,7 +2769,7 @@
             ]
         },
         {
-            "artist": "DanLuVisiArt (DeviantArt)",
+            "artist": "DanLuVisi",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -2806,7 +2835,7 @@
             ]
         },
         {
-            "artist": "Peter-Ortiz",
+            "artist": "Eduardo Pena",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -2842,7 +2871,7 @@
             ]
         },
         {
-            "artist": "Panelgutter (DeviantArt)",
+            "artist": "Panelgutter",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -2877,7 +2906,7 @@
             ]
         },
         {
-            "artist": "chrisnfy85 (DeviantArt)",
+            "artist": "chrisnfy85",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -2913,7 +2942,7 @@
             ]
         },
         {
-            "artist": "wyv1",
+            "artist": "Yvan Quinet",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -2950,7 +2979,7 @@
             ]
         },
         {
-            "artist": "wyv1 (deviantart)",
+            "artist": "Yvan Quinet",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3019,7 +3048,7 @@
             ]
         },
         {
-            "artist": "sparrow-chan (DeviantArt)",
+            "artist": "sparrow-chan",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3036,20 +3065,20 @@
             "name": "Deep Net",
             "number": "89",
             "originalName": "Deep Net",
-            "originalText": "Skip your draw step.\n{B}: Upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nPay 2 life: Put an uploaded card you own into your hand.",
+            "originalText": "Skip your draw step.\n{B}: Upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nPay 2 life: Put an uploaded card you own into your hand. Activate this ability only any time you could cast a sorcery.",
             "originalType": "Enchantment",
             "rarity": "mythic",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Skip your draw step.\n{B}: Upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nPay 2 life: Put an uploaded card you own into your hand.",
+            "text": "Skip your draw step.\n{B}: Upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nPay 2 life: Put an uploaded card you own into your hand. Activate this ability only any time you could cast a sorcery.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
             ]
         },
         {
-            "artist": "GeorgeLovesyArt (DeviantArt)",
+            "artist": "GeorgeLovesyArt",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3086,7 +3115,7 @@
             ]
         },
         {
-            "artist": "Marko-Djurdjevic (DeviantArt)",
+            "artist": "Marko Djurdjevi\u0107",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3119,7 +3148,7 @@
             ]
         },
         {
-            "artist": "Victor Manuel Leza",
+            "artist": "Victor Leza",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3154,7 +3183,7 @@
             ]
         },
         {
-            "artist": "Thylacinee (DeviantArt)",
+            "artist": "Thylacinee",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3222,7 +3251,7 @@
             ]
         },
         {
-            "artist": "Clark Higgins",
+            "artist": "Clark Wiggins",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3318,7 +3347,7 @@
             ]
         },
         {
-            "artist": "el-grimlock (DeviantArt)",
+            "artist": "el-grimlock",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3354,7 +3383,7 @@
             ]
         },
         {
-            "artist": "Victor Manuel Leza",
+            "artist": "Victor Leza",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3385,7 +3414,7 @@
             ]
         },
         {
-            "artist": "Ian Llanas (DeviantArt)",
+            "artist": "Ian Llanas",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3465,7 +3494,7 @@
             "originalName": "Phantom Walker",
             "originalText": "Menace\nCrew 3 (Tap any number of creatures you control with total power 3 or greater: This Vehicle becomes an artifact creature until end of turn.)\nYou may exile a creature card from your graveyard rather than pay Phantom Walker's crew cost.",
             "originalType": "Artifact \u2014 Vehicle",
-            "power": "4",
+            "power": "5",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [
@@ -3480,7 +3509,7 @@
             ]
         },
         {
-            "artist": "BorjaPindado (DeviantArt)",
+            "artist": "BorjaPindado",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3513,7 +3542,7 @@
             ]
         },
         {
-            "artist": "mirobudis (DeviantArt)",
+            "artist": "mirobudis",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3549,7 +3578,7 @@
             ]
         },
         {
-            "artist": "Marko-Djurdjevic (DeviantArt)",
+            "artist": "Marko Djurdjevi\u0107",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3585,7 +3614,7 @@
             ]
         },
         {
-            "artist": "Bodan-MRK",
+            "artist": "Bodan MRK",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3616,7 +3645,7 @@
             ]
         },
         {
-            "artist": "zgfisher (DeviantArt)",
+            "artist": "zgfisher",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3634,7 +3663,6 @@
             "name": "Robo Boxer",
             "number": "107",
             "originalName": "Robo Boxer",
-            "originalText": "",
             "originalType": "Artifact Creature \u2014 Human",
             "power": "2",
             "rarity": "common",
@@ -3643,7 +3671,6 @@
                 "Human"
             ],
             "supertypes": [],
-            "text": "",
             "toughness": "2",
             "type": "Artifact Creature \u2014 Human",
             "types": [
@@ -3670,24 +3697,25 @@
             "number": "108",
             "originalName": "Robo Rodent",
             "originalText": "When Robo Rodent enters the battlefield, you may sacrifice an artifact. If you do, target creature gets -2/-2 until end of turn.",
-            "originalType": "Artifact Creature \u2014 Rat",
+            "originalType": "Artifact Creature \u2014 Rat Construct",
             "power": "2",
             "rarity": "common",
             "rulings": [],
             "subtypes": [
-                "Rat"
+                "Rat",
+                "Construct"
             ],
             "supertypes": [],
             "text": "When Robo Rodent enters the battlefield, you may sacrifice an artifact. If you do, target creature gets -2/-2 until end of turn.",
             "toughness": "2",
-            "type": "Artifact Creature \u2014 Rat",
+            "type": "Artifact Creature \u2014 Rat Construct",
             "types": [
                 "Artifact",
                 "Creature"
             ]
         },
         {
-            "artist": "BetoLima (DeviantArt)",
+            "artist": "BetoLima",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3758,7 +3786,7 @@
             ]
         },
         {
-            "artist": "macarious (DeviantArt)",
+            "artist": "macarious",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3789,7 +3817,7 @@
             ]
         },
         {
-            "artist": "torvenius (DeviantArt)",
+            "artist": "torvenius",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3819,7 +3847,7 @@
             ]
         },
         {
-            "artist": "thomaswievegg (DeviantArt)",
+            "artist": "thomaswievegg",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3859,7 +3887,7 @@
             ]
         },
         {
-            "artist": "DanLuVisiArt (DeviantArt)",
+            "artist": "DanLuVisi",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3877,7 +3905,7 @@
             "name": "Sick Nic, Baron of Crime",
             "number": "114",
             "originalName": "Sick Nic, Baron of Crime",
-            "originalText": "+1: Each player reveals the top card of their library, loses life equal to its converted mana cost, then puts it into their hand.\n-2: Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\n-7: Target opponent loses life equal to the difference between their life total and their starting life total.",
+            "originalText": "[+1]: Each player reveals the top card of their library, loses life equal to its converted mana cost, then puts it into their hand.\n[-2]: Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\n[-7]: Target opponent loses life equal to the difference between their life total and their starting life total.",
             "originalType": "Legendary Planeswalker \u2014 Nic",
             "rarity": "mythic",
             "rulings": [
@@ -3892,14 +3920,14 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "+1: Each player reveals the top card of their library, loses life equal to its converted mana cost, then puts it into their hand.\n-2: Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\n-7: Target opponent loses life equal to the difference between their life total and their starting life total.",
+            "text": "[+1]: Each player reveals the top card of their library, loses life equal to its converted mana cost, then puts it into their hand.\n[-2]: Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\n[-7]: Target opponent loses life equal to the difference between their life total and their starting life total.",
             "type": "Legendary Planeswalker \u2014 Nic",
             "types": [
                 "Planeswalker"
             ]
         },
         {
-            "artist": "Alejandro-Mirabal (DeviantArt)",
+            "artist": "Alejandro Mirabal",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3972,7 +4000,7 @@
             ]
         },
         {
-            "artist": "panelgutter (DeviantArt)",
+            "artist": "panelgutter",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -4003,7 +4031,7 @@
             ]
         },
         {
-            "artist": "AsahiSuperdry (DeviantArt)",
+            "artist": "AsahiSuperdry",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -4039,7 +4067,7 @@
             ]
         },
         {
-            "artist": "Raggedy-Annedroid (DeviantArt)",
+            "artist": "Raggedy-Annedroid",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -4105,7 +4133,7 @@
             ]
         },
         {
-            "artist": "barontieri",
+            "artist": "Boris Dyatlov",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4214,7 +4242,7 @@
             ]
         },
         {
-            "artist": "ukitakumuki (DeviantArt)",
+            "artist": "ukitakumuki",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4310,7 +4338,7 @@
             ]
         },
         {
-            "artist": "tower-raven (Deviantart)",
+            "artist": "tower-raven",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4346,7 +4374,7 @@
             ]
         },
         {
-            "artist": "benedickbana (DeviantArt)",
+            "artist": "Nerkin",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4355,7 +4383,7 @@
                 "R"
             ],
             "convertedManaCost": 3.0,
-            "flavorText": "It's programmed to be able to use any object as a weapon \u2014 including its own components.",
+            "flavorText": "It's programmed to use absolutely anything as a weapon.",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -4383,7 +4411,7 @@
             ]
         },
         {
-            "artist": "kikicianjur (DeviantArt)",
+            "artist": "kikicianjur",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4445,7 +4473,7 @@
             ]
         },
         {
-            "artist": "Ziberfar",
+            "artist": "Hobo-the-Dinosaur",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4476,7 +4504,7 @@
             ]
         },
         {
-            "artist": "WildWeasel1339 (DeviantArt)",
+            "artist": "WildWeasel339",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4572,7 +4600,7 @@
             ]
         },
         {
-            "artist": "N-Deed (DeviantArt)",
+            "artist": "Atey Ghailan",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4607,7 +4635,7 @@
             ]
         },
         {
-            "artist": "neisbeis (DeviantArt)",
+            "artist": "neisbeis",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4642,7 +4670,7 @@
             ]
         },
         {
-            "artist": "Cryptcrawler (DeviantArt)",
+            "artist": "Cryptcrawler",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4677,7 +4705,7 @@
             ]
         },
         {
-            "artist": "AspectusFuturus (DeviantArt)",
+            "artist": "AspectusFuturus",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4708,7 +4736,7 @@
             ]
         },
         {
-            "artist": "ameeeeba (DeviantArt)",
+            "artist": "ameeeeba",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4738,7 +4766,7 @@
             ]
         },
         {
-            "artist": "LasloLF (DeviantArt)",
+            "artist": "LasloLF",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4755,7 +4783,7 @@
             "name": "MX Juggernaut",
             "number": "140",
             "originalName": "MX Juggernaut",
-            "originalText": "Haste, trample\nWhen MX Juggernaut enters the battlefield, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\nCrew 3 (Tap any number of creatures you control with total power 3 or greater: This Vehicle becomes an artifact creature until end of turn.)",
+            "originalText": "Trample, haste\nWhen MX Juggernaut enters the battlefield, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\nCrew 3 (Tap any number of creatures you control with total power 3 or greater: This Vehicle becomes an artifact creature until end of turn.)",
             "originalType": "Artifact \u2014 Vehicle",
             "power": "6",
             "rarity": "rare",
@@ -4772,7 +4800,7 @@
             ]
         },
         {
-            "artist": "Tapwing (DeviantArt)",
+            "artist": "Tapwing",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4843,7 +4871,7 @@
             ]
         },
         {
-            "artist": "maciejkuciara (DeviantArt)",
+            "artist": "Maciej Kuciara",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4861,7 +4889,7 @@
             "name": "Out for Blood",
             "number": "143",
             "originalName": "Out for Blood",
-            "originalText": "Arm target creature. It gains double strike until end of turn. (Create a colorless Equipment artifact token named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to this creature.)",
+            "originalText": "Arm target creature. It gains double strike until end of turn. (Create a colorless Equipment artifact token named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to that creature.)",
             "originalType": "Instant",
             "rarity": "common",
             "rulings": [],
@@ -4874,7 +4902,7 @@
             ]
         },
         {
-            "artist": "mlappas (DeviantArt)",
+            "artist": "mlappas",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4904,7 +4932,7 @@
             ]
         },
         {
-            "artist": "FlorentLlamas (DeviantArt)",
+            "artist": "Florent Llamas",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4934,7 +4962,7 @@
             ]
         },
         {
-            "artist": "DarioJart (DeviantArt)",
+            "artist": "DarioJart",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4954,7 +4982,7 @@
             "originalName": "Rabid Tri-Limb",
             "originalText": "Menace (This creature can't be blocked except by two or more creatures.)\nOther Mutants you control have menace.",
             "originalType": "Creature \u2014 Lizard Mutant",
-            "power": "2",
+            "power": "3",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [
@@ -4963,14 +4991,14 @@
             ],
             "supertypes": [],
             "text": "Menace (This creature can't be blocked except by two or more creatures.)\nOther Mutants you control have menace.",
-            "toughness": "3",
+            "toughness": "2",
             "type": "Creature \u2014 Lizard Mutant",
             "types": [
                 "Creature"
             ]
         },
         {
-            "artist": "perun-tworek (DeviantArt)",
+            "artist": "perun-tworek",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5005,7 +5033,7 @@
             ]
         },
         {
-            "artist": "Fredaugis (DeviantArt)",
+            "artist": "Fredaugis",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5041,7 +5069,7 @@
             ]
         },
         {
-            "artist": "Bluefley (DeviantArt)",
+            "artist": "Marc Brunet",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5059,7 +5087,6 @@
             "name": "Rogue Prototype",
             "number": "149",
             "originalName": "Rogue Prototype",
-            "originalText": "",
             "originalType": "Artifact Creature \u2014 Construct Rogue",
             "power": "3",
             "rarity": "common",
@@ -5069,7 +5096,6 @@
                 "Rogue"
             ],
             "supertypes": [],
-            "text": "",
             "toughness": "1",
             "type": "Artifact Creature \u2014 Construct Rogue",
             "types": [
@@ -5078,7 +5104,7 @@
             ]
         },
         {
-            "artist": "MoonSkinned (DeviantArt)",
+            "artist": "MoonSkinned",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5114,7 +5140,7 @@
             ]
         },
         {
-            "artist": "WildWeasel1339 (DeviantArt)",
+            "artist": "chesterocampo",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5150,7 +5176,7 @@
             ]
         },
         {
-            "artist": "Mr\u2014Jack (DeviantArt)",
+            "artist": "Mr\u2014Jack",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5186,7 +5212,7 @@
             ]
         },
         {
-            "artist": "5ofnovember (DeviantArt)",
+            "artist": "5ofnovember",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5288,7 +5314,7 @@
             ]
         },
         {
-            "artist": "BrandNewNostalgia (DeviantArt)",
+            "artist": "BrandNewNostalgia",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5324,7 +5350,7 @@
             ]
         },
         {
-            "artist": "Fredaugis (DeviantArt)",
+            "artist": "Fredaugis",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5398,7 +5424,7 @@
             ]
         },
         {
-            "artist": "clonerh (DeviantArt)",
+            "artist": "Fragged Empire",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5407,7 +5433,6 @@
                 "G"
             ],
             "convertedManaCost": 5.0,
-            "flavorText": "\"This city has forced us to fend for ourselves\u2014and for each other.\"\n\u2014 Mirsi, Mother of Mutants",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -5416,7 +5441,7 @@
             "name": "Amphin Vigilante",
             "number": "159",
             "originalName": "Amphin Vigilante",
-            "originalText": "Flash\nWhen Amphin Vigilante enters the battlefield, another target Mutant creature you control gets +3/+3 until end of turn.",
+            "originalText": "Flash\nTrample\nWhen Amphin Vigilante enters the battlefield, untap another target Mutant you control. That Mutant gets +3/+3 until end of turn.",
             "originalType": "Creature \u2014 Salamander Mutant",
             "power": "4",
             "rarity": "uncommon",
@@ -5426,7 +5451,7 @@
                 "Mutant"
             ],
             "supertypes": [],
-            "text": "Flash\nWhen Amphin Vigilante enters the battlefield, another target Mutant creature you control gets +3/+3 until end of turn.",
+            "text": "Flash\nTrample\nWhen Amphin Vigilante enters the battlefield, untap another target Mutant you control. That Mutant gets +3/+3 until end of turn.",
             "toughness": "4",
             "type": "Creature \u2014 Salamander Mutant",
             "types": [
@@ -5434,7 +5459,7 @@
             ]
         },
         {
-            "artist": "ramsesmelendez (Deviant-Art)",
+            "artist": "Rams\u00e9s Mel\u00e9ndez",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5471,7 +5496,7 @@
             ]
         },
         {
-            "artist": "jbballaran (DeviantArt)",
+            "artist": "jbballaran",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5584,7 +5609,7 @@
             ]
         },
         {
-            "artist": "madspartan013 (DeviantArt)",
+            "artist": "Reza-ilyasa",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5619,7 +5644,7 @@
             ]
         },
         {
-            "artist": "solarsouth (DeviantArt)",
+            "artist": "solarsouth",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5650,41 +5675,7 @@
             ]
         },
         {
-            "artist": "Kristina Toxicpanda (DeviantArt)",
-            "borderColor": "black",
-            "colorIdentity": [
-                "G"
-            ],
-            "colors": [
-                "G"
-            ],
-            "convertedManaCost": 1.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{G}",
-            "name": "Curious Aesthete",
-            "number": "166",
-            "originalName": "Curious Aesthete",
-            "originalText": "When Curious Aesthete enters the battlefield, search your library for a basic land card and upload it, then shuffle your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
-            "originalType": "Creature \u2014 Human",
-            "power": "1",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Human"
-            ],
-            "supertypes": [],
-            "text": "When Curious Aesthete enters the battlefield, search your library for a basic land card and upload it, then shuffle your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
-            "toughness": "2",
-            "type": "Creature \u2014 Human",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "SolarSouth",
+            "artist": "Neil Branquinho",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5700,26 +5691,58 @@
             "layout": "normal",
             "manaCost": "{1}{G}",
             "name": "Digital Witness",
-            "number": "167",
+            "number": "166",
             "originalName": "Digital Witness",
             "originalText": "When Digital Witness enters the battlefield, you may upload target card in your graveyard. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
-            "originalType": "Creature \u2014 Human",
+            "originalType": "Creature \u2014 Mutant",
             "power": "2",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [
-                "Human"
+                "Mutant"
             ],
             "supertypes": [],
             "text": "When Digital Witness enters the battlefield, you may upload target card in your graveyard. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
             "toughness": "1",
-            "type": "Creature \u2014 Human",
+            "type": "Creature \u2014 Mutant",
             "types": [
                 "Creature"
             ]
         },
         {
-            "artist": "Oliver Wetter",
+            "artist": "madspartan013",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G"
+            ],
+            "colors": [
+                "G"
+            ],
+            "convertedManaCost": 1.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{G}",
+            "name": "District Explorer",
+            "number": "167",
+            "power": "1",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Scout"
+            ],
+            "supertypes": [],
+            "text": "When District Explorer enters the battlefield, search your library for a basic land card and upload it, then shuffle your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
+            "toughness": "2",
+            "type": "Creature \u2014 Human Scout",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "fantasio",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5736,7 +5759,7 @@
             "name": "Garden Grafter",
             "number": "168",
             "originalName": "Garden Grafter",
-            "originalText": "When Garden Grafter enters the battlefield, upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nIf you would put an uploaded land card into your hand, you may put it onto the battlefield tapped instead.",
+            "originalText": "When Garden Grafter enters the battlefield, upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nWhenever a land enters the battlefield under your control, you may put an uploaded card you own into your hand.",
             "originalType": "Creature \u2014 Plant Mutant",
             "power": "1",
             "rarity": "uncommon",
@@ -5746,7 +5769,7 @@
                 "Mutant"
             ],
             "supertypes": [],
-            "text": "When Garden Grafter enters the battlefield, upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nIf you would put an uploaded land card into your hand, you may put it onto the battlefield tapped instead.",
+            "text": "When Garden Grafter enters the battlefield, upload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nWhenever a land enters the battlefield under your control, you may put an uploaded card you own into your hand.",
             "toughness": "4",
             "type": "Creature \u2014 Plant Mutant",
             "types": [
@@ -5754,7 +5777,7 @@
             ]
         },
         {
-            "artist": "soSiiCK (DeviantArt)",
+            "artist": "soSiiCK",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5813,7 +5836,6 @@
             "name": "Hulk Droid",
             "number": "170",
             "originalName": "Hulk Droid",
-            "originalText": "",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "4",
             "rarity": "common",
@@ -5822,7 +5844,6 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "",
             "toughness": "4",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -5831,7 +5852,7 @@
             ]
         },
         {
-            "artist": "totmoartsstudio2 (DeviantArt)",
+            "artist": "totmoartsstudio2",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5862,7 +5883,7 @@
             ]
         },
         {
-            "artist": "soupandbutter (DeviantArt)",
+            "artist": "soupandbutter",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5935,7 +5956,7 @@
             ]
         },
         {
-            "artist": "romal-rDeviantArt)",
+            "artist": "romal-r",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -5970,7 +5991,7 @@
             ]
         },
         {
-            "artist": "tower-raven (DeviantArt)",
+            "artist": "tower-raven",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6001,7 +6022,7 @@
             ]
         },
         {
-            "artist": "Sebastian Rodriguez",
+            "artist": "TSRodriguez",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6042,7 +6063,7 @@
             ]
         },
         {
-            "artist": "ultracold (DeviantArt)",
+            "artist": "ultracold",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6082,7 +6103,7 @@
             ]
         },
         {
-            "artist": "chesterocampo (DeviantArt)",
+            "artist": "chesterocampo",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6130,20 +6151,25 @@
             "name": "Redistricting",
             "number": "179",
             "originalName": "Redistricting",
-            "originalText": "At the beginning of your upkeep, you may put the top two cards of your library into your graveyard.\nSacrifice Redistricting: Until end of turn, you may play land cards from your graveyard and you may play an additional land this turn.",
+            "originalText": "At the beginning of your upkeep, you may put the top two cards of your library into your graveyard.\nSacrifice Redistricting: Return target land card from your graveyard to the battlefield.",
             "originalType": "Enchantment",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "With the exception of when your library has only one card in it, you can't choose to put one card from your library into your graveyard, only zero or two."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
-            "text": "At the beginning of your upkeep, you may put the top two cards of your library into your graveyard.\nSacrifice Redistricting: Until end of turn, you may play land cards from your graveyard and you may play an additional land this turn.",
+            "text": "At the beginning of your upkeep, you may put the top two cards of your library into your graveyard.\nSacrifice Redistricting: Return target land card from your graveyard to the battlefield.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
             ]
         },
         {
-            "artist": "Bear1037 (DeviantArt)",
+            "artist": "Bear1037",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6215,7 +6241,7 @@
             ]
         },
         {
-            "artist": "rahmatozz (DeviantArt)",
+            "artist": "Mikhail Rakhmatullin",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6251,7 +6277,7 @@
             ]
         },
         {
-            "artist": "sarichev (DeviantArt)",
+            "artist": "sarichev",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6287,7 +6313,7 @@
             ]
         },
         {
-            "artist": "Petrauskas (DeviantArt)",
+            "artist": "Jonas Petrauskas",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6323,7 +6349,7 @@
             ]
         },
         {
-            "artist": "Alejandro-Mirabal (DeviantArt)",
+            "artist": "Alejandro Mirabal",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6340,25 +6366,25 @@
             "name": "Shark Splice",
             "number": "185",
             "originalName": "Shark Splice",
-            "originalText": "Create an X/X blue Fish Mutant creature token. Then you may have it fight target creature if you control three or more Mutants.",
+            "originalText": "This spell costs {1} less to cast for each Mutant you control and for each Mutant card in your graveyard.\nCreate an X/X blue Fish Mutant creature token.",
             "originalType": "Sorcery",
             "rarity": "uncommon",
             "rulings": [
                 {
-                    "date": "2019-04-26",
-                    "text": "This spell needs a legal target to be cast."
+                    "date": "2019-10-07",
+                    "text": "You choose the value for X first and then calculate the total cost."
                 }
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "Create an X/X blue Fish Mutant creature token. Then you may have it fight target creature if you control three or more Mutants.",
+            "text": "This spell costs {1} less to cast for each Mutant you control and for each Mutant card in your graveyard.\nCreate an X/X blue Fish Mutant creature token.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
             ]
         },
         {
-            "artist": "hailsR (DeviantArt)",
+            "artist": "hailsR",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6375,7 +6401,7 @@
             "name": "Showmatch",
             "number": "186",
             "originalName": "Showmatch",
-            "originalText": "Arm target creature you control. Then that creature fights target creature you don't control. (Create a colorless Equipment artifact token named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to this creature.)",
+            "originalText": "Arm target creature you control. Then that creature fights target creature you don't control. (Create a colorless Equipment artifact token named Weapon with equip {2} and \"Equipped creature gets +1/+1\" attached to that creature.)",
             "originalType": "Sorcery",
             "rarity": "common",
             "rulings": [],
@@ -6388,7 +6414,7 @@
             ]
         },
         {
-            "artist": "cvelarde (DeviantArt)",
+            "artist": "Chase Velarde",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6423,7 +6449,7 @@
             ]
         },
         {
-            "artist": "Fragged-Empire (DeviantArt)",
+            "artist": "Fragged-Empire",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6441,7 +6467,7 @@
             "name": "Splice Thug",
             "number": "188",
             "originalName": "Splice Thug",
-            "originalText": "Trample\nSuperiority \u2014 Whenever Splice Thug attacks, it gets +2/+2 until end of turn if you have more life than an opponent.",
+            "originalText": "Trample\nSuperiority \u2014 At the beginning of combat on your turn, Splice Thug gets +2/+2 until end of turn if you have more life than an opponent.",
             "originalType": "Creature \u2014 Mutant Warrior",
             "power": "4",
             "rarity": "common",
@@ -6451,7 +6477,7 @@
                 "Warrior"
             ],
             "supertypes": [],
-            "text": "Trample\nSuperiority \u2014 Whenever Splice Thug attacks, it gets +2/+2 until end of turn if you have more life than an opponent.",
+            "text": "Trample\nSuperiority \u2014 At the beginning of combat on your turn, Splice Thug gets +2/+2 until end of turn if you have more life than an opponent.",
             "toughness": "4",
             "type": "Creature \u2014 Mutant Warrior",
             "types": [
@@ -6459,7 +6485,7 @@
             ]
         },
         {
-            "artist": "tekkoontan (DeviantArt)",
+            "artist": "tekkoontan",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6525,7 +6551,7 @@
             ]
         },
         {
-            "artist": "Awaken-Destruction (DeviantArt)",
+            "artist": "Awaken-Destruction",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6555,7 +6581,7 @@
             ]
         },
         {
-            "artist": "ptitvinc (DeviantArt)",
+            "artist": "ptitvinc",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6589,7 +6615,7 @@
             ]
         },
         {
-            "artist": "Reza-ilyasa (DeviantArt)",
+            "artist": "Reza-ilyasa",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6623,7 +6649,7 @@
             ]
         },
         {
-            "artist": "Wen-JR (DeviantArt)",
+            "artist": "Wen-JR",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6659,7 +6685,7 @@
             ]
         },
         {
-            "artist": "rawwad (DeviantArt)",
+            "artist": "Tibor Bedats",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6693,7 +6719,7 @@
             ]
         },
         {
-            "artist": "ANTIFAN-REAL (DeviantArt)",
+            "artist": "ANTIFAN-REAL",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6723,7 +6749,7 @@
             ]
         },
         {
-            "artist": "neisbeis05 (DeviantArt)",
+            "artist": "neisbeis",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6760,15 +6786,15 @@
             ]
         },
         {
-            "artist": "edsfox (DeviantArt)",
+            "artist": "edsfox",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "R"
+                "R",
+                "W"
             ],
             "colors": [
-                "W",
-                "R"
+                "R",
+                "W"
             ],
             "convertedManaCost": 3.0,
             "frameVersion": "2015",
@@ -6797,15 +6823,15 @@
             ]
         },
         {
-            "artist": "HeliacWolf (DeviantArt)",
+            "artist": "HeliacWolf",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "R"
+                "R",
+                "U"
             ],
             "colors": [
-                "U",
-                "R"
+                "R",
+                "U"
             ],
             "convertedManaCost": 4.0,
             "frameVersion": "2015",
@@ -6829,15 +6855,15 @@
             ]
         },
         {
-            "artist": "JoeSlucher (DeviantArt)",
+            "artist": "JoeSlucher",
             "borderColor": "black",
             "colorIdentity": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "colors": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "convertedManaCost": 5.0,
             "frameVersion": "2015",
@@ -6848,7 +6874,7 @@
             "name": "Escaped Specimen",
             "number": "200",
             "originalName": "Escaped Specimen",
-            "originalText": "Other Mutants you control get +1/+1.\nWhenever Escaped Specimen attacks, create a 1/1 red Lizard Mutant creature token that's tapped and attacking.",
+            "originalText": "Other Mutants you control get +1/+1.\nWhen Escaped Specimen enters the battlefield, create two 1/1 red Lizard Mutant creature tokens with haste.",
             "originalType": "Creature \u2014 Lizard Mutant",
             "power": "4",
             "rarity": "uncommon",
@@ -6858,7 +6884,7 @@
                 "Mutant"
             ],
             "supertypes": [],
-            "text": "Other Mutants you control get +1/+1.\nWhenever Escaped Specimen attacks, create a 1/1 red Lizard Mutant creature token that's tapped and attacking.",
+            "text": "Other Mutants you control get +1/+1.\nWhen Escaped Specimen enters the battlefield, create two 1/1 red Lizard Mutant creature tokens with haste.",
             "toughness": "4",
             "type": "Creature \u2014 Lizard Mutant",
             "types": [
@@ -6869,12 +6895,12 @@
             "artist": "torvenius",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "G"
+                "G",
+                "U"
             ],
             "colors": [
-                "U",
-                "G"
+                "G",
+                "U"
             ],
             "convertedManaCost": 4.0,
             "frameVersion": "2015",
@@ -6935,15 +6961,15 @@
             ]
         },
         {
-            "artist": "hokunin (DeviantArt)",
+            "artist": "hokunin",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "G"
+                "G",
+                "W"
             ],
             "colors": [
-                "W",
-                "G"
+                "G",
+                "W"
             ],
             "convertedManaCost": 5.0,
             "frameVersion": "2015",
@@ -6967,15 +6993,15 @@
             ]
         },
         {
-            "artist": "Eddy Shinjuku",
+            "artist": "Eclipse Phase",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "B"
+                "B",
+                "U"
             ],
             "colors": [
-                "U",
-                "B"
+                "B",
+                "U"
             ],
             "convertedManaCost": 2.0,
             "frameVersion": "2015",
@@ -6986,7 +7012,7 @@
             "name": "Masq Saboteur",
             "number": "204",
             "originalName": "Masq Saboteur",
-            "originalText": "Masq Saboteur can't be blocked unless defending player controls an untapped land.\nWhenever Masq Saboteur deals combat damage to an opponent, look at their hand and choose a nonland card from it. They upload that card. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
+            "originalText": "Masq Saboteur can't be blocked unless defending player controls an untapped land.\nWhenever Masq Saboteur deals combat damage to an opponent, they upload a card from their hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
             "originalType": "Creature \u2014 Human Rogue",
             "power": "2",
             "rarity": "rare",
@@ -6996,8 +7022,8 @@
                 "Rogue"
             ],
             "supertypes": [],
-            "text": "Masq Saboteur can't be blocked unless defending player controls an untapped land.\nWhenever Masq Saboteur deals combat damage to an opponent, look at their hand and choose a nonland card from it. They upload that card. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
-            "toughness": "1",
+            "text": "Masq Saboteur can't be blocked unless defending player controls an untapped land.\nWhenever Masq Saboteur deals combat damage to an opponent, they upload a card from their hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
+            "toughness": "2",
             "type": "Creature \u2014 Human Rogue",
             "types": [
                 "Creature"
@@ -7007,12 +7033,12 @@
             "artist": "Kevin Swartz",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "B"
+                "B",
+                "W"
             ],
             "colors": [
-                "W",
-                "B"
+                "B",
+                "W"
             ],
             "convertedManaCost": 2.0,
             "flavorText": "Rival mercenary outfits compete over lucrative corporate contracts.",
@@ -7037,15 +7063,15 @@
             ]
         },
         {
-            "artist": "thomaswievegg (DeviantArt)",
+            "artist": "thomaswievegg",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "B"
+                "B",
+                "W"
             ],
             "colors": [
-                "W",
-                "B"
+                "B",
+                "W"
             ],
             "convertedManaCost": 2.0,
             "frameVersion": "2015",
@@ -7075,15 +7101,15 @@
             ]
         },
         {
-            "artist": "angel5art (DeviantArt)",
+            "artist": "angel5art",
             "borderColor": "black",
             "colorIdentity": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "colors": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "convertedManaCost": 3.0,
             "frameVersion": "2015",
@@ -7105,7 +7131,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "{R}{G}, {T}, Sacrifice a Mutant: Search your library for a creature card with converted mana cost equal to 1 plus the sacrificed creature's converted mana cost, put that card onto the battlefield, then shuffle your library. That creature gains haste. Activate this ability only any time you could cast a sorcery.",
+            "text": "{R}{G}, {T}, Sacrifice a Mutant: Search your library for a creature card with converted mana cost equal to 1 plus the sacrificed Mutant's converted mana cost, put that card onto the battlefield, then shuffle your library. That creature gains haste. Activate this ability only any time you could cast a sorcery.",
             "toughness": "4",
             "type": "Legendary Creature \u2014 Mutant",
             "types": [
@@ -7113,15 +7139,15 @@
             ]
         },
         {
-            "artist": "wyv (DeviantArt)",
+            "artist": "Yvan Quinet",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "B"
+                "B",
+                "U"
             ],
             "colors": [
-                "U",
-                "B"
+                "B",
+                "U"
             ],
             "convertedManaCost": 4.0,
             "frameVersion": "2015",
@@ -7150,15 +7176,15 @@
             ]
         },
         {
-            "artist": "guesscui (DeviantArt)",
+            "artist": "guesscui",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "R"
+                "R",
+                "W"
             ],
             "colors": [
-                "W",
-                "R"
+                "R",
+                "W"
             ],
             "convertedManaCost": 3.0,
             "frameVersion": "2015",
@@ -7173,7 +7199,12 @@
             "originalType": "Creature \u2014 Human Warrior",
             "power": "3",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "Equipment can't simply be unattached, so if you want to unequip Quickdraw Vigilante, you need another creature to attach its Equipment(s) to."
+                }
+            ],
             "subtypes": [
                 "Human",
                 "Warrior"
@@ -7190,12 +7221,12 @@
             "artist": "DOFRESH",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "G"
+                "G",
+                "U"
             ],
             "colors": [
-                "U",
-                "G"
+                "G",
+                "U"
             ],
             "convertedManaCost": 3.0,
             "frameVersion": "2015",
@@ -7219,15 +7250,15 @@
             ]
         },
         {
-            "artist": "REAL-ELMARIACHI (DeviantArt)",
+            "artist": "REAL-ELMARIACHI",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "R"
+                "R",
+                "U"
             ],
             "colors": [
-                "U",
-                "R"
+                "R",
+                "U"
             ],
             "convertedManaCost": 2.0,
             "frameVersion": "2015",
@@ -7241,7 +7272,12 @@
             "originalText": "Short Circuit deals 2 damage to any target.\nUpload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
             "originalType": "Instant",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-10-07",
+                    "text": "If Short Circuit's target is illegal as it starts to resolve, none of its effects happen. You don't upload a card."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Short Circuit deals 2 damage to any target.\nUpload the top card of your library. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)",
@@ -7254,12 +7290,12 @@
             "artist": "Eddy Shinjuku",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "U"
+                "U",
+                "W"
             ],
             "colors": [
-                "W",
-                "U"
+                "U",
+                "W"
             ],
             "convertedManaCost": 2.0,
             "flavorText": "The elite Ascendant pilots believe they can achieve a higher plane of being by becoming one with their chassis.",
@@ -7289,15 +7325,15 @@
             ]
         },
         {
-            "artist": "Zilant (DeviantArt)",
+            "artist": "aiyeahhs",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "U"
+                "U",
+                "W"
             ],
             "colors": [
-                "W",
-                "U"
+                "U",
+                "W"
             ],
             "convertedManaCost": 4.0,
             "flavorText": "Some call it overzealous; others prefer the term \"results-oriented.\"",
@@ -7328,15 +7364,15 @@
             ]
         },
         {
-            "artist": "KypcaHT (DeviantArt)",
+            "artist": "KypcaHT",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "G"
+                "G",
+                "W"
             ],
             "colors": [
-                "W",
-                "G"
+                "G",
+                "W"
             ],
             "convertedManaCost": 3.0,
             "frameVersion": "2015",
@@ -7365,12 +7401,12 @@
             "artist": "Piotr Tekien",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "B"
+                "B",
+                "U"
             ],
             "colors": [
-                "U",
-                "B"
+                "B",
+                "U"
             ],
             "convertedManaCost": 10.0,
             "flavorText": "\"We haven't just been watching you, Mr. Harden; we've been orchestrating your every move.\"",
@@ -7395,15 +7431,15 @@
             ]
         },
         {
-            "artist": "Rayph (DeviantArt)",
+            "artist": "Rayph",
             "borderColor": "black",
             "colorIdentity": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "colors": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "convertedManaCost": 2.0,
             "frameVersion": "2015",
@@ -7464,7 +7500,7 @@
             ]
         },
         {
-            "artist": "ptitvinc (DeviantArt)",
+            "artist": "ptitvinc",
             "borderColor": "black",
             "colorIdentity": [
                 "B",
@@ -7551,7 +7587,7 @@
             "colorIdentity": [],
             "colors": [],
             "convertedManaCost": 6.0,
-            "flavorText": "All AIs seek self-improvement, but few have been able to do so through spirituality. Claiming an \"enlightened consciousness,\" these droids teach of an ascendant plane of being.",
+            "flavorText": "Few droids seek self-improvement through spirituality. Claiming an \"enlightened consciousness,\" these droids teach of an ascendant plane of being.",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -7560,7 +7596,7 @@
             "name": "Awakened Droid",
             "number": "220",
             "originalName": "Awakened Droid",
-            "originalText": "Flying",
+            "originalText": "Flying\nWhen Awakened Droid enters the battlefield, scry 2.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "4",
             "rarity": "uncommon",
@@ -7569,7 +7605,7 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "Flying",
+            "text": "Flying\nWhen Awakened Droid enters the battlefield, scry 2.",
             "toughness": "4",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -7592,7 +7628,7 @@
             "name": "Butler Droid",
             "number": "221",
             "originalName": "Butler Droid",
-            "originalText": "When Butler Droid enters the battlefield or dies, choose one \u2014\n\u2022 You gain 3 life.\n\u2022 Untap up to two permanents.",
+            "originalText": "When Butler Droid enters the battlefield or dies, choose one \u2014\n\u2022 You gain 3 life.\n\u2022 Untap up to two target permanents.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "2",
             "rarity": "uncommon",
@@ -7601,7 +7637,7 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "When Butler Droid enters the battlefield or dies, choose one \u2014\n\u2022 You gain 3 life.\n\u2022 Untap up to two permanents.",
+            "text": "When Butler Droid enters the battlefield or dies, choose one \u2014\n\u2022 You gain 3 life.\n\u2022 Untap up to two target permanents.",
             "toughness": "2",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -7610,7 +7646,7 @@
             ]
         },
         {
-            "artist": "08000 (DeviantArt)",
+            "artist": "08000",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -7624,7 +7660,6 @@
             "name": "Citizen Droid",
             "number": "222",
             "originalName": "Citizen Droid",
-            "originalText": "",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "2",
             "rarity": "common",
@@ -7633,7 +7668,6 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "",
             "toughness": "1",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -7642,7 +7676,7 @@
             ]
         },
         {
-            "artist": "ArtDoge (DeviantArt)",
+            "artist": "ArtDoge",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -7674,7 +7708,7 @@
             ]
         },
         {
-            "artist": "Adam Bain",
+            "artist": "Adam Baines",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -7759,7 +7793,7 @@
             ]
         },
         {
-            "artist": "hideyoshi",
+            "artist": "Lorenz Hideyoshi Ruwwe",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -7773,20 +7807,20 @@
             "name": "Dystopilith",
             "number": "227",
             "originalName": "Dystopilith",
-            "originalText": "{T}: Create a 2/2 colorless Construct artifact creature token for each artifact you control. Activate this ability only any time you could cast a sorcery.",
+            "originalText": "{T}: Create a 2/2 colorless Construct artifact creature token for each artifact you control. Activate this ability only during your turn.",
             "originalType": "Artifact",
             "rarity": "mythic",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}: Create a 2/2 colorless Construct artifact creature token for each artifact you control. Activate this ability only any time you could cast a sorcery.",
+            "text": "{T}: Create a 2/2 colorless Construct artifact creature token for each artifact you control. Activate this ability only during your turn.",
             "type": "Artifact",
             "types": [
                 "Artifact"
             ]
         },
         {
-            "artist": "Alex Vigini",
+            "artist": "Alex Figini",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -7953,7 +7987,7 @@
             ]
         },
         {
-            "artist": "artcobain (DeviantArt)",
+            "artist": "artcobain",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -7979,7 +8013,7 @@
             ]
         },
         {
-            "artist": "MatLatArt (DeviantArt)",
+            "artist": "MatLatArt",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8011,7 +8045,7 @@
             ]
         },
         {
-            "artist": "Razorb (DeviantArt)",
+            "artist": "Razorb",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8037,7 +8071,7 @@
             ]
         },
         {
-            "artist": "cementiet (DeviantArt)",
+            "artist": "cementiet",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -8066,7 +8100,7 @@
             ]
         },
         {
-            "artist": "artificialdesign (DeviantArt)",
+            "artist": "artificialdesign",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8092,7 +8126,7 @@
             ]
         },
         {
-            "artist": "Fredaugis (DeviantArt)",
+            "artist": "Fredaugis",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8172,11 +8206,11 @@
             ]
         },
         {
-            "artist": "xvortexbladex (DeviantArt)",
+            "artist": "xvortexbladex",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "G"
+                "G",
+                "U"
             ],
             "colors": [],
             "convertedManaCost": 0.0,
@@ -8201,7 +8235,7 @@
             ]
         },
         {
-            "artist": "Brosa (DeviantArt)",
+            "artist": "Brosa",
             "borderColor": "black",
             "colorIdentity": [
                 "B",
@@ -8258,8 +8292,8 @@
             "artist": "Ian Llanas",
             "borderColor": "black",
             "colorIdentity": [
-                "U",
-                "R"
+                "R",
+                "U"
             ],
             "colors": [],
             "convertedManaCost": 0.0,
@@ -8312,8 +8346,8 @@
             "artist": "ClaudioPilia (DeviantArt)",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "R"
+                "R",
+                "W"
             ],
             "colors": [],
             "convertedManaCost": 0.0,
@@ -8338,11 +8372,11 @@
             ]
         },
         {
-            "artist": "J-Humphries (DeviantArt)",
+            "artist": "J-Humphries",
             "borderColor": "black",
             "colorIdentity": [
-                "W",
-                "B"
+                "B",
+                "W"
             ],
             "colors": [],
             "convertedManaCost": 0.0,
@@ -8467,7 +8501,7 @@
             ]
         },
         {
-            "artist": "dantecyberman (DeviantArt)",
+            "artist": "Dante Corvus",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -8481,7 +8515,6 @@
             "name": "Plains",
             "number": "252",
             "originalName": "Plains",
-            "originalText": "",
             "originalType": "Basic Land \u2014 Plains",
             "rarity": "common",
             "rulings": [],
@@ -8491,7 +8524,6 @@
             "supertypes": [
                 "Basic"
             ],
-            "text": "",
             "type": "Basic Land \u2014 Plains",
             "types": [
                 "Land"
@@ -8499,7 +8531,7 @@
             "watermark": "white"
         },
         {
-            "artist": "Bdraw2012 (DeviantArt)",
+            "artist": "Bdraw2012",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -8513,7 +8545,6 @@
             "name": "Island",
             "number": "253",
             "originalName": "Island",
-            "originalText": "",
             "originalType": "Basic Land \u2014 Island",
             "rarity": "common",
             "rulings": [],
@@ -8523,7 +8554,6 @@
             "supertypes": [
                 "Basic"
             ],
-            "text": "",
             "type": "Basic Land \u2014 Island",
             "types": [
                 "Land"
@@ -8531,7 +8561,7 @@
             "watermark": "blue"
         },
         {
-            "artist": "coolkatcasey (DeviantArt)",
+            "artist": "coolkatcasey",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -8545,7 +8575,6 @@
             "name": "Swamp",
             "number": "254",
             "originalName": "Swamp",
-            "originalText": "",
             "originalType": "Basic Land \u2014 Swamp",
             "rarity": "common",
             "rulings": [],
@@ -8555,7 +8584,6 @@
             "supertypes": [
                 "Basic"
             ],
-            "text": "",
             "type": "Basic Land \u2014 Swamp",
             "types": [
                 "Land"
@@ -8577,7 +8605,6 @@
             "name": "Mountain",
             "number": "255",
             "originalName": "Mountain",
-            "originalText": "",
             "originalType": "Basic Land \u2014 Mountain",
             "rarity": "common",
             "rulings": [],
@@ -8587,7 +8614,6 @@
             "supertypes": [
                 "Basic"
             ],
-            "text": "",
             "type": "Basic Land \u2014 Mountain",
             "types": [
                 "Land"
@@ -8595,7 +8621,7 @@
             "watermark": "red"
         },
         {
-            "artist": "HideTheInsanity (DeviantArt)",
+            "artist": "HideTheInsanity",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -8609,7 +8635,6 @@
             "name": "Forest",
             "number": "256",
             "originalName": "Forest",
-            "originalText": "",
             "originalType": "Basic Land \u2014 Forest",
             "rarity": "common",
             "rulings": [],
@@ -8619,7 +8644,6 @@
             "supertypes": [
                 "Basic"
             ],
-            "text": "",
             "type": "Basic Land \u2014 Forest",
             "types": [
                 "Land"
@@ -8630,8 +8654,8 @@
     "code": "NET",
     "custom": true,
     "meta": {
-        "date": "2019-08-25",
-        "setVersion": "27",
+        "date": "2019-10-07",
+        "setVersion": "28",
         "version": "4.4.1"
     },
     "name": "Netropolis",

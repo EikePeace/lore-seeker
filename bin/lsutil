@@ -43,6 +43,9 @@ PRINTING_SPECIFIC_FIELDS = {
     'legalities', # recalculated by Lore Seeker
     'mcmId',
     'mcmMetaId',
+    'mtgArenaId',
+    'mtgoFoilId',
+    'mtgoId',
     'mtgstocksId',
     'multiverseId',
     'number',
