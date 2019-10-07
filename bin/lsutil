@@ -4,8 +4,10 @@ import sys
 
 sys.path.append('/opt/py')
 
+import collections
 import copy
 import io
+import itertools
 import json
 import os
 import pathlib
@@ -14,10 +16,19 @@ import subprocess
 import tempfile
 import zipfile
 
+import PIL.Image # PyPI: Pillow
+import more_itertools # PyPI: more-itertools
+
+import gitdir.host.github # https://github.com/fenhl/gitdir
+import lazyjson # https://github.com/fenhl/lazyjson
 import mse_to_json # https://github.com/fenhl/mse-to-json
 
 CACHE = {'set_files': {}}
-CACHING_FLAG = pathlib.Path('/opt/git/github.com/fenhl/lore-seeker/stage/frontend/tmp/caching-dev.txt')
+STAGE = gitdir.host.github.GitHub().repo('fenhl/lore-seeker').stage_path
+CACHING_FLAG = STAGE / 'frontend' / 'tmp' / 'caching-dev.txt'
+CUSTOM_SETS = STAGE / 'data' / 'sets'
+REMOTE_STAGE = pathlib.Path('/opt/git/github.com/fenhl/lore-seeker/stage')
+SUBCOMMANDS = {}
 
 PRINTING_SPECIFIC_FIELDS = {
     'artist',
@@ -92,6 +103,14 @@ SIMPLE_FIELDS = [
     'watermark'
 ]
 
+def subcommand(f, name=None):
+    if isinstance(f, str):
+        return lambda f_inner: subcommand(f_inner, name=f)
+    if name is None:
+        name = f.__name__
+    SUBCOMMANDS[name] = f
+    return f
+
 def choose(question, choices):
     answer = input(f'[ ?? ] {question} [{"/".join(choice[0] for choice in choices)}] ')
     while True:
@@ -99,6 +118,33 @@ def choose(question, choices):
             if answer.lower() in {choice[0], choice}:
                 return choice
         answer = input('[ ?? ] unrecognized answer, type {}: '.format(join((f'“{choice}”' for choice in choices), word='or')))
+
+@subcommand
+def debug(*args):
+    if '--cache' in args:
+        if not CACHING_FLAG.exists():
+            with CACHING_FLAG.open('w'):
+                pass # write empty file
+    else:
+        if CACHING_FLAG.exists():
+            CACHING_FLAG.unlink()
+    with open('/usr/local/share/fenhl/lore-seeker/config.json') as config_f:
+        config = json.load(config_f)
+    env = {
+        'DISCORD_CLIENT_ID': config['clientID'],
+        'DISCORD_CLIENT_SECRET': config['clientSecret'],
+        **os.environ
+    }
+    was_running = subprocess.run(['systemctl', 'is-active', '--quiet', 'lore-seeker']).returncode == 0
+    if was_running:
+        subprocess.run(['sudo', 'systemctl', 'stop', 'lore-seeker'], check=True)
+    try:
+        exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], env=env, cwd=STAGE / 'frontend').returncode
+    except KeyboardInterrupt:
+        exit_code = 0
+    if was_running:
+        subprocess.run(['sudo', 'systemctl', 'start', 'lore-seeker'], check=True)
+    return exit_code
 
 def edit(original):
     with tempfile.NamedTemporaryFile('w', delete=False) as f:
@@ -124,6 +170,98 @@ def get_cached_set_file(set_path):
         with set_path.open() as set_f:
             CACHE['set_files'][set_path] = json.load(set_f)
     return CACHE['set_files'][set_path]
+
+def img_dirs(set_info, version):
+    set_name = set_info['name']
+    set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_info['code'].lower()
+    card_count = collections.defaultdict(lambda: 0)
+    # determine source dir
+    errata_img_dir = set_dir / f'v{version}' / 'img-errata'
+    original_img_dir = set_dir / f'v{version}' / 'img'
+    if errata_img_dir.exists() and original_img_dir.exists():
+        if os.environ.get('LSIMG_ERRATA', 'yes') == 'yes':
+            errata = True
+        elif os.environ.get('LSIMG_ERRATA', 'yes') == 'no':
+            errata = False
+        else:
+            errata = yesno(f"use errata'd images for {set_info['code']}?")
+        if errata:
+            return [errata_img_dir, original_img_dir]
+        else:
+            return [original_img_dir, errata_img_dir]
+    elif not (errata_img_dir.exists() or original_img_dir.exists()):
+        raise FileNotFoundError(f'no images directory found for {set_info["code"]} version {version}')
+    else:
+        return [more_itertools.one(dir for dir in [errata_img_dir, original_img_dir] if dir.exists())]
+
+def img_filename(card_name, set_img_dirs, count=0, *, original_name=None):
+    # generate all possible variants of the filename
+    transformations = [
+        lambda filename: ([
+            filename,
+            filename.split(':', 1)[1],
+            filename.replace(':', '')
+        ] if ':' in filename else [filename]),
+        lambda filename: [
+            filename,
+            filename.replace("'", '').replace('‘', '').replace('’', ''),
+            filename.replace("'", '’'),
+            filename.replace("'", '_')
+        ],
+        lambda filename: [
+            filename,
+            filename.replace(',', ''),
+            filename.replace(',', '_')
+        ],
+        lambda filename: ([f'{filename}.{count}', filename] if count > 0 else [filename]),
+        lambda filename: [f'{filename}.full', filename],
+        lambda filename: [f'{filename}.png', f'{filename}.jpg']
+    ]
+    if original_name is None:
+        filenames = [card_name]
+    else:
+        filenames = [card_name, original_name]
+    for transformation in transformations:
+        filenames = list(more_itertools.flatten(map(transformation, filenames)))
+    paths = [img_dir / filename for img_dir in set_img_dirs for filename in filenames]
+    # check variants for existing files in order
+    for path in paths:
+        if path.exists():
+            if path.suffix == '.jpg':
+                new_path = path.parent / f'{path.stem}.png'
+                subprocess.run(['convert', str(path), str(new_path)], check=True)
+                path.unlink()
+                path = new_path
+            return path
+    raise ValueError(f'Image file for {card_name} not found in {set_img_dirs}')
+
+@subcommand('import')
+def import_set(set_code, set_version):
+    set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
+    if not set_dir.exists():
+        raise FileNotFoundError(f'No such set directory: {set_dir}')
+    ver_dir = set_dir / f'v{set_version}'
+    if (ver_dir / 'errata.mse-set').exists() and (ver_dir / 'set.mse-set').exists():
+        with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
+            errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+        with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
+            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    elif (ver_dir / 'errata.mse-set').exists():
+        with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
+            new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    else:
+        with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
+            new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    set_json_path = pathlib.Path(f'data/sets/{set_code}.json')
+    if set_json_path.exists():
+        with set_json_path.open() as set_file:
+            old_set_json = json.load(set_file)
+    else:
+        old_set_json = {}
+    set_json = merge_set_jsons(set_json_path, old=old_set_json, new=new_set_json, errata=errata_set_json)
+    with set_json_path.open('w') as set_file:
+        json.dump(set_json, set_file, indent=4, sort_keys=True)
+        print(file=set_file)
 
 def input_default(question, default, convert=lambda x: x):
     result = input(f'[ ?? ] {question} [{default}]: ').strip()
@@ -369,62 +507,91 @@ def reprint_eq(field_name, old_field, new_field):
         return True # only reminder text changed
     return False
 
+#TODO add options for --errata, --no-errata, --delete (delete all existing images for sets that will be uploaded before starting)
+@subcommand('img')
+def upload_images(set_code=None, version=None):
+    """Upload custom card images to Lore Seeker."""
+    if set_code is None:
+        set_infos = {path.stem: lazyjson.File(path) for path in CUSTOM_SETS.iterdir() if lazyjson.File(path).get('custom', False)}
+    elif set_code.endswith('..'):
+        set_infos = {path.stem: lazyjson.File(path) for path in CUSTOM_SETS.iterdir() if lazyjson.File(path).get('custom', False) and path.stem >= set_code[:-2]}
+    else:
+        set_infos = {set_code_part: lazyjson.File(CUSTOM_SETS / f'{set_code_part}.json') for set_code_part in set_code.split(',')}
+    if version is None:
+        versions = {}
+    else:
+        versions = {set_code_part: version_part for set_code_part, version_part in itertools.zip_longest(set_code.split(','), version.split(','))}
+    for set_code, set_info in sorted(set_infos.items()):
+        if versions.get(set_code) is None:
+            if 'setVersion' in set_info.get('meta', {}):
+                versions[set_code] = set_info['meta']['setVersion'].value()
+            elif 'version' in set_info:
+                versions[set_code] = set_info['version'].value()
+            else:
+                version = input(f'[ ?? ] {set_info["name"]} version [leave blank to skip {set_code}]: ')
+                if version != '':
+                    versions[set_code] = version
+    img_dirs_map = {set_code: img_dirs(set_infos[set_code].value(), version) for set_code, version in sorted(versions.items()) if version is not None}
+    for set_code, version in sorted(versions.items()):
+        if version is None:
+            continue
+        set_info = set_infos[set_code].value()
+        set_name = set_info['name']
+        set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
+        print(f'[ ** ] uploading {set_name} version {version}')
+        card_count = collections.defaultdict(lambda: 0)
+        # make sure target dir exists and is empty
+        subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(REMOTE_STAGE / 'frontend' / 'public' / 'cards' / set_code.lower())])
+        subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(REMOTE_STAGE / 'frontend' / 'public' / 'cards' / set_code.lower())], check=True)
+        # determine source dir
+        set_img_dirs = img_dirs_map[set_code]
+        set_img_dirs.append(set_dir / 'basics')
+        # split DFCs
+        for card_info in set_info['cards']:
+            card_name = card_info['name']
+            if card_info.get('layout', 'normal') in {'double-faced', 'transform'} and card_info['names'][0] == card_name:
+                img_path = img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))
+                print(f'[....] Opening DFC image for {card_name}...', end='', flush=True)
+                with PIL.Image.open(img_path) as dfc_image:
+                    if dfc_image.size[0] < dfc_image.size[1]:
+                        print(f' This is only the front face\r[ ** ]')
+                        continue
+                    if dfc_image.size == (752, 523):
+                        front_image = dfc_image.crop((0, 0, 375, 523))
+                        back_image = dfc_image.crop((377, 0, 752, 523))
+                    else:
+                        print('\r[!!!!]')
+                        raise NotImplementedError(f"Don't know how to split DFC with dimensions {dfc_image.size[0]}×{dfc_image.size[1]}")
+                front_image.save(img_path.parent / f'{card_info["names"][0]}.png')
+                back_image.save(img_path.parent / f'{card_info["names"][1]}.png')
+                if img_path != img_path.parent / f'{card_info["names"][0]}.png':
+                    img_path.unlink()
+                print(f' split successful\r[ ** ]')
+        # upload images
+        for card_info in set_info['cards']:
+            card_name = card_info['name']
+            card_id = card_info['number']
+            for i in range(5):
+                try:
+                    subprocess.run(['scp', str(img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{REMOTE_STAGE / "frontend" / "public" / "cards" / set_code.lower() / (card_id + ".png")}'], check=True)
+                except subprocess.CalledProcessError:
+                    if i < 4:
+                        continue
+                    else:
+                        raise
+                else:
+                    break
+            card_count[card_name] += 1
+
 def yesno(question):
     return choose(question, ['yes', 'no']) == 'yes'
 
 if __name__ == '__main__':
-    if sys.argv[1] == 'debug':
-        if len(sys.argv) > 2 and sys.argv[2] == '--cache':
-            if not CACHING_FLAG.exists():
-                with CACHING_FLAG.open('w'):
-                    pass # write empty file
-        else:
-            if CACHING_FLAG.exists():
-                CACHING_FLAG.unlink()
-        with open('/usr/local/share/fenhl/lore-seeker/config.json') as config_f:
-            config = json.load(config_f)
-        env = {
-            'DISCORD_CLIENT_ID': config['clientID'],
-            'DISCORD_CLIENT_SECRET': config['clientSecret'],
-            **os.environ
-        }
-        was_running = subprocess.run(['systemctl', 'is-active', '--quiet', 'lore-seeker']).returncode == 0
-        if was_running:
-            subprocess.run(['sudo', 'systemctl', 'stop', 'lore-seeker'], check=True)
-        try:
-            exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], env=env, cwd='/opt/git/github.com/fenhl/lore-seeker/stage/frontend').returncode
-        except KeyboardInterrupt:
-            exit_code = 0
-        if was_running:
-            subprocess.run(['sudo', 'systemctl', 'start', 'lore-seeker'], check=True)
-        sys.exit(exit_code)
-    elif sys.argv[1] == 'import':
-        set_code = sys.argv[2]
-        set_version = sys.argv[3]
-        set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
-        if not set_dir.exists():
-            raise FileNotFoundError(f'No such set directory: {set_dir}')
-        ver_dir = set_dir / f'v{set_version}'
-        if (ver_dir / 'errata.mse-set').exists() and (ver_dir / 'set.mse-set').exists():
-            with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
-                errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
-            with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
-                new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
-        elif (ver_dir / 'errata.mse-set').exists():
-            with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
-                new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
-        else:
-            with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
-                new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
-        set_json_path = pathlib.Path(f'data/sets/{set_code}.json')
-        if set_json_path.exists():
-            with set_json_path.open() as set_file:
-                old_set_json = json.load(set_file)
-        else:
-            old_set_json = {}
-        set_json = merge_set_jsons(set_json_path, old=old_set_json, new=new_set_json, errata=errata_set_json)
-        with set_json_path.open('w') as set_file:
-            json.dump(set_json, set_file, indent=4, sort_keys=True)
-            print(file=set_file)
+    if sys.argv[1] in SUBCOMMANDS:
+        result = SUBCOMMANDS[sys.argv[1]](*sys.argv[2:])
     else:
-        sys.exit(f'lsutil: unknown subcommand: {sys.argv[1]}')
+        sys.exit(f'[!!!!] No such subcommand. Available subcommands: {", ".join(sorted(SUBCOMMANDS))}')
+    if isinstance(result, int):
+        sys.exit(result)
+    elif result is not None:
+        print(result)
