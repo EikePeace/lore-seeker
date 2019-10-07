@@ -251,7 +251,7 @@ class Indexer
           "spotlight",
           "textless",
           "watermark",
-          "printedName",
+          "originalName",
           "originalType",
           "originalText"
         ).compact
