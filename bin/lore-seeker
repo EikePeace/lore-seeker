@@ -146,7 +146,7 @@ def run(*, do_name_check=True, path=None, port=18803, verbose=False):
             'RAILS_ENV': 'production',
             **os.environ
         }
-        cmd([str(DISCORD_BIN), '--no-wait', 'reload'], announce=verbose)
+        cmd([str(DISCORD_BIN), '--no-wait', 'reload'], announce=verbose, check=False)
         #if do_name_check:
         #    name_check(path, verbose=verbose)
         cmd(['python3', 'bin/patch-comp-rules'], cwd=str(path), announce=verbose)
