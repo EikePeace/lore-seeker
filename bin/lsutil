@@ -511,6 +511,7 @@ def reprint_eq(field_name, old_field, new_field):
 @subcommand('img')
 def upload_images(set_code=None, version=None):
     """Upload custom card images to Lore Seeker."""
+    # determine sets and versions
     if set_code is None:
         set_infos = {path.stem: lazyjson.File(path) for path in CUSTOM_SETS.iterdir() if lazyjson.File(path).get('custom', False)}
     elif set_code.endswith('..'):
@@ -532,13 +533,37 @@ def upload_images(set_code=None, version=None):
                 if version != '':
                     versions[set_code] = version
     img_dirs_map = {set_code: img_dirs(set_infos[set_code].value(), version) for set_code, version in sorted(versions.items()) if version is not None}
+    # upload artwork
     for set_code, version in sorted(versions.items()):
         if version is None:
             continue
         set_info = set_infos[set_code].value()
         set_name = set_info['name']
         set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
-        print(f'[ ** ] uploading {set_name} version {version}')
+        print(f'[ ** ] uploading artwork for {set_name} version {version}')
+        # determine set file
+        if (set_dir / f'v{version}' / 'errata.mse-set').exists():
+            set_file_path = set_dir / f'v{version}' / 'errata.mse-set'
+        else:
+            set_file_path = set_dir / f'v{version}' / 'set.mse-set'
+        with zipfile.ZipFile(set_file_path) as set_file:
+            # make sure target dir exists and is empty
+            subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(REMOTE_STAGE / 'frontend' / 'public' / 'art' / set_code.lower())])
+            subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(REMOTE_STAGE / 'frontend' / 'public' / 'art' / set_code.lower())], check=True)
+            # extract and upload the images
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                tmp_dir = pathlib.Path(tmp_dir)
+                mse_to_json.extract_images(set_file, tmp_dir, set_code=set_code, version=version)
+                for img_file in tmp_dir.iterdir():
+                    subprocess.run(['scp', str(img_file), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{REMOTE_STAGE / "frontend" / "public" / "art" / set_code.lower() / img_file.name}'], check=True)
+    # upload full renders
+    for set_code, version in sorted(versions.items()):
+        if version is None:
+            continue
+        set_info = set_infos[set_code].value()
+        set_name = set_info['name']
+        set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
+        print(f'[ ** ] uploading full renders for {set_name} version {version}')
         card_count = collections.defaultdict(lambda: 0)
         # make sure target dir exists and is empty
         subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(REMOTE_STAGE / 'frontend' / 'public' / 'cards' / set_code.lower())])
