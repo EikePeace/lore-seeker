@@ -1,7 +1,7 @@
 class CardPrinting
   attr_reader :card, :set, :date, :release_date
   attr_reader :watermark, :rarity, :artist_name, :multiverseid, :number, :frame, :flavor, :flavor_normalized, :border
-  attr_reader :rarity_code, :print_sheet, :partner, :oversized, :frame_effect, :foiling, :spotlight
+  attr_reader :rarity_code, :print_sheet, :partner, :oversized, :frame_effects, :foiling, :spotlight
   attr_reader :textless, :fullart
   attr_reader :printed_name, :printed_text, :printed_typeline
 
@@ -32,7 +32,7 @@ class CardPrinting
     @foiling = data["foiling"]
     @border = data["border"] || @set.border
     @frame = data["frame"]
-    @frame_effect = data["frame_effect"]
+    @frame_effects = data["frame_effects"] || []
     @printed_name = data["originalName"] || @card.name
     @printed_text = (data["originalText"] || "").gsub("Æ", "Ae").tr("Äàáâäèéêíõöúûü’\u2212", "Aaaaaeeeioouuu'-")
     unless card.funny

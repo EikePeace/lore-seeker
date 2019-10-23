@@ -236,7 +236,7 @@ class Indexer
           "exclude_from_boosters",
           "flavor",
           "foiling",
-          "frame_effect",
+          "frame_effects",
           "frame",
           "fullart",
           "mtgo",
