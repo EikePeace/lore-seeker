@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get "deck" => "deck#index"
   get "sealed" => "sealed#index"
   get "exh" => "exh#index"
+  get "exh/news" => "exh#news"
   get "exh/todo" => "exh#todo"
   get "exh/vote/:name" => "exh#vote"
   get "preferences" => "session#preferences"

@@ -26,6 +26,21 @@ class ExhController < ApplicationController
     redirect_to(controller: "format", action: "show", id: "elder-xmage-highlander")
   end
 
+  def news
+    @title = "new EXH cards"
+    @entries = []
+    exh = Format["elder xmage highlander"].new
+    date = Date.new(2019, 9, 24)
+    cards = Set[]
+    until date > Date.today do
+      next_cards = exh.card_list(date).to_set
+      if next_cards != cards
+        @entries.insert(0, [date, (next_cards - cards).sort])
+        cards = next_cards
+      end
+    end
+  end
+
   def todo
     @title = "EXH card todo list"
     @ech = Format["elder cockatrice highlander"].new

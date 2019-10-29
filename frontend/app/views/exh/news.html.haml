@@ -1,0 +1,6 @@
+- @entries.each do |date, new_cards|
+  %h3= date.to_s
+  %ul
+    - @new_cards.each do |card|
+      %li= link_to_card_name(card) do
+        = card
