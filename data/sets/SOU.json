@@ -4028,12 +4028,6 @@
             "originalType": "Legendary Creature \u2014 Naga Soldier",
             "power": "3",
             "rarity": "rare",
-            "rulings": [
-                {
-                    "date": "2019-05-30",
-                    "text": "If you have multiple opponents, the triggered ability only resolves if you can choose a legal target for each opponent."
-                }
-            ],
             "subtypes": [
                 "Naga",
                 "Soldier"
@@ -4041,7 +4035,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "At the beginning of your end step, for each opponent, destroy target creature that player controls with power less than or equal to the amount of life that player lost this turn.\n{3}{R}: Selezzar, Tyrant of Endak deals 2 damage to each opponent.",
+            "text": "At the beginning of your end step, for each opponent, destroy up to one target creature that player controls with power less than or equal to the amount of life that player lost this turn.\n{3}{R}: Selezzar, Tyrant of Endak deals 2 damage to each opponent.",
             "toughness": "6",
             "type": "Legendary Creature \u2014 Naga Soldier",
             "types": [
