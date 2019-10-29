@@ -38,6 +38,7 @@ class ExhController < ApplicationController
         @entries.insert(0, [date, (next_cards - cards).sort])
         cards = next_cards
       end
+      date += 1
     end
   end
 
