@@ -73,6 +73,7 @@ desc "Generate the current card list for Elder XMage Highlander"
 task "exh:update", [:verbose] do |task, args|
   require "json"
   require "open3"
+  require_relative "search-engine/lib/card_database"
   require_relative "search-engine/lib/format/format.rb"
   ech = Format["elder cockatrice highlander"].new
   exh = Format["elder xmage highlander"].new
