@@ -74,19 +74,23 @@ task "exh:update", [:verbose] do |task, args|
   require "json"
   require "open3"
   require_relative "search-engine/lib/format/format.rb"
+  ech = Format["elder cockatrice highlander"].new
+  exh = Format["elder xmage highlander"].new
   exh_cards = db.cards.values
+  prev_exh_cards = exh_cards.select{|c| exh.in_format?(c) }.map(&:name).to_set
   puts "#{exh_cards.size} cards total" if args[:verbose]
   stdout, status = Open3.capture2 XMAGE_ENV, XMAGE_MAINTENANCE, "implemented-list", "--pull", *(args[:verbose] ? ["--verbose"] : [])
   implemented_cards = stdout.each_line.map{|line| line.chomp }.to_a
   puts "#{implemented_cards.size} cards implemented" if args[:verbose]
-  ech = Format["elder cockatrice highlander"].new
   exh_cards = exh_cards.select{|c| ech.in_format?(c) }
   puts "#{exh_cards.size} cards in ECH" if args[:verbose]
   exh_cards = exh_cards.select{|c| implemented_cards.include?(c.name) }
   puts "#{exh_cards.size} cards in EXH" if args[:verbose]
   #TODO only generate a new file if anything has changed
   #TODO commit new file to repo
-  Pathname("index/exh-cards/#{Date.today}.json").write(exh_cards.map{|c| c.name}.to_json)
+  Pathname("index/exh-cards/#{Date.today}.json").write(exh_cards.map(&:name).to_json)
+  # notify Discord bot
+  system "/opt/git/github.com/fenhl/lore-seeker-discord/master/target/release/lore-seeker", "--no-wait", "announce-exh-cards", *(exh_cards.map(&:name).to_set - prev_exh_cards)
 end
 
 desc "Fetch Gatherer pics"
