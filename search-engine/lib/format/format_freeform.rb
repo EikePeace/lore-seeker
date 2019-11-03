@@ -11,8 +11,8 @@ class FormatFreeform < Format
     true
   end
 
-  def deck_legality(deck)
-    nil
+  def deck_issues(deck)
+    []
   end
 
   def in_format?(card)

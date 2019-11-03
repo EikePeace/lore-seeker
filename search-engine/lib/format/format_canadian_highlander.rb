@@ -13,23 +13,44 @@ class FormatCanadianHighlander < FormatVintage
     "Canadian Highlander"
   end
 
-  def deck_legality(deck)
-    num_names = deck.physical_cards.count{|card| card.is_a?(UnknownCard) }
-    return "This deck contains an entry that's just a name, not a card." if num_names == 1
-    return "This deck contains #{num_names} entries that are just names, not cards." unless num_names == 0
-    offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card).nil? }
-    return "#{offending_card.name} is not legal in Canadian Highlander." unless offending_card.nil?
-    offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "banned" }
-    return "#{offending_card.name} is banned in Canadian Highlander." unless offending_card.nil?
-    return "Minimum mainboard size is 100 cards, but this deck only has #{deck.number_of_mainboard_cards}." if deck.number_of_mainboard_cards < 100
-    return "Sideboards are not allowed in Canadian Highlander." if deck.number_of_sideboard_cards > 0
-    offending_card = deck.physical_cards.map(&:main_front).find{|card| !card.allowed_in_any_number? && deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == card.name}.sum(&:first) > 1 }
-    unless offending_card.nil?
-      count = deck.cards_with_sideboard.select{|iter_card| iter_card.last.main_front.name == offending_card.name}.sum(&:first)
-      return "Only one copy of the same nonbasic card is allowed, but this deck has #{count} copies of #{offending_card.name}."
+  def deck_size_issues(deck)
+    issues = []
+    if deck.number_of_mainboard_cards < 100
+      issues << "Deck must contain at least 100 mainboard cards, has only #{deck.number_of_mainboard_cards}"
     end
-    points = deck.physical_cards.map(&:main_front).map(&:name).sum{|card| PointsList.has_key?(card) ? PointsList[card] : 0 }
-    return "A maximum of 10 points are allowed but this deck has #{points} points." if points > 10
+    if deck.number_of_sideboard_cards > 0
+      issues << "Sideboards are not allowed in Canadian Highlander"
+    end
+    issues
+  end
+
+  def deck_card_issues(deck)
+    issues = []
+    points = []
+    deck.card_counts.each do |card, name, count|
+      card_legality = legality(card)
+      case card_legality
+      when "legal"
+        if count > 1 and not card.allowed_in_any_number?
+          issues << "Deck contains #{count} copies of #{name}, only up to 1 allowed"
+        end
+      when /^restricted-/
+        points << [name, PointsList[name]]
+      when "banned"
+        issues << "#{name} is banned"
+      when nil
+        issues << "#{name} is not in the format"
+      when /^banned-/
+        issues << "#{name} is not yet implemented in XMage"
+      else
+        issues << "Unknown legality #{card_legality} for #{name}"
+      end
+    end
+    if points.sum(&:last) > 10
+      points_desc = points.map{|name, card_points| "#{name}: #{card_points} point#{card_points == 1 ? "" : "s"}" }.inject{|a, b| "#{a}, #{b}" }
+      issues << "A maximum of 10 points are allowed but this deck has #{points.sum(&:last)} points (#{points_desc})"
+    end
+    issues
   end
 
   def self.load_points_list

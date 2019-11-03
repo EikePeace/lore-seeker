@@ -1,10 +1,11 @@
-- if not @legality.nil?
+- if not @deck_issues.empty?
   .alert.alert-danger
     %p
       %strong
         This deck is not legal in Elder Cockatrice Highlander.
-    %p
-      = @legality
+    - @deck_issues.each do |issue|
+      %p
+        = issue
 .decklist
   %header
     %h4= @name

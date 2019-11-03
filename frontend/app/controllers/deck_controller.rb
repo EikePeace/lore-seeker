@@ -55,7 +55,7 @@ class DeckController < ApplicationController
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
 
-    @legality = Format["custom brawl"].new.deck_legality(@deck)
+    @deck_issues = Format["custom brawl"].new.deck_issues(@deck)
 
     @card_previews = @deck.physical_cards.grep(PhysicalCard)
 
@@ -82,7 +82,7 @@ class DeckController < ApplicationController
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
 
-    @legality = Format["elder cockatrice highlander"].new.deck_legality(@deck)
+    @deck_issues = Format["elder cockatrice highlander"].new.deck_issues(@deck)
 
     @card_previews = @deck.physical_cards.grep(PhysicalCard)
 
@@ -121,8 +121,7 @@ class DeckController < ApplicationController
         c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
       }
 
-      legality = @format.deck_legality(parser.deck)
-      @warnings.push(legality) unless legality.nil?
+      @warnings += @format.deck_issues(parser.deck)
 
       @card_previews = parser.deck.physical_cards.uniq.grep(PhysicalCard)
 
@@ -130,8 +129,7 @@ class DeckController < ApplicationController
       group_cards
     elsif @format.present? && @format.format_name != "freeform"
       parser = DeckParser.new($CardDatabase, "")
-      legality = @format.deck_legality(parser.deck)
-      @warnings.push(legality) unless legality.nil?
+      @warnings += @format.deck_issues(parser.deck)
     end
   end
 

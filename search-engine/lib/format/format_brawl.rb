@@ -4,6 +4,11 @@ class FormatBrawl < FormatStandard
   end
 
   def deck_issues(deck)
+    issues = []
+    deck.physical_cards.select {|card| card.is_a?(UnknownCard) }.each do |card|
+      issues << "Unknown card name: #{card.name}"
+    end
+    return issues unless issues.empty?
     [
       *deck_size_issues(deck),
       *deck_card_issues(deck),
@@ -34,8 +39,12 @@ class FormatBrawl < FormatStandard
         end
       when "banned"
         issues << "#{name} is banned"
-      else
+      when nil
         issues << "#{name} is not in the format"
+      when /^banned-/
+        issues << "#{name} is not yet implemented in XMage"
+      else
+        issues << "Unknown legality #{card_legality} for #{name}"
       end
     end
     issues
@@ -82,16 +91,12 @@ class FormatBrawl < FormatStandard
       if color_identity.empty? and card.types.include?("basic")
         basics << card_color_identity
       else
-        issues << "#{name} is outside deck color identity"
+        issues << "Deck has a color identity of #{color_identity_name(color_identity)}, but #{name} has a color identity of #{color_identity_name(card_color_identity)}"
       end
     end
     if basics.size > 1
       issues << "Deck with colorless commander can contain basic lands of only one color"
     end
     issues
-  end
-
-  def deck_legality(deck)
-    brawl_legality(deck)
   end
 end
