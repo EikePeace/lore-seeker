@@ -23,7 +23,7 @@ class FormatECH < FormatStandard
 
   def deck_size_issues(deck)
     issues = []
-    if deck.number_of_mainboard_cards == 99
+    if deck.number_of_mainboard_cards != 99
       issues << "Mainboard must contain exactly 99 cards, has #{deck.number_of_mainboard_cards}"
     end
     if deck.number_of_sideboard_cards != 1 and deck.number_of_sideboard_cards != 11

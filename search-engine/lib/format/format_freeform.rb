@@ -18,8 +18,4 @@ class FormatFreeform < Format
   def in_format?(card)
     true
   end
-
-  def deck_issues(deck)
-    []
-  end
 end

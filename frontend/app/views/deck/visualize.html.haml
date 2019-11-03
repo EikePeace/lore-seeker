@@ -8,9 +8,10 @@
           Warning:
         - else
           = "This deck is not legal in #{@format.format_pretty_name}."
-    - @warnings.each do |warning|
-      %p
-        = warning
+    %ul
+      - @warnings.each do |warning|
+        %li
+          = warning
 - elsif !@format.nil?
   .row
     .col-12.warnings
