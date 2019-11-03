@@ -61,6 +61,8 @@ class Format
     return "This deck contains #{num_names} entries that are just names, not cards." unless num_names == 0
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card).nil? }
     return "#{offending_card.name} is not legal in #{format_pretty_name}." unless offending_card.nil?
+    offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card).start_with?("banned-") }
+    return "#{offending_card.name} is not yet implemented in XMage." unless offending_card.nil?
     offending_card = deck.physical_cards.map(&:main_front).find{|card| legality(card) == "banned" }
     return "#{offending_card.name} is banned in #{format_pretty_name}." unless offending_card.nil?
     return "The deck commander must be in the sideboard, but this deck's sideboard is empty." if deck.number_of_sideboard_cards == 0
