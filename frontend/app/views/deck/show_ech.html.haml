@@ -3,10 +3,7 @@
     %p
       %strong
         This deck is not legal in Elder Cockatrice Highlander.
-    %ul
-      - @deck_issues.each do |issue|
-        %li
-          = issue
+    = render "deck/issues", issues: @deck_issues
 .decklist
   %header
     %h4= @name
