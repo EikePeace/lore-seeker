@@ -1,14 +1,4 @@
 %ul
   - issues.each do |issue|
     %li
-      - if deck_format.present? and issue =~ /^(.+) is not yet implemented in XMage$/
-        = link_to_card_name($1) do
-          = $1
-        is not yet implemented in XMage
-        %span.cardinfo
-          - votes = deck_format.legality(card).split("-")[1].to_i
-          = link_to({controller: "exh", action: "vote", name: $1}, class: "legality-banned") do
-            %i{class: (signed_in? && exh_card($1).voters.include?(current_user)) ? "voted" : ""}
-              = "#{votes} vote#{votes == 1 ? "" : "s"}"
-      - else
-        = issue
+      = issue
