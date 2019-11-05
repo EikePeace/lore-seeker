@@ -56,8 +56,8 @@ class FormatECH < FormatStandard
 
   def deck_commander_issues(deck)
     commanders = deck.sideboard.select{|card| card.last.commander? }.flat_map{|n,c| [c] * n}
-    return [:ech_commander_not_found] if commanders.size == 0
-    return [:ech_too_many_commanders, commanders.size] if commanders.size > 1
+    return [[:ech_commander_not_found]] if commanders.size == 0
+    return [[:ech_too_many_commanders, commanders.size]] if commanders.size > 1
 
     issues = []
     commanders.each do |c|
