@@ -1,18 +1,6 @@
 %h1 Deck visualizer
 
-- if @warnings.present?
-  .alert.alert-danger
-    %p
-      %strong
-        - if @format.nil?
-          Warning:
-        - else
-          = "This deck is not legal in #{@format.format_pretty_name}."
-    = render "deck/issues", deck_format: @format, issues: @warnings
-- elsif !@format.nil?
-  .row
-    .col-12.warnings
-      .warning= "This deck is #{@format.format_pretty_name} legal."
+= render "deck/issues", deck_format: @format, issues: @warnings
 
 - if @card_groups.present?
   .decklist

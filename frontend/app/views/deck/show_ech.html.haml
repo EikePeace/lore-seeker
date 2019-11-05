@@ -1,9 +1,5 @@
-- if not @deck_issues.empty?
-  .alert.alert-danger
-    %p
-      %strong
-        This deck is not legal in Elder Cockatrice Highlander.
-    = render "deck/issues", deck_format: @format, issues: @deck_issues
+= render "deck/issues", deck_format: @format, issues: @deck_issues
+
 .decklist
   %header
     %h4= @name
