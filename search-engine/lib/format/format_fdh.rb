@@ -37,7 +37,7 @@ class FormatFDH < Format
     unless deck.number_of_sideboard_cards.between?(1, 2)
       issues << [:commander_sideboard_size, deck.number_of_sideboard_cards, false]
     end
-    custom_nonland_cards = deck.mainboard.count{|c| c.custom? && !card.types.include?("land") }
+    custom_nonland_cards = deck.cards.count{|c| c.custom? && !card.types.include?("land") }
     if custom_nonland_cards < 15
       issues << [:fdh_custom_quota, custom_nonland_cards, 15]
     end
