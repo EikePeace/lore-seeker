@@ -44,7 +44,7 @@ class FormatCustomBrawl < FormatCustomStandard
       when /^banned-/
         issues << [:not_on_xmage, card]
       else
-        issues << [:unknown_legality, card, card_legality
+        issues << [:unknown_legality, card, card_legality]
       end
     end
     issues
