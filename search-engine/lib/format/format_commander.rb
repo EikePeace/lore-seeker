@@ -6,7 +6,7 @@ class FormatCommander < FormatVintage
   def deck_issues(deck)
     issues = []
     deck.physical_cards.select {|card| card.is_a?(UnknownCard) }.each do |card|
-      issues << "Unknown card name: #{card.name}"
+      issues << [:unknown_card, card]
     end
     return issues unless issues.empty?
     [
@@ -20,10 +20,10 @@ class FormatCommander < FormatVintage
   def deck_size_issues(deck)
     issues = []
     if deck.number_of_total_cards != 100
-      issues << "Deck must contain exactly 100 cards, has #{deck.number_of_total_cards}"
+      issues << [:size, deck.number_of_total_cards, 100]
     end
     unless deck.number_of_sideboard_cards.between?(1, 2)
-      issues << "Deck's sideboard must be exactly 1 card or 2 partner cards designated as commander, has #{deck.number_of_sideboard_cards}"
+      issues << [:commander_sideboard_size, deck.number_of_sideboard_cards, false]
     end
     issues
   end
@@ -35,16 +35,16 @@ class FormatCommander < FormatVintage
       case card_legality
       when "legal", "restricted"
         if count > 1 and not card.allowed_in_any_number?
-          issues << "Deck contains #{count} copies of #{name}, only up to 1 allowed"
+          issues << [:copies, card, count, 1]
         end
       when "banned"
-        issues << "#{name} is banned"
+        issues << [:banned, card]
       when nil
-        issues << "#{name} is not in the format"
+        issues << [:not_in_format, card]
       when /^banned-/
-        issues << "#{name} is not yet implemented in XMage"
+        issues << [:not_on_xmage, card]
       else
-        issues << "Unknown legality #{card_legality} for #{name}"
+        issues << [:unknown_legality, card, card_legality]
       end
     end
     issues
@@ -57,21 +57,21 @@ class FormatCommander < FormatVintage
     issues = []
     cards.each do |c|
       if not c.commander?
-        issues << "#{c.name} is not a valid commander"
+        issues << [:commander, c]
       elsif legality(c) == "restricted"
-        issues << "#{c.name} is banned as commander"
+        issues << [:banned_commander, c]
       end
     end
 
     if cards.size == 2
       a, b = cards
-      issues << "#{a.name} is not a valid partner card" unless a.partner?
-      issues << "#{b.name} is not a valid partner card" unless b.partner?
+      issues << [:partner, a] unless a.partner?
+      issues << [:partner, b] unless b.partner?
       if a.partner and a.partner.name != b.name
-        issues << "#{a.name} can only partner with #{a.partner.name}"
+        issues << [:partner_with, a, b]
       end
       if b.partner and b.partner.name != a.name
-        issues << "#{b.name} can only partner with #{b.partner.name}"
+        issues << [:partner_with, b, a]
       end
     end
 
@@ -86,7 +86,7 @@ class FormatCommander < FormatVintage
     deck.card_counts.each do |card, name, count|
       card_color_identity = card.color_identity.chars.to_set
       unless card_color_identity <= color_identity
-        issues << "Deck has a color identity of #{color_identity_name(color_identity)}, but #{name} has a color identity of #{color_identity_name(card_color_identity)}"
+        issues << [:color_identity, card, card_color_identity, color_identity]
       end
     end
     issues

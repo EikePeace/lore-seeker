@@ -10,7 +10,7 @@ class FormatECH < FormatStandard
   def deck_issues(deck)
     issues = []
     deck.physical_cards.select {|card| card.is_a?(UnknownCard) }.each do |card|
-      issues << "Unknown card name: #{card.name}"
+      issues << [:unknown_card, card]
     end
     return issues unless issues.empty?
     [
@@ -24,10 +24,10 @@ class FormatECH < FormatStandard
   def deck_size_issues(deck)
     issues = []
     if deck.number_of_mainboard_cards != 99
-      issues << "Mainboard must contain exactly 99 cards, has #{deck.number_of_mainboard_cards}"
+      issues << [:main_size, deck.number_of_mainboard_cards, 99]
     end
     if deck.number_of_sideboard_cards != 1 and deck.number_of_sideboard_cards != 11
-      issues << "Deck's sideboard must be exactly 1 card or 11 cards including the commander, has #{deck.number_of_sideboard_cards}"
+      issues << [:commander_sideboard_size, deck.number_of_sideboard_cards, true]
     end
     issues
   end
@@ -39,16 +39,16 @@ class FormatECH < FormatStandard
       case card_legality
       when "legal", "restricted"
         if count > 1 and not card.allowed_in_any_number?
-          issues << "Deck contains #{count} copies of #{name}, only up to 1 allowed"
+          issues << [:copies, card, count, 1]
         end
       when "banned"
-        issues << "#{name} is banned"
+        issues << [:banned, card]
       when nil
-        issues << "#{name} is not in the format"
+        issues << [:not_in_format, card]
       when /^banned-/
-        issues << "#{name} is not yet implemented in XMage"
+        issues << [:not_on_xmage, card]
       else
-        issues << "Unknown legality #{card_legality} for #{name}"
+        issues << [:unknown_legality, card, card_legality]
       end
     end
     issues
@@ -56,13 +56,13 @@ class FormatECH < FormatStandard
 
   def deck_commander_issues(deck)
     commanders = deck.sideboard.select{|card| card.last.commander? }.flat_map{|n,c| [c] * n}
-    return ["Commander must be in the sideboard, but none of this deck's sideboard cards are legal commanders"] if commanders.size == 0
-    return ["A deck can only have one commander, but this deck has #{commanders.size} (support for legendary creatures in the wishboard coming soon™)"] if commanders.size > 1
+    return [:ech_commander_not_found] if commanders.size == 0
+    return [:ech_too_many_commanders, commanders.size] if commanders.size > 1
 
     issues = []
     commanders.each do |c|
       if legality(c) == "restricted"
-        issues << "#{c.name} is banned as commander"
+        issues << [:banned_commander, c]
       end
     end
     issues
@@ -77,7 +77,7 @@ class FormatECH < FormatStandard
     deck.card_counts.each do |card, name, count|
       card_color_identity = card.color_identity.chars.to_set
       unless card_color_identity <= color_identity
-        issues << "Deck has a color identity of #{color_identity_name(color_identity)}, but #{name} has a color identity of #{color_identity_name(card_color_identity)}"
+        issues << [:color_identity, card, card_color_identity, color_identity]
       end
     end
     issues

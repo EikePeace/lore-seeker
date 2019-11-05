@@ -3,7 +3,7 @@
     %p
       %strong
         This deck is not legal in Custom Brawl.
-    = render "deck/issues", issues: @deck_issues
+    = render "deck/issues", deck_format: @format, issues: @deck_issues
 .decklist
   %header
     %h4= @name

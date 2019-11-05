@@ -55,7 +55,8 @@ class DeckController < ApplicationController
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
 
-    @deck_issues = Format["custom brawl"].new.deck_issues(@deck)
+    @format = Format["custom brawl"].new
+    @deck_issues = @format.deck_issues(@deck)
 
     @card_previews = @deck.physical_cards.grep(PhysicalCard)
 
@@ -82,7 +83,8 @@ class DeckController < ApplicationController
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
 
-    @deck_issues = Format["elder cockatrice highlander"].new.deck_issues(@deck)
+    @format = Format["elder cockatrice highlander"].new
+    @deck_issues = @format.deck_issues(@deck)
 
     @card_previews = @deck.physical_cards.grep(PhysicalCard)
 

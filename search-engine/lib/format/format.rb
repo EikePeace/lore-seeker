@@ -50,7 +50,7 @@ class Format
   def deck_issues(deck)
     issues = []
     deck.physical_cards.select {|card| card.is_a?(UnknownCard) }.each do |card|
-      issues << "Unknown card name: #{card.name}"
+      issues << [:unknown_card, card]
     end
     return issues unless issues.empty?
     [
@@ -63,10 +63,10 @@ class Format
     issues = []
     min_mainboard_size = 60 - 5 * deck.sideboard.select{|iter_card| iter_card.last.name == "Advantageous Proclamation"}.sum(&:first) # assumes all Proclamations in the sideboard are used
     if deck.number_of_mainboard_cards < min_mainboard_size
-      issues << "Deck must contain at least #{min_mainboard_size} mainboard cards, has only #{deck.number_of_mainboard_cards}"
+      issues << [:main_size_min, deck.number_of_mainboard_cards, min_mainboard_size]
     end
     if deck.number_of_sideboard_cards > 15
-      issues << "Deck must contain at most 15 sideboard cards, has #{deck.number_of_sideboard_cards}"
+      issues << [:side_size_max, deck.number_of_sideboard_cards, 15]
     end
     issues
   end
@@ -78,20 +78,20 @@ class Format
       case card_legality
       when "legal"
         if count > 4 and not card.allowed_in_any_number?
-          issues << "Deck contains #{count} copies of #{name}, only up to 4 allowed"
+          issues << [:copies, card, count, 4]
         end
       when "restricted"
         if count > 1
-          issues << "Deck contains #{count} copies of #{name}, which is restricted to only up to 1 allowed"
+          issues << [:copies, card, count, 1]
         end
       when "banned"
-        issues << "#{name} is banned"
+        issues << [:banned, card]
       when nil
-        issues << "#{name} is not in the format"
+        issues << [:not_in_format, card]
       when /^banned-/
-        issues << "#{name} is not yet implemented in XMage"
+        issues << [:not_on_xmage, card]
       else
-        issues << "Unknown legality #{card_legality} for #{name}"
+        issues << [:unknown_legality, card, card_legality]
       end
     end
     issues
