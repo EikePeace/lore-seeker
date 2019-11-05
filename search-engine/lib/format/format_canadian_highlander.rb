@@ -16,10 +16,10 @@ class FormatCanadianHighlander < FormatVintage
   def deck_size_issues(deck)
     issues = []
     if deck.number_of_mainboard_cards < 100
-      issues << "Deck must contain at least 100 mainboard cards, has only #{deck.number_of_mainboard_cards}"
+      issues << [:main_size_min, deck.number_of_mainboard_cards, 100]
     end
     if deck.number_of_sideboard_cards > 0
-      issues << "Sideboards are not allowed in Canadian Highlander"
+      issues << [:side_size_max, deck.number_of_sideboard_cards, 0]
     end
     issues
   end
@@ -27,28 +27,27 @@ class FormatCanadianHighlander < FormatVintage
   def deck_card_issues(deck)
     issues = []
     points = []
-    deck.card_counts.each do |card, name, count|
+    deck.card_counts.each do |card, count|
       card_legality = legality(card)
       case card_legality
       when "legal"
         if count > 1 and not card.allowed_in_any_number?
-          issues << "Deck contains #{count} copies of #{name}, only up to 1 allowed"
+          issues << [:copies, card, count, 1]
         end
       when /^restricted-/
-        points << [name, PointsList[name]]
+        points << [card, count, PointsList[card.name]]
       when "banned"
-        issues << "#{name} is banned"
+        issues << [:banned, card]
       when nil
-        issues << "#{name} is not in the format"
+        issues << [:not_in_format, card]
       when /^banned-/
-        issues << "#{name} is not yet implemented in XMage"
+        issues << [:not_on_xmage, card]
       else
-        issues << "Unknown legality #{card_legality} for #{name}"
+        issues << [:unknown_legality, card, card_legality]
       end
     end
-    if points.sum(&:last) > 10
-      points_desc = points.map{|name, card_points| "#{name}: #{card_points} point#{card_points == 1 ? "" : "s"}" }.inject{|a, b| "#{a}, #{b}" }
-      issues << "A maximum of 10 points are allowed but this deck has #{points.sum(&:last)} points (#{points_desc})"
+    if points.sum{|card, count, card_points| count * card_points} > 10
+      issues << [:canlander_points, 10, points]
     end
     issues
   end

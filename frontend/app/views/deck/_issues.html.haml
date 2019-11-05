@@ -12,6 +12,18 @@
         is banned as commander
       - when :brawl_basics
         Deck with colorless commander can contain basic lands of only one color
+      - when :canlander_points
+        - max, points_info = params
+        A maximum of #{max} points are allowed but this deck has #{points_info.sum(&:last)} points
+        = surround "(", ")" do
+          - points_info.each do |card, count, card_points|
+            = link_to_card(card) do
+              = card.name
+            is
+            - if count > 1
+              #{count} ×
+            = succeed "." do
+              #{card_points} point#{card_points == 1 ? "" : "s"}
       - when :color_identity
         - card, card_color_identity, deck_color_identity = params
         Deck has a color identity of #{color_identity_name(color_identity)}, but

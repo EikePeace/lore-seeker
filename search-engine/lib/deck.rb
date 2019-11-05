@@ -16,11 +16,12 @@ class Deck
   def card_counts
     result = {}
     cards_with_sideboard.each do |number, physical_card|
-      card = physical_card.main_front.card
-      result[card] ||= [physical_card.name, 0]
+      printing = physical_card.main_front
+      card = printing.card
+      result[card] ||= [printing, 0]
       result[card][1] += number
     end
-    result.map{|card,(name,number)| [card, name, number] }
+    result.map{|card,(printing,number)| [printing, number] }
   end
 
   def number_of_mainboard_cards

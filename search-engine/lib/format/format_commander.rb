@@ -30,7 +30,7 @@ class FormatCommander < FormatVintage
 
   def deck_card_issues(deck)
     issues = []
-    deck.card_counts.each do |card, name, count|
+    deck.card_counts.each do |card, count|
       card_legality = legality(card)
       case card_legality
       when "legal", "restricted"
@@ -83,7 +83,7 @@ class FormatCommander < FormatVintage
     return [] unless color_identity
     color_identity = color_identity.chars.to_set
     issues = []
-    deck.card_counts.each do |card, name, count|
+    deck.card_counts.each do |card, count|
       card_color_identity = card.color_identity.chars.to_set
       unless card_color_identity <= color_identity
         issues << [:color_identity, card, card_color_identity, color_identity]

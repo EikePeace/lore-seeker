@@ -30,7 +30,7 @@ class FormatCustomBrawl < FormatCustomStandard
 
   def deck_card_issues(deck)
     issues = []
-    deck.card_counts.each do |card, name, count|
+    deck.card_counts.each do |card, count|
       card_legality = legality(card)
       case card_legality
       when "legal", "restricted"
@@ -85,7 +85,7 @@ class FormatCustomBrawl < FormatCustomStandard
     color_identity = color_identity.chars.to_set
     issues = []
     basics = Set[]
-    deck.card_counts.each do |card, name, count|
+    deck.card_counts.each do |card, count|
       card_color_identity = card.color_identity.chars.to_set
       next if card_color_identity <= color_identity
       if color_identity.empty? and card.types.include?("basic")
