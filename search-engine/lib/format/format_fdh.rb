@@ -72,7 +72,7 @@ class FormatFDH < Format
 
     issues = []
     cards.each do |c|
-      if not c.custom?
+      if not c.main_front.custom?
         issues << [:fdh_commander, c]
       end
       if not c.commander?
