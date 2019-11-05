@@ -4,7 +4,7 @@
       %strong
         This deck is not legal in
         = succeed "." do
-          = link_to controller: "format", action: "show", id: format.format_name.parameterize
+          = link_to controller: "format", action: "show", id: deck_format.format_name.parameterize
             = deck_format.format_pretty_name
     %ul
       - issues.each do |kind, *params|
@@ -118,6 +118,6 @@
     .col-12.warnings
       .warning
         This deck is
-        = link_to controller: "format", action: "show", id: format.format_name.parameterize
+        = link_to controller: "format", action: "show", id: deck_format.format_name.parameterize
           = deck_format.format_pretty_name
         legal.
