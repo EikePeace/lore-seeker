@@ -91,28 +91,4 @@ class FormatCommander < FormatVintage
     end
     issues
   end
-
-  private
-
-  def color_identity_name(color_identity)
-    names = {"w" => "white", "u" => "blue", "b" => "black", "r" => "red", "g" => "green"}
-    color_identity = names.map{|c,cv| color_identity.include?(c) ? cv : nil}.compact
-    #TODO canonical color order
-    case color_identity.size
-    when 0
-      "colorless"
-    when 1, 2
-      color_identity.join(" and ")
-    when 3
-      a, b, c = color_identity
-      "#{a}, #{b}, and #{c}"
-    when 4
-      a, b, c, d = color_identity
-      "#{a}, #{b}, #{c}, and #{d}"
-    when 5
-      "all colors"
-    else
-      raise
-    end
-  end
 end

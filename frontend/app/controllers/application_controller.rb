@@ -27,7 +27,11 @@ class ApplicationController < ActionController::Base
     ExhCard.find_or_create_by!(name: card_name)
   end
 
-  helper_method :current_user, :signed_in?, :exh_card
+  def color_identity_name(color_identity)
+    Color.color_identity_name(color_identity)
+  end
+
+  helper_method :current_user, :signed_in?, :exh_card, :color_identity_name
 
   def current_user=(user)
     @current_user = user
