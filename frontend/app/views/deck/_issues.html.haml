@@ -26,7 +26,7 @@
               #{card_points} point#{card_points == 1 ? "" : "s"}
       - when :color_identity
         - card, card_color_identity, deck_color_identity = params
-        Deck has a color identity of #{color_identity_name(color_identity)}, but
+        Deck has a color identity of #{color_identity_name(deck_color_identity)}, but
         = link_to_card(card) do
           = card.name
         has a color identity of #{color_identity_name(card_color_identity)}
