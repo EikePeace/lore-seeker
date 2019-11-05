@@ -54,6 +54,9 @@ class PatchFoiling < Patch
         end
       end
 
+      # custom sets are always nonfoil only
+      card["indexer_foiling"] = "nonfoil" if set["custom"]
+
       # By set
       case set_code
       when "ced", "cei"
