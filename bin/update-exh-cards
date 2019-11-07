@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+
+import sys
+
+import datetime
+import json
+import pathlib
+import subprocess
+
+import xmage_maintenance # https://github.com/magefree/xmage-maintenance
+
+EXH_CARDS_DIR = pathlib.Path('/opt/git/github.com/fenhl/lore-seeker/stage/index/exh-cards')
+RUBY_SCRIPT = """
+require "./search-engine/lib/card_database"
+require "./search-engine/lib/format/format.rb"
+ech = Format["elder cockatrice highlander"].new
+CardDatabase.load.cards.values.select{|c| ech.in_format?(c) }.each do |c|
+  puts c.name
+end
+"""
+XMAGE_EXH = pathlib.Path('/opt/git/github.com/EikePeace/mage/branch/EXH')
+
+def announce(new_cards):
+    subprocess.run(['/opt/git/github.com/fenhl/lore-seeker-discord/master/target/release/lore-seeker', '--no-wait', 'announce-exh-cards', *sorted(new_cards)], check=True)
+
+def ech_cards():
+    return set(subprocess.run(['ruby', '-e', RUBY_SCRIPT], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines())
+
+def exh_cards():
+    return ech_cards() & implemented_cards()
+
+def implemented_cards():
+    return {card_name for set_code, card_name in implemented_printings()}
+
+def implemented_printings():
+    subprocess.run(['git', 'pull'], cwd=XMAGE_EXH)
+    return xmage_maintenance.iter_implemented(repo=XMAGE_EXH)
+
+def prev_cards():
+    for exh_db in sorted(EXH_CARDS_DIR.iterdir(), reverse=True):
+        if exh_db.suffix == '.json':
+            with exh_db.open() as f:
+                return set(json.load(f))
+    raise FileNotFoundError('Previous card list missing')
+
+def write(card_list):
+    with (EXH_CARDS_DIR / f'{datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d}.json').open('w') as f:
+        json.dump(sorted(card_list), f)
+    #TODO commit new file to repo
+
+def main():
+    prev = prev_cards()
+    current = exh_cards()
+    #TODO only generate a new file if anything has changed
+    write(current)
+    announce(current - prev)
+
+if __name__ == '__main__':
+    main()
