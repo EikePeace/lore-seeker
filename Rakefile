@@ -68,7 +68,7 @@ end
 
 desc "Generate the current card list for Elder XMage Highlander"
 task "exh:update" do
-  sh "bin/update-exh-cards", *(args[:verbose] ? ["--verbose"] : [])
+  sh "bin/update-exh-cards"
 end
 
 desc "Fetch Gatherer pics"
