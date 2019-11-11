@@ -12,21 +12,32 @@ import subprocess
 import xmage_maintenance # https://github.com/magefree/xmage-maintenance
 
 EXH_CARDS_DIR = pathlib.Path('/opt/git/github.com/fenhl/lore-seeker/stage/index/exh-cards')
-RUBY_SCRIPT = """
-require "./search-engine/lib/card_database"
-require "./search-engine/lib/format/format.rb"
-ech = Format["elder cockatrice highlander"].new
-CardDatabase.load.cards.values.select{|c| ech.in_format?(c) }.each do |c|
-  puts c.name
-end
-"""
 XMAGE_EXH = pathlib.Path('/opt/git/github.com/EikePeace/mage/branch/EXH')
 
 def announce(new_cards):
     subprocess.run(['/opt/git/github.com/fenhl/lore-seeker-discord/master/target/release/lore-seeker', '--no-wait', 'announce-exh-cards', *sorted(new_cards)], check=True)
 
 def ech_cards():
-    return set(subprocess.run(['ruby', '-e', RUBY_SCRIPT], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines())
+    return set(subprocess.run(['ruby', '-e', """
+        require "./search-engine/lib/card_database"
+        require "./search-engine/lib/format/format.rb"
+        ech = Format["elder cockatrice highlander"].new
+        CardDatabase.load.cards.values.select{|c| ech.in_format?(c) }.each do |c|
+          puts c.name
+        end
+    """], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines())
+
+def ech_printings():
+    for line in subprocess.run(['ruby', '-e', """
+        require "./search-engine/lib/card_database"
+        require "./search-engine/lib/format/format.rb"
+        ech = Format["elder cockatrice highlander"].new
+        CardDatabase.load.printings.select{|c| c.set.custom? && ech.in_format?(c) }.each do |c|
+          puts "#{c.set.code}\t#{c.name}"
+        end
+    """], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines():
+        set_code, card_name = line.split('\t', 1)
+        yield set_code.upper(), card_name
 
 def exh_cards():
     return ech_cards() & implemented_cards()
@@ -35,8 +46,15 @@ def implemented_cards():
     return {card_name for set_code, card_name in implemented_printings()}
 
 def implemented_printings():
-    subprocess.run(['git', 'pull'], cwd=XMAGE_EXH)
+    subprocess.run(['git', 'pull', '--quiet'], cwd=XMAGE_EXH)
     return xmage_maintenance.iter_implemented(repo=XMAGE_EXH)
+
+def missing_reprints(*, impl=None):
+    if impl is None:
+        impl = set(implemented_printings())
+    for set_code, card_name in set(ech_printings()) - impl:
+        if any(n == card_name for s, n in impl):
+            yield set_code, card_name
 
 def prev_cards():
     for exh_db in sorted(EXH_CARDS_DIR.iterdir(), reverse=True):
