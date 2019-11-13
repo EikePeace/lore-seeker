@@ -75,6 +75,6 @@ class ExhController < ApplicationController
   def with_best_printing_and_rotation_info(printings)
     best_printing = printings.find{|cp| ApplicationHelper.card_picture_path(cp) } || printings[0]
     exh_card = ExhCard.find_by(name: best_printing.name)
-    [best_printing, printings, exh_card.rotation]
+    [best_printing, printings, exh_card && exh_card.rotation]
   end
 end
