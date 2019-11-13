@@ -5,7 +5,7 @@
       = pluralize(@cards.total_entries, "unimplemented card")
     - else
       All cards are implemented!
-- @cards.each do |card, printings|
+- @cards.each do |card, printings, rotation_info|
   .row.card_row.exh_todo
     .col-8
       %h3.card_title
@@ -18,6 +18,17 @@
         - elsif legality.start_with? "banned"
           = " "
           %i{class: "legality-banned"} banned in ECH
+        - unless rotation_info.nil?
+          %i{style: "font-size: small;"}
+            - case rotation_info
+            - when "major"
+              (upcoming major change)
+            - when "minor"
+              (upcoming minor change)
+            - when "maybe"
+              (possible upcoming change)
+            - else
+              (upcoming change: #{rotation_info})
     .col-2.cardinfo
       - votes = @exh.legality(card).split("-")[1].to_i
       = link_to({controller: "exh", action: "vote", name: card.name}, class: "legality-banned") do

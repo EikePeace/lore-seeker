@@ -53,7 +53,7 @@ class ExhController < ApplicationController
     query.sorter = ExhSorter.new(@ech)
     results = $CardDatabase.search(query)
     @cards = results.card_groups.map do |printings|
-      choose_best_printing(printings)
+      with_best_printing_and_rotation_info(printings)
     end
     @cards = @cards.paginate(page: page, per_page: 100)
     #TODO special section for vanilla and french vanilla cards, if any
@@ -72,8 +72,9 @@ class ExhController < ApplicationController
 
   private
 
-  def choose_best_printing(printings)
+  def with_best_printing_and_rotation_info(printings)
     best_printing = printings.find{|cp| ApplicationHelper.card_picture_path(cp) } || printings[0]
-    [best_printing, printings]
+    exh_card = ExhCard.find_by(name: best_printing.name)
+    [best_printing, printings, exh_card.rotation]
   end
 end
