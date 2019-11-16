@@ -107,8 +107,6 @@ class Card
   end
 
   def num_exh_votes
-    require_relative "../../frontend/app/models/exh_card.rb"
-
     exh_card = ExhCard.find_by(name: @name)
     exh_card.nil? ? 0 : exh_card.voter_ids.size
   end
