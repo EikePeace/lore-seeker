@@ -155,9 +155,9 @@ def run(*, do_name_check=True, path=None, port=18803, verbose=False):
         cmd(['python3', 'bin/update-exh-cards'], cwd=str(path), announce=verbose)
         #cmd(['python3', 'bin/make-trice-download'], cwd=str(path), announce=verbose) #TODO update for MTG JSON 4, then reenable
         cmd(['bundle', 'install'], cwd=str(path / 'search-engine'), announce=verbose)
-        #cmd(['bundle', 'update'], cwd=str(path / 'search-engine'), announce=verbose) # skipped due to Ruby incompatibility issues
+        cmd(['bundle', 'update'], cwd=str(path / 'search-engine'), announce=verbose)
         cmd(['bundle', 'install'], cwd=str(path / 'frontend'), announce=verbose)
-        #cmd(['bundle', 'update'], cwd=str(path / 'frontend'), announce=verbose) # skipped due to Ruby incompatibility issues
+        cmd(['bundle', 'update'], cwd=str(path / 'frontend'), announce=verbose)
         cmd(['bundle', 'exec', 'rake', 'db:migrate', 'assets:precompile'], env=env, cwd=str(path / 'frontend'), announce=verbose)
     except Exception as e:
         notify_crash(e)
