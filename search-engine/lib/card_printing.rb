@@ -157,4 +157,8 @@ class CardPrinting
     end
     true
   end
+
+  def main_front
+    PhysicalCard.for(self).main_front
+  end
 end

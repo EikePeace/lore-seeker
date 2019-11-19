@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def exh_card(card)
+    card = card.respond_to?(:main_front) ? card.main_front : card
     card_name = card.respond_to?(:name) ? card.name : card
     ExhCard.find_or_create_by!(name: card_name)
   end
