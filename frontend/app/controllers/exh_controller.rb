@@ -48,7 +48,7 @@ class ExhController < ApplicationController
     @exh = Format["elder xmage highlander"].new
     page = [1, params[:page].to_i].max
     #TODO special section for reprints of implemented cards, if any
-    search = "(f:ech or banned:ech) -f:exh"
+    search = "(f:ech or banned:ech) is:mainfront -f:exh"
     query = Query.new(search)
     query.sorter = ExhSorter.new(@ech)
     results = $CardDatabase.search(query)
