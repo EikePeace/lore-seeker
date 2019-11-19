@@ -47,6 +47,8 @@ class ConditionExpr < ConditionSimple
       eval_card_value(card.stability)
     when "year"
       [:number, card.year]
+    when "rulings"
+      [:number, card.rulings.size]
     else
       eval_card_value(expr)
     end
