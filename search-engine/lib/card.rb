@@ -115,6 +115,20 @@ class Card
     exh_card.nil? ? 0 : exh_card.voter_ids.size
   end
 
+  def xmage?(time=nil)
+    time ||= Date.today
+    until time < Date.new(2010, 3, 20) do
+      card_file = (Pathname(__dir__) + "../../../index/xmage-printings/#{date}.json")
+      if card_file.exist?
+        printings = JSON.parse(card_file.read)
+        return printings.key?(name)
+      end
+      time -= 1
+      next
+    end
+    false
+  end
+
   def has_multiple_parts?
     !!@names
   end

@@ -71,6 +71,20 @@ class CardPrinting
     !!@mtgo
   end
 
+  def xmage?(time=nil)
+    time ||= Date.today
+    until time < Date.new(2010, 3, 20) do
+      card_file = (Pathname(__dir__) + "../../../index/xmage-printings/#{date}.json")
+      if card_file.exist?
+        printings = JSON.parse(card_file.read)
+        return printings[name] && printings[name].any?{|code| code == set_code}
+      end
+      time -= 1
+      next
+    end
+    false
+  end
+
   def in_boosters?
     (@set.has_boosters? or @set.in_other_boosters?) and !@exclude_from_boosters
   end

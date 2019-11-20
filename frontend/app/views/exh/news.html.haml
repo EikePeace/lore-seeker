@@ -4,5 +4,5 @@
   %ul
     - new_cards.each do |card|
       %li
-        = link_to_card_name(card) do
-          = card
+        = link_to_card(card) do
+          = card.name
