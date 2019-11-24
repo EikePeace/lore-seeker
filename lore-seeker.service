@@ -7,11 +7,11 @@ After=network.target
 Restart=always
 ExecStartPre=/usr/bin/git fetch origin
 ExecStartPre=/usr/bin/git reset --hard origin/lore-seeker
-ExecStart=/opt/git/github.com/fenhl/lore-seeker/stage/bin/lore-seeker
-ExecStop=/opt/git/github.com/fenhl/lore-seeker/stage/bin/lore-seeker stop
+ExecStart=/usr/local/share/fenhl/lore-seeker/repo/bin/lore-seeker
+ExecStop=/usr/local/share/fenhl/lore-seeker/repo/bin/lore-seeker stop
 User=fenhl
 Group=fenhl
-WorkingDirectory=/opt/git/github.com/fenhl/lore-seeker/stage
+WorkingDirectory=/usr/local/share/fenhl/lore-seeker/repo
 
 [Install]
 WantedBy=multi-user.target

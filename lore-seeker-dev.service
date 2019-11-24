@@ -1,0 +1,18 @@
+[Unit]
+Description=Lore Seeker search engine (development instance)
+Documentation=https://github.com/fenhl/lore-seeker
+After=network.target
+
+[Service]
+Restart=always
+ExecStartPre=/usr/bin/git fetch origin
+ExecStartPre=/usr/bin/git reset --hard origin/dev
+ExecStart=/usr/local/share/fenhl/lore-seeker/dev/repo/bin/lore-seeker --port=18808
+ExecStop=/usr/local/share/fenhl/lore-seeker/dev/repo/bin/lore-seeker stop
+User=fenhl
+Group=fenhl
+WorkingDirectory=/usr/local/share/fenhl/lore-seeker/dev/repo
+Environment=LORESEEKERDATA=/usr/local/share/fenhl/lore-seeker/dev
+
+[Install]
+WantedBy=multi-user.target

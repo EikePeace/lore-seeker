@@ -23,6 +23,7 @@ import gitdir.host.github # https://github.com/fenhl/gitdir
 import lazyjson # https://github.com/fenhl/lazyjson
 import mse_to_json # https://github.com/fenhl/mse-to-json
 
+BASE_PATH = pathlib.Path(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
 CACHE = {'set_files': {}}
 STAGE = gitdir.host.github.GitHub().repo('fenhl/lore-seeker').stage_path
 CACHING_FLAG = STAGE / 'frontend' / 'tmp' / 'caching-dev.txt'
@@ -128,22 +129,22 @@ def debug(*args):
     else:
         if CACHING_FLAG.exists():
             CACHING_FLAG.unlink()
-    with open('/usr/local/share/fenhl/lore-seeker/config.json') as config_f:
+    with (BASE_PATH / 'config.json').open() as config_f:
         config = json.load(config_f)
     env = {
         'DISCORD_CLIENT_ID': config['clientID'],
         'DISCORD_CLIENT_SECRET': config['clientSecret'],
         **os.environ
     }
-    was_running = subprocess.run(['systemctl', 'is-active', '--quiet', 'lore-seeker']).returncode == 0
+    was_running = subprocess.run(['systemctl', 'is-active', '--quiet', 'lore-seeker-dev']).returncode == 0
     if was_running:
-        subprocess.run(['sudo', 'systemctl', 'stop', 'lore-seeker'], check=True)
+        subprocess.run(['sudo', 'systemctl', 'stop', 'lore-seeker-dev'], check=True)
     try:
-        exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18803'], env=env, cwd=STAGE / 'frontend').returncode
+        exit_code = subprocess.run(['bundle', 'exec', 'rails', 'server', '-p', '18808'], env=env, cwd=STAGE / 'frontend').returncode
     except KeyboardInterrupt:
         exit_code = 0
     if was_running:
-        subprocess.run(['sudo', 'systemctl', 'start', 'lore-seeker'], check=True)
+        subprocess.run(['sudo', 'systemctl', 'start', 'lore-seeker-dev'], check=True)
     return exit_code
 
 def edit(original):

@@ -6,12 +6,14 @@ sys.path.append('/opt/py')
 
 import datetime
 import json
+import os
 import pathlib
 import subprocess
 
 import xmage_maintenance # https://github.com/magefree/xmage-maintenance
 
-EXH_CARDS_DIR = pathlib.Path('/opt/git/github.com/fenhl/lore-seeker/stage/index/exh-cards')
+BASE_PATH = pathlib.Path(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
+EXH_CARDS_DIR = BASE_PATH / 'repo' / 'index' / 'exh-cards'
 XMAGE_EXH = pathlib.Path('/opt/git/github.com/EikePeace/mage/branch/EXH')
 
 def announce(new_cards):
@@ -68,12 +70,13 @@ def write(card_list):
         json.dump(sorted(card_list), f)
     #TODO commit new file to repo
 
-def main():
+def main(do_announce=True):
     prev = prev_cards()
     current = exh_cards()
     #TODO only generate a new file if anything has changed
     write(current)
-    announce(current - prev)
+    if do_announce:
+        announce(current - prev)
 
 if __name__ == '__main__':
-    main()
+    main(do_announce='--no-announce' not in sys.argv[1:])
