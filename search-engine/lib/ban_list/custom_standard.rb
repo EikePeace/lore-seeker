@@ -54,4 +54,10 @@ BanList.for_format("custom standard") do
     "https://discordapp.com/channels/481200347189084170/564298775942660122/614858659692019733",
     "Art Studio" => "legal",
   )
+
+  change(
+    "2019-11-25",
+    "https://discordapp.com/channels/481200347189084170/564298775942660122/648323101041623110",
+    "Zoulev Rites" => "banned",
+  )
 end
