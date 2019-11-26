@@ -11,6 +11,7 @@ import itertools
 import json
 import os
 import pathlib
+import platform
 import re
 import subprocess
 import tempfile
@@ -124,12 +125,12 @@ def choose(question, choices):
 def debug(*args):
     if '--cache' in args:
         if not CACHING_FLAG.exists():
-            with CACHING_FLAG.open('w'):
+            with CACHING_FLAG.open('w', encoding='utf-8'):
                 pass # write empty file
     else:
         if CACHING_FLAG.exists():
             CACHING_FLAG.unlink()
-    with (BASE_PATH / 'config.json').open() as config_f:
+    with (BASE_PATH / 'config.json').open(encoding='utf-8') as config_f:
         config = json.load(config_f)
     env = {
         'DISCORD_CLIENT_ID': config['clientID'],
@@ -151,8 +152,11 @@ def edit(original):
     with tempfile.NamedTemporaryFile('w', delete=False) as f:
         f.write(original)
         tmp = pathlib.Path(f.name)
-    subprocess.run(['nano', tmp], check=True)
-    with tmp.open() as f:
+    if platform.system() == 'Windows':
+        subprocess.run([str(pathlib.Path.home() / 'AppData' / 'Local' / 'atom' / 'bin' / 'atom.cmd'), '--wait', str(tmp)], check=True)
+    else:
+        subprocess.run(['nano', str(tmp)], check=True)
+    with tmp.open(encoding='utf-8') as f:
         edited = f.read()
     tmp.unlink()
     return edited
@@ -168,7 +172,7 @@ def edit_rulings(card_name, old_rulings):
 def get_cached_set_file(set_path):
     set_path = set_path.resolve()
     if set_path not in CACHE['set_files']:
-        with set_path.open() as set_f:
+        with set_path.open(encoding='utf-8') as set_f:
             CACHE['set_files'][set_path] = json.load(set_f)
     return CACHE['set_files'][set_path]
 
@@ -176,7 +180,25 @@ def img_dirs(set_info, version):
     set_name = set_info['name']
     set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_info['code'].lower()
     card_count = collections.defaultdict(lambda: 0)
-    # determine source dir
+    # check if new-style Cockatrice export exists and use only that if it does
+    errata_img_dir = set_dir / f'v{version}' / 'trice-errata'
+    original_img_dir = set_dir / f'v{version}' / 'trice'
+    if errata_img_dir.exists() and original_img_dir.exists():
+        if os.environ.get('LSIMG_ERRATA', 'yes') == 'yes':
+            errata = True
+        elif os.environ.get('LSIMG_ERRATA', 'yes') == 'no':
+            errata = False
+        else:
+            errata = yesno(f"use errata'd images for {set_info['code']}?")
+        if errata:
+            return [errata_img_dir]
+        else:
+            return [original_img_dir]
+    elif not (errata_img_dir.exists() or original_img_dir.exists()):
+        pass # new-style Cockatrice export doesn't exist, use old-style source dir
+    else:
+        return [more_itertools.one(dir for dir in [errata_img_dir, original_img_dir] if dir.exists())]
+    # determine old-style source dir
     errata_img_dir = set_dir / f'v{version}' / 'img-errata'
     original_img_dir = set_dir / f'v{version}' / 'img'
     if errata_img_dir.exists() and original_img_dir.exists():
@@ -255,12 +277,12 @@ def import_set(set_code, set_version):
             new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
     set_json_path = pathlib.Path(f'data/sets/{set_code}.json')
     if set_json_path.exists():
-        with set_json_path.open() as set_file:
+        with set_json_path.open(encoding='utf-8') as set_file:
             old_set_json = json.load(set_file)
     else:
         old_set_json = {}
-    set_json = merge_set_jsons(set_json_path, old=old_set_json, new=new_set_json, errata=errata_set_json)
-    with set_json_path.open('w') as set_file:
+    set_json = merge_set_jsons(set_json_path, ver_dir, old=old_set_json, new=new_set_json, errata=errata_set_json)
+    with set_json_path.open('w', encoding='utf-8') as set_file:
         json.dump(set_json, set_file, indent=4, sort_keys=True)
         print(file=set_file)
 
@@ -307,9 +329,11 @@ def merge_card_fields(reprint_card, old_card, new_card, errata_card, reprint_set
             for field_name, field_value in errata_card.items()
             if field_name in SIMPLE_FIELDS
         }, indent=4, sort_keys=True)
+        edited = edit(f'# {card_name} ({set_code}, new card)\n{json_card}')
+        print(f'{edited!r}') #DEBUG
         return reprint_card, card_name, json.loads('\n'.join(
             line
-            for line in edit(f'# {card_name} ({set_code}, new card)\n{json_card}').splitlines()
+            for line in edited.splitlines()
             if not line.strip().startswith('#')
         ))
     elif old_card is not None and new_card is not None and any(
@@ -370,7 +394,7 @@ def merge_card_fields(reprint_card, old_card, new_card, errata_card, reprint_set
             if field_name in errata_card
         }
 
-def merge_set_jsons(set_json_path, *, old, new, errata):
+def merge_set_jsons(set_json_path, ver_dir, *, old, new, errata):
     set_json = copy.deepcopy(errata)
     if 'boosterV3' not in set_json:
         if 'boosterV3' in old:
@@ -379,28 +403,34 @@ def merge_set_jsons(set_json_path, *, old, new, errata):
             set_json['boosterV3'] = input_default('boosterV3', ['common'] * 10 + ['uncommon'] * 3 + [['rare', 'mythic rare']], convert=json.loads)
     # build rename map
     if 'cards' in old:
-        name_map_doc = '\n'.join([
-            '# name mapping between old version with errata and new version with errata'
-        ] + [
-            f'=> {errata_card["name"]}'
-            for errata_card in errata['cards']
-            if not any(old_card['name'] == errata_card['name'] for old_card in old['cards'])
-        ] + [
-            f'{old_card["name"]} =>'
-            for old_card in old['cards']
-            if not any(old_card['name'] == errata_card['name'] for errata_card in errata['cards'])
-        ] + [
-            f'{errata_card["name"]} => {errata_card["name"]}'
-            for errata_card in errata['cards']
-            if any(old_card['name'] == errata_card['name'] for old_card in old['cards'])
-        ])
-        name_map_doc = edit(name_map_doc)
+        rename_path = ver_dir / 'name-changes.txt'
+        if rename_path.exists():
+            input(f'[ ?? ] using existing card name mapping {rename_path} [you may edit it now, then press return to continue]')
+        else:
+            with rename_path.open('w', encoding='utf-8') as f:
+                print('# name mapping between old version with errata and new version with errata', file=f)
+                #TODO print FROM line
+                for errata_card in errata['cards']:
+                    if not any(old_card['name'] == errata_card['name'] for old_card in old['cards']):
+                        print(f'=> {errata_card["name"]}', file=f)
+                for old_card in old['cards']:
+                    if not any(old_card['name'] == errata_card['name'] for errata_card in errata['cards']):
+                        print(f'{old_card["name"]} =>', file=f)
+                for errata_card in errata['cards']:
+                    if any(old_card['name'] == errata_card['name'] for old_card in old['cards']):
+                        print(f'{errata_card["name"]} => {errata_card["name"]}', file=f)
+            input(f'[ ?? ] created new card name mapping {rename_path} [you may edit it now, then press return to continue]')
+        with rename_path.open(encoding='utf-8') as f:
+            name_map_doc = f.read()
         name_map = {}
-        for line in name_map_doc.splitlines():
+        for i, line in enumerate(name_map_doc.splitlines()):
             if not line.strip():
                 continue
             if line.strip().startswith('#'):
                 continue
+            match = re.fullmatch(' *FROM +([^ ]+) *', line)
+            if match:
+                continue #TODO check to make sure the previous version matches, if not, also check that version's name-changes.txt
             match = re.fullmatch(' *([^=]+?) *=> *([^=]+?) *=> *([^=]+?) *', line)
             if match:
                 name_map[match.group(3)] = match.group(1), match.group(2)
@@ -416,7 +446,7 @@ def merge_set_jsons(set_json_path, *, old, new, errata):
             if match:
                 name_map[match.group(2)] = match.group(1), None
                 continue
-            raise ValueError('Invalid line in name map')
+            raise ValueError(f'Failed to parse line {i + 1} in name map: {line!r}')
     else:
         name_map = {card['name']: (card['name'], None) for card in errata['cards']}
     set_json['cards'] = []
@@ -571,43 +601,46 @@ def upload_images(set_code=None, version=None):
         subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(REMOTE_STAGE / 'frontend' / 'public' / 'cards' / set_code.lower())], check=True)
         # determine source dir
         set_img_dirs = img_dirs_map[set_code]
-        set_img_dirs.append(set_dir / 'basics')
-        # split DFCs
-        for card_info in set_info['cards']:
-            card_name = card_info['name']
-            if card_info.get('layout', 'normal') in {'double-faced', 'transform'} and card_info['names'][0] == card_name:
-                img_path = img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))
-                print(f'[....] Opening DFC image for {card_name}...', end='', flush=True)
-                with PIL.Image.open(img_path) as dfc_image:
-                    if dfc_image.size[0] < dfc_image.size[1]:
-                        print(f' This is only the front face\r[ ** ]')
-                        continue
-                    if dfc_image.size == (752, 523):
-                        front_image = dfc_image.crop((0, 0, 375, 523))
-                        back_image = dfc_image.crop((377, 0, 752, 523))
+        if len(set_img_dirs) == 1 and set_img_dirs[0].name.startswith('trice'):
+            raise NotImplementedError() #TODO
+        else:
+            set_img_dirs.append(set_dir / 'basics')
+            # split DFCs
+            for card_info in set_info['cards']:
+                card_name = card_info['name']
+                if card_info.get('layout', 'normal') in {'double-faced', 'transform'} and card_info['names'][0] == card_name:
+                    img_path = img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))
+                    print(f'[....] Opening DFC image for {card_name}...', end='', flush=True)
+                    with PIL.Image.open(img_path) as dfc_image:
+                        if dfc_image.size[0] < dfc_image.size[1]:
+                            print(f' This is only the front face\r[ ** ]')
+                            continue
+                        if dfc_image.size == (752, 523):
+                            front_image = dfc_image.crop((0, 0, 375, 523))
+                            back_image = dfc_image.crop((377, 0, 752, 523))
+                        else:
+                            print('\r[!!!!]')
+                            raise NotImplementedError(f"Don't know how to split DFC with dimensions {dfc_image.size[0]}×{dfc_image.size[1]}")
+                    front_image.save(img_path.parent / f'{card_info["names"][0]}.png')
+                    back_image.save(img_path.parent / f'{card_info["names"][1]}.png')
+                    if img_path != img_path.parent / f'{card_info["names"][0]}.png':
+                        img_path.unlink()
+                    print(f' split successful\r[ ** ]')
+            # upload images
+            for card_info in set_info['cards']:
+                card_name = card_info['name']
+                card_id = card_info['number']
+                for i in range(5):
+                    try:
+                        subprocess.run(['scp', str(img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{REMOTE_STAGE / "frontend" / "public" / "cards" / set_code.lower() / (card_id + ".png")}'], check=True)
+                    except subprocess.CalledProcessError:
+                        if i < 4:
+                            continue
+                        else:
+                            raise
                     else:
-                        print('\r[!!!!]')
-                        raise NotImplementedError(f"Don't know how to split DFC with dimensions {dfc_image.size[0]}×{dfc_image.size[1]}")
-                front_image.save(img_path.parent / f'{card_info["names"][0]}.png')
-                back_image.save(img_path.parent / f'{card_info["names"][1]}.png')
-                if img_path != img_path.parent / f'{card_info["names"][0]}.png':
-                    img_path.unlink()
-                print(f' split successful\r[ ** ]')
-        # upload images
-        for card_info in set_info['cards']:
-            card_name = card_info['name']
-            card_id = card_info['number']
-            for i in range(5):
-                try:
-                    subprocess.run(['scp', str(img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{REMOTE_STAGE / "frontend" / "public" / "cards" / set_code.lower() / (card_id + ".png")}'], check=True)
-                except subprocess.CalledProcessError:
-                    if i < 4:
-                        continue
-                    else:
-                        raise
-                else:
-                    break
-            card_count[card_name] += 1
+                        break
+                card_count[card_name] += 1
 
 def yesno(question):
     return choose(question, ['yes', 'no']) == 'yes'
