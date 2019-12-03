@@ -1761,7 +1761,7 @@
                 "Serpent"
             ],
             "supertypes": [],
-            "text": "Deepwater Serpent can't attack unless you have two or more instant and/or sorcery cards in your graveyard.",
+            "text": "Deepwater Serpent can't attack unless there are two or more instant and/or sorcery cards in your graveyard.",
             "toughness": "5",
             "type": "Creature \u2014 Serpent",
             "types": [

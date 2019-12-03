@@ -1917,7 +1917,7 @@
                 "Wizard"
             ],
             "supertypes": [],
-            "text": "Prowess\nAt the beginning of your upkeep, if you have three or more instant and/or sorcery cards in your graveyard, transform Fugitive Mage.",
+            "text": "Prowess\nAt the beginning of your upkeep, if there are three or more instant and/or sorcery cards in your graveyard, transform Fugitive Mage.",
             "toughness": "2",
             "type": "Creature \u2014 Human Wizard",
             "types": [
@@ -4129,7 +4129,7 @@
             ]
         },
         {
-            "artist": "Marko Djurdjević",
+            "artist": "Marko Djurdjevi\u0107",
             "borderColor": "black",
             "colorIdentity": [
                 "B"

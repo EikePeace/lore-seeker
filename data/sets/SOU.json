@@ -1069,6 +1069,10 @@
                 {
                     "date": "2019-05-30",
                     "text": "The Aura card you search for must have exactly the ability \u201cenchant land\u201d. Something like \u201cenchant creature or land\u201d or \u201cenchant land you control\u201d doesn't work."
+                },
+                {
+                    "date": "2019-10-27",
+                    "text": "The second ability doesn't trigger if an Aura becomes attached to a land that's already enchanted with another Aura."
                 }
             ],
             "subtypes": [
