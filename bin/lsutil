@@ -260,6 +260,11 @@ def img_filename(card_name, set_img_dirs, count=0, *, original_name=None):
 
 @subcommand('import')
 def import_set(set_code, set_version):
+    gefolge_conf = lazyjson.SFTPFile('mercredi.fenhl.net', 22, '/usr/local/share/fidera/games/magic.json', username='fenhl')
+    if set_code not in gefolge_conf['customSets']:
+        gefolge_conf['customSets'][set_code] = {}
+    if 'blurb' not in gefolge_conf['customSets'][set_code]:
+        gefolge_conf['customSets'][set_code]['blurb'] = input(f'Beschreibung für gefolge.org: {set_code} ')
     set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
     if not set_dir.exists():
         raise FileNotFoundError(f'No such set directory: {set_dir}')
