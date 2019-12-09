@@ -35,7 +35,7 @@
             "name": "Karn, Heart of Guilt",
             "number": "1",
             "originalName": "Karn, Heart of Guilt",
-            "originalText": "[+2]: Until your next turn, creatures can't attack you or planeswalkers you control unless their controller pays {4} for each of those creatures.\n[-1]: Each opponent exiles a card from their hand, a permanent they control, and the top card of their library.\n[-4]: Return all other nonland permanents to their owners' hands.\n[-10]: Put any number of permanent cards from your hand, graveyard, or exiled with Karn onto the battlefield under your control.",
+            "originalText": "[+2]: Until your next turn, creatures can't attack you or planeswalkers you control unless their controller pays {4} for each of those creatures.\n[-1]: Each opponent exiles a card from their hand, a permanent they control, and the top card of their library.\n[-4]: Return all other nonland permanents to their owner's hands.\n[-10]: Put any number of permanent cards from your hand, graveyard, or exiled with Karn onto the battlefield under your control.",
             "originalType": "Legendary Planeswalker \u2014 Karn",
             "rarity": "mythic",
             "rulings": [
@@ -74,7 +74,7 @@
             "name": "Angel of Dismay",
             "number": "2",
             "originalName": "Angel of Dismay",
-            "originalText": "Flying\nWhen Angel of Dismay enters the battlefield, put a -1/-1 counter on each tapped creature your opponents control.\nCreatures your opponents control with -1/-1 counters on them can't attack or block unless their controller pays {2} for each of those creatures they control.",
+            "originalText": "Flying\nWhen Angel of Dismay enters the battlefield, put a -1/-1 counter on each tapped creature your opponents control.\nCreatures your opponents control with -1/-1 counters on them can't attack or block unless their controller pays 2 for each of those creatures they control.",
             "originalType": "Creature \u2014 Angel",
             "power": "3",
             "rarity": "mythic",
@@ -531,7 +531,7 @@
             "originalName": "Guardian-Wing Griffin",
             "originalText": "Flying, vigilance\nOther creatures you control have vigilance.\nTap two other untapped creatures you control: Guardian-Wing Griffin gains indestructible until end of turn.",
             "originalType": "Creature \u2014 Griffin",
-            "power": "4",
+            "power": "5",
             "rarity": "rare",
             "rulings": [
                 {
@@ -817,7 +817,7 @@
             ]
         },
         {
-            "artist": "sam verdegaal",
+            "artist": "Stephen Gibson",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1279,7 +1279,7 @@
             ]
         },
         {
-            "artist": "Alector Fencer",
+            "artist": "Sandara Tang",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1315,7 +1315,7 @@
             ]
         },
         {
-            "artist": "u2644",
+            "artist": "pierre raveneau",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1473,7 +1473,7 @@
             ]
         },
         {
-            "artist": "Khorghil_",
+            "artist": "artek92",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1544,7 +1544,7 @@
             ]
         },
         {
-            "artist": "Mark Howietzer",
+            "artist": "Christian Lothrean",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -1758,6 +1758,41 @@
             ]
         },
         {
+            "artist": "telthona",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U"
+            ],
+            "colors": [
+                "U"
+            ],
+            "convertedManaCost": 1.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{U}",
+            "name": "Eternal Wanderer",
+            "number": "47",
+            "originalName": "Eternal Wanderer",
+            "originalText": "When Eternal Wanderer enters the battlefield, journey. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nWhenever you put a journeyed card into your hand, you may pay {1}. If you do, journey.",
+            "originalType": "Creature \u2014 Human Nomad",
+            "power": "1",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Nomad"
+            ],
+            "supertypes": [],
+            "text": "When Eternal Wanderer enters the battlefield, journey. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nWhenever you put a journeyed card into your hand, you may pay {1}. If you do, journey.",
+            "toughness": "1",
+            "type": "Creature \u2014 Human Nomad",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
             "artist": "yekaterina chibisova",
             "borderColor": "black",
             "colorIdentity": [
@@ -1773,7 +1808,7 @@
             "layout": "normal",
             "manaCost": "{1}{U}",
             "name": "Evaldi's Harmonizer",
-            "number": "47",
+            "number": "48",
             "originalName": "Evaldi's Harmonizer",
             "originalText": "Flash\nWhenever a permanent is put into your hand from the battlefield, you may put a permanent card with converted mana cost less than its converted mana cost from your hand onto the battlefield.",
             "originalType": "Creature \u2014 Elf Wizard",
@@ -1809,7 +1844,7 @@
             "layout": "normal",
             "manaCost": "{2}{U}",
             "name": "Exogene Spitter",
-            "number": "48",
+            "number": "49",
             "originalName": "Exogene Spitter",
             "originalText": "When Exogene Spitter enters the battlefield, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
             "originalType": "Creature \u2014 Mutant",
@@ -1823,41 +1858,6 @@
             "text": "When Exogene Spitter enters the battlefield, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
             "toughness": "1",
             "type": "Creature \u2014 Mutant",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "eduardo pena",
-            "borderColor": "black",
-            "colorIdentity": [
-                "U"
-            ],
-            "colors": [
-                "U"
-            ],
-            "convertedManaCost": 1.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{U}",
-            "name": "Farseek Pilgrim",
-            "number": "49",
-            "originalName": "Farseek Pilgrim",
-            "originalText": "When Farseek Pilgrim enters the battlefield, journey. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nWhenever you put a journeyed card into your hand, you may pay {1}. If you do, journey.",
-            "originalType": "Creature \u2014 Human Nomad",
-            "power": "1",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Nomad"
-            ],
-            "supertypes": [],
-            "text": "When Farseek Pilgrim enters the battlefield, journey. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nWhenever you put a journeyed card into your hand, you may pay {1}. If you do, journey.",
-            "toughness": "1",
-            "type": "Creature \u2014 Human Nomad",
             "types": [
                 "Creature"
             ]
@@ -2064,7 +2064,7 @@
             ]
         },
         {
-            "artist": "ertacaltinoz",
+            "artist": "depingo",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2169,7 +2169,7 @@
             ]
         },
         {
-            "artist": "sean samuels",
+            "artist": "grace liu",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2216,7 +2216,7 @@
             "name": "Nimbus Drifters",
             "number": "60",
             "originalName": "Nimbus Drifters",
-            "originalText": "Flying\nWhenever Nimbus Drifters deals combat damage to a player, you may exile target permanent you control, then return that card to the battlefield under its owner's control.",
+            "originalText": "Flying\nWhen Nimbus Drifters deals combat damage to a player, you may exile target permanent you control, then return that card to the battlefield under its owner's control.",
             "originalType": "Creature \u2014 Fish Mutant",
             "power": "4",
             "rarity": "uncommon",
@@ -2669,7 +2669,7 @@
             "name": "Sephius's Research",
             "number": "72",
             "originalName": "Sephius's Research",
-            "originalText": "As an additional cost to cast this spell, waste two nonwastes lands you control. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nSearch your library for a colorless card, reveal it, put it into your hand, then shuffle your library.",
+            "originalText": "Waste two nonwastes lands you control. If you do, search your library for a colorless card, reveal it, put it into your hand, then shuffle your library. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")",
             "originalType": "Sorcery",
             "rarity": "uncommon",
             "rulings": [
@@ -2684,7 +2684,7 @@
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "As an additional cost to cast this spell, waste two nonwastes lands you control. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nSearch your library for a colorless card, reveal it, put it into your hand, then shuffle your library.",
+            "text": "Waste two nonwastes lands you control. If you do, search your library for a colorless card, reveal it, put it into your hand, then shuffle your library. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -2862,7 +2862,7 @@
             ]
         },
         {
-            "artist": "asahisuperdry",
+            "artist": "pierre raveneau",
             "borderColor": "black",
             "colorIdentity": [
                 "U"
@@ -2975,13 +2975,13 @@
             "colors": [
                 "B"
             ],
-            "convertedManaCost": 5.0,
+            "convertedManaCost": 6.0,
             "flavorText": "Foug twists every choice to his benefit, leaving only yourself to blame.",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
-            "manaCost": "{3}{B}{B}",
+            "manaCost": "{4}{B}{B}",
             "name": "Consign to Failure",
             "number": "81",
             "originalName": "Consign to Failure",
@@ -3013,7 +3013,7 @@
             ]
         },
         {
-            "artist": "timofey stepanov",
+            "artist": "jeremy fenske",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3048,7 +3048,7 @@
             ]
         },
         {
-            "artist": "andrey-lyapichev-jan",
+            "artist": "anthony jones",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3112,7 +3112,7 @@
             ]
         },
         {
-            "artist": "arash2d",
+            "artist": "maxime teppe",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3278,7 +3278,7 @@
             ]
         },
         {
-            "artist": "pan_pks",
+            "artist": "pan pks",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3488,7 +3488,7 @@
             ]
         },
         {
-            "artist": "joe-grabenstetter-eidyia",
+            "artist": "joe grabenstetter eidyia",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3662,7 +3662,7 @@
             ]
         },
         {
-            "artist": "mark-molnar-",
+            "artist": "mark molnar",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3686,7 +3686,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "At the beginning your upkeep, put a -1/-1 counter on a creature with the greatest toughness or tied for greatest toughness among creatures your opponents control.",
+            "text": "At the beginning of your upkeep, put a -1/-1 counter on a creature with the greatest toughness or tied for greatest toughness among creatures your opponents control.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
@@ -3865,7 +3865,7 @@
             ]
         },
         {
-            "artist": "Alejandro Mirabal",
+            "artist": "mark molnar",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -4122,7 +4122,7 @@
             ]
         },
         {
-            "artist": "guido-kuip",
+            "artist": "guido kuip",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -4137,9 +4137,9 @@
             "hasNonFoil": true,
             "layout": "normal",
             "manaCost": "{1}{B}",
-            "name": "Shi-Fang Looter",
+            "name": "Shi-Fang Bandits",
             "number": "114",
-            "originalName": "Shi-Fang Looter",
+            "originalName": "Shi-Fang Bandits",
             "originalText": "Dash {B} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
             "originalType": "Creature \u2014 Hyena Berserker",
             "power": "2",
@@ -4188,7 +4188,7 @@
             ]
         },
         {
-            "artist": "hugo_richard-",
+            "artist": "Scott Flanders",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -4224,7 +4224,7 @@
             ]
         },
         {
-            "artist": "Chris J. Anderson",
+            "artist": "pinimg",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -4291,7 +4291,7 @@
             ]
         },
         {
-            "artist": "BenWootten",
+            "artist": "nikusenpai",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4361,7 +4361,7 @@
             ]
         },
         {
-            "artist": "Daniel Kamarudin",
+            "artist": "AnthonyFrancasco",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4458,7 +4458,7 @@
             ]
         },
         {
-            "artist": "Noah-Bradley",
+            "artist": "Noah Bradley",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4473,23 +4473,23 @@
             "hasNonFoil": true,
             "layout": "normal",
             "manaCost": "{R}",
-            "name": "Derelict",
+            "name": "Dereliction",
             "number": "123",
-            "originalName": "Derelict",
-            "originalText": "Choose one \u2014\n\u2022 Destroy target artifact.\n\u2022 Derelict deals 2 damage to target player or planeswalker.",
+            "originalName": "Dereliction",
+            "originalText": "Choose one \u2014\n\u2022 Destroy target artifact.\n\u2022 Dereliction deals 2 damage to target player or planeswalker.",
             "originalType": "Sorcery",
             "rarity": "common",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Choose one \u2014\n\u2022 Destroy target artifact.\n\u2022 Derelict deals 2 damage to target player or planeswalker.",
+            "text": "Choose one \u2014\n\u2022 Destroy target artifact.\n\u2022 Dereliction deals 2 damage to target player or planeswalker.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
             ]
         },
         {
-            "artist": "marvin-buete",
+            "artist": "marvin buete",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -4718,7 +4718,7 @@
             "originalName": "Grin, Scourge of Goresand",
             "originalText": "Whenever Grin, Scourge of Goresand attacks, when you cast your next instant or sorcery spell this turn with converted mana cost 3 or less, copy that spell. You may choose new targets for the copy.\nDash {2}{R}",
             "originalType": "Legendary Creature \u2014 Human Berserker",
-            "power": "4",
+            "power": "3",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [
@@ -4753,7 +4753,7 @@
             "name": "Grin's Reaver",
             "number": "131",
             "originalName": "Grin's Reaver",
-            "originalText": "First strike\nWhenever Grin's Reaver deals combat damage to a player, exile the top card of that player's library. Until end of turn, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.",
+            "originalText": "First strike\nWhenever Grin's Reaver deals combat damage to a player, exile the top card of that player's library. Until end of turn, you may cast that card and you may spend mana as though it were mana of any type to cast that spell.",
             "originalType": "Creature \u2014 Human Berserker",
             "power": "2",
             "rarity": "rare",
@@ -4763,7 +4763,7 @@
                 "Berserker"
             ],
             "supertypes": [],
-            "text": "First strike\nWhenever Grin's Reaver deals combat damage to a player, exile the top card of that player's library. Until end of turn, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.",
+            "text": "First strike\nWhenever Grin's Reaver deals combat damage to a player, exile the top card of that player's library. Until end of turn, you may cast that card and you may spend mana as though it were mana of any type to cast that spell.",
             "toughness": "1",
             "type": "Creature \u2014 Human Berserker",
             "types": [
@@ -4878,7 +4878,7 @@
             ]
         },
         {
-            "artist": "valboar",
+            "artist": "ari matti",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5103,7 +5103,7 @@
             ]
         },
         {
-            "artist": "rostislav zagornov",
+            "artist": "alexnegrea",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5169,7 +5169,7 @@
             ]
         },
         {
-            "artist": "telthona",
+            "artist": "stuart ng",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5474,16 +5474,16 @@
             "colors": [
                 "R"
             ],
-            "convertedManaCost": 6.0,
+            "convertedManaCost": 5.0,
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
-            "manaCost": "{4}{R}{R}",
+            "manaCost": "{3}{R}{R}",
             "name": "Shimmering Dunekite",
             "number": "153",
             "originalName": "Shimmering Dunekite",
-            "originalText": "Flying\nWhenever Shimmering Dunekite or another creature enters the battlefield under your control, if it isn't a token, you may create a token that's a copy of that creature, except it has haste and \"At the beginning of the end step, sacrifice this creature.\"",
+            "originalText": "Flying\nWhenever Shimmering Dunekite or another creature enters the battlefield under your control, if you cast it from your hand, you may create a token that's a copy of that creature, except it has haste and \"At the beginning of the end step, sacrifice this creature.\"",
             "originalType": "Creature \u2014 Dragon",
             "power": "4",
             "rarity": "mythic",
@@ -5492,7 +5492,7 @@
                 "Dragon"
             ],
             "supertypes": [],
-            "text": "Flying\nWhenever Shimmering Dunekite or another creature enters the battlefield under your control, if it isn't a token, you may create a token that's a copy of that creature, except it has haste and \"At the beginning of the end step, sacrifice this creature.\"",
+            "text": "Flying\nWhenever Shimmering Dunekite or another creature enters the battlefield under your control, if you cast it from your hand, you may create a token that's a copy of that creature, except it has haste and \"At the beginning of the end step, sacrifice this creature.\"",
             "toughness": "3",
             "type": "Creature \u2014 Dragon",
             "types": [
@@ -5500,7 +5500,7 @@
             ]
         },
         {
-            "artist": "david-franco-campos",
+            "artist": "david franco campos",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -5739,7 +5739,7 @@
             ]
         },
         {
-            "artist": "Sam Soto-Saines",
+            "artist": "blueOX",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6348,16 +6348,25 @@
             "name": "Leyline Feeder",
             "number": "178",
             "originalName": "Leyline Feeder",
-            "originalText": "Whenever Leyline Feeder deals combat damage to a player, waste a nonwastes land you control. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nAs long as you control six or more wastes, Leyline Feeder gets +3/+3.",
+            "originalText": "Whenever Leyline Feeder deals combat damage to a player, waste a nonwastes land you control. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nAs long as you control four or more wastes, Leyline Feeder gets +2/+2.",
             "originalType": "Creature \u2014 Mutant",
             "power": "3",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-12-09",
+                    "text": "A wastes is a permanent named Wastes. A nonwastes land is a land not named Wastes."
+                },
+                {
+                    "date": "2019-12-09",
+                    "text": "Wasting a land changes its name to Wastes, replaces its supertypes and card types with basic land, and removes all other abilities."
+                }
+            ],
             "subtypes": [
                 "Mutant"
             ],
             "supertypes": [],
-            "text": "Whenever Leyline Feeder deals combat damage to a player, waste a nonwastes land you control. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nAs long as you control six or more wastes, Leyline Feeder gets +3/+3.",
+            "text": "Whenever Leyline Feeder deals combat damage to a player, waste a nonwastes land you control. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nAs long as you control four or more wastes, Leyline Feeder gets +2/+2.",
             "toughness": "3",
             "type": "Creature \u2014 Mutant",
             "types": [
@@ -6584,6 +6593,7 @@
                 "G"
             ],
             "convertedManaCost": 5.0,
+            "flavorText": "Just because they play with their food doesn't mean you have any chance of getting away.",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -6610,7 +6620,7 @@
             ]
         },
         {
-            "artist": "Cribs",
+            "artist": "Alex Konstad",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -6862,7 +6872,7 @@
             "name": "Wayfarer's Destination",
             "number": "193",
             "originalName": "Wayfarer's Destination",
-            "originalText": "Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle your library. Create a 1/1 white Nomad creature token with vigilance.",
+            "originalText": "Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library. Create a 1/1 white Nomad creature token with vigilance.",
             "originalType": "Sorcery",
             "rarity": "common",
             "rulings": [],
@@ -6926,7 +6936,7 @@
             "originalName": "Zerul Beastdriver",
             "originalText": "{2}, Waste two nonwastes lands you control: Zerul Beastdriver gets +2/+2 and gains hexproof and indestructible until end of turn. Activate this ability only once each turn. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")",
             "originalType": "Creature \u2014 Human Shaman",
-            "power": "4",
+            "power": "5",
             "rarity": "rare",
             "rulings": [
                 {
@@ -6944,14 +6954,14 @@
             ],
             "supertypes": [],
             "text": "{2}, Waste two nonwastes lands you control: Zerul Beastdriver gets +2/+2 and gains hexproof and indestructible until end of turn. Activate this ability only once each turn. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")",
-            "toughness": "5",
+            "toughness": "4",
             "type": "Creature \u2014 Human Shaman",
             "types": [
                 "Creature"
             ]
         },
         {
-            "artist": "ahmed rawi",
+            "artist": "Will Pheonix",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -7005,7 +7015,7 @@
             "name": "Biramous Entity",
             "number": "197",
             "originalName": "Biramous Entity",
-            "originalText": "When Biramous Entity enters the battlefield, search your library for a permanent card with the same name as target nontoken permanent you control. Reveal it and put that card into your hand. Then shuffle your library.",
+            "originalText": "When Biramous Entity enters the battlefield, search your library for a permanent card with the same name as another target nontoken permanent you control. Reveal it and put that card into your hand. Then shuffle your library.",
             "originalType": "Creature \u2014 Mutant",
             "power": "1",
             "rarity": "rare",
@@ -7014,7 +7024,7 @@
                 "Mutant"
             ],
             "supertypes": [],
-            "text": "When Biramous Entity enters the battlefield, search your library for a permanent card with the same name as target nontoken permanent you control. Reveal it and put that card into your hand. Then shuffle your library.",
+            "text": "When Biramous Entity enters the battlefield, search your library for a permanent card with the same name as another target nontoken permanent you control, reveal it, put it into your hand, then shuffle your library.",
             "toughness": "1",
             "type": "Creature \u2014 Mutant",
             "types": [
@@ -7166,7 +7176,7 @@
             ]
         },
         {
-            "artist": "richard-anderson",
+            "artist": "richard anderson",
             "borderColor": "black",
             "colorIdentity": [
                 "G",
@@ -7822,16 +7832,16 @@
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
-            "convertedManaCost": 4.0,
+            "convertedManaCost": 3.0,
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
-            "manaCost": "{2}{C}{C}",
+            "manaCost": "{1}{C}{C}",
             "name": "Aethanis Conservator",
             "number": "219",
             "originalName": "Aethanis Conservator",
-            "originalText": "When Aethanis Conservator enters the battlefield, choose one \u2014\n\u2022 Exile target creature an opponent controls until Aethanis Conservator leaves the battlefield.\n\u2022 Target opponent reveals their hand and you choose a nonland card from it. Exile that card until Aethanis Conservator leaves the battlefield.",
+            "originalText": "When Aethanis Conservator enters the battlefield, choose one \u2014\n\u2022 Exile target creature an opponent controls until Aethanis Conservator leaves the battlefield.\n\u2022 Target opponent reveals their hand and you choose a nonland noncreature card from it. Exile that card until Aethanis Conservator leaves the battlefield.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "3",
             "rarity": "rare",
@@ -7840,8 +7850,8 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "When Aethanis Conservator enters the battlefield, choose one \u2014\n\u2022 Exile target creature an opponent controls until Aethanis Conservator leaves the battlefield.\n\u2022 Target opponent reveals their hand and you choose a nonland card from it. Exile that card until Aethanis Conservator leaves the battlefield.",
-            "toughness": "3",
+            "text": "When Aethanis Conservator enters the battlefield, choose one \u2014\n\u2022 Exile target creature an opponent controls until Aethanis Conservator leaves the battlefield.\n\u2022 Target opponent reveals their hand and you choose a noncreature, nonland card from it. Exile that card until Aethanis Conservator leaves the battlefield.",
+            "toughness": "1",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
                 "Artifact",
@@ -7956,7 +7966,7 @@
             "name": "Aether Conducter",
             "number": "223",
             "originalName": "Aether Conducter",
-            "originalText": "Whenever Aether Conducter attacks, put a charge counter on it, then you may put a creature card with converted mana cost equal to the number of charge counters on Aether Conducter from your hand onto the battlefield tapped and attacking.",
+            "originalText": "Whenever Aether Conducter attacks, put a charge counter on it, then you may put a permanent card with converted mana cost equal to or less than the number of charge counters on Aether Conducter from your hand onto the battlefield tapped and attacking.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "2",
             "rarity": "rare",
@@ -7965,7 +7975,7 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "Whenever Aether Conducter attacks, put a charge counter on it, then you may put a creature card with converted mana cost equal to the number of charge counters on Aether Conducter from your hand onto the battlefield tapped and attacking.",
+            "text": "Whenever Aether Conducter attacks, put a charge counter on it, then you may put a permanent card with converted mana cost less than or equal to the number of charge counters on Aether Conducter from your hand onto the battlefield tapped and attacking.",
             "toughness": "3",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -8025,7 +8035,7 @@
             "originalName": "Eon Overwatch",
             "originalText": "Flying\nWhen Eon Overwatch enters the battlefield, return target nonland permanent an opponent controls to its owner's hand. That permanent's owner can't cast spells with the same name as that permanent until your next turn.",
             "originalType": "Artifact Creature \u2014 Construct",
-            "power": "4",
+            "power": "5",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [
@@ -8033,7 +8043,39 @@
             ],
             "supertypes": [],
             "text": "Flying\nWhen Eon Overwatch enters the battlefield, return target nonland permanent an opponent controls to its owner's hand. That permanent's owner can't cast spells with the same name as that permanent until your next turn.",
-            "toughness": "4",
+            "toughness": "5",
+            "type": "Artifact Creature \u2014 Construct",
+            "types": [
+                "Artifact",
+                "Creature"
+            ]
+        },
+        {
+            "artist": "josearia",
+            "borderColor": "black",
+            "colorIdentity": [],
+            "colors": [],
+            "convertedManaCost": 4.0,
+            "flavorText": "\"Perhaps this is what we deserve.\"\n\u2014Alliah, lone bandit",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{2}{C}{C}",
+            "name": "Eradicator Engine",
+            "number": "226",
+            "originalName": "Eradicator Engine",
+            "originalText": "When Eradicator Engine enters the battlefield or attacks, destroy target nonland permanent with the lowest converted mana cost.",
+            "originalType": "Artifact Creature \u2014 Construct",
+            "power": "5",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [
+                "Construct"
+            ],
+            "supertypes": [],
+            "text": "When Eradicator Engine enters the battlefield or attacks, destroy target nonland permanent with the lowest converted mana cost.",
+            "toughness": "3",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
                 "Artifact",
@@ -8053,7 +8095,7 @@
             "layout": "normal",
             "manaCost": "{0}",
             "name": "Flareshot Bow",
-            "number": "226",
+            "number": "227",
             "originalName": "Flareshot Bow",
             "originalText": "Equipped creature has vigilance and reach.\nEquip {2}",
             "originalType": "Artifact \u2014 Equipment",
@@ -8070,30 +8112,31 @@
             ]
         },
         {
-            "artist": "Gal Or",
+            "artist": "gal or",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
-            "convertedManaCost": 3.0,
+            "convertedManaCost": 4.0,
+            "flavorText": "\"It waits for orders that will never come. In a way its fate is even more tragic than ours.\"\n\u2014Sephius, Ruin Scholar",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
-            "manaCost": "{2}{C}",
-            "name": "Memory Collector",
-            "number": "227",
-            "originalName": "Memory Collector",
-            "originalText": "Menace\nWhen Memory Collector dies, look at the top three cards of target opponent's library, exile one of them face down, then put the rest on the bottom of that library in a random order. You may look at and cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell.",
+            "manaCost": "{2}{C}{C}",
+            "name": "Liminal Observer",
+            "number": "228",
+            "originalName": "Liminal Observer",
+            "originalText": "At the beginning of your end step, draw a card.",
             "originalType": "Artifact Creature \u2014 Construct",
-            "power": "3",
+            "power": "4",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [
                 "Construct"
             ],
             "supertypes": [],
-            "text": "Menace\nWhen Memory Collector dies, look at the top three cards of target opponent's library, exile one of them face down, then put the rest on the bottom of that library in a random order. You may look at and cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell.",
-            "toughness": "3",
+            "text": "At the beginning of your end step, draw a card.",
+            "toughness": "4",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
                 "Artifact",
@@ -8113,7 +8156,7 @@
             "layout": "normal",
             "manaCost": "{1}",
             "name": "Pathfinder's Tools",
-            "number": "228",
+            "number": "229",
             "originalName": "Pathfinder's Tools",
             "originalText": "{1}, {T}: Add one mana of any color.\n{3}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
             "originalType": "Artifact",
@@ -8128,7 +8171,7 @@
             ]
         },
         {
-            "artist": "jose-ochoa",
+            "artist": "elena bespalova",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8140,7 +8183,7 @@
             "layout": "normal",
             "manaCost": "{4}{C}",
             "name": "The Source",
-            "number": "229",
+            "number": "230",
             "originalName": "The Source",
             "originalText": "Indestructible\n{T}, Waste a nonwastes land you control: Add three mana in any combination of colors. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nAs long as you control seven or more wastes, you may play cards you own from outside the game.",
             "originalType": "Legendary Artifact",
@@ -8170,7 +8213,7 @@
             ]
         },
         {
-            "artist": "Darla_Illara",
+            "artist": "negish",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8182,7 +8225,7 @@
             "layout": "normal",
             "manaCost": "{3}",
             "name": "Source Conduits",
-            "number": "230",
+            "number": "231",
             "originalName": "Source Conduits",
             "originalText": "{T}: Add {C}.\n{2}, {T}, Sacrifice Source Conduits: Add three mana in any combination of colors. Draw a card.",
             "originalType": "Artifact",
@@ -8214,7 +8257,7 @@
             "layout": "normal",
             "manaCost": "{1}{C}",
             "name": "Source Sentries",
-            "number": "231",
+            "number": "232",
             "originalName": "Source Sentries",
             "originalText": "Flying\nWhen Source Sentries enters the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.",
             "originalType": "Artifact Creature \u2014 Construct",
@@ -8234,6 +8277,46 @@
             ]
         },
         {
+            "artist": "oleg kapustin",
+            "borderColor": "black",
+            "colorIdentity": [],
+            "colors": [],
+            "convertedManaCost": 3.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{2}{C}",
+            "name": "Stasis Enforcer",
+            "number": "233",
+            "originalName": "Stasis Enforcer",
+            "originalText": "Each spell a player casts costs {1} more to cast for each other spell that player has cast this turn.\nPlayers may spend mana as though it were mana of any type.",
+            "originalType": "Artifact Creature \u2014 Construct",
+            "power": "2",
+            "rarity": "uncommon",
+            "rulings": [
+                {
+                    "date": "2019-12-09",
+                    "text": "The types of mana are white, blue, black, red, green, and colorless. The second ability doesn't allow players to spend mana as though it were mana from, say, an artifact source or a snow source."
+                },
+                {
+                    "date": "2019-12-09",
+                    "text": "Spending mana as though it were mana of a different type doesn't change what types of mana were spent, only what costs you can pay with that mana. For example, spending {R} as though it were {G} doesn't trigger Ageless Behemoth's ability."
+                }
+            ],
+            "subtypes": [
+                "Construct"
+            ],
+            "supertypes": [],
+            "text": "Each spell a player casts costs {1} more to cast for each other spell that player has cast this turn.\nPlayers may spend mana as though it were mana of any type.",
+            "toughness": "4",
+            "type": "Artifact Creature \u2014 Construct",
+            "types": [
+                "Artifact",
+                "Creature"
+            ]
+        },
+        {
             "artist": "MarcSimonetti",
             "borderColor": "black",
             "colorIdentity": [],
@@ -8245,7 +8328,7 @@
             "layout": "normal",
             "manaCost": "{2}",
             "name": "Survival Gear",
-            "number": "232",
+            "number": "234",
             "originalName": "Survival Gear",
             "originalText": "When Survival Gear enters the battlefield, journey. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nEquipped creature gets +2/+1.\nEquip {2}",
             "originalType": "Artifact \u2014 Equipment",
@@ -8274,7 +8357,7 @@
             "layout": "normal",
             "manaCost": "{2}{C}{C}",
             "name": "Timeless Custodian",
-            "number": "233",
+            "number": "235",
             "originalName": "Timeless Custodian",
             "originalText": "Vigilance\nTimeless Custodian can't have counters put on it.",
             "originalType": "Artifact Creature \u2014 Construct",
@@ -8315,90 +8398,6 @@
             ]
         },
         {
-            "artist": "josearia",
-            "borderColor": "black",
-            "colorIdentity": [],
-            "colors": [],
-            "convertedManaCost": 4.0,
-            "flavorText": "\"Perhaps this is what we deserve.\"\n\u2014Alliah, lone bandit",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{2}{C}{C}",
-            "name": "Timeless Eradicator",
-            "number": "234",
-            "originalName": "Timeless Eradicator",
-            "originalText": "Vigilance\nTimeless Eradicator can't have counters put on it.\nAt the beginning of your end step, destroy target nonland permanent with the lowest converted mana cost.",
-            "originalType": "Artifact Creature \u2014 Construct",
-            "power": "5",
-            "rarity": "rare",
-            "rulings": [
-                {
-                    "date": "2019-12-09",
-                    "text": "Timeless Eradicator can't have any kind of counters placed on it, not just -1/-1 counters."
-                },
-                {
-                    "date": "2019-12-09",
-                    "text": "Damage from a source with wither or infect has no effect on Timeless Eradicator. No -1/-1 counters are placed on it, and no damage is marked on it. The damage is still dealt for purposes of effects that care about damage, such as lifelink."
-                },
-                {
-                    "date": "2019-12-09",
-                    "text": "If Timeless Eradicator would enter the battlefield with a counter on it, it simply enters the battlefield without that counter."
-                },
-                {
-                    "date": "2019-12-09",
-                    "text": "If a creature with a counter on it becomes a copy of Timeless Eradicator, those counters will remain."
-                },
-                {
-                    "date": "2019-12-09",
-                    "text": "You can't pay a cost that includes putting a counter on Timeless Eradicator. For example, you can't torture it."
-                }
-            ],
-            "subtypes": [
-                "Construct"
-            ],
-            "supertypes": [],
-            "text": "Vigilance\nTimeless Eradicator can't have counters put on it.\nAt the beginning of your end step, destroy target nonland permanent with the lowest converted mana cost.",
-            "toughness": "3",
-            "type": "Artifact Creature \u2014 Construct",
-            "types": [
-                "Artifact",
-                "Creature"
-            ]
-        },
-        {
-            "artist": "Deiv Calviz",
-            "borderColor": "black",
-            "colorIdentity": [],
-            "colors": [],
-            "convertedManaCost": 5.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{2}{C}{C}{C}",
-            "name": "Timeless Juggernaut",
-            "number": "235",
-            "originalName": "Timeless Juggernaut",
-            "originalText": "Vigilance\nTimeless Juggernaut attacks or blocks each combat if able.\nTimeless Juggernaut can't have counters put on it.",
-            "originalType": "Artifact Creature \u2014 Juggernaut",
-            "power": "6",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [
-                "Juggernaut"
-            ],
-            "supertypes": [],
-            "text": "Vigilance\nTimeless Juggernaut attacks or blocks each combat if able.\nTimeless Juggernaut can't have counters put on it.",
-            "toughness": "6",
-            "type": "Artifact Creature \u2014 Juggernaut",
-            "types": [
-                "Artifact",
-                "Creature"
-            ]
-        },
-        {
             "artist": "Kwok Shao Wen",
             "borderColor": "black",
             "colorIdentity": [],
@@ -8426,7 +8425,7 @@
             ]
         },
         {
-            "artist": "Elapse_Levi_Hopkins",
+            "artist": "Elapse Levi Hopkins",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8454,7 +8453,7 @@
             ]
         },
         {
-            "artist": "nele-diel_desert",
+            "artist": "nele diel",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8556,7 +8555,7 @@
             ]
         },
         {
-            "artist": "Herve Groussin",
+            "artist": "psdelux",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8620,7 +8619,7 @@
             ]
         },
         {
-            "artist": "Darum",
+            "artist": "Daum",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8681,7 +8680,7 @@
             ]
         },
         {
-            "artist": "vladimir-manyukhin",
+            "artist": "vladimir manyukhin",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8694,13 +8693,13 @@
             "name": "Starved Oasis",
             "number": "246",
             "originalName": "Starved Oasis",
-            "originalText": "{T}: Add {C}.\n{2}, Pay 2 life: Starved Oasis becomes a 4/3 Elemental creature until end of turn. It's still a land.",
+            "originalText": "{T}: Add {C}.\n{2}, Pay 2 life: Starved Oasis becomes a 4/2 Elemental creature until end of turn. It's still a land.",
             "originalType": "Land",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}: Add {C}.\n{2}, Pay 2 life: Starved Oasis becomes a 4/3 Elemental creature until end of turn. It's still a land.",
+            "text": "{T}: Add {C}.\n{2}, Pay 2 life: Starved Oasis becomes a 4/2 Elemental creature until end of turn. It's still a land.",
             "type": "Land",
             "types": [
                 "Land"
@@ -8733,7 +8732,7 @@
             ]
         },
         {
-            "artist": "Sebastian_Wagner",
+            "artist": "llamllam",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
@@ -8887,7 +8886,7 @@
             "watermark": "black"
         },
         {
-            "artist": "liu-kang",
+            "artist": "liu kang",
             "borderColor": "black",
             "colorIdentity": [
                 "R"
@@ -8950,8 +8949,8 @@
     "code": "VST",
     "custom": true,
     "meta": {
-        "date": "2019-12-08",
-        "setVersion": "1.98",
+        "date": "2019-12-09",
+        "setVersion": "2.03",
         "version": "4.4.1"
     },
     "name": "Vastuum",
