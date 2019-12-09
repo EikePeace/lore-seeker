@@ -335,7 +335,6 @@ def merge_card_fields(reprint_card, old_card, new_card, errata_card, reprint_set
             if field_name in SIMPLE_FIELDS
         }, indent=4, sort_keys=True)
         edited = edit(f'# {card_name} ({set_code}, new card)\n{json_card}')
-        print(f'{edited!r}') #DEBUG
         return reprint_card, card_name, json.loads('\n'.join(
             line
             for line in edited.splitlines()
@@ -427,7 +426,7 @@ def merge_set_jsons(set_json_path, ver_dir, *, old, new, errata):
             input(f'[ ?? ] created new card name mapping {rename_path} [you may edit it now, then press return to continue]')
         with rename_path.open(encoding='utf-8') as f:
             name_map_doc = f.read()
-        name_map = {}
+        name_map = {} # map new name with errata to (old name, new name without errata)
         for i, line in enumerate(name_map_doc.splitlines()):
             if not line.strip():
                 continue
@@ -449,11 +448,15 @@ def merge_set_jsons(set_json_path, ver_dir, *, old, new, errata):
                 continue # removed cards currently unused
             match = re.fullmatch(' *([^=]+?) *=> *([^=]+?) *', line)
             if match:
-                name_map[match.group(2)] = match.group(1), None
+                name_map[match.group(2)] = match.group(1), match.group(2)
                 continue
             raise ValueError(f'Failed to parse line {i + 1} in name map: {line!r}')
+        for errata_card in errata['cards']:
+            if errata_card['name'] not in name_map:
+                print(f'[ !! ] {errata_card["name"]} missing from name map, assuming unchanged')
+                name_map[errata_card['name']] = errata_card['name'], errata_card['name']
     else:
-        name_map = {card['name']: (card['name'], None) for card in errata['cards']}
+        name_map = {card['name']: (None, card['name']) for card in errata['cards']}
     set_json['cards'] = []
     for errata_card in errata['cards']:
         # if this is a reprint, find another printing
