@@ -567,9 +567,9 @@ def merge_set_jsons(set_json_path, ver_dir, *, old, new, errata):
             if old_card is None:
                 card['rulings'] = edit_rulings(card_name, [])
             elif all((k in old_card) == (k in card) and old_card.get(k) == card.get(k) for k in set(SIMPLE_FIELDS) - PRINTING_SPECIFIC_FIELDS):
-                card['rulings'] = old_card['rulings']
+                card['rulings'] = old_card.get('rulings', [])
             else:
-                card['rulings'] = edit_rulings(card_name, old_card['rulings'])
+                card['rulings'] = edit_rulings(card_name, old_card.get('rulings', []))
         else:
             if old_card is None:
                 card['rulings'] = reprint_card['rulings']

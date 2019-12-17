@@ -80,13 +80,18 @@
                 {
                     "type": "replace",
                     "rule": "107.15a",
-                    "find": "Saga",
-                    "replace": "enchantment"
+                    "find": "means",
+                    "replace": "on a Saga means"
+                },
+                {
+                    "type": "insert",
+                    "rule": "107.15b",
+                    "text": "“{rN}—[Effect]” on a Discovery means “When one or more progress counters are put onto this Discovery, if the number of progress counters on it was less than N and became at least N, [effect].”"
                 },
                 {
                     "type": "add",
                     "rule": "107.15",
-                    "text": "The discover symbol is {DISCOVER}. {DISCOVER} is a chapter symbol. The text box of a Discovery card also includes {DISCOVER}, which is a keyword ability that represents a static ability. The text printed in the text box striation to the right of {DISCOVER} is an ability granted by the static ability it represents. “{DISCOVER}—[Ability]” means “As long as the number of lore counters on this Discovery is greater than its final chapter number, it has [ability].”"
+                    "text": "The discover symbol is {DISCOVER}. {DISCOVER} is a chapter symbol. The text box of a Discovery card also includes {DISCOVER}, which is a keyword ability that represents a static ability. The text printed in the text box striation to the right of {DISCOVER} is an ability granted by the static ability it represents. “{DISCOVER}—[Ability]” means “As long as the number of progress counters on this Discovery is greater than its final chapter number, it has [ability].”"
                 },
                 {
                     "type": "replaceRule",
@@ -97,13 +102,13 @@
                     "type": "replace",
                     "rule": "505.4",
                     "find": "Saga enchantments",
-                    "replace": "Discovery enchantments with no more lore counters on them than their final chapter number and/or Saga enchantments"
+                    "replace": "Discovery enchantments with no more progress counters on them than their final chapter number and/or Saga enchantments"
                 },
                 {
                     "type": "replace",
                     "rule": "505.4",
                     "find": "each Saga they control",
-                    "replace": "each of those permanents"
+                    "replace": "each of those permanents that's a Saga and a progress counter on each of those permanents that's a Discovery"
                 },
                 {
                     "type": "replace",
@@ -114,8 +119,8 @@
                 {
                     "type": "replace",
                     "rule": "703.4e",
-                    "find": "each Saga enchantment they control",
-                    "replace": "each Discovery enchantment they control with no more lore counters on it than its final chapter number and each Saga enchantment they control"
+                    "find": "a lore counter on each Saga enchantment they control",
+                    "replace": "a progress counter on each Discovery enchantment they control with no more lore counters on it than its final chapter number and a lore counter on each Saga enchantment they control"
                 },
                 {
                     "type": "replace",
@@ -156,37 +161,41 @@
                 {
                     "type": "replace",
                     "rule": "714.2b",
-                    "find": "Saga",
-                    "replace": "enchantment"
+                    "find": "means",
+                    "replace": "on a Saga means"
+                },
+                {
+                    "type": "insert",
+                    "rule": "714.2c",
+                    "text": "“{rN}—[Effect]” on a Discovery means “When one or more progress counters are put onto this Discovery, if the number of progress counters on it was less than N and became at least N, [effect].”"
                 },
                 {
                     "type": "replace",
-                    "rule": "714.2d",
+                    "rule": "714.2e",
                     "find": "Saga",
                     "replace": "Discovery or Saga"
                 },
                 {
                     "type": "add",
                     "rule": "714.2",
-                    "text": "A Discovery also has an additional chapter ability that uses the chapter symbol {DISCOVER}. “{DISCOVER}—[Abiltiy]” means “As long as the number of lore counters on this Discovery is greater than its final chapter number, it has [ability].” This chapter ability doesn't affect the Discovery's final chapter number."
+                    "text": "A Discovery also has an additional chapter ability that uses the chapter symbol {DISCOVER}. “{DISCOVER}—[Abiltiy]” means “As long as the number of progress counters on this Discovery is greater than its final chapter number, it has [ability].” This chapter ability doesn't affect the Discovery's final chapter number."
                 },
                 {
                     "type": "replace",
                     "rule": "714.3",
-                    "find": "Sagas",
-                    "replace": "Discoveries and Sagas"
+                    "find": "\\.",
+                    "replace": ", while Discoveries use progress counters."
                 },
                 {
-                    "type": "replace",
-                    "rule": "714.3a",
-                    "find": "Saga",
-                    "replace": "Discovery or Saga"
-                },
-                {
-                    "type": "replace",
+                    "type": "insert",
                     "rule": "714.3b",
-                    "find": "each Saga they control",
-                    "replace": "each Discovery they control with no more lore counters on it than its final chapter number and each Saga they control"
+                    "replace": "As a Discovery enters the battlefield, its controller puts a progress counter on it."
+                },
+                {
+                    "type": "replace",
+                    "rule": "714.3c",
+                    "find": "a lore counter on each Saga they control",
+                    "replace": "a progress counter on each Discovery they control with no more lore counters on it than its final chapter number and a lore counter on each Saga they control"
                 }
             ]
         },
