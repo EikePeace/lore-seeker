@@ -189,7 +189,7 @@
                 {
                     "type": "insert",
                     "rule": "714.3b",
-                    "replace": "As a Discovery enters the battlefield, its controller puts a progress counter on it."
+                    "text": "As a Discovery enters the battlefield, its controller puts a progress counter on it."
                 },
                 {
                     "type": "replace",
