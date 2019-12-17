@@ -113,6 +113,96 @@ def subcommand(f, name=None):
     SUBCOMMANDS[name] = f
     return f
 
+def build_name_map(ver_dir, old, new):
+    if 'cards' in old:
+        rename_path = ver_dir / 'name-changes.txt'
+        if rename_path.exists():
+            input(f'[ ?? ] using existing card name mapping {rename_path} [you may edit it now, then press return to continue]')
+        else:
+            with rename_path.open('w', encoding='utf-8') as f:
+                print('# name mapping between old version with errata and new version with errata', file=f)
+                #TODO print FROM line
+                for new_card in new['cards']:
+                    if not any(old_card['name'] == new_card['name'] for old_card in old['cards']):
+                        print(f'=> {new_card["name"]}', file=f)
+                for old_card in old['cards']:
+                    if not any(old_card['name'] == new_card['name'] for new_card in new['cards']):
+                        print(f'{old_card["name"]} =>', file=f)
+                for new_card in new['cards']:
+                    if any(old_card['name'] == new_card['name'] for old_card in old['cards']):
+                        print(f'{new_card["name"]} => {new_card["name"]}', file=f)
+            input(f'[ ?? ] created new card name mapping {rename_path} [you may edit it now, then press return to continue]')
+        with rename_path.open(encoding='utf-8') as f:
+            name_map_doc = f.read()
+        name_map = {} # map new name with errata to (old name, new name without errata)
+        for i, line in enumerate(name_map_doc.splitlines()):
+            if not line.strip():
+                continue
+            if line.strip().startswith('#'):
+                continue
+            match = re.fullmatch(' *FROM +([^ ]+) *', line)
+            if match:
+                continue #TODO check to make sure the previous version matches, if not, also check that version's name-changes.txt
+            match = re.fullmatch(' *([^=]+?) *=> *([^=]+?) *=> *([^=]+?) *', line)
+            if match:
+                name_map[match.group(3)] = match.group(1), match.group(2)
+                continue
+            match = re.fullmatch(' *=> *([^=]+?) *', line)
+            if match:
+                name_map[match.group(1)] = None, None
+                continue
+            match = re.fullmatch(' *([^=]+?) *=> *', line)
+            if match:
+                continue # removed cards currently unused
+            match = re.fullmatch(' *([^=]+?) *=> *([^=]+?) *', line)
+            if match:
+                name_map[match.group(2)] = match.group(1), match.group(2)
+                continue
+            raise ValueError(f'Failed to parse line {i + 1} in name map: {line!r}')
+        for new_card in new['cards']:
+            if new_card['name'] not in name_map:
+                print(f'[ !! ] {new_card["name"]} missing from name map, assuming unchanged')
+                name_map[new_card['name']] = new_card['name'], new_card['name']
+    else:
+        name_map = {card['name']: (None, card['name']) for card in new['cards']}
+    return name_map
+
+def card_diff(set_code, card_name, old_card, new_card, errata_card=None):
+    if errata_card is None:
+        def card_diff_field(field_name):
+            if field_name not in old_card and field_name in new_card:
+                return 'added: {}: {}'.format(json.dumps(field_name), '    \n'.join(line for line in json.dumps(new_card[field_name]).split('\n')))
+            elif field_name in old_card and field_name not in new_card:
+                return 'removed: {}: {}'.format(json.dumps(field_name), '    \n'.join(line for line in json.dumps(old_card[field_name]).split('\n')))
+            elif old_card[field_name] != new_card[field_name]:
+                return 'old: {0}: {1}\n    new: {0}: {1}'.format(
+                    json.dumps(field_name),
+                    '    \n'.join(line for line in json.dumps(old_card[field_name]).split('\n')),
+                    '    \n'.join(line for line in json.dumps(new_card[field_name]).split('\n'))
+                )
+            else:
+                return None
+    else:
+        def card_diff_field(field_name):
+            if field_name in new_card and field_name in errata_card and (field_name not in old_card or old_card[field_name] != new_card[field_name] == errata_card[field_name]):
+                return '# old: {}\n    # new: {}\n    {}: {}'.format(
+                    '    \n'.join(line for line in json.dumps(old_card[field_name]).split('\n')) if field_name in old_card else 'missing',
+                    '    \n'.join(line for line in json.dumps(new_card[field_name]).split('\n')),
+                    json.dumps(field_name),
+                    '    \n'.join(line for line in json.dumps(errata_card[field_name]).split('\n'))
+                )
+            elif field_name in old_card and field_name not in new_card and field_name not in errata_card:
+                return '# {} removed, was {}'.format(json.dumps(field_name), '    \n'.join(line for line in json.dumps(old_card[field_name]).split('\n')))
+            else:
+                return '{}: {}'.format(json.dumps(field_name), '    \n'.join(line for line in json.dumps(errata_card[field_name]).split('\n')))
+
+    return f'# {card_name} ({set_code})\n{{\n    ' + ',\n    '.join(
+        card_diff_field(field_name)
+        for field_name in SIMPLE_FIELDS
+        if field_name in old_card or field_name in (new_card if errata_card is None else errata_card)
+        and card_diff_field(field_name) is not None
+    ) + '\n}'
+
 def choose(question, choices):
     answer = input(f'[ ?? ] {question} [{"/".join(choice[0] for choice in choices)}] ')
     while True:
@@ -147,6 +237,45 @@ def debug(*args):
     if was_running:
         subprocess.run(['sudo', 'systemctl', 'start', 'lore-seeker-dev'], check=True)
     return exit_code
+
+@subcommand
+def diff(set_code, old_version, new_version):
+    set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
+    if not set_dir.exists():
+        raise FileNotFoundError(f'No such set directory: {set_dir}')
+    old_ver_dir = set_dir / f'v{old_version}'
+    if (old_ver_dir / 'errata.mse-set').exists():
+        with zipfile.ZipFile(old_ver_dir / 'errata.mse-set') as set_file:
+            old_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=old_version)
+    else:
+        with zipfile.ZipFile(old_ver_dir / 'set.mse-set') as set_file:
+            old_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=old_version)
+    new_ver_dir = set_dir / f'v{new_version}'
+    if (new_ver_dir / 'errata.mse-set').exists():
+        with zipfile.ZipFile(new_ver_dir / 'errata.mse-set') as set_file:
+            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=new_version)
+    else:
+        with zipfile.ZipFile(new_ver_dir / 'set.mse-set') as set_file:
+            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=new_version)
+    print(diff_set_jsons(new_ver_dir, old_set_json, new_set_json))
+
+def diff_set_jsons(new_ver_dir, old, new):
+    name_map = build_name_map(new_ver_dir, old, new)
+    set_json['cards'] = []
+    for old_card in old.get('cards', []):
+        if not any(old_card['name'] == name_map[new_card['name']][0] for new_card in new['cards']):
+            yield f'# {old_card["name"]}: card removed'
+    for new_card in new['cards']:
+        for old_card in old.get('cards', []):
+            if old_card['name'] == name_map[new_card['name']][0]:
+                break
+        else:
+            yield f'# {new_card["name"]}: card added'
+            continue
+        reprint_card, card_name, card = merge_card_fields(reprint_card, old_card, new_card, errata_card, None if reprint_card is None else reprint_set['code'], set_json['code'])
+        card['name'] = card_name
+        set_json['cards'].append(card)
+    return set_json
 
 def edit(original):
     with tempfile.NamedTemporaryFile('w', delete=False) as f:
@@ -369,26 +498,9 @@ def merge_card_fields(reprint_card, old_card, new_card, errata_card, reprint_set
                 if field_name in errata_card
             }
         else:
-            def edit_render_field(field_name):
-                if field_name in new_card and field_name in errata_card and (field_name not in old_card or old_card[field_name] != new_card[field_name] == errata_card[field_name]):
-                    return '# old: {}\n    # new: {}\n    {}: {}'.format(
-                        '    \n'.join(line for line in json.dumps(old_card[field_name]).split('\n')) if field_name in old_card else 'missing',
-                        '    \n'.join(line for line in json.dumps(new_card[field_name]).split('\n')),
-                        json.dumps(field_name),
-                        '    \n'.join(line for line in json.dumps(errata_card[field_name]).split('\n'))
-                    )
-                elif field_name in old_card and field_name not in new_card and field_name not in errata_card:
-                    return '# {} removed, was {}'.format(json.dumps(field_name), '    \n'.join(line for line in json.dumps(old_card[field_name]).split('\n')))
-                else:
-                    return '{}: {}'.format(json.dumps(field_name), '    \n'.join(line for line in json.dumps(errata_card[field_name]).split('\n')))
-
             return reprint_card, card_name, json.loads('\n'.join(
                 line
-                for line in edit(f'# {card_name} ({set_code})\n{{\n    ' + ',\n    '.join(
-                    edit_render_field(field_name)
-                    for field_name in SIMPLE_FIELDS
-                    if field_name in old_card or field_name in errata_card
-                ) + '\n}').splitlines()
+                for line in edit(card_diff(set_code, card_name, old_card, new_card, errata_card)).splitlines()
                 if not line.strip().startswith('#')
             ))
     else:
@@ -406,57 +518,7 @@ def merge_set_jsons(set_json_path, ver_dir, *, old, new, errata):
         else:
             set_json['boosterV3'] = input_default('boosterV3', ['common'] * 10 + ['uncommon'] * 3 + [['rare', 'mythic rare']], convert=json.loads)
     # build rename map
-    if 'cards' in old:
-        rename_path = ver_dir / 'name-changes.txt'
-        if rename_path.exists():
-            input(f'[ ?? ] using existing card name mapping {rename_path} [you may edit it now, then press return to continue]')
-        else:
-            with rename_path.open('w', encoding='utf-8') as f:
-                print('# name mapping between old version with errata and new version with errata', file=f)
-                #TODO print FROM line
-                for errata_card in errata['cards']:
-                    if not any(old_card['name'] == errata_card['name'] for old_card in old['cards']):
-                        print(f'=> {errata_card["name"]}', file=f)
-                for old_card in old['cards']:
-                    if not any(old_card['name'] == errata_card['name'] for errata_card in errata['cards']):
-                        print(f'{old_card["name"]} =>', file=f)
-                for errata_card in errata['cards']:
-                    if any(old_card['name'] == errata_card['name'] for old_card in old['cards']):
-                        print(f'{errata_card["name"]} => {errata_card["name"]}', file=f)
-            input(f'[ ?? ] created new card name mapping {rename_path} [you may edit it now, then press return to continue]')
-        with rename_path.open(encoding='utf-8') as f:
-            name_map_doc = f.read()
-        name_map = {} # map new name with errata to (old name, new name without errata)
-        for i, line in enumerate(name_map_doc.splitlines()):
-            if not line.strip():
-                continue
-            if line.strip().startswith('#'):
-                continue
-            match = re.fullmatch(' *FROM +([^ ]+) *', line)
-            if match:
-                continue #TODO check to make sure the previous version matches, if not, also check that version's name-changes.txt
-            match = re.fullmatch(' *([^=]+?) *=> *([^=]+?) *=> *([^=]+?) *', line)
-            if match:
-                name_map[match.group(3)] = match.group(1), match.group(2)
-                continue
-            match = re.fullmatch(' *=> *([^=]+?) *', line)
-            if match:
-                name_map[match.group(1)] = None, None
-                continue
-            match = re.fullmatch(' *([^=]+?) *=> *', line)
-            if match:
-                continue # removed cards currently unused
-            match = re.fullmatch(' *([^=]+?) *=> *([^=]+?) *', line)
-            if match:
-                name_map[match.group(2)] = match.group(1), match.group(2)
-                continue
-            raise ValueError(f'Failed to parse line {i + 1} in name map: {line!r}')
-        for errata_card in errata['cards']:
-            if errata_card['name'] not in name_map:
-                print(f'[ !! ] {errata_card["name"]} missing from name map, assuming unchanged')
-                name_map[errata_card['name']] = errata_card['name'], errata_card['name']
-    else:
-        name_map = {card['name']: (None, card['name']) for card in errata['cards']}
+    name_map = build_name_map(ver_dir, old, errata)
     set_json['cards'] = []
     for errata_card in errata['cards']:
         # if this is a reprint, find another printing
