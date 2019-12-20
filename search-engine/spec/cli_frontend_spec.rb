@@ -80,7 +80,7 @@ describe "CLI Frontend" do
         4/4
 
         Destructor Dragon {4}{g}{g}
-        [frf]
+        [frf mb1]
         Creature - Dragon
         Flying
         When Destructor Dragon dies, destroy target noncreature permanent.
@@ -130,7 +130,7 @@ describe "CLI Frontend" do
       verbose: true,
       output: <<-EOF,
         Steam Vents
-        [gpt rtr exp prm grn]
+        [gpt rtr exp prm grn pgrn]
         Land - Island Mountain
         ({T}: Add {U} or {R}.)
         As Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.
@@ -145,7 +145,7 @@ describe "CLI Frontend" do
       verbose: true,
       output: <<-EOF,
         Bloodbraid Elf {2}{r}{g}
-        [-arb +f10 +pc2 -ema -c16 +pca +prm]
+        [-arb +f10 +pc2 -ema -c16 +pca +prm +mb1]
         Creature - Elf Berserker
         Haste
         Cascade
