@@ -8126,7 +8126,7 @@
             "side": "a",
             "subtypes": [],
             "supertypes": [],
-            "text": "Luminescent Lagoon enters the battlefield tapped.\n{T}: Add {U}.\n{3}{U}, {T}, Exile five instant cards or five sorcery cards from your graveyard: Transform Luminescent Lagoon, then untap it. Activate this ability only during your turn.",
+            "text": "Luminescent Lagoon enters the battlefield tapped.\n{T}: Add {U}.\n{3}{U}, {T}, Exile five instant and/or sorcery cards from your graveyard: Transform Luminescent Lagoon, then untap it. Activate this ability only during your turn.",
             "type": "Land",
             "types": [
                 "Land"
