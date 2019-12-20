@@ -60,7 +60,7 @@ class CardController < ApplicationController
     # End of temporary bot code
 
     @title = @search
-    query = Query.new(@search, params[:random_seed], current_user)
+    query = Query.new(@search, params[:random_seed], current_user, dev: dev?)
     @seed = query.seed
     results = $CardDatabase.search(query)
     @warnings = results.warnings
@@ -98,7 +98,7 @@ class CardController < ApplicationController
     end
 
     @title = @search
-    query = Query.new(@search, params[:random_seed]) # API endpoint, don't check login
+    query = Query.new(@search, params[:random_seed], dev: dev?) # API endpoint, don't check login
     results = $CardDatabase.search(query)
     @cards = results.card_groups.map do |printings|
       choose_best_printing(printings)

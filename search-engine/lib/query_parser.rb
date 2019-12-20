@@ -11,7 +11,7 @@ Dir["#{__dir__}/condition/condition_*.rb"].sort.each do |path| require_relative 
 require_relative "query_tokenizer"
 
 class QueryParser
-  def parse(query_string)
+  def parse(query_string, dev: false)
     str = query_string.strip
     if str =~ /\A(\+\+)?!(.*)\z/
       if $1 == "++"
@@ -38,7 +38,7 @@ class QueryParser
     else
       @tokens, @warnings = QueryTokenizer.new.tokenize(str)
       @metadata = {}
-      query = parse_query(false)
+      query = parse_query(!dev)
       [query, @metadata, @warnings]
     end
   end
@@ -55,10 +55,10 @@ private
     end
   end
 
-  def parse_query(inner)
+  def parse_query(time_fallback)
     old_time, @time = @time, nil
     cond = parse_cond_list
-    @time = Date.today unless @time || inner
+    @time = Date.today unless @time || !time_fallback
     if @time
       printed_early = ConditionPrint.new("<=", @time)
       cond = conds_to_query([cond, printed_early])
@@ -126,7 +126,7 @@ private
     case @tokens[0][0]
     when :open
       @tokens.shift
-      subquery = parse_query(true)
+      subquery = parse_query(false)
       @tokens.shift if @tokens[0] == [:close] # Ignore mismatched
       subquery
     when :close
