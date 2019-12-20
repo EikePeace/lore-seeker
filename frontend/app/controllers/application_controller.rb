@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(uid: session[:user_id])
   end
 
+  def dev?
+    request.host_with_port == "dev.lore-seeker.cards"
+  end
+
   def signed_in?
     !!current_user
   end
