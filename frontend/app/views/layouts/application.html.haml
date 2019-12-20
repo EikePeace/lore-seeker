@@ -3,6 +3,8 @@
   = render "layouts/head"
   %body{"data-turbolinks" => content_for?(:disable_turbolinks) ? "false" : nil}
     .container{class: @empty_page ? "empty_page" : ""}
+      .alert.alert-warning
+        Hostname: #{request.host_with_port}
       .row.logo_row
         .col-12.col-md-6
           %h1
