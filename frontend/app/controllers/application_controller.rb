@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
     Color.color_identity_name(color_identity)
   end
 
-  helper_method :current_user, :signed_in?, :exh_card, :color_identity_name
+  helper_method :current_user, :dev?, :signed_in?, :exh_card, :color_identity_name
 
   def current_user=(user)
     @current_user = user
