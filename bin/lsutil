@@ -675,27 +675,6 @@ def upload_images(set_code=None, version=None):
             raise NotImplementedError() #TODO
         else:
             set_img_dirs.append(set_dir / 'basics')
-            # split DFCs
-            for card_info in set_info['cards']:
-                card_name = card_info['name']
-                if card_info.get('layout', 'normal') in {'double-faced', 'transform'} and card_info['names'][0] == card_name:
-                    img_path = img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))
-                    print(f'[....] Opening DFC image for {card_name}...', end='', flush=True)
-                    with PIL.Image.open(img_path) as dfc_image:
-                        if dfc_image.size[0] < dfc_image.size[1]:
-                            print(f' This is only the front face\r[ ** ]')
-                            continue
-                        if dfc_image.size == (752, 523):
-                            front_image = dfc_image.crop((0, 0, 375, 523))
-                            back_image = dfc_image.crop((377, 0, 752, 523))
-                        else:
-                            print('\r[!!!!]')
-                            raise NotImplementedError(f"Don't know how to split DFC with dimensions {dfc_image.size[0]}×{dfc_image.size[1]}")
-                    front_image.save(img_path.parent / f'{card_info["names"][0]}.png')
-                    back_image.save(img_path.parent / f'{card_info["names"][1]}.png')
-                    if img_path != img_path.parent / f'{card_info["names"][0]}.png':
-                        img_path.unlink()
-                    print(f' split successful\r[ ** ]')
             # upload images
             for card_info in set_info['cards']:
                 card_name = card_info['name']
