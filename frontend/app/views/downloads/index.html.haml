@@ -1,10 +1,17 @@
 %h1 Downloads
-%ul
-  %li
-    %a{href: "/downloads/bcb.zip"}
-      Big Custom Box
-    — All the files needed to play custom formats like
-    = link_to "ECH", controller: "format", action: "show", id: "elder-cockatrice-highlander"
-    or
-    = link_to "Custom Standard", controller: "format", action: "show", id: "custom-standard"
-    using <a href="https://cockatrice.github.io/">Cockatrice</a>.
+%h2 Big Custom Box
+%p
+  %a{href: "/downloads/trice.zip"}
+    Full Install
+  &bullet;
+  %a{href: "/downloads/bcb.zip"}
+    Loose Files
+  -#TODO show version info for Cockatrice and the BCB
+%p
+  The Big Custom Box includes all the files needed to play custom formats like
+  = link_to "ECH", controller: "format", action: "show", id: "elder-cockatrice-highlander"
+  or
+  = link_to "Custom Standard", controller: "format", action: "show", id: "custom-standard"
+  using <a href="https://cockatrice.github.io/">Cockatrice</a>.
+%p The Full Install comes with a portable version of Cockatrice for Windows and is recommended for new players. Just download, unzip, and run cockatrice.exe.
+%p The Loose Files can be used if you're on Mac or Linux or if you prefer to add the files to your existing copy of Cockatrice. Please read the included install instructions.
