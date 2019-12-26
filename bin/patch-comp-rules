@@ -183,15 +183,20 @@ class CompRules:
                     patch_rules.add('207.2c')
                     # patch frontend
                     card_rb = ''
-                    found_ability_word_list = False
+                    in_ability_word_list = False
                     with open('search-engine/lib/card.rb') as card_rb_f:
                         for line in card_rb_f:
-                            if line.startswith('  ABILITY_WORD_LIST = ['):
-                                if found_ability_word_list:
-                                    raise RuntimeError('Found two ability word lists in search-engine/lib/card.rb')
+                            if in_ability_word_list:
+                                if line == '  ]\n':
+                                    for ability_word in sorted(ability_words):
+                                        card_rb += f'    {ability_word.capitalize()!r},\n'
+                                    card_rb += line
+                                    in_ability_word_list = False
                                 else:
-                                    found_ability_word_list = True
-                                card_rb += '  ABILITY_WORD_LIST = {!r}\n'.format(sorted(ability_word.capitalize() for ability_word in ability_words))
+                                    pass # don't copy official ability words, they're handled when ABILITY_WORD_LIST is closed
+                            elif line == '  ABILITY_WORD_LIST = [\n':
+                                in_ability_word_list = True
+                                card_rb += '  ABILITY_WORD_LIST = [\n'
                             else:
                                 card_rb += line
                     with open('search-engine/lib/card.rb', 'w') as card_rb_f:
