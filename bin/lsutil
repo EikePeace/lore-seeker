@@ -15,6 +15,7 @@ import platform
 import re
 import subprocess
 import tempfile
+import xml.etree.ElementTree
 import zipfile
 
 import PIL.Image # PyPI: Pillow
@@ -607,6 +608,18 @@ def reprint_eq(field_name, old_field, new_field):
         return True # only reminder text changed
     return False
 
+def upload_card_image(set_code, card_id, image_path, is_token=False):
+    for i in range(5):
+        try:
+            subprocess.run(['scp', str(image_path), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / ("tokens" if is_token else "cards") / set_code.lower() / (card_id + ".png")}'], check=True)
+        except subprocess.CalledProcessError:
+            if i < 4:
+                continue
+            else:
+                raise
+        else:
+            break
+
 #TODO add options for --errata, --no-errata, --delete (delete all existing images for sets that will be uploaded before starting)
 @subcommand('img')
 def upload_images(set_code=None, version=None):
@@ -665,29 +678,38 @@ def upload_images(set_code=None, version=None):
         set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
         print(f'[ ** ] uploading full renders for {set_name} version {version}')
         card_count = collections.defaultdict(lambda: 0)
-        # make sure target dir exists and is empty
+        # make sure target dirs exist and are empty
         subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(BASE_PATH / 'repo' / 'frontend' / 'public' / 'cards' / set_code.lower())])
+        subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(BASE_PATH / 'repo' / 'frontend' / 'public' / 'tokens' / set_code.lower())])
         subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(BASE_PATH / 'repo' / 'frontend' / 'public' / 'cards' / set_code.lower())], check=True)
+        subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(BASE_PATH / 'repo' / 'frontend' / 'public' / 'tokens' / set_code.lower())], check=True)
         # determine source dir
         set_img_dirs = img_dirs_map[set_code]
         if len(set_img_dirs) == 1 and set_img_dirs[0].name.startswith('trice'):
-            raise NotImplementedError() #TODO
+            numbers = {}
+            with (set_dir / f'v{version}' / 'noimg-errata.xml').open() as noimg_xml:
+                et = xml.etree.ElementTree.parse(noimg_xml)
+                for card in et.findall('cards/card'):
+                    pic_url = more_itertools.one(card.findall('set')).get('picURL')
+                    match = re.fullmatch('https://lore-seeker\\.cards/(cards|tokens)/[0-9a-z]+/([0-9a-z]+)\\.png', pic_url)
+                    if not match:
+                        raise ValueError(f'Invalid picURL: {pic_url!r}')
+                    cards_tokens, card_number = match.groups()
+                    is_token = cards_tokens == 'tokens'
+                    numbers[card.findtext('name')] = (is_token, card_number)
+            with (set_img_dirs[0] / f'{set_code}.xml').open() as img_xml:
+                et = xml.etree.ElementTree.parse(img_xml)
+                for card in et.findall('cards/card'):
+                    pic_path = set_img_dirs[0] / f'{set_code}-files' / more_itertools.one(card.findall('set')).get('picURL')[1:]
+                    is_token, card_number = numbers[card.findtext('name')]
+                    upload_card_image(set_code, card_number, pic_path, is_token)
         else:
             set_img_dirs.append(set_dir / 'basics')
             # upload images
             for card_info in set_info['cards']:
                 card_name = card_info['name']
                 card_id = card_info['number']
-                for i in range(5):
-                    try:
-                        subprocess.run(['scp', str(img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / "cards" / set_code.lower() / (card_id + ".png")}'], check=True)
-                    except subprocess.CalledProcessError:
-                        if i < 4:
-                            continue
-                        else:
-                            raise
-                    else:
-                        break
+                upload_card_image(set_code, card_id, img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName')))
                 card_count[card_name] += 1
 
 def yesno(question):
