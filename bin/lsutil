@@ -29,7 +29,6 @@ CACHE = {'set_files': {}}
 STAGE = gitdir.host.github.GitHub().repo('fenhl/lore-seeker').stage_path
 CACHING_FLAG = STAGE / 'frontend' / 'tmp' / 'caching-dev.txt'
 CUSTOM_SETS = STAGE / 'data' / 'sets'
-REMOTE_STAGE = pathlib.Path('/opt/git/github.com/fenhl/lore-seeker/stage')
 SUBCOMMANDS = {}
 
 PRINTING_SPECIFIC_FIELDS = {
@@ -649,14 +648,14 @@ def upload_images(set_code=None, version=None):
             set_file_path = set_dir / f'v{version}' / 'set.mse-set'
         with zipfile.ZipFile(set_file_path) as set_file:
             # make sure target dir exists and is empty
-            subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(REMOTE_STAGE / 'frontend' / 'public' / 'art' / set_code.lower())])
-            subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(REMOTE_STAGE / 'frontend' / 'public' / 'art' / set_code.lower())], check=True)
+            subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(BASE_PATH / 'repo' / 'frontend' / 'public' / 'art' / set_code.lower())])
+            subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(BASE_PATH / 'repo' / 'frontend' / 'public' / 'art' / set_code.lower())], check=True)
             # extract and upload the images
             with tempfile.TemporaryDirectory() as tmp_dir:
                 tmp_dir = pathlib.Path(tmp_dir)
                 mse_to_json.extract_images(set_file, tmp_dir, set_code=set_code, version=version)
                 for img_file in tmp_dir.iterdir():
-                    subprocess.run(['scp', str(img_file), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{REMOTE_STAGE / "frontend" / "public" / "art" / set_code.lower() / img_file.name}'], check=True)
+                    subprocess.run(['scp', str(img_file), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / "art" / set_code.lower() / img_file.name}'], check=True)
     # upload full renders
     for set_code, version in sorted(versions.items()):
         if version is None:
@@ -667,8 +666,8 @@ def upload_images(set_code=None, version=None):
         print(f'[ ** ] uploading full renders for {set_name} version {version}')
         card_count = collections.defaultdict(lambda: 0)
         # make sure target dir exists and is empty
-        subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(REMOTE_STAGE / 'frontend' / 'public' / 'cards' / set_code.lower())])
-        subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(REMOTE_STAGE / 'frontend' / 'public' / 'cards' / set_code.lower())], check=True)
+        subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'rm', '-rf', str(BASE_PATH / 'repo' / 'frontend' / 'public' / 'cards' / set_code.lower())])
+        subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), 'mkdir', '-p', str(BASE_PATH / 'repo' / 'frontend' / 'public' / 'cards' / set_code.lower())], check=True)
         # determine source dir
         set_img_dirs = img_dirs_map[set_code]
         if len(set_img_dirs) == 1 and set_img_dirs[0].name.startswith('trice'):
@@ -681,7 +680,7 @@ def upload_images(set_code=None, version=None):
                 card_id = card_info['number']
                 for i in range(5):
                     try:
-                        subprocess.run(['scp', str(img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{REMOTE_STAGE / "frontend" / "public" / "cards" / set_code.lower() / (card_id + ".png")}'], check=True)
+                        subprocess.run(['scp', str(img_filename(card_name, set_img_dirs, count=card_count[card_name], original_name=card_info.get('originalName'))), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / "cards" / set_code.lower() / (card_id + ".png")}'], check=True)
                     except subprocess.CalledProcessError:
                         if i < 4:
                             continue
