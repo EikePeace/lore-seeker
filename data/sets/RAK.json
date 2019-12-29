@@ -872,6 +872,37 @@
             ]
         },
         {
+            "artist": "Gary Vanaka",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 3.0,
+            "flavorText": "\"Our hearts burn, stoked by pride!/Lay down your arms and submit/ We rise above you in every way!\"",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{W}{W}",
+            "name": "RAK:War Dance",
+            "number": "26",
+            "originalName": "War Dance",
+            "originalText": "Choose one \u2014\n\u2022 Creatures you control get +2/+1 until end of turn.\n\u2022 Exile target artifact or enchantment.",
+            "originalType": "Instant",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Choose one \u2014\n\u2022 Creatures you control get +2/+1 until end of turn.\n\u2022 Exile target artifact or enchantment.",
+            "type": "Instant",
+            "types": [
+                "Instant"
+            ]
+        },
+        {
             "artist": "tiphaine jego",
             "borderColor": "black",
             "colorIdentity": [
@@ -887,7 +918,7 @@
             "layout": "normal",
             "manaCost": "{W}",
             "name": "Reko's Protege",
-            "number": "26",
+            "number": "27",
             "originalName": "Reko's Protege",
             "originalText": "Prestige 1 (When this creature attacks with two or more other creatures, if it isn't prestigious, put a +1/+1 counter on it and it becomes prestigious.)",
             "originalType": "Creature \u2014 Human Warrior",
@@ -923,7 +954,7 @@
             "layout": "normal",
             "manaCost": "{5}{W}",
             "name": "Revered Sovereign",
-            "number": "27",
+            "number": "28",
             "originalName": "Revered Sovereign",
             "originalText": "Flying\nWhen Revered Sovereign enters the battlefield, you gain 2 life for each Aura you control.",
             "originalType": "Creature \u2014 Whale",
@@ -957,7 +988,7 @@
             "layout": "normal",
             "manaCost": "{W}",
             "name": "Roving Sanctuary",
-            "number": "28",
+            "number": "29",
             "originalName": "Roving Sanctuary",
             "originalText": "Voyage ({W}{U}{B}{R}{G}: If you don't control Paradise, create Paradise, a legendary land token with hexproof and \"{T}: Add one mana of any color.\")\n{5}, {T}: You gain 5 life. Activate this ability only if you control Paradise.",
             "originalType": "Creature \u2014 Turtle",
@@ -992,7 +1023,7 @@
             "layout": "normal",
             "manaCost": "{4}{W}",
             "name": "Settlement Turtle",
-            "number": "29",
+            "number": "30",
             "originalName": "Settlement Turtle",
             "originalType": "Creature \u2014 Turtle",
             "power": "2",
@@ -1025,7 +1056,7 @@
             "layout": "normal",
             "manaCost": "{4}{W}",
             "name": "Sunlit Skywhale",
-            "number": "30",
+            "number": "31",
             "originalName": "Sunlit Skywhale",
             "originalText": "Flying\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
             "originalType": "Creature \u2014 Whale",
@@ -1059,7 +1090,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Suntouched",
-            "number": "31",
+            "number": "32",
             "originalName": "Suntouched",
             "originalText": "Enchant land\nWhen Suntouched enters the battlefield, you may search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.\nEnchanted land has \"{W}, {T}: Tap target creature.\"",
             "originalType": "Enchantment \u2014 Aura",
@@ -1092,7 +1123,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Take Vengeance",
-            "number": "32",
+            "number": "33",
             "originalName": "Take Vengeance",
             "originalText": "Destroy target tapped creature.",
             "originalType": "Sorcery",
@@ -1122,7 +1153,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Teacher of Taboos",
-            "number": "33",
+            "number": "34",
             "originalName": "Teacher of Taboos",
             "originalText": "Prestige 1 (When this creature attacks with two or more other creatures, if it isn't prestigious, put a +1/+1 counter on it and it becomes prestigious.)\nWhen Teacher of Taboos becomes prestigious, tap target creature an opponent controls.",
             "originalType": "Creature \u2014 Human Cleric Warrior",
@@ -1158,7 +1189,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Tua Rahi Griffin",
-            "number": "34",
+            "number": "35",
             "originalName": "Tua Rahi Griffin",
             "originalText": "Flying\nVoyage ({W}{U}{B}{R}{G}: If you don't control Paradise, create Paradise, a legendary land token with hexproof and \"{T}: Add one mana of any color.\")\nAs long as you control Paradise, Tua Rahi Griffin gets +3/+0 and has vigilance.",
             "originalType": "Creature \u2014 Griffin",
@@ -1192,7 +1223,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Wander the Unknown",
-            "number": "35",
+            "number": "36",
             "originalName": "Wander the Unknown",
             "originalText": "Exile target creature. Its controller may search their library for a basic land card, put it onto the battlefield tapped, then shuffle their library.",
             "originalType": "Instant",
@@ -1210,37 +1241,6 @@
             "subtypes": [],
             "supertypes": [],
             "text": "Exile target creature. Its controller may search their library for a basic land card, put it onto the battlefield tapped, then shuffle their library.",
-            "type": "Instant",
-            "types": [
-                "Instant"
-            ]
-        },
-        {
-            "artist": "Gary Vanaka",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 3.0,
-            "flavorText": "\"Our hearts burn, stoked by pride!/Lay down your arms and submit/ We rise above you in every way!\"",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{W}{W}",
-            "name": "RAK:War Dance",
-            "number": "36",
-            "originalName": "War Dance",
-            "originalText": "Choose one \u2014\n\u2022 Creatures you control get +2/+1 until end of turn.\n\u2022 Exile target artifact or enchantment.",
-            "originalType": "Instant",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Choose one \u2014\n\u2022 Creatures you control get +2/+1 until end of turn.\n\u2022 Exile target artifact or enchantment.",
             "type": "Instant",
             "types": [
                 "Instant"
@@ -1384,7 +1384,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Choose one\u2014\n\u2022 Counter target creature spell.\n\u2022 Put target attacking or blocking creature on top of its owner's library.",
+            "text": "Choose one \u2014\n\u2022 Counter target creature spell.\n\u2022 Put target attacking or blocking creature on top of its owner's library.",
             "type": "Instant",
             "types": [
                 "Instant"
@@ -1970,6 +1970,7 @@
                 "U"
             ],
             "convertedManaCost": 2.0,
+            "flavorText": "Designed by Simon Williamson",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -5400,7 +5401,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "You may play any number of lands this turn.\nIf a land you control would leave the battlefield this turn, exile that card instead.",
+            "text": "You may play any number of lands this turn.\nIf a land you control would leave the battlefield this turn, exile that land instead.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -9327,7 +9328,7 @@
     "code": "RAK",
     "custom": true,
     "meta": {
-        "date": "2019-12-20",
+        "date": "2019-12-29",
         "setVersion": "0.45",
         "version": "4.4.1"
     },

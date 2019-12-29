@@ -2605,7 +2605,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "This spell can't be countered.\nFlying, indestructible\nWhenever you are dealt combat damage, sacrifice Seath, Scaleless Betrayer.\n{U}, Discard a card: Return Seath to its owner's hand.",
+            "text": "This spell can't be countered.\nFlying, indestructible\nWhen you are dealt combat damage, sacrifice Seath, Scaleless Betrayer.\n{U}, Discard a card: Return Seath to its owner's hand.",
             "toughness": "7",
             "type": "Legendary Creature \u2014 Dragon Wizard",
             "types": [
@@ -4711,7 +4711,7 @@
                 "Dragon"
             ],
             "supertypes": [],
-            "text": "Menace\nWhen Dragon-Path Daredevil enters the battlefield, you may discard a card. If you do, journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
+            "text": "Menace\nWhen Dragon-Path Daredevil enters the battlefield, you may discard a card. If you do, journey twice. (To journey. exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
             "toughness": "4",
             "type": "Creature \u2014 Human Dragon",
             "types": [
@@ -5041,11 +5041,15 @@
                 {
                     "date": "2019-12-16",
                     "text": "Both cards are journeyed at the same time. If the second one is a face-up card with premonition, you don't cast it."
+                },
+                {
+                    "date": "2019-12-29",
+                    "text": "If you targeted at least one creature with Jolly Cooperation and none of the targets are legal as it starts to resolve, none of its effects happen. You don't get any additional phases and you don't journey."
                 }
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "Untap up to two target creatures. After this main phase, there is an additional combat phase followed by an additional main phase.\nJourney twice. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
+            "text": "Untap up to two target creatures. After this main phase, there is an additional combat phase followed by an additional main phase.\nJourney twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -8668,7 +8672,7 @@
     "code": "HLW",
     "custom": true,
     "meta": {
-        "date": "2019-12-15",
+        "date": "2019-12-29",
         "setVersion": "1.12",
         "version": "4.4.1"
     },

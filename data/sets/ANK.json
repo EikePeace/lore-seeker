@@ -58,41 +58,6 @@
             ]
         },
         {
-            "artist": "Keith Parkinson",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 5.0,
-            "flavorText": "Atun's angels are more diplomats than warriors, negotiating with Nutkeb, god of the sky and earth, a cloud-free passage for the sun.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{3}{W}{W}",
-            "name": "Atun's Steward",
-            "number": "2",
-            "originalName": "Atun's Steward",
-            "originalText": "Flying\nWhen Atun's Steward enters the battlefield, other creatures you control get +1/+1 until end of turn.",
-            "originalType": "Creature \u2014 Angel",
-            "power": "4",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [
-                "Angel"
-            ],
-            "supertypes": [],
-            "text": "Flying\nWhen Atun's Steward enters the battlefield, other creatures you control get +1/+1 until end of turn.",
-            "toughness": "3",
-            "type": "Creature \u2014 Angel",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
             "artist": "Diego Cunha",
             "borderColor": "black",
             "colorIdentity": [
@@ -108,7 +73,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}{W}",
             "name": "Atun, God of the Sun",
-            "number": "3",
+            "number": "2",
             "originalName": "Atun, God of the Sun",
             "originalText": "Lifelink, indestructible\nAtun, God of the Sun can't attack or block unless he has a +1/+1 counter on him.\nOther creatures you control get +1/+1.",
             "originalType": "Legendary Enchantment Creature \u2014 God",
@@ -126,6 +91,41 @@
             "type": "Legendary Enchantment Creature \u2014 God",
             "types": [
                 "Enchantment",
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Keith Parkinson",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 5.0,
+            "flavorText": "Atun's angels are more diplomats than warriors, negotiating with Nutkeb, god of the sky and earth, a cloud-free passage for the sun.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{3}{W}{W}",
+            "name": "Atun's Steward",
+            "number": "3",
+            "originalName": "Atun's Steward",
+            "originalText": "Flying\nWhen Atun's Steward enters the battlefield, other creatures you control get +1/+1 until end of turn.",
+            "originalType": "Creature \u2014 Angel",
+            "power": "4",
+            "rarity": "uncommon",
+            "rulings": [],
+            "subtypes": [
+                "Angel"
+            ],
+            "supertypes": [],
+            "text": "Flying\nWhen Atun's Steward enters the battlefield, other creatures you control get +1/+1 until end of turn.",
+            "toughness": "3",
+            "type": "Creature \u2014 Angel",
+            "types": [
                 "Creature"
             ]
         },
@@ -2258,38 +2258,6 @@
             ]
         },
         {
-            "artist": "Kuyler Lang",
-            "borderColor": "black",
-            "colorIdentity": [
-                "U"
-            ],
-            "colors": [
-                "U"
-            ],
-            "convertedManaCost": 3.0,
-            "flavorText": "\"This plane's moon has been shattered but the pieces remain. United, they will unravel Sobki's web.\"",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{U}{U}",
-            "name": "Tamiyo's Voyage",
-            "number": "66",
-            "originalName": "Tamiyo's Voyage",
-            "originalText": "Whenever a land enters the battlefield under your control, if you control no other lands with the same name as that land, draw a card.",
-            "originalType": "Enchantment",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Whenever a land enters the battlefield under your control, if you control no other lands with the same name as that land, draw a card.",
-            "type": "Enchantment",
-            "types": [
-                "Enchantment"
-            ],
-            "watermark": "planeswalker"
-        },
-        {
             "artist": "Drake Tsui",
             "borderColor": "black",
             "colorIdentity": [
@@ -2306,7 +2274,7 @@
             "loyalty": "3",
             "manaCost": "{2}{U}{U}",
             "name": "Tamiyo, Moonseeker",
-            "number": "67",
+            "number": "66",
             "originalName": "Tamiyo, Moonseeker",
             "originalText": "[+1]: Tap up to one target creature. It doesn't untap during its controller's next untap step.\n[-2]: Draw a card. If an opponent controls a tapped creature, draw an additional card.\n[-8]: Search your library for up to five cards and put them into your hand. Then shuffle your library.",
             "originalType": "Planeswalker \u2014 Tamiyo",
@@ -2323,6 +2291,38 @@
             "types": [
                 "Planeswalker"
             ]
+        },
+        {
+            "artist": "Kuyler Lang",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U"
+            ],
+            "colors": [
+                "U"
+            ],
+            "convertedManaCost": 3.0,
+            "flavorText": "\"This plane's moon has been shattered but the pieces remain. United, they will unravel Sobki's web.\"",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{U}{U}",
+            "name": "Tamiyo's Voyage",
+            "number": "67",
+            "originalName": "Tamiyo's Voyage",
+            "originalText": "Whenever a land enters the battlefield under your control, if you control no other lands with the same name as that land, draw a card.",
+            "originalType": "Enchantment",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Whenever a land enters the battlefield under your control, if you control no other lands with the same name as that land, draw a card.",
+            "type": "Enchantment",
+            "types": [
+                "Enchantment"
+            ],
+            "watermark": "planeswalker"
         },
         {
             "artist": "Joshua Eiten",
@@ -3556,41 +3556,6 @@
             ]
         },
         {
-            "artist": "Maria Trepaline",
-            "borderColor": "black",
-            "colorIdentity": [
-                "B"
-            ],
-            "colors": [
-                "B"
-            ],
-            "convertedManaCost": 1.0,
-            "flavorText": "\"The other gods have their own servants made of shimmering rock and glowing sand and enchanted water. I prefer something more . . . discreet.\"\n\u2014Sentesh, god of secrets",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{B}",
-            "name": "Sentesh's Rattlesnake",
-            "number": "104",
-            "originalName": "Sentesh's Rattlesnake",
-            "originalText": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
-            "originalType": "Creature \u2014 Snake",
-            "power": "1",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Snake"
-            ],
-            "supertypes": [],
-            "text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
-            "toughness": "1",
-            "type": "Creature \u2014 Snake",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
             "artist": "Mauricio Herrera",
             "borderColor": "black",
             "colorIdentity": [
@@ -3606,7 +3571,7 @@
             "layout": "normal",
             "manaCost": "{2}{B}{B}{B}",
             "name": "Sentesh, God of Secrets",
-            "number": "105",
+            "number": "104",
             "originalName": "Sentesh, God of Secrets",
             "originalText": "Menace, indestructible\nSentesh, God of Secrets can't attack or block unless he has a +1/+1 counter on him.\nIf you would draw a card, you lose 2 life and draw two cards instead.",
             "originalType": "Legendary Enchantment Creature \u2014 God",
@@ -3624,6 +3589,41 @@
             "type": "Legendary Enchantment Creature \u2014 God",
             "types": [
                 "Enchantment",
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Maria Trepaline",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B"
+            ],
+            "colors": [
+                "B"
+            ],
+            "convertedManaCost": 1.0,
+            "flavorText": "\"The other gods have their own servants made of shimmering rock and glowing sand and enchanted water. I prefer something more . . . discreet.\"\n\u2014Sentesh, god of secrets",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{B}",
+            "name": "Sentesh's Rattlesnake",
+            "number": "105",
+            "originalName": "Sentesh's Rattlesnake",
+            "originalText": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+            "originalType": "Creature \u2014 Snake",
+            "power": "1",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Snake"
+            ],
+            "supertypes": [],
+            "text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+            "toughness": "1",
+            "type": "Creature \u2014 Snake",
+            "types": [
                 "Creature"
             ]
         },
@@ -4607,6 +4607,43 @@
             ]
         },
         {
+            "artist": "\u00a9 Hi-Rez",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "convertedManaCost": 6.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{4}{R}{R}",
+            "name": "Hesaret, God of Inspiration",
+            "number": "132",
+            "originalName": "Hesaret, God of Inspiration",
+            "originalText": "Prowess, indestructible\nHesaret, God of Inspiration can't attack or block unless she has a +1/+1 counter on her.\nWhenever you cast a noncreature spell, exile the top card of your library. Until end of turn, you may play that card.",
+            "originalType": "Legendary Enchantment Creature \u2014 God",
+            "power": "6",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "God"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Indestructible, prowess\nHesaret, God of Inspiration can't attack or block unless she has a +1/+1 counter on her.\nWhenever you cast a noncreature spell, exile the top card of your library. Until end of turn, you may play that card.",
+            "toughness": "6",
+            "type": "Legendary Enchantment Creature \u2014 God",
+            "types": [
+                "Enchantment",
+                "Creature"
+            ]
+        },
+        {
             "artist": "Andy PTimm",
             "borderColor": "black",
             "colorIdentity": [
@@ -4622,7 +4659,7 @@
             "layout": "normal",
             "manaCost": "{R}",
             "name": "Hesaret's Alacrity",
-            "number": "132",
+            "number": "133",
             "originalName": "Hesaret's Alacrity",
             "originalText": "Target creature gains first strike until end of turn. If it already has first strike, it gains double strike instead.\nDecipher {2}{R} (When you cast this spell for its decipher cost, copy it for each instant and sorcery card in your graveyard. You may choose new targets for the copies.)",
             "originalType": "Instant",
@@ -4643,43 +4680,6 @@
             "type": "Instant",
             "types": [
                 "Instant"
-            ]
-        },
-        {
-            "artist": "\u00a9 Hi-Rez",
-            "borderColor": "black",
-            "colorIdentity": [
-                "R"
-            ],
-            "colors": [
-                "R"
-            ],
-            "convertedManaCost": 6.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{4}{R}{R}",
-            "name": "Hesaret, God of Inspiration",
-            "number": "133",
-            "originalName": "Hesaret, God of Inspiration",
-            "originalText": "Prowess, indestructible\nHesaret, God of Inspiration can't attack or block unless she has a +1/+1 counter on her.\nWhenever you cast a noncreature spell, exile the top card of your library. Until end of turn, you may play that card.",
-            "originalType": "Legendary Enchantment Creature \u2014 God",
-            "power": "6",
-            "rarity": "mythic",
-            "rulings": [],
-            "subtypes": [
-                "God"
-            ],
-            "supertypes": [
-                "Legendary"
-            ],
-            "text": "Indestructible, prowess\nHesaret, God of Inspiration can't attack or block unless she has a +1/+1 counter on her.\nWhenever you cast a noncreature spell, exile the top card of your library. Until end of turn, you may play that card.",
-            "toughness": "6",
-            "type": "Legendary Enchantment Creature \u2014 God",
-            "types": [
-                "Enchantment",
-                "Creature"
             ]
         },
         {
@@ -4758,41 +4758,6 @@
             ]
         },
         {
-            "artist": "Alyssa Davis",
-            "borderColor": "black",
-            "colorIdentity": [
-                "R"
-            ],
-            "colors": [
-                "R"
-            ],
-            "convertedManaCost": 6.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{4}{R}{R}",
-            "name": "Iun's Flameweaver",
-            "number": "136",
-            "originalName": "Iun's Flameweaver",
-            "originalText": "First strike\nWhenever Iun's Flameweaver attacks, create a 2/2 red Phoenix creature token with flying that's tapped and attacking. Exile that token at end of combat.",
-            "originalType": "Creature \u2014 Human Warrior",
-            "power": "3",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Warrior"
-            ],
-            "supertypes": [],
-            "text": "First strike\nWhenever Iun's Flameweaver attacks, create a 2/2 red Phoenix creature token with flying that's tapped and attacking. Exile that token at end of combat.",
-            "toughness": "2",
-            "type": "Creature \u2014 Human Warrior",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
             "artist": "Jaan-Paul van Eeden",
             "borderColor": "black",
             "colorIdentity": [
@@ -4808,7 +4773,7 @@
             "layout": "normal",
             "manaCost": "{5}{R}{R}",
             "name": "Iun, World Reborn",
-            "number": "137",
+            "number": "136",
             "originalName": "Iun, World Reborn",
             "originalText": "Flying, haste\nIun, World Reborn attacks each turn if able.\nWhen Iun dies, exile it and all other Phoenix cards on the battlefield and in graveyards. Restart the game, leaving in exile all cards exiled with Iun. Then put those cards onto the battlefield under your control, and Iun loses this ability.",
             "originalType": "Legendary Creature \u2014 Phoenix",
@@ -4824,6 +4789,41 @@
             "text": "Flying, haste\nIun, World Reborn attacks each combat if able.\nWhen Iun dies, exile it and all other Phoenix cards on the battlefield and in graveyards. Restart the game, leaving in exile all cards exiled with Iun. Then put those cards onto the battlefield under your control, and all permanents named Iun, World Reborn lose this ability.",
             "toughness": "4",
             "type": "Legendary Creature \u2014 Phoenix",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Alyssa Davis",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "convertedManaCost": 6.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{4}{R}{R}",
+            "name": "Iun's Flameweaver",
+            "number": "137",
+            "originalName": "Iun's Flameweaver",
+            "originalText": "First strike\nWhenever Iun's Flameweaver attacks, create a 2/2 red Phoenix creature token with flying that's tapped and attacking. Exile that token at end of combat.",
+            "originalType": "Creature \u2014 Human Warrior",
+            "power": "3",
+            "rarity": "uncommon",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Warrior"
+            ],
+            "supertypes": [],
+            "text": "First strike\nWhenever Iun's Flameweaver attacks, create a 2/2 red Phoenix creature token with flying that's tapped and attacking. Exile that token at end of combat.",
+            "toughness": "2",
+            "type": "Creature \u2014 Human Warrior",
             "types": [
                 "Creature"
             ]
@@ -6260,41 +6260,6 @@
             ]
         },
         {
-            "artist": "Obrotowy",
-            "borderColor": "black",
-            "colorIdentity": [
-                "G"
-            ],
-            "colors": [
-                "G"
-            ],
-            "convertedManaCost": 5.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{3}{G}{G}",
-            "name": "Sobki's Ambusher",
-            "number": "178",
-            "originalName": "Sobki's Ambusher",
-            "originalText": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Sobki's Ambusher enters the battlefield, you may have it deal damage equal to its power to target creature or planeswalker.",
-            "originalType": "Creature \u2014 Crocodile Warrior",
-            "power": "2",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [
-                "Crocodile",
-                "Warrior"
-            ],
-            "supertypes": [],
-            "text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Sobki's Ambusher enters the battlefield, you may have it deal damage equal to its power to target creature or planeswalker.",
-            "toughness": "4",
-            "type": "Creature \u2014 Crocodile Warrior",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
             "artist": "Andy PTimm",
             "borderColor": "black",
             "colorIdentity": [
@@ -6311,7 +6276,7 @@
             "loyalty": "3",
             "manaCost": "{1}{G}{G}",
             "name": "Sobki, World Severer",
-            "number": "179",
+            "number": "178",
             "originalName": "Sobki, World Severer",
             "originalText": "[+2]: Up to one target creature gains indestructible until your next turn.\n[0]: Sobki deals damage equal to his current loyalty to target player. That player deals damage equal to the number of lands he or she controls to Sobki.\n[-6]: Target player chooses three basic lands he or she controls, then sacrifices all other lands.",
             "originalType": "Planeswalker \u2014 Sobki",
@@ -6332,6 +6297,41 @@
             "type": "Legendary Planeswalker \u2014 Sobki",
             "types": [
                 "Planeswalker"
+            ]
+        },
+        {
+            "artist": "Obrotowy",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G"
+            ],
+            "colors": [
+                "G"
+            ],
+            "convertedManaCost": 5.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{3}{G}{G}",
+            "name": "Sobki's Ambusher",
+            "number": "179",
+            "originalName": "Sobki's Ambusher",
+            "originalText": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Sobki's Ambusher enters the battlefield, you may have it deal damage equal to its power to target creature or planeswalker.",
+            "originalType": "Creature \u2014 Crocodile Warrior",
+            "power": "2",
+            "rarity": "uncommon",
+            "rulings": [],
+            "subtypes": [
+                "Crocodile",
+                "Warrior"
+            ],
+            "supertypes": [],
+            "text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Sobki's Ambusher enters the battlefield, you may have it deal damage equal to its power to target creature or planeswalker.",
+            "toughness": "4",
+            "type": "Creature \u2014 Crocodile Warrior",
+            "types": [
+                "Creature"
             ]
         },
         {
@@ -7032,7 +7032,6 @@
             ]
         },
         {
-            "artist": "Marko Djurdjević",
             "borderColor": "black",
             "colorIdentity": [
                 "B",
@@ -7171,6 +7170,46 @@
             ]
         },
         {
+            "artist": "Laia L\u00f3pez Tubau",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "G"
+            ],
+            "colors": [
+                "B",
+                "G"
+            ],
+            "convertedManaCost": 3.0,
+            "flavorText": "Legends speak of a forgotten pharaoh, turned into an abomination whose venom was only matched by the sorrow in his heart.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{B}{G}",
+            "name": "The Scorpion King",
+            "number": "202",
+            "originalName": "The Scorpion King",
+            "originalText": "Deathtouch\nOther creatures you control with deathtouch get +1/+4.",
+            "originalType": "Legendary Creature \u2014 Human Scorpion",
+            "power": "1",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Scorpion"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Deathtouch\nOther creatures you control with deathtouch get +1/+4.",
+            "toughness": "4",
+            "type": "Legendary Creature \u2014 Human Scorpion",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
             "artist": "Jesus Blones",
             "borderColor": "black",
             "colorIdentity": [
@@ -7189,7 +7228,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}{U}",
             "name": "Sphere of Faith",
-            "number": "202",
+            "number": "203",
             "originalName": "Sphere of Faith",
             "originalText": "Defender\n{T}: Target blocking creature with worship gains indestructible until end of turn.",
             "originalType": "Creature \u2014 Wall",
@@ -7225,7 +7264,7 @@
             "layout": "normal",
             "manaCost": "{5}{U}{B}",
             "name": "Sphincolich Loremaster",
-            "number": "203",
+            "number": "204",
             "originalName": "Sphincolich Loremaster",
             "originalText": "Flying\nWhenever Sphincolich Loremaster deals combat damage to a player, you may cast an instant or sorcery card from that player's graveyard without paying its mana cost.\nUnearth {2}{U}{B} ({2}{U}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the end step or if it would leave the battlefield. Unearth only as a sorcery.)",
             "originalType": "Creature \u2014 Skeleton Sphinx",
@@ -7263,7 +7302,7 @@
             "layout": "normal",
             "manaCost": "{X}{W}{U}{U}",
             "name": "Sphinx's Revelation",
-            "number": "204",
+            "number": "205",
             "originalName": "Sphinx's Revelation",
             "originalText": "You gain X life and draw X cards.",
             "originalType": "Instant",
@@ -7284,46 +7323,6 @@
             "type": "Instant",
             "types": [
                 "Instant"
-            ]
-        },
-        {
-            "artist": "Laia L\u00f3pez Tubau",
-            "borderColor": "black",
-            "colorIdentity": [
-                "B",
-                "G"
-            ],
-            "colors": [
-                "B",
-                "G"
-            ],
-            "convertedManaCost": 3.0,
-            "flavorText": "Legends speak of a forgotten pharaoh, turned into an abomination whose venom was only matched by the sorrow in his heart.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{B}{G}",
-            "name": "The Scorpion King",
-            "number": "205",
-            "originalName": "The Scorpion King",
-            "originalText": "Deathtouch\nOther creatures you control with deathtouch get +1/+4.",
-            "originalType": "Legendary Creature \u2014 Human Scorpion",
-            "power": "1",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Scorpion"
-            ],
-            "supertypes": [
-                "Legendary"
-            ],
-            "text": "Deathtouch\nOther creatures you control with deathtouch get +1/+4.",
-            "toughness": "4",
-            "type": "Legendary Creature \u2014 Human Scorpion",
-            "types": [
-                "Creature"
             ]
         },
         {
@@ -9056,7 +9055,7 @@
     "code": "ANK",
     "custom": true,
     "meta": {
-        "date": "2019-08-25",
+        "date": "2019-12-29",
         "setVersion": "2.3",
         "version": "4.4.1"
     },

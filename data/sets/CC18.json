@@ -3396,12 +3396,13 @@
                 }
             ],
             "subtypes": [
-                "Vampire"
+                "Vampire",
+                "Noble"
             ],
             "supertypes": [],
             "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Falkenrath Noble or another creature dies, target player loses 1 life and you gain 1 life.",
             "toughness": "2",
-            "type": "Creature \u2014 Vampire",
+            "type": "Creature \u2014 Vampire Noble",
             "types": [
                 "Creature"
             ]
@@ -4417,7 +4418,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Brimstone Volley deals 3 damage to any target.\nMorbid \u2014 Brimstone Volley deals 5 damage to that permanent or player instead if a creature died this turn.",
+            "text": "Brimstone Volley deals 3 damage to any target.\nMorbid \u2014 Brimstone Volley deals 5 damage instead if a creature died this turn.",
             "type": "Instant",
             "types": [
                 "Instant"
@@ -8998,7 +8999,7 @@
     "code": "CC18",
     "custom": true,
     "meta": {
-        "date": "2019-12-20",
+        "date": "2019-12-29",
         "setVersion": "1.2.1",
         "version": "4.4.1"
     },

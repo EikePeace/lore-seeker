@@ -579,7 +579,7 @@
             "name": "Evis's Mandate",
             "number": "16",
             "originalName": "Evis's Mandate",
-            "originalText": "Choose one \u2014\n\u2022 Create two 2/2 white Knight creature tokens with vigilance.\n\u2022 Up to two target creatures get +2/+2 and gain indestructible until end of turn.\nFlashback {5}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "originalText": "Choose one \u2014\n\u2022 Create two 2/2 white Knight creature tokens with vigilance.\n\u2022 Up to two target creatures each get +2/+2 and gain indestructible until end of turn.\nFlashback {5}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
             "originalType": "Sorcery",
             "rarity": "rare",
             "rulings": [],
@@ -1409,36 +1409,6 @@
             ]
         },
         {
-            "artist": "Grzegorz Rutkowski",
-            "borderColor": "black",
-            "colorIdentity": [
-                "U"
-            ],
-            "colors": [
-                "U"
-            ],
-            "convertedManaCost": 5.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{4}{U}",
-            "name": "Aleen's Mandate",
-            "number": "41",
-            "originalName": "Aleen's Mandate",
-            "originalText": "Choose one \u2014\n\u2022 Exchange control of two target creatures.\n\u2022 Return up to two target creatures to their owner's hand.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-            "originalType": "Sorcery",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Choose one \u2014\n\u2022 Exchange control of two target creatures.\n\u2022 Return up to two target creatures to their owner's hand.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-            "type": "Sorcery",
-            "types": [
-                "Sorcery"
-            ]
-        },
-        {
             "artist": "Marius Bota",
             "borderColor": "black",
             "colorIdentity": [
@@ -1454,7 +1424,7 @@
             "layout": "normal",
             "manaCost": "{2}{U}{U}",
             "name": "Aleen, Prophet Unwoven",
-            "number": "42",
+            "number": "41",
             "originalName": "Aleen, Prophet Unwoven",
             "originalText": "Whenever you cast a spell, put the top three cards of your library into your graveyard.\nAt the beginning of the end step on each opponent's turn, if your library has fifteen or fewer cards in it, take an extra turn after this one.",
             "originalType": "Legendary Creature \u2014 Human Wizard",
@@ -1473,6 +1443,36 @@
             "type": "Legendary Creature \u2014 Human Wizard",
             "types": [
                 "Creature"
+            ]
+        },
+        {
+            "artist": "Grzegorz Rutkowski",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U"
+            ],
+            "colors": [
+                "U"
+            ],
+            "convertedManaCost": 5.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{4}{U}",
+            "name": "Aleen's Mandate",
+            "number": "42",
+            "originalName": "Aleen's Mandate",
+            "originalText": "Choose one \u2014\n\u2022 Exchange control of two target creatures.\n\u2022 Return up to two target creatures to their owner's hand.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Choose one \u2014\n\u2022 Exchange control of two target creatures.\n\u2022 Return up to two target creatures to their owner's hand.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
             ]
         },
         {
@@ -2885,7 +2885,7 @@
             "name": "Twisted Representation",
             "number": "80",
             "originalName": "Twisted Representation",
-            "originalText": "You may have Twisted Representation enter the battlefield as a copy of any creature on the battlefield, except it gains \"{1}: This creature gets +1/-1 or -1/+1 until end of turn.\"",
+            "originalText": "You may have Twisted Representation enter the battlefield as a copy of any creature on the battlefield, except it has \"{1}: This creature gets +1/-1 or -1/+1 until end of turn.\"",
             "originalType": "Creature \u2014 Shapeshifter",
             "power": "0",
             "rarity": "rare",
@@ -3536,36 +3536,6 @@
             ]
         },
         {
-            "artist": "Alex Tuis",
-            "borderColor": "black",
-            "colorIdentity": [
-                "B"
-            ],
-            "colors": [
-                "B"
-            ],
-            "convertedManaCost": 4.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{3}{B}",
-            "name": "Ikelious's Mandate",
-            "number": "98",
-            "originalName": "Ikelious's Mandate",
-            "originalText": "Choose one \u2014\n\u2022 Target player sacrifices a creature with the greatest power among creatures they control.\n\u2022 Put target creature card from an opponent's graveyard onto the battlefield under your control.\nFlashback {4}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-            "originalType": "Sorcery",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Choose one \u2014\n\u2022 Target player sacrifices a creature with the greatest power among creatures they control.\n\u2022 Put target creature card from an opponent's graveyard onto the battlefield under your control.\nFlashback {4}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-            "type": "Sorcery",
-            "types": [
-                "Sorcery"
-            ]
-        },
-        {
             "artist": "helgecbalzer at deviantart",
             "borderColor": "black",
             "colorIdentity": [
@@ -3582,7 +3552,7 @@
             "layout": "normal",
             "manaCost": "{3}{B}{B}",
             "name": "Ikelious, Nightmare King",
-            "number": "99",
+            "number": "98",
             "originalName": "Ikelious, Nightmare King",
             "originalText": "Dreamwalk (This creature can't be blocked by untapped creatures. Tapped creatures can block it.)\nOther tapped creatures have \"At the beginning of your end step, sacrifice this creature unless you pay X life, where X is this creature's converted mana cost.\"",
             "originalType": "Legendary Creature \u2014 Nightmare",
@@ -3600,6 +3570,36 @@
             "type": "Legendary Creature \u2014 Nightmare",
             "types": [
                 "Creature"
+            ]
+        },
+        {
+            "artist": "Alex Tuis",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B"
+            ],
+            "colors": [
+                "B"
+            ],
+            "convertedManaCost": 4.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{3}{B}",
+            "name": "Ikelious's Mandate",
+            "number": "99",
+            "originalName": "Ikelious's Mandate",
+            "originalText": "Choose one \u2014\n\u2022 Target player sacrifices a creature with the greatest power among creatures they control.\n\u2022 Put target creature card from an opponent's graveyard onto the battlefield under your control.\nFlashback {4}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Choose one \u2014\n\u2022 Target player sacrifices a creature with the greatest power among creatures they control.\n\u2022 Put target creature card from an opponent's graveyard onto the battlefield under your control.\nFlashback {4}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
             ]
         },
         {
@@ -5599,36 +5599,6 @@
             ]
         },
         {
-            "artist": "devburmak",
-            "borderColor": "black",
-            "colorIdentity": [
-                "R"
-            ],
-            "colors": [
-                "R"
-            ],
-            "convertedManaCost": 4.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{3}{R}",
-            "name": "Somni's Mandate",
-            "number": "156",
-            "originalName": "Somni's Mandate",
-            "originalText": "Choose one \u2014\n\u2022 Discard all the cards in your hand, then draw that many cards plus one.\n\u2022 Exile up to five cards from your graveyard. Somni's Mandate deals damage to any target equal to the number of cards exiled this way.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-            "originalType": "Sorcery",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Choose one \u2014\n\u2022 Discard all the cards in your hand, then draw that many cards plus one.\n\u2022 Exile up to five cards from your graveyard. Somni's Mandate deals damage to any target equal to the number of cards exiled this way.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-            "type": "Sorcery",
-            "types": [
-                "Sorcery"
-            ]
-        },
-        {
             "artist": "Christian Quinot",
             "borderColor": "black",
             "colorIdentity": [
@@ -5645,7 +5615,7 @@
             "layout": "normal",
             "manaCost": "{2}{R}{R}",
             "name": "Somni, Memory Nomad",
-            "number": "157",
+            "number": "156",
             "originalName": "Somni, Memory Nomad",
             "originalText": "Each instant and sorcery card in your graveyard has flashback. The flashback cost is equal to its mana cost.",
             "originalType": "Legendary Creature \u2014 Human Wizard",
@@ -5664,6 +5634,36 @@
             "type": "Legendary Creature \u2014 Human Wizard",
             "types": [
                 "Creature"
+            ]
+        },
+        {
+            "artist": "devburmak",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "convertedManaCost": 4.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{3}{R}",
+            "name": "Somni's Mandate",
+            "number": "157",
+            "originalName": "Somni's Mandate",
+            "originalText": "Choose one \u2014\n\u2022 Discard all the cards in your hand, then draw that many cards plus one.\n\u2022 Exile up to five cards from your graveyard. Somni's Mandate deals damage to any target equal to the number of cards exiled this way.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Choose one \u2014\n\u2022 Discard all the cards in your hand, then draw that many cards plus one.\n\u2022 Exile up to five cards from your graveyard. Somni's Mandate deals damage to any target equal to the number of cards exiled this way.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
             ]
         },
         {
@@ -7116,36 +7116,6 @@
             ]
         },
         {
-            "artist": "Alexandrescu Paul",
-            "borderColor": "black",
-            "colorIdentity": [
-                "G"
-            ],
-            "colors": [
-                "G"
-            ],
-            "convertedManaCost": 3.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{2}{G}",
-            "name": "Yemma's Mandate",
-            "number": "200",
-            "originalName": "Yemma's Mandate",
-            "originalText": "Choose one \u2014\n\u2022 Put three +1/+1 counters on target creature.\n\u2022 Target creature you control fights target creature you don't control.\nFlashback {4}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-            "originalType": "Sorcery",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Choose one \u2014\n\u2022 Put three +1/+1 counters on target creature.\n\u2022 Target creature you control fights target creature you don't control.\nFlashback {4}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
-            "type": "Sorcery",
-            "types": [
-                "Sorcery"
-            ]
-        },
-        {
             "artist": "Kekai Kotaki",
             "borderColor": "black",
             "colorIdentity": [
@@ -7162,9 +7132,9 @@
             "loyalty": "3",
             "manaCost": "{2}{G}{G}",
             "name": "Yemma, Planar Huntress",
-            "number": "201",
+            "number": "200",
             "originalName": "Yemma, Planar Huntress",
-            "originalText": "[]: When Yemma, Planar Huntress enters the battlefield, create Zola, a legendary 2/2 green Wolf creature token.\n[+1]: Up to one target creature you control gains trample and indestructible until end of turn. If its name is Zola, put a +1/+1 counter on it.\n[-2]: Put a +1/+1 counter on target creature you control. That creature fights target creature you don't control.\n[-7]: You get an emblem with \"At the beginning of combat on your turn, put five +1/+1 counters on target creature you control.\"",
+            "originalText": "When Yemma, Planar Huntress enters the battlefield, create Zola, a legendary 2/2 green Wolf creature token.\n[+1]: Up to one target creature you control gains trample and indestructible until end of turn. If its name is Zola, put a +1/+1 counter on it.\n[-2]: Put a +1/+1 counter on target creature you control. That creature fights target creature you don't control.\n[-7]: You get an emblem with \"At the beginning of combat on your turn, put five +1/+1 counters on target creature you control.\"",
             "originalType": "Legendary Planeswalker \u2014 Yemma",
             "rarity": "mythic",
             "rulings": [
@@ -7186,6 +7156,74 @@
             ]
         },
         {
+            "artist": "Alexandrescu Paul",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G"
+            ],
+            "colors": [
+                "G"
+            ],
+            "convertedManaCost": 3.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{2}{G}",
+            "name": "Yemma's Mandate",
+            "number": "201",
+            "originalName": "Yemma's Mandate",
+            "originalText": "Choose one \u2014\n\u2022 Put three +1/+1 counters on target creature.\n\u2022 Target creature you control fights target creature you don't control.\nFlashback {4}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Choose one \u2014\n\u2022 Put three +1/+1 counters on target creature.\n\u2022 Target creature you control fights target creature you don't control.\nFlashback {4}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
+            ]
+        },
+        {
+            "artist": "Sandara Tang",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R",
+                "U"
+            ],
+            "colors": [
+                "R",
+                "U"
+            ],
+            "convertedManaCost": 5.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{3}{U}{R}",
+            "name": "Aisha, Child Dreamer",
+            "number": "202",
+            "originalName": "Aisha, Child Dreamer",
+            "originalText": "As Aisha, Child Dreamer enters the battlefield, create Mr. Grumpy, a legendary 7/7 blue and red Elemental creature token with dreamwalk and trample.\nWhen Aisha leaves the battlefield, exile all creatures you control named Mr. Grumpy.",
+            "originalType": "Legendary Creature \u2014 Human",
+            "power": "1",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [
+                "Human"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "As Aisha, Child Dreamer enters the battlefield, create Mr. Grumpy, a legendary 7/7 blue and red Elemental creature token with dreamwalk and trample.\nWhen Aisha leaves the battlefield, exile all creatures you control named Mr. Grumpy.",
+            "toughness": "1",
+            "type": "Legendary Creature \u2014 Human",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
             "artist": "Desmond Wong",
             "borderColor": "black",
             "colorIdentity": [
@@ -7203,7 +7241,7 @@
             "layout": "normal",
             "manaCost": "{3}{G}{U}",
             "name": "Aisha's Caretaker",
-            "number": "202",
+            "number": "203",
             "originalName": "Aisha's Caretaker",
             "originalText": "{1}: Put the top card of your library into your graveyard.\n{3}{G}{U}, {T}: Put a nonland card from your graveyard into your library face up just beneath the top three cards of that library. That card gains premonition. (As a face-up card with premonition is on top of your library, cast it without paying its mana cost.)",
             "originalType": "Creature \u2014 Turtle",
@@ -7234,44 +7272,6 @@
             "text": "{1}: Put the top card of your library into your graveyard.\n{3}{G}{U}, {T}: Put a nonland card from your graveyard into your library face up just beneath the top three cards of that library. That card gains premonition. (As a face-up card with premonition is on top of your library, cast it without paying its mana cost.)",
             "toughness": "8",
             "type": "Creature \u2014 Turtle",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "Sandara Tang",
-            "borderColor": "black",
-            "colorIdentity": [
-                "R",
-                "U"
-            ],
-            "colors": [
-                "R",
-                "U"
-            ],
-            "convertedManaCost": 5.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{3}{U}{R}",
-            "name": "Aisha, Child Dreamer",
-            "number": "203",
-            "originalName": "Aisha, Child Dreamer",
-            "originalText": "As Aisha, Child Dreamer enters the battlefield, create Mr. Grumpy, a legendary 7/7 blue and red Elemental creature token with dreamwalk and trample.\nWhen Aisha leaves the battlefield, exile all creatures you control named Mr. Grumpy.",
-            "originalType": "Legendary Creature \u2014 Human",
-            "power": "1",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [
-                "Human"
-            ],
-            "supertypes": [
-                "Legendary"
-            ],
-            "text": "As Aisha, Child Dreamer enters the battlefield, create Mr. Grumpy, a legendary 7/7 blue and red Elemental creature token with dreamwalk and trample.\nWhen Aisha leaves the battlefield, exile all creatures you control named Mr. Grumpy.",
-            "toughness": "1",
-            "type": "Legendary Creature \u2014 Human",
             "types": [
                 "Creature"
             ]
@@ -7594,7 +7594,7 @@
             "name": "Evis, Executor of Light",
             "number": "212",
             "originalName": "Evis, Executor of Light",
-            "originalText": "[]: When Evis, Executor of Light enters the battlefield, you may exile target creature until she leaves the battlefield.\n[+1]: Up to one target creature gains vigilance until end of turn and can't be blocked this turn.\n[+1]: Put a +1/+1 counter on target creature and all other creatures you control with the same name as that creature.\n[-6]: Choose a creature card that was exiled with Evis as you activated this ability. Create five tokens that are copies of the chosen card.",
+            "originalText": "When Evis, Executor of Light enters the battlefield, you may exile target creature until she leaves the battlefield.\n[+1]: Up to one target creature gains vigilance until end of turn and can't be blocked this turn.\n[+1]: Put a +1/+1 counter on target creature and all other creatures you control with the same name as that creature.\n[-6]: Choose a creature card that was exiled with Evis as you activated this ability. Create five tokens that are copies of the chosen card.",
             "originalType": "Legendary Planeswalker \u2014 Evis",
             "rarity": "mythic",
             "rulings": [
@@ -7866,7 +7866,7 @@
             "name": "Ral Zarek, Dream Artist",
             "number": "219",
             "originalName": "Ral Zarek, Dream Artist",
-            "originalText": "[]: You may activate an additional loyalty ability of Ral Zarek, Dream Artist on each of your turns.\n[+1]: Look at the top two cards of your library. Exile one of them. You may play it this turn. Put the other on the top of your library.\n[-1]: Create a 3/1 blue and red Weird creature token with haste. Exile it at the beginning of your next upkeep.\n[-9]: You get an emblem with \"Whenever you cast a spell, this emblem deals 2 damage to any target and you draw a card.\"",
+            "originalText": "You may activate an additional loyalty ability of Ral Zarek, Dream Artist on each of your turns.\n[+1]: Look at the top two cards of your library. Exile one of them. You may play it this turn. Put the other on the top of your library.\n[-1]: Create a 3/1 blue and red Weird creature token with haste. Exile it at the beginning of your next upkeep.\n[-9]: You get an emblem with \"Whenever you cast a spell, this emblem deals 2 damage to any target and you draw a card.\"",
             "originalType": "Legendary Planeswalker \u2014 Ral",
             "rarity": "mythic",
             "rulings": [],
@@ -7880,44 +7880,6 @@
             "type": "Legendary Planeswalker \u2014 Ral",
             "types": [
                 "Planeswalker"
-            ]
-        },
-        {
-            "artist": "Miles Johnston",
-            "borderColor": "black",
-            "colorIdentity": [
-                "B",
-                "W"
-            ],
-            "colors": [
-                "B",
-                "W"
-            ],
-            "convertedManaCost": 2.0,
-            "flavorText": "Reev leads the Equinox Following, aiming to bringing about his \"Utopia\" at any cost.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{W}{B}",
-            "name": "Reev's Devotee",
-            "number": "220",
-            "originalName": "Reev's Devotee",
-            "originalText": "At the beginning of each end step, if you gained 3 or more life this turn, put two +1/+1 counters on Reev's Devotee.",
-            "originalType": "Creature \u2014 Human Cleric",
-            "power": "2",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Cleric"
-            ],
-            "supertypes": [],
-            "text": "At the beginning of each end step, if you gained 3 or more life this turn, put two +1/+1 counters on Reev's Devotee.",
-            "toughness": "2",
-            "type": "Creature \u2014 Human Cleric",
-            "types": [
-                "Creature"
             ]
         },
         {
@@ -7938,7 +7900,7 @@
             "layout": "normal",
             "manaCost": "{W}{B}",
             "name": "Reev, Equinox Prophet",
-            "number": "221",
+            "number": "220",
             "originalName": "Reev, Equinox Prophet",
             "originalText": "If an opponent would draw a card, that player exiles the top card of their library instead.\nEach player may play cards they own exiled with Reev, Equinox Prophet.",
             "originalType": "Legendary Creature \u2014 Human Cleric",
@@ -7968,6 +7930,44 @@
             "text": "If an opponent would draw a card, that player exiles the top card of their library instead.\nEach player may play cards they own exiled with Reev, Equinox Prophet.",
             "toughness": "2",
             "type": "Legendary Creature \u2014 Human Cleric",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Miles Johnston",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "W"
+            ],
+            "colors": [
+                "B",
+                "W"
+            ],
+            "convertedManaCost": 2.0,
+            "flavorText": "Reev leads the Equinox Following, aiming to bringing about his \"Utopia\" at any cost.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{W}{B}",
+            "name": "Reev's Devotee",
+            "number": "221",
+            "originalName": "Reev's Devotee",
+            "originalText": "At the beginning of each end step, if you gained 3 or more life this turn, put two +1/+1 counters on Reev's Devotee.",
+            "originalType": "Creature \u2014 Human Cleric",
+            "power": "2",
+            "rarity": "uncommon",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Cleric"
+            ],
+            "supertypes": [],
+            "text": "At the beginning of each end step, if you gained 3 or more life this turn, put two +1/+1 counters on Reev's Devotee.",
+            "toughness": "2",
+            "type": "Creature \u2014 Human Cleric",
             "types": [
                 "Creature"
             ]
@@ -8988,7 +8988,7 @@
     "code": "DMS",
     "custom": true,
     "meta": {
-        "date": "2019-08-25",
+        "date": "2019-12-29",
         "setVersion": "3.00",
         "version": "4.4.1"
     },

@@ -114,8 +114,22 @@ def subcommand(f, name=None):
     return f
 
 def build_name_map(ver_dir, old, new):
-    if 'cards' in old:
-        rename_path = ver_dir / 'name-changes.txt'
+    if 'setVersion' in old.get('meta', {}):
+        old_version = old['meta']['setVersion']
+    elif 'version' in old:
+        old_version = old['version']
+    else:
+        old_version = input(f'[ ?? ] {old["name"]} old version: ')
+    if 'setVersion' in new.get('meta', {}):
+        new_version = new['meta']['setVersion']
+    elif 'version' in new:
+        new_version = new['version']
+    else:
+        new_version = input(f'[ ?? ] {new["name"]} new version: ')
+    if old_version == new_version:
+        name_map = {card['name']: (card['name'], card.get('originalName', card['name'])) for card in old['cards']}
+    elif 'cards' in old:
+        rename_path = ver_dir / f'name-changes-v{old_version}.txt'
         if rename_path.exists():
             input(f'[ ?? ] using existing card name mapping {rename_path} [you may edit it now, then press return to continue]')
         else:
@@ -164,7 +178,7 @@ def build_name_map(ver_dir, old, new):
                 print(f'[ !! ] {new_card["name"]} missing from name map, assuming unchanged')
                 name_map[new_card['name']] = new_card['name'], new_card['name']
     else:
-        name_map = {card['name']: (None, card['name']) for card in new['cards']}
+        name_map = {card['name']: (None, card.get('originalName', card['name'])) for card in new['cards']}
     return name_map
 
 def card_diff(set_code, card_name, old_card, new_card, errata_card=None):
@@ -392,7 +406,7 @@ def import_set(set_code, set_version):
     gefolge_conf = lazyjson.SFTPFile('mercredi.fenhl.net', 22, '/usr/local/share/fidera/games/magic.json', username='fenhl')
     if set_code not in gefolge_conf['customSets']:
         gefolge_conf['customSets'][set_code] = {}
-    if 'blurb' not in gefolge_conf['customSets'][set_code]:
+    if 'drafted' not in gefolge_conf['customSets'][set_code] and 'blurb' not in gefolge_conf['customSets'][set_code]:
         gefolge_conf['customSets'][set_code]['blurb'] = input(f'Beschreibung für gefolge.org: {set_code} ')
     set_dir = pathlib.Path.home() / 'games' / 'magic' / 'set' / set_code.lower()
     if not set_dir.exists():
@@ -419,6 +433,19 @@ def import_set(set_code, set_version):
     with set_json_path.open('w', encoding='utf-8') as set_file:
         json.dump(set_json, set_file, indent=4, sort_keys=True)
         print(file=set_file)
+
+@subcommand('import-all')
+def import_all():
+    set_infos = {path.stem: lazyjson.File(path) for path in CUSTOM_SETS.iterdir() if lazyjson.File(path).get('custom', False)}
+    for set_code, set_info in sorted(set_infos.items()):
+        if 'setVersion' in set_info.get('meta', {}):
+            version = set_info['meta']['setVersion'].value()
+        elif 'version' in set_info:
+            version = set_info['version'].value()
+        else:
+            print(f'[ ** ] skipping {set_info["name"]} (no version info found)')
+            continue
+        import_set(set_code, version)
 
 def input_default(question, default, convert=lambda x: x):
     result = input(f'[ ?? ] {question} [{default}]: ').strip()
@@ -549,7 +576,7 @@ def merge_set_jsons(set_json_path, ver_dir, *, old, new, errata):
         try:
             new_card = next(card for card in new['cards'] if card['name'] == original_name)
         except StopIteration as e:
-            print(f'[ !! ] No card named {original_name} (original name of {errata_card["name"]}) found in new set without errata')
+            print(f'[ !! ] no card named {original_name} (original name of {errata_card["name"]}) found in new set without errata')
             new_card = None
         reprint_card, card_name, card = merge_card_fields(reprint_card, old_card, new_card, errata_card, None if reprint_card is None else reprint_set['code'], set_json['code'])
         if 'flavorText' in errata_card:
@@ -590,6 +617,8 @@ def merge_set_jsons(set_json_path, ver_dir, *, old, new, errata):
 
 def reprint_eq(field_name, old_field, new_field):
     def normalized_rules_text(text):
+        if text is None:
+            text = ''
         #text = text.replace('\u2212', '-') # replace Unicode minus used in Oracle text with ASCII hyphen-minus used in MSE
         text = re.sub(' ?\\(.*?\\)', '', text) # remove reminder text #TODO disable this normalization if the old card is from a custom set
         return text
@@ -598,7 +627,7 @@ def reprint_eq(field_name, old_field, new_field):
         return True
     if field_name == 'names' and not old_field and not new_field:
         return True # missing field same as empty list
-    if (old_field is None) != (new_field is None):
+    if field_name != 'text' and (old_field is None) != (new_field is None):
         return False
     #if isinstance(old_field, str) and new_field == old_field.replace('\u2212', '-'):
     #    return True
