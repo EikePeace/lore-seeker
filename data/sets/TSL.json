@@ -1906,7 +1906,7 @@
             ],
             "number": "46a",
             "originalName": "Fugitive Mage",
-            "originalText": "Prowess\nAt the beginning of your upkeep, if you have three or more instant and/or sorcery cards in your graveyard, transform Fugitive Mage.",
+            "originalText": "Prowess\nAt the beginning of your upkeep, if there are three or more instant and/or sorcery cards in your graveyard, transform Fugitive Mage.",
             "originalType": "Creature \u2014 Human Wizard",
             "power": "1",
             "rarity": "uncommon",
@@ -2189,42 +2189,6 @@
             ]
         },
         {
-            "artist": "Luis Melo",
-            "borderColor": "black",
-            "colorIdentity": [
-                "U"
-            ],
-            "colors": [
-                "U"
-            ],
-            "convertedManaCost": 3.0,
-            "flavorText": "\"Lets start with what the consulate is most trying to keep secret.\"\n\u2014Jace",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{2}{U}",
-            "name": "Jace's Informant",
-            "number": "52",
-            "originalName": "Jace's Informant",
-            "originalText": "Prowess\nWhenever you cast a noncreature spell, draw a card, then discard a card.",
-            "originalType": "Creature \u2014 Human Rogue",
-            "power": "2",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Rogue"
-            ],
-            "supertypes": [],
-            "text": "Prowess\nWhenever you cast a noncreature spell, draw a card, then discard a card.",
-            "toughness": "3",
-            "type": "Creature \u2014 Human Rogue",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
             "artist": "Noxypia",
             "borderColor": "black",
             "colorIdentity": [
@@ -2241,7 +2205,7 @@
             "loyalty": "4",
             "manaCost": "{3}{U}{U}",
             "name": "Jace, Oath Keeper",
-            "number": "53",
+            "number": "52",
             "originalName": "Jace, Oath Keeper",
             "originalText": "[+2]: Until your next turn, whenever a creature attacks you or a planeswalker you control, you may draw a card, then discard a card.\n[-2]: The next time you cast an instant or sorcery spell from your hand this turn, put that card into your hand instead of your graveyard as it resolves.\n[-10]: Search your library, hand, and graveyard for up to three instant and/or sorcery cards and exile them. For as long as they remain exiled, you may cast them without paying their mana costs. Shuffle your library.",
             "originalType": "Legendary Planeswalker \u2014 Jace",
@@ -2257,6 +2221,42 @@
             "type": "Legendary Planeswalker \u2014 Jace",
             "types": [
                 "Planeswalker"
+            ]
+        },
+        {
+            "artist": "Luis Melo",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U"
+            ],
+            "colors": [
+                "U"
+            ],
+            "convertedManaCost": 3.0,
+            "flavorText": "\"Lets start with what the consulate is most trying to keep secret.\"\n\u2014Jace",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{2}{U}",
+            "name": "Jace's Informant",
+            "number": "53",
+            "originalName": "Jace's Informant",
+            "originalText": "Prowess\nWhenever you cast a noncreature spell, draw a card, then discard a card.",
+            "originalType": "Creature \u2014 Human Rogue",
+            "power": "2",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Rogue"
+            ],
+            "supertypes": [],
+            "text": "Prowess\nWhenever you cast a noncreature spell, draw a card, then discard a card.",
+            "toughness": "3",
+            "type": "Creature \u2014 Human Rogue",
+            "types": [
+                "Creature"
             ]
         },
         {
@@ -4248,7 +4248,7 @@
             "name": "Zila Officer",
             "number": "108",
             "originalName": "Zila Officer",
-            "originalText": "It is against the law for an opponent to have more life than you.\nJustice \u2014 At the beginning of your upkeep, if any opponents broke any laws since the beginning of your last turn, Zila Patrolman gets +2/+0 until end of turn.",
+            "originalText": "It is against the law for an opponent to have more life than you.\nJustice \u2014 At the beginning of your upkeep, if any opponents broke any laws since the beginning of your last turn, Zila Officer gets +2/+0 until end of turn.",
             "originalType": "Creature \u2014 Human Soldier",
             "power": "2",
             "rarity": "common",
@@ -4452,37 +4452,6 @@
             ]
         },
         {
-            "artist": "Ronald Prasetya Darma",
-            "borderColor": "black",
-            "colorIdentity": [
-                "R"
-            ],
-            "colors": [
-                "R"
-            ],
-            "convertedManaCost": 5.0,
-            "flavorText": "It wasn't long before the consul learned of Chandra's return.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{4}{R}",
-            "name": "Chandra's Greater Fury",
-            "number": "112",
-            "originalName": "Chandra's Greater Fury",
-            "originalText": "Chandra's Greater Fury deals 4 damage to target creature and 1 damage to each other creature you don't control.",
-            "originalType": "Instant",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Chandra's Greater Fury deals 4 damage to target creature and 1 damage to each other creature you don't control.",
-            "type": "Instant",
-            "types": [
-                "Instant"
-            ]
-        },
-        {
             "artist": "Jason Chan",
             "borderColor": "black",
             "colorIdentity": [
@@ -4499,9 +4468,9 @@
             "loyalty": "5",
             "manaCost": "{4}{R}{R}",
             "name": "Chandra, Heart of the Revolt",
-            "number": "113",
+            "number": "112",
             "originalName": "Chandra, Heart of the Revolt",
-            "originalText": "[+1]: Chandra, Heart of the Revolt deals 3 damage divided as you choose among up to three target creatures and/or planeswalkers.\n[0]: Exile the top three cards of your library. Until end of turn, you may play cards exiled this way. Creatures spells cast this way gain haste.\n[-7]: You get an emblem with \"Whenever a creature you control attacks, create a token that's a copy of that creature that's tapped and attacking. Exile the token at end of combat.\"",
+            "originalText": "[+1]: Chandra, Heart of the Revolt deals 3 damage divided as you choose among up to three target creatures and/or planeswalkers.\n[0]: Exile the top three cards of your library. Until end of turn, you may play cards exiled this way. Creature spells cast this way gain haste.\n[-7]: You get an emblem with \"Whenever a creature you control attacks, create a token that's a copy of that creature that's tapped and attacking. Exile the token at end of combat.\"",
             "originalType": "Legendary Planeswalker \u2014 Chandra",
             "rarity": "mythic",
             "rulings": [],
@@ -4534,7 +4503,7 @@
             "layout": "normal",
             "manaCost": "{2}{R}",
             "name": "Chandras Catharsis",
-            "number": "114",
+            "number": "113",
             "originalName": "Chandras Catharsis",
             "originalText": "Exile the top two cards of your library. Until end of turn, you may play cards exiled this way.\nRaid \u2014 If you attacked with a creature this turn, add {R}{R}.",
             "originalType": "Instant",
@@ -4543,6 +4512,37 @@
             "subtypes": [],
             "supertypes": [],
             "text": "Exile the top two cards of your library. Until end of turn, you may play cards exiled this way.\nRaid \u2014 If you attacked with a creature this turn, add {R}{R}.",
+            "type": "Instant",
+            "types": [
+                "Instant"
+            ]
+        },
+        {
+            "artist": "Ronald Prasetya Darma",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "convertedManaCost": 5.0,
+            "flavorText": "It wasn't long before the consul learned of Chandra's return.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{4}{R}",
+            "name": "Chandra's Greater Fury",
+            "number": "114",
+            "originalName": "Chandra's Greater Fury",
+            "originalText": "Chandra's Greater Fury deals 4 damage to target creature and 1 damage to each other creature you don't control.",
+            "originalType": "Instant",
+            "rarity": "uncommon",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Chandra's Greater Fury deals 4 damage to target creature and 1 damage to each other creature you don't control.",
             "type": "Instant",
             "types": [
                 "Instant"
@@ -5768,7 +5768,7 @@
             "name": "Vanara Thrillseeker",
             "number": "142",
             "originalName": "Vanara Thrillseeker",
-            "originalText": "Reach\nVanara Thrillseeker can only block creatures with flying.",
+            "originalText": "Reach\nVanara Thrillseeker can block only creatures with flying.",
             "originalType": "Creature \u2014 Ape Rogue",
             "power": "2",
             "rarity": "common",
@@ -6303,7 +6303,7 @@
             ],
             "number": "156a",
             "originalName": "Endangered Animal",
-            "originalText": "Whenever Endangered Animal becomes the target of an ability from an artifact source, transform it.",
+            "originalText": "When Endangered Animal becomes the target of an ability from an artifact source, transform it.",
             "originalType": "Creature \u2014 Wolf",
             "power": "3",
             "rarity": "uncommon",
@@ -6313,7 +6313,7 @@
                 "Wolf"
             ],
             "supertypes": [],
-            "text": "Whenever Endangered Animal becomes the target of an ability from an artifact source, transform it.",
+            "text": "When Endangered Animal becomes the target of an ability from an artifact source, transform it.",
             "toughness": "3",
             "type": "Creature \u2014 Wolf",
             "types": [
@@ -8169,7 +8169,7 @@
             "name": "Blade of Choices",
             "number": "207",
             "originalName": "Blade of Choices",
-            "originalText": "At the beginning of combat on each turn, equipped creature gains your choice of flying, first strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, trample, or vigilance until end of turn.\nEquip {2}",
+            "originalText": "At the beginning of each combat, equipped creature gains your choice of flying, first strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, trample, or vigilance until end of turn.\nEquip {2}",
             "originalType": "Artifact \u2014 Equipment",
             "rarity": "rare",
             "rulings": [],
@@ -9579,7 +9579,7 @@
     "code": "TSL",
     "custom": true,
     "meta": {
-        "date": "2019-08-26",
+        "date": "2019-12-29",
         "setVersion": "1.05",
         "version": "4.4.1"
     },

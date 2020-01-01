@@ -1,0 +1,25 @@
+%h1 Downloads
+%h2 Big Custom Box
+%p
+  %a{class: "btn btn-outline-primary", href: "/download/trice.zip"}
+    Full Install, Images on Demand
+  &bullet;
+  %a{href: "/download/trice-img.zip"}
+    Full Install, Bundled Images
+  &bullet;
+  %a{href: "/download/bcb.zip"}
+    Loose Files, Images on Demand
+  &bullet;
+  %a{href: "/download/bcb-img.zip"}
+    Loose Files, Bundled Images
+  -#TODO show version info for Cockatrice and the BCB
+%p
+  The Big Custom Box includes all the files needed to play custom formats like
+  = link_to "ECH", controller: "format", action: "show", id: "elder-cockatrice-highlander"
+  or
+  = link_to "Custom Standard", controller: "format", action: "show", id: "custom-standard"
+  using <a href="https://cockatrice.github.io/">Cockatrice</a>.
+%p The <strong>Full Install</strong> boxes come with a portable version of Cockatrice for Windows and are recommended for new players. Just download, unzip, and run cockatrice.exe.
+%p Get a box with <strong>Loose Files</strong> instead if you're on Mac or Linux or if you prefer to add the files to your existing copy of Cockatrice. Please read the included install instructions.
+%p If you use an <strong>Images on Demand</strong> box, Cockatrice will download each card's image the first time it's shown. This is recommended for most players as it decreases the size of the initial download.
+%p Get a box with <strong>Bundled Images</strong> instead if you intend to do offline deckbuilding.

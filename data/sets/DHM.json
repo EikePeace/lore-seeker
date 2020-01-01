@@ -938,10 +938,15 @@
             "originalText": "Whenever you cast your first artifact spell each turn, you may search your library for a nonartifact creature card with power 2 or less, reveal it, and put it into your hand. If you do, shuffle your library.",
             "originalType": "Enchantment",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2019-12-29",
+                    "text": "If you cast an artifact spell, then Suran Pilgrimage, and then another artifact spell, Suran Pilgrimage's ability doesn't trigger."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
-            "text": "Whenever you cast your first artifact spell each turn, you may search your library for a nonartifact creature card with power 2 or less, reveal it, and put it into your hand. If you do, shuffle your library.",
+            "text": "Whenever you cast your first artifact spell each turn, you may search your library for a nonartifact creature card with power 2 or less, reveal it, put it into your hand, then shuffle your library.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
@@ -1849,7 +1854,7 @@
                 "Wizard"
             ],
             "supertypes": [],
-            "text": "Flying\n{T}: Add {C}. Spend this mana only to cast artifact spells. (This mana may be used to cast face down seal spells.)",
+            "text": "Flying\n{T}: Add {C}. Spend this mana only to cast artifact spells. (This mana may be used to cast face-down seal spells.)",
             "toughness": "1",
             "type": "Creature \u2014 Bird Wizard",
             "types": [
@@ -3544,7 +3549,7 @@
                 "Warrior"
             ],
             "supertypes": [],
-            "text": "Warband (Whenever this creature attacks, if it's unpaired, you may pair it with an unpaired attacking creature you control until end of turn.)\nWhenever Blackscar Chieftain becomes paired with a creature, create X 1/1 red Warrior creature tokens that are tapped and attacking, where X is that creature's power. At the beginning of the next end step, exile those tokens.",
+            "text": "Warband (Whenever this creature attacks, if it's unpaired, you may pair it with an unpaired attacking creature you control until end of turn.)\nWhenever Blackscar Chieftain becomes paired with a creature, create X 1/1 red Warrior creature tokens that are tapped and attacking, where X is that creature's power. Exile those tokens at the beginning of the next end step.",
             "toughness": "3",
             "type": "Creature \u2014 Human Warrior",
             "types": [
@@ -4539,15 +4544,10 @@
             "originalText": "Whenever one or more creatures you control attack, for each attacking creature, create a 1/1 red Warrior creature token that's tapped and attacking. Exile it at the beginning of your next end step.",
             "originalType": "Enchantment",
             "rarity": "uncommon",
-            "rulings": [
-                {
-                    "date": "2019-08-25",
-                    "text": "A separate delayed trigger is created to exile each of the tokens."
-                }
-            ],
+            "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Whenever one or more creatures you control attack, for each attacking creature, create a 1/1 red Warrior creature token that's tapped and attacking. Exile it at the beginning of your next end step.",
+            "text": "Whenever one or more creatures you control attack, for each attacking creature, create a 1/1 red Warrior creature token that's tapped and attacking. Exile those tokens at the beginning of your next end step.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
@@ -8443,7 +8443,7 @@
     "code": "DHM",
     "custom": true,
     "meta": {
-        "date": "2019-08-25",
+        "date": "2019-12-29",
         "setVersion": ".84",
         "version": "4.4.1"
     },

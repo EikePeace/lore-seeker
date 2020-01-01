@@ -15,9 +15,9 @@ class Query
   attr_reader :cond, :metadata # for tests only
   attr_writer :sorter # for EXH todo list
 
-  def initialize(query_string, seed=nil, user=nil)
+  def initialize(query_string, seed=nil, user=nil, dev: false)
     @query_string = query_string
-    @cond, @metadata, @warnings = QueryParser.new.parse(query_string)
+    @cond, @metadata, @warnings = QueryParser.new.parse(query_string, dev: dev)
     if needs_seed?
       @seed = seed || "%016x" % rand(0x1_0000_0000_0000_0000)
     else

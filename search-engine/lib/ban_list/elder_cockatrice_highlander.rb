@@ -46,4 +46,16 @@ BanList.for_format("elder cockatrice highlander") do
     "Clean Slate" => "banned",
     "Karn, Heart of Guilt" => "banned",
   )
+
+  change(
+    "2020-01-01",
+    "https://discordapp.com/channels/639419773868048395/639428565070249984/658546949737414656",
+    "Karn, Heart of Guilt" => "legal",
+    "Ashkal Pillarstone" => "banned",
+    "The Circle of Life" => "banned",
+    "Treasure Room of Akhamesses" => "banned",
+    "Dystopilith" => "banned",
+    "Belit, Tel'tor Emissary" => "banned",
+    "Shape Reality" => "banned",
+  )
 end

@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(uid: session[:user_id])
   end
 
+  def dev?
+    request.host_with_port == "dev.lore-seeker.cards"
+  end
+
   def signed_in?
     !!current_user
   end
@@ -32,7 +36,7 @@ class ApplicationController < ActionController::Base
     Color.color_identity_name(color_identity)
   end
 
-  helper_method :current_user, :signed_in?, :exh_card, :color_identity_name
+  helper_method :current_user, :dev?, :signed_in?, :exh_card, :color_identity_name
 
   def current_user=(user)
     @current_user = user

@@ -1355,6 +1355,37 @@
             ]
         },
         {
+            "artist": "Eneada on deviantart",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U"
+            ],
+            "colors": [
+                "U"
+            ],
+            "convertedManaCost": 5.0,
+            "flavorText": "Wisteria the Magnificent's act was to disappear and reappear from thin air. The finale months ago left her audience cheering for an encore to this very day.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{4}{U}",
+            "name": "The Show Must Go On",
+            "number": "40",
+            "originalName": "The Show Must Go On",
+            "originalText": "Imaginarium \u2014 Draw cards equal to the number of colors among cards in your graveyard, then discard a card.",
+            "originalType": "Instant",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Imaginarium \u2014 Draw cards equal to the number of colors among cards in your graveyard, then discard a card.",
+            "type": "Instant",
+            "types": [
+                "Instant"
+            ]
+        },
+        {
             "artist": "Alexandra Khitrova",
             "borderColor": "black",
             "colorIdentity": [
@@ -1371,7 +1402,7 @@
             "layout": "normal",
             "manaCost": "{3}{U}{U}",
             "name": "Silent Riddler",
-            "number": "40",
+            "number": "41",
             "originalName": "Silent Riddler",
             "originalText": "Flying\nVirtuoso \u2014 Whenever you cast a multicolored spell, look at the top three cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
             "originalType": "Creature \u2014 Sphinx Spirit",
@@ -1407,7 +1438,7 @@
             "layout": "normal",
             "manaCost": "{2}{U}{U}",
             "name": "Skyseeker",
-            "number": "41",
+            "number": "42",
             "originalName": "Skyseeker",
             "originalText": "Flying\nWhen Skyseeker enters the battlefield, draw two cards, then discard a card.",
             "originalType": "Creature \u2014 Human Scout",
@@ -1442,7 +1473,7 @@
             "layout": "normal",
             "manaCost": "{1}{U}",
             "name": "Sonata of Somnolence",
-            "number": "42",
+            "number": "43",
             "originalName": "Sonata of Somnolence",
             "originalText": "Tap target creature. It doesn't untap during its controller's next untap step.\nResonance {3}{U} (If you cast this spell for {3}{U}, exile it as it resolves. As you cast your next instant or sorcery spell, put this card into your graveyard and you may add its effects and colors to that spell.)",
             "originalType": "Sorcery",
@@ -1477,7 +1508,7 @@
             "layout": "normal",
             "manaCost": "{4}{U}",
             "name": "Symphonic Harmony",
-            "number": "43",
+            "number": "44",
             "originalName": "Symphonic Harmony",
             "originalText": "Search your library for up to two instant and/or sorcery cards with converted mana cost 3 or less, reveal them, and put them into your hand. Then shuffle your library.\nResonance {5}{U}{U} (If you cast this spell for {5}{U}{U}, exile it as it resolves. As you cast your next instant or sorcery spell, put this card into your graveyard and you may add its effects and colors to that spell.)",
             "originalType": "Sorcery",
@@ -1494,37 +1525,6 @@
             "type": "Sorcery",
             "types": [
                 "Sorcery"
-            ]
-        },
-        {
-            "artist": "Eneada on deviantart",
-            "borderColor": "black",
-            "colorIdentity": [
-                "U"
-            ],
-            "colors": [
-                "U"
-            ],
-            "convertedManaCost": 5.0,
-            "flavorText": "Wisteria the Magnificent's act was to disappear and reappear from thin air. The finale months ago left her audience cheering for an encore to this very day.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{4}{U}",
-            "name": "The Show Must Go On",
-            "number": "44",
-            "originalName": "The Show Must Go On",
-            "originalText": "Imaginarium \u2014 Draw cards equal to the number of colors among cards in your graveyard, then discard a card.",
-            "originalType": "Instant",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Imaginarium \u2014 Draw cards equal to the number of colors among cards in your graveyard, then discard a card.",
-            "type": "Instant",
-            "types": [
-                "Instant"
             ]
         },
         {
@@ -6152,6 +6152,45 @@
             ]
         },
         {
+            "artist": "Derek Fiechter",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U",
+                "W"
+            ],
+            "colors": [
+                "U",
+                "W"
+            ],
+            "convertedManaCost": 4.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{2}{W}{U}",
+            "name": "The Senate of Censures",
+            "number": "175",
+            "originalName": "The Senate of Censures",
+            "originalText": "Vigilance\nWhen The Senate of Censures enters the battlefield, create a colorless artifact token named Decree with \"As this artifact enters the battlefield, choose a card name\" and \"Sacrifice this artifact: Counter target spell with the chosen name.\"",
+            "originalType": "Legendary Creature \u2014 Human Advisor",
+            "power": "3",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Advisor"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Vigilance\nWhen The Senate of Censures enters the battlefield, create a colorless artifact token named Decree with \"As this artifact enters the battlefield, choose a card name\" and \"Sacrifice this artifact: Counter target spell with the chosen name.\"",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Human Advisor",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
             "artist": "Nick Egberts",
             "borderColor": "black",
             "colorIdentity": [
@@ -6170,7 +6209,7 @@
             "layout": "normal",
             "manaCost": "{1}{B}{G}",
             "name": "Shepherd of Souls",
-            "number": "175",
+            "number": "176",
             "originalName": "Shepherd of Souls",
             "originalText": "Other Satyr creatures you control get +1/+1.\n{2}{B}{G}: Return target Satyr card from your graveyard to your hand.",
             "originalType": "Creature \u2014 Satyr Shaman",
@@ -6207,7 +6246,7 @@
             "layout": "normal",
             "manaCost": "{2}{B}{R}",
             "name": "Skiv, Madcap Trickster",
-            "number": "176",
+            "number": "177",
             "originalName": "Skiv, Madcap Trickster",
             "originalText": "When Skiv, Madcap Trickster enters the battlefield, target opponent discards a card at random.\nWhenever an opponent discards a creature card, you may put that card onto the battlefield under your control. If you do, that creature gains haste. Sacrifice it at the beginning of your next end step.",
             "originalType": "Legendary Creature \u2014 Rogue",
@@ -6245,7 +6284,7 @@
             "layout": "normal",
             "manaCost": "{2}{R}{W}",
             "name": "Skyguard Challenger",
-            "number": "177",
+            "number": "178",
             "originalName": "Skyguard Challenger",
             "originalText": "Flying, double strike\nRenown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)",
             "originalType": "Creature \u2014 Human Knight",
@@ -6283,7 +6322,7 @@
             "layout": "normal",
             "manaCost": "{U}{R}",
             "name": "Soaring Pursuits",
-            "number": "178",
+            "number": "179",
             "originalName": "Soaring Pursuits",
             "originalText": "Target creature gets +2/+1 and gains flying and haste until end of turn.",
             "originalType": "Instant",
@@ -6316,7 +6355,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}{B}",
             "name": "Soul Fracture",
-            "number": "179",
+            "number": "180",
             "originalName": "Soul Fracture",
             "originalText": "Target opponent loses 2 life. Create two 1/1 white Spirit creature tokens with flying.",
             "originalType": "Sorcery",
@@ -6348,7 +6387,7 @@
             "layout": "normal",
             "manaCost": "{1}{U}{R}",
             "name": "Sound Blast",
-            "number": "180",
+            "number": "181",
             "originalName": "Sound Blast",
             "originalText": "Choose one \u2014\n\u2022 Counter target noncreature spell unless its controller pays {3}.\n\u2022 Sound Blast deals 3 damage to target creature.",
             "originalType": "Instant",
@@ -6381,7 +6420,7 @@
             "layout": "normal",
             "manaCost": "{2}{R}{W}",
             "name": "Steelborn Muse",
-            "number": "181",
+            "number": "182",
             "originalName": "Steelborn Muse",
             "originalText": "Your opponents can't attack or block with more than one creature each combat.",
             "originalType": "Creature \u2014 Spirit",
@@ -6418,7 +6457,7 @@
             "layout": "normal",
             "manaCost": "{4}{G}{U}",
             "name": "Tales Retold",
-            "number": "182",
+            "number": "183",
             "originalName": "Tales Retold",
             "originalText": "Create a token that's a copy of target permanent card in your graveyard, then return that card to your hand.",
             "originalType": "Sorcery",
@@ -6430,45 +6469,6 @@
             "type": "Sorcery",
             "types": [
                 "Sorcery"
-            ]
-        },
-        {
-            "artist": "Derek Fiechter",
-            "borderColor": "black",
-            "colorIdentity": [
-                "U",
-                "W"
-            ],
-            "colors": [
-                "U",
-                "W"
-            ],
-            "convertedManaCost": 4.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{2}{W}{U}",
-            "name": "The Senate of Censures",
-            "number": "183",
-            "originalName": "The Senate of Censures",
-            "originalText": "Vigilance\nWhen The Senate of Censures enters the battlefield, create a colorless artifact token named Decree with \"As this artifact enters the battlefield, choose a card name\" and \"Sacrifice this artifact: Counter target spell with the chosen name.\"",
-            "originalType": "Legendary Creature \u2014 Human Advisor",
-            "power": "3",
-            "rarity": "mythic",
-            "rulings": [],
-            "subtypes": [
-                "Human",
-                "Advisor"
-            ],
-            "supertypes": [
-                "Legendary"
-            ],
-            "text": "Vigilance\nWhen The Senate of Censures enters the battlefield, create a colorless artifact token named Decree with \"As this artifact enters the battlefield, choose a card name\" and \"Sacrifice this artifact: Counter target spell with the chosen name.\"",
-            "toughness": "3",
-            "type": "Legendary Creature \u2014 Human Advisor",
-            "types": [
-                "Creature"
             ]
         },
         {
@@ -7708,7 +7708,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Target creature gets +2/+0 and gains haste until end of turn.\nYou may cast Skiv's Regards from your graveyard by discarding a nonland card in addition to paying its other costs.",
+            "text": "Target creature gets +2/+0 and gains haste until end of turn.\nYou may cast Skiv's Regards from your graveyard by discarding a nonland card as an additional cost to cast it.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -8953,7 +8953,7 @@
     "code": "AYR",
     "custom": true,
     "meta": {
-        "date": "2019-08-25",
+        "date": "2019-12-29",
         "setVersion": "DOM",
         "version": "4.4.1"
     },

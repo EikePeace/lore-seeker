@@ -49,7 +49,7 @@ class ExhController < ApplicationController
     page = [1, params[:page].to_i].max
     #TODO special section for reprints of implemented cards, if any
     search = "(f:ech or banned:ech) is:mainfront -f:exh"
-    query = Query.new(search)
+    query = Query.new(search, dev: dev?)
     query.sorter = ExhSorter.new(@ech)
     results = $CardDatabase.search(query)
     @cards = results.card_groups.map do |printings|

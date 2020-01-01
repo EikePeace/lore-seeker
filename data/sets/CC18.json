@@ -178,7 +178,7 @@
             "name": "Archangel of Salvation",
             "number": "5",
             "originalName": "Archangel of Salvation",
-            "originalText": "Flying, lifelink\nAt the beginning of each end step, return to the battlefield each creature card that was put into your graveyard from the battlefield this turn.",
+            "originalText": "Flying, lifelink\nAt the beginning of each end step, return to the battlefield all creature cards that were put there from the battlefield this turn.",
             "originalType": "Creature \u2014 Angel",
             "power": "4",
             "rarity": "mythic",
@@ -187,7 +187,7 @@
                 "Angel"
             ],
             "supertypes": [],
-            "text": "Flying, lifelink\nAt the beginning of each end step, return to the battlefield each creature card that was put into your graveyard from the battlefield this turn.",
+            "text": "Flying, lifelink\nAt the beginning of each end step, return to the battlefield all creature cards that were put there from the battlefield this turn.",
             "toughness": "7",
             "type": "Creature \u2014 Angel",
             "types": [
@@ -335,7 +335,7 @@
                 "Aura"
             ],
             "supertypes": [],
-            "text": "Enchant creature\nEnchanted creature has double strike.",
+            "text": "Enchant creature\nEnchanted creature has double strike. (It deals both first-strike and regular combat damage.)",
             "type": "Enchantment \u2014 Aura",
             "types": [
                 "Enchantment"
@@ -621,38 +621,6 @@
             ]
         },
         {
-            "artist": "Kamil Mickiewicz",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 6.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{4}{W}{W}",
-            "name": "Guiding Spirits",
-            "number": "18",
-            "originalName": "Guiding Spirits",
-            "originalText": "Enchant creature\nWhen Guiding Spirits enters the battlefield, create two 1/1 white Spirit creature tokens with flying.\nEnchanted creature gets +2/+2 and has flying.",
-            "originalType": "Enchantment \u2014 Aura",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [
-                "Aura"
-            ],
-            "supertypes": [],
-            "text": "Enchant creature\nWhen Guiding Spirits enters the battlefield, create two 1/1 white Spirit creature tokens with flying.\nEnchanted creature gets +2/+2 and has flying.",
-            "type": "Enchantment \u2014 Aura",
-            "types": [
-                "Enchantment"
-            ]
-        },
-        {
             "artist": "Ryan Lee",
             "borderColor": "black",
             "colorIdentity": [
@@ -668,7 +636,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Immolating Glare",
-            "number": "19",
+            "number": "18",
             "originalName": "Immolating Glare",
             "originalText": "Destroy target attacking creature.",
             "originalType": "Instant",
@@ -698,7 +666,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}{W}",
             "name": "Imperial Banneret",
-            "number": "20",
+            "number": "19",
             "originalName": "Imperial Banneret",
             "originalText": "Battle cry (Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn.)\nWhenever Imperial Banneret and at least two other Knights attack, create a 2/2 white Knight creature token with vigilance that's attacking.",
             "originalType": "Creature \u2014 Human Knight",
@@ -734,7 +702,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Knight Errant",
-            "number": "21",
+            "number": "20",
             "originalName": "Knight Errant",
             "originalType": "Creature \u2014 Human Knight",
             "power": "2",
@@ -768,7 +736,7 @@
             "layout": "normal",
             "manaCost": "{4}{W}",
             "name": "Knight Watch",
-            "number": "22",
+            "number": "21",
             "originalName": "Knight Watch",
             "originalText": "Create two 2/2 white Knight creature tokens with vigilance.",
             "originalType": "Sorcery",
@@ -799,7 +767,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Leonin Snarecaster",
-            "number": "23",
+            "number": "22",
             "originalName": "Leonin Snarecaster",
             "originalText": "When Leonin Snarecaster enters the battlefield, you may tap target creature.",
             "originalType": "Creature \u2014 Cat Soldier",
@@ -835,7 +803,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Marked by Honor",
-            "number": "24",
+            "number": "23",
             "originalName": "Marked by Honor",
             "originalText": "Enchant creature\nEnchanted creature gets +2/+2 and has vigilance. (Attacking doesn't cause it to tap.)",
             "originalType": "Enchantment \u2014 Aura",
@@ -867,7 +835,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}{W}",
             "name": "Niala, Guide of Lost Souls",
-            "number": "25",
+            "number": "24",
             "originalName": "Niala, Guide of Lost Souls",
             "originalText": "Lifelink\nWhenever another non-Spirit creature you control dies, create a 1/1 white Spirit creature token with flying.\n{2}{W}, {T}, Sacrifice three Spirits: Return target creature card from your graveyard to the battlefield.",
             "originalType": "Legendary Creature \u2014 Human Cleric",
@@ -905,7 +873,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Pacifism",
-            "number": "26",
+            "number": "25",
             "originalName": "Pacifism",
             "originalText": "Enchant creature\nEnchanted creature can't attack or block.",
             "originalType": "Enchantment \u2014 Aura",
@@ -937,7 +905,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "People's Champion",
-            "number": "27",
+            "number": "26",
             "originalName": "People's Champion",
             "originalText": "Enchant creature\nEnchanted creature gets +1/+1 for each creature you control.\nAs long as you control five or more creatures, enchanted creature has indestructible.",
             "originalType": "Enchantment \u2014 Aura",
@@ -970,7 +938,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Raise the Alarm",
-            "number": "28",
+            "number": "27",
             "originalName": "Raise the Alarm",
             "originalText": "Create two 1/1 white Soldier creature tokens.",
             "originalType": "Instant",
@@ -1001,7 +969,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "Repel the Darkness",
-            "number": "29",
+            "number": "28",
             "originalName": "Repel the Darkness",
             "originalText": "Tap up to two target creatures.\nDraw a card.",
             "originalType": "Instant",
@@ -1064,7 +1032,7 @@
             "layout": "normal",
             "manaCost": "{W}{W}",
             "name": "Runeblade Knight",
-            "number": "30",
+            "number": "29",
             "originalName": "Runeblade Knight",
             "originalText": "As Runeblade Knight enters the battlefield, choose a card name.\nYou and permanents you control have hexproof from the chosen name. (You and permanents you control can't be the target of spells or abilities your opponents control with the chosen name.)",
             "originalType": "Creature \u2014 Human Knight",
@@ -1100,7 +1068,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Saintly Purifier",
-            "number": "31",
+            "number": "30",
             "originalName": "Saintly Purifier",
             "originalText": "When Saintly Purifier enters the battlefield, exile all cards from all graveyards.",
             "originalType": "Creature \u2014 Human Cleric",
@@ -1135,7 +1103,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Seal of Judgment",
-            "number": "32",
+            "number": "31",
             "originalName": "Seal of Judgment",
             "originalText": "When Seal of Judgment enters the battlefield, exile target nonland permanent an opponent controls until Seal of Judgment leaves the battlefield. (That permanent returns under its owner's control.)\nWhen Seal of Judgment enters the battlefield, you gain 3 life.",
             "originalType": "Enchantment",
@@ -1166,7 +1134,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Seeker of the Way",
-            "number": "33",
+            "number": "32",
             "originalName": "Seeker of the Way",
             "originalText": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast a noncreature spell, Seeker of the Way gains lifelink until end of turn.",
             "originalType": "Creature \u2014 Human Warrior",
@@ -1227,7 +1195,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Serene Meditation",
-            "number": "34",
+            "number": "33",
             "originalName": "Serene Meditation",
             "originalText": "You gain 7 life.",
             "originalType": "Sorcery",
@@ -1258,7 +1226,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}{W}",
             "name": "Serra Angel",
-            "number": "35",
+            "number": "34",
             "originalName": "Serra Angel",
             "originalText": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
             "originalType": "Creature \u2014 Angel",
@@ -1292,7 +1260,7 @@
             "layout": "normal",
             "manaCost": "{W}",
             "name": "Sheltering Light",
-            "number": "36",
+            "number": "35",
             "originalName": "Sheltering Light",
             "originalText": "Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy the creature.)\nScry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
             "originalType": "Instant",
@@ -1304,6 +1272,38 @@
             "type": "Instant",
             "types": [
                 "Instant"
+            ]
+        },
+        {
+            "artist": "Kamil Mickiewicz",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 6.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{4}{W}{W}",
+            "name": "Spiritual Guidance",
+            "number": "36",
+            "originalName": "Spiritual Guidance",
+            "originalText": "Enchant creature\nWhen Spiritual Guidance enters the battlefield, create two 1/1 white Spirit creature tokens with flying.\nEnchanted creature gets +2/+2 and has flying.",
+            "originalType": "Enchantment \u2014 Aura",
+            "rarity": "uncommon",
+            "rulings": [],
+            "subtypes": [
+                "Aura"
+            ],
+            "supertypes": [],
+            "text": "Enchant creature\nWhen Spiritual Guidance enters the battlefield, create two 1/1 white Spirit creature tokens with flying.\nEnchanted creature gets +2/+2 and has flying.",
+            "type": "Enchantment \u2014 Aura",
+            "types": [
+                "Enchantment"
             ]
         },
         {
@@ -1425,7 +1425,7 @@
             "name": "Auspicial Sphinx",
             "number": "40",
             "originalName": "Auspicial Sphinx",
-            "originalText": "Flying\nWhenever Auspicial Sphinx enters the battlefield or deals combat damage to a player, look at the top three cards of your library. Put one of them into our hand and the rest on the bottom of your library in any order.",
+            "originalText": "Flying\nWhenever Auspicial Sphinx enters the battlefield or deals combat damage to a player, look at the top three cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
             "originalType": "Creature \u2014 Sphinx",
             "power": "3",
             "rarity": "rare",
@@ -1434,7 +1434,7 @@
                 "Sphinx"
             ],
             "supertypes": [],
-            "text": "Flying\nWhenever Auspicial Sphinx enters the battlefield or deals combat damage to a player, look at the top three cards of your library. Put one of them into our hand and the rest on the bottom of your library in any order.",
+            "text": "Flying\nWhenever Auspicial Sphinx enters the battlefield or deals combat damage to a player, look at the top three cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
             "toughness": "5",
             "type": "Creature \u2014 Sphinx",
             "types": [
@@ -1752,7 +1752,7 @@
             "name": "Deepwater Serpent",
             "number": "48",
             "originalName": "Deepwater Serpent",
-            "originalText": "Deepwater Serpent can't attack unless you have two or more instant and/or sorcery cards in your graveyard.",
+            "originalText": "Deepwater Serpent can't attack unless there are two or more instant and/or sorcery cards in your graveyard.",
             "originalType": "Creature \u2014 Serpent",
             "power": "5",
             "rarity": "common",
@@ -1892,7 +1892,7 @@
             "name": "Frost Drake",
             "number": "52",
             "originalName": "Frost Drake",
-            "originalText": "Flash (You may cast this spell any time you could cast an instant.)\nFlying (This creature can't be blocked except by creatures with flying or reach.)\nWhen Frost Drake enters the battlefield, tap target creature you don't control. It doesn't untap during its controller's next untap step.",
+            "originalText": "Flash (You may cast this spell any time you could cast an instant.)\nFlying (This creature can't be blocked except by creatures with flying or reach.)\nWhen Frost Drake enters the battlefield, tap target creature you don't control. That creature doesn't untap during its controller's next untap step.",
             "originalType": "Creature \u2014 Elemental Drake",
             "power": "3",
             "rarity": "uncommon",
@@ -1902,7 +1902,7 @@
                 "Drake"
             ],
             "supertypes": [],
-            "text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying (This creature can't be blocked except by creatures with flying or reach.)\nWhen Frost Drake enters the battlefield, tap target creature you don't control. It doesn't untap during its controller's next untap step.",
+            "text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying (This creature can't be blocked except by creatures with flying or reach.)\nWhen Frost Drake enters the battlefield, tap target creature you don't control. That creature doesn't untap during its controller's next untap step.",
             "toughness": "3",
             "type": "Creature \u2014 Elemental Drake",
             "types": [
@@ -2738,13 +2738,13 @@
             "name": "Wash Away",
             "number": "73",
             "originalName": "Wash Away",
-            "originalText": "Put two target creatures on top of their owner's library. (The owner of those creatures decide the order that the creatures are put on top)",
+            "originalText": "Put up to two target creatures on top of their owners' libraries. (The owner of those creatures decide the order that the creatures are put on top)",
             "originalType": "Sorcery",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Put two target creatures on top of their owner's library. (The owner of those creatures decide the order that the creatures are put on top)",
+            "text": "Put up to two target creatures on top of their owners' libraries. (The owner of those creatures decide the order that the creatures are put on top.)",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -2813,7 +2813,7 @@
             "name": "Wavecrash Leviathan",
             "number": "75",
             "originalName": "Wavecrash Leviathan",
-            "originalText": "Trample\nWhen Wavecrash Leviathan enters the battlefield, return all other creatures to their owner's hands.",
+            "originalText": "Trample\nWhen Wavecrash Leviathan enters the battlefield, return all other creatures to their owners' hands.",
             "originalType": "Creature \u2014 Leviathan",
             "power": "8",
             "rarity": "rare",
@@ -2822,7 +2822,7 @@
                 "Leviathan"
             ],
             "supertypes": [],
-            "text": "Trample\nWhen Wavecrash Leviathan enters the battlefield, return all other creatures to their owner's hands.",
+            "text": "Trample\nWhen Wavecrash Leviathan enters the battlefield, return all other creatures to their owners' hands.",
             "toughness": "8",
             "type": "Creature \u2014 Leviathan",
             "types": [
@@ -2905,7 +2905,7 @@
             ]
         },
         {
-            "artist": "Dante Corvus",
+            "artist": "DanteCyberMan",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -3396,12 +3396,13 @@
                 }
             ],
             "subtypes": [
-                "Vampire"
+                "Vampire",
+                "Noble"
             ],
             "supertypes": [],
             "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Falkenrath Noble or another creature dies, target player loses 1 life and you gain 1 life.",
             "toughness": "2",
-            "type": "Creature \u2014 Vampire",
+            "type": "Creature \u2014 Vampire Noble",
             "types": [
                 "Creature"
             ]
@@ -3426,18 +3427,18 @@
             "number": "93",
             "originalName": "Fallen Aristocrat",
             "originalText": "When Fallen Aristocrat dies, create a 2/2 black Zombie creature token.",
-            "originalType": "Creature \u2014 Human Advisor",
+            "originalType": "Creature \u2014 Human Noble",
             "power": "1",
             "rarity": "common",
             "rulings": [],
             "subtypes": [
                 "Human",
-                "Advisor"
+                "Noble"
             ],
             "supertypes": [],
             "text": "When Fallen Aristocrat dies, create a 2/2 black Zombie creature token.",
             "toughness": "1",
-            "type": "Creature \u2014 Human Advisor",
+            "type": "Creature \u2014 Human Noble",
             "types": [
                 "Creature"
             ]
@@ -3505,18 +3506,18 @@
             "number": "95",
             "originalName": "Grim Necromancer",
             "originalText": "{1}{B}, {T}, Sacrifice a creature: You gain 2 life.\n{1}{B}, {T}: Exile target creature card from a graveyard. Create a 2/2 black Zombie creature token.",
-            "originalType": "Creature \u2014 Human Wizard",
+            "originalType": "Creature \u2014 Human Warlock",
             "power": "2",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [
                 "Human",
-                "Wizard"
+                "Warlock"
             ],
             "supertypes": [],
             "text": "{1}{B}, {T}, Sacrifice a creature: You gain 2 life.\n{1}{B}, {T}: Exile target creature card from a graveyard. Create a 2/2 black Zombie creature token.",
             "toughness": "2",
-            "type": "Creature \u2014 Human Wizard",
+            "type": "Creature \u2014 Human Warlock",
             "types": [
                 "Creature"
             ]
@@ -3577,18 +3578,18 @@
             "number": "97",
             "originalName": "Keeper of Dark Secrets",
             "originalText": "Deathtouch\nMorbid \u2014 When Keeper of Dark Secrets enters the battlefield, if a creature died this turn, you may pay 2 life. If you do, draw two cards.",
-            "originalType": "Creature \u2014 Human Wizard",
+            "originalType": "Creature \u2014 Human Warlock",
             "power": "2",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [
                 "Human",
-                "Wizard"
+                "Warlock"
             ],
             "supertypes": [],
             "text": "Deathtouch\nMorbid \u2014 When Keeper of Dark Secrets enters the battlefield, if a creature died this turn, you may pay 2 life. If you do, draw two cards.",
             "toughness": "1",
-            "type": "Creature \u2014 Human Wizard",
+            "type": "Creature \u2014 Human Warlock",
             "types": [
                 "Creature"
             ]
@@ -3968,6 +3969,41 @@
             ]
         },
         {
+            "artist": "theDURRRIAN",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B"
+            ],
+            "colors": [
+                "B"
+            ],
+            "convertedManaCost": 5.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "loyalty": "4",
+            "manaCost": "{3}{B}{B}",
+            "name": "Sorin, Lord of Vengeance",
+            "number": "108",
+            "originalName": "Sorin, Lord of Vengeance",
+            "originalText": "[+2]: Sorin, Lord of Vengeance deals 2 damage to up to one target creature. You gain 2 life.\n[-2]: Create a 2/2 black Vampire Knight creature token with flying and lifelink.\n[-10]: Target opponent discards their hand. Put up to three creature and/or planeswalker cards from that player's graveyard onto the battlefield under your control.",
+            "originalType": "Legendary Planeswalker \u2014 Sorin",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Sorin"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "[+2]: Sorin, Lord of Vengeance deals 2 damage to up to one target creature. You gain 2 life.\n[-2]: Create a 2/2 black Vampire Knight creature token with flying and lifelink.\n[-10]: Target opponent discards their hand. Put up to three creature and/or planeswalker cards from that player's graveyard onto the battlefield under your control.",
+            "type": "Legendary Planeswalker \u2014 Sorin",
+            "types": [
+                "Planeswalker"
+            ]
+        },
+        {
             "artist": "Karl Kopinski",
             "borderColor": "black",
             "colorIdentity": [
@@ -3984,7 +4020,7 @@
             "layout": "normal",
             "manaCost": "{B}{B}",
             "name": "Sorin's Thirst",
-            "number": "108",
+            "number": "109",
             "originalName": "Sorin's Thirst",
             "originalText": "Sorin's Thirst deals 2 damage to target creature and you gain 2 life.",
             "originalType": "Instant",
@@ -4009,41 +4045,6 @@
             "type": "Instant",
             "types": [
                 "Instant"
-            ]
-        },
-        {
-            "artist": "theDURRRIAN",
-            "borderColor": "black",
-            "colorIdentity": [
-                "B"
-            ],
-            "colors": [
-                "B"
-            ],
-            "convertedManaCost": 5.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "loyalty": "4",
-            "manaCost": "{3}{B}{B}",
-            "name": "Sorin, Lord of Vengeance",
-            "number": "109",
-            "originalName": "Sorin, Lord of Vengeance",
-            "originalText": "[+2]: Sorin, Lord of Vengeance deals 2 damage to up to one target creature. You gain 2 life.\n[-2]: Create a 2/2 black Vampire Knight creature token with flying and lifelink.\n[-10]: Target opponent discards their hand. Put up to three creature and/or planeswalker cards from that player's graveyard onto the battlefield under your control.",
-            "originalType": "Legendary Planeswalker \u2014 Sorin",
-            "rarity": "mythic",
-            "rulings": [],
-            "subtypes": [
-                "Sorin"
-            ],
-            "supertypes": [
-                "Legendary"
-            ],
-            "text": "[+2]: Sorin, Lord of Vengeance deals 2 damage to up to one target creature. You gain 2 life.\n[-2]: Create a 2/2 black Vampire Knight creature token with flying and lifelink.\n[-10]: Target opponent discards their hand. Put up to three creature and/or planeswalker cards from that player's graveyard onto the battlefield under your control.",
-            "type": "Legendary Planeswalker \u2014 Sorin",
-            "types": [
-                "Planeswalker"
             ]
         },
         {
@@ -4169,18 +4170,18 @@
             "number": "113",
             "originalName": "Vengeful Sadist",
             "originalText": "Morbid \u2014 When Vengeful Sadist enters the battlefield, if a creature died this turn, target opponent discards a card.",
-            "originalType": "Creature \u2014 Zombie Wizard",
+            "originalType": "Creature \u2014 Zombie Warlock",
             "power": "2",
             "rarity": "common",
             "rulings": [],
             "subtypes": [
                 "Zombie",
-                "Wizard"
+                "Warlock"
             ],
             "supertypes": [],
             "text": "Morbid \u2014 When Vengeful Sadist enters the battlefield, if a creature died this turn, target opponent discards a card.",
             "toughness": "1",
-            "type": "Creature \u2014 Zombie Wizard",
+            "type": "Creature \u2014 Zombie Warlock",
             "types": [
                 "Creature"
             ]
@@ -4417,7 +4418,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Brimstone Volley deals 3 damage to any target.\nMorbid \u2014 Brimstone Volley deals 5 damage to that permanent or player instead if a creature died this turn.",
+            "text": "Brimstone Volley deals 3 damage to any target.\nMorbid \u2014 Brimstone Volley deals 5 damage instead if a creature died this turn.",
             "type": "Instant",
             "types": [
                 "Instant"
@@ -4907,7 +4908,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "[+1]: Untap target Mountain you control. It becomes a 4/4 red Elemental creature with haste that's still a land.\n[-3]: Koth, Fury of Kuldotha deals damage to target creature equal to the number of Mountains you control.\n[-9]: Search your library for any number of Mountain cards, put them onto the battlefield, then shuffle your library. Koth deals damage to each opponent equal to the number of Mountains you control.",
+            "text": "[+1]: Untap target Mountain you control. It becomes a 4/4 red Elemental creature with haste. It's still a land. (This effect lasts indefinitely.)\n[-3]: Koth, Fury of Kuldotha deals damage to target creature equal to the number of Mountains you control.\n[-9]: Search your library for any number of Mountain cards, put them onto the battlefield, then shuffle your library. Koth deals damage to each opponent equal to the number of Mountains you control.",
             "type": "Legendary Planeswalker \u2014 Koth",
             "types": [
                 "Planeswalker"
@@ -5567,7 +5568,7 @@
             "name": "Wild Imagination",
             "number": "152",
             "originalName": "Wild Imagination",
-            "originalText": "Reveal your hand to all players. Target opponent chooses a nonland card from your hand. Cast that card without paying its mana cost.",
+            "originalText": "Reveal your hand to all players. Target opponent chooses a nonland card from your hand. Cast that card without paying its mana cost if able.",
             "originalType": "Sorcery",
             "rarity": "mythic",
             "rulings": [],
@@ -5791,40 +5792,6 @@
             ]
         },
         {
-            "artist": "Spencer Owen",
-            "borderColor": "black",
-            "colorIdentity": [
-                "G"
-            ],
-            "colors": [
-                "G"
-            ],
-            "convertedManaCost": 3.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{X}{G}{G}{G}",
-            "name": "CC18:Voracious Hydra",
-            "number": "159",
-            "originalName": "Voracious Hydra",
-            "originalText": "Voracious Hydra enters the battlefield with X +1/+1 counters on it.\nWhenever Voracious Hydra deals combat damage to a player, put three +1/+1 counters on it.",
-            "originalType": "Creature \u2014 Hydra",
-            "power": "3",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [
-                "Hydra"
-            ],
-            "supertypes": [],
-            "text": "CC18:Voracious Hydra enters the battlefield with X +1/+1 counters on it.\nWhenever CC18:Voracious Hydra deals combat damage to a player, put three +1/+1 counters on it.",
-            "toughness": "3",
-            "type": "Creature \u2014 Hydra",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
             "artist": "Vance Kovacs",
             "borderColor": "black",
             "colorIdentity": [
@@ -5841,7 +5808,7 @@
             "layout": "normal",
             "manaCost": "{2}{G}",
             "name": "Centaur Courser",
-            "number": "160",
+            "number": "159",
             "originalName": "Centaur Courser",
             "originalType": "Creature \u2014 Centaur Warrior",
             "power": "3",
@@ -5875,7 +5842,7 @@
             "layout": "normal",
             "manaCost": "{5}{G}{G}",
             "name": "Charging Primadox",
-            "number": "161",
+            "number": "160",
             "originalName": "Charging Primadox",
             "originalText": "Trample, haste\nWhenever Charging Primadox attacks, it gains indestructible until end of turn.",
             "originalType": "Creature \u2014 Beast",
@@ -5910,7 +5877,7 @@
             "layout": "normal",
             "manaCost": "{4}{G}{G}",
             "name": "Colossal Wurm",
-            "number": "162",
+            "number": "161",
             "originalName": "Colossal Wurm",
             "originalText": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
             "originalType": "Creature \u2014 Wurm",
@@ -5945,7 +5912,7 @@
             "layout": "normal",
             "manaCost": "{2}{G}",
             "name": "Cultivate",
-            "number": "163",
+            "number": "162",
             "originalName": "Cultivate",
             "originalText": "Search your library for up to two basic land cards, reveal those cards, and put one onto the battlefield tapped and the other into your hand. Then shuffle your library.",
             "originalType": "Sorcery",
@@ -5981,7 +5948,7 @@
             "layout": "normal",
             "manaCost": "{1}{G}",
             "name": "Elvish Visionary",
-            "number": "164",
+            "number": "163",
             "originalName": "Elvish Visionary",
             "originalText": "When Elvish Visionary enters the battlefield, draw a card.",
             "originalType": "Creature \u2014 Elf Shaman",
@@ -6017,7 +5984,7 @@
             "layout": "normal",
             "manaCost": "{1}{G}",
             "name": "Feral Bear",
-            "number": "165",
+            "number": "164",
             "originalName": "Feral Bear",
             "originalText": "Morbid \u2014 Feral Bear enters the battlefield with a +1/+1 counter on it if a creature died this turn.",
             "originalType": "Creature \u2014 Bear",
@@ -6052,7 +6019,7 @@
             "loyalty": "3",
             "manaCost": "{2}{G}{G}",
             "name": "Garruk Wildspeaker",
-            "number": "166",
+            "number": "165",
             "originalName": "Garruk Wildspeaker",
             "originalText": "[+1]: Untap two target lands.\n[-1]: Create a 3/3 green Beast creature token.\n[-4]: Creatures you control get +3/+3 and gain trample until end of turn.",
             "originalType": "Legendary Planeswalker \u2014 Garruk",
@@ -6104,7 +6071,7 @@
             "layout": "normal",
             "manaCost": "{3}{G}",
             "name": "Giant Spider",
-            "number": "167",
+            "number": "166",
             "originalName": "Giant Spider",
             "originalText": "Reach (This creature can block creatures with flying.)",
             "originalType": "Creature \u2014 Spider",
@@ -6143,7 +6110,7 @@
             "layout": "normal",
             "manaCost": "{5}{G}",
             "name": "Gravetiller Wurm",
-            "number": "168",
+            "number": "167",
             "originalName": "Gravetiller Wurm",
             "originalText": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nMorbid \u2014 Gravetiller Wurm enters the battlefield with four +1/+1 counters on it if a creature died this turn.",
             "originalType": "Creature \u2014 Wurm",
@@ -6178,7 +6145,7 @@
             "layout": "normal",
             "manaCost": "{3}{G}{G}",
             "name": "Greater Basilisk",
-            "number": "169",
+            "number": "168",
             "originalName": "Greater Basilisk",
             "originalText": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
             "originalType": "Creature \u2014 Basilisk",
@@ -6213,7 +6180,7 @@
             "layout": "normal",
             "manaCost": "{3}{G}{G}",
             "name": "Indomitable Charge",
-            "number": "170",
+            "number": "169",
             "originalName": "Indomitable Charge",
             "originalText": "Target creature you control must be blocked this turn if able.\nCreatures you control get +2/+2 until end of turn.",
             "originalType": "Sorcery",
@@ -6225,6 +6192,41 @@
             "type": "Sorcery",
             "types": [
                 "Sorcery"
+            ]
+        },
+        {
+            "artist": "Spencer Owen",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G"
+            ],
+            "colors": [
+                "G"
+            ],
+            "convertedManaCost": 3.0,
+            "flavorText": "Words cannot express its hunger.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{X}{G}{G}{G}",
+            "name": "Insatiable Hydra",
+            "number": "170",
+            "originalName": "Insatiable Hydra",
+            "originalText": "Insatiable Hydra enters the battlefield with X +1/+1 counters on it.\nWhenever Insatiable Hydra deals combat damage to a player, put three +1/+1 counters on it.",
+            "originalType": "Creature \u2014 Hydra",
+            "power": "3",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [
+                "Hydra"
+            ],
+            "supertypes": [],
+            "text": "Insatiable Hydra enters the battlefield with X +1/+1 counters on it.\nWhenever Insatiable Hydra deals combat damage to a player, put three +1/+1 counters on it.",
+            "toughness": "3",
+            "type": "Creature \u2014 Hydra",
+            "types": [
+                "Creature"
             ]
         },
         {
@@ -8997,8 +8999,8 @@
     "code": "CC18",
     "custom": true,
     "meta": {
-        "date": "2019-08-25",
-        "setVersion": "1.2.0",
+        "date": "2019-12-29",
+        "setVersion": "1.2.1",
         "version": "4.4.1"
     },
     "name": "Custom Core 2018",

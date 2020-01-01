@@ -1,6 +1,6 @@
 {
     "base": "2019-10-04",
-    "effective": "2019-10-04",
+    "effective": "2020-01-01",
     "patches": [
         {
             "sets": [
@@ -80,13 +80,18 @@
                 {
                     "type": "replace",
                     "rule": "107.15a",
-                    "find": "Saga",
-                    "replace": "enchantment"
+                    "find": "means",
+                    "replace": "on a Saga means"
+                },
+                {
+                    "type": "insert",
+                    "rule": "107.15b",
+                    "text": "“{rN}—[Effect]” on a Discovery means “When one or more progress counters are put onto this Discovery, if the number of progress counters on it was less than N and became at least N, [effect].”"
                 },
                 {
                     "type": "add",
                     "rule": "107.15",
-                    "text": "The discover symbol is {DISCOVER}. {DISCOVER} is a chapter symbol. The text box of a Discovery card also includes {DISCOVER}, which is a keyword ability that represents a static ability. The text printed in the text box striation to the right of {DISCOVER} is an ability granted by the static ability it represents. “{DISCOVER}—[Ability]” means “As long as the number of lore counters on this Discovery is greater than its final chapter number, it has [ability].”"
+                    "text": "The discover symbol is {DISCOVER}. {DISCOVER} is a chapter symbol. The text box of a Discovery card also includes {DISCOVER}, which is a keyword ability that represents a static ability. The text printed in the text box striation to the right of {DISCOVER} is an ability granted by the static ability it represents. “{DISCOVER}—[Ability]” means “As long as the number of progress counters on this Discovery is greater than its final chapter number, it has [ability].”"
                 },
                 {
                     "type": "replaceRule",
@@ -97,13 +102,13 @@
                     "type": "replace",
                     "rule": "505.4",
                     "find": "Saga enchantments",
-                    "replace": "Discovery enchantments with no more lore counters on them than their final chapter number and/or Saga enchantments"
+                    "replace": "Discovery enchantments with no more progress counters on them than their final chapter number and/or Saga enchantments"
                 },
                 {
                     "type": "replace",
                     "rule": "505.4",
                     "find": "each Saga they control",
-                    "replace": "each of those permanents"
+                    "replace": "each of those permanents that's a Saga and a progress counter on each of those permanents that's a Discovery"
                 },
                 {
                     "type": "replace",
@@ -114,8 +119,8 @@
                 {
                     "type": "replace",
                     "rule": "703.4e",
-                    "find": "each Saga enchantment they control",
-                    "replace": "each Discovery enchantment they control with no more lore counters on it than its final chapter number and each Saga enchantment they control"
+                    "find": "a lore counter on each Saga enchantment they control",
+                    "replace": "a progress counter on each Discovery enchantment they control with no more lore counters on it than its final chapter number and a lore counter on each Saga enchantment they control"
                 },
                 {
                     "type": "replace",
@@ -156,37 +161,41 @@
                 {
                     "type": "replace",
                     "rule": "714.2b",
-                    "find": "Saga",
-                    "replace": "enchantment"
+                    "find": "means",
+                    "replace": "on a Saga means"
+                },
+                {
+                    "type": "insert",
+                    "rule": "714.2c",
+                    "text": "“{rN}—[Effect]” on a Discovery means “When one or more progress counters are put onto this Discovery, if the number of progress counters on it was less than N and became at least N, [effect].”"
                 },
                 {
                     "type": "replace",
-                    "rule": "714.2d",
+                    "rule": "714.2e",
                     "find": "Saga",
                     "replace": "Discovery or Saga"
                 },
                 {
                     "type": "add",
                     "rule": "714.2",
-                    "text": "A Discovery also has an additional chapter ability that uses the chapter symbol {DISCOVER}. “{DISCOVER}—[Abiltiy]” means “As long as the number of lore counters on this Discovery is greater than its final chapter number, it has [ability].” This chapter ability doesn't affect the Discovery's final chapter number."
+                    "text": "A Discovery also has an additional chapter ability that uses the chapter symbol {DISCOVER}. “{DISCOVER}—[Abiltiy]” means “As long as the number of progress counters on this Discovery is greater than its final chapter number, it has [ability].” This chapter ability doesn't affect the Discovery's final chapter number."
                 },
                 {
                     "type": "replace",
                     "rule": "714.3",
-                    "find": "Sagas",
-                    "replace": "Discoveries and Sagas"
+                    "find": "\\.",
+                    "replace": ", while Discoveries use progress counters."
                 },
                 {
-                    "type": "replace",
-                    "rule": "714.3a",
-                    "find": "Saga",
-                    "replace": "Discovery or Saga"
-                },
-                {
-                    "type": "replace",
+                    "type": "insert",
                     "rule": "714.3b",
-                    "find": "each Saga they control",
-                    "replace": "each Discovery they control with no more lore counters on it than its final chapter number and each Saga they control"
+                    "text": "As a Discovery enters the battlefield, its controller puts a progress counter on it."
+                },
+                {
+                    "type": "replace",
+                    "rule": "714.3c",
+                    "find": "a lore counter on each Saga they control",
+                    "replace": "a progress counter on each Discovery they control with no more lore counters on it than its final chapter number and a lore counter on each Saga they control"
                 }
             ]
         },
@@ -501,6 +510,19 @@
         },
         {
             "sets": [
+                "SRC"
+            ],
+            "comment": "For {card:Morgue Manager}, define what happens when a card is put from a graveyard into the graveyard",
+            "rules": [
+                {
+                    "type": "add",
+                    "rule": "404",
+                    "text": "If an object in a graveyard is put into a graveyard, it doesn't change zones (see rule 400.3) and doesn't become a new object, but it's moved to the top of that graveyard. If multiple objects are moved this way at the same time, their owner may arrange them in any order."
+                }
+            ]
+        },
+        {
+            "sets": [
                 "DHM"
             ],
             "comment": "Structures can be attacked",
@@ -745,10 +767,9 @@
         },
         {
             "sets": [
-                "VST",
                 "SOU"
             ],
-            "comment": "For {card:Sandwarp} and {card:Blazing Offerings}, this rule links optional additional costs to effects checking whether they were paid",
+            "comment": "For {card:Blazing Offerings}, this rule links optional additional costs to effects checking whether they were paid",
             "rules": [
                 {
                     "type": "add",
@@ -867,6 +888,19 @@
         },
         {
             "sets": [
+                "SRC"
+            ],
+            "comment": "This rule defines the game term “to commit a crime”",
+            "rules": [
+                {
+                    "type": "insert",
+                    "rule": "700.11",
+                    "text": "The term commits a crime means “casts a spell on an opponent's turn or deals combat damage to an opponent with one or more creatures.”"
+                }
+            ]
+        },
+        {
+            "sets": [
                 "TSL"
             ],
             "comment": "The recharge keyword action is defined here",
@@ -884,7 +918,8 @@
         },
         {
             "sets": [
-                "HLW"
+                "HLW",
+                "VST"
             ],
             "comment": "The journey keyword action and the game term “journeyed” are defined here",
             "rules": [
@@ -1329,25 +1364,6 @@
         },
         {
             "sets": [
-                "VST"
-            ],
-            "comment": "The salvage keyword ability is defined here",
-            "rules": [
-                {
-                    "type": "addKeywordAbility",
-                    "rule": {
-                        "text": "Salvage",
-                        "subrules": [
-                            "Salvage is an activated ability that functions while the card with salvage is in a graveyard. “Salvage [cost]” means “[Cost], Exile this card from your graveyard: Draw a card.”",
-                            "Some cards have abilities that trigger whenever a card is salvaged. “Whenever you salvage a card” means “Whenever you exile a card to pay an activation cost of a salvage ability.”",
-                            "Some cards with salvage have abilities that trigger when they're salvaged. These abilities trigger from whatever zone the card winds up in after it's salvaged."
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "sets": [
                 "DHM"
             ],
             "comment": "The seal keyword ability is defined here",
@@ -1364,7 +1380,7 @@
                             "Seal is a static ability that functions in any zone from which you could play the card it's on, and the seal effect works any time the card is face down. “Seal [cost]” means “You may cast this card as a face-down Relic artifact with no text, no name, and no mana cost by paying {2} rather than paying its mana cost.” (See rule 707, “Face-Down Spells and Permanents.”)",
                             "To cast a card using its seal ability, turn it face down. It becomes a face-down Relic artifact card with no text, no name, and no mana cost. Any effects or prohibitions that would apply to casting a card with these characteristics (and not the face-up card's characteristics) are applied to casting this card. These values are the copiable values of that object's characteristics. (See rule 613, “Interaction of Continuous Effects,” and rule 706, “Copying Objects.”) Put it onto the stack (as a face-down spell with the same characteristics), and pay {2} rather than pay its mana cost. This follows the rules for paying alternative costs. You can use a seal ability to cast a card from any zone from which you could normally play it. When the spell resolves, it enters the battlefield with the same characteristics the spell had. The seal effect applies to the face-down object wherever it is, and it ends when the permanent is turned face up.",
                             "Any time you have priority, you may exile a face-down permanent you control, then cast it for its seal cost. This is a special action; it doesn't use the stack (see rule 116). To do this, show all players what the permanent's seal cost would be if it were face up, exile it, then cast it for that cost. This follows the rules for paying alternative costs. (If the permanent wouldn't have a seal cost if it were face up, it can't be exiled this way.) The card is turned face up and the seal effect on it ends as soon as it's exiled, and it regains its normal characteristics. Exiling and casting the card is considered a single action for the purposes of reversing illegal spells. If the spell proposal of casting the card for its seal cost is reversed, the action of exiling it is also reversed, returning it to the battlefield. (See rule 722, “Handling Illegal Actions.”)",
-                            "If a spell's controller declares the intention to pay that spell's seal cost, that spell has been “sealed.” If a spell has multiple seal costs, it may be sealed multiple times. See rule 601.2b.",
+                            "If a spell's controller declares the intention to pay that spell's seal cost, that spell has been “sealed.”",
                             "Objects with seal may have additional abilities that check whether they were sealed. These abilities are linked to the seal ability printed on that object: they can refer only to its printed seal ability. See rule 607, “Linked Abilities.”",
                             "See rule 707, “Face-Down Spells and Permanents,” for more information about how to cast cards with seal."
                         ]
@@ -1420,10 +1436,8 @@
                     "rule": {
                         "text": "Voyage",
                         "subrules": [
-                            "Voyage is a triggered ability that functions while a spell with voyage is on the stack, as well as in all zones from which an object with voyage can be played as a land. “Voyage” means “When you play this object, if you don't have a voyage emblem, you get a voyage emblem with ‘{W}: Put a white counter on this emblem. Activate this ability only if this emblem doesn't have a white counter on it and only if this ability isn't on the stack’, ‘{U}: Put a blue counter on this emblem. Activate this ability only if this emblem doesn't have a blue counter on it and only if this ability isn't on the stack’, ‘{B}: Put a black counter on this emblem. Activate this ability only if this emblem doesn't have a black counter on it and only if this ability isn't on the stack’, ‘{R}: Put a red counter on this emblem. Activate this ability only if this emblem doesn't have a red counter on it and only if this ability isn't on the stack’, ‘{G}: Put a green counter on this emblem. Activate this ability only if this emblem doesn't have a green counter on it and only if this ability isn't on the stack’, and ‘When this emblem has a white counter, a blue counter, a black counter, a red counter, and a green counter on it, if you haven't discovered paradise, you discover paradise for the rest of the game.’”",
-                            "A voyage emblem is a kind of emblem that can be identified as such by the voyage ability. Voyage is not a supertype, card type, or subtype.",
-                            "Discovering paradise is an event that has no rules meaning other than to act as a marker that other rules and effects can identify. Any number of players may discover paradise at the same time or at different times.",
-                            "After a player discovers paradise, continuous effects are reapplied before the game checks to see if the game state or preceding events have matched any trigger conditions."
+                            "Voyage is an activated ability. “Voyage” means “{W}{U}{B}{R}{G}: If you don't control any permanents named Paradise, create Paradise, a legendary land token with hexproof and ‘{T}: Add one mana of any color.’”",
+                            "Some spells and abilities refer to whether a player “controls Paradise”. For this purpose, “Paradise” means “a permanent named Paradise”."
                         ]
                     }
                 }
@@ -1502,6 +1516,44 @@
                         "subrules": [
                             "Assault is a triggered ability. “Assault [cost]” means “Whenever this creature attacks, if it has no +1/+1 counters on it, you may pay [cost]. If you do, put a +1/+1 counter on this creature.”",
                             "A permanent “assaults” when its assault cost is paid, regardless of whether any counters are put on it."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "sets": [
+                "SRC"
+            ],
+            "comment": "The accomplice keyword ability is defined here",
+            "rules": [
+                {
+                    "type": "addKeywordAbility",
+                    "rule": {
+                        "text": "Accomplice",
+                        "subrules": [
+                            "Accomplice is a triggered ability. “Accomplice” means “Whenever another creature you control attacks, you may tap this creature.”",
+                            "A creature “becomes an accomplice to [a creature]” when the former creature is tapped as a result of a resolving accomplice ability that triggered from the latter creature's being declared as an attacker. The latter creature is also called the creature the former creature accompliced."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "sets": [
+                "SRC"
+            ],
+            "comment": "The undercover keyword ability is defined here",
+            "rules": [
+                {
+                    "type": "addKeywordAbility",
+                    "rule": {
+                        "text": "Undercover",
+                        "subrules": [
+                            "Undercover is a static ability that functions in any zone from which you could play the card it's on, and the undercover effect works any time the card is face down. “Undercover [cost]” means “You may cast this card as a 2/2 face-down creature with no text, no name, no subtypes, and no mana cost by paying {3} rather than paying its mana cost.” (See rule 707, “Face-Down Spells and Permanents.”)",
+                            "To cast a card using its undercover ability, turn it face down. It becomes a 2/2 face-down creature card with no text, no name, no subtypes, and no mana cost. Any effects or prohibitions that would apply to casting a card with these characteristics (and not the face-up card's characteristics) are applied to casting this card. These values are the copiable values of that object's characteristics. (See rule 613, “Interaction of Continuous Effects,” and rule 706, “Copying Objects.”) Put it onto the stack (as a face-down spell with the same characteristics), and pay {3} rather than pay its mana cost. This follows the rules for paying alternative costs. You can use an undercover ability to cast a card from any zone from which you could normally play it. When the spell resolves, it enters the battlefield with the same characteristics the spell had. The undercover effect applies to the face-down object wherever it is, and it ends when the permanent is exiled or turned face up.",
+                            "If a face-down permanent that was cast for its undercover cost would die, instead its controller exiles it face down. No player looks at or reveals the card as it's exiled. This is an exception to rules 400.6 and 707.9. The player who exiled it may look at the exiled card and may play it for as long as it remains exiled, but can't play it face down this way. If the exiled card leaves exile, becomes a new object (see rule 406.7), its owner leaves the game, or the game ends, the card must be revealed to all players.",
+                            "See rule 707, “Face-Down Spells and Permanents,” for more information about how to cast cards with undercover."
                         ]
                     }
                 }

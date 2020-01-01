@@ -845,73 +845,6 @@
             ]
         },
         {
-            "artist": "Taylor Payton",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 2.0,
-            "flavorText": "\"You would forsake us, all our years adventuring together, to scamper after a lithomancer who doesn't even recognize you exist? Go then. 'Tis a fool's errand.\"\n\u2014 Feivi, Ondu relic hunter",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{W}",
-            "name": "Nahiri's Acolyte",
-            "number": "25",
-            "originalName": "Nahiri's Acolyte",
-            "originalText": "As long as Nahiri's Acolyte is equipped, it gets +1/+1 and has lifelink.",
-            "originalType": "Creature \u2014 Kor Scout",
-            "power": "2",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [
-                "Kor",
-                "Scout"
-            ],
-            "supertypes": [],
-            "text": "As long as Nahiri's Acolyte is equipped, it gets +1/+1 and has lifelink.",
-            "toughness": "2",
-            "type": "Creature \u2014 Kor Scout",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "Arif Wijaya",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 6.0,
-            "flavorText": "Nahiri returned to Zendikar with her blade still soaked in her mentor's blood.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{4}{W}{W}",
-            "name": "Nahiri's Vengeance",
-            "number": "26",
-            "originalName": "Nahiri's Vengeance",
-            "originalText": "All permanents lose indestructible until end of turn. Destroy all artifacts, creatures, and enchantments.",
-            "originalType": "Sorcery",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "All permanents lose indestructible until end of turn. Destroy all artifacts, creatures, and enchantments.",
-            "type": "Sorcery",
-            "types": [
-                "Sorcery"
-            ]
-        },
-        {
             "artist": "Haohi",
             "borderColor": "black",
             "colorIdentity": [
@@ -932,7 +865,7 @@
                 "Nahiri, Stoneforge Pupil",
                 "Nahiri, Planar Nomad"
             ],
-            "number": "27a",
+            "number": "25a",
             "originalName": "Nahiri, Stoneforge Pupil",
             "originalText": "When Nahiri, Stoneforge Pupil enters the battlefield, you may search your library for an Equipment card, reveal it, then shuffle your library and put that card on top of it.\nWhen Nahiri deals damage to a player, if she's equipped, exile her, then return her to the battlefield transformed under her owner's control.",
             "originalType": "Legendary Creature \u2014 Kor Artificer",
@@ -978,7 +911,7 @@
                 "Nahiri, Stoneforge Pupil",
                 "Nahiri, Planar Nomad"
             ],
-            "number": "27b",
+            "number": "25b",
             "originalName": "Nahiri, Planar Nomad",
             "originalText": "[+1]: Until end of turn, each creature you control gets +1/+1 for each permanent attached to it.\n[-1]: Create a 1/1 white Minion creature token. You may attach an Aura or Equipment you control to it.\n[-6]: Search your library for an Aura or Equipment card and put it onto the battlefield attached to a creature. Repeat this process two more times, then shuffle your library.",
             "originalType": "Legendary Planeswalker \u2014 Nahiri",
@@ -1000,6 +933,73 @@
             "type": "Legendary Planeswalker \u2014 Nahiri",
             "types": [
                 "Planeswalker"
+            ]
+        },
+        {
+            "artist": "Taylor Payton",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 2.0,
+            "flavorText": "\"You would forsake us, all our years adventuring together, to scamper after a lithomancer who doesn't even recognize you exist? Go then. 'Tis a fool's errand.\"\n\u2014 Feivi, Ondu relic hunter",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{W}",
+            "name": "Nahiri's Acolyte",
+            "number": "26",
+            "originalName": "Nahiri's Acolyte",
+            "originalText": "As long as Nahiri's Acolyte is equipped, it gets +1/+1 and has lifelink.",
+            "originalType": "Creature \u2014 Kor Scout",
+            "power": "2",
+            "rarity": "uncommon",
+            "rulings": [],
+            "subtypes": [
+                "Kor",
+                "Scout"
+            ],
+            "supertypes": [],
+            "text": "As long as Nahiri's Acolyte is equipped, it gets +1/+1 and has lifelink.",
+            "toughness": "2",
+            "type": "Creature \u2014 Kor Scout",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Arif Wijaya",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 6.0,
+            "flavorText": "Nahiri returned to Zendikar with her blade still soaked in her mentor's blood.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{4}{W}{W}",
+            "name": "Nahiri's Vengeance",
+            "number": "27",
+            "originalName": "Nahiri's Vengeance",
+            "originalText": "All permanents lose indestructible until end of turn. Destroy all artifacts, creatures, and enchantments.",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "All permanents lose indestructible until end of turn. Destroy all artifacts, creatures, and enchantments.",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
             ]
         },
         {
@@ -2787,42 +2787,6 @@
             ]
         },
         {
-            "artist": "Rams\u00e9s Mel\u00e9ndez",
-            "borderColor": "black",
-            "colorIdentity": [
-                "B"
-            ],
-            "colors": [
-                "B"
-            ],
-            "convertedManaCost": 2.0,
-            "flavorText": "Aisha's nightmares became painfully real.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{B}",
-            "name": "Aisha's Tormentor",
-            "number": "79",
-            "originalName": "Aisha's Tormentor",
-            "originalText": "Possess (When this creature enters the battlefield, it possesses target creature an opponent controls until either leaves the battlefield.)\nWhenever one of your possessions dies, its controller loses 1 life.",
-            "originalType": "Creature \u2014 Spirit Nightmare",
-            "power": "2",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Spirit",
-                "Nightmare"
-            ],
-            "supertypes": [],
-            "text": "Possess (When this creature enters the battlefield, it possesses target creature an opponent controls until either leaves the battlefield.)\nWhenever one of your possessions dies, its controller loses 1 life.",
-            "toughness": "2",
-            "type": "Creature \u2014 Spirit Nightmare",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
             "artist": "Jake Probelski",
             "borderColor": "black",
             "colorIdentity": [
@@ -2844,7 +2808,7 @@
                 "Aisha, Born in Slumber",
                 "Ashiok, Waking Nightmare"
             ],
-            "number": "80a",
+            "number": "79a",
             "originalName": "Aisha, Born in Slumber",
             "originalText": "{T}: Each player discards a card. Activate this ability only any time you could cast a sorcery.\nWhenever you discard a card, you may exile three cards from your graveyard that share no card types. If you do, exile Aisha, then return her to the battlefield transformed under her owner's control.",
             "originalType": "Legendary Creature",
@@ -2892,7 +2856,7 @@
                 "Aisha, Born in Slumber",
                 "Ashiok, Waking Nightmare"
             ],
-            "number": "80b",
+            "number": "79b",
             "originalName": "Ashiok, Waking Nightmare",
             "originalText": "[+1]: Exile the top card of each player's library. If one or more land cards are exiled this way, each opponent loses 2 life.\n[-2]: Look at an opponent's hand and exile a nonland card from it. If that card was a creature card, create a 2/1 black Nightmare creature token.\n[-7]: Draw a card for each noncreature, nonland card in exile.",
             "originalType": "Legendary Planeswalker \u2014 Ashiok",
@@ -2909,6 +2873,42 @@
             "type": "Legendary Planeswalker \u2014 Ashiok",
             "types": [
                 "Planeswalker"
+            ]
+        },
+        {
+            "artist": "Rams\u00e9s Mel\u00e9ndez",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B"
+            ],
+            "colors": [
+                "B"
+            ],
+            "convertedManaCost": 2.0,
+            "flavorText": "Aisha's nightmares became painfully real.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{B}",
+            "name": "Aisha's Tormentor",
+            "number": "80",
+            "originalName": "Aisha's Tormentor",
+            "originalText": "Possess (When this creature enters the battlefield, it possesses target creature an opponent controls until either leaves the battlefield.)\nWhenever one of your possessions dies, its controller loses 1 life.",
+            "originalType": "Creature \u2014 Spirit Nightmare",
+            "power": "2",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Spirit",
+                "Nightmare"
+            ],
+            "supertypes": [],
+            "text": "Possess (When this creature enters the battlefield, it possesses target creature an opponent controls until either leaves the battlefield.)\nWhenever one of your possessions dies, its controller loses 1 life.",
+            "toughness": "2",
+            "type": "Creature \u2014 Spirit Nightmare",
+            "types": [
+                "Creature"
             ]
         },
         {
@@ -5130,6 +5130,39 @@
             ]
         },
         {
+            "artist": "Alexandr Elichev",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "convertedManaCost": 6.0,
+            "flavorText": "Few make the trek up the highland path into the volcanic forge. Fewer can work it.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{5}{R}",
+            "name": "The Stoneforge",
+            "number": "147",
+            "originalName": "The Stoneforge",
+            "originalText": "Machinate \u2014 {T}, Tap another untapped artifact you control: Search your library for an Equipment card and put it onto the battlefield attached to target creature you control, then shuffle your library.",
+            "originalType": "Legendary Artifact",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Machinate \u2014 {T}, Tap another untapped artifact you control: Search your library for an Equipment card and put it onto the battlefield attached to target creature you control, then shuffle your library.",
+            "type": "Legendary Artifact",
+            "types": [
+                "Artifact"
+            ]
+        },
+        {
             "artist": "Josh Corpus",
             "borderColor": "black",
             "colorIdentity": [
@@ -5146,7 +5179,7 @@
             "layout": "normal",
             "manaCost": "{1}{R}",
             "name": "Stoneforged Bow",
-            "number": "147",
+            "number": "148",
             "originalName": "Stoneforged Bow",
             "originalText": "Equipped creature has reach and \"{T}: This creature deals 1 damage to target player or planeswalker.\"\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)",
             "originalType": "Artifact \u2014 Equipment",
@@ -5179,7 +5212,7 @@
             "layout": "normal",
             "manaCost": "{3}{R}{R}",
             "name": "Sunari Dreadwing",
-            "number": "148",
+            "number": "149",
             "originalName": "Sunari Dreadwing",
             "originalText": "Flying\nFrenzy 3 (Whenever this creature attacks and isn't blocked, it gets +3/+0 until end of turn.)\nWhenever Sunari Dreadwing becomes blocked, untap each other attacking creature you control. After this phase, there's an additional combat phase.",
             "originalType": "Creature \u2014 Dragon",
@@ -5193,108 +5226,6 @@
             "text": "Flying\nFrenzy 3 (Whenever this creature attacks and isn't blocked, it gets +3/+0 until end of turn.)\nWhenever Sunari Dreadwing becomes blocked, untap each other attacking creature you control. After this phase, there's an additional combat phase.",
             "toughness": "4",
             "type": "Creature \u2014 Dragon",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "Alexandr Elichev",
-            "borderColor": "black",
-            "colorIdentity": [
-                "R"
-            ],
-            "colors": [
-                "R"
-            ],
-            "convertedManaCost": 6.0,
-            "flavorText": "Few make the trek up the highland path into the volcanic forge. Fewer can work it.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{5}{R}",
-            "name": "The Stoneforge",
-            "number": "149",
-            "originalName": "The Stoneforge",
-            "originalText": "Machinate \u2014 {T}, Tap another untapped artifact you control: Search your library for an Equipment card and put it onto the battlefield attached to target creature you control, then shuffle your library.",
-            "originalType": "Legendary Artifact",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [
-                "Legendary"
-            ],
-            "text": "Machinate \u2014 {T}, Tap another untapped artifact you control: Search your library for an Equipment card and put it onto the battlefield attached to target creature you control, then shuffle your library.",
-            "type": "Legendary Artifact",
-            "types": [
-                "Artifact"
-            ]
-        },
-        {
-            "artist": "Bryan Sola",
-            "borderColor": "black",
-            "colorIdentity": [
-                "R"
-            ],
-            "colors": [
-                "R"
-            ],
-            "convertedManaCost": 5.0,
-            "flavorText": "\"Enough! Leave McCoy's crossbow and let's go!\"\n\u2014 El Cocodrilo, to Tibalt",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{3}{R}{R}",
-            "name": "Tibalt's Ruse",
-            "number": "150",
-            "originalName": "Tibalt's Ruse",
-            "originalText": "If one or more opponents control a creature with hexproof, you may pay {2}{R} rather than pay this spell's mana cost and it deals twice as much damage to creatures those players control.\nTibalt's Ruse deals 3 damage to each creature.",
-            "originalType": "Instant \u2014 Trap",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [
-                "Trap"
-            ],
-            "supertypes": [],
-            "text": "If one or more opponents control a creature with hexproof, you may pay {2}{R} rather than pay this spell's mana cost and it deals twice as much damage to creatures those players control.\nTibalt's Ruse deals 3 damage to each creature.",
-            "type": "Instant \u2014 Trap",
-            "types": [
-                "Instant"
-            ]
-        },
-        {
-            "artist": "Whiluna",
-            "borderColor": "black",
-            "colorIdentity": [
-                "R"
-            ],
-            "colors": [
-                "R"
-            ],
-            "convertedManaCost": 2.0,
-            "flavorText": "Its fur is stained with the blood of the last guy who tried to explain the joke.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{R}",
-            "name": "Tibalt's Scapegoat",
-            "number": "151",
-            "originalName": "Tibalt's Scapegoat",
-            "originalText": "Whenever a -1/-1 counter is put on Tibalt's Scapegoat, it deals 2 damage to each opponent.",
-            "originalType": "Creature \u2014 Goat Minion",
-            "power": "1",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Goat",
-                "Minion"
-            ],
-            "supertypes": [],
-            "text": "Whenever a -1/-1 counter is put on Tibalt's Scapegoat, it deals 2 damage to each opponent.",
-            "toughness": "3",
-            "type": "Creature \u2014 Goat Minion",
             "types": [
                 "Creature"
             ]
@@ -5320,7 +5251,7 @@
                 "Tibalt, Devilish Doctor",
                 "Tibalt, Gleeful Sadist"
             ],
-            "number": "152a",
+            "number": "150a",
             "originalName": "Tibalt, Devilish Doctor",
             "originalText": "Tibalt, Devilish Doctor attacks each combat if able.\nAt end of combat on your turn, if you have one or fewer cards in hand, exile Tibalt, then return him to the battlefield transformed under his owner's control.",
             "originalType": "Legendary Creature \u2014 Human Rogue",
@@ -5366,7 +5297,7 @@
                 "Tibalt, Devilish Doctor",
                 "Tibalt, Gleeful Sadist"
             ],
-            "number": "152b",
+            "number": "150b",
             "originalName": "Tibalt, Gleeful Sadist",
             "originalText": "[+1]: Each player puts a -1/-1 counter on a creature they control.\n[+1]: Until your next turn, players can't gain life and damage can't be prevented.\n[-4]: Discard your hand, draw four cards, and add {R}{R}{R}{R}.",
             "originalType": "Legendary Planeswalker \u2014 Tibalt",
@@ -5383,6 +5314,75 @@
             "type": "Legendary Planeswalker \u2014 Tibalt",
             "types": [
                 "Planeswalker"
+            ]
+        },
+        {
+            "artist": "Bryan Sola",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "convertedManaCost": 5.0,
+            "flavorText": "\"Enough! Leave McCoy's crossbow and let's go!\"\n\u2014 El Cocodrilo, to Tibalt",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{3}{R}{R}",
+            "name": "Tibalt's Ruse",
+            "number": "151",
+            "originalName": "Tibalt's Ruse",
+            "originalText": "If one or more opponents control a creature with hexproof, you may pay {2}{R} rather than pay this spell's mana cost and it deals twice as much damage to creatures those players control.\nTibalt's Ruse deals 3 damage to each creature.",
+            "originalType": "Instant \u2014 Trap",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [
+                "Trap"
+            ],
+            "supertypes": [],
+            "text": "If one or more opponents control a creature with hexproof, you may pay {2}{R} rather than pay this spell's mana cost and it deals twice as much damage to creatures those players control.\nTibalt's Ruse deals 3 damage to each creature.",
+            "type": "Instant \u2014 Trap",
+            "types": [
+                "Instant"
+            ]
+        },
+        {
+            "artist": "Whiluna",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "convertedManaCost": 2.0,
+            "flavorText": "Its fur is stained with the blood of the last guy who tried to explain the joke.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{R}",
+            "name": "Tibalt's Scapegoat",
+            "number": "152",
+            "originalName": "Tibalt's Scapegoat",
+            "originalText": "Whenever a -1/-1 counter is put on Tibalt's Scapegoat, it deals 2 damage to each opponent.",
+            "originalType": "Creature \u2014 Goat Minion",
+            "power": "1",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Goat",
+                "Minion"
+            ],
+            "supertypes": [],
+            "text": "Whenever a -1/-1 counter is put on Tibalt's Scapegoat, it deals 2 damage to each opponent.",
+            "toughness": "3",
+            "type": "Creature \u2014 Goat Minion",
+            "types": [
+                "Creature"
             ]
         },
         {
@@ -5738,39 +5738,6 @@
             ]
         },
         {
-            "artist": "Jeremy \"Le Chef\" Jarvis",
-            "borderColor": "black",
-            "colorIdentity": [
-                "G"
-            ],
-            "colors": [
-                "G"
-            ],
-            "convertedManaCost": 2.0,
-            "flavorText": "Any challenge to his claim of the title \"force of nature\" is swiftly contested.",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{G}",
-            "name": "Garruk's Silhouette",
-            "number": "163",
-            "originalName": "Garruk's Silhouette",
-            "originalText": "Enchant creature\nEnchanted creature can't be blocked by creatures with power 2 or less.",
-            "originalType": "Enchantment \u2014 Aura",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [
-                "Aura"
-            ],
-            "supertypes": [],
-            "text": "Enchant creature\nEnchanted creature can't be blocked by creatures with power 2 or less.",
-            "type": "Enchantment \u2014 Aura",
-            "types": [
-                "Enchantment"
-            ]
-        },
-        {
             "artist": "Hrvoje Be\u0161li\u0107",
             "borderColor": "black",
             "colorIdentity": [
@@ -5792,7 +5759,7 @@
                 "Garruk, Son of Raklan",
                 "Garruk the Huntsman"
             ],
-            "number": "164a",
+            "number": "163a",
             "originalName": "Garruk, Son of Raklan",
             "originalText": "{1}{G}, {T}: Garruk, Son of Raklan fights target creature you don't control.\nWhen a creature dealt damage by Garruk this turn dies, exile Garruk, then return him to the battlefield transformed under his owner's control.",
             "originalType": "Legendary Creature \u2014 Human",
@@ -5837,7 +5804,7 @@
                 "Garruk, Son of Raklan",
                 "Garruk the Huntsman"
             ],
-            "number": "164b",
+            "number": "163b",
             "originalName": "Garruk the Huntsman",
             "originalText": "[+2]: Untap up to one target creature. It blocks this turn if able.\n[-3]: Create a 4/4 green Beast creature token.\n[-11]: You get an emblem with \"Whenever a creature dies, draw cards equal to its power and you gain life equal to its toughness.\"",
             "originalType": "Legendary Planeswalker \u2014 Garruk",
@@ -5854,6 +5821,39 @@
             "type": "Legendary Planeswalker \u2014 Garruk",
             "types": [
                 "Planeswalker"
+            ]
+        },
+        {
+            "artist": "Jeremy \"Le Chef\" Jarvis",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G"
+            ],
+            "colors": [
+                "G"
+            ],
+            "convertedManaCost": 2.0,
+            "flavorText": "Any challenge to his claim of the title \"force of nature\" is swiftly contested.",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{G}",
+            "name": "Garruk's Silhouette",
+            "number": "164",
+            "originalName": "Garruk's Silhouette",
+            "originalText": "Enchant creature\nEnchanted creature can't be blocked by creatures with power 2 or less.",
+            "originalType": "Enchantment \u2014 Aura",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Aura"
+            ],
+            "supertypes": [],
+            "text": "Enchant creature\nEnchanted creature can't be blocked by creatures with power 2 or less.",
+            "type": "Enchantment \u2014 Aura",
+            "types": [
+                "Enchantment"
             ]
         },
         {
@@ -7797,7 +7797,7 @@
             "rulings": [
                 {
                     "date": "2018-08-28",
-                    "text": "If you tap a Bolgrim Patroller to pay {A}, the triggered ability will wait to go on the stack until you finish activating or resolving whatever it is that you're paying for. This means that if an activated ability, for example, has a cost of {A}{A}, you can't pay that cost with just a single Bolgrim Patroller. However, paying for two abilities that each cost {A} is possible."
+                    "text": "If you tap a Bolgrim Patroller to pay {V}, the triggered ability will wait to go on the stack until you finish activating or resolving whatever it is that you're paying for. This means that if an activated ability, for example, has a cost of {V}{V}, you can't pay that cost with just a single Bolgrim Patroller. However, paying for two abilities that each cost {V} is possible."
                 }
             ],
             "subtypes": [
@@ -9266,7 +9266,7 @@
     "code": "VLN",
     "custom": true,
     "meta": {
-        "date": "2019-08-26",
+        "date": "2019-12-29",
         "setVersion": "updated2",
         "version": "4.4.1"
     },
