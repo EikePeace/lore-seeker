@@ -5,8 +5,7 @@ class ConditionRestricted < ConditionFormat
 
   private
 
-  def legality_ok?(legality)
-    return false if legality.nil?
-    legality.start_with? "restricted"
+  def card_ok?(card)
+    @format.restricted?(card)
   end
 end

@@ -31,6 +31,24 @@ class Format
     false
   end
 
+  def banned?(card)
+    legality(card) == "banned"
+  end
+
+  def restricted?(card)
+    l = legality(card)
+    return false if l.nil?
+    l.start_with? "restricted"
+  end
+
+  def legal?(card)
+    legality(card) == "legal"
+  end
+
+  def legal_or_restricted?(card)
+    legal?(card) or restricted?(card)
+  end
+
   def in_format?(card)
     card.printings.each do |printing|
       next if @time and printing.release_date > @time
@@ -201,6 +219,7 @@ class Format
         "duel"                       => FormatDuelCommander,
         "mtgocommander"              => FormatMTGOCommander,
         "mtgoedh"                    => FormatMTGOCommander,
+        "historic"                   => FormatHistoric,
         "canadianhighlander"         => FormatCanadianHighlander,
         "canlander"                  => FormatCanadianHighlander,
         "customstandard"             => FormatCustomStandard,
@@ -233,11 +252,12 @@ class Format
     end
 
     def all_format_classes
-      formats_index.values.uniq
+      @all_format_classes ||= formats_index.values.uniq
     end
 
     def [](format_name)
       format_name = format_name.downcase.gsub(/\s|-|_/, "")
+      return FormatAny if format_name == "*"
       formats_index[format_name] || FormatUnknown
     end
   end

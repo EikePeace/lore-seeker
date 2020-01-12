@@ -96,9 +96,11 @@ class QueryTokenizer
         tokens << [:test, ConditionForeign.new(s[1], s[2] || s[3])]
       elsif s.scan(/any\s*[:=]\s*(?:"(.*?)"|([\p{L}\p{Digit}_]+))/i)
         tokens << [:test, ConditionAny.new(s[1] || s[2])]
-      elsif s.scan(/(banned|restricted|legal)\s*[:=]\s*(?:"(.*?)"|([\p{L}\p{Digit}_\-]+))/i)
+      elsif s.scan(/(banned|restricted|legal)\s*[:=]\s*(?:"(.*?)"|([\p{L}\p{Digit}_\-\*]+))/i)
         klass = Kernel.const_get("Condition#{s[1].capitalize}")
         tokens << [:test, klass.new(s[2] || s[3])]
+      elsif s.scan(/(?:f|format)\s*[:=]\s*(?:"(.*?)"|([\p{L}\p{Digit}_\-\*]+))/i)
+        tokens << [:test, ConditionFormat.new(s[1] || s[2])]
       elsif s.scan(/(?:name|n)\s*(>=|>|<=|<|=|:)\s*(?:"(.*?)"|([\p{L}\p{Digit}_\-]+))/i)
         op = s[1]
         op = "=" if op == ":"
@@ -111,8 +113,6 @@ class QueryTokenizer
         tokens << [:test, ConditionNumber.new(s[2] || s[3], s[1])]
       elsif s.scan(/(?:w|wm|watermark)\s*[:=]\s*(?:"(.*?)"|([\p{L}\p{Digit}_]+|\*))/i)
         tokens << [:test, ConditionWatermark.new(s[1] || s[2])]
-      elsif s.scan(/(?:f|format)\s*[:=]\s*(?:"(.*?)"|([\p{L}\p{Digit}_\-]+))/i)
-        tokens << [:test, ConditionFormat.new(s[1] || s[2])]
       elsif s.scan(/deck\s*[:=]\s*(?:"(.*?)"|([\p{L}\p{Digit}_\-]+))/i)
         tokens << [:test, ConditionDeck.new(s[1] || s[2])]
       elsif s.scan(/(?:b|block)\s*[:=]\s*(?:"(.*?)"|([\p{L}\p{Digit}_]+))/i)
@@ -153,7 +153,7 @@ class QueryTokenizer
         rescue
           @warnings << "unknown rarity: #{rarity}"
         end
-    elsif s.scan(/(pow|power|tou|toughness|cmc|loy|loyalty|stab?|stability|year|rulings)\s*(>=|>|<=|<|=|:)\s*(pow\b|power\b|tou\b|toughness\b|cmc\b|loy\b|loyalty\b|stab?\b|stability\b|year\b|rulings\b|[²\d\.\-\*\+½x∞\?]+)/i)
+      elsif s.scan(/(pow|power|tou|toughness|cmc|loy|loyalty|stab?|stability|year|rulings)\s*(>=|>|<=|<|=|:)\s*(pow\b|power\b|tou\b|toughness\b|cmc\b|loy\b|loyalty\b|stab?\b|stability\b|year\b|rulings\b|[²\d\.\-\*\+½x∞\?]+)/i)
         aliases = {"power" => "pow", "loyalty" => "loy", "stab" => "sta", "stability" => "sta", "toughness" => "tou"}
         a = s[1].downcase
         a = aliases[a] || a
@@ -176,7 +176,7 @@ class QueryTokenizer
         op = "=" if op == ":"
         mana = s[2]
         tokens << [:test, ConditionMana.new(op, mana)]
-    elsif s.scan(/(is|not)\s*[:=]\s*(vanilla|spell|permanent|funny|timeshifted|colorshifted|reserved|multipart|promo|primary|secondary|front|back|commander|digital|reprint|fetchland|shockland|dual|fastland|bounceland|gainland|filterland|checkland|manland|creatureland|scryland|battleland|guildgate|karoo|painland|triland|canopyland|shadowland|storageland|tangoland|canland|phyrexian|hybrid|augment|unique|booster|draft|historic|holofoil|foilonly|nonfoilonly|foil|nonfoil|foilboth|brawler|keywordsoup|partner|oversized|spotlight|modal|textless|fullart|full|errata|custom|mainfront)\b/i)
+      elsif s.scan(/(is|not)\s*[:=]\s*(vanilla|spell|permanent|funny|timeshifted|colorshifted|reserved|multipart|promo|primary|secondary|front|back|commander|digital|reprint|fetchland|shockland|dual|fastland|bounceland|gainland|filterland|checkland|manland|creatureland|scryland|battleland|guildgate|karoo|painland|triland|canopyland|shadowland|storageland|tangoland|canland|phyrexian|hybrid|augment|unique|booster|draft|historic|holofoil|foilonly|nonfoilonly|foil|nonfoil|foilboth|brawler|keywordsoup|partner|oversized|spotlight|modal|textless|fullart|full|ante|errata|custom|mainfront)\b/i)
         tokens << [:not] if s[1].downcase == "not"
         cond = s[2].capitalize
         cond = "Bounceland" if cond == "Karoo"
@@ -284,6 +284,11 @@ class QueryTokenizer
       elsif s.scan(/(is|frame|not)\s*[:=]\s*(old|new|future|modern|m15)\b/i)
         tokens << [:not] if s[1].downcase == "not"
         tokens << [:test, ConditionFrame.new(s[2].downcase)]
+      elsif s.scan(/frame\s*[:=]\s*(?:"(.*?)"|([\.\p{L}\p{Digit}_]+))/i)
+        frame = (s[1]||s[2]).downcase
+        frame_types = %W[old new future modern m15]
+        frame_effects = %W[compasslanddfc colorshifted devoid extendedart legendary miracle mooneldrazidfc nyxtouched originpwdfc sunmoondfc tombstone].sort
+        @warnings << "Unknown frame: #{frame}. Known frame types are: #{frame_types.join(", ")}. Known frame effects are: #{frame_effects.join(", ")}."
       elsif s.scan(/(is|not)\s*[:=]\s*(black-bordered|silver-bordered|white-bordered)\b/i)
         tokens << [:not] if s[1].downcase == "not"
         tokens << [:test, ConditionBorder.new(s[2].sub("-bordered", "").downcase)]

@@ -169,6 +169,14 @@ describe "Formats" do
     assert_count_cards 'restricted:"duel commander"', 21
   end
 
+  it "mtgo commander" do
+    assert_count_cards 'banned:vintage legal:"mtgo commander"', 0
+  end
+
+  it "historic" do
+    assert_count_cards "banned:historic", 4
+  end
+
   # We don't keep historical legality for Petty Dreadful yet
   it "penny dreadful" do
     assert_search_include 'f:"penny dreadful"', *FormatPennyDreadful::PrimaryCards
@@ -193,6 +201,60 @@ describe "Formats" do
         vintage.legality(c).should eq vintage.legality(PhysicalCard.for(c))
       end
     end
+  end
+
+  ## Wildcards
+
+  it "banned:*" do
+    # This can be a long list
+    assert_search_equal "banned:*", %Q[
+      banned:standard or
+      banned:pioneer or
+      banned:modern or
+      banned:legacy or
+      banned:commander or
+      banned:pauper or
+      banned:duel or
+      banned:brawl or
+      banned:"Mirrodin Block" or
+      banned:"Urza Block" or
+      banned:"Ice Age Block" or
+      banned:"Masques Block" or
+      banned:"Mirage Block" or
+      banned:"Innistrad Block" or
+      banned:"Tempest Block" or
+      banned:"MTGO Commander"
+    ]
+  end
+
+  it "restricted:*" do
+    assert_search_equal "restricted:*", "restricted:vintage or restricted:duel or restricted:unsets"
+  end
+
+  it "legal:*" do
+    assert_search_equal "legal:*", %Q[
+      legal:vintage or
+      legal:unsets or
+      legal:historic or
+      legal:commander or
+      legal:"Urza Block" or
+      legal:penny or
+      legal:duel
+    ]
+  end
+
+  it "format:*" do
+    assert_search_equal "format:*", "legal:* or restricted:*"
+  end
+
+  it "restricted:* time:nph" do
+    assert_search_include "restricted:* time:rtr", "Thirst for Knowledge"
+    assert_search_exclude "restricted:* time:war", "Thirst for Knowledge"
+  end
+
+  it "banned:* time:nph" do
+    assert_search_exclude "banned:* time:rtr", "Splinter Twin"
+    assert_search_include "banned:* time:war", "Splinter Twin"
   end
 
   ## TODO - Extended, and various weirdo formats
