@@ -3,7 +3,7 @@
 class PatchDeleteErrataSets < Patch
   def call
     delete_printing_if do |card|
-      card["set"]["type"] == "errata"
+      card["set"]["types"].include?("errata")
     end
 
     @sets.delete_if do |set|
