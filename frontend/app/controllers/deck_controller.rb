@@ -141,7 +141,7 @@ class DeckController < ApplicationController
     # Choose best card to preview
     if @deck.present? && @format.present? && (@format.format_name == "elder cockatrice highlander" || @format.format_name == "elder xmage highlander")
       @default_preview_card = @deck.commanders.first.last
-    elif @sideboard.size == 1
+    elsif @sideboard.size == 1
       # Commander
       @default_preview_card = @sideboard.first.last
     else
