@@ -716,7 +716,7 @@ def upload_images(set_code=None, version=None):
         set_img_dirs = img_dirs_map[set_code]
         if len(set_img_dirs) == 1 and set_img_dirs[0].name.startswith('trice'):
             numbers = {}
-            with (set_dir / f'v{version}' / 'noimg-errata.xml').open() as noimg_xml:
+            with (set_dir / f'v{version}' / f'{set_code}-files' / f'{set_code}.xml').open() as noimg_xml:
                 et = xml.etree.ElementTree.parse(noimg_xml)
                 for card in et.findall('cards/card'):
                     pic_url = more_itertools.one(card.findall('set')).get('picURL')
