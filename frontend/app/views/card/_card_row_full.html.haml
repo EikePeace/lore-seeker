@@ -38,6 +38,9 @@
 
     %h5 Links
     %ul
+      %li.infolabel
+        = link_to_set(card.set) do
+          = "#{card.set.name}"
       - if card.gatherer_link.present?
         %li.infolabel
           %a{href: card.gatherer_link}
