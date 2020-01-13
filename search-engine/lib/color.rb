@@ -32,6 +32,7 @@ module Color
   }
 
   def self.color_identity_name(color_identity)
+    return "unknown" if color_identity.nil?
     names = {"w" => "white", "u" => "blue", "b" => "black", "r" => "red", "g" => "green"}
     color_identity = names.map{|c,cv| color_identity.include?(c) ? cv : nil}.compact
     #TODO canonical color order

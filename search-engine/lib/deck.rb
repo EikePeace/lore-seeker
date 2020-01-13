@@ -84,6 +84,7 @@ class Deck
   end
 
   def color_identity
+    return nil if @sideboard.any?{|n, c| card.is_a?(UnknownCard) or card.nil? }
     @sideboard.map{|n,c| c.color_identity}.inject{|c1, c2| (c1.chars | c2.chars).sort.join }
   end
 end
