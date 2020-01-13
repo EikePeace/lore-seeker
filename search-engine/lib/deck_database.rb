@@ -42,8 +42,8 @@ class DeckDatabase
       date,
       cards,
       sideboard,
-      commanders.map(&:last),
-      brawlers.map(&:last),
+      commanders,
+      brawlers,
     )
     return deck
   end

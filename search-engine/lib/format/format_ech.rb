@@ -55,7 +55,7 @@ class FormatECH < FormatStandard
   end
 
   def deck_commander_issues(deck)
-    commanders = deck.sideboard.select{|card| card.last.commander? }.flat_map{|n,c| [c] * n}
+    commanders = deck.commanders.flat_map{|n,c| [c] * n}
     return [[:ech_commander_not_found]] if commanders.size == 0
     return [[:ech_too_many_commanders, commanders.size]] if commanders.size > 1
 
@@ -69,7 +69,7 @@ class FormatECH < FormatStandard
   end
 
   def deck_color_identity_issues(deck)
-    commanders = deck.sideboard.select{|card| card.last.commander? }.flat_map{|n,c| [c] * n}
+    commanders = deck.commanders.flat_map{|n,c| [c] * n}
     color_identity = commanders.map{|c| c.color_identity}.inject{|c1, c2| (c1.chars | c2.chars).sort.join } #TODO fix Deck#color_identity and use that here
     return [] unless color_identity
     color_identity = color_identity.chars.to_set

@@ -7,7 +7,7 @@
       = link_to(controller: "deck", action: "show_crawl", id: deck.slug) do
         = "#{deck.name}"
       = surround "(", ")" do
-        != deck.brawlers.map{|card| link_to_card(card) { card.name } }.to_sentence
+        != deck.brawlers.map{|n, card| link_to_card(card) { card.name } }.to_sentence
 %h4 Elder Cockatrice Highlander
 %ul
   - @ech_precons.each do |deck|
@@ -16,7 +16,7 @@
       = link_to(controller: "deck", action: "show_ech", id: deck.slug) do
         = "#{deck.name}"
       = surround "(", ")" do
-        != deck.commanders.map{|card| link_to_card(card) { card.name } }.to_sentence
+        != deck.commanders.map{|n, card| link_to_card(card) { card.name } }.to_sentence
 %h4 Sets
 - @sets.each do |set|
   %div= "#{set.name} (#{set.code.upcase})"

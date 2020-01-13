@@ -76,11 +76,11 @@ class Deck
   end
 
   def commanders
-    @commanders ||= (valid_commander? && @sideboard.map(&:last))
+    @commanders ||= (valid_commander? && @sideboard)
   end
 
   def brawlers
-    @brawlers ||= (valid_brawler? && @sideboard.map(&:last))
+    @brawlers ||= (valid_brawler? && @sideboard)
   end
 
   def color_identity
