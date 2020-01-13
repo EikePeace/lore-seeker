@@ -2819,7 +2819,7 @@
             "rulings": [
                 {
                     "date": "2019-12-08",
-                    "text": "If you targeted at least one creature with the ability and all of the creatures you targeted are illegal target as Uneasy Encounter starts to resolve, none of Uneasy Encounter's effects will happen. You won't draw any cards."
+                    "text": "If you targeted at least one creature with Uneasy Encounter and all of the creatures you targeted are illegal targets as Uneasy Encounter starts to resolve, none of Uneasy Encounter's effects will happen. You won't draw any cards."
                 }
             ],
             "subtypes": [],
@@ -4960,10 +4960,15 @@
             "originalText": "Each creature spell you cast has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
             "originalType": "Enchantment",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-12",
+                    "text": "If Instincts of the Pack leaves the battlefield, creatures cast with it no longer have haste. They will still return to their owner's hand at the beginning of the next end step."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
-            "text": "Each creature spell you cast has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
+            "text": "Each creature spell you cast and each creature on the battlefield has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
