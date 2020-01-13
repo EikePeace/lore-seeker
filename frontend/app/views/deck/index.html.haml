@@ -3,7 +3,8 @@
 %ul
   - @custom_brawl_precons.each do |deck|
     %li
-      = color_identity_name(deck.color_identity)
+      = succeed ":" do
+        = color_identity_name(deck.color_identity)
       = link_to(controller: "deck", action: "show_crawl", id: deck.slug) do
         = "#{deck.name}"
       = surround "(", ")" do
@@ -12,7 +13,8 @@
 %ul
   - @ech_precons.each do |deck|
     %li
-      = color_identity_name(deck.color_identity)
+      = succeed ":" do
+        = color_identity_name(deck.color_identity)
       = link_to(controller: "deck", action: "show_ech", id: deck.slug) do
         = "#{deck.name}"
       = surround "(", ")" do
