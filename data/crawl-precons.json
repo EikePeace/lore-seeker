@@ -1,5 +1,14 @@
 [
     {
+        "brawlers": [
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "53a",
+                "Ekebram the Scholar"
+            ]
+        ],
         "cards": [
             [
                 1,
@@ -347,6 +356,15 @@
         "type": "Brawl Deck"
     },
     {
+        "brawlers": [
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "114",
+                "Sick Nic, Baron of Crime"
+            ]
+        ],
         "cards": [
             [
                 1,
@@ -701,6 +719,15 @@
         "type": "Brawl Deck"
     },
     {
+        "brawlers": [
+            [
+                1,
+                "rak",
+                "0.45",
+                "212",
+                "Toahanga, Shifter Champion"
+            ]
+        ],
         "cards": [
             [
                 1,
@@ -1069,6 +1096,15 @@
         "type": "Brawl Deck"
     },
     {
+        "brawlers": [
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "37",
+                "Theos Artene, Demagogue"
+            ]
+        ],
         "cards": [
             [
                 1,

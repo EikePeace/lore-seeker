@@ -611,6 +611,15 @@
                 "Nomadic Druid"
             ]
         ],
+        "commanders": [
+            [
+                1,
+                "eau",
+                "39",
+                "215",
+                "Erollin, Eccentric Collector"
+            ]
+        ],
         "name": "Erollin Precon",
         "release_date": "2019-05-04",
         "set_code": "rak",
@@ -1236,6 +1245,15 @@
                 "1.2.0",
                 "230",
                 "Solemn Simulacrum"
+            ]
+        ],
+        "commanders": [
+            [
+                1,
+                "dhm",
+                ".75",
+                "174",
+                "Marad, Truth Seeker"
             ]
         ],
         "name": "UB Spellocrats (Marad) - ECH Precon",
@@ -1870,6 +1888,15 @@
                 "hd2",
                 "75",
                 "Wisdom"
+            ]
+        ],
+        "commanders": [
+            [
+                1,
+                "dhm",
+                ".75",
+                "168",
+                "Belit, Tel'tor Emissary"
             ]
         ],
         "name": "UR Artifacts and Giants (Belit) Precon",
@@ -2555,6 +2582,15 @@
                 "Unicorn of the Vale"
             ]
         ],
+        "commanders": [
+            [
+                1,
+                "jan",
+                "EAU",
+                "196",
+                "Junmra, Wild Sovereign"
+            ]
+        ],
         "name": "Ramp Combo (Junmra) Precon",
         "release_date": "2019-05-04",
         "set_code": "rak",
@@ -3138,6 +3174,15 @@
                 "39",
                 "40",
                 "Woopip Chef"
+            ]
+        ],
+        "commanders": [
+            [
+                1,
+                "hlw",
+                "84",
+                "208",
+                "Gwyn, Lord of Sunlight"
             ]
         ],
         "name": "WR Tokens (Gwyn) Precon",
@@ -3823,6 +3868,15 @@
                 "Angel of Dismay"
             ]
         ],
+        "commanders": [
+            [
+                1,
+                "src",
+                "44",
+                "212",
+                "Henry, River Cities Mayor"
+            ]
+        ],
         "name": "Henry Hates",
         "release_date": "2020-01-01",
         "set_code": "src",
@@ -4455,6 +4509,15 @@
                 "hd2",
                 "223",
                 "Runevolley"
+            ]
+        ],
+        "commanders": [
+            [
+                1,
+                "ank",
+                "2.3",
+                "50",
+                "Iterinis, God of Waters"
             ]
         ],
         "name": "Iterinis Goodstuff",
@@ -5145,6 +5208,15 @@
                 "2020-01-01",
                 "252",
                 "Plains"
+            ]
+        ],
+        "commanders": [
+            [
+                1,
+                "src",
+                "44",
+                "210",
+                "Frankie \"the Spider\" Lorre"
             ]
         ],
         "name": "Spider Aristocrats",
