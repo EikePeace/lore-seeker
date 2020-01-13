@@ -75,6 +75,28 @@ class Deck
     end
   end
 
+  def commanders
+    @commanders ||= valid_commander? && case number_of_sideboard_cards
+    when 1
+      [@sideboard[0][1]]
+    when 2
+      [@sideboard[0][1], @sideboard[1][1]]
+    else
+      false
+    end
+  end
+
+  def valid_brawler?
+    @brawlers ||= valid_brawler? && case number_of_sideboard_cards
+    when 1
+      [@sideboard[0][1]]
+    when 2
+      [@sideboard[0][1], @sideboard[1][1]]
+    else
+      false
+    end
+  end
+
   def color_identity
     return nil unless number_of_sideboard_cards.between?(1, 2)
     @sideboard.map{|n,c| c.color_identity}.inject{|c1, c2| (c1.chars | c2.chars).sort.join }
