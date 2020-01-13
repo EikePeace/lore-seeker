@@ -76,25 +76,11 @@ class Deck
   end
 
   def commanders
-    @commanders ||= valid_commander? && case number_of_sideboard_cards
-    when 1
-      [@sideboard[0][1]]
-    when 2
-      [@sideboard[0][1], @sideboard[1][1]]
-    else
-      false
-    end
+    @commanders ||= (valid_commander? && @sideboard.map(&:last))
   end
 
-  def valid_brawler?
-    @brawlers ||= valid_brawler? && case number_of_sideboard_cards
-    when 1
-      [@sideboard[0][1]]
-    when 2
-      [@sideboard[0][1], @sideboard[1][1]]
-    else
-      false
-    end
+  def brawlers
+    @brawlers ||= (valid_brawler? && @sideboard.map(&:last))
   end
 
   def color_identity
