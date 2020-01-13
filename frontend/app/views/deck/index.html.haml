@@ -7,7 +7,7 @@
       = link_to(controller: "deck", action: "show_crawl", id: deck.slug) do
         = "#{deck.name}"
       = surround "(", ")" do
-        = deck.brawlers.map{|card| link_to_card(card) { card.name } }.to_sentence
+        != deck.brawlers.map{|card| link_to_card(card) { card.name } }.to_sentence
 %h4 Elder Cockatrice Highlander
 %ul
   - @ech_precons.each do |deck|
