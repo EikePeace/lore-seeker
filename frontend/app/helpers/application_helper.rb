@@ -1,11 +1,19 @@
 module ApplicationHelper
   def link_to_card(card, &blk)
-    link_to(
-      controller: "card",
-      action: "show",
-      set: card.set_code,
-      id: card.number,
-      &blk)
+    if card.is_a?(UnknownCard)
+      if block_given?
+        yield
+      else
+        card.name
+      end
+    else
+      link_to(
+        controller: "card",
+        action: "show",
+        set: card.set_code,
+        id: card.number,
+        &blk)
+    end
   end
 
   def link_to_card_name(card_name, &blk)
