@@ -151,7 +151,10 @@ class Card
   end
 
   def custom?
-    printings.all? { |printing| printing.set.custom? }
+    # a card is custom if it has been printed in at least one custom set (to exclude uncards)...
+    return false unless printings.any? { |printing| printing.set.custom? }
+    # ...and hasn't been printed in an official black-border set (to exclude custom reprints of official cards)
+    printings.all? { |printing| printing.set.custom? or printing.set.funny? }
   end
 
   def main_front

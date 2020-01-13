@@ -7,7 +7,7 @@ class PatchDeleteErrataSets < Patch
     end
 
     @sets.delete_if do |set|
-      set["type"] == "errata"
+      set["types"].include?("errata")
     end
   end
 end
