@@ -1674,7 +1674,20 @@
             "originalType": "Creature \u2014 Illusion",
             "power": "5",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "You'll sacrifice Dust Enigma even if you counter the spell that targets it."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "If the spell that targets Dust Enigma has no other targets, it won't resolve (because it no longer has a legal target after Dust Enigma is sacrificed)."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "If there are multiple Dust Enigmas on the battlefield, players must target as many of them with their spells as possible without violating any restrictions such as hexproof. For example, Doomed Undertaking can target any of the Dust Enigmas on the battlefield, but Common Bond must target two different ones."
+                }
+            ],
             "subtypes": [
                 "Illusion"
             ],
@@ -5837,7 +5850,12 @@
             "originalType": "Legendary Creature \u2014 Elf Druid",
             "power": "3",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The second ability is cumulative if you somehow control more than one. It's also cumulative with other effects that let you play additional lands, such as the one from Rod of Seasons."
+                }
+            ],
             "subtypes": [
                 "Elf",
                 "Druid"

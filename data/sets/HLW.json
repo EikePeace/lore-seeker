@@ -2800,7 +2800,12 @@
             "originalText": "Target creature you control gains hexproof until end of turn.\nJourney. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
             "originalType": "Instant",
             "rarity": "common",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "If the creature is an illegal target as Traveler's Protection starts to resolve, none of its effects happen. You don't journey."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Target creature you control gains hexproof until end of turn.\nJourney. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
@@ -6985,7 +6990,12 @@
             "originalText": "You may play an additional land on each of your turns.\nWhenever a land enters the battlefield under your control, journey. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
             "originalType": "Enchantment",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The first ability is cumulative if you control more than one. It's also cumulative with other effects that let you play additional lands, such as the one from Rod of Seasons."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "You may play an additional land on each of your turns.\nWhenever a land enters the battlefield under your control, journey. (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",

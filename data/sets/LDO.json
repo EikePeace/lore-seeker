@@ -5570,7 +5570,24 @@
             "originalType": "Creature \u2014 Human Scout",
             "power": "3",
             "rarity": "mythic",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "Expedition Corps doesn't change the times when you can play those land cards. You can still only play lands during your main phase when you have priority and the stack is empty."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "With Expedition Corps, you can play a total of two lands per turn. They can be both from your hand, both frome your graveyard, or one from each zone."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "Expedition Corps doesn't allow you to activate abilities (such as cycling) of land cards in your graveyard."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "The second ability is cumulative if you control more than one. It's also cumulative with other effects that let you play additional lands, such as the one from Rod of Seasons."
+                }
+            ],
             "subtypes": [
                 "Human",
                 "Scout"
