@@ -109,6 +109,9 @@ def yesno(question):
         answer = input('[ ?? ] unrecognized answer, type {}: '.format(join((f'“{choice}”' for choice in choices), word='or')))
 
 if __name__ == '__main__':
+    if sys.argv[1:] in [['-h'], ['--help']]:
+        print('Usage: import-custom-precon (crawl|ech) <decklist> <set-code> [<release-date>]')
+        sys.exit()
     deck_format = sys.argv[1]
     if deck_format not in {'crawl', 'ech'}:
         sys.exit('[!!!!] unknown format (expected crawl or ech, got {})'.format(deck_format))

@@ -1485,5 +1485,1562 @@
             ]
         ],
         "type": "Brawl Deck"
+    },
+    {
+        "brawlers": [
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "115",
+                "Selezzar, Tyrant of Endak"
+            ]
+        ],
+        "cards": [
+            [
+                1,
+                "rak",
+                "0.45",
+                "80",
+                "Avatar of the Abyss"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "118",
+                "Avatar of the Volcano"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "87",
+                "Bitterheart Bokor"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "130",
+                "Bogborn Charger"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "89",
+                "Boghex Witch"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "134a",
+                "Brash Hunter"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "82",
+                "Council of Vaya"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "208",
+                "Death Pits Hawker"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "132",
+                "Borsuppa Scavenger"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "131",
+                "Grin's Reaver"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "91",
+                "Haku Haku Hunter"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "100",
+                "Harvester of Vigor"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "105a",
+                "Inishtu, Desert Healer"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "103a",
+                "Ontarachie Hunter"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "104",
+                "Pelagic Peddler"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "153",
+                "Shimmering Dunekite"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "159",
+                "Sunnula's Firebird"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "243",
+                "Tempered Ankulim"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "118",
+                "Terror of the Ontarachie"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "153",
+                "Unproven Hatchling"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "217",
+                "Vlad-Shi, Packmother"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "84",
+                "Anatomy"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "119",
+                "Bombardment Zone"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "91",
+                "Curse of Bleeding"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "92",
+                "Curse of Haunting"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "94",
+                "Explorer's Fate"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "97",
+                "Grisly Hunger"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "137",
+                "Instincts of the Pack"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "100",
+                "Lazaire's Altar"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "90",
+                "The Fall of Aethanis"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "122",
+                "Tyranny"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "135",
+                "Burning Revelations"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "141",
+                "Epic of the Lovers"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "135",
+                "Incandescent Rain"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "226",
+                "Coral Barrens"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "229a",
+                "Draconic Crevice"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "231a",
+                "Fangmarked Cave"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "240",
+                "Field of Ruin"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "242",
+                "Fractured Remnant"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "245",
+                "Malign Outskirts"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "237",
+                "Ru Kano Ruins"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "248",
+                "Shadowed Pillar"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "246",
+                "Starved Oasis"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "242",
+                "Stirring Effigies"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "247",
+                "Twilight Depths"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "244",
+                "Utamu Core"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "249",
+                "Vacated Bar"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "257",
+                "Wondrous Bazaar"
+            ],
+            [
+                3,
+                "vst",
+                "2.03",
+                "252",
+                "Mountain"
+            ],
+            [
+                3,
+                "vst",
+                "2.03",
+                "251",
+                "Swamp"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "95",
+                "Eli Windsors, Lone Gun"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "114",
+                "Sick Nic, Baron of Crime"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "99",
+                "Epic of Inishtu"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "133",
+                "Hupiri's Trespass"
+            ]
+        ],
+        "name": "Bringing the Pain",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "115",
+                "Selezzar, Tyrant of Endak"
+            ]
+        ],
+        "type": "Brawl Deck"
+    },
+    {
+        "brawlers": [
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "209",
+                "Dehmi, Origin Seeker"
+            ]
+        ],
+        "cards": [
+            [
+                1,
+                "rak",
+                "0.45",
+                "217",
+                "Echoshells"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "231",
+                "Gilded Lotus"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "245",
+                "Voyager's Ark"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "212",
+                "Emerging Ankulim"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "143",
+                "Herald of Ankulim"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "71",
+                "Opulent Ankulim"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "243",
+                "Tempered Ankulim"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "221",
+                "Sarrutu Worldbinder"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "152",
+                "Sarrutu Flamebinder"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "162",
+                "Unbound Annihilus"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "127",
+                "Elder Pyromancer"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "118",
+                "Avatar of the Volcano"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "51",
+                "Delugic Surger"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "199",
+                "Hupiri, Vengeant Storm"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "77",
+                "Seeker Amalgam"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "154",
+                "Utamu Ravager"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "46",
+                "Azutahn Hydromancer"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "130",
+                "Bogborn Charger"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "131",
+                "Bogborn Exorcist"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "71",
+                "Sephius, Reckless Scholar"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "153",
+                "Shimmering Dunekite"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "58",
+                "Glimpse of Fate"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "51",
+                "Coordinated Commotion"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "56",
+                "Epic of Ekebram"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "48",
+                "Book Return"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "141",
+                "Epic of the Lovers"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "69",
+                "Opt"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "240",
+                "Ascending Spires"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "228",
+                "Crossroads of Paradise"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "240",
+                "Field of Ruin"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "251",
+                "Horizon of Origins"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "233a",
+                "Luminescent Lagoon"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "245",
+                "Malign Outskirts"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "234",
+                "Mohele Beacon"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "246",
+                "Ritzy Parlor"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "238",
+                "Sea-Soaked Cliff"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "248",
+                "Shadowed Pillar"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "246",
+                "Starved Oasis"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "244",
+                "Utamu Core"
+            ],
+            [
+                5,
+                "vst",
+                "2.03",
+                "250",
+                "Island"
+            ],
+            [
+                5,
+                "vst",
+                "2.03",
+                "252",
+                "Mountain"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "76",
+                "Talya, Cyber Wayfarer"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "126",
+                "Ankulim Spawning"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "127",
+                "Ankulithic Armaments"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "136",
+                "Lava Shaping"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "42",
+                "Ancestral Research"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "129",
+                "Blazing Offerings"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "201",
+                "Find of a Lifetime"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "63",
+                "Imperial Prosperity"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "153",
+                "Lotus Studies"
+            ]
+        ],
+        "name": "Elemental Energy",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "209",
+                "Dehmi, Origin Seeker"
+            ]
+        ],
+        "type": "Brawl Deck"
+    },
+    {
+        "brawlers": [
+            [
+                1,
+                "vst",
+                "2.03",
+                "163",
+                "Evaldi, Genesis of Hope"
+            ]
+        ],
+        "cards": [
+            [
+                1,
+                "rak",
+                "0.45",
+                "217",
+                "Echoshells"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "245",
+                "Voyager's Ark"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "164",
+                "Evaldi's Masterpiece"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "159",
+                "Avatar of the Jungle"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "175",
+                "Croakfolk Troubadour"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "166",
+                "Digital Witness"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "162",
+                "Endtimes Pilgrim"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "224",
+                "Enigmatic Constructor"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "225",
+                "Eon Overwatch"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "166",
+                "Exiled Channeler"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "182",
+                "Fungal Whomper"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "170",
+                "Gene Gorger"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "171",
+                "Geneshifted Goliath"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "183",
+                "Jeama, Zoulev Queen"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "181a",
+                "Jobiah, Devoted Farmer"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "186",
+                "Kantra of Old Majik"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "228",
+                "Liminal Observer"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "193",
+                "Ontarachie Emissary"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "198",
+                "Serpentdancer Kantra"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "232",
+                "Source Sentries"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "241",
+                "Splinter of Creation"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "243",
+                "Tempered Ankulim"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "183",
+                "Mokupe Tracker"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "165",
+                "Evaldi's Search"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "165",
+                "Agriculture"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "161",
+                "Arcologize"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "169",
+                "Cradle of Civilization"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "185",
+                "Mythology"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "190",
+                "Struggle for Survival"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "200",
+                "Trace the Oasis"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "194",
+                "Wurm's Wake"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "238",
+                "Ancient Shelter"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "246",
+                "Center of Culture"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "228",
+                "Crossroads of Paradise"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "240",
+                "Field of Ruin"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "241",
+                "Forgotten Excavation"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "243",
+                "Fragmented Expanse"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "245",
+                "Malign Outskirts"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "236",
+                "Opaku Monolith"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "241a",
+                "Slumbering Grotto"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "249",
+                "Sprawling Coils"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "251",
+                "Vibrant Locale"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "257",
+                "Wondrous Bazaar"
+            ],
+            [
+                10,
+                "vst",
+                "2.03",
+                "253",
+                "Forest"
+            ],
+            [
+                2,
+                "vst",
+                "2.03",
+                "248",
+                "Wastes"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "1",
+                "Karn, Heart of Guilt"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "174",
+                "Commune with Kantra"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "174",
+                "Epic of Jobiah"
+            ]
+        ],
+        "name": "Here and Back Again",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                1,
+                "vst",
+                "2.03",
+                "163",
+                "Evaldi, Genesis of Hope"
+            ]
+        ],
+        "type": "Brawl Deck"
+    },
+    {
+        "brawlers": [
+            [
+                1,
+                "vst",
+                "2.03",
+                "207",
+                "Nivia, Last of the Aethanis"
+            ]
+        ],
+        "cards": [
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "227",
+                "Breaker of Cities"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "227",
+                "Dystopilith"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "217",
+                "Echoshells"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "231",
+                "Gilded Lotus"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "16",
+                "Harshapal Banner"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "69",
+                "Scion Mimic"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "245",
+                "Voyager's Ark"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "214",
+                "Imperator Namuzzar"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "2",
+                "Angel of Dismay"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "1",
+                "Arms Merchant"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "41",
+                "Avatar of the Ocean"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "208",
+                "Nivia's Safekeeper"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "53",
+                "CyCorp Engineer"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "10",
+                "Dominator Droid"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "52",
+                "Edifice Overseer"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "55",
+                "Emissary of Dark Tides"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "224",
+                "Enigmatic Constructor"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "225",
+                "Eon Overwatch"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "60",
+                "Kantra of the Third Eye"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "215",
+                "Keeper of Codices"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "79",
+                "Witch of Shifting Waters"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "26",
+                "Master of Marble Row"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "35",
+                "Sire of Empires"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "243",
+                "Tempered Ankulim"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "78",
+                "Wall of Mysteries"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "50",
+                "Dehydrate"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "72",
+                "Ranidaphobia"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "20",
+                "Imperial Defenses"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "24",
+                "Long Journey"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "36",
+                "Taken for Questioning"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "82",
+                "Writing"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "56",
+                "Elaborate Transportation"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "61",
+                "Lazaire's Conjuring"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "57",
+                "Full Automation"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "239",
+                "Buried Ruin"
+            ],
+            [
+                1,
+                "sou",
+                "2020-01-01",
+                "246",
+                "Center of Culture"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "232a",
+                "Fogwrapped Cliffs"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "230",
+                "Elipo Ono Meadows"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "238",
+                "Ancient Shelter"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "240",
+                "Ascending Spires"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "240",
+                "Field of Ruin"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "241",
+                "Forgotten Excavation"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "242",
+                "Fractured Remnant"
+            ],
+            [
+                1,
+                "vst",
+                "2.03",
+                "243",
+                "Fragmented Expanse"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "243",
+                "Lakeside Park"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "234",
+                "Mohele Beacon"
+            ],
+            [
+                4,
+                "vst",
+                "2.03",
+                "250",
+                "Island"
+            ],
+            [
+                4,
+                "vst",
+                "2.03",
+                "249",
+                "Plains"
+            ],
+            [
+                2,
+                "vst",
+                "2.03",
+                "248",
+                "Wastes"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "76",
+                "Talya, Cyber Wayfarer"
+            ],
+            [
+                1,
+                "rak",
+                "0.45",
+                "18",
+                "Level the Landscape"
+            ]
+        ],
+        "name": "Revisit the Universe!",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                1,
+                "vst",
+                "2.03",
+                "207",
+                "Nivia, Last of the Aethanis"
+            ]
+        ],
+        "type": "Brawl Deck"
     }
 ]
