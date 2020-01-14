@@ -4716,7 +4716,7 @@
                 "Dragon"
             ],
             "supertypes": [],
-            "text": "Menace\nWhen Dragon-Path Daredevil enters the battlefield, you may discard a card. If you do, journey twice. (To journey. exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
+            "text": "Menace\nWhen Dragon-Path Daredevil enters the battlefield, you may discard a card. If you do, journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
             "toughness": "4",
             "type": "Creature \u2014 Human Dragon",
             "types": [
@@ -8682,7 +8682,7 @@
     "code": "HLW",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "1.12",
         "version": "4.4.1"
     },

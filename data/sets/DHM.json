@@ -1387,7 +1387,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Return all tapped creatures to their owner's hands.\nSeal {2}{U}{U} (You may cast this card face down as a Relic artifact for {2}. You may exile it at any time to cast it for its seal cost.)",
+            "text": "Return all tapped creatures to their owners' hands.\nSeal {2}{U}{U} (You may cast this card face down as a Relic artifact for {2}. You may exile it at any time to cast it for its seal cost.)",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -1848,13 +1848,22 @@
             "originalType": "Creature \u2014 Bird Wizard",
             "power": "1",
             "rarity": "common",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-14",
+                    "text": "Mana produced by Relic Translator can be spent on any part of an artifact spell's total cost. This includes additional costs (such as kicker) and alternative costs (such as focus)."
+                },
+                {
+                    "date": "2020-01-14",
+                    "text": "Mana produced by Relic Translator can't be spent on activated abilities of artifacts."
+                }
+            ],
             "subtypes": [
                 "Bird",
                 "Wizard"
             ],
             "supertypes": [],
-            "text": "Flying\n{T}: Add {C}. Spend this mana only to cast artifact spells. (This mana may be used to cast face-down seal spells.)",
+            "text": "Flying\n{T}: Add {C}. Spend this mana only to cast an artifact spell. (This mana may be used to cast face-down seal spells.)",
             "toughness": "1",
             "type": "Creature \u2014 Bird Wizard",
             "types": [
@@ -2248,7 +2257,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Return up to two target creatures to their owner's hand.\nSeal {3}{U}{U} (You may cast this card face down as a Relic artifact for {2}. You may exile it at any time to cast it for its seal cost.)",
+            "text": "Return up to two target creatures to their owners' hands.\nSeal {3}{U}{U} (You may cast this card face down as a Relic artifact for {2}. You may exile it at any time to cast it for its seal cost.)",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -2984,7 +2993,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "[+1]: Distribute two -1/-1 counters among one or two target creatures.\n[+1]: Choose up to two target creatures. Until your next turn, when either of those creatures dies, you draw a card.\n[-7]: Target opponent gains an emblem with \"Whenever a card is put into a graveyard from anywhere, you lose 2 life.\"",
+            "text": "[+1]: Distribute two -1/-1 counters among one or two target creatures.\n[+1]: Choose up to two target creatures. Until your next turn, when either of those creatures dies, you draw a card.\n[-7]: Target opponent gets an emblem with \"Whenever a card is put into a graveyard from anywhere, you lose 2 life.\"",
             "type": "Legendary Planeswalker \u2014 Nibinem",
             "types": [
                 "Planeswalker"
@@ -8443,7 +8452,7 @@
     "code": "DHM",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": ".84",
         "version": "4.4.1"
     },

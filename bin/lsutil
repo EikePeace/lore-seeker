@@ -42,6 +42,7 @@ PRINTING_SPECIFIC_FIELDS = {
     'hasFoil',
     'hasNonFoil',
     'isArena',
+    'isDateStamped',
     'isFullArt',
     'isMtgo',
     'isOnlineOnly',

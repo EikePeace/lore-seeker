@@ -3449,7 +3449,7 @@
             "name": "Filth Swooper",
             "number": "94",
             "originalName": "Filth Swooper",
-            "originalText": "Flying\n{B}, Discard a card: Put a -1/-1 counter on any number of target creatures with -1/-1 counters on them.",
+            "originalText": "Flying\n{B}, Discard a card: Put a -1/-1 counter on each of any number of target creatures with -1/-1 counters on them.",
             "originalType": "Creature \u2014 Harpy",
             "power": "3",
             "rarity": "uncommon",
@@ -3458,7 +3458,7 @@
                 "Harpy"
             ],
             "supertypes": [],
-            "text": "Flying\n{B}, Discard a card: Put a -1/-1 counter on any number of target creatures with -1/-1 counters on them.",
+            "text": "Flying\n{B}, Discard a card: Put a -1/-1 counter on each of any number of target creatures with -1/-1 counters on them.",
             "toughness": "2",
             "type": "Creature \u2014 Harpy",
             "types": [
@@ -4970,7 +4970,7 @@
             "name": "Instincts of the Pack",
             "number": "137",
             "originalName": "Instincts of the Pack",
-            "originalText": "Each creature spell you cast has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
+            "originalText": "Each creature spell you cast and each creature on the battlefield has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
             "originalType": "Enchantment",
             "rarity": "rare",
             "rulings": [
@@ -8973,7 +8973,7 @@
     "code": "VST",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "2.03",
         "version": "4.4.1"
     },
