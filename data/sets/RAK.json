@@ -7026,7 +7026,16 @@
             "originalType": "Legendary Creature \u2014 Human Warrior",
             "power": "3",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "For each color (white, blue, black, red, and green), check to see if you control a permanent of that color. You can count the same permanent for multiple colors. For example, if you control Oteo and a green enchantment, you draw three cards."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "Each color is only counted once, and colorless is not a color, so you will draw at most five cards."
+                }
+            ],
             "subtypes": [
                 "Human",
                 "Warrior"
@@ -7607,6 +7616,10 @@
                 {
                     "date": "2019-12-20",
                     "text": "The types of mana are white, blue, black, red, green, and colorless. The first ability doesn't allow you to spend mana as though it were mana from, say, an artifact source or a snow source."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "Spending mana as though it were mana of a different type doesn't change what types of mana were spent, only what costs you can pay with that mana. For example, spending {R} as though it were {G} doesn't trigger Ageless Behemoth's ability."
                 }
             ],
             "subtypes": [],
@@ -9328,7 +9341,7 @@
     "code": "RAK",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "0.45",
         "version": "4.4.1"
     },

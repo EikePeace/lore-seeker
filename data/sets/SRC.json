@@ -806,7 +806,16 @@
             "originalText": "Tap target creature.\nDraw a card.",
             "originalType": "Instant",
             "rarity": "common",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "If the creature is an illegal target as Interrogate starts to resolve, none of its effects happen. You don't draw a card."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "A creature that's already tapped is a legal target for this spell."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Tap target creature.\nDraw a card.",
@@ -1666,7 +1675,12 @@
             "originalText": "When Crippling Hallucinations enters the battlefield, investigate twice. (To investigate, create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, you may tap target creature.",
             "originalType": "Enchantment",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The second ability triggers whenever you sacrifice a Clue for any reason, not just when you sacrifice a Clue token to activate its \u201cDraw a card\u201d ability."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "When Crippling Hallucinations enters the battlefield, investigate twice. (To investigate, create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, you may tap target creature.",
@@ -4082,7 +4096,12 @@
             "originalType": "Creature \u2014 Human Advisor",
             "power": "2",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The second ability triggers whenever you sacrifice a Clue for any reason, not just when you sacrifice a Clue token to activate its \u201cDraw a card\u201d ability."
+                }
+            ],
             "subtypes": [
                 "Human",
                 "Advisor"
@@ -6093,7 +6112,12 @@
             "originalType": "Creature \u2014 Spirit",
             "power": "4",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The second ability triggers whenever you sacrifice a Clue for any reason, not just when you sacrifice a Clue token to activate its \u201cDraw a card\u201d ability."
+                }
+            ],
             "subtypes": [
                 "Spirit"
             ],
@@ -7216,7 +7240,12 @@
             "originalType": "Creature \u2014 Spirit",
             "power": "3",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The second ability triggers whenever you sacrifice a Clue for any reason, not just when you sacrifice a Clue token to activate its \u201cDraw a card\u201d ability."
+                }
+            ],
             "subtypes": [
                 "Spirit"
             ],
@@ -8775,7 +8804,7 @@
     "code": "SRC",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "44",
         "version": "4.4.1"
     },

@@ -4397,7 +4397,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Germinate two times. You lose 2 life. (To germinate, put a +1/+1 counter on a creature or create a 1/1 green Saproling creature token.)",
+            "text": "Germinate twice. You lose 2 life. (To germinate, put a +1/+1 counter on a creature or create a 1/1 green Saproling creature token.)",
             "type": "Instant",
             "types": [
                 "Instant"
@@ -7246,7 +7246,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "When Wild Festivities the enters the battlefield or at the beginning of your upkeep, you may put a creature card from your hand onto the battlefield. If you do, each opponent creates a 1/1 blue Frog creature token.",
+            "text": "When Wild Festivities enters the battlefield or at the beginning of your upkeep, you may put a creature card from your hand onto the battlefield. If you do, each opponent creates a 1/1 blue Frog creature token.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
@@ -8894,7 +8894,7 @@
     "code": "EAU",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "2019-08-18",
         "version": "4.4.1"
     },

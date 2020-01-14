@@ -8276,7 +8276,12 @@
             "originalText": "{2}, {T}, Pay 2 life: You may play an additional land this turn.\n{2}, {T}, Sacrifice a land: Draw two cards.\n{2}, {T}, Discard a card: Create a 3/3 green Beast creature token.\n{2}, {T}, Sacrifice a creature: You gain 6 life.",
             "originalType": "Artifact",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The first ability is cumulative if it's resolved more than once. It's also cumulative with other effects that let you play additional lands, such as the one from Expedition Corps."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "{2}, {T}, Pay 2 life: You may play an additional land this turn.\n{2}, {T}, Sacrifice a land: Draw two cards.\n{2}, {T}, Discard a card: Create a 3/3 green Beast creature token.\n{2}, {T}, Sacrifice a creature: You gain 6 life.",
@@ -8999,7 +9004,7 @@
     "code": "CC18",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "1.2.1",
         "version": "4.4.1"
     },

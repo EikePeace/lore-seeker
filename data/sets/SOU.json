@@ -1140,7 +1140,7 @@
                 "Noble"
             ],
             "supertypes": [],
-            "text": "When Ruler of Cities enters the battlefield, you may search your library for an Aura card with enchant land, reveal it, and put it into your hand. If you do, shuffle your library.\nWhenever a land you control becomes enchanted, you gain 2 life.",
+            "text": "When Ruler of Cities enters the battlefield, you may search your library for an Aura card with enchant land, reveal it, put it into your hand, then shuffle your library.\nWhenever a land you control becomes enchanted, you gain 2 life.",
             "toughness": "2",
             "type": "Creature \u2014 Human Noble",
             "types": [
@@ -9103,7 +9103,7 @@
     "code": "SOU",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "2020-01-01",
         "version": "4.4.1"
     },

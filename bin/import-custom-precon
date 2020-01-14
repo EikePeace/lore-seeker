@@ -99,6 +99,15 @@ def parse_zone(deck_xml, zone_name):
         ])
     return result
 
+def yesno(question):
+    choices = ['yes', 'no']
+    answer = input(f'[ ?? ] {question} [{"/".join(choice[0] for choice in choices)}] ')
+    while True:
+        for choice in choices:
+            if answer.lower() in {choice[0], choice}:
+                return choice == 'yes'
+        answer = input('[ ?? ] unrecognized answer, type {}: '.format(join((f'“{choice}”' for choice in choices), word='or')))
+
 if __name__ == '__main__':
     deck_format = sys.argv[1]
     if deck_format not in {'crawl', 'ech'}:
@@ -106,7 +115,7 @@ if __name__ == '__main__':
     deck_xml = xml.etree.ElementTree.parse(sys.argv[2]).getroot()
     with PRECONS_PATHS[deck_format].open() as f:
         precons = json.load(f)
-    precons.append({
+    deck_info = {
         'cards': parse_zone(deck_xml, 'main'),
         'name': deck_xml.find('./deckname').text,
         'release_date': sys.argv[4] if len(sys.argv) > 4 else f'{datetime.datetime.utcnow().date():%Y-%m-%d}',
@@ -117,7 +126,12 @@ if __name__ == '__main__':
             'crawl': 'Brawl Deck',
             'ech': 'Commander Deck'
         }[deck_format]
-    })
+    }
+    if deck_format == 'crawl':
+        deck_info['brawlers'] = [card_info for card_info in deck_info['sideboard'] if yesno(f'is {card_info[4]} the deck commander?')]
+    if deck_format == 'ech':
+        deck_info['commanders'] = [card_info for card_info in deck_info['sideboard'] if yesno(f'is {card_info[4]} the deck commander?')]
+    precons.append(deck_info)
     with PRECONS_PATHS[deck_format].open('w') as f:
         json.dump(precons, f, indent=4, sort_keys=True)
         print(file=f)

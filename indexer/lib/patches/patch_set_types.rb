@@ -48,6 +48,12 @@ class PatchSetTypes < Patch
         set_types << "fnm"
       end
 
+      funny_sets = %W[unh ugl pcel hho parl prel ust pust ppc1 htr htr17 pal04 h17 j17 tbth tdag tfth thp1 thp2 thp3 ptg cmb1]
+      if funny_sets.include?(set_code)
+        set_types << "funny"
+        set["funny"] = true
+      end
+
       if set["name"] =~ /Welcome Deck/ or set["name"] == "M19 Gift Pack"
         set_types << "standard"
       end

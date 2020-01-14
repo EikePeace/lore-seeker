@@ -5,10 +5,13 @@ class PatchReconcileOnSetPriority < Patch
     [
       "name",
       "manaCost",
+      "colors",
       "text",
       "types",
       "subtypes",
       "supertypes",
+      "power",
+      "toughness",
       "rulings",
     ]
   end

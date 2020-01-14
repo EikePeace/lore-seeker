@@ -7159,7 +7159,12 @@
             "originalType": "Legendary Creature \u2014 Human Scout",
             "power": "2",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The first ability is cumulative if you somehow control more than one. It's also cumulative with other effects that let you play additional lands, such as the one from Rod of Seasons."
+                }
+            ],
             "subtypes": [
                 "Human",
                 "Scout"
@@ -8288,7 +8293,7 @@
     "code": "JAN",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "WAR",
         "version": "4.4.1"
     },

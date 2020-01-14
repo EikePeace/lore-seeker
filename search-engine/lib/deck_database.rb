@@ -31,6 +31,8 @@ class DeckDatabase
     set = @db.sets[set_code]
     cards = deck["cards"].map{|c| custom ? resolve_custom(*c) : resolve_card(*c) }
     sideboard = deck["sideboard"].map{|c| custom ? resolve_custom(*c) : resolve_card(*c) }
+    commanders = deck["commanders"].to_a.map{|c| custom ? resolve_custom(*c) : resolve_card(*c) }
+    brawlers = deck["brawlers"].to_a.map{|c| custom ? resolve_custom(*c) : resolve_card(*c) }
     date = deck["release_date"]
     date = date ? Date.parse(date) : nil
     deck = PreconDeck.new(
@@ -40,6 +42,8 @@ class DeckDatabase
       date,
       cards,
       sideboard,
+      commanders,
+      brawlers,
     )
     return deck
   end

@@ -1463,13 +1463,13 @@
             "name": "Aleen's Mandate",
             "number": "42",
             "originalName": "Aleen's Mandate",
-            "originalText": "Choose one \u2014\n\u2022 Exchange control of two target creatures.\n\u2022 Return up to two target creatures to their owner's hand.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "originalText": "Choose one \u2014\n\u2022 Exchange control of two target creatures.\n\u2022 Return up to two target creatures to their owners' hands.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
             "originalType": "Sorcery",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Choose one \u2014\n\u2022 Exchange control of two target creatures.\n\u2022 Return up to two target creatures to their owner's hand.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+            "text": "Choose one \u2014\n\u2022 Exchange control of two target creatures.\n\u2022 Return up to two target creatures to their owners' hands.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -8988,7 +8988,7 @@
     "code": "DMS",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "3.00",
         "version": "4.4.1"
     },

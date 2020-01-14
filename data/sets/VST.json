@@ -1674,7 +1674,20 @@
             "originalType": "Creature \u2014 Illusion",
             "power": "5",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "You'll sacrifice Dust Enigma even if you counter the spell that targets it."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "If the spell that targets Dust Enigma has no other targets, it won't resolve (because it no longer has a legal target after Dust Enigma is sacrificed)."
+                },
+                {
+                    "date": "2020-01-13",
+                    "text": "If there are multiple Dust Enigmas on the battlefield, players must target as many of them with their spells as possible without violating any restrictions such as hexproof. For example, Doomed Undertaking can target any of the Dust Enigmas on the battlefield, but Common Bond must target two different ones."
+                }
+            ],
             "subtypes": [
                 "Illusion"
             ],
@@ -2819,7 +2832,7 @@
             "rulings": [
                 {
                     "date": "2019-12-08",
-                    "text": "If you targeted at least one creature with the ability and all of the creatures you targeted are illegal target as Uneasy Encounter starts to resolve, none of Uneasy Encounter's effects will happen. You won't draw any cards."
+                    "text": "If you targeted at least one creature with Uneasy Encounter and all of the creatures you targeted are illegal targets as Uneasy Encounter starts to resolve, none of Uneasy Encounter's effects will happen. You won't draw any cards."
                 }
             ],
             "subtypes": [],
@@ -3436,7 +3449,7 @@
             "name": "Filth Swooper",
             "number": "94",
             "originalName": "Filth Swooper",
-            "originalText": "Flying\n{B}, Discard a card: Put a -1/-1 counter on any number of target creatures with -1/-1 counters on them.",
+            "originalText": "Flying\n{B}, Discard a card: Put a -1/-1 counter on each of any number of target creatures with -1/-1 counters on them.",
             "originalType": "Creature \u2014 Harpy",
             "power": "3",
             "rarity": "uncommon",
@@ -3445,7 +3458,7 @@
                 "Harpy"
             ],
             "supertypes": [],
-            "text": "Flying\n{B}, Discard a card: Put a -1/-1 counter on any number of target creatures with -1/-1 counters on them.",
+            "text": "Flying\n{B}, Discard a card: Put a -1/-1 counter on each of any number of target creatures with -1/-1 counters on them.",
             "toughness": "2",
             "type": "Creature \u2014 Harpy",
             "types": [
@@ -4957,13 +4970,18 @@
             "name": "Instincts of the Pack",
             "number": "137",
             "originalName": "Instincts of the Pack",
-            "originalText": "Each creature spell you cast has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
+            "originalText": "Each creature spell you cast and each creature on the battlefield has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
             "originalType": "Enchantment",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-12",
+                    "text": "If Instincts of the Pack leaves the battlefield, creatures cast with it no longer have haste. They will still return to their owner's hand at the beginning of the next end step."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
-            "text": "Each creature spell you cast has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
+            "text": "Each creature spell you cast and each creature on the battlefield has dash. The dash cost is equal to its mana cost.\nWhenever a creature enters the battlefield under your control, Instincts of the Pack deals 1 damage to each opponent.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
@@ -5832,7 +5850,12 @@
             "originalType": "Legendary Creature \u2014 Elf Druid",
             "power": "3",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-01-13",
+                    "text": "The second ability is cumulative if you somehow control more than one. It's also cumulative with other effects that let you play additional lands, such as the one from Rod of Seasons."
+                }
+            ],
             "subtypes": [
                 "Elf",
                 "Druid"
@@ -8950,7 +8973,7 @@
     "code": "VST",
     "custom": true,
     "meta": {
-        "date": "2019-12-29",
+        "date": "2020-01-14",
         "setVersion": "2.03",
         "version": "4.4.1"
     },

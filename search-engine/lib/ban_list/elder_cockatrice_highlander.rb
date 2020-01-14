@@ -52,9 +52,7 @@ BanList.for_format("elder cockatrice highlander") do
     "https://discordapp.com/channels/639419773868048395/639428565070249984/658546949737414656",
     "Karn, Heart of Guilt" => "legal",
     "Ashkal Pillarstone" => "banned",
-    "The Circle of Life" => "banned",
     "Treasure Room of Akhamesses" => "banned",
-    "Dystopilith" => "banned",
     "Belit, Tel'tor Emissary" => "banned",
     "Shape Reality" => "banned",
   )

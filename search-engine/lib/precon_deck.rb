@@ -1,11 +1,13 @@
 class PreconDeck < Deck
   attr_reader :set, :name, :type, :release_date, :slug
-  def initialize(set, name, type, release_date, cards, sideboard)
+  def initialize(set, name, type, release_date, cards, sideboard, commanders=nil, brawlers=nil)
     super(cards, sideboard)
     @set = set
     @name = name
     @type = type
     @release_date = release_date
+    @commanders = commanders
+    @brawlers = brawlers
     @slug = @name.downcase.gsub("'s", "s").gsub(/[^a-z0-9s]+/, "-")
   end
 

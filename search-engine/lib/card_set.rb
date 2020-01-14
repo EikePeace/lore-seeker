@@ -22,6 +22,7 @@ class CardSet
     @in_other_boosters = !!data["in_other_boosters"]
     @custom        = !!data["custom"]
     @custom_version = data["custom_version"]
+    @funny         = !!data["funny"]
     @decks         = []
   end
 
@@ -43,6 +44,10 @@ class CardSet
 
   def custom?
     !!@custom
+  end
+
+  def funny?
+    !!@funny
   end
 
   def custom_version

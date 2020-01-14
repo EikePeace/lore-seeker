@@ -75,8 +75,16 @@ class Deck
     end
   end
 
+  def commanders
+    @commanders ||= (valid_commander? && @sideboard)
+  end
+
+  def brawlers
+    @brawlers ||= (valid_brawler? && @sideboard)
+  end
+
   def color_identity
-    return nil unless number_of_sideboard_cards.between?(1, 2)
+    return nil if @sideboard.any?{|n, c| c.is_a?(UnknownCard) or c.nil? }
     @sideboard.map{|n,c| c.color_identity}.inject{|c1, c2| (c1.chars | c2.chars).sort.join }
   end
 end
