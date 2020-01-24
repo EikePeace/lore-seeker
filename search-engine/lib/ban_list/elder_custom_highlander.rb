@@ -1,4 +1,4 @@
-BanList.for_format("elder cockatrice highlander") do
+BanList.for_format("elder custom highlander") do
   format_start(
     nil,
     "Hatseket, Great Archivist" => "banned",

@@ -83,7 +83,7 @@ class DeckController < ApplicationController
       c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
     }
 
-    @format = Format["elder cockatrice highlander"].new
+    @format = Format["elder custom highlander"].new
     @deck_issues = @format.deck_issues(@deck)
 
     @card_previews = @deck.physical_cards.grep(PhysicalCard)
@@ -139,7 +139,7 @@ class DeckController < ApplicationController
 
   def choose_default_preview_card
     # Choose best card to preview
-    if @deck.present? && @format.present? && (@format.format_name == "elder cockatrice highlander" || @format.format_name == "elder xmage highlander")
+    if @deck.present? && @format.present? && (@format.format_name == "elder custom highlander" || @format.format_name == "elder xmage highlander")
       @default_preview_card = @deck.commanders.first.last
     elsif @sideboard.size == 1
       # Commander

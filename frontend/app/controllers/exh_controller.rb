@@ -44,7 +44,7 @@ class ExhController < ApplicationController
 
   def todo
     @title = "EXH card todo list"
-    @ech = Format["elder cockatrice highlander"].new
+    @ech = Format["elder custom highlander"].new
     @exh = Format["elder xmage highlander"].new
     page = [1, params[:page].to_i].max
     #TODO special section for reprints of implemented cards, if any

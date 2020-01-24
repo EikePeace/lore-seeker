@@ -1,7 +1,7 @@
 class FormatEXH < FormatECH
   def initialize(time=nil)
     super(time)
-    @ban_list = BanList["elder cockatrice highlander"]
+    @ban_list = BanList["elder custom highlander"]
   end
 
   def format_pretty_name

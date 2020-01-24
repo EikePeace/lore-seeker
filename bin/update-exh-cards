@@ -27,7 +27,7 @@ def ech_cards():
     return set(subprocess.run(['ruby', '-e', """
         require "./search-engine/lib/card_database"
         require "./search-engine/lib/format/format.rb"
-        ech = Format["elder cockatrice highlander"].new
+        ech = Format["elder custom highlander"].new
         CardDatabase.load.cards.values.select{|c| ech.in_format?(c) }.each do |c|
           puts c.name
         end
@@ -37,7 +37,7 @@ def ech_printings():
     for line in subprocess.run(['ruby', '-e', """
         require "./search-engine/lib/card_database"
         require "./search-engine/lib/format/format.rb"
-        ech = Format["elder cockatrice highlander"].new
+        ech = Format["elder custom highlander"].new
         CardDatabase.load.printings.select{|c| c.set.custom? && ech.in_format?(c) }.each do |c|
           puts "#{c.set.code}\t#{c.name}"
         end

@@ -1,6 +1,6 @@
 class FormatECH < FormatStandard
   def format_pretty_name
-    "Elder Cockatrice Highlander"
+    "Elder Custom Highlander"
   end
 
   def include_custom_sets?

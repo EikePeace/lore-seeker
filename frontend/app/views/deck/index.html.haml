@@ -9,7 +9,7 @@
         = "#{deck.name}"
       = surround "(", ")" do
         != deck.brawlers.map{|n, card| link_to_card(card) { card.name } }.to_sentence
-%h4 Elder Cockatrice Highlander
+%h4 Elder Custom Highlander
 %ul
   - @ech_precons.each do |deck|
     %li
