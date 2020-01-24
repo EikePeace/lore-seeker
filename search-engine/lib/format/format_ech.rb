@@ -26,8 +26,9 @@ class FormatECH < FormatStandard
     if deck.number_of_mainboard_cards != 99
       issues << [:main_size, deck.number_of_mainboard_cards, 99]
     end
-    if deck.number_of_sideboard_cards != 1 and deck.number_of_sideboard_cards != 11
-      issues << [:commander_sideboard_size, deck.number_of_sideboard_cards, true]
+    number_of_non_commander_sideboard_cards = deck.sideboard.reject{|n, c| deck.commanders.include?(c) }.sum(&:first)
+    if number_of_non_commander_sideboard_cards > 10
+      issues << [:side_size_max, number_of_non_commander_sideboard_cards, 10]
     end
     issues
   end
