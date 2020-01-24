@@ -86,7 +86,7 @@ class PatchSetTypes < Patch
         set_types << "deck" unless set_code == "cm1"
       end
 
-      set["types"] = set_types.sort
+      set["types"] = set_types.sort.uniq
     end
   end
 end

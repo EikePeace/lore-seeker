@@ -254,6 +254,7 @@ class Indexer
           "arena",
           "artist",
           "border",
+          "buyabox",
           "exclude_from_boosters",
           "flavor",
           "foiling",

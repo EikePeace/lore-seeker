@@ -2,7 +2,7 @@ class CardPrinting
   attr_reader :card, :set, :date, :release_date
   attr_reader :watermark, :rarity, :artist_name, :multiverseid, :number, :frame, :flavor, :flavor_normalized, :border
   attr_reader :rarity_code, :print_sheet, :partner, :oversized, :frame_effects, :foiling, :spotlight
-  attr_reader :textless, :fullart
+  attr_reader :textless, :fullart, :buyabox
   attr_reader :printed_name, :printed_text, :printed_typeline
 
   # Performance cache of derived information
@@ -49,6 +49,7 @@ class CardPrinting
     @spotlight = data["spotlight"]
     @fullart = data["fullart"]
     @textless = data["textless"]
+    @buyabox = data["buyabox"]
 
     @paper = data["paper"]
     @arena = data["arena"]
@@ -111,8 +112,8 @@ class CardPrinting
     related first_regular_release_date reminder_text augment
     display_power display_toughness display_mana_cost
     primary? secondary? front? back? partner? allowed_in_any_number?
-    commander? brawler?
-    custom? num_exh_votes
+    commander? brawler? custom?
+    num_exh_votes
   ].each do |m|
     eval("def #{m}; @card.#{m}; end")
   end
