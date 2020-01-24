@@ -235,6 +235,7 @@ class Format
         "fdh"                        => FormatFDH,
         "fusioncommander"            => FormatFDH,
         "fusionedh"                  => FormatFDH,
+        "eldercustomhighlander"      => FormatECH,
         "eldercockatricehighlander"  => FormatECH,
         "ech"                        => FormatECH,
         "customcommander"            => FormatECH,
