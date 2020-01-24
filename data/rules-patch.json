@@ -1,6 +1,6 @@
 {
-    "base": "2019-10-04",
-    "effective": "2020-01-01",
+    "base": "2020-01-24",
+    "effective": "2020-01-24",
     "patches": [
         {
             "sets": [
@@ -750,8 +750,8 @@
                 {
                     "type": "insertText",
                     "rule": "601.3e",
-                    "after": "a rule or effect",
-                    "text": " allows a player to cast a spell as a copy of another object or"
+                    "after": "is legal to cast.",
+                    "text": " (This includes rules and effects that allow a player to cast a spell as a copy of another object.)"
                 }
             ]
         },
@@ -1093,9 +1093,10 @@
                     "rule": {
                         "text": "Resonance",
                         "subrules": [
-                            "Resonance appears on some instants and sorceries. It represents two abilities: a static ability that functions while the spell is on the stack and a spell ability which may create a replacement effect. “Resonance [cost]” means “You may pay [cost] rather than pay this spell's mana cost as you cast this spell” and “If this spell's resonance cost was paid, exile it and, as you put your next instant or sorcery spell on the stack to cast it, put this card into its owner's graveyard. If you do, you may copy this card's text box onto that spell, except it doesn't have resonance, and have it become this card's colors in addition to its other colors.”",
+                            "Resonance appears on some instants and sorceries. It represents two abilities: a static ability that functions while the spell is on the stack and a spell ability which may create a replacement effect. “Resonance [cost]” means “You may pay [cost] rather than pay this spell's mana cost as you cast this spell” and “If this spell's resonance cost was paid, exile it and, as you put your next instant or sorcery spell on the stack to cast it, put this card into its owner's graveyard. If you do, you may choose to cast that spell with this card resonated onto it.",
+                            "As a spell cast with a card resonated onto it is put onto the stack, the card's text box is copied onto that spell, except it doesn't have resonance, and the spell becomes the card's colors in addition to its other colors.”",
                             "The text box added by the copy effect is added below any existing text boxes. If the spell resolves, the instructions of its printed text will be followed first, and then the instructions of any spell abilities in the copied text are followed. If multiple replacement effects add text boxes onto the same spell, the one added by the most recently applied effect is ordered last.",
-                            "Putting the exiled spell into its owner's graveyard is a replacement effect that replaces the proposal of the next spell (rules 601.2a–d). Whether or not to apply the copy and color-changing effect is a decision made during the step described in rule 601.2b."
+                            "Putting the exiled spell into its owner's graveyard and choosing whether to cast the next spell with that card resonated onto it is a replacement effect that replaces the proposal of the next spell (rule 601.2a). See also rule 601.3e."
                         ]
                     }
                 }
@@ -1137,10 +1138,10 @@
                         "text": "Premonition",
                         "subrules": [
                             "Premonition is a keyword that represents a static ability that functions while the card with premonition is in a player's hand. “Premonition N—[cost]” means “If you could begin to cast this card by putting it onto the stack from your hand and your library has at least N cards in it, you may pay [cost] and put it onto your library beneath the Nth card of your library. This card becomes face up in your library. This action doesn't use the stack.”",
-                            "Cards that are put into a player's library by the premonition ability are put into the library face up. This is an exception to rule 401.2. Players should keep face up cards in an orientation separate from the orientation of cards in a library that are not face-up or otherwise easily visible to all players.",
-                            "As a face up card with premonition becomes the top card of a player's library, that player casts it without paying its mana cost if able. If that player can't, they turn the face up card face down instead and it becomes the top card of their library. It is no longer face up.",
+                            "Cards that are put into a player's library by the premonition ability are put into the library face up. This is an exception to rule 401.2. Players should keep face-up cards in an orientation separate from the orientation of cards in a library that are not face up or otherwise easily visible to all players.",
+                            "As a face-up card with premonition becomes the top card of a player's library, that player casts it without paying its mana cost if able. If that player can't, they turn the face-up card face down instead and it becomes the top card of their library. It is no longer face up.",
                             "If a one-shot effect causes a player to reveal (or look at, see rule 701.14d), shuffle, or change the order of a card or cards in a library, at least one of which is face up, each such card is turned face down, and then the cards are revealed, shuffled, or reordered.",
-                            "If a continuous effect causes a face up card to be revealed, that card is both revealed and is face up. If the card somehow ceases to be revealed, the card remains face up.",
+                            "If a continuous effect causes a face-up card to be revealed, that card is both revealed and face up. If the card somehow ceases to be revealed, the card remains face up.",
                             "If a one-shot effect causes a card to be put into the library “face up beneath the top N cards of [a player's] library,” that player puts that card into their library using the process described above."
                         ]
                     }
@@ -1286,7 +1287,7 @@
                     "rule": {
                         "text": "Focus",
                         "subrules": [
-                            "Focus is a keyword that represents two abilities: a static ability that functions while the spell with focus is on the stack, and a triggered ability that functions while the spell with focus is on the stack. “Focus [cost]” means “You may pay [cost] rather than pay this spell's mana cost as you cast this spell” and “When you cast this spell, if its focus cost was paid, draw a card.” Paying a spell's focus cost follows the rules for paying alternative costs in rules 601.2b and 601.2f–h."
+                            "Focus is a keyword that represents two abilities: a static ability that functions while the spell with focus is on the stack, and a triggered ability that functions while the spell with focus is on the stack. “Focus [cost]” means “You may pay [cost] rather than pay this spell's mana cost as you cast this spell” and “When you cast this spell, if its focus cost was paid, draw a card.” Casting a spell for its focus cost follows the rules for paying alternative costs in rules 601.2b and 601.2f–h."
                         ]
                     }
                 }
@@ -1321,7 +1322,7 @@
                     "rule": {
                         "text": "Resurrect",
                         "subrules": [
-                            "Resurrect is a keyword that represents three static abilities. “Resurrect [cost]” means “You may cast this spell from your graveyard by paying [cost] rather than paying its mana cost”, “If this permanent was cast for its resurrect cost, it enters the battlefield with a +1/+1 counter on it”, and “If this permanent would leave the battlefield and it was cast for its resurrect cost, exile it instead of putting it anywhere else.” Casting a spell using its resurrect ability follows the rules for paying alternative costs in rules 601.2b and 601.2f–h."
+                            "Resurrect is a keyword that represents three static abilities. “Resurrect [cost]” means “You may cast this spell from your graveyard by paying [cost] rather than paying its mana cost”, “If this permanent was cast for its resurrect cost, it enters the battlefield with a +1/+1 counter on it”, and “If this permanent would leave the battlefield and it was cast for its resurrect cost, exile it instead of putting it anywhere else.” Casting a spell for its resurrect cost follows the rules for paying alternative costs in rules 601.2b and 601.2f–h."
                         ]
                     }
                 }
