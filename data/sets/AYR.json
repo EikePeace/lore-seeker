@@ -4989,7 +4989,7 @@
                 "Spirit"
             ],
             "supertypes": [],
-            "text": "Whenever a creature attacks you or a planeswalker you control, create a colorless artifact token named Gold. It has \"Sacrifice this artifact: Add one mana of any color.\"",
+            "text": "Whenever a creature attacks you or a planeswalker you control, create a Gold token. (It's an artifact with \"Sacrifice this artifact: Add one mana of any color.\")",
             "toughness": "2",
             "type": "Creature \u2014 Spirit",
             "types": [
@@ -8953,7 +8953,7 @@
     "code": "AYR",
     "custom": true,
     "meta": {
-        "date": "2020-01-14",
+        "date": "2020-01-24",
         "setVersion": "DOM",
         "version": "4.4.1"
     },
