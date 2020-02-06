@@ -1,0 +1,11 @@
+How to install the Big Custom Box:
+
+1. In Cockatrice's “Card Database” menu, select “Open custom sets folder”.
+2. In Cockatrice's “Card Database” menu, select “Open custom image folder”.
+3. Close Cockatrice.
+4. Delete all the files in the custom sets folder you opened in step 1 or move them somewhere else.
+5. Move all files from the BCB's “XMLs” folder (not the folder itself) into the custom sets folder.
+6. Optionally, install precon decks by adding them to the “decks” folder which can be found by navigating up one level from the custom sets folder.
+7. Delete all the folders in the custom images folder you opened in step 2 or move them somewhere else.
+8. Optionally, install promos by adding the image files from the BCB's “promos” folder (not the folder itself) to the custom images folder.
+9. Restart Cockatrice.
