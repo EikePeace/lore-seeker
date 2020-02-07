@@ -35,7 +35,7 @@
             "name": "Karn, Heart of Guilt",
             "number": "1",
             "originalName": "Karn, Heart of Guilt",
-            "originalText": "[+2]: Until your next turn, creatures can't attack you or planeswalkers you control unless their controller pays {4} for each of those creatures.\n[-1]: Each opponent exiles a card from their hand, a permanent they control, and the top card of their library.\n[-4]: Return all other nonland permanents to their owners' hands.\n[-10]: Put any number of permanent cards from your hand, graveyard, or exiled with Karn onto the battlefield under your control.",
+            "originalText": "[+2]: Until your next turn, creatures can't attack you or planeswalkers you control unless their controller pays {4} for each of those creatures.\n[-1]: Each opponent exiles a card from their hand, a permanent they control, and the top card of their library.\n[-4]: Return all other nonland permanents to their owners' hands.\n[-10]: Put any number of non-Karn permanent cards from your hand, graveyard, or exiled with Karn onto the battlefield under your control.",
             "originalType": "Legendary Planeswalker \u2014 Karn",
             "rarity": "mythic",
             "rulings": [
@@ -50,7 +50,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "[+2]: Until your next turn, creatures can't attack you or planeswalkers you control unless their controller pays {4} for each of those creatures.\n[-1]: Each opponent exiles a card from their hand, a permanent they control, and the top card of their library.\n[-4]: Return all other nonland permanents to their owners' hands.\n[-10]: Put any number of permanent cards from your hand, graveyard, or exiled with Karn onto the battlefield under your control.",
+            "text": "[+2]: Until your next turn, creatures can't attack you or planeswalkers you control unless their controller pays {4} for each of those creatures.\n[-1]: Each opponent exiles a card from their hand, a permanent they control, and the top card of their library.\n[-4]: Return all other nonland permanents to their owners' hands.\n[-10]: Put any number of non-Karn permanent cards from your hand, graveyard, or exiled with Karn onto the battlefield under your control.",
             "type": "Legendary Planeswalker \u2014 Karn",
             "types": [
                 "Planeswalker"
@@ -191,7 +191,7 @@
             "originalName": "Convoy Forerunner",
             "originalText": "When Convoy Forerunner dies, choose one \u2014\n\u2022 Create a 1/1 white Nomad creature token with vigilance.\n\u2022 Search your library for a Nomad card, reveal it, then shuffle your library and put that card on top of it.",
             "originalType": "Creature \u2014 Human Nomad",
-            "power": "2",
+            "power": "3",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [
@@ -200,7 +200,7 @@
             ],
             "supertypes": [],
             "text": "When Convoy Forerunner dies, choose one \u2014\n\u2022 Create a 1/1 white Nomad creature token with vigilance.\n\u2022 Search your library for a Nomad card, reveal it, then shuffle your library and put that card on top of it.",
-            "toughness": "2",
+            "toughness": "1",
             "type": "Creature \u2014 Human Nomad",
             "types": [
                 "Creature"
@@ -2526,16 +2526,16 @@
             "colors": [
                 "U"
             ],
-            "convertedManaCost": 3.0,
+            "convertedManaCost": 4.0,
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
             "layout": "normal",
-            "manaCost": "{1}{U}{U}",
+            "manaCost": "{2}{U}{U}",
             "name": "Sandwarp",
             "number": "68",
             "originalName": "Sandwarp",
-            "originalText": "You may waste an Island and two other nonwastes lands you control rather than pay this spell's mana cost. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nCounter target spell.",
+            "originalText": "You may waste an Island and three other nonwastes lands you control rather than pay this spell's mana cost. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nCounter target spell.",
             "originalType": "Instant",
             "rarity": "rare",
             "rulings": [
@@ -2554,7 +2554,7 @@
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "You may waste an Island and two other nonwastes lands you control rather than pay this spell's mana cost. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nCounter target spell.",
+            "text": "You may waste an Island and three other nonwastes lands you control rather than pay this spell's mana cost. (Wastes lose all land types and abilities and gain \"{T}: Add {C}.\")\nCounter target spell.",
             "type": "Instant",
             "types": [
                 "Instant"
@@ -3484,7 +3484,7 @@
             "name": "Foug, Indulgent Broker",
             "number": "95",
             "originalName": "Foug, Indulgent Broker",
-            "originalText": "[+1]: Target opponent reveals all the cards in their hand except one. You choose a nonland card revealed this way. That player discards that card.\n[-3]: Destroy target creature unless its controller sacrifices two other creatures.\n[-7]: You get an emblem with \"At the beginning of your end step, draw two cards unless target opponent sacrifices two creatures or pays 6 life.\"",
+            "originalText": "[+1]: Target opponent reveals all the cards in their hand except one. You choose a card revealed this way. That player discards that card.\n[-3]: Destroy target creature unless its controller sacrifices two other creatures.\n[-7]: You get an emblem with \"At the beginning of your end step, draw two cards unless target opponent sacrifices two creatures or pays 6 life.\"",
             "originalType": "Legendary Planeswalker \u2014 Foug",
             "rarity": "mythic",
             "rulings": [],
@@ -3494,7 +3494,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "[+1]: Target opponent reveals all the cards in their hand except one. You choose a nonland card revealed this way. That player discards that card.\n[-3]: Destroy target creature unless its controller sacrifices two other creatures.\n[-7]: You get an emblem with \"At the beginning of your end step, draw two cards unless target opponent sacrifices two creatures or pays 6 life.\"",
+            "text": "[+1]: Target opponent reveals all the cards in their hand except one. You choose a card revealed this way. That player discards that card.\n[-3]: Destroy target creature unless its controller sacrifices two other creatures.\n[-7]: You get an emblem with \"At the beginning of your end step, draw two cards unless target opponent sacrifices two creatures or pays 6 life.\"",
             "type": "Legendary Planeswalker \u2014 Foug",
             "types": [
                 "Planeswalker"
@@ -5169,7 +5169,7 @@
             "name": "Rabid Whelps",
             "number": "143",
             "originalName": "Rabid Whelps",
-            "originalText": "Menace\nRabid Whelps gets +1/+0 as long as you control another Hyena.\nDash {R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+            "originalText": "Rabid Whelps gets +1/+0 as long as you control another Hyena.\nDash {R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
             "originalType": "Creature \u2014 Hyena Berserker",
             "power": "1",
             "rarity": "uncommon",
@@ -5179,7 +5179,7 @@
                 "Berserker"
             ],
             "supertypes": [],
-            "text": "Menace\nRabid Whelps gets +1/+0 as long as you control another Hyena.\nDash {R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+            "text": "Rabid Whelps gets +1/+0 as long as you control another Hyena.\nDash {R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
             "toughness": "2",
             "type": "Creature \u2014 Hyena Berserker",
             "types": [
@@ -7106,14 +7106,14 @@
             "name": "Deathraider Elite",
             "number": "199",
             "originalName": "Deathraider Elite",
-            "originalText": "Menace\nDash {B}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)\nWhenever Deathraider Elite attacks, other Hyenas you control get +1/+1 until end of turn.",
+            "originalText": "Dash {B}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)\nWhenever Deathraider Elite attacks, other Hyenas you control get +1/+1 until end of turn.",
             "originalType": "Creature \u2014 Hyena Berserker",
             "power": "3",
             "rarity": "uncommon",
             "rulings": [
                 {
                     "date": "2019-12-09",
-                    "text": "The third ability only affects Hyenas you control at the time it resolves. Hyenas that enter the battlefield later, Hyenas you gain control of later, and permanents that become Hyenas later are not affected."
+                    "text": "The second ability only affects Hyenas you control at the time it resolves. Hyenas that enter the battlefield later, Hyenas you gain control of later, and permanents that become Hyenas later are not affected."
                 }
             ],
             "subtypes": [
@@ -7121,7 +7121,7 @@
                 "Berserker"
             ],
             "supertypes": [],
-            "text": "Menace\nDash {B}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)\nWhenever Deathraider Elite attacks, other Hyenas you control get +1/+1 until end of turn.",
+            "text": "Dash {B}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)\nWhenever Deathraider Elite attacks, other Hyenas you control get +1/+1 until end of turn.",
             "toughness": "3",
             "type": "Creature \u2014 Hyena Berserker",
             "types": [
@@ -8149,7 +8149,7 @@
             "name": "Liminal Observer",
             "number": "228",
             "originalName": "Liminal Observer",
-            "originalText": "At the beginning of your end step, draw a card.",
+            "originalText": "At the beginning of your upkeep, draw a card.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "4",
             "rarity": "rare",
@@ -8158,7 +8158,7 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "At the beginning of your end step, draw a card.",
+            "text": "At the beginning of your upkeep, draw a card.",
             "toughness": "4",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -8273,7 +8273,6 @@
             "colorIdentity": [],
             "colors": [],
             "convertedManaCost": 2.0,
-            "flavorText": "\"We followed the machines, hoping to scrap them for parts. Instead they lead us to a new safe haven.\"\n\u2014Samul, dust nomad",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -8282,7 +8281,7 @@
             "name": "Source Sentries",
             "number": "232",
             "originalName": "Source Sentries",
-            "originalText": "Flying\nWhen Source Sentries enters the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.",
+            "originalText": "Flying\nWhenever Source Sentries attacks, you may exile target land you control, then return it to the battlefield tapped under your control.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "2",
             "rarity": "uncommon",
@@ -8291,7 +8290,7 @@
                 "Construct"
             ],
             "supertypes": [],
-            "text": "Flying\nWhen Source Sentries enters the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.",
+            "text": "Flying\nWhenever Source Sentries attacks, you may exile target land you control, then return it to the battlefield tapped under your control.",
             "toughness": "1",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -8448,6 +8447,31 @@
             ]
         },
         {
+            "artist": "chang lin",
+            "borderColor": "black",
+            "colorIdentity": [],
+            "colors": [],
+            "convertedManaCost": 0.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "name": "Abandoned Excavation",
+            "number": "237",
+            "originalName": "Abandoned Excavation",
+            "originalText": "Abandoned Excavation enters the battlefield with a charge counter on it.\n{T}: Add {C}.\n{T}, Remove a charge counter from Abandoned Excavation: Add one mana of any color.",
+            "originalType": "Land",
+            "rarity": "uncommon",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Abandoned Excavation enters the battlefield with a charge counter on it.\n{T}: Add {C}.\n{T}, Remove a charge counter from Abandoned Excavation: Add one mana of any color.",
+            "type": "Land",
+            "types": [
+                "Land"
+            ]
+        },
+        {
             "artist": "Elapse Levi Hopkins",
             "borderColor": "black",
             "colorIdentity": [],
@@ -8459,7 +8483,7 @@
             "hasNonFoil": true,
             "layout": "normal",
             "name": "Aethanis, the Fallen Capital",
-            "number": "237",
+            "number": "238",
             "originalName": "Aethanis, the Fallen Capital",
             "originalText": "{T}: Add {C}.\n{C}{C}{C}{C}, {T}: Target player exiles a card from their hand or a permanent they control, then loses 1 life for each card exiled with Aethanis, the Fallen Capital. Activate this ability only any time you could cast a sorcery.",
             "originalType": "Legendary Land",
@@ -8487,7 +8511,7 @@
             "hasNonFoil": true,
             "layout": "normal",
             "name": "Ancient Shelter",
-            "number": "238",
+            "number": "239",
             "originalName": "Ancient Shelter",
             "originalText": "When Ancient Shelter enters the battlefield, spells you cast this turn can't be countered.\n{T}: Add {C}.",
             "originalType": "Land",
@@ -8513,7 +8537,7 @@
             "hasNonFoil": true,
             "layout": "normal",
             "name": "Buried Ruin",
-            "number": "239",
+            "number": "240",
             "originalName": "Buried Ruin",
             "originalText": "{T}: Add {C}.\n{2}, {T}, Sacrifice Buried Ruin: Return target artifact card from your graveyard to your hand.",
             "originalType": "Land",
@@ -8538,7 +8562,7 @@
             "hasNonFoil": true,
             "layout": "normal",
             "name": "Field of Ruin",
-            "number": "240",
+            "number": "241",
             "originalName": "Field of Ruin",
             "originalText": "{T}: Add {C}.\n{2}, {T}, Sacrifice Field of Ruin: Destroy target nonbasic land an opponent controls. Each player searches their library for a basic land card, puts it onto the battlefield, then shuffles their library.",
             "originalType": "Land",
@@ -8547,31 +8571,6 @@
             "subtypes": [],
             "supertypes": [],
             "text": "{T}: Add {C}.\n{2}, {T}, Sacrifice Field of Ruin: Destroy target nonbasic land an opponent controls. Each player searches their library for a basic land card, puts it onto the battlefield, then shuffles their library.",
-            "type": "Land",
-            "types": [
-                "Land"
-            ]
-        },
-        {
-            "artist": "chang lin",
-            "borderColor": "black",
-            "colorIdentity": [],
-            "colors": [],
-            "convertedManaCost": 0.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "name": "Forgotten Excavation",
-            "number": "241",
-            "originalName": "Forgotten Excavation",
-            "originalText": "Forgotten Excavation enters the battlefield with a charge counter on it.\n{T}: Add {C}.\n{T}, Remove a charge counter from Forgotten Excavation: Add one mana of any color.",
-            "originalType": "Land",
-            "rarity": "uncommon",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Forgotten Excavation enters the battlefield with a charge counter on it.\n{T}: Add {C}.\n{T}, Remove a charge counter from Forgotten Excavation: Add one mana of any color.",
             "type": "Land",
             "types": [
                 "Land"
@@ -8612,36 +8611,6 @@
             ]
         },
         {
-            "artist": "qianyi artifact",
-            "borderColor": "black",
-            "colorIdentity": [],
-            "colors": [],
-            "convertedManaCost": 0.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "name": "Fragmented Expanse",
-            "number": "243",
-            "originalName": "Fragmented Expanse",
-            "originalText": "{T}, Sacrifice Fragmented Expanse: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library. Then if that land is a wastes, untap it.",
-            "originalType": "Land",
-            "rarity": "common",
-            "rulings": [
-                {
-                    "date": "2019-12-09",
-                    "text": "A wastes is a permanent named Wastes."
-                }
-            ],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "{T}, Sacrifice Fragmented Expanse: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library. Then if that land is a wastes, untap it.",
-            "type": "Land",
-            "types": [
-                "Land"
-            ]
-        },
-        {
             "artist": "Daum",
             "borderColor": "black",
             "colorIdentity": [],
@@ -8653,7 +8622,7 @@
             "hasNonFoil": true,
             "layout": "normal",
             "name": "Holdout Settlement",
-            "number": "244",
+            "number": "243",
             "originalName": "Holdout Settlement",
             "originalText": "{T}: Add {C}.\n{T}, Tap an untapped creature you control: Add one mana of any color.",
             "originalType": "Land",
@@ -8688,7 +8657,7 @@
             "hasNonFoil": true,
             "layout": "normal",
             "name": "Malign Outskirts",
-            "number": "245",
+            "number": "244",
             "originalName": "Malign Outskirts",
             "originalText": "{T}: Add {C}.\n{1}, {T}, Sacrifice Malign Outskirts: Put a -1/-1 counter on target creature. Activate this ability only any time you could cast a sorcery.",
             "originalType": "Land",
@@ -8697,6 +8666,36 @@
             "subtypes": [],
             "supertypes": [],
             "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Malign Outskirts: Put a -1/-1 counter on target creature. Activate this ability only any time you could cast a sorcery.",
+            "type": "Land",
+            "types": [
+                "Land"
+            ]
+        },
+        {
+            "artist": "qianyi artifact",
+            "borderColor": "black",
+            "colorIdentity": [],
+            "colors": [],
+            "convertedManaCost": 0.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "name": "Neglected Nexus",
+            "number": "245",
+            "originalName": "Neglected Nexus",
+            "originalText": "{T}, Sacrifice Neglected Nexus: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library. Then if that land is a wastes, untap it.",
+            "originalType": "Land",
+            "rarity": "common",
+            "rulings": [
+                {
+                    "date": "2019-12-09",
+                    "text": "A wastes is a permanent named Wastes."
+                }
+            ],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "{T}, Sacrifice Neglected Nexus: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library. Then if that land is a wastes, untap it.",
             "type": "Land",
             "types": [
                 "Land"
@@ -8973,8 +8972,8 @@
     "code": "VST",
     "custom": true,
     "meta": {
-        "date": "2020-01-14",
-        "setVersion": "2.03",
+        "date": "2020-02-07",
+        "setVersion": "2020-02-09",
         "version": "4.4.1"
     },
     "name": "Vastuum",
