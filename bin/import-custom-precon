@@ -115,12 +115,15 @@ if __name__ == '__main__':
     deck_format = sys.argv[1]
     if deck_format not in {'crawl', 'ech'}:
         sys.exit('[!!!!] unknown format (expected crawl or ech, got {})'.format(deck_format))
-    deck_xml = xml.etree.ElementTree.parse(sys.argv[2]).getroot()
+    deck_path = pathlib.Path(sys.argv[2]).resolve()
+    deck_xml = xml.etree.ElementTree.parse(deck_path).getroot()
+    deck_name = deck_xml.find('./deckname').text
     with PRECONS_PATHS[deck_format].open() as f:
         precons = json.load(f)
     deck_info = {
         'cards': parse_zone(deck_xml, 'main'),
-        'name': deck_xml.find('./deckname').text,
+        'name': deck_name,
+        'path': str(deck_path),
         'release_date': sys.argv[4] if len(sys.argv) > 4 else f'{datetime.datetime.utcnow().date():%Y-%m-%d}',
         'set_code': sys.argv[3].lower(),
         'set_name': custom_sets()[sys.argv[3]]['name'],
@@ -134,7 +137,13 @@ if __name__ == '__main__':
         deck_info['brawlers'] = [card_info for card_info in deck_info['sideboard'] if yesno(f'is {card_info[4]} the deck commander?')]
     if deck_format == 'ech':
         deck_info['commanders'] = [card_info for card_info in deck_info['sideboard'] if yesno(f'is {card_info[4]} the deck commander?')]
-    precons.append(deck_info)
+    if any(iter_deck['name'] == deck_name for iter_deck in precons):
+        precons = [
+            deck_info if iter_deck['name'] == deck_name else iter_deck
+            for iter_deck in precons
+        ]
+    else:
+        precons.append(deck_info)
     with PRECONS_PATHS[deck_format].open('w') as f:
         json.dump(precons, f, indent=4, sort_keys=True)
         print(file=f)
