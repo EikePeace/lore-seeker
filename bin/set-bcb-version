@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 cd "${0:a:h}"
 
