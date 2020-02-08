@@ -197,8 +197,10 @@ def bcb():
         ds_store.unlink()
     for box in {'bcb', 'bcb-img', 'trice', 'trice-img'}:
         with zipfile.ZipFile(bcb_dir / f'{box}.zip', 'w', zipfile.ZIP_DEFLATED) as z:
-            for path in (bcb_dir / box).iterdir():
-                z.write(path, path.name)
+            for name, dirs, files in os.walk(bcb_dir / box):
+                for filename in files:
+                    file_path = pathlib.Path(name, filename)
+                    z.write(file_path, file_path.relative_to(bcb_dir / box))
         shutil.rmtree(bcb_dir / box)
         subprocess.run(['scp', str(bcb_dir / f'{box}.zip'), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / "download" / (box + ".zip")}'])
         (bcb_dir / f'{box}.zip').unlink()

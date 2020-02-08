@@ -2,6 +2,747 @@
     {
         "cards": [
             [
+                3,
+                "vst",
+                "2020-02-09",
+                "90",
+                "The Fall of Aethanis"
+            ],
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "70",
+                "Secrets of the Sands"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "103",
+                "Lethal Dose"
+            ],
+            [
+                3,
+                "rak",
+                "2020-02-09",
+                "48",
+                "Disrupting Current"
+            ],
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "56",
+                "Epic of Ekebram"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "78",
+                "Wall of Mysteries"
+            ],
+            [
+                4,
+                "eau",
+                "2019-08-18",
+                "69",
+                "Opt"
+            ],
+            [
+                3,
+                "vst",
+                "2020-02-09",
+                "58",
+                "Mirage Oddity"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "101",
+                "Out of Date"
+            ],
+            [
+                3,
+                "sou",
+                "2020-02-09",
+                "95",
+                "Eli Windsors, Lone Gun"
+            ],
+            [
+                4,
+                "net",
+                "2020-01-01",
+                "250",
+                "Umbrous Depths"
+            ],
+            [
+                3,
+                "eau",
+                "2019-08-18",
+                "242",
+                "Forlorn Ruin"
+            ],
+            [
+                1,
+                "vst",
+                "2020-02-09",
+                "246",
+                "Starved Oasis"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "68",
+                "Sandwarp"
+            ],
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "238",
+                "Aethanis, the Fallen Capital"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "120",
+                "Vibrant Rapture"
+            ],
+            [
+                1,
+                "vst",
+                "2020-02-09",
+                "242",
+                "Fractured Remnant"
+            ],
+            [
+                1,
+                "vst",
+                "2020-02-09",
+                "237",
+                "Abandoned Excavation"
+            ],
+            [
+                6,
+                "vst",
+                "2020-02-09",
+                "250",
+                "Island"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "251",
+                "Swamp"
+            ]
+        ],
+        "name": "UB Aethanis Control",
+        "path": "C:\\Users\\Fenhl\\games\\magic\\format\\custom-standard\\precon\\AethanisUBcontrol.cod",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                3,
+                "eau",
+                "2019-08-18",
+                "104",
+                "Oracle's Ploy"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "68",
+                "Negate"
+            ],
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "82",
+                "Writing"
+            ],
+            [
+                1,
+                "vst",
+                "2020-02-09",
+                "58",
+                "Mirage Oddity"
+            ],
+            [
+                3,
+                "eau",
+                "2019-08-18",
+                "85",
+                "Banish"
+            ],
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "115",
+                "Supply Raid"
+            ],
+            [
+                2,
+                "net",
+                "2020-01-01",
+                "76",
+                "Talya, Cyber Wayfarer"
+            ]
+        ],
+        "type": "Intro Pack"
+    },
+    {
+        "cards": [
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "206",
+                "Bordermakers"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "243",
+                "Tempered Ankulim"
+            ],
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "26",
+                "Master of Marble Row"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "79",
+                "Witch of Shifting Waters"
+            ],
+            [
+                4,
+                "net",
+                "2020-01-01",
+                "52",
+                "Cyber Savant"
+            ],
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "74",
+                "Rhudai Overseer"
+            ],
+            [
+                1,
+                "net",
+                "2020-01-01",
+                "36",
+                "Taken for Questioning"
+            ],
+            [
+                3,
+                "sou",
+                "2020-02-09",
+                "121",
+                "Tradition"
+            ],
+            [
+                3,
+                "sou",
+                "2020-02-09",
+                "82",
+                "Writing"
+            ],
+            [
+                3,
+                "eau",
+                "2019-08-18",
+                "104",
+                "Oracle's Ploy"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "106",
+                "Into the Lion's Den"
+            ],
+            [
+                3,
+                "net",
+                "2020-01-01",
+                "250",
+                "Umbrous Depths"
+            ],
+            [
+                2,
+                "net",
+                "2020-01-01",
+                "240",
+                "Ascending Spires"
+            ],
+            [
+                3,
+                "cc18",
+                "1.2.1",
+                "238",
+                "Glacial Fortress"
+            ],
+            [
+                4,
+                "cc18",
+                "1.2.1",
+                "235",
+                "Drowned Catacomb"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "242",
+                "Forlorn Ruin"
+            ],
+            [
+                3,
+                "net",
+                "2020-01-01",
+                "76",
+                "Talya, Cyber Wayfarer"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "120",
+                "Vibrant Rapture"
+            ],
+            [
+                4,
+                "rak",
+                "2020-02-09",
+                "239",
+                "Shaded Shelter"
+            ],
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "250",
+                "Island"
+            ],
+            [
+                1,
+                "vst",
+                "2020-02-09",
+                "249",
+                "Plains"
+            ],
+            [
+                3,
+                "vst",
+                "2020-02-09",
+                "251",
+                "Swamp"
+            ]
+        ],
+        "name": "Esper Civilized",
+        "path": "C:\\Users\\Fenhl\\games\\magic\\format\\custom-standard\\precon\\EsperCiv.cod",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                3,
+                "eau",
+                "2019-08-18",
+                "5",
+                "Containment Priest"
+            ],
+            [
+                3,
+                "cc18",
+                "1.2.1",
+                "31",
+                "Seal of Judgment"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "19",
+                "Imperial Claim"
+            ],
+            [
+                2,
+                "rak",
+                "2020-02-09",
+                "36",
+                "Wander the Unknown"
+            ],
+            [
+                2,
+                "cc18",
+                "1.2.1",
+                "16",
+                "Final Verdict"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "85",
+                "Banish"
+            ]
+        ],
+        "type": "Intro Pack"
+    },
+    {
+        "cards": [
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "230",
+                "The Source"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "242",
+                "Fractured Remnant"
+            ],
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "246",
+                "Starved Oasis"
+            ],
+            [
+                3,
+                "vst",
+                "2020-02-09",
+                "163",
+                "Evaldi, Genesis of Hope"
+            ],
+            [
+                1,
+                "vst",
+                "2020-02-09",
+                "238",
+                "Aethanis, the Fallen Capital"
+            ],
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "1",
+                "Karn, Heart of Guilt"
+            ],
+            [
+                3,
+                "vst",
+                "2020-02-09",
+                "228",
+                "Liminal Observer"
+            ],
+            [
+                4,
+                "eau",
+                "2019-08-18",
+                "193",
+                "Ontarachie Emissary"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "177",
+                "Landscape Decay"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "186",
+                "Kantra of Old Majik"
+            ],
+            [
+                3,
+                "eau",
+                "2019-08-18",
+                "182",
+                "Fungal Whomper"
+            ],
+            [
+                4,
+                "net",
+                "2020-01-01",
+                "172",
+                "Machine Oracle"
+            ],
+            [
+                1,
+                "vst",
+                "2020-02-09",
+                "194",
+                "Wurm's Wake"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "232",
+                "Source Sentries"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "200",
+                "Sporeflow Protector"
+            ],
+            [
+                1,
+                "rak",
+                "2020-02-09",
+                "188",
+                "Spawning Grounds"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "237",
+                "Abandoned Excavation"
+            ],
+            [
+                14,
+                "vst",
+                "2020-02-09",
+                "253",
+                "Forest"
+            ]
+        ],
+        "name": "Colorless Green Ramp",
+        "path": "C:\\Users\\Fenhl\\games\\magic\\format\\custom-standard\\precon\\GreenCRamp.cod",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "182",
+                "Fungal Whomper"
+            ],
+            [
+                1,
+                "vst",
+                "2020-02-09",
+                "1",
+                "Karn, Heart of Guilt"
+            ],
+            [
+                4,
+                "net",
+                "2020-01-01",
+                "180",
+                "Refuge Warden"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "200",
+                "Sporeflow Protector"
+            ],
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "174",
+                "Epic of Jobiah"
+            ],
+            [
+                1,
+                "rak",
+                "2020-02-09",
+                "188",
+                "Spawning Grounds"
+            ],
+            [
+                2,
+                "net",
+                "2020-01-01",
+                "161",
+                "Arcologize"
+            ],
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "183",
+                "Radaran Reclaimer"
+            ]
+        ],
+        "type": "Intro Pack"
+    },
+    {
+        "cards": [
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "227",
+                "Breaker of Cities"
+            ],
+            [
+                4,
+                "rak",
+                "2020-02-09",
+                "153",
+                "Unproven Hatchling"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "243",
+                "Tempered Ankulim"
+            ],
+            [
+                4,
+                "eau",
+                "2019-08-18",
+                "154",
+                "Minister of Zealots"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "132",
+                "Borsuppa Scavenger"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "144",
+                "Kanaan Wardriver"
+            ],
+            [
+                4,
+                "rak",
+                "2020-02-09",
+                "144",
+                "Meke Firestoker"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "143",
+                "Rabid Whelps"
+            ],
+            [
+                4,
+                "net",
+                "2020-01-01",
+                "135",
+                "Hunter-Seeker"
+            ],
+            [
+                2,
+                "net",
+                "2020-01-01",
+                "134",
+                "Hired Hit"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "150",
+                "Sandscald"
+            ],
+            [
+                20,
+                "vst",
+                "2020-02-09",
+                "252",
+                "Mountain"
+            ]
+        ],
+        "name": "Mono Red",
+        "path": "C:\\Users\\Fenhl\\games\\magic\\format\\custom-standard\\precon\\MonoRed.cod",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "131",
+                "Grin's Reaver"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "156",
+                "Shock"
+            ],
+            [
+                2,
+                "net",
+                "2020-01-01",
+                "134",
+                "Hired Hit"
+            ],
+            [
+                1,
+                "rak",
+                "2020-02-09",
+                "229a",
+                "Draconic Crevice"
+            ],
+            [
+                4,
+                "eau",
+                "2019-08-18",
+                "129",
+                "Blazing Volley"
+            ]
+        ],
+        "type": "Intro Pack"
+    },
+    {
+        "cards": [
+            [
                 4,
                 "rak",
                 "2020-02-09",
@@ -14,13 +755,6 @@
                 "2020-02-09",
                 "36",
                 "Wander the Unknown"
-            ],
-            [
-                20,
-                "vst",
-                "2020-02-09",
-                "249",
-                "Plains"
             ],
             [
                 4,
@@ -91,9 +825,16 @@
                 "2019-08-18",
                 "238",
                 "Art Studio"
+            ],
+            [
+                20,
+                "vst",
+                "2020-02-09",
+                "249",
+                "Plains"
             ]
         ],
-        "name": null,
+        "name": "White Weenies",
         "path": "C:\\Users\\Fenhl\\games\\magic\\format\\custom-standard\\precon\\WhiteWeenies.cod",
         "release_date": "2020-01-02",
         "set_code": "vst",
