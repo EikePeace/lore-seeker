@@ -1,0 +1,154 @@
+[
+    {
+        "cards": [
+            [
+                4,
+                "rak",
+                "2020-02-09",
+                "15",
+                "Keen Sea-Eagle"
+            ],
+            [
+                4,
+                "rak",
+                "2020-02-09",
+                "36",
+                "Wander the Unknown"
+            ],
+            [
+                20,
+                "vst",
+                "2020-02-09",
+                "249",
+                "Plains"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "9",
+                "Founding Hero"
+            ],
+            [
+                4,
+                "sou",
+                "2020-02-09",
+                "4",
+                "Conscription"
+            ],
+            [
+                4,
+                "vst",
+                "2020-02-09",
+                "22",
+                "Nomad's Companion"
+            ],
+            [
+                4,
+                "net",
+                "2020-01-01",
+                "17",
+                "N-FORCE Captain"
+            ],
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "35",
+                "Sire of Empires"
+            ],
+            [
+                4,
+                "eau",
+                "2019-08-18",
+                "40",
+                "Woopip Chef"
+            ],
+            [
+                3,
+                "vst",
+                "2020-02-09",
+                "33",
+                "Sentry Griffin"
+            ],
+            [
+                3,
+                "sou",
+                "2020-02-09",
+                "13",
+                "Hannaru's Courage"
+            ],
+            [
+                2,
+                "rak",
+                "2020-02-09",
+                "38",
+                "Wulani, Kahuna of Gifts"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "238",
+                "Art Studio"
+            ]
+        ],
+        "name": null,
+        "path": "C:\\Users\\Fenhl\\games\\magic\\format\\custom-standard\\precon\\WhiteWeenies.cod",
+        "release_date": "2020-01-02",
+        "set_code": "vst",
+        "set_name": "Vastuum",
+        "sideboard": [
+            [
+                3,
+                "sou",
+                "2020-02-09",
+                "3",
+                "Calming Dromoryx"
+            ],
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "35",
+                "Sire of Empires"
+            ],
+            [
+                2,
+                "sou",
+                "2020-02-09",
+                "19",
+                "Imperial Claim"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "235",
+                "Soul of New Alores"
+            ],
+            [
+                2,
+                "eau",
+                "2019-08-18",
+                "5",
+                "Containment Priest"
+            ],
+            [
+                2,
+                "net",
+                "2020-01-01",
+                "36",
+                "Taken for Questioning"
+            ],
+            [
+                2,
+                "vst",
+                "2020-02-09",
+                "17",
+                "Left to Time"
+            ]
+        ],
+        "type": "Intro Pack"
+    }
+]

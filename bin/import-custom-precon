@@ -13,6 +13,7 @@ import more_itertools # PyPI: more-itertools
 CACHE = {}
 PRECONS_PATHS = {
     'crawl': pathlib.Path('data/crawl-precons.json'),
+    'custard': pathlib.Path('data/custard-precons.json'),
     'ech': pathlib.Path('data/ech-precons.json')
 }
 
@@ -28,7 +29,7 @@ def custom_sets():
     if 'custom_sets' not in CACHE:
         CACHE['custom_sets'] = {}
         for set_path in pathlib.Path('data/sets').iterdir():
-            with set_path.open() as f:
+            with set_path.open(encoding='utf-8') as f:
                 set_file = json.load(f)
             if set_file.get('custom', False):
                 CACHE['custom_sets'][set_file['code']] = set_file
@@ -110,15 +111,15 @@ def yesno(question):
 
 if __name__ == '__main__':
     if sys.argv[1:] in [['-h'], ['--help']]:
-        print('Usage: import-custom-precon (crawl|ech) <decklist> <set-code> [<release-date>]')
+        print('Usage: import-custom-precon (crawl|custard|ech) <decklist> <set-code> [<release-date>]')
         sys.exit()
     deck_format = sys.argv[1]
-    if deck_format not in {'crawl', 'ech'}:
-        sys.exit('[!!!!] unknown format (expected crawl or ech, got {})'.format(deck_format))
+    if deck_format not in {'crawl', 'custard', 'ech'}:
+        sys.exit('[!!!!] unknown format (expected crawl, custard, or ech, got {})'.format(deck_format))
     deck_path = pathlib.Path(sys.argv[2]).resolve()
     deck_xml = xml.etree.ElementTree.parse(deck_path).getroot()
     deck_name = deck_xml.find('./deckname').text
-    with PRECONS_PATHS[deck_format].open() as f:
+    with PRECONS_PATHS[deck_format].open(encoding='utf-8') as f:
         precons = json.load(f)
     deck_info = {
         'cards': parse_zone(deck_xml, 'main'),
@@ -130,6 +131,7 @@ if __name__ == '__main__':
         'sideboard': parse_zone(deck_xml, 'side'),
         'type': {
             'crawl': 'Brawl Deck',
+            'custard': 'Intro Pack',
             'ech': 'Commander Deck'
         }[deck_format]
     }
@@ -144,6 +146,6 @@ if __name__ == '__main__':
         ]
     else:
         precons.append(deck_info)
-    with PRECONS_PATHS[deck_format].open('w') as f:
+    with PRECONS_PATHS[deck_format].open('w', encoding='utf-8') as f:
         json.dump(precons, f, indent=4, sort_keys=True)
         print(file=f)
