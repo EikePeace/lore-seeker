@@ -29,7 +29,10 @@ import gitdir.host.github # https://github.com/fenhl/gitdir
 import lazyjson # https://github.com/fenhl/lazyjson
 import mse_to_json # https://github.com/fenhl/mse-to-json
 
-BASE_PATH = pathlib.Path(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
+try:
+    BASE_PATH = pathlib.PosixPath(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
+except NotImplementedError:
+    BASE_PATH = pathlib.PurePosixPath(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
 CACHE = {'set_files': {}}
 STAGE = gitdir.host.github.GitHub().repo('fenhl/lore-seeker').stage_path
 CACHING_FLAG = STAGE / 'frontend' / 'tmp' / 'caching-dev.txt'
@@ -119,7 +122,7 @@ def subcommand(f, name=None):
     return f
 
 @subcommand
-def bcb():
+def bcb(version):
     """Creates a new version of the Big Custom Box."""
     elevate.elevate() # the Cockatrice installer requires admin privileges
     bcb_dir = STAGE / 'data' / 'bcb'
@@ -156,6 +159,8 @@ def bcb():
     for precon in precons:
         shutil.copy2(precon['path'], bcb_dir / 'bcb' / 'decks' / 'ECH' / f'{precon["name"]}.cod')
     shutil.copytree(STAGE / 'data' / 'promos', bcb_dir / 'bcb' / 'promos')
+    with (bcb_dir / 'bcb' / 'version.txt').open('w', encoding='utf-8') as version_f:
+        print(f'This is version {version} of the Big Custom Box (Loose Files, Images on Demand)', file=version_f)
     # bcb-img
     shutil.copytree(bcb_dir / 'bcb', bcb_dir / 'bcb-img')
     shutil.copy2(STAGE / 'data' / 'install-instructions-img.txt', bcb_dir / 'bcb-img' / 'INSTALL INSTRUCTIONS.txt')
@@ -171,6 +176,8 @@ def bcb():
         shutil.copy2(pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}-files' / f'{set_json["code"]}.xml', bcb_dir / 'bcb-img' / 'XMLs' / f'{set_json["code"]}.xml')
         for img_path in (pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}-files').iterdir():
             shutil.copy2(img_path, bcb_dir / 'bcb-img' / 'images')
+    with (bcb_dir / 'bcb-img' / 'version.txt').open('w', encoding='utf-8') as version_f:
+        print(f'This is version {version} of the Big Custom Box (Loose Files, Bundled Images)', file=version_f)
     # trice
     with requests.get(more_itertools.one(
         asset.browser_download_url
@@ -180,18 +187,21 @@ def bcb():
         response.raise_for_status()
         with (bcb_dir / 'install-trice.exe').open('wb') as trice_zip:
             shutil.copyfileobj(response.raw, trice_zip)
-    (bcb_dir / 'trice').mkdir()
-    subprocess.run([str(bcb_dir / 'install-trice.exe')], check=True) #TODO automate selecting portable mode & installing to bcb_dir/trice & not running
+    subprocess.run([str(bcb_dir / 'install-trice.exe'), '/S', '/PORTABLE', f'/D={bcb_dir / "trice"}'], check=True)
     (bcb_dir / 'install-trice.exe').unlink()
     shutil.copytree(bcb_dir / 'bcb' / 'XMLs', bcb_dir / 'trice' / 'data' / 'customsets')
     shutil.copytree(bcb_dir / 'bcb' / 'decks', bcb_dir / 'trice' / 'data' / 'decks')
     (bcb_dir / 'trice' / 'data' / 'pics').mkdir()
     shutil.copytree(bcb_dir / 'bcb' / 'promos', bcb_dir / 'trice' / 'data' / 'pics' / 'CUSTOM')
+    with (bcb_dir / 'trice' / 'version.txt').open('w', encoding='utf-8') as version_f:
+        print(f'This is version {version} of the Big Custom Box (Full Install, Images on Demand)', file=version_f)
     # trice-img
     shutil.copytree(bcb_dir / 'trice', bcb_dir / 'trice-img')
     for xml_path in (bcb_dir / 'bcb-img' / 'XMLs').iterdir():
         shutil.copy2(xml_path, bcb_dir / 'trice-img' / 'data' / 'customsets')
     shutil.copytree(bcb_dir / 'bcb-img' / 'images', bcb_dir / 'trice' / 'data' / 'pics' / 'downloadedPics')
+    with (bcb_dir / 'trice-img' / 'version.txt').open('w', encoding='utf-8') as version_f:
+        print(f'This is version {version} of the Big Custom Box (Full Install, Bundled Images)', file=version_f)
     # upload
     for ds_store in bcb_dir.glob('**/.DS_Store'):
         ds_store.unlink()
@@ -202,8 +212,9 @@ def bcb():
                     file_path = pathlib.Path(name, filename)
                     z.write(file_path, file_path.relative_to(bcb_dir / box))
         shutil.rmtree(bcb_dir / box)
-        subprocess.run(['scp', str(bcb_dir / f'{box}.zip'), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / "download" / (box + ".zip")}'])
+        subprocess.run(['scp', str(bcb_dir / f'{box}.zip'), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / "download" / (box + ".zip")}'], check=True)
         (bcb_dir / f'{box}.zip').unlink()
+    subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), str(BASE_PATH / 'repo' / 'bin' / 'set-bcb-version'), version], check=True)
     bcb_dir.rmdir()
 
 def build_name_map(ver_dir, old, new):
