@@ -199,7 +199,7 @@ def bcb(version):
     shutil.copytree(bcb_dir / 'trice', bcb_dir / 'trice-img')
     for xml_path in (bcb_dir / 'bcb-img' / 'XMLs').iterdir():
         shutil.copy2(xml_path, bcb_dir / 'trice-img' / 'data' / 'customsets')
-    shutil.copytree(bcb_dir / 'bcb-img' / 'images', bcb_dir / 'trice' / 'data' / 'pics' / 'downloadedPics')
+    shutil.copytree(bcb_dir / 'bcb-img' / 'images', bcb_dir / 'trice-img' / 'data' / 'pics' / 'downloadedPics')
     with (bcb_dir / 'trice-img' / 'version.txt').open('w', encoding='utf-8') as version_f:
         print(f'This is version {version} of the Big Custom Box (Full Install, Bundled Images)', file=version_f)
     # upload
