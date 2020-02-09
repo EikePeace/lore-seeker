@@ -124,7 +124,14 @@ def subcommand(f, name=None):
 @subcommand
 def bcb(version):
     """Creates a new version of the Big Custom Box."""
+    global BASE_PATH
+
     elevate.elevate() # the Cockatrice installer requires admin privileges
+    if 'LORESEEKERDATA' not in os.environ:
+        if yesno('Upload to dev?'):
+            BASE_PATH = pathlib.PurePosixPath('/usr/local/share/fenhl/lore-seeker/dev')
+        else:
+            BASE_PATH = pathlib.PurePosixPath('/usr/local/share/fenhl/lore-seeker')
     bcb_dir = STAGE / 'data' / 'bcb'
     if bcb_dir.exists():
         shutil.rmtree(bcb_dir)
