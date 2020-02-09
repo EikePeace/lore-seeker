@@ -13,19 +13,26 @@ import os
 import pathlib
 import platform
 import re
+import shutil
 import subprocess
 import tempfile
 import xml.etree.ElementTree
 import zipfile
 
 import PIL.Image # PyPI: Pillow
+import elevate # PyPI: elevate
+import github # PyPI: PyGithub
 import more_itertools # PyPI: more-itertools
+import requests # PyPI: requests
 
 import gitdir.host.github # https://github.com/fenhl/gitdir
 import lazyjson # https://github.com/fenhl/lazyjson
 import mse_to_json # https://github.com/fenhl/mse-to-json
 
-BASE_PATH = pathlib.Path(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
+try:
+    BASE_PATH = pathlib.PosixPath(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
+except NotImplementedError:
+    BASE_PATH = pathlib.PurePosixPath(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
 CACHE = {'set_files': {}}
 STAGE = gitdir.host.github.GitHub().repo('fenhl/lore-seeker').stage_path
 CACHING_FLAG = STAGE / 'frontend' / 'tmp' / 'caching-dev.txt'
@@ -113,6 +120,102 @@ def subcommand(f, name=None):
         name = f.__name__
     SUBCOMMANDS[name] = f
     return f
+
+@subcommand
+def bcb(version):
+    """Creates a new version of the Big Custom Box."""
+    elevate.elevate() # the Cockatrice installer requires admin privileges
+    bcb_dir = STAGE / 'data' / 'bcb'
+    if bcb_dir.exists():
+        shutil.rmtree(bcb_dir)
+    bcb_dir.mkdir()
+    # bcb
+    (bcb_dir / 'bcb').mkdir()
+    shutil.copy2(STAGE / 'data' / 'install-instructions-noimg.txt', bcb_dir / 'bcb' / 'INSTALL INSTRUCTIONS.txt')
+    (bcb_dir / 'bcb' / 'XMLs').mkdir()
+    for set_path in CUSTOM_SETS.iterdir():
+        with set_path.open(encoding='utf-8') as set_f:
+            set_json = json.load(set_f)
+        if not set_json.get('custom', False):
+            continue
+        if 'setVersion' not in set_json['meta']:
+            print(f'[ ** ] skipping set {set_json["code"]} as it has no version')
+            continue
+        shutil.copy2(pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}.xml', bcb_dir / 'bcb' / 'XMLs' / f'{set_json["code"]}.xml')
+    (bcb_dir / 'bcb' / 'decks').mkdir()
+    (bcb_dir / 'bcb' / 'decks' / 'Custom Brawl').mkdir()
+    with (STAGE / 'data' / 'crawl-precons.json').open(encoding='utf-8') as precons_f:
+        precons = json.load(precons_f)
+    for precon in precons:
+        shutil.copy2(precon['path'], bcb_dir / 'bcb' / 'decks' / 'Custom Brawl' / f'{precon["name"]}.cod')
+    (bcb_dir / 'bcb' / 'decks' / 'Custom Standard').mkdir()
+    with (STAGE / 'data' / 'custard-precons.json').open(encoding='utf-8') as precons_f:
+        precons = json.load(precons_f)
+    for precon in precons:
+        shutil.copy2(precon['path'], bcb_dir / 'bcb' / 'decks' / 'Custom Standard' / f'{precon["name"]}.cod')
+    (bcb_dir / 'bcb' / 'decks' / 'ECH').mkdir()
+    with (STAGE / 'data' / 'ech-precons.json').open(encoding='utf-8') as precons_f:
+        precons = json.load(precons_f)
+    for precon in precons:
+        shutil.copy2(precon['path'], bcb_dir / 'bcb' / 'decks' / 'ECH' / f'{precon["name"]}.cod')
+    shutil.copytree(STAGE / 'data' / 'promos', bcb_dir / 'bcb' / 'promos')
+    with (bcb_dir / 'bcb' / 'version.txt').open('w', encoding='utf-8') as version_f:
+        print(f'This is version {version} of the Big Custom Box (Loose Files, Images on Demand)', file=version_f)
+    # bcb-img
+    shutil.copytree(bcb_dir / 'bcb', bcb_dir / 'bcb-img')
+    shutil.copy2(STAGE / 'data' / 'install-instructions-img.txt', bcb_dir / 'bcb-img' / 'INSTALL INSTRUCTIONS.txt')
+    (bcb_dir / 'bcb-img' / 'images').mkdir()
+    for set_path in CUSTOM_SETS.iterdir():
+        with set_path.open(encoding='utf-8') as set_f:
+            set_json = json.load(set_f)
+        if not set_json.get('custom', False):
+            continue
+        if 'setVersion' not in set_json['meta']:
+            print(f'[ ** ] skipping set {set_json["code"]} as it has no version')
+            continue
+        shutil.copy2(pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}-files' / f'{set_json["code"]}.xml', bcb_dir / 'bcb-img' / 'XMLs' / f'{set_json["code"]}.xml')
+        for img_path in (pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}-files').iterdir():
+            shutil.copy2(img_path, bcb_dir / 'bcb-img' / 'images')
+    with (bcb_dir / 'bcb-img' / 'version.txt').open('w', encoding='utf-8') as version_f:
+        print(f'This is version {version} of the Big Custom Box (Loose Files, Bundled Images)', file=version_f)
+    # trice
+    with requests.get(more_itertools.one(
+        asset.browser_download_url
+        for asset in github.Github().get_user('Cockatrice').get_repo('Cockatrice').get_latest_release().get_assets()
+        if re.search('-win64\\.exe$', asset.name)
+    ), stream=True) as response:
+        response.raise_for_status()
+        with (bcb_dir / 'install-trice.exe').open('wb') as trice_zip:
+            shutil.copyfileobj(response.raw, trice_zip)
+    subprocess.run([str(bcb_dir / 'install-trice.exe'), '/S', '/PORTABLE', f'/D={bcb_dir / "trice"}'], check=True)
+    (bcb_dir / 'install-trice.exe').unlink()
+    shutil.copytree(bcb_dir / 'bcb' / 'XMLs', bcb_dir / 'trice' / 'data' / 'customsets')
+    shutil.copytree(bcb_dir / 'bcb' / 'decks', bcb_dir / 'trice' / 'data' / 'decks')
+    (bcb_dir / 'trice' / 'data' / 'pics').mkdir()
+    shutil.copytree(bcb_dir / 'bcb' / 'promos', bcb_dir / 'trice' / 'data' / 'pics' / 'CUSTOM')
+    with (bcb_dir / 'trice' / 'version.txt').open('w', encoding='utf-8') as version_f:
+        print(f'This is version {version} of the Big Custom Box (Full Install, Images on Demand)', file=version_f)
+    # trice-img
+    shutil.copytree(bcb_dir / 'trice', bcb_dir / 'trice-img')
+    for xml_path in (bcb_dir / 'bcb-img' / 'XMLs').iterdir():
+        shutil.copy2(xml_path, bcb_dir / 'trice-img' / 'data' / 'customsets')
+    shutil.copytree(bcb_dir / 'bcb-img' / 'images', bcb_dir / 'trice-img' / 'data' / 'pics' / 'downloadedPics')
+    with (bcb_dir / 'trice-img' / 'version.txt').open('w', encoding='utf-8') as version_f:
+        print(f'This is version {version} of the Big Custom Box (Full Install, Bundled Images)', file=version_f)
+    # upload
+    for ds_store in bcb_dir.glob('**/.DS_Store'):
+        ds_store.unlink()
+    for box in {'bcb', 'bcb-img', 'trice', 'trice-img'}:
+        with zipfile.ZipFile(bcb_dir / f'{box}.zip', 'w', zipfile.ZIP_DEFLATED) as z:
+            for name, dirs, files in os.walk(bcb_dir / box):
+                for filename in files:
+                    file_path = pathlib.Path(name, filename)
+                    z.write(file_path, file_path.relative_to(bcb_dir / box))
+        shutil.rmtree(bcb_dir / box)
+        subprocess.run(['scp', str(bcb_dir / f'{box}.zip'), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / "download" / (box + ".zip")}'], check=True)
+        (bcb_dir / f'{box}.zip').unlink()
+    subprocess.run(['ssh', os.environ.get('LORE_SEEKER_HOSTNAME', 'laire'), str(BASE_PATH / 'repo' / 'bin' / 'set-bcb-version'), version], check=True)
+    bcb_dir.rmdir()
 
 def build_name_map(ver_dir, old, new):
     if 'setVersion' in old.get('meta', {}):

@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+cd "${0:a:h}"
+
+echo "$1" > ../data/bcb-version.txt

@@ -13,12 +13,15 @@ import more_itertools # PyPI: more-itertools
 CACHE = {}
 PRECONS_PATHS = {
     'crawl': pathlib.Path('data/crawl-precons.json'),
+    'custard': pathlib.Path('data/custard-precons.json'),
     'ech': pathlib.Path('data/ech-precons.json')
 }
 
-def choose(question, choices):
+def choose(question, choices, *, allow_empty=False):
     answer = input(f'[ ?? ] {question} [{"/".join(choices)}] ')
     while True:
+        if allow_empty and not answer:
+            return None
         for choice in choices:
             if answer.lower() == choice.lower():
                 return choice
@@ -28,7 +31,7 @@ def custom_sets():
     if 'custom_sets' not in CACHE:
         CACHE['custom_sets'] = {}
         for set_path in pathlib.Path('data/sets').iterdir():
-            with set_path.open() as f:
+            with set_path.open(encoding='utf-8') as f:
                 set_file = json.load(f)
             if set_file.get('custom', False):
                 CACHE['custom_sets'][set_file['code']] = set_file
@@ -45,13 +48,25 @@ def find_card(card_name, set_code=None):
     if len(candidates) > 1:
         set_codes = sorted({set_code for set_code, card in candidates})
         if len(set_codes) > 1:
-            set_code = choose(f'set code for {card_name}?', set_codes)
-            candidates = [
-                (set_code, card)
-                for iter_set_code, card in candidates
-                if iter_set_code == set_code
-            ]
-    return random.choice(candidates) #TODO allow choosing by number, leave blank to randomize
+            set_code = choose(f'set code for {card_name}? (leave blank to randomize)', set_codes, allow_empty=True)
+            if set_code is not None:
+                candidates = [
+                    (set_code, card)
+                    for iter_set_code, card in candidates
+                    if iter_set_code == set_code
+                ]
+    if len(candidates) > 1:
+        set_codes = sorted({set_code for set_code, card in candidates})
+        numbers = sorted({card['number'] for set_code, card in candidates})
+        if len(set_codes) == 1 and len(numbers) > 1:
+            number = choose(f'collector number for {card_name}? (leave blank to randomize)', numbers, allow_empty=True)
+            if number is not None:
+                candidates = [
+                    (set_code, card)
+                    for set_code, card in candidates
+                    if card['number'] == number
+                ]
+    return random.choice(candidates)
 
 def join(words, default=None, word='and'):
     words = list(words)
@@ -68,28 +83,35 @@ def parse_zone(deck_xml, zone_name):
     zone = deck_xml.find(f'./zone[@name="{zone_name}"]')
     result = []
     for card in zone:
+        found = False
         card_name = card.get('name')
         if '‘' not in card_name:
             card_name = card_name.replace('’', "'")
         try:
             set_code, card_info = find_card(card_name)
         except (IndexError, ValueError):
-            if card_name[:3] in custom_sets() and card_name[3] == ' ':
-                set_code, card_name = card_name.split(' ', 1)
+            found = False
+        else:
+            found = True
+        if not found and card_name[:3] in custom_sets() and card_name[3] == ' ':
+            set_code, card_name = card_name.split(' ', 1)
+            try:
+                set_code, card_info = find_card(card_name, set_code)
+            except (IndexError, ValueError) as e:
+                card_name = f'{set_code} {card_name}'
+                found = False
+            else:
+                found = True
+        if not found:
+            card_name = input(f'[ ?? ] rename {card_name} to ')
+            try:
+                set_code, card_info = find_card(card_name)
+            except (IndexError, ValueError):
+                set_code = input(f'[ ?? ] set code for {card_name}: ')
                 try:
                     set_code, card_info = find_card(card_name, set_code)
                 except (IndexError, ValueError) as e:
                     raise ValueError(f'Error in card {card.get("name")}') from e
-            else:
-                card_name = input(f'[ ?? ] rename {card_name} to ')
-                try:
-                    set_code, card_info = find_card(card_name)
-                except (IndexError, ValueError):
-                    set_code = input(f'[ ?? ] set code for {card_name}: ')
-                    try:
-                        set_code, card_info = find_card(card_name, set_code)
-                    except (IndexError, ValueError) as e:
-                        raise ValueError(f'Error in card {card.get("name")}') from e
         result.append([
             int(card.get('number')),
             set_code.lower(),
@@ -110,23 +132,29 @@ def yesno(question):
 
 if __name__ == '__main__':
     if sys.argv[1:] in [['-h'], ['--help']]:
-        print('Usage: import-custom-precon (crawl|ech) <decklist> <set-code> [<release-date>]')
+        print('Usage: import-custom-precon (crawl|custard|ech) <decklist> <set-code> [<release-date>]')
         sys.exit()
     deck_format = sys.argv[1]
-    if deck_format not in {'crawl', 'ech'}:
-        sys.exit('[!!!!] unknown format (expected crawl or ech, got {})'.format(deck_format))
-    deck_xml = xml.etree.ElementTree.parse(sys.argv[2]).getroot()
-    with PRECONS_PATHS[deck_format].open() as f:
+    if deck_format not in {'crawl', 'custard', 'ech'}:
+        sys.exit('[!!!!] unknown format (expected crawl, custard, or ech, got {})'.format(deck_format))
+    deck_path = pathlib.Path(sys.argv[2]).resolve()
+    deck_xml = xml.etree.ElementTree.parse(deck_path).getroot()
+    deck_name = deck_xml.find('./deckname').text
+    if deck_name is None:
+        deck_name = input('[ ?? ] deck name: ')
+    with PRECONS_PATHS[deck_format].open(encoding='utf-8') as f:
         precons = json.load(f)
     deck_info = {
         'cards': parse_zone(deck_xml, 'main'),
-        'name': deck_xml.find('./deckname').text,
+        'name': deck_name,
+        'path': str(deck_path),
         'release_date': sys.argv[4] if len(sys.argv) > 4 else f'{datetime.datetime.utcnow().date():%Y-%m-%d}',
         'set_code': sys.argv[3].lower(),
         'set_name': custom_sets()[sys.argv[3]]['name'],
         'sideboard': parse_zone(deck_xml, 'side'),
         'type': {
             'crawl': 'Brawl Deck',
+            'custard': 'Intro Pack',
             'ech': 'Commander Deck'
         }[deck_format]
     }
@@ -134,7 +162,13 @@ if __name__ == '__main__':
         deck_info['brawlers'] = [card_info for card_info in deck_info['sideboard'] if yesno(f'is {card_info[4]} the deck commander?')]
     if deck_format == 'ech':
         deck_info['commanders'] = [card_info for card_info in deck_info['sideboard'] if yesno(f'is {card_info[4]} the deck commander?')]
-    precons.append(deck_info)
-    with PRECONS_PATHS[deck_format].open('w') as f:
+    if any(iter_deck['name'] == deck_name for iter_deck in precons):
+        precons = [
+            deck_info if iter_deck['name'] == deck_name else iter_deck
+            for iter_deck in precons
+        ]
+    else:
+        precons.append(deck_info)
+    with PRECONS_PATHS[deck_format].open('w', encoding='utf-8') as f:
         json.dump(precons, f, indent=4, sort_keys=True)
         print(file=f)
