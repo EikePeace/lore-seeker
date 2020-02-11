@@ -8087,7 +8087,7 @@
                 "Juggernaut"
             ],
             "supertypes": [],
-            "text": "Bogchomper Juggernaut attacks each combat if able.\nBogchomper Juggernaut can't be blocked by Fungus, Saprolings, Plants, or Insects.",
+            "text": "Bogchomper Juggernaut attacks each combat if able.\nBogchomper Juggernaut can't be blocked by Fungi, Saprolings, Plants, or Insects.",
             "toughness": "3",
             "type": "Artifact Creature \u2014 Crocodile Juggernaut",
             "types": [
@@ -8894,7 +8894,7 @@
     "code": "EAU",
     "custom": true,
     "meta": {
-        "date": "2020-01-14",
+        "date": "2020-02-11",
         "setVersion": "2019-08-18",
         "version": "4.4.1"
     },
