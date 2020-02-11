@@ -181,8 +181,9 @@ def bcb(version):
             print(f'[ ** ] skipping set {set_json["code"]} as it has no version')
             continue
         shutil.copy2(pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}-files' / f'{set_json["code"]}.xml', bcb_dir / 'bcb-img' / 'XMLs' / f'{set_json["code"]}.xml')
+        (bcb_dir / 'bcb-img' / 'images' / set_json['code']).mkdir()
         for img_path in (pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}-files').iterdir():
-            shutil.copy2(img_path, bcb_dir / 'bcb-img' / 'images')
+            shutil.copy2(img_path, bcb_dir / 'bcb-img' / 'images' / set_json['code'])
     with (bcb_dir / 'bcb-img' / 'version.txt').open('w', encoding='utf-8') as version_f:
         print(f'This is version {version} of the Big Custom Box (Loose Files, Bundled Images)', file=version_f)
     # trice
