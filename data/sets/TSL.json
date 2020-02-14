@@ -2207,7 +2207,7 @@
             "name": "Jace, Oath Keeper",
             "number": "52",
             "originalName": "Jace, Oath Keeper",
-            "originalText": "[+2]: Until your next turn, whenever a creature attacks you or a planeswalker you control, you may draw a card, then discard a card.\n[-2]: The next time you cast an instant or sorcery spell from your hand this turn, put that card into your hand instead of your graveyard as it resolves.\n[-10]: Search your library, hand, and graveyard for up to three instant and/or sorcery cards and exile them. For as long as they remain exiled, you may cast them without paying their mana costs. Shuffle your library.",
+            "originalText": "[+2]: Until your next turn, whenever a creature attacks you or a planeswalker you control, you may draw a card. If you do, discard a card.\n[-2]: The next time you cast an instant or sorcery spell from your hand this turn, put that card into your hand instead of your graveyard as it resolves.\n[-10]: Search your library, hand, and graveyard for up to three instant and/or sorcery cards and exile them. For as long as they remain exiled, you may cast them without paying their mana costs. Shuffle your library.",
             "originalType": "Legendary Planeswalker \u2014 Jace",
             "rarity": "mythic",
             "rulings": [],
@@ -2217,7 +2217,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "[+2]: Until your next turn, whenever a creature attacks you or a planeswalker you control, you may draw a card, then discard a card.\n[-2]: The next time you cast an instant or sorcery spell from your hand this turn, put that card into your hand instead of your graveyard as it resolves.\n[-10]: Search your library, hand, and graveyard for up to three instant and/or sorcery cards and exile them. For as long as they remain exiled, you may cast them without paying their mana costs. Shuffle your library.",
+            "text": "[+2]: Until your next turn, whenever a creature attacks you or a planeswalker you control, you may draw a card. If you do, discard a card.\n[-2]: The next time you cast an instant or sorcery spell from your hand this turn, put that card into your hand instead of your graveyard as it resolves.\n[-10]: Search your library, hand, and graveyard for up to three instant and/or sorcery cards and exile them. For as long as they remain exiled, you may cast them without paying their mana costs. Shuffle your library.",
             "type": "Legendary Planeswalker \u2014 Jace",
             "types": [
                 "Planeswalker"
@@ -9579,7 +9579,7 @@
     "code": "TSL",
     "custom": true,
     "meta": {
-        "date": "2020-01-14",
+        "date": "2020-02-13",
         "setVersion": "1.05",
         "version": "4.4.1"
     },
