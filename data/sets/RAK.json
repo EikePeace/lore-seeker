@@ -2793,7 +2793,7 @@
             "name": "Avatar of the Abyss",
             "number": "80",
             "originalName": "Avatar of the Abyss",
-            "originalText": "Deathtouch\nWhen Avatar of the Abyss or a Swamp enters the battlefield under your control, Avatar of the Abyss deals 3 damage to target player or planeswalker and you gain 3 life.",
+            "originalText": "Deathtouch\nWhenever Avatar of the Abyss or a Swamp enters the battlefield under your control, Avatar of the Abyss deals 3 damage to target player or planeswalker and you gain 3 life.",
             "originalType": "Creature \u2014 Avatar",
             "power": "5",
             "rarity": "mythic",
@@ -2802,7 +2802,7 @@
                 "Avatar"
             ],
             "supertypes": [],
-            "text": "Deathtouch\nWhen Avatar of the Abyss or a Swamp enters the battlefield under your control, Avatar of the Abyss deals 3 damage to target player or planeswalker and you gain 3 life.",
+            "text": "Deathtouch\nWhenever Avatar of the Abyss or a Swamp enters the battlefield under your control, Avatar of the Abyss deals 3 damage to target player or planeswalker and you gain 3 life.",
             "toughness": "5",
             "type": "Creature \u2014 Avatar",
             "types": [
@@ -9341,7 +9341,7 @@
     "code": "RAK",
     "custom": true,
     "meta": {
-        "date": "2020-02-06",
+        "date": "2020-02-15",
         "setVersion": "2020-02-09",
         "version": "4.4.1"
     },
