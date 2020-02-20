@@ -6418,7 +6418,7 @@
             ]
         },
         {
-            "artist": "andy-timm \u2014 edit",
+            "artist": "Andy Timm",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -9103,7 +9103,7 @@
     "code": "SOU",
     "custom": true,
     "meta": {
-        "date": "2020-02-06",
+        "date": "2020-02-20",
         "setVersion": "2020-02-09",
         "version": "4.4.1"
     },
