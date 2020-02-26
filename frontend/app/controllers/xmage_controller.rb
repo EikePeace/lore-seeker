@@ -23,7 +23,7 @@ class TodoSorter
   end
 end
 
-class XMageController < ApplicationController
+class XmageController < ApplicationController
   def index
     redirect_to(controller: "downloads", action: "index", anchor: "xmage")
   end
