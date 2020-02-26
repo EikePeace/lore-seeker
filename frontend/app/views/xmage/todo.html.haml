@@ -1,4 +1,4 @@
-%p This is a list of cards that are still missing from <a href="/format/elder-xmage-highlander">EXH</a>. See also <a href="/exh/news">the log of implemented cards</a>.
+%p This is a list of cards that are still missing from <a href="/xmage">XMage</a>. See also <a href="/xmage/news">the log of implemented cards</a>.
 .row.results_summary
   .col-12
     - if @cards.present?
@@ -11,13 +11,18 @@
       %h3.card_title
         = link_to_card(card) do
           = card.name
-        - legality = @ech.legality(card)
-        - if legality.start_with? "restricted"
-          = " "
-          %i{class: "legality-restricted"} restricted in ECH
-        - elsif legality.start_with? "banned"
-          = " "
-          %i{class: "legality-banned"} banned in ECH
+        - @formats.each do |format|
+          - legality = format.legality(card)
+          - if legality.start_with? "restricted"
+            = " "
+            %i{class: "legality-restricted"}
+              restricted in
+              = link_to format.format_pretty_name, controller: "format", action: "show", id: format.format_pretty_name.parameterize
+          - elsif legality.start_with? "banned"
+            = " "
+            %i{class: "legality-banned"}
+              banned in
+              = link_to format.format_pretty_name, controller: "format", action: "show", id: format.format_pretty_name.parameterize
         - unless rotation_info.nil?
           %i{style: "font-size: small;"}
             - case rotation_info
@@ -30,8 +35,8 @@
             - else
               (upcoming change: #{rotation_info})
     .col-2.cardinfo
-      - votes = @exh.legality(card).split("-")[1].to_i
       - xc = exh_card(card)
+      - votes = xc.voter_ids.size
       = link_to({controller: "exh", action: "vote", name: xc.name}, class: "legality-banned") do
         %i{class: (signed_in? && xc.voters.include?(current_user)) ? "voted" : ""}
           = "#{votes} vote#{votes == 1 ? "" : "s"}"

@@ -72,6 +72,18 @@ class CardPrinting
     !!@mtgo
   end
 
+  def xmage?(time=nil)
+    time ||= Time.now
+    date = time.to_date
+    until date <= Date.new(2019, 9, 23) do
+      card_file = (Pathname(__dir__) + "../../../index/exh-cards/#{date}.json")
+      return JSON.parse(card_file.read).include?(card.name) if card_file.exist? #TODO migrate to printing-based card lists
+      date -= 1
+      next
+    end
+    false
+  end
+
   def in_boosters?
     (@set.has_boosters? or @set.in_other_boosters?) and !@exclude_from_boosters
   end

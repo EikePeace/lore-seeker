@@ -1,5 +1,5 @@
 %h1 Downloads
-%h2 Big Custom Box
+%h2#bcb Big Custom Box
 %p
   The Big Custom Box includes all the files needed to play custom formats like
   = link_to "ECH", controller: "format", action: "show", id: "elder-custom-highlander"
@@ -33,3 +33,13 @@
   .col-sm-4
     %a{class: "btn btn-outline-primary", href: "/download/bcb-img.zip"}
       Loose Files, Bundled Images
+%h2#xmage XMage
+%p
+  This is a custom build of <a href="http://xmage.de/">XMage</a> which includes
+  = link_to "some", controller: "xmage", action: "news"
+  of the custom cards. It can be used to play
+  = link_to "EXH", controller: "format", action: "show", id: "elder-xmage-highlander"
+  or variants of other custom formats.
+%p
+  %a{class: "btn btn-outline-primary", href: "/download/xmage.zip"}
+    Download Custom XMage
