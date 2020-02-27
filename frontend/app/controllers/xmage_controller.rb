@@ -29,7 +29,7 @@ class XmageController < ApplicationController
     redirect_to(controller: "downloads", action: "index", anchor: "xmage")
   end
 
-  def config
+  def xmage_config # can't be named config because of https://github.com/rails/rails/issues/29217
     today_config = JSON.load(open("http://xmage.today/config.json"))
     base_url = dev? ? "https://dev.lore-seeker.cards/" : "https://lore-seeker.cards"
     render json: {

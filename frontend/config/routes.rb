@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get "deck" => "deck#index"
   get "sealed" => "sealed#index"
   get "xmage" => "xmage#index"
-  get "xmage/config.json" => "xmage#config"
+  get "xmage/config.json" => "xmage#xmage_config"
   get "xmage/news" => "xmage#news"
   get "xmage/todo" => "xmage#todo"
   get "xmage/vote/:name" => "xmage#vote"
