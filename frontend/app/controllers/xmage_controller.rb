@@ -31,11 +31,13 @@ class XmageController < ApplicationController
 
   def xmage_config # can't be named config because of https://github.com/rails/rails/issues/29217
     today_config = JSON.load(open("http://xmage.today/config.json"))
-    base_url = dev? ? "https://dev.lore-seeker.cards/" : "https://lore-seeker.cards"
+    base_url = dev? ? "https://dev.lore-seeker.cards" : "https://lore-seeker.cards"
+    version_file = (Pathname(__dir__) + "../../../data/xmage-version.txt")
+    version = version_file.exist? ? version_file.read : "unknown"
     render json: {
       java: today_config["java"],
       XMage: {
-        version: "", #TODO
+        version: version,
         location: "#{base_url}/download/xmage-update.zip",
         locations: [],
         full: "#{base_url}/download/xmage.zip",
