@@ -6,7 +6,7 @@ class XmageCache
   def get(date)
     #TODO invalidate cache after an hour
     @cache[date] ||= begin
-      path = Pathname(__dir__) + "../../index/exh-cards/#{date}.json"
+      path = Pathname(__dir__) + "../../index/xmage-printings/#{date}.json"
       path.exist? ? JSON.parse(path.read) : nil
     end
   end
@@ -90,8 +90,8 @@ class CardPrinting
     time ||= Time.now
     date = time.to_date
     until date <= Date.new(2019, 9, 23) do
-      card_names = $XmageCache.get(date)
-      return card_names.include?(card.name) unless card_names.nil? #TODO migrate to printing-based card lists
+      card_printings = $XmageCache.get(date)
+      return card_printings.has_key?(name) and card_printings[name].include?(set.code) unless card_names.nil?
       date -= 1
       next
     end
