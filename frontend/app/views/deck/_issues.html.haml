@@ -81,7 +81,7 @@
             %span.cardinfo
               - votes = deck_format.legality(params.first).split("-")[1].to_i
               - xc = exh_card(params.first)
-              = link_to({controller: "exh", action: "vote", name: xc.name}, class: "legality-banned") do
+              = link_to({controller: "xmage", action: "vote", name: xc.name}, class: "legality-banned") do
                 %i{class: (signed_in? && xc.voters.include?(current_user)) ? "voted" : ""}
                   #{votes} vote#{votes == 1 ? "" : "s"}
           - when :partner

@@ -74,7 +74,6 @@ class XmageController < ApplicationController
       Format["elder custom highlander"].new,
       Format["custom eternal"].new
     ]
-    @exh = Format["elder xmage highlander"].new
     page = [1, params[:page].to_i].max
     #TODO special section for reprints of implemented cards, if any
     search = "st:custom is:mainfront -game:xmage"
