@@ -91,7 +91,7 @@ class CardPrinting
     date = time.to_date
     until date <= Date.new(2019, 9, 23) do
       card_printings = $XmageCache.get(date)
-      return card_printings.has_key?(name) && card_printings[name].include?(set.code) unless card_names.nil?
+      return card_printings.has_key?(name) && card_printings[name].include?(set.code) unless card_printings.nil?
       date -= 1
       next
     end
