@@ -33,7 +33,7 @@ class XmageController < ApplicationController
     today_config = JSON.load(open("http://xmage.today/config.json"))
     base_url = dev? ? "https://dev.lore-seeker.cards" : "https://lore-seeker.cards"
     version_file = (Pathname(__dir__) + "../../../data/xmage-version.txt")
-    version = version_file.exist? ? version_file.read : "unknown"
+    version = version_file.exist? ? version_file.read.strip : "unknown"
     render json: {
       java: today_config["java"],
       XMage: {
