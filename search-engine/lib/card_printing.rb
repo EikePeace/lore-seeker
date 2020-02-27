@@ -4,7 +4,10 @@ class XmageCache
   end
 
   def get(date)
-    #TODO invalidate cache after an hour
+    if date >= Date.today # don't cache today's or future card lists
+      path = Pathname(__dir__) + "../../index/xmage-printings/#{date}.json"
+      return path.exist? ? JSON.parse(path.read) : nil
+    end
     @cache[date] ||= begin
       path = Pathname(__dir__) + "../../index/xmage-printings/#{date}.json"
       path.exist? ? JSON.parse(path.read) : nil
