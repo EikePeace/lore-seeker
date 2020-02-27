@@ -108,9 +108,11 @@ def main_all(*, dir=XMAGE_PRINTINGS_DIR, redo=False):
         except KeyError as e:
             if e.args[0] == ('championsofkamigawa', 'CounselOfTheSoratami'):
                 print(f'[ !! ] skipping {time:%Y-%m-%d} because of Counsel of the Soratami capitalization change')
+                time += datetime.timedelta(days=1)
                 continue
             elif e.args[0] == ('zendikar', 'JourneyToNowhere'):
                 print(f'[ !! ] skipping {time:%Y-%m-%d} because of Journey to Nowhere capitalization change')
+                time += datetime.timedelta(days=1)
                 continue
             else:
                 raise
