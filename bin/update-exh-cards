@@ -101,30 +101,24 @@ def main_all(*, dir=XMAGE_PRINTINGS_DIR, redo=False):
     time = start_time
     pull = True
     while time <= pytz.utc.localize(datetime.datetime.utcnow()):
-        progress = (time - start_time) / (pytz.utc.localize(datetime.datetime.utcnow()) - start_time)
-        progress = min(4, int(5 * progress))
-        print(f'\r[{"=" * progress}{"." * (4 - progress)}] {time:%Y-%m-%d}', end=' ', flush=True)
+        print(f'updating XMage card list for {time:%Y-%m-%d}')
         try:
             next_printings = set(implemented_printings(time, pull=pull))
             pull = False
         except KeyError as e:
             if e.args[0] == ('championsofkamigawa', 'CounselOfTheSoratami'):
-                print(f'\r[ !! ] skipping {time:%Y-%m-%d} because of Counsel of the Soratami capitalization change')
+                print(f'[ !! ] skipping {time:%Y-%m-%d} because of Counsel of the Soratami capitalization change')
                 continue
             elif e.args[0] == ('zendikar', 'JourneyToNowhere'):
-                print(f'\r[ !! ] skipping {time:%Y-%m-%d} because of Journey to Nowhere capitalization change')
+                print(f'[ !! ] skipping {time:%Y-%m-%d} because of Journey to Nowhere capitalization change')
                 continue
             else:
-                print('\r[!!!!]')
                 raise
-        except Exception as e:
-            print('\r[!!!!]')
-            raise
         if next_printings != printings:
             write_printings(next_printings, time, dir=dir)
             printings = next_printings
         time += datetime.timedelta(days=1)
-    print('\r[ ok ]')
+    print('[ ok ] XMage card lists updated')
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
