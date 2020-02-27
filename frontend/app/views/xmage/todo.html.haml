@@ -13,7 +13,13 @@
           = card.name
         - @formats.each do |format|
           - legality = format.legality(card)
-          - if legality.start_with? "restricted"
+          - if legality.nil?
+            = " "
+            %i{style: "font-size: small;"}
+              (not legal in
+              = succeed ")" do
+                = link_to format.format_pretty_name, controller: "format", action: "show", id: format.format_pretty_name.parameterize
+          - elsif legality.start_with? "restricted"
             = " "
             %i{class: "legality-restricted"}
               restricted in
