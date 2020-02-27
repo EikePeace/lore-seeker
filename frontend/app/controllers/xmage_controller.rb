@@ -61,7 +61,7 @@ class XmageController < ApplicationController
       end
       next_cards = results.map(&:card).to_set
       if next_cards != cards
-        @entries.insert(0, [date, results.reject?{|best_printing| cards.include?(best_printing.card)}.sort])
+        @entries.insert(0, [date, results.reject{|best_printing| cards.include?(best_printing.card)}.sort])
         cards = next_cards
       end
       date += 1
