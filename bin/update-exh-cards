@@ -74,13 +74,13 @@ def write(card_list):
         json.dump(sorted(card_list), f)
     #TODO commit new file to repo
 
-def main(do_announce=True):
+def main(do_announce=False):
     prev = prev_cards()
-    current = exh_cards()
+    current = implemented_cards()
     #TODO only generate a new file if anything has changed
     write(current)
     if do_announce:
         announce(current - prev)
 
 if __name__ == '__main__':
-    main(do_announce='--no-announce' not in sys.argv[1:])
+    main(do_announce='--announce' in sys.argv[1:])
