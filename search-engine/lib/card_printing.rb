@@ -6,7 +6,7 @@ class XmageCache
   def get(date)
     #TODO invalidate cache after an hour
     @cache[date] ||= begin
-      path = Pathname(__dir__) + "../../../index/exh-cards/#{date}.json"
+      path = Pathname(__dir__) + "../../index/exh-cards/#{date}.json"
       path.exist? ? JSON.parse(path.read) : nil
     end
   end
