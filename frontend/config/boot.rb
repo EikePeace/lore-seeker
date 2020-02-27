@@ -6,5 +6,5 @@ require "bundler/setup" # Set up gems listed in the Gemfile.
 require_relative "../../search-engine/lib/card_database"
 $CardDatabase = CardDatabase.load
 
-require "../../search-engine/lib/card_printing"
+require_relative "../../search-engine/lib/card_printing"
 $XmageCache = XmageCache.new
