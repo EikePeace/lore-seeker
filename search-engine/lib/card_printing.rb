@@ -1,12 +1,19 @@
 class XmageCache
   def initialize
     @cache = {}
+    @today_cache = nil
+    @today_cache_time = nil
   end
 
   def get(date)
-    if date >= Date.today # don't cache today's or future card lists
-      path = Pathname(__dir__) + "../../index/xmage-printings/#{date}.json"
-      return path.exist? ? JSON.parse(path.read) : nil
+    return nil if date > Date.today # don't cache future printing lists
+    if date == Date.today # expire today's cache after an hour
+      if @today_cache_time.nil? or @today_cache_time.to_date < Date.today or @today_cache_time < Time.now - (60 * 60)
+        path = Pathname(__dir__) + "../../index/xmage-printings/#{date}.json"
+        @today_cache = path.exist? ? JSON.parse(path.read) : nil
+        @today_cache_time = Time.now
+      end
+      return @today_cache
     end
     @cache[date] ||= begin
       path = Pathname(__dir__) + "../../index/xmage-printings/#{date}.json"
