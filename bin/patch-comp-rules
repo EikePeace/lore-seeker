@@ -263,7 +263,10 @@ class CompRules:
                     self['205.3{}'.format(subrule_id)] = '{}. The {} types are {}.{}'.format(match.group(1), match.group(2), join(v for k, v in sorted(subtypes.items())), match.group(4))
                     patch_rules.add('205.3{}'.format(subrule_id))
                 elif patch['type'] == 'append':
-                    self[patch['rule']] += ' ' + patch['text']
+                    if isinstance(self[patch['rule']], dict):
+                        self[patch['rule']]['name'] += ' ' + patch['text']
+                    else:
+                        self[patch['rule']] += ' ' + patch['text']
                     patch_rules.add(patch['rule'])
                 elif patch['type'] == 'insert':
                     self.insert(patch['rule'], patch['text'])
