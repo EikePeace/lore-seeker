@@ -114,6 +114,10 @@ def main_all(*, dir=XMAGE_PRINTINGS_DIR, redo=False):
                 print(f'[ !! ] skipping {time:%Y-%m-%d} because of Journey to Nowhere capitalization change')
                 time += datetime.timedelta(days=1)
                 continue
+            elif e.args[0] == ('fifthedition', 'WindsOfChange'):
+                print(f'[ !! ] skipping {time:%Y-%m-%d} because of Winds of Change reprint without superclass')
+                time += datetime.timedelta(days=1)
+                continue
             else:
                 raise
         if next_printings != printings:
