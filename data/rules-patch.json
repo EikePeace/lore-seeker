@@ -1,6 +1,6 @@
 {
     "base": "2020-01-24",
-    "effective": "2020-01-24",
+    "effective": "2020-03-01",
     "patches": [
         {
             "sets": [
@@ -253,6 +253,16 @@
                     "rule": "200.1",
                     "after": "loyalty, ",
                     "text": "stability, "
+                },
+                {
+                    "type": "append",
+                    "rule": "209",
+                    "text": "and Stability"
+                },
+                {
+                    "type": "add",
+                    "rule": "209",
+                    "text": "Each Structure card has a stability number printed in its lower right corner. This indicates its stability while it’s not on the battlefield, and it also indicates that the Structure enters the battlefield with that many stability counters on it."
                 }
             ]
         },
@@ -491,6 +501,20 @@
                         "trance",
                         "virtuoso"
                     ]
+                }
+            ]
+        },
+        {
+            "sets": [
+                "CC18"
+            ],
+            "comment": "CC18's set code is 4 characters instead of 3",
+            "rules": [
+                {
+                    "type": "replace",
+                    "rule": "212.1d",
+                    "find": "three-character",
+                    "replace": "three- or four-character"
                 }
             ]
         },
@@ -1430,7 +1454,7 @@
             "sets": [
                 "RAK"
             ],
-            "comment": "The voyage keyword ability and the game term “discover paradise” are defined here",
+            "comment": "The voyage keyword ability and the game term “controls Paradise” are defined here",
             "rules": [
                 {
                     "type": "addKeywordAbility",
@@ -1526,7 +1550,7 @@
             "sets": [
                 "SRC"
             ],
-            "comment": "The accomplice keyword ability is defined here",
+            "comment": "The accomplice keyword ability and the game term “becomes an accomplice” are defined here",
             "rules": [
                 {
                     "type": "addKeywordAbility",
