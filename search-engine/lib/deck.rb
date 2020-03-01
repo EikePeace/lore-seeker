@@ -103,6 +103,12 @@ class Deck
     else
       return [[:unknown_game, game]]
     end
-    cards_with_sideboard.map(&:last).map(&:main_front).reject(&game_test).map{|card| [:not_in_game, game, card]}
+    cards_with_sideboard.map(&:last).map(&:main_front).reject(&game_test).map do |card|
+      if game.downcase == "xmage"
+        [:not_on_xmage, card]
+      else
+        [:not_in_game, game, card]
+      end
+    end
   end
 end
