@@ -54,6 +54,7 @@ class XmageController < ApplicationController
     date = Date.new(2019, 9, 24)
     cards = Set[]
     until date > Date.today do
+      next if date > Date.new(2019, 9, 24) and $XmageCache.get(date).nil?
       query = Query.new("st:custom is:mainfront game:xmage", dev: dev?)
       query.cond.metadata! :time, date.to_time
       results = $CardDatabase.search(query).card_groups.map do |printings|
