@@ -97,6 +97,10 @@ SIMPLE_FIELDS = [
     'frameVersion',
     'hasFoil',
     'hasNonFoil',
+    'isArena',
+    'isMtgo',
+    'isOnlineOnly',
+    'isPaper',
     'layout',
     'loyalty',
     'manaCost',
@@ -524,17 +528,40 @@ def import_set(set_code, set_version):
     if not set_dir.exists():
         raise FileNotFoundError(f'No such set directory: {set_dir}')
     ver_dir = set_dir / f'v{set_version}'
-    if (ver_dir / 'errata.mse-set').exists() and (ver_dir / 'set.mse-set').exists():
-        with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
-            errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
-        with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
-            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    # read errata_set_json
+    if (ver_dir / 'errata.json').exists():
+        with (ver_dir / 'errata.json').open() as set_file:
+            errata_set_json = json.load(set_file)
+        errata_set_json['meta']['setVersion'] = set_version
+    elif (ver_dir / 'set.json').exists() and (ver_dir / 'errata.mse-set').exists():
+        raise FileNotFoundError(f'found set.json and errata.mse-set but not errata.json')
+    elif (ver_dir / 'set.json').exists():
+        with (ver_dir / 'set.json').open() as set_file:
+            errata_set_json = json.load(set_file)
+        errata_set_json['meta']['setVersion'] = set_version
     elif (ver_dir / 'errata.mse-set').exists():
         with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
-            new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+            errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
     else:
         with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
-            new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+            errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    # read new_set_json
+    if (ver_dir / 'set.json').exists():
+        with (ver_dir / 'set.json').open() as set_file:
+            new_set_json = json.load(set_file)
+        new_set_json['meta']['setVersion'] = set_version
+    elif (ver_dir / 'errata.json').exists() and (ver_dir / 'set.mse-set').exists():
+        raise FileNotFoundError(f'found errata.json and set.mse-set but not set.json')
+    elif (ver_dir / 'errata.json').exists():
+        with (ver_dir / 'errata.json').open() as set_file:
+            new_set_json = json.load(set_file)
+        new_set_json['meta']['setVersion'] = set_version
+    elif (ver_dir / 'set.mse-set').exists():
+        with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
+            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    else:
+        with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
+            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
     set_json_path = pathlib.Path(f'data/sets/{set_code}.json')
     if set_json_path.exists():
         with set_json_path.open(encoding='utf-8') as set_file:
