@@ -59,7 +59,7 @@ class XmageController < ApplicationController
         next
       end
       query = Query.new("st:custom is:mainfront game:xmage", dev: dev?)
-      query.cond.metadata! :time, date.to_time
+      query.cond.metadata! :time, date
       results = $CardDatabase.search(query).card_groups.map do |printings|
         with_best_printing(printings).first
       end
