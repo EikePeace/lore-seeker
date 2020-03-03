@@ -3,6 +3,8 @@ Rails.application.configure do
 
   # allow debugging on dev
   config.hosts << "dev.lore-seeker.cards"
+  # allow debugging on production
+  config.hosts << "lore-seeker.cards"
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
