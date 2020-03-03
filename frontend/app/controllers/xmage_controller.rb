@@ -51,7 +51,7 @@ class XmageController < ApplicationController
   def news
     @title = "new XMage cards"
     @entries = []
-    date = dev? ? Date.new(2019, 9, 24) : Date:new(2020, 3, 3)
+    date = dev? ? Date.new(2019, 9, 24) : Date.new(2020, 3, 3)
     cards = Set[]
     until date > Date.today do
       if date > Date.new(2019, 9, 24) and $XmageCache.get(date).nil?
