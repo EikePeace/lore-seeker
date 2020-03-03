@@ -45,6 +45,8 @@ PRINTING_SPECIFIC_FIELDS = {
     'duelDeck',
     'flavorText',
     'foreignData',
+    'frameEffect',
+    'frameEffects',
     'frameVersion',
     'hasFoil',
     'hasNonFoil',
