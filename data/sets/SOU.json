@@ -4918,7 +4918,7 @@
             ],
             "number": "139a",
             "originalName": "Emerabi and Sunnula",
-            "originalText": "At the beginning of combat on your turn, create a 1/1 red Nomad creature token with haste.\nAt the beginning of your upkeep, if control five or more creatures, you may transform Emerabi and Sunnula.",
+            "originalText": "At the beginning of combat on your turn, create a 1/1 red Nomad creature token with haste.\nAt the beginning of your upkeep, if you control five or more creatures, you may transform Emerabi and Sunnula.",
             "originalType": "Legendary Creature \u2014 Human Nomad",
             "power": "5",
             "rarity": "mythic",
@@ -4931,7 +4931,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "At the beginning of combat on your turn, create a 1/1 red Nomad creature token with haste.\nAt the beginning of your upkeep, if control five or more creatures, you may transform Emerabi and Sunnula.",
+            "text": "At the beginning of combat on your turn, create a 1/1 red Nomad creature token with haste.\nAt the beginning of your upkeep, if you control five or more creatures, you may transform Emerabi and Sunnula.",
             "toughness": "4",
             "type": "Legendary Creature \u2014 Human Nomad",
             "types": [
@@ -9103,7 +9103,7 @@
     "code": "SOU",
     "custom": true,
     "meta": {
-        "date": "2020-02-20",
+        "date": "2020-03-03",
         "setVersion": "2020-02-09",
         "version": "4.4.1"
     },
