@@ -161,6 +161,10 @@ class Card
     printings[0].main_front.card
   end
 
+  def xmage?(time=nil)
+    printings.any?{|printing| printing.xmage?(time) }
+  end
+
   def num_exh_votes
     exh_card = ExhCard.find_by(name: main_front.name)
     exh_card.nil? ? 0 : exh_card.voter_ids.size

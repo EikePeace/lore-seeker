@@ -13,7 +13,7 @@ end
 class Query
   attr_reader :warnings, :seed
   attr_reader :cond, :metadata # for tests only
-  attr_writer :sorter # for EXH todo list
+  attr_writer :cond, :sorter # for XMage news and todo list
 
   def initialize(query_string, seed=nil, user=nil, dev: false)
     @query_string = query_string

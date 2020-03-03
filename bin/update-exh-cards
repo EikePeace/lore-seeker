@@ -4,83 +4,138 @@ import sys
 
 sys.path.append('/opt/py')
 
+import collections
 import datetime
 import json
 import os
 import pathlib
 import subprocess
 
+import dateutil.parser # PyPI: python-dateutil
+import more_itertools # PyPI: more-itertools
+import pytz # PyPI: pytz
+
 import xmage_maintenance # https://github.com/magefree/xmage-maintenance
 
 BASE_PATH = pathlib.Path(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
-EXH_CARDS_DIR = BASE_PATH / 'repo' / 'index' / 'exh-cards'
+XMAGE_PRINTINGS_DIR = BASE_PATH / 'repo' / 'index' / 'xmage-printings'
 XMAGE_EXH = pathlib.Path('/opt/git/github.com/EikePeace/mage/branch/EXH')
 
-def announce(new_cards):
-    subprocess.run([
-        '/opt/git/github.com/fenhl/lore-seeker-discord/master/target/release/lore-seeker',
-        '--no-wait', 'announce-exh-cards',
-        *sorted(new_cards)
-    ], env={**os.environ, 'LORESEEKERDATA': str(pathlib.Path('..').resolve())}, check=True)
-
-def ech_cards():
+def custom_set_cards(time=None):
     return set(subprocess.run(['ruby', '-e', """
+        require "date"
         require "./search-engine/lib/card_database"
         require "./search-engine/lib/format/format.rb"
-        ech = Format["elder custom highlander"].new
-        CardDatabase.load.cards.values.select{|c| ech.in_format?(c) }.each do |c|
+        CardDatabase.load.cards.values.select{{|c| c.set.custom?{} }}.each do |c|
           puts c.name
         end
-    """], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines())
+    """.format('' if time is None else f' && c.first_release_date <= Date.new({time:%-Y, %-m, %-d})')], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines())
 
-def ech_printings():
+def custom_set_printings(time=None):
     for line in subprocess.run(['ruby', '-e', """
+        require "date"
         require "./search-engine/lib/card_database"
         require "./search-engine/lib/format/format.rb"
-        ech = Format["elder custom highlander"].new
-        CardDatabase.load.printings.select{|c| c.set.custom? && ech.in_format?(c) }.each do |c|
+        CardDatabase.load.printings.select{{|c| c.set.custom?{} }}.each do |c|
           puts "#{c.set.code}\t#{c.name}"
         end
-    """], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines():
+    """.format('' if time is None else f'&& c.release_date <= Date.new({time:%-Y, %-m, %-d})')], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines():
         set_code, card_name = line.split('\t', 1)
         yield set_code.upper(), card_name
 
-def exh_cards():
-    return ech_cards() & implemented_cards()
+def implemented_cards(time=None):
+    return {card_name for set_code, card_name in implemented_printings(time)}
 
-def implemented_cards():
-    return {card_name for set_code, card_name in implemented_printings()}
+def implemented_printings(time=None, *, pull=True):
+    if pull:
+        subprocess.run(['git', 'pull', '--quiet'], cwd=XMAGE_EXH)
+    if time is None:
+        last_rev = None
+    else:
+        last_rev = subprocess.run(['git', 'rev-list', '-n', '1', '--first-parent', f'--before={time:%Y-%m-%d %H:%M:%S}', 'EXH'], cwd=XMAGE_EXH, stdout=subprocess.PIPE, encoding='utf-8', check=True).stdout.strip()
+        if not last_rev:
+            return set()
+    return xmage_maintenance.iter_implemented(repo=XMAGE_EXH, rev=last_rev)
 
-def implemented_printings():
-    subprocess.run(['git', 'pull', '--quiet'], cwd=XMAGE_EXH)
-    return xmage_maintenance.iter_implemented(repo=XMAGE_EXH)
-
-def missing_reprints(*, impl=None):
+def missing_reprints(time=None, *, impl=None):
     if impl is None:
-        impl = set(implemented_printings())
-    for set_code, card_name in set(ech_printings()) - impl:
+        impl = set(implemented_printings(time))
+    for set_code, card_name in set(custom_set_printings(time)) - impl:
         if any(n == card_name for s, n in impl):
             yield set_code, card_name
 
-def prev_cards():
-    for exh_db in sorted(EXH_CARDS_DIR.iterdir(), reverse=True):
-        if exh_db.suffix == '.json':
-            with exh_db.open() as f:
-                return set(json.load(f))
-    raise FileNotFoundError('Previous card list missing')
-
-def write(card_list):
-    with (EXH_CARDS_DIR / f'{datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d}.json').open('w') as f:
-        json.dump(sorted(card_list), f)
+def write_cards(card_list, time=None, *, dir=XMAGE_PRINTINGS_DIR):
+    if time is None:
+        time = datetime.datetime.now(datetime.timezone.utc)
+    with (dir / f'{time:%Y-%m-%d}.json').open('w') as f:
+        json.dump(sorted(card_list), f, indent=4, sort_keys=True)
     #TODO commit new file to repo
 
-def main(do_announce=True):
-    prev = prev_cards()
-    current = exh_cards()
-    #TODO only generate a new file if anything has changed
-    write(current)
-    if do_announce:
-        announce(current - prev)
+def write_printings(printing_list, time=None, *, dir=XMAGE_PRINTINGS_DIR):
+    if time is None:
+        time = datetime.datetime.now(datetime.timezone.utc)
+    result = collections.defaultdict(list)
+    for set_code, card_name in printing_list:
+        result[card_name] = sorted(set(result[card_name]) | {set_code})
+    with (dir / f'{time:%Y-%m-%d}.json').open('w') as f:
+        json.dump(result, f, indent=4, sort_keys=True)
+    #TODO commit new file to repo
+
+def read_printings(printings_path):
+    with printings_path.open() as f:
+        printings = json.load(f)
+    for card_name, set_codes in printings.items():
+        for set_code in set_codes:
+            yield set_code, card_name
+
+def main(time=None, *, dir=XMAGE_PRINTINGS_DIR):
+    write_printings(implemented_printings(time), time, dir=dir)
+
+def main_all(*, dir=XMAGE_PRINTINGS_DIR, redo=False):
+    if redo or more_itertools.ilen(dir.iterdir()) == 0:
+        start_time = pytz.utc.localize(datetime.datetime(2010, 3, 20, 23, 17))
+        printings = set()
+    else:
+        last = sorted(dir.iterdir())[-1]
+        start_time = pytz.utc.localize(datetime.datetime.combine(datetime.datetime.strptime(last.stem, '%Y-%m-%d'), datetime.time(23, 17)))
+        printings = set(read_printings(last))
+    time = start_time
+    pull = True
+    while time <= pytz.utc.localize(datetime.datetime.utcnow()):
+        print(f'updating XMage card list for {time:%Y-%m-%d}')
+        try:
+            next_printings = set(implemented_printings(time, pull=pull))
+            pull = False
+        except KeyError as e:
+            if e.args[0] == ('championsofkamigawa', 'CounselOfTheSoratami'):
+                print(f'[ !! ] skipping {time:%Y-%m-%d} because of Counsel of the Soratami capitalization change')
+                time += datetime.timedelta(days=1)
+                continue
+            elif e.args[0] == ('zendikar', 'JourneyToNowhere'):
+                print(f'[ !! ] skipping {time:%Y-%m-%d} because of Journey to Nowhere capitalization change')
+                time += datetime.timedelta(days=1)
+                continue
+            elif e.args[0] == ('fifthedition', 'WindsOfChange'):
+                print(f'[ !! ] skipping {time:%Y-%m-%d} because of Winds of Change reprint without superclass')
+                time += datetime.timedelta(days=1)
+                continue
+            elif e.args[0] == ('anthologyjacevschandra', 'WallOfDeceit'):
+                print(f'[ !! ] skipping {time:%Y-%m-%d} because of Wall of Deceit reprint without superclass')
+                time += datetime.timedelta(days=1)
+                continue
+            else:
+                raise
+        if next_printings != printings:
+            write_printings(next_printings, time, dir=dir)
+            printings = next_printings
+        time += datetime.timedelta(days=1)
+    print('[ ok ] XMage card lists updated')
 
 if __name__ == '__main__':
-    main(do_announce='--no-announce' not in sys.argv[1:])
+    if len(sys.argv) > 1:
+        if sys.argv[1] == '--all':
+            main_all(redo=True)
+        else:
+            main(dateutil.parser.parse(sys.argv[1]))
+    else:
+        main_all()

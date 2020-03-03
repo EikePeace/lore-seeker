@@ -74,6 +74,14 @@
             = link_to_card(params.first) do
               = params.first.name
             is not in the format
+          - when :not_in_game
+            - game, card = params
+            = link_to_card(card) do
+              = card.name
+            - if game == "paper"
+              is not available as a paper card
+            - else
+              is not available on #{game}
           - when :not_on_xmage
             = link_to_card(params.first) do
               = params.first.name
@@ -81,7 +89,7 @@
             %span.cardinfo
               - votes = deck_format.legality(params.first).split("-")[1].to_i
               - xc = exh_card(params.first)
-              = link_to({controller: "exh", action: "vote", name: xc.name}, class: "legality-banned") do
+              = link_to({controller: "xmage", action: "vote", name: xc.name}, class: "legality-banned") do
                 %i{class: (signed_in? && xc.voters.include?(current_user)) ? "voted" : ""}
                   #{votes} vote#{votes == 1 ? "" : "s"}
           - when :partner
@@ -107,6 +115,8 @@
             Deck must contain exactly #{expected} cards, has #{actual}
           - when :unknown_card
             Unknown card name: #{params.first.name}
+          - when :unknown_game
+            Unknown game: #{params.first}
           - when :unknown_legality
             - card, card_legality = params
             Unknown legality #{card_legality} for

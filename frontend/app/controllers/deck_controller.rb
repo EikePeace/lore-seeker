@@ -97,6 +97,7 @@ class DeckController < ApplicationController
   def visualize
     @title = "Deck Visualizer"
     @formats = Format.all_format_classes.map(&:new)
+    @games = ["any", "paper", "Arena", "MTGO", "XMage"]
     @warnings = []
 
     if params[:deck_upload]
@@ -112,6 +113,7 @@ class DeckController < ApplicationController
       @deck = params[:deck]
     end
     @format = params[:format] ? Format[params[:format]].new : Format["freeform"].new
+    @game = @games.select{|game| game.downcase == (params[:game] || "any") }.first
 
     if @deck.present?
       parser = DeckParser.new($CardDatabase, @deck)
@@ -123,6 +125,7 @@ class DeckController < ApplicationController
         c.is_a?(PhysicalCard) ? [0, c.name, c.set_code, c.number] : [1, c.name]
       }
 
+      @warnings += parser.deck.game_issues(@game)
       @warnings += @format.deck_issues(parser.deck)
 
       @card_previews = parser.deck.physical_cards.uniq.grep(PhysicalCard)

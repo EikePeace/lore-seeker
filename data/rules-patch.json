@@ -1,6 +1,6 @@
 {
     "base": "2020-01-24",
-    "effective": "2020-01-24",
+    "effective": "2020-03-03",
     "patches": [
         {
             "sets": [
@@ -253,6 +253,16 @@
                     "rule": "200.1",
                     "after": "loyalty, ",
                     "text": "stability, "
+                },
+                {
+                    "type": "append",
+                    "rule": "209",
+                    "text": "and Stability"
+                },
+                {
+                    "type": "add",
+                    "rule": "209",
+                    "text": "Each Structure card has a stability number printed in its lower right corner. This indicates its stability while it’s not on the battlefield, and it also indicates that the Structure enters the battlefield with that many stability counters on it."
                 }
             ]
         },
@@ -454,6 +464,7 @@
                         "Sobki",
                         "Talya",
                         "Toahanga",
+                        "Vaen",
                         "Veila",
                         "Wulani",
                         "Yemma"
@@ -468,7 +479,6 @@
                         "Dolphin",
                         "Farmer",
                         "Giraffe",
-                        "Mech",
                         "Nanobot",
                         "Ship"
                     ]
@@ -491,6 +501,20 @@
                         "trance",
                         "virtuoso"
                     ]
+                }
+            ]
+        },
+        {
+            "sets": [
+                "CC18"
+            ],
+            "comment": "CC18's set code is 4 characters instead of 3",
+            "rules": [
+                {
+                    "type": "replace",
+                    "rule": "212.1d",
+                    "find": "three-character",
+                    "replace": "three- or four-character"
                 }
             ]
         },
@@ -964,7 +988,7 @@
                     "rule": {
                         "text": "Arm",
                         "subrules": [
-                            "To arm a creature, create a colorless Equipment artifact token named Weapon attached to that creature. The token has equip {2} and “Equipped creature gets +1/+1”.",
+                            "To arm a creature, create a colorless Equipment artifact token named Weapon attached to that creature. The token has “Equipped creature gets +1/+1” and equip {2}.",
                             "An object that's not a creature or not on the battlefield can't be armed. If a player attempts to do so, the Equipment token is not created.",
                             "If an ability causes a creature to enter the battlefield armed, this means “If this object would enter the battlefield, instead it enters the battlefield and you simultaneously arm it.” The object and the token enter the battlefield simultaneously, and the object is never on the battlefield unequipped. See rule 603.6b."
                         ]
@@ -1430,7 +1454,7 @@
             "sets": [
                 "RAK"
             ],
-            "comment": "The voyage keyword ability and the game term “discover paradise” are defined here",
+            "comment": "The voyage keyword ability and the game term “controls Paradise” are defined here",
             "rules": [
                 {
                     "type": "addKeywordAbility",
@@ -1526,7 +1550,7 @@
             "sets": [
                 "SRC"
             ],
-            "comment": "The accomplice keyword ability is defined here",
+            "comment": "The accomplice keyword ability and the game term “becomes an accomplice” are defined here",
             "rules": [
                 {
                     "type": "addKeywordAbility",

@@ -7385,7 +7385,7 @@
                     "text": "While you can't lose the game, your opponents can still win the game if an effect says so."
                 },
                 {
-                    "date": "2018-12-09",
+                    "date": "2019-12-09",
                     "text": "Effects that say the game is a draw, such as Divine Intervention, are not affected by Naomi."
                 }
             ],
@@ -8088,16 +8088,21 @@
             "name": "Eradicator Engine",
             "number": "226",
             "originalName": "Eradicator Engine",
-            "originalText": "When Eradicator Engine enters the battlefield or attacks, destroy target nonland permanent with the lowest converted mana cost.",
+            "originalText": "Whenever Eradicator Engine enters the battlefield or attacks, destroy target nonland permanent with the lowest converted mana cost.",
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "5",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-03-03",
+                    "text": "Most tokens have a converted mana cost of zero, so you might have to target tokens with the ability."
+                }
+            ],
             "subtypes": [
                 "Construct"
             ],
             "supertypes": [],
-            "text": "When Eradicator Engine enters the battlefield or attacks, destroy target nonland permanent with the lowest converted mana cost.",
+            "text": "Whenever Eradicator Engine enters the battlefield or attacks, destroy target nonland permanent with the lowest converted mana cost.",
             "toughness": "3",
             "type": "Artifact Creature \u2014 Construct",
             "types": [
@@ -8972,7 +8977,7 @@
     "code": "VST",
     "custom": true,
     "meta": {
-        "date": "2020-02-07",
+        "date": "2020-03-03",
         "setVersion": "2020-02-09",
         "version": "4.4.1"
     },

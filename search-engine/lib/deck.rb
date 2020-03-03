@@ -87,4 +87,28 @@ class Deck
     return nil if @sideboard.any?{|n, c| c.is_a?(UnknownCard) or c.nil? }
     @sideboard.map{|n,c| c.color_identity}.inject{|c1, c2| (c1.chars | c2.chars).sort.join }
   end
+
+  def game_issues(game)
+    game_test = case game.downcase
+    when "any"
+      return []
+    when "paper"
+      :paper?
+    when "arena"
+      :arena?
+    when "mtgo"
+      :mtgo?
+    when "xmage"
+      :xmage?
+    else
+      return [[:unknown_game, game]]
+    end
+    cards_with_sideboard.map(&:last).map(&:main_front).reject(&game_test).map do |card|
+      if game.downcase == "xmage"
+        [:not_on_xmage, card]
+      else
+        [:not_in_game, game, card]
+      end
+    end
+  end
 end

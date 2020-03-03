@@ -1,8 +1,0 @@
-%p This is a log of when which cards were implemented for <a href="/format/elder-xmage-highlander">EXH</a>. See also <a href="/exh/todo">the list of unimplemented cards</a>.
-- @entries.each do |date, new_cards|
-  %h3= date.to_s
-  %ul
-    - new_cards.each do |card|
-      %li
-        = link_to_card_name(card) do
-          = card

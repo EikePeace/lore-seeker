@@ -45,6 +45,8 @@ PRINTING_SPECIFIC_FIELDS = {
     'duelDeck',
     'flavorText',
     'foreignData',
+    'frameEffect',
+    'frameEffects',
     'frameVersion',
     'hasFoil',
     'hasNonFoil',
@@ -97,6 +99,10 @@ SIMPLE_FIELDS = [
     'frameVersion',
     'hasFoil',
     'hasNonFoil',
+    'isArena',
+    'isMtgo',
+    'isOnlineOnly',
+    'isPaper',
     'layout',
     'loyalty',
     'manaCost',
@@ -124,7 +130,14 @@ def subcommand(f, name=None):
 @subcommand
 def bcb(version):
     """Creates a new version of the Big Custom Box."""
+    global BASE_PATH
+
     elevate.elevate() # the Cockatrice installer requires admin privileges
+    if 'LORESEEKERDATA' not in os.environ:
+        if yesno('Upload to dev?'):
+            BASE_PATH = pathlib.PurePosixPath('/usr/local/share/fenhl/lore-seeker/dev')
+        else:
+            BASE_PATH = pathlib.PurePosixPath('/usr/local/share/fenhl/lore-seeker')
     bcb_dir = STAGE / 'data' / 'bcb'
     if bcb_dir.exists():
         shutil.rmtree(bcb_dir)
@@ -174,8 +187,9 @@ def bcb(version):
             print(f'[ ** ] skipping set {set_json["code"]} as it has no version')
             continue
         shutil.copy2(pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}-files' / f'{set_json["code"]}.xml', bcb_dir / 'bcb-img' / 'XMLs' / f'{set_json["code"]}.xml')
+        (bcb_dir / 'bcb-img' / 'images' / set_json['code']).mkdir()
         for img_path in (pathlib.Path.home() / 'games' / 'magic' / 'set' / set_json['code'].lower() / f'v{set_json["meta"]["setVersion"]}' / 'trice-errata' / f'{set_json["code"]}-files').iterdir():
-            shutil.copy2(img_path, bcb_dir / 'bcb-img' / 'images')
+            shutil.copy2(img_path, bcb_dir / 'bcb-img' / 'images' / set_json['code'])
     with (bcb_dir / 'bcb-img' / 'version.txt').open('w', encoding='utf-8') as version_f:
         print(f'This is version {version} of the Big Custom Box (Loose Files, Bundled Images)', file=version_f)
     # trice
@@ -516,17 +530,40 @@ def import_set(set_code, set_version):
     if not set_dir.exists():
         raise FileNotFoundError(f'No such set directory: {set_dir}')
     ver_dir = set_dir / f'v{set_version}'
-    if (ver_dir / 'errata.mse-set').exists() and (ver_dir / 'set.mse-set').exists():
-        with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
-            errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
-        with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
-            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    # read errata_set_json
+    if (ver_dir / 'errata.json').exists():
+        with (ver_dir / 'errata.json').open() as set_file:
+            errata_set_json = json.load(set_file)
+        errata_set_json['meta']['setVersion'] = set_version
+    elif (ver_dir / 'set.json').exists() and (ver_dir / 'errata.mse-set').exists():
+        raise FileNotFoundError(f'found set.json and errata.mse-set but not errata.json')
+    elif (ver_dir / 'set.json').exists():
+        with (ver_dir / 'set.json').open() as set_file:
+            errata_set_json = json.load(set_file)
+        errata_set_json['meta']['setVersion'] = set_version
     elif (ver_dir / 'errata.mse-set').exists():
         with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
-            new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+            errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
     else:
         with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
-            new_set_json = errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+            errata_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    # read new_set_json
+    if (ver_dir / 'set.json').exists():
+        with (ver_dir / 'set.json').open() as set_file:
+            new_set_json = json.load(set_file)
+        new_set_json['meta']['setVersion'] = set_version
+    elif (ver_dir / 'errata.json').exists() and (ver_dir / 'set.mse-set').exists():
+        raise FileNotFoundError(f'found errata.json and set.mse-set but not set.json')
+    elif (ver_dir / 'errata.json').exists():
+        with (ver_dir / 'errata.json').open() as set_file:
+            new_set_json = json.load(set_file)
+        new_set_json['meta']['setVersion'] = set_version
+    elif (ver_dir / 'set.mse-set').exists():
+        with zipfile.ZipFile(ver_dir / 'set.mse-set') as set_file:
+            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
+    else:
+        with zipfile.ZipFile(ver_dir / 'errata.mse-set') as set_file:
+            new_set_json = mse_to_json.convert_mse_set(set_file, set_code=set_code, version=set_version)
     set_json_path = pathlib.Path(f'data/sets/{set_code}.json')
     if set_json_path.exists():
         with set_json_path.open(encoding='utf-8') as set_file:

@@ -11,21 +11,31 @@ class FormatEXH < FormatECH
   def legality(card)
     status = super(card)
     if status == "legal" or status == "restricted"
-      unless card_list(@time).include?(card.name)
+      unless card.xmage?(@time)
         status = "banned-#{card.num_exh_votes}"
       end
     end
     status
   end
 
-  def card_list(date)
-    date ||= Date.today
-    until date <= Date.new(2019, 9, 23) do
-      card_file = (Pathname(__dir__) + "../../../index/exh-cards/#{date}.json")
-      return JSON.parse(card_file.read) if card_file.exist?
-      date -= 1
-      next
-    end
-    []
+  # for optimization purposes
+
+  def banned?(card)
+    FormatECH.instance_method(:legality).bind(self).call(card) == "banned"
+  end
+
+  def restricted?(card)
+    status = FormatECH.instance_method(:legality).bind(self).call(card)
+    status == "restricted" && card.xmage?(@time)
+  end
+
+  def legal?(card)
+    status = FormatECH.instance_method(:legality).bind(self).call(card)
+    status == "legal" && card.xmage?(@time)
+  end
+
+  def legal_or_restricted?(card)
+    status = FormatECH.instance_method(:legality).bind(self).call(card)
+    (status == "legal" || status == "restricted") && card.xmage?(@time)
   end
 end

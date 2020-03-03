@@ -1,0 +1,51 @@
+%p This is a list of cards that are still missing from <a href="/xmage">XMage</a>. See also <a href="/xmage/news">the log of implemented cards</a>.
+.row.results_summary
+  .col-12
+    - if @cards.present?
+      = pluralize(@cards.total_entries, "unimplemented card")
+    - else
+      All cards are implemented!
+- @cards.each do |card, printings, rotation_info|
+  .row.card_row.exh_todo
+    .col-8
+      %h3.card_title
+        = link_to_card(card) do
+          = card.name
+        - @formats.each do |format|
+          - legality = format.legality(card)
+          - if legality.nil?
+            = " "
+            %i{style: "font-size: small;"}
+              (not legal in
+              = succeed ")" do
+                = link_to format.format_pretty_name, controller: "format", action: "show", id: format.format_pretty_name.parameterize
+          - elsif legality.start_with? "restricted"
+            = " "
+            %i{class: "legality-restricted"}
+              restricted in
+              = link_to format.format_pretty_name, controller: "format", action: "show", id: format.format_pretty_name.parameterize
+          - elsif legality.start_with? "banned"
+            = " "
+            %i{class: "legality-banned"}
+              banned in
+              = link_to format.format_pretty_name, controller: "format", action: "show", id: format.format_pretty_name.parameterize
+        - unless rotation_info.nil?
+          %i{style: "font-size: small;"}
+            - case rotation_info
+            - when "major"
+              (upcoming major change)
+            - when "minor"
+              (upcoming minor change)
+            - when "maybe"
+              (possible upcoming change)
+            - else
+              (upcoming change: #{rotation_info})
+    .col-2.cardinfo
+      - xc = exh_card(card)
+      - votes = xc.voter_ids.size
+      = link_to({controller: "xmage", action: "vote", name: xc.name}, class: "legality-banned") do
+        %i{class: (signed_in? && xc.voters.include?(current_user)) ? "voted" : ""}
+          = "#{votes} vote#{votes == 1 ? "" : "s"}"
+    .d-none.d-md-block.col-2
+      = render "card/printings_short", card: card, printings: printings_view(card, printings)
+= render "card/pagination", cards: @cards

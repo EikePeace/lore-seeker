@@ -1,3 +1,27 @@
+class XmageCache
+  def initialize
+    @cache = {}
+    @today_cache = nil
+    @today_cache_time = nil
+  end
+
+  def get(date)
+    return nil if date > Date.today # don't cache future printing lists
+    if date == Date.today # expire today's cache after an hour
+      if @today_cache_time.nil? or @today_cache_time.to_date < Date.today or @today_cache_time < Time.now - (60 * 60)
+        path = Pathname(__dir__) + "../../index/xmage-printings/#{date}.json"
+        @today_cache = path.exist? ? JSON.parse(path.read) : nil
+        @today_cache_time = Time.now
+      end
+      return @today_cache
+    end
+    @cache[date] ||= begin
+      path = Pathname(__dir__) + "../../index/xmage-printings/#{date}.json"
+      path.exist? ? JSON.parse(path.read) : nil
+    end
+  end
+end
+
 class CardPrinting
   attr_reader :card, :set, :date, :release_date
   attr_reader :watermark, :rarity, :artist_name, :multiverseid, :number, :frame, :flavor, :flavor_normalized, :border
@@ -70,6 +94,18 @@ class CardPrinting
 
   def mtgo?
     !!@mtgo
+  end
+
+  def xmage?(time=nil)
+    time ||= Time.now
+    date = time.to_date
+    until date < Date.new(2010, 3, 20) do
+      card_printings = $XmageCache.get(date)
+      return card_printings.has_key?(name) && card_printings[name].include?(set.code.upcase) unless card_printings.nil?
+      date -= 1
+      next
+    end
+    false
   end
 
   def in_boosters?
