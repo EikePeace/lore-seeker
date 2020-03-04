@@ -32,7 +32,7 @@ class DeckController < ApplicationController
 
     @card_previews = @deck.physical_cards
 
-    choose_default_preview_card
+    choose_default_preview_card(@deck)
     group_cards
 
     @title = "#{@deck.name} - #{@set.name} #{@deck.type}"
@@ -60,7 +60,7 @@ class DeckController < ApplicationController
 
     @card_previews = @deck.physical_cards.grep(PhysicalCard)
 
-    choose_default_preview_card
+    choose_default_preview_card(@deck)
     group_cards
 
     @title = "#{@deck.name} - #{@set.name} #{@deck.type}"
@@ -88,7 +88,7 @@ class DeckController < ApplicationController
 
     @card_previews = @deck.physical_cards.grep(PhysicalCard)
 
-    choose_default_preview_card
+    choose_default_preview_card(@deck)
     group_cards
 
     @title = "#{@deck.name} - #{@set.name} #{@deck.type}"
@@ -130,7 +130,7 @@ class DeckController < ApplicationController
 
       @card_previews = parser.deck.physical_cards.uniq.grep(PhysicalCard)
 
-      choose_default_preview_card
+      choose_default_preview_card(parser.deck)
       group_cards
     elsif @format.present? && @format.format_name != "freeform"
       parser = DeckParser.new($CardDatabase, "")
@@ -140,10 +140,10 @@ class DeckController < ApplicationController
 
   private
 
-  def choose_default_preview_card
+  def choose_default_preview_card(deck)
     # Choose best card to preview
-    if @deck.present? && @format.present? && (@format.format_name == "elder custom highlander" || @format.format_name == "elder xmage highlander")
-      @default_preview_card = @deck.commanders.first.last
+    if @format.present? && (@format.format_name == "elder custom highlander" || @format.format_name == "elder xmage highlander") && deck.commanders.present?
+      @default_preview_card = deck.commanders.first.last
     elsif @sideboard.size == 1
       # Commander
       @default_preview_card = @sideboard.first.last

@@ -1,8 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # allow debugging on production
+  config.hosts << "dev.lore-seeker.cards"
   config.hosts << "lore-seeker.cards"
+  config.hosts << "localhost"
 
   # Code is not reloaded between requests.
   config.cache_classes = true

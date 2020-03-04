@@ -253,7 +253,7 @@ def build_name_map(ver_dir, old, new):
         else:
             with rename_path.open('w', encoding='utf-8') as f:
                 print('# name mapping between old version with errata and new version with errata', file=f)
-                #TODO print FROM line
+                print(f'FROM {old_version}')
                 for new_card in new['cards']:
                     if not any(old_card['name'] == new_card['name'] for old_card in old['cards']):
                         print(f'=> {new_card["name"]}', file=f)
@@ -837,7 +837,7 @@ def upload_images(set_code=None, version=None):
             with tempfile.TemporaryDirectory() as tmp_dir:
                 tmp_dir = pathlib.Path(tmp_dir)
                 mse_to_json.extract_images(set_file, tmp_dir, set_code=set_code, version=version)
-                for img_file in tmp_dir.iterdir():
+                for img_file in sorted(tmp_dir.iterdir()):
                     subprocess.run(['scp', str(img_file), f'{os.environ.get("LORE_SEEKER_HOSTNAME", "laire")}:{BASE_PATH / "repo" / "frontend" / "public" / "art" / set_code.lower() / img_file.name}'], check=True)
     # upload full renders
     for set_code, version in sorted(versions.items()):

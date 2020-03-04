@@ -87,8 +87,8 @@
               = params.first.name
             is not yet implemented in XMage
             %span.cardinfo
-              - votes = deck_format.legality(params.first).split("-")[1].to_i
               - xc = exh_card(params.first)
+              - votes = xc.voter_ids.size
               = link_to({controller: "xmage", action: "vote", name: xc.name}, class: "legality-banned") do
                 %i{class: (signed_in? && xc.voters.include?(current_user)) ? "voted" : ""}
                   #{votes} vote#{votes == 1 ? "" : "s"}

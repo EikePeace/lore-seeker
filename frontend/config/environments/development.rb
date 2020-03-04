@@ -1,9 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # allow debugging on dev
+  # allow debugging on dev or production
   config.hosts << "dev.lore-seeker.cards"
-  # allow debugging on production
   config.hosts << "lore-seeker.cards"
 
   # In the development environment your application's code is reloaded on
