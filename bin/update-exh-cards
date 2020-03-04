@@ -29,7 +29,7 @@ def custom_set_cards(time=None):
         CardDatabase.load.cards.values.select{{|c| c.set.custom?{} }}.each do |c|
           puts c.name
         end
-    """.format('' if time is None else f' && c.first_release_date <= Date.new({time:%-Y, %-m, %-d})')], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines())
+    """.format('' if time is None else f' && c.first_release_date <= Date.new({time:%-Y, %-m, %-d})')], cwd=BASE_PATH / 'repo', stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines())
 
 def custom_set_printings(time=None):
     for line in subprocess.run(['ruby', '-e', """
@@ -39,7 +39,7 @@ def custom_set_printings(time=None):
         CardDatabase.load.printings.select{{|c| c.set.custom?{} }}.each do |c|
           puts "#{{c.set.code}}\t#{{c.name}}"
         end
-    """.format('' if time is None else f'&& c.release_date <= Date.new({time:%-Y, %-m, %-d})')], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines():
+    """.format('' if time is None else f'&& c.release_date <= Date.new({time:%-Y, %-m, %-d})')], cwd=BASE_PATH / 'repo', stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines():
         set_code, card_name = line.split('\t', 1)
         yield set_code.upper(), card_name
 
