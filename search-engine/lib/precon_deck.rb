@@ -20,7 +20,7 @@ class PreconDeck < Deck
   end
 
   def all_set_codes
-    @all_set_codes ||= [*@cards, *@sideboard].map{|_,card| card.set_code}.to_set
+    @all_set_codes ||= [*@cards, *@sideboard].map(&:last).reject{|c| c.is_a?(UnknownCard) }.map(&:set_code).to_set
   end
 
   def set_code
