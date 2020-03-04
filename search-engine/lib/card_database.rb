@@ -85,7 +85,7 @@ class CardDatabase
     all_decks.select do |deck|
       next unless deck.all_set_codes.include?(set_code)
       [*deck.cards, *deck.sideboard].any? do |_, physical_card|
-        physical_card.parts.any? do |physical_card_part|
+        !physical_card.is_a?(UnknownCard) and physical_card.parts.any? do |physical_card_part|
           physical_card_part.set_code == card_printing.set_code and
           physical_card_part.name == card_printing.name
         end
