@@ -142,7 +142,7 @@ class DeckController < ApplicationController
 
   def choose_default_preview_card(deck)
     # Choose best card to preview
-    if @format.present? && (@format.format_name == "elder custom highlander" || @format.format_name == "elder xmage highlander")
+    if @format.present? && (@format.format_name == "elder custom highlander" || @format.format_name == "elder xmage highlander") && deck.commanders.present?
       @default_preview_card = deck.commanders.first.last
     elsif @sideboard.size == 1
       # Commander

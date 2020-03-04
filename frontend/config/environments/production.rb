@@ -3,6 +3,7 @@ Rails.application.configure do
 
   config.hosts << "dev.lore-seeker.cards"
   config.hosts << "lore-seeker.cards"
+  config.hosts << "localhost"
 
   # Code is not reloaded between requests.
   config.cache_classes = true
