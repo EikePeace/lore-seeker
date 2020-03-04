@@ -37,7 +37,7 @@ def custom_set_printings(time=None):
         require "./search-engine/lib/card_database"
         require "./search-engine/lib/format/format.rb"
         CardDatabase.load.printings.select{{|c| c.set.custom?{} }}.each do |c|
-          puts "#{c.set.code}\t#{c.name}"
+          puts "#{{c.set.code}}\t#{{c.name}}"
         end
     """.format('' if time is None else f'&& c.release_date <= Date.new({time:%-Y, %-m, %-d})')], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, encoding='utf-8', check=True).stdout.splitlines():
         set_code, card_name = line.split('\t', 1)
