@@ -7993,7 +7993,20 @@
             "originalType": "Artifact Creature \u2014 Construct",
             "power": "2",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-03-06",
+                    "text": "If you put a noncreature card onto the battlefield this way, it will be tapped, but not attacking."
+                },
+                {
+                    "date": "2020-03-06",
+                    "text": "Putting a creature onto the battlefield attacking is not declaring it as an attacker, so it circumvents restrictions like defender."
+                },
+                {
+                    "date": "2020-03-06",
+                    "text": "The permanent will enter the battlefield tapped even if it has vigilance."
+                }
+            ],
             "subtypes": [
                 "Construct"
             ],
