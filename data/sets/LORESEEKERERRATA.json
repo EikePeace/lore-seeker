@@ -97,7 +97,7 @@
                 "G"
             ],
             "colors": [
-                "Green"
+                "G"
             ],
             "manaCost": "{3}{G}{G}",
             "name": "Elvish Bard",
@@ -220,12 +220,12 @@
         },
         {
             "colorIdentity": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "colors": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "manaCost": "{1}{R}{G}",
             "name": "Mage Slayer",
@@ -544,7 +544,7 @@
                 "B"
             ],
             "colors": [
-                "Black"
+                "B"
             ],
             "manaCost": "{X}{2}{B}",
             "name": "Soul Burn",
@@ -570,14 +570,84 @@
         },
         {
             "colorIdentity": [
+                "G",
+                "R"
+            ],
+            "colors": [
+                "G",
+                "R"
+            ],
+            "manaCost": "{2}{R}{G}",
+            "name": "Tahngarth, First Mate",
+            "number": "16",
+            "power": "5",
+            "rarity": "special",
+            "rulings": [
+                {
+                    "date": "2019-08-23",
+                    "text": "Players can't take any actions between the time you choose to give control of Tahngarth to the attacking player and the time it becomes an attacking creature."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "If Tahngarth gains menace, it can't be blocked at all."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Giving control of Tahngarth to an opponent doesn't cause it to become untapped. This means that Tahngarth may end up attacking several times between your turns."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "If an opponent is attacking a planeswalker or Structure but not that permanent's controller, Tahngarth can't attack that player."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "If an opponent attacks a player, planeswalker, or Strucure but each creature attacking that permanent or player is no longer attacking that permanent or player by the time Tahngarth's ability resolves (most likely because they've left the battlefield), that permanent or player can't be chosen for Tahngarth to attack. If there's no player, planeswalker, or Structure to choose this way but you still choose to give the opponent control of Tahngarth, Tahngarth isn't attacking."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Although Tahngarth is an attacking creature if it uses its triggered ability, it was never declared as an attacking creature. This means that abilities that trigger whenever a creature attacks won't trigger when it changes control and becomes attacking."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Any effects that say that Tahngarth can't attack or can't attack a certain player (such as that of Propaganda, or if Tahngarth gains defender) affect only the declaration of attackers. They won't stop Tahngarth from becoming an attacking creature through its triggered ability."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Tahngarth may end up attacking its owner this way."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Commander damage is tracked for each commander. It doesn't matter who controls the commander as it deals damage. If Tahngarth deals 10 damage to one player while under your control and another 11 damage to that same player while under a third player's control, the player loses the game."
+                },
+                {
+                    "date": "2020-03-15",
+                    "text": "I have applied functional errata to this card in order to make it work with Structures from Ruins of Doharum. For the official text and new rulings, please look up the card on Gatherer. \u2014Fenhl"
+                }
+            ],
+            "subtypes": [
+                "Minotaur",
+                "Warrior"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Tahngarth, First Mate can't be blocked by more than one creature.\nWhenever an opponent attacks with one or more creatures, if Tahngarth is tapped, you may have that opponent gain control of Tahngarth until end of combat. If you do, choose a player, planeswalker, or Structure that opponent is attacking. Tahngarth is attacking that permanent or player.",
+            "toughness": "5",
+            "type": "Legendary Creature \u2014 Minotaur Warrior",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "colorIdentity": [
                 "G"
             ],
             "colors": [
-                "Green"
+                "G"
             ],
             "manaCost": "{2}{G}",
             "name": "Yisan, the Wanderer Bard",
-            "number": "16",
+            "number": "17",
             "power": "2",
             "rarity": "special",
             "rulings": [
