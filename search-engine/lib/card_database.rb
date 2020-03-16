@@ -24,6 +24,7 @@ require_relative "precon_deck"
 require_relative "deck_parser"
 require_relative "deck_database"
 require_relative "unknown_card"
+require_relative "outdated_card"
 require_relative "user_deck_parser"
 
 # Backport from >=2.4 to 2.3
