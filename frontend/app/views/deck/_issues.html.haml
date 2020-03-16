@@ -118,7 +118,7 @@
               Card #{params.first.name} is from
               = link_to_set(params.first.set) do
                 = params.first.set.name
-              version #{params.first.set_version}, but the current version is #{params.first.set.custom_version}.
+              version #{params.first.set_version}, but the current version is #{params.first.set.custom_version}
             - else
               Unknown card name: #{params.first.name}
           - when :unknown_game
