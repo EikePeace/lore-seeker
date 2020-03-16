@@ -7408,7 +7408,7 @@
             "name": "World Elemental",
             "number": "214",
             "originalName": "World Elemental",
-            "originalText": "World Elemental gets +1/+1 for each differently named permanent you control.\nAt the beginning of your end step, gain control of target nonland permanent that doesn't share a name with a permanent you control.",
+            "originalText": "World Elemental gets +1/+1 for each differently named permanent you control.\nAt the beginning of your end step, gain control of target nonland permanent that doesn't have the same name as a permanent you control.",
             "originalType": "Creature \u2014 Elemental",
             "power": "0",
             "rarity": "mythic",
@@ -7430,7 +7430,7 @@
                 "Elemental"
             ],
             "supertypes": [],
-            "text": "World Elemental gets +1/+1 for each differently named permanent you control.\nAt the beginning of your end step, gain control of target nonland permanent that doesn't share a name with a permanent you control.",
+            "text": "World Elemental gets +1/+1 for each differently named permanent you control.\nAt the beginning of your end step, gain control of target nonland permanent that doesn't have the same name as a permanent you control.",
             "toughness": "0",
             "type": "Creature \u2014 Elemental",
             "types": [
@@ -7509,7 +7509,7 @@
             "name": "Echoshells",
             "number": "217",
             "originalName": "Echoshells",
-            "originalText": "{T}: Add one mana of any type that a land you control could produce.\n{3}, {T}: Search your library for a land card that doesn't share a name with a land you control, put it onto the battlefield, then shuffle your library.",
+            "originalText": "{T}: Add one mana of any type that a land you control could produce.\n{3}, {T}: Search your library for a land card that doesn't have the same name as a land you control, put it onto the battlefield, then shuffle your library.",
             "originalType": "Artifact",
             "rarity": "rare",
             "rulings": [
@@ -7536,7 +7536,7 @@
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}: Add one mana of any type that a land you control could produce.\n{3}, {T}: Search your library for a land card that doesn't share a name with a land you control, put it onto the battlefield, then shuffle your library.",
+            "text": "{T}: Add one mana of any type that a land you control could produce.\n{3}, {T}: Search your library for a land card that doesn't have the same name as a land you control, put it onto the battlefield, then shuffle your library.",
             "type": "Artifact",
             "types": [
                 "Artifact"
@@ -9341,7 +9341,7 @@
     "code": "RAK",
     "custom": true,
     "meta": {
-        "date": "2020-02-15",
+        "date": "2020-03-15",
         "setVersion": "2020-02-09",
         "version": "4.4.1"
     },
