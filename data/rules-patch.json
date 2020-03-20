@@ -1615,7 +1615,7 @@
                 {
                     "type": "replaceRule",
                     "rule": "711.1b",
-                    "text": "A double-faced card's back face is marked by a back-face symbol in its upper left corner. This symbol may be a full Planeswalker icon, a crestent moon, a stylized image of Emrakul, a land icon, a flame, or the cuneiform character for god."
+                    "text": "A double-faced card's back face is marked by a back-face symbol in its upper left corner. This symbol may be a full Planeswalker icon, a crescent moon, a stylized image of Emrakul, a land icon, a flame, or the cuneiform character for god."
                 }
             ]
         },
