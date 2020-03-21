@@ -32,7 +32,7 @@ describe "Indexer hacks" do
   end
 
   it "is:funny" do
-    assert_search_equal_cards "is:funny", "e:unh,ugl,uqc,hho,ust,pust,ppc1,htr,htr17,h17,tbth,tdag,tfth,thp1,thp2,thp3,ptg,cmb1,htr18 -(t:basic -Barry) -(Steamflogger Boss) -(Hall of Triumph)"
+    assert_search_equal_cards "is:funny", "e:unh,ugl,uqc,hho,ust,pust,ppc1,htr,htr17,h17,tbth,tdag,tfth,thp1,thp2,thp3,ptg,cmb1,htr18,und -(t:basic -Barry) -(Steamflogger Boss) -(Hall of Triumph)"
   end
 
   it "Nissa's X loyallty" do
@@ -45,21 +45,21 @@ describe "Indexer hacks" do
       ["emn", "Brisela, Voice of Nightmares", "15b"],
       ["emn", "Bruna, the Fading Light", "15a"],
       ["emn", "Chittering Host", "96b"],
-      ["emn", "Gisela, the Broken Blade", "28a"],
-      ["emn", "Graf Rats", "91a"],
-      ["emn", "Hanweir Battlements", "204a"],
+      ["emn", "Gisela, the Broken Blade", "28"],
+      ["emn", "Graf Rats", "91"],
+      ["emn", "Hanweir Battlements", "204"],
       ["emn", "Hanweir Garrison", "130a"],
       ["emn", "Hanweir, the Writhing Township", "130b"],
       ["emn", "Midnight Scavengers", "96a"],
       ["pemn", "Brisela, Voice of Nightmares", "15bs"],
       ["pemn", "Bruna, the Fading Light", "15as"],
-      ["pemn", "Gisela, the Broken Blade", "28as"],
-      ["pemn", "Hanweir Battlements", "204as"],
+      ["pemn", "Gisela, the Broken Blade", "28s"],
+      ["pemn", "Hanweir Battlements", "204s"],
       ["pemn", "Hanweir Garrison", "130as"],
       ["pemn", "Hanweir, the Writhing Township", "130bs"],
       ["v17", "Brisela, Voice of Nightmares", "5b"],
       ["v17", "Bruna, the Fading Light", "5a"],
-      ["v17", "Gisela, the Broken Blade", "10a"],
+      ["v17", "Gisela, the Broken Blade", "10"],
     ])
   end
 
