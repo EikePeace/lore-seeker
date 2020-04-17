@@ -231,6 +231,19 @@ form.search {
     background-position: 0% 50%;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  @keyframes foil_layer_animation {
+    0% {
+      background-position: 33% 50%;
+    }
+    50% {
+      background-position: 33% 50%;
+    }
+    100% {
+      background-position: 33% 50%;
+    }
+  }
+}
 .card_picture_container {
   position: relative;
   perspective: 1000px;
