@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 
+"""Utility to update the list of implemented XMage cards. Should be called by a cronjob.
+
+Usage:
+  update-exh-cards --all
+  update-exh-cards [--announce] <date>
+
+Options:
+  --all       Regenerate card lists for all dates since the start of the XMage project.
+  --announce  Post daily summary in Discord.
+"""
+
 import sys
 
 sys.path.append('/opt/py')
@@ -12,6 +23,7 @@ import pathlib
 import subprocess
 
 import dateutil.parser # PyPI: python-dateutil
+import docopt # PyPI: docopt
 import more_itertools # PyPI: more-itertools
 import pytz # PyPI: pytz
 
@@ -82,14 +94,24 @@ def write_printings(printing_list, time=None, *, dir=XMAGE_PRINTINGS_DIR):
     #TODO commit new file to repo
 
 def read_printings(printings_path):
+    if isinstance(printings_path, datetime.date):
+        printings_path = XMAGE_PRINTINGS_DIR / f'{printings_path:%Y-%m-%d}.json'
     with printings_path.open() as f:
         printings = json.load(f)
     for card_name, set_codes in printings.items():
         for set_code in set_codes:
             yield set_code, card_name
 
-def main(time=None, *, dir=XMAGE_PRINTINGS_DIR):
+def read_cards(printings_path):
+    return {card_name for set_code, card_name in read_printings(printings_path)}
+
+def main(time=None, announce=False, *, dir=XMAGE_PRINTINGS_DIR):
     write_printings(implemented_printings(time), time, dir=dir)
+    if announce:
+        today = datetime.datetime.now(datetime.timezone.utc).date()
+        new = set(read_cards(today)) - set(read_cards(today - datetime.timedelta(days=1)))
+        if new:
+            subprocess.run(['lore-seeker', 'discord', 'xmage-summary', *sorted(new)], check=True)
 
 def main_all(*, dir=XMAGE_PRINTINGS_DIR, redo=False):
     if redo or more_itertools.ilen(dir.iterdir()) == 0:
@@ -132,10 +154,8 @@ def main_all(*, dir=XMAGE_PRINTINGS_DIR, redo=False):
     print('[ ok ] XMage card lists updated')
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1:
-        if sys.argv[1] == '--all':
-            main_all(redo=True)
-        else:
-            main(dateutil.parser.parse(sys.argv[1]))
+    arguments = docopt.docopt(__doc__)
+    if arguments['--all']:
+        main_all(redo=True)
     else:
-        main_all()
+        main(dateutil.parser.parse(arguments['<date>']), announce=arguments['--announce'])
