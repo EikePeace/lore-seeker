@@ -6590,7 +6590,7 @@
                 "Knight"
             ],
             "supertypes": [],
-            "text": "Whenever Warrior of Sunlight and exactly one other creature attack, they both get +1/+0 until end of turn.",
+            "text": "Whenever Warrior of Sunlight and exactly one other creature attack, they each get +1/+0 until end of turn.",
             "toughness": "2",
             "type": "Creature \u2014 Human Knight",
             "types": [
@@ -9745,7 +9745,7 @@
     "custom": true,
     "isOnlineOnly": true,
     "meta": {
-        "date": "2020-04-17",
+        "date": "2020-04-25",
         "setVersion": "1.29",
         "version": "4.6.0"
     },
