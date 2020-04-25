@@ -23,10 +23,11 @@ class FormatECH < FormatStandard
 
   def deck_size_issues(deck)
     issues = []
-    if deck.number_of_mainboard_cards != 99
-      issues << [:main_size, deck.number_of_mainboard_cards, 99]
-    end
+    number_of_commanders = deck.sideboard.select{|n, c| deck.commanders.map(&:last).include?(c) }.sum(&:first)
     number_of_non_commander_sideboard_cards = deck.sideboard.reject{|n, c| deck.commanders.map(&:last).include?(c) }.sum(&:first)
+    if deck.number_of_mainboard_cards + number_of_commanders != 100
+      issues << [:ech_size, deck.number_of_mainboard_card + number_of_commanders]
+    end
     if number_of_non_commander_sideboard_cards > 10
       issues << [:side_size_max, number_of_non_commander_sideboard_cards, 10]
     end
@@ -58,9 +59,19 @@ class FormatECH < FormatStandard
   def deck_commander_issues(deck)
     commanders = deck.commanders.flat_map{|n,c| [c] * n}
     return [[:ech_commander_not_found]] if commanders.size == 0
-    return [[:ech_too_many_commanders, commanders.size]] if commanders.size > 1
-
+    return [[:ech_too_many_commanders, commanders.size]] if commanders.size > 2
     issues = []
+    if commanders.size == 2
+      a, b = commanders
+      issues << [:partner, a] unless a.partner?
+      issues << [:partner, b] unless b.partner?
+      if a.partner and a.partner.name != b.name
+        issues << [:partner_with, a, b]
+      end
+      if b.partner and b.partner.name != a.name
+        issues << [:partner_with, b, a]
+      end
+    end
     commanders.each do |c|
       if legality(c) == "restricted"
         issues << [:banned_commander, c]
@@ -94,6 +105,7 @@ class FormatECH < FormatStandard
       "2019-02-08" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "eau"],
       "2019-05-29" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "eau", "sou"],
       "2020-01-01" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "eau", "sou", "src"],
+      "2020-05-01" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "eau", "sou", "src", "mhlw"],
     }
   end
 end

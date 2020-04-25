@@ -3,6 +3,10 @@ class FormatCustomBrawl < FormatCustomStandard
     "Custom Brawl"
   end
 
+  def rotation_schedule
+    rotation_schedule_with_multiplayer.map{|date, val| [date, val.first + val.last]}.to_h
+  end
+
   def deck_issues(deck)
     issues = []
     deck.physical_cards.select {|card| card.is_a?(UnknownCard) }.each do |card|
