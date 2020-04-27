@@ -28,13 +28,14 @@ end
 
 desc "Update mtgjson database"
 task "mtgjson:fetch" do
-  unless Pathname("AllSets.json").exist?
-    sh "wget", "https://www.mtgjson.com/json/AllSets.json"
+  unless Pathname("tmp/AllSets.json").exist?
+    Pathname("tmp").mkpath
+    sh "wget", "https://www.mtgjson.com/json/AllSets.json", "-O", "tmp/AllSets.json"
   end
   if Pathname("data/sets-incoming").exist?
     sh "trash", "data/sets-incoming"
   end
-  sh "./indexer/bin/split_mtgjson", "./AllSets.json", "data/sets-incoming"
+  sh "./indexer/bin/split_mtgjson", "tmp/AllSets.json", "tmp/sets-incoming"
   sh "./indexer/bin/update_mtgjson_sets"
 end
 
@@ -134,6 +135,7 @@ task "clean" do
     "search-engine/.respec_failures",
     "search-engine/coverage",
     "search-engine/Gemfile.lock",
+    "tmp",
   ].each do |path|
     system "trash", path if Pathname(path).exist?
   end
@@ -150,14 +152,15 @@ end
 
 desc "Full update"
 task "update" do
+  Pathname("tmp").mkpath
   Rake::Task["rules:update"].invoke
   Rake::Task["pennydreadful:update"].invoke
   Rake::Task["mtgjson:fetch"].invoke
   Rake::Task["index"].invoke
-  sh "~/github/magic-preconstructed-decks/bin/build_jsons ./decks.json"
+  sh "~/github/magic-preconstructed-decks/bin/build_jsons ./tmp/decks.json"
   sh "./deck_indexer/bin/deck_indexer"
   sh "./bin/export_sealed_data  ~/github/magic-sealed-data"
   sh "./bin/export_decks_data  ~/github/magic-preconstructed-decks-data/decks.json"
-  # sh "trash ./decks.json"
-  # sh "trash ./AllSets.json"
+  # sh "trash ./tmp/decks.json"
+  # sh "trash ./tmp/AllSets.json"
 end

@@ -6,6 +6,7 @@ coverage
 tmp
 /decks.json
 /AllSets.json
+data/sets-incoming
 
 # Lore Seeker extensions
 /frontend/public/art

@@ -96,6 +96,7 @@ class Indexer
       "gatherer_code",
       "has_boosters",
       "in_other_boosters",
+      "booster_variants",
       "name",
       "alternative_block_code",
       "alternative_code",
@@ -138,6 +139,8 @@ class Indexer
       PatchFunny,
       PatchLinkRelated,
       PatchPrintSheets,
+      PatchMB1,
+      PatchABUR,
       PatchFrame,
       PatchPartner,
 

@@ -293,7 +293,20 @@ describe "Card nicknames" do
       "Savage Lands",
       "Seaside Citadel"
     assert_search_equal "is:triland",
-      't:land o:/\{T\}: Add \{.\}, \{.\}, or \{.\}/ -o:sacrifice o:tapped'
+      't:land o:/\{T\}: Add \{.\}, \{.\}, or \{.\}/ -o:sacrifice o:tapped -o:cycling'
+  end
+
+
+  it "is:triome" do
+    assert_search_results "is:triome",
+      "Indatha Triome",
+      "Ketria Triome",
+      "Raugrin Triome",
+      "Savai Triome",
+      "Zagoth Triome"
+    assert_search_equal "is:triome",
+      't:land o:tapped o:cycling triome'
+    assert_search_equal "is:tricycleland", "is:triome"
   end
 
   it "is:canopyland" do
@@ -346,11 +359,14 @@ describe "Card nicknames" do
       "Animus of Predation",
       "Cairn Wanderer",
       "Concerted Effort",
+      "Crystalline Giant",
       "Death-Mask Duplicant",
       "Greater Morphling",
+      "Kathril, Aspect Warper",
       "Majestic Myriarch",
       "Odric, Lunarch Marshal",
       "Rayami, First of the Fallen",
+      "Selective Adaptation",
       "Soulflayer"
     assert_search_results "is:keywordsoup",
       *cards_matching{|c|

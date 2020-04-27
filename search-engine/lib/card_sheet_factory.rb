@@ -40,7 +40,7 @@ class CardSheetFactory
   # These numbers could be totally wrong. I base them on a million guesses by various internet commenters.
   #
   # Maro says basic foils and common foils are equally likely [https://twitter.com/maro254/status/938830320094216192]
-  def foil_sheet(set_code)
+  def foil(set_code)
     sheets = [rare_mythic(set_code, foil: true), rarity(set_code, "uncommon", foil: true)]
     weights = [4, 8]
 
@@ -72,6 +72,30 @@ class CardSheetFactory
     cards = cards.select{|c| c.rarity == "basic" or c.rarity == "common"}
     return nil if cards.empty?
     kind.new(cards)
+  end
+
+  def common_or_basic_unbalanced(set_code)
+    common_or_basic(set_code, kind: CardSheet)
+  end
+
+  def common(set_code)
+    rarity(set_code, "common", kind: ColorBalancedCardSheet)
+  end
+
+  def common_unbalanced(set_code)
+    rarity(set_code, "common")
+  end
+
+  def basic(set_code)
+    rarity(set_code, "basic")
+  end
+
+  def uncommon(set_code)
+    rarity(set_code, "uncommon")
+  end
+
+  def rare(set_code)
+    rarity(set_code, "rare")
   end
 
   # If rare or mythic sheet contains subsheets
@@ -125,11 +149,81 @@ class CardSheetFactory
     explicit_sheet(set_code, "R")
   end
 
+  def mb1_white_a
+    explicit_sheet_1("mb1", "WA")
+  end
+
+  def mb1_white_b
+    explicit_sheet_1("mb1", "WB")
+  end
+
+  def mb1_blue_a
+    explicit_sheet_1("mb1", "UA")
+  end
+
+  def mb1_blue_b
+    explicit_sheet_1("mb1", "UB")
+  end
+
+  def mb1_black_a
+    explicit_sheet_1("mb1", "BA")
+  end
+
+  def mb1_black_b
+    explicit_sheet_1("mb1", "BB")
+  end
+
+  def mb1_red_a
+    explicit_sheet_1("mb1", "RA")
+  end
+
+  def mb1_red_b
+    explicit_sheet_1("mb1", "RB")
+  end
+
+  def mb1_green_a
+    explicit_sheet_1("mb1", "GA")
+  end
+
+  def mb1_green_b
+    explicit_sheet_1("mb1", "GB")
+  end
+
+  def mb1_multicolor
+    explicit_sheet_1("mb1", "MC")
+  end
+
+  def mb1_colorless
+    explicit_sheet_1("mb1", "CL")
+  end
+
+  def mb1_old_frame
+    explicit_sheet_1("mb1", "OF")
+  end
+
+  def mb1_rare
+    explicit_sheet_1("mb1", "R")
+  end
+
+  def mb1_foil
+    from_query("e:fmb1", foil: true)
+  end
+
+  def mb1_playtest
+    from_query("e:cmb1")
+  end
+
   def explicit_sheet(set_code, print_sheet_code)
-    cards = @db.sets[set_code].printings.select{|c| c.in_boosters? and c.print_sheet[0] == print_sheet_code}
-    groups = cards.group_by{|c| c.print_sheet[1..-1].to_i}
+    cards = @db.sets[set_code].printings.select{|c| c.in_boosters? and c.print_sheet.include?(print_sheet_code) }
+    groups = cards.group_by{|c| c.print_sheet[/#{print_sheet_code}(\d+)/, 1].to_i }
     subsheets = groups.map{|mult,cards| [CardSheet.new(cards.map{|c| PhysicalCard.for(c) }), mult] }
     mix_sheets(*subsheets)
+  end
+
+  def explicit_sheet_1(set_code, print_sheet_code)
+    cards = @db.sets[set_code].printings.select{|c| c.in_boosters? and c.print_sheet == print_sheet_code}
+    physical_cards = cards.map{|c| PhysicalCard.for(c) }.uniq
+    CardSheet.new(physical_cards)
   end
 
   ### These are really unique sheets
@@ -220,6 +314,10 @@ class CardSheetFactory
 
   def sfc_common(set_code, kind: ColorBalancedCardSheet)
     from_query("e:#{set_code} r:common -is:dfc -is:meld", kind: kind)
+  end
+
+  def sfc_common_unbalanced(set_code)
+    sfc_common(set_code, kind: CardSheet)
   end
 
   def sfc_uncommon(set_code)
@@ -603,6 +701,41 @@ class CardSheetFactory
     CardSheet.new(sheets, weights)
   end
 
+  def nonland_common(set_code, kind: ColorBalancedCardSheet)
+    from_query("e:#{set_code} r:common -t:land", kind: kind)
+  end
+
+  def nongainland_common(set_code)
+    from_query("e:#{set_code} r:common -is:gainland", kind: ColorBalancedCardSheet)
+  end
+
+  def basic_or_common_land(set_code)
+    from_query("e:#{set_code} t:land r<=common")
+  end
+
+  def basic_or_gainland(set_code)
+    from_query("e:#{set_code} (t:basic or is:gainland)")
+  end
+
+  def alara_premium_basic
+    from_query("b:ala r:basic", 20 + 0 + 0, foil: true)
+  end
+
+  def alara_premium_common
+    from_query("b:ala r:common", 101 + 60 + 60, foil: true)
+  end
+
+  def alara_premium_uncommon
+    from_query("b:ala r:uncommon", 60 + 40 + 40, foil: true)
+  end
+
+  def alara_premium_rare_mythic
+    mix_sheets(
+      [from_query("b:ala r:rare", 53+35+35, foil: true), 2],
+      [from_query("b:ala r:mythic", 15+10+10, foil: true), 1]
+    )
+  end
+
   # for custom sets
 
   def nonbasic_land(set_code)
@@ -622,10 +755,6 @@ class CardSheetFactory
     end
   end
 
-  def nonland_common(set_code, kind: CardSheet)
-    from_query("e:#{set_code} is:primary r:C -t:land", kind: kind)
-  end
-
   def nonland_uncommon(set_code)
     from_query("e:#{set_code} is:primary r:U -t:land")
   end
@@ -642,6 +771,10 @@ class CardSheetFactory
       from_query("e:#{set_code} is:primary r:R -t:land"),
       from_query("e:#{set_code} is:primary r:M -t:land")
     ], [7, 1])
+  end
+
+  def nonland_common_unbalanced(set_code)
+    nonland_common(set_code, kind: CardSheet)
   end
 
   def tsl_dfc
