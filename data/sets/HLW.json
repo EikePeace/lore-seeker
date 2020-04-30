@@ -1711,7 +1711,7 @@
             "name": "Absorbed in Thought",
             "number": "44",
             "originalName": "Absorbed in Thought",
-            "originalText": "Journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nScry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
+            "originalText": "Journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.) (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nScry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
             "originalType": "Sorcery",
             "rarity": "common",
             "rulings": [
@@ -1975,7 +1975,7 @@
             "name": "Crossing the Fog",
             "number": "51",
             "originalName": "Crossing the Fog",
-            "originalText": "Journey three times. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
+            "originalText": "Journey three times. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.) (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
             "originalType": "Sorcery",
             "rarity": "rare",
             "rulings": [
@@ -2050,7 +2050,7 @@
             "name": "Curse-Marked Crook",
             "number": "53",
             "originalName": "Curse-Marked Crook",
-            "originalText": "When Curse-Marked Crook enters the battlefield, scry 1.\nHollow (Discard a card, Pay this card's mana cost and exile it from your graveyard: Create a token that's a copy of it, except it's a black Zombie Human Rogue. Hollow only as a sorcery.)",
+            "originalText": "When Curse-Marked Crook enters the battlefield, scry 1. (To scry 1, look at the top card of your library. You may put that card on the bottom of your library.)\nHollow (Discard a card, Pay this card's mana cost and exile it from your graveyard: Create a token that's a copy of it, except it's a black Zombie Human Rogue. Hollow only as a sorcery.)",
             "originalType": "Creature \u2014 Human Rogue",
             "power": "2",
             "rarity": "common",
@@ -2060,7 +2060,7 @@
                 "Rogue"
             ],
             "supertypes": [],
-            "text": "When Curse-Marked Crook enters the battlefield, scry 1.\nHollow (Discard a card, Pay this card's mana cost and exile it from your graveyard: Create a token that's a copy of it, except it's a black Zombie Human Rogue. Hollow only as a sorcery.)",
+            "text": "When Curse-Marked Crook enters the battlefield, scry 1. (To scry 1, look at the top card of your library. You may put that card on the bottom of your library.)\nHollow (Discard a card, Pay this card's mana cost and exile it from your graveyard: Create a token that's a copy of it, except it's a black Zombie Human Rogue. Hollow only as a sorcery.)",
             "toughness": "3",
             "type": "Creature \u2014 Human Rogue",
             "types": [
@@ -2706,7 +2706,7 @@
             "name": "Path of Brilliance",
             "number": "70",
             "originalName": "Path of Brilliance",
-            "originalText": "When Path of Brilliance enters the battlefield, journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nAt the beginning of combat on your turn, if you own a journeyed card in exile, tap target creature an opponent controls.",
+            "originalText": "When Path of Brilliance enters the battlefield, journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.) (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nAt the beginning of combat on your turn, if you own a journeyed card in exile, tap target creature an opponent controls.",
             "originalType": "Enchantment",
             "rarity": "uncommon",
             "rulings": [
@@ -5312,7 +5312,7 @@
             "name": "Dragon-Path Daredevil",
             "number": "138",
             "originalName": "Dragon-Path Daredevil",
-            "originalText": "Menace\nWhen Dragon-Path Daredevil enters the battlefield, you may discard a card. If you do, journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
+            "originalText": "Menace\nWhen Dragon-Path Daredevil enters the battlefield, you may discard a card. If you do, journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.) (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
             "originalType": "Creature \u2014 Human Dragon",
             "power": "2",
             "rarity": "uncommon",
@@ -5729,7 +5729,7 @@
             "name": "Jolly Cooperation",
             "number": "149",
             "originalName": "Jolly Cooperation",
-            "originalText": "Untap up to two target creatures. After this main phase, there is an additional combat phase followed by an additional main phase.\nJourney twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
+            "originalText": "Untap up to two target creatures. After this main phase, there is an additional combat phase followed by an additional main phase.\nJourney twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.) (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)",
             "originalType": "Sorcery",
             "rarity": "rare",
             "rulings": [
@@ -7220,7 +7220,7 @@
             ]
         },
         {
-            "artist": "onestepart",
+            "artist": "onestepart (Edited)",
             "borderColor": "black",
             "colorIdentity": [
                 "G"
@@ -7818,7 +7818,7 @@
             "name": "Path of Strength",
             "number": "204",
             "originalName": "Path of Strength",
-            "originalText": "When Path of Strength enters the battlefield, journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nAt the beginning of combat on your turn, if you own a journeyed card in exile, target creature you control gets +2/+2 and gains trample until end of turn.",
+            "originalText": "When Path of Strength enters the battlefield, journey twice. (To journey, exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.) (Exile the top card of your library face up. Whenever a creature you control deals combat damage to an opponent, put a journeyed card you own into your hand.)\nAt the beginning of combat on your turn, if you own a journeyed card in exile, target creature you control gets +2/+2 and gains trample until end of turn.",
             "originalType": "Enchantment",
             "rarity": "uncommon",
             "rulings": [
@@ -8531,7 +8531,7 @@
             "name": "Gwyndolin, the Darkmoon",
             "number": "222",
             "originalName": "Gwyndolin, the Darkmoon",
-            "originalText": "At the beginning of your upkeep, scry 2.\nWhenever an opponent casts a spell targeting you or a permanent you control, exile target permanent that player controls.",
+            "originalText": "At the beginning of your upkeep, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)\nWhenever an opponent casts a spell targeting you or a permanent you control, exile target permanent that player controls.",
             "originalType": "Legendary Creature \u2014 God",
             "power": "4",
             "rarity": "mythic",
@@ -9745,7 +9745,7 @@
     "custom": true,
     "isOnlineOnly": true,
     "meta": {
-        "date": "2020-04-25",
+        "date": "2020-04-30",
         "setVersion": "1.29",
         "version": "4.6.0"
     },

@@ -558,7 +558,7 @@
             "name": "Lady of the Darkling",
             "number": "13",
             "originalName": "Lady of the Darkling",
-            "originalText": "Lifelink\nAt the beginning of your end step, if a creature died this turn, scry 2.\nPartner (You can have two commanders if both have partner.)",
+            "originalText": "Lifelink\nAt the beginning of your end step, if a creature died this turn, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)\nPartner (You can have two commanders if both have partner.)",
             "originalType": "Legendary Creature \u2014 Human Knight",
             "power": "2",
             "rarity": "mythic",
@@ -1112,7 +1112,7 @@
     "custom": true,
     "isOnlineOnly": true,
     "meta": {
-        "date": "2020-04-25",
+        "date": "2020-04-30",
         "setVersion": ".03",
         "version": "4.6.0"
     },
