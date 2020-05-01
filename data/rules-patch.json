@@ -724,7 +724,7 @@
             "sets": [
                 "DHM"
             ],
-            "command": "For {card:Derelict Fortress}, this rule defines how effects that modify how much combat damage a creature deals interact",
+            "comment": "For {card:Derelict Fortress}, this rule defines how effects that modify how much combat damage a creature deals interact",
             "rules": [
                 {
                     "type": "insert",
