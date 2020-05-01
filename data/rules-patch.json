@@ -722,6 +722,19 @@
         },
         {
             "sets": [
+                "DHM"
+            ],
+            "command": "For {card:Derelict Fortress}, this rule defines how effects that modify how much combat damage a creature deals interact",
+            "rules": [
+                {
+                    "type": "insert",
+                    "rule": "510.1e",
+                    "text": "Some effects state that one or more creatures each assign combat damage equal to another value rather than its power. If any such effect is optional, whether or not it is applied for a given creature is declared as part of the damage assignment for that creature. If multiple such effects exist, which value is used for a given creature is declared as part of the damage assignment for that creature."
+                }
+            ]
+        },
+        {
+            "sets": [
                 "DMS"
             ],
             "comment": "For {card:Thrill of Battle}, these rules ensure that a turn always ends with a cleanup step",
