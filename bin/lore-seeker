@@ -33,12 +33,6 @@ import subprocess
 import time
 import traceback
 
-CRASH_NOTICE = """To: fenhl@fenhl.net
-From: {}@{}
-Subject: Lore Seeker crashed
-
-Lore Seeker crashed
-"""
 GLOBAL_KEYS = [
     'layout',
     'names',
@@ -126,12 +120,10 @@ def name_check(repo_path=None, *, verbose=False):
     return success
 
 def notify_crash(exc=None):
-    whoami = subprocess.run(['whoami'], stdout=subprocess.PIPE, check=True).stdout.decode('utf-8').strip()
-    hostname = subprocess.run(['hostname', '-f'], stdout=subprocess.PIPE, check=True).stdout.decode('utf-8').strip()
-    mail_text = CRASH_NOTICE.format(whoami, hostname)
+    mail_text = CRASH_NOTICE = 'Lore Seeker crashed.'
     if exc is not None:
         mail_text += '\n' + traceback.format_exc()
-    return subprocess.run(['ssmtp', 'fenhl@fenhl.net'], input=mail_text.encode('utf-8'), check=True)
+    return subprocess.run(['mail', '-s', 'Lore Seeker crashed', 'fenhl@fenhl.net'], input=mail_text.encode('utf-8'), check=True)
 
 def run(*, do_discord=None, do_name_check=True, path=None, port=18803, verbose=False):
     if do_discord is None:
