@@ -20,7 +20,7 @@ class FormatCustomStandard < FormatStandard
       "2019-05-29" => [["jan", "hlw", "cc18", "rak", "eau", "sou"], []],
       "2019-08-26" => [["jan", "hlw", "cc18", "rak", "eau", "sou", "net"], []],
       "2020-01-01" => [["rak", "eau", "sou", "net", "vst"], []],
-      "2020-05-01" => [["rak", "eau", "sou", "net", "vst", "src"], ["mhlw"]],
+      "2020-05-01" => [["rak", "eau", "sou", "net", "vst", "src"], []],
     }
   end
 
