@@ -6349,7 +6349,7 @@
                 "Wurm"
             ],
             "supertypes": [],
-            "text": "Trample\nWhenever Consumption Tyrant enters the battlefield or dies, you may sacrifice another creature. If you do, you draw cards equal to the sacrificed creature's power, then you gain life equal to its toughness.",
+            "text": "Trample\nWhen Consumption Tyrant enters the battlefield or dies, you may sacrifice another creature. If you do, you draw cards equal to the sacrificed creature's power, then you gain life equal to its toughness.",
             "toughness": "8",
             "type": "Creature \u2014 Wurm",
             "types": [
