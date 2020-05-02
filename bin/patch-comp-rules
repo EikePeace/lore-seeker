@@ -147,7 +147,7 @@ class CompRules:
 
     def apply_patch(self, patch_json):
         if parse_iso_date(patch_json['base']) != self.date:
-            raise BaseDateError('This rules patch is for a different version of the rules')
+            raise BaseDateError(f'This rules patch is for a different version of the rules: base is {patch_json["base"]}, patch is for {self.date:%Y-%m-%d}')
         if 'effective' in patch_json:
             self.date = parse_iso_date(patch_json['effective'])
         else:
