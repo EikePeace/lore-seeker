@@ -5,7 +5,13 @@
 class PatchExcludeFromBoosters < Patch
   def call
     each_printing do |card|
-      if exclude_from_boosters(card["set_code"], card["number"])
+      set_code = card["set_code"]
+
+      if sets_without_basics_in_boosters.include?(set_code) and card["supertypes"]&.include?("Basic")
+        card["exclude_from_boosters"] = true
+      end
+
+      if exclude_from_boosters(set_code, card["number"])
         card["exclude_from_boosters"] = true
       end
 
@@ -13,7 +19,7 @@ class PatchExcludeFromBoosters < Patch
       # Non full art are for precons
       #
       # in v4 non-booster version got -a suffix
-      if %W[bfz ogw].include?(card["set_code"]) and
+      if %W[bfz ogw].include?(set_code) and
         card["supertypes"] == ["Basic"] and
         card["number"] =~ /a/
         card["exclude_from_boosters"] = true
@@ -23,15 +29,25 @@ class PatchExcludeFromBoosters < Patch
       # just not in English boosters, so count them out
       #
       # Other star cards are foil alt arts and in boosters
-      if card["number"] =~ /★/ and card["set_code"] == "war"
+      if card["number"] =~ /★/ and set_code == "war"
         card["exclude_from_boosters"] = true
       end
 
       # Mostly misprints and such
-      if card["number"] =~ /†/ and card["set_code"] != "arn"
+      if card["number"] =~ /†/ and (set_code != "arn" and set_code != "shm")
         card["exclude_from_boosters"] = true
       end
     end
+  end
+
+  # Based on http://www.lethe.xyz/mtg/collation/index.html
+  # These sets do not have foils
+  #
+  # Many other sets had foil basics in boosters
+  # but nonfoil basics only in other products
+  # These do not belong here
+  def sets_without_basics_in_boosters
+    ["ice", "mir", "tmp", "usg", "4ed", "5ed", "6ed"]
   end
 
   def exclude_from_boosters(set_code, number)
@@ -70,6 +86,8 @@ class PatchExcludeFromBoosters < Patch
       number_i > 254
     when "thb"
       number_i > 254
+    when "iko"
+      number_i > 274
     else
       false
     end

@@ -43,89 +43,75 @@ class PackFactory
 
   private def build_sheet(set_code, name)
     @sheet_cache[[set_code, name]] ||= begin
-      case name
-      when :common
-        @sheet_factory.rarity(set_code, name.to_s, kind: ColorBalancedCardSheet)
-      when :common_unbalanced
-        @sheet_factory.rarity(set_code, "common")
-      when :basic, :uncommon, :rare
-        @sheet_factory.rarity(set_code, name.to_s)
-      when :rare_mythic
-        @sheet_factory.rare_mythic(set_code)
-      # In old sets commons and basics were printed on shared sheet
-      when :common_or_basic
-        @sheet_factory.common_or_basic(set_code)
-      when :common_or_basic_unbalanced
-        @sheet_factory.common_or_basic(set_code, kind: CardSheet)
-      when :foil
-        @sheet_factory.foil_sheet(set_code)
-      # Various old sheets
-      when :explicit_common, :explicit_uncommon, :explicit_rare, :sfc_common, :sfc_uncommon, :sfc_rare_mythic
-        @sheet_factory.send(name, set_code)
-      # Various custom sheets
-      when :sfc_common_unbalanced
-        @sheet_factory.sfc_common(set_code, kind: CardSheet)
-      when :nonland_common
-        @sheet_factory.send(name, set_code, kind: ColorBalancedCardSheet)
-      when :nonbasic_land, :nonland_uncommon, :nonland_rare_mythic, :naive_nonland_rare_mythic
-        @sheet_factory.send(name, set_code)
-      when :nonland_common_unbalanced
-        @sheet_factory.nonland_common(set_code)
-      # Various special sheets
-      else
-        if @sheet_factory.respond_to?(name)
+      if @sheet_factory.respond_to?(name)
+        # .arity and keyword arguments are weird together
+        arity = @sheet_factory.method(name).arity
+        if arity == 0 or arity == -1
           @sheet_factory.send(name)
         else
-          raise "Unknown sheet type #{name}"
+          @sheet_factory.send(name, set_code)
         end
+      else
+        raise "Unknown sheet type #{name}"
       end
     end
   end
 
-  def for(set_code)
+  def for(set_code, variant=nil)
     set = @db.resolve_edition(set_code)
     raise "Invalid set code #{set_code}" unless set
     return nil if set.release_date > Date.today
     set_code = set.code # Normalize
+    booster_code = [set_code, variant].compact.join("-")
 
     # https://mtg.gamepedia.com/Booster_pack
-    case set_code
+    pack = case booster_code
     when "ptk"
       build_pack(set_code, {basic: 2, common: 5, uncommon: 2, rare: 1})
-    when "s99"
+    when "s99", "por", "p02"
       build_pack(set_code, {basic: 2, common: 9, uncommon: 3, rare: 1})
     when "ugl"
       build_pack(set_code, {basic: 1, common_unbalanced: 6, uncommon: 2, rare: 1})
     when "7ed", "8ed", "9ed", "10e"
       build_pack_with_random_foil(set_code, :foil, :common, {basic: 1, common: 10, uncommon: 3, rare: 1})
-    # Default configuration before mythics
-    # Back then there was no crazy variation
+    when "lea", "leb", "2ed", "3ed"
+      build_pack(set_code, {explicit_common: 11, explicit_uncommon: 3, explicit_rare: 1})
     # 6ed came out after foils started, but didn't have foils
-    when "4ed", "5ed", "6ed",
-      "mir", "vis", "wth",
+    when "4ed", "5ed", "6ed"
+      build_pack(set_code, {common: 11, uncommon: 3, rare: 1})
+    when "mir", "vis", "wth",
       "tmp", "sth", "exo",
-      "usg",
-      "por", "p02"
-      build_pack(set_code, {common_or_basic: 11, uncommon: 3, rare: 1})
-    # Pre-mythic, with foils
+      "usg"
+      build_pack(set_code, {common: 11, uncommon: 3, rare: 1})
+    # Pre-mythic, with foils, sets without basics
     when "ulg", "uds",
-      "mmq", "pcy", "nem",
-      "inv", "pls",
-      "ody", "tor",
-      "ons", "lgn", "scg",
-      "mrd", "dst", "5dn",
-      "chk", "bok", "sok",
-      "csp",
-      "fut", # Amazingly Future Sight has regular boring sheets
-      "lrw", "mor"
+         "pcy", "nem",
+         "pls",
+         "tor",
+         "lgn", "scg",
+         "dst", "5dn",
+         "fut", # Amazingly Future Sight has regular boring sheets
+         "bok", "sok",
+         "mor"
+      build_pack_with_random_foil(set_code, :foil, :common, {common: 11, uncommon: 3, rare: 1})
+    # Pre-mythic, with foils, only foil basics in packs
+    when "mmq",
+      "inv",
+      "ody",
+      "ons",
+      "mrd",
+      "chk",
+      "lrw"
+      build_pack_with_random_foil(set_code, :foil, :common, {common: 11, uncommon: 3, rare: 1})
+    # According to pack opening videos, Coldsnap has common_or_basic slot
+    when "csp"
       build_pack_with_random_foil(set_code, :foil, :common_or_basic, {common_or_basic: 11, uncommon: 3, rare: 1})
     # Don't try to color balance them
     # (APC should probably be balanced, just by c: not ci:)
-    when "apc",
-      "jud",
-      "rav", "gpt", "dis",
-      "shm", "eve"
-      build_pack_with_random_foil(set_code, :foil, :common_or_basic_unbalanced, {common_or_basic_unbalanced: 11, uncommon: 3, rare: 1})
+    when "apc", "jud", "gpt", "dis", "eve"
+      build_pack_with_random_foil(set_code, :foil, :common_unbalanced, {common_unbalanced: 11, uncommon: 3, rare: 1})
+    when "rav", "shm"
+      build_pack_with_random_foil(set_code, :foil, :common_unbalanced, {common_unbalanced: 11, uncommon: 3, rare: 1})
     # Default configuration since mythics got introduced
     # A lot of sets don't fit this
     when "m10", "m11", "m12", "m13", "m14", "m15",
@@ -143,12 +129,19 @@ class PackFactory
       "bfz", "ogw",
       "kld", "aer",
       "akh", "hou",
-      "m19",
       "mh1",
-      "m20",
       "eld", # ELD and newer sets have multiple nonstandard pack types too
       "thb"
       build_pack_with_random_foil(set_code, :foil, :common, {basic: 1, common: 10, uncommon: 3, rare_mythic: 1}, common_if_no_basic: true)
+    when "m19"
+      # According to The Collation Project, if pack has DFC (at least nonfoil), it will have checklist card in land slot
+      # We do not simulate this
+      build_pack_with_random_foil(set_code, :foil, :nonland_common, {basic_or_common_land: 1, nonland_common: 10, uncommon: 3, rare_mythic: 1})
+    when "m20"
+      build_pack_with_random_foil(set_code, :foil, :nonland_common, {basic_or_common_land: 1, nonland_common: 10, uncommon: 3, rare_mythic: 1})
+    when "iko"
+      # This works almost like M19/M20, but one of the common lands seems to be on common not on land sheet
+      build_pack_with_random_foil(set_code, :foil, :nongainland_common, {basic_or_gainland: 1, nongainland_common: 10, uncommon: 3, rare_mythic: 1})
     when "ala"
       build_pack_with_random_foil(set_code, :foil, :common_unbalanced, {basic: 1, common_unbalanced: 10, uncommon: 3, rare_mythic: 1})
     when "arb"
@@ -265,9 +258,8 @@ class PackFactory
       build_pack_with_random_foil(set_code, :foil, :grn_common, {grn_common: 10, uncommon: 3, rare_mythic: 1, grn_land: 1})
     when "rna"
       build_pack_with_random_foil(set_code, :foil, :rna_common, {rna_common: 10, uncommon: 3, rare_mythic: 1, rna_land: 1})
-    # These are just approximations, they actually used nonstandard sheets
-    when "lea", "leb", "2ed", "3ed", "ice"
-      build_pack(set_code, {common_or_basic: 11, uncommon: 3, rare: 1})
+    when "ice"
+      build_pack(set_code, {common: 11, uncommon: 3, rare: 1})
     # Early sets had unusual rarities, indexer fills all the details for us
     when "all"
       build_pack(set_code, {explicit_common: 8, explicit_uncommon: 3, explicit_rare: 1})
@@ -277,6 +269,49 @@ class PackFactory
       build_pack(set_code, {explicit_common: 6, explicit_uncommon: 2})
     when "leg"
       build_pack(set_code, {explicit_common: 12, explicit_uncommon: 3, explicit_rare: 1})
+    when "mb1"
+      build_pack(set_code, {
+        mb1_white_a: 1,
+        mb1_white_b: 1,
+        mb1_blue_a: 1,
+        mb1_blue_b: 1,
+        mb1_black_a: 1,
+        mb1_black_b: 1,
+        mb1_red_a: 1,
+        mb1_red_b: 1,
+        mb1_green_a: 1,
+        mb1_green_b: 1,
+        mb1_multicolor: 1,
+        mb1_colorless: 1,
+        mb1_old_frame: 1,
+        mb1_rare: 1,
+        mb1_foil: 1,
+      })
+    when "cmb1"
+      build_pack(set_code, {
+        mb1_white_a: 1,
+        mb1_white_b: 1,
+        mb1_blue_a: 1,
+        mb1_blue_b: 1,
+        mb1_black_a: 1,
+        mb1_black_b: 1,
+        mb1_red_a: 1,
+        mb1_red_b: 1,
+        mb1_green_a: 1,
+        mb1_green_b: 1,
+        mb1_multicolor: 1,
+        mb1_colorless: 1,
+        mb1_old_frame: 1,
+        mb1_rare: 1,
+        mb1_playtest: 1,
+      })
+    when "ala-premium"
+      build_pack(set_code, {
+        alara_premium_basic: 1,
+        alara_premium_common: 10,
+        alara_premium_uncommon: 3,
+        alara_premium_rare_mythic: 1,
+      })
     # custom sets
     when "ldo", "dhm"
       # Custom sets with default pack distribution, no foils, with basics
@@ -317,5 +352,16 @@ class PackFactory
       # Specs make sure right specs hit this
       nil
     end
+
+    if pack
+      pack.set = set
+      pack.code = booster_code
+      if variant
+        pack.name = set.booster_variants[variant]
+      else
+        pack.name = set.name
+      end
+    end
+    pack
   end
 end

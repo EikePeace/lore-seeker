@@ -530,6 +530,47 @@
             ]
         },
         {
+            "artist": "Matt Lara (Edited)",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 3.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "loyalty": "4",
+            "manaCost": "{1}{W}{W}",
+            "name": "Koe and Lai",
+            "number": "16",
+            "originalName": "Koe and Lai",
+            "originalText": "[+1]: Put a +1/+1 counter on up to one target creature. It can't attack you or a planeswalker you control until your next turn.\n[-2]: Create a 2/2 white Warrior creature token.\n[-7]: You get an emblem with \"At the beginning of combat on your turn, put up to three +1/+1 counters on target creature and up to three loyalty counters on target planeswalker.\"",
+            "originalType": "Legendary Planeswalker \u2014 Koe Lai",
+            "rarity": "mythic",
+            "rulings": [
+                {
+                    "date": "2019-12-20",
+                    "text": "If you can't choose both a creature and a planeswalker as legal targets for the emblem's ability, it's removed from the stack without doing anything."
+                }
+            ],
+            "subtypes": [
+                "Koe",
+                "Lai"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "[+1]: Put a +1/+1 counter on up to one target creature. It can't attack you or a planeswalker you control until your next turn.\n[-2]: Create a 2/2 white Warrior creature token.\n[-7]: You get an emblem with \"At the beginning of combat on your turn, put up to three +1/+1 counters on target creature and up to three loyalty counters on target planeswalker.\"",
+            "type": "Legendary Planeswalker \u2014 Koe Lai",
+            "types": [
+                "Planeswalker"
+            ]
+        },
+        {
             "artist": "Findara McAvinchey",
             "borderColor": "black",
             "colorIdentity": [
@@ -545,7 +586,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Kohea's Brilliance",
-            "number": "16",
+            "number": "17",
             "originalName": "Kohea's Brilliance",
             "originalText": "Tap up to two target creatures.\nAwaken 3\u2014{4}{W} (If you cast this spell for {4}{W}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
             "originalType": "Sorcery",
@@ -575,7 +616,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Kohea's Griffin",
-            "number": "17",
+            "number": "18",
             "originalName": "Kohea's Griffin",
             "originalText": "Flying\nPrestige 1 (When this creature attacks with two or more other creatures, if it isn't prestigious, put a +1/+1 counter on it and it becomes prestigious.)",
             "originalType": "Creature \u2014 Griffin",
@@ -609,7 +650,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "Level the Landscape",
-            "number": "18",
+            "number": "19",
             "originalName": "Level the Landscape",
             "originalText": "Each player chooses any number of creatures they control with total power less than or equal to the number of lands they control, then sacrifices all other creatures they control.\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
             "originalType": "Sorcery",
@@ -640,7 +681,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Mighty Leap",
-            "number": "19",
+            "number": "20",
             "originalName": "Mighty Leap",
             "originalText": "Target creature gets +2/+2 and gains flying until end of turn.",
             "originalType": "Instant",
@@ -680,7 +721,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Mokupe Earthcrafter",
-            "number": "20",
+            "number": "21",
             "originalName": "Mokupe Earthcrafter",
             "originalText": "When Mokupe Earthcrafter enters the battlefield, search your library for an Aura card with enchant land, reveal it, put it into your hand, then shuffle your library.",
             "originalType": "Creature \u2014 Elf Shaman",
@@ -716,7 +757,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Moon Weaver",
-            "number": "21",
+            "number": "22",
             "originalName": "Moon Weaver",
             "originalText": "Flying\nWhenever you cast an Aura spell, draw a card.",
             "originalType": "Creature \u2014 Human Cleric",
@@ -751,7 +792,7 @@
             "layout": "normal",
             "manaCost": "{2}{W}",
             "name": "Omalu Guide",
-            "number": "22",
+            "number": "23",
             "originalName": "Omalu Guide",
             "originalText": "Voyage ({W}{U}{B}{R}{G}: If you don't control Paradise, create Paradise, a legendary land token with hexproof and \"{T}: Add one mana of any color.\")\nAs long as you control Paradise, Omalu Guide gets +2/+3 and has vigilance.",
             "originalType": "Creature \u2014 Human Warrior",
@@ -787,7 +828,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Omalu Prince",
-            "number": "23",
+            "number": "24",
             "originalName": "Omalu Prince",
             "originalText": "When Omalu Prince enters the battlefield, tap up to X target creatures, where X is the number of Plains you control.",
             "originalType": "Creature \u2014 Human Noble",
@@ -807,6 +848,37 @@
             ]
         },
         {
+            "artist": "Gary Vanaka",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 3.0,
+            "flavorText": "\"Our hearts burn, stoked by pride!/Lay down your arms and submit/ We rise above you in every way!\"",
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{1}{W}{W}",
+            "name": "Omalu War Dance",
+            "number": "25",
+            "originalName": "Omalu War Dance",
+            "originalText": "Choose one \u2014\n\u2022 Creatures you control get +2/+1 until end of turn.\n\u2022 Exile target artifact or enchantment.",
+            "originalType": "Instant",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Choose one \u2014\n\u2022 Creatures you control get +2/+1 until end of turn.\n\u2022 Exile target artifact or enchantment.",
+            "type": "Instant",
+            "types": [
+                "Instant"
+            ]
+        },
+        {
             "artist": "Jerry LoFaro",
             "borderColor": "black",
             "colorIdentity": [
@@ -822,7 +894,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Playful Bottlenose",
-            "number": "24",
+            "number": "26",
             "originalName": "Playful Bottlenose",
             "originalText": "{1}: Choose target creature you control. Playful Bottlenose gains flying until end of turn if that creature has flying. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, reach, trample, and vigilance.",
             "originalType": "Creature \u2014 Dolphin",
@@ -857,7 +929,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Pristine Daylight",
-            "number": "25",
+            "number": "27",
             "originalName": "Pristine Daylight",
             "originalText": "Destroy all enchantments.",
             "originalType": "Sorcery",
@@ -869,37 +941,6 @@
             "type": "Sorcery",
             "types": [
                 "Sorcery"
-            ]
-        },
-        {
-            "artist": "Gary Vanaka",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 3.0,
-            "flavorText": "\"Our hearts burn, stoked by pride!/Lay down your arms and submit/ We rise above you in every way!\"",
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{1}{W}{W}",
-            "name": "RAK:War Dance",
-            "number": "26",
-            "originalName": "RAK:War Dance",
-            "originalText": "Choose one \u2014\n\u2022 Creatures you control get +2/+1 until end of turn.\n\u2022 Exile target artifact or enchantment.",
-            "originalType": "Instant",
-            "rarity": "common",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "Choose one \u2014\n\u2022 Creatures you control get +2/+1 until end of turn.\n\u2022 Exile target artifact or enchantment.",
-            "type": "Instant",
-            "types": [
-                "Instant"
             ]
         },
         {
@@ -918,7 +959,7 @@
             "layout": "normal",
             "manaCost": "{W}",
             "name": "Reko's Protege",
-            "number": "27",
+            "number": "28",
             "originalName": "Reko's Protege",
             "originalText": "Prestige 1 (When this creature attacks with two or more other creatures, if it isn't prestigious, put a +1/+1 counter on it and it becomes prestigious.)",
             "originalType": "Creature \u2014 Human Warrior",
@@ -954,7 +995,7 @@
             "layout": "normal",
             "manaCost": "{5}{W}",
             "name": "Revered Sovereign",
-            "number": "28",
+            "number": "29",
             "originalName": "Revered Sovereign",
             "originalText": "Flying\nWhen Revered Sovereign enters the battlefield, you gain 2 life for each Aura you control.",
             "originalType": "Creature \u2014 Whale",
@@ -988,7 +1029,7 @@
             "layout": "normal",
             "manaCost": "{W}",
             "name": "Roving Sanctuary",
-            "number": "29",
+            "number": "30",
             "originalName": "Roving Sanctuary",
             "originalText": "Voyage ({W}{U}{B}{R}{G}: If you don't control Paradise, create Paradise, a legendary land token with hexproof and \"{T}: Add one mana of any color.\")\n{5}, {T}: You gain 5 life. Activate this ability only if you control Paradise.",
             "originalType": "Creature \u2014 Turtle",
@@ -1023,7 +1064,7 @@
             "layout": "normal",
             "manaCost": "{4}{W}",
             "name": "Settlement Turtle",
-            "number": "30",
+            "number": "31",
             "originalName": "Settlement Turtle",
             "originalType": "Creature \u2014 Turtle",
             "power": "2",
@@ -1056,7 +1097,7 @@
             "layout": "normal",
             "manaCost": "{4}{W}",
             "name": "Sunlit Skywhale",
-            "number": "31",
+            "number": "32",
             "originalName": "Sunlit Skywhale",
             "originalText": "Flying\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
             "originalType": "Creature \u2014 Whale",
@@ -1090,7 +1131,7 @@
             "layout": "normal",
             "manaCost": "{3}{W}",
             "name": "Suntouched",
-            "number": "32",
+            "number": "33",
             "originalName": "Suntouched",
             "originalText": "Enchant land\nWhen Suntouched enters the battlefield, you may search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.\nEnchanted land has \"{W}, {T}: Tap target creature.\"",
             "originalType": "Enchantment \u2014 Aura",
@@ -1123,7 +1164,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Take Vengeance",
-            "number": "33",
+            "number": "34",
             "originalName": "Take Vengeance",
             "originalText": "Destroy target tapped creature.",
             "originalType": "Sorcery",
@@ -1153,7 +1194,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Teacher of Taboos",
-            "number": "34",
+            "number": "35",
             "originalName": "Teacher of Taboos",
             "originalText": "Prestige 1 (When this creature attacks with two or more other creatures, if it isn't prestigious, put a +1/+1 counter on it and it becomes prestigious.)\nWhen Teacher of Taboos becomes prestigious, tap target creature an opponent controls.",
             "originalType": "Creature \u2014 Human Cleric Warrior",
@@ -1174,7 +1215,7 @@
             ]
         },
         {
-            "artist": "Aldo Dominguez",
+            "artist": "Yefim Kligerman",
             "borderColor": "black",
             "colorIdentity": [
                 "W"
@@ -1189,7 +1230,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Tua Rahi Griffin",
-            "number": "35",
+            "number": "36",
             "originalName": "Tua Rahi Griffin",
             "originalText": "Flying\nVoyage ({W}{U}{B}{R}{G}: If you don't control Paradise, create Paradise, a legendary land token with hexproof and \"{T}: Add one mana of any color.\")\nAs long as you control Paradise, Tua Rahi Griffin gets +3/+0 and has vigilance.",
             "originalType": "Creature \u2014 Griffin",
@@ -1223,7 +1264,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Wander the Unknown",
-            "number": "36",
+            "number": "37",
             "originalName": "Wander the Unknown",
             "originalText": "Exile target creature. Its controller may search their library for a basic land card, put it onto the battlefield tapped, then shuffle their library.",
             "originalType": "Instant",
@@ -1263,7 +1304,7 @@
             "layout": "normal",
             "manaCost": "{1}{W}",
             "name": "Wistful Peka-Bird",
-            "number": "37",
+            "number": "38",
             "originalName": "Wistful Peka-Bird",
             "originalText": "Whenever a Plains enters the battlefield under your control, Wistful Peka-Bird gets +1/+0 and gains flying until end of turn.",
             "originalType": "Creature \u2014 Bird",
@@ -1279,46 +1320,6 @@
             "type": "Creature \u2014 Bird",
             "types": [
                 "Creature"
-            ]
-        },
-        {
-            "artist": "taha yeasin (Edited)",
-            "borderColor": "black",
-            "colorIdentity": [
-                "W"
-            ],
-            "colors": [
-                "W"
-            ],
-            "convertedManaCost": 3.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "loyalty": "4",
-            "manaCost": "{1}{W}{W}",
-            "name": "Wulani, Kahuna of Gifts",
-            "number": "38",
-            "originalName": "Wulani, Kahuna of Gifts",
-            "originalText": "[+1]: Put a +1/+1 counter on up to one target creature. It can't attack you or a planeswalker you control until your next turn.\n[-2]: Create a 2/2 white Warrior creature token.\n[-7]: You get an emblem with \"At the beginning of combat on your turn, put up to three +1/+1 counters on target creature and up to three loyalty counters on target planeswalker.\"",
-            "originalType": "Legendary Planeswalker \u2014 Wulani",
-            "rarity": "mythic",
-            "rulings": [
-                {
-                    "date": "2019-12-20",
-                    "text": "If you can't choose both a creature and a planeswalker as legal targets for the emblem's ability, it's removed from the stack without doing anything."
-                }
-            ],
-            "subtypes": [
-                "Wulani"
-            ],
-            "supertypes": [
-                "Legendary"
-            ],
-            "text": "[+1]: Put a +1/+1 counter on up to one target creature. It can't attack you or a planeswalker you control until your next turn.\n[-2]: Create a 2/2 white Warrior creature token.\n[-7]: You get an emblem with \"At the beginning of combat on your turn, put up to three +1/+1 counters on target creature and up to three loyalty counters on target planeswalker.\"",
-            "type": "Legendary Planeswalker \u2014 Wulani",
-            "types": [
-                "Planeswalker"
             ]
         },
         {
@@ -1979,7 +1980,7 @@
             "name": "Kanokai's Recruiter",
             "number": "56",
             "originalName": "Kanokai's Recruiter",
-            "originalText": "You may look at the top card of your library any time.\nYou may cast the top card of your library if it's a Merfolk card.\nWhenever Kanokai's Recruiter deals combat damage to a player, scry 2.",
+            "originalText": "You may look at the top card of your library any time.\nYou may cast Merfolk spells from the top of your library.\nWhenever Kanokai's Recruiter deals combat damage to a player, scry 2.",
             "originalType": "Creature \u2014 Merfolk Warrior",
             "power": "2",
             "rarity": "rare",
@@ -1989,7 +1990,7 @@
                 "Warrior"
             ],
             "supertypes": [],
-            "text": "You may look at the top card of your library any time.\nYou may cast the top card of your library if it's a Merfolk card.\nWhenever Kanokai's Recruiter deals combat damage to a player, scry 2.",
+            "text": "You may look at the top card of your library any time.\nYou may cast Merfolk spells from the top of your library.\nWhenever Kanokai's Recruiter deals combat damage to a player, scry 2.",
             "toughness": "1",
             "type": "Creature \u2014 Merfolk Warrior",
             "types": [
@@ -2014,13 +2015,13 @@
             "name": "Murono's Claim",
             "number": "57",
             "originalName": "Murono's Claim",
-            "originalText": "Exile target creature. Its controller creates a 3/3 blue Fish creature token.\nAwaken 4\u2014{3}{U}{U} (If you cast this spell for {3}{U}{U}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+            "originalText": "Exile target creature. Its controller creates a 3/3 blue Shark creature token.\nAwaken 4\u2014{3}{U}{U} (If you cast this spell for {3}{U}{U}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
             "originalType": "Sorcery",
             "rarity": "rare",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Exile target creature. Its controller creates a 3/3 blue Fish creature token.\nAwaken 4\u2014{3}{U}{U} (If you cast this spell for {3}{U}{U}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+            "text": "Exile target creature. Its controller creates a 3/3 blue Shark creature token.\nAwaken 4\u2014{3}{U}{U} (If you cast this spell for {3}{U}{U}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -2281,7 +2282,7 @@
             "name": "Sarasa, Adventuring Professor",
             "number": "65",
             "originalName": "Sarasa, Adventuring Professor",
-            "originalText": "Voyage\n[+2]: Draw a card, then discard a card unless you control Paradise.\n[-2]: Untap two target permanents. If you control Paradise, untap four target permanents instead.\n[-8]: Put up to two cards you own from outside the game into your hand. If you control Paradise, cast up to two cards from your hand without paying their mana costs.",
+            "originalText": "Voyage\n[+2]: Draw a card, then discard a card unless you control Paradise.\n[-2]: Untap two target permanents. If you control Paradise, untap four target permanents instead.\n[-8]: Put up to two cards you own from outside the game into your hand. If you control Paradise, cast up to two spells from your hand without paying their mana costs.",
             "originalType": "Legendary Planeswalker \u2014 Sarasa",
             "rarity": "mythic",
             "rulings": [
@@ -2296,7 +2297,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "Voyage\n[+2]: Draw a card, then discard a card unless you control Paradise.\n[-2]: Untap two target permanents. If you control Paradise, untap four target permanents instead.\n[-8]: Put up to two cards you own from outside the game into your hand. If you control Paradise, cast up to two cards from your hand without paying their mana costs.",
+            "text": "Voyage\n[+2]: Draw a card, then discard a card unless you control Paradise.\n[-2]: Untap two target permanents. If you control Paradise, untap four target permanents instead.\n[-8]: Put up to two cards you own from outside the game into your hand. If you control Paradise, cast up to two spells from your hand without paying their mana costs.",
             "type": "Legendary Planeswalker \u2014 Sarasa",
             "types": [
                 "Planeswalker"
@@ -2746,37 +2747,7 @@
             ]
         },
         {
-            "artist": "Corey Gooch",
-            "borderColor": "black",
-            "colorIdentity": [
-                "B"
-            ],
-            "colors": [
-                "B"
-            ],
-            "convertedManaCost": 4.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{2}{B}{B}",
-            "name": "Abyssal Strike",
-            "number": "79",
-            "originalName": "Abyssal Strike",
-            "originalText": "You may pay {B} and exile a Swamp card from your hand rather than pay this spell's mana cost.\nDestroy target creature or planeswalker.",
-            "originalType": "Instant",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [],
-            "supertypes": [],
-            "text": "You may pay {B} and exile a Swamp card from your hand rather than pay this spell's mana cost.\nDestroy target creature or planeswalker.",
-            "type": "Instant",
-            "types": [
-                "Instant"
-            ]
-        },
-        {
-            "artist": "John Stone",
+            "artist": "fares maese",
             "borderColor": "black",
             "colorIdentity": [
                 "B"
@@ -2791,7 +2762,7 @@
             "layout": "normal",
             "manaCost": "{2}{B}{B}{B}",
             "name": "Avatar of the Abyss",
-            "number": "80",
+            "number": "79",
             "originalName": "Avatar of the Abyss",
             "originalText": "Deathtouch\nWhenever Avatar of the Abyss or a Swamp enters the battlefield under your control, Avatar of the Abyss deals 3 damage to target player or planeswalker and you gain 3 life.",
             "originalType": "Creature \u2014 Avatar",
@@ -2825,7 +2796,7 @@
             "layout": "normal",
             "manaCost": "{3}{B}",
             "name": "Bandit Warlord",
-            "number": "81",
+            "number": "80",
             "originalName": "Bandit Warlord",
             "originalText": "Prestige 2 (When this creature attacks with two or more other creatures, if it isn't prestigious, put two +1/+1 counters on it and it becomes prestigious.)\nWhen Bandit Warlord becomes prestigious, target opponent discards two cards.",
             "originalType": "Creature \u2014 Human Warrior",
@@ -2861,7 +2832,7 @@
             "layout": "normal",
             "manaCost": "{4}{B}",
             "name": "Barang's Blight",
-            "number": "82",
+            "number": "81",
             "originalName": "Barang's Blight",
             "originalText": "Target creature gets -4/-4 until end of turn.",
             "originalType": "Instant",
@@ -2892,7 +2863,7 @@
             "layout": "normal",
             "manaCost": "{1}{B}",
             "name": "Blood in the Water",
-            "number": "83",
+            "number": "82",
             "originalName": "Blood in the Water",
             "originalText": "Target creature gets -2/-2 until end of turn. Its controller loses 2 life.",
             "originalType": "Sorcery",
@@ -2923,7 +2894,7 @@
             "layout": "normal",
             "manaCost": "{3}{B}",
             "name": "Bloodletter Bat",
-            "number": "84",
+            "number": "83",
             "originalName": "Bloodletter Bat",
             "originalText": "Flying\nWhen Bloodletter Bat enters the battlefield, target creature an opponent controls gets -1/-1 until end of turn.",
             "originalType": "Creature \u2014 Bat",
@@ -2957,7 +2928,7 @@
             "layout": "normal",
             "manaCost": "{1}{B}",
             "name": "Boiling Outflow",
-            "number": "85",
+            "number": "84",
             "originalName": "Boiling Outflow",
             "originalText": "At the beginning of your upkeep, you lose 1 life and create a 1/1 red Elemental creature token.\n{1}{B}, Sacrifice two Elementals: You draw two cards. Activate this ability only any time you could cast a sorcery.",
             "originalType": "Enchantment",
@@ -2969,6 +2940,36 @@
             "type": "Enchantment",
             "types": [
                 "Enchantment"
+            ]
+        },
+        {
+            "artist": "tomasz kwiatkowski",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B"
+            ],
+            "colors": [
+                "B"
+            ],
+            "convertedManaCost": 4.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{2}{B}{B}",
+            "name": "Consume the Untainted",
+            "number": "85",
+            "originalName": "Consume the Untainted",
+            "originalText": "You may pay {B} and exile a Swamp card from your hand rather than pay this spell's mana cost.\nDestroy target creature or planeswalker.",
+            "originalType": "Instant",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "You may pay {B} and exile a Swamp card from your hand rather than pay this spell's mana cost.\nDestroy target creature or planeswalker.",
+            "type": "Instant",
+            "types": [
+                "Instant"
             ]
         },
         {
@@ -4157,13 +4158,13 @@
             "name": "Brewing Storm",
             "number": "120",
             "originalName": "Brewing Storm",
-            "originalText": "When Brewing Storm enters the battlefield, scry 2.\n{R}, Sacrifice Brewing Storm: Copy target instant or sorcery spell you control. You may choose new targets for the copy.",
+            "originalText": "When Brewing Storm enters the battlefield, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)\n{R}, Sacrifice Brewing Storm: Copy target instant or sorcery spell you control. You may choose new targets for the copy.",
             "originalType": "Enchantment",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "When Brewing Storm enters the battlefield, scry 2.\n{R}, Sacrifice Brewing Storm: Copy target instant or sorcery spell you control. You may choose new targets for the copy.",
+            "text": "When Brewing Storm enters the battlefield, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)\n{R}, Sacrifice Brewing Storm: Copy target instant or sorcery spell you control. You may choose new targets for the copy.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
@@ -5937,7 +5938,7 @@
             "name": "Jungle Hydra",
             "number": "173",
             "originalName": "Jungle Hydra",
-            "originalText": "Trample, vigilance\nJungle Hydra enters the battlefield with twice X +1/+1 counters on it.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)",
+            "originalText": "Vigilance, trample\nJungle Hydra enters the battlefield with twice X +1/+1 counters on it.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)",
             "originalType": "Creature \u2014 Hydra",
             "power": "0",
             "rarity": "rare",
@@ -5946,7 +5947,7 @@
                 "Hydra"
             ],
             "supertypes": [],
-            "text": "Trample, vigilance\nJungle Hydra enters the battlefield with twice X +1/+1 counters on it.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)",
+            "text": "Vigilance, trample\nJungle Hydra enters the battlefield with twice X +1/+1 counters on it.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)",
             "toughness": "0",
             "type": "Creature \u2014 Hydra",
             "types": [
@@ -6153,6 +6154,41 @@
             ]
         },
         {
+            "artist": "juhyung kang",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G"
+            ],
+            "colors": [
+                "G"
+            ],
+            "convertedManaCost": 4.0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "layout": "normal",
+            "manaCost": "{2}{G}{G}",
+            "name": "Luaho Tracker",
+            "number": "180",
+            "originalName": "Luaho Tracker",
+            "originalText": "Trample\nWhen Luaho Tracker enters the battlefield, look at the top four cards of your library. Reveal up to one green creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+            "originalType": "Creature \u2014 Elf Scout",
+            "power": "4",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [
+                "Elf",
+                "Scout"
+            ],
+            "supertypes": [],
+            "text": "Trample\nWhen Luaho Tracker enters the battlefield, look at the top four cards of your library. Reveal up to one green creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+            "toughness": "3",
+            "type": "Creature \u2014 Elf Scout",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
             "artist": "Johanna Hui",
             "borderColor": "black",
             "colorIdentity": [
@@ -6169,7 +6205,7 @@
             "layout": "normal",
             "manaCost": "{1}{G}",
             "name": "Meeting with the Menehune",
-            "number": "180",
+            "number": "181",
             "originalName": "Meeting with the Menehune",
             "originalText": "Reveal the top five cards of your library. You may put a land card and/or an Aura card from among them into your hand, and the rest on the bottom of your library in any order.",
             "originalType": "Sorcery",
@@ -6205,7 +6241,7 @@
             "layout": "normal",
             "manaCost": "{1}{G}",
             "name": "Mokupe Bowmaster",
-            "number": "181",
+            "number": "182",
             "originalName": "Mokupe Bowmaster",
             "originalText": "Reach\n{3}{G}: Mokupe Bowmaster gets +2/+2 and gains trample until end of turn.",
             "originalType": "Creature \u2014 Elf Archer",
@@ -6241,7 +6277,7 @@
             "layout": "normal",
             "manaCost": "{1}{G}",
             "name": "Mokupe Fisher",
-            "number": "182",
+            "number": "183",
             "originalName": "Mokupe Fisher",
             "originalText": "{T}: Untap target land.",
             "originalType": "Creature \u2014 Elf Warrior",
@@ -6256,41 +6292,6 @@
             "text": "{T}: Untap target land.",
             "toughness": "3",
             "type": "Creature \u2014 Elf Warrior",
-            "types": [
-                "Creature"
-            ]
-        },
-        {
-            "artist": "juhyung kang",
-            "borderColor": "black",
-            "colorIdentity": [
-                "G"
-            ],
-            "colors": [
-                "G"
-            ],
-            "convertedManaCost": 4.0,
-            "frameVersion": "2015",
-            "hasFoil": false,
-            "hasNonFoil": true,
-            "layout": "normal",
-            "manaCost": "{2}{G}{G}",
-            "name": "Mokupe Tracker",
-            "number": "183",
-            "originalName": "Mokupe Tracker",
-            "originalText": "Trample\nWhen Mokupe Tracker enters the battlefield, look at the top four cards of your library. Reveal up to one green creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
-            "originalType": "Creature \u2014 Elf Scout",
-            "power": "4",
-            "rarity": "rare",
-            "rulings": [],
-            "subtypes": [
-                "Elf",
-                "Scout"
-            ],
-            "supertypes": [],
-            "text": "Trample\nWhen Mokupe Tracker enters the battlefield, look at the top four cards of your library. Reveal up to one green creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
-            "toughness": "3",
-            "type": "Creature \u2014 Elf Scout",
             "types": [
                 "Creature"
             ]
@@ -6648,7 +6649,7 @@
             "name": "Verdant Extent",
             "number": "194",
             "originalName": "Verdant Extent",
-            "originalText": "Enchant land\nWhen Verdant Extent enters the battlefield, you may search your library for a Forest card, reveal it, put it into your hand, then shuffle your library.\nEnchanted land has \"{G}, {T}: Target creature gets +3/+3 until end of turn. Activate this ability any time you could cast a sorcery.\"",
+            "originalText": "Enchant land\nWhen Verdant Extent enters the battlefield, you may search your library for a Forest card, reveal it, put it into your hand, then shuffle your library.\nEnchanted land has \"{G}, {T}: Target creature gets +3/+3 until end of turn. Activate this ability only any time you could cast a sorcery.\"",
             "originalType": "Enchantment \u2014 Aura",
             "rarity": "uncommon",
             "rulings": [],
@@ -6656,7 +6657,7 @@
                 "Aura"
             ],
             "supertypes": [],
-            "text": "Enchant land\nWhen Verdant Extent enters the battlefield, you may search your library for a Forest card, reveal it, put it into your hand, then shuffle your library.\nEnchanted land has \"{G}, {T}: Target creature gets +3/+3 until end of turn. Activate this ability any time you could cast a sorcery.\"",
+            "text": "Enchant land\nWhen Verdant Extent enters the battlefield, you may search your library for a Forest card, reveal it, put it into your hand, then shuffle your library.\nEnchanted land has \"{G}, {T}: Target creature gets +3/+3 until end of turn. Activate this ability only any time you could cast a sorcery.\"",
             "type": "Enchantment \u2014 Aura",
             "types": [
                 "Enchantment"
@@ -7365,7 +7366,7 @@
             "name": "Whaleback Raider",
             "number": "213",
             "originalName": "Whaleback Raider",
-            "originalText": "Prestige 2 (When this creature attacks with two or more other creatures, if it isn't prestigious, put two +1/+1 counters on it and it becomes prestigious.).\nWhenever a creature you control becomes prestigious, each opponent loses 1 life and you gain 1 life.",
+            "originalText": "Prestige 2 (When this creature attacks with two or more other creatures, if it isn't prestigious, put two +1/+1 counters on it and it becomes prestigious.)\nWhenever a creature you control becomes prestigious, each opponent loses 1 life and you gain 1 life.",
             "originalType": "Creature \u2014 Human Warrior",
             "power": "3",
             "rarity": "uncommon",
@@ -7375,7 +7376,7 @@
                 "Warrior"
             ],
             "supertypes": [],
-            "text": "Prestige 2 (When this creature attacks with two or more other creatures, if it isn't prestigious, put two +1/+1 counters on it and it becomes prestigious.).\nWhenever a creature you control becomes prestigious, each opponent loses 1 life and you gain 1 life.",
+            "text": "Prestige 2 (When this creature attacks with two or more other creatures, if it isn't prestigious, put two +1/+1 counters on it and it becomes prestigious.)\nWhenever a creature you control becomes prestigious, each opponent loses 1 life and you gain 1 life.",
             "toughness": "3",
             "type": "Creature \u2014 Human Warrior",
             "types": [
@@ -7408,7 +7409,7 @@
             "name": "World Elemental",
             "number": "214",
             "originalName": "World Elemental",
-            "originalText": "World Elemental gets +1/+1 for each differently named permanent you control.\nAt the beginning of your end step, gain control of target nonland permanent that doesn't share a name with a permanent you control.",
+            "originalText": "World Elemental gets +1/+1 for each differently named permanent you control.\nAt the beginning of your end step, gain control of target nonland permanent that doesn't have the same name as a permanent you control.",
             "originalType": "Creature \u2014 Elemental",
             "power": "0",
             "rarity": "mythic",
@@ -7430,7 +7431,7 @@
                 "Elemental"
             ],
             "supertypes": [],
-            "text": "World Elemental gets +1/+1 for each differently named permanent you control.\nAt the beginning of your end step, gain control of target nonland permanent that doesn't share a name with a permanent you control.",
+            "text": "World Elemental gets +1/+1 for each differently named permanent you control.\nAt the beginning of your end step, gain control of target nonland permanent that doesn't have the same name as a permanent you control.",
             "toughness": "0",
             "type": "Creature \u2014 Elemental",
             "types": [
@@ -7509,7 +7510,7 @@
             "name": "Echoshells",
             "number": "217",
             "originalName": "Echoshells",
-            "originalText": "{T}: Add one mana of any type that a land you control could produce.\n{3}, {T}: Search your library for a land card that doesn't share a name with a land you control, put it onto the battlefield, then shuffle your library.",
+            "originalText": "{T}: Add one mana of any type that a land you control could produce.\n{3}, {T}: Search your library for a land card that doesn't have the same name as a land you control, put it onto the battlefield, then shuffle your library.",
             "originalType": "Artifact",
             "rarity": "rare",
             "rulings": [
@@ -7536,7 +7537,7 @@
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}: Add one mana of any type that a land you control could produce.\n{3}, {T}: Search your library for a land card that doesn't share a name with a land you control, put it onto the battlefield, then shuffle your library.",
+            "text": "{T}: Add one mana of any type that a land you control could produce.\n{3}, {T}: Search your library for a land card that doesn't have the same name as a land you control, put it onto the battlefield, then shuffle your library.",
             "type": "Artifact",
             "types": [
                 "Artifact"
@@ -7733,7 +7734,7 @@
             "name": "Sturdy Canoe",
             "number": "224",
             "originalName": "Sturdy Canoe",
-            "originalText": "Whenever Sturdy Canoe enters the battlefield or attacks, scry 1.\nCrew 1 (Tap any number of creatures you control with total power 1 or greater: This Vehicle becomes an artifact creature until end of turn.)",
+            "originalText": "Whenever Sturdy Canoe enters the battlefield or attacks, scry 1. (To scry 1, look at the top card of your library. You may put that card on the bottom of your library.)\nCrew 1 (Tap any number of creatures you control with total power 1 or greater: This Vehicle becomes an artifact creature until end of turn.)",
             "originalType": "Artifact \u2014 Vehicle",
             "power": "2",
             "rarity": "uncommon",
@@ -7742,7 +7743,7 @@
                 "Vehicle"
             ],
             "supertypes": [],
-            "text": "Whenever Sturdy Canoe enters the battlefield or attacks, scry 1.\nCrew 1 (Tap any number of creatures you control with total power 1 or greater: This Vehicle becomes an artifact creature until end of turn.)",
+            "text": "Whenever Sturdy Canoe enters the battlefield or attacks, scry 1. (To scry 1, look at the top card of your library. You may put that card on the bottom of your library.)\nCrew 1 (Tap any number of creatures you control with total power 1 or greater: This Vehicle becomes an artifact creature until end of turn.)",
             "toughness": "4",
             "type": "Artifact \u2014 Vehicle",
             "types": [
@@ -9341,8 +9342,8 @@
     "code": "RAK",
     "custom": true,
     "meta": {
-        "date": "2020-02-15",
-        "setVersion": "2020-02-09",
+        "date": "2020-05-01",
+        "setVersion": "2020-05-01",
         "version": "4.4.1"
     },
     "name": "Rakoa",

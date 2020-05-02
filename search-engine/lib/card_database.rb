@@ -24,6 +24,7 @@ require_relative "precon_deck"
 require_relative "deck_parser"
 require_relative "deck_database"
 require_relative "unknown_card"
+require_relative "outdated_card"
 require_relative "user_deck_parser"
 
 # Backport from >=2.4 to 2.3
@@ -77,12 +78,15 @@ class CardDatabase
   # We also need to include all other cards with same name from same set,
   # as we don't know which Forest etc. is included
   def decks_containing(card_printing)
+    crawl_precons = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../data/crawl-precons.json"))
+    ech_precons = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../data/ech-precons.json"))
+    all_decks = crawl_precons + ech_precons + decks
     set_code = card_printing.set_code
     name = card_printing.name
-    decks.select do |deck|
+    all_decks.select do |deck|
       next unless deck.all_set_codes.include?(set_code)
       [*deck.cards, *deck.sideboard].any? do |_, physical_card|
-        physical_card.parts.any? do |physical_card_part|
+        !physical_card.is_a?(UnknownCard) and physical_card.parts.any? do |physical_card_part|
           physical_card_part.set_code == card_printing.set_code and
           physical_card_part.name == card_printing.name
         end
@@ -97,13 +101,25 @@ class CardDatabase
     end
   end
 
+  def pack_factory
+    @pack_factory ||= PackFactory.new(self)
+  end
+
   # Excluding unsupported ones
   # It's a very slow method, so memoize, but better just make it fast
-  def sets_with_packs
-    @sets_with_packs ||= begin
-      factory = PackFactory.new(self)
-      @sets.values.reverse.select{|set| factory.for(set.code)}
+  def supported_booster_types
+    unless @supported_booster_types
+      @supported_booster_types = {}
+      @sets.values.reverse.each do |set|
+        booster = pack_factory.for(set.code)
+        @supported_booster_types[booster.code] = booster if booster
+        set.booster_variants.each do |variant_code, variant_name|
+          booster = pack_factory.for(set.code, variant_code)
+          @supported_booster_types[booster.code] = booster if booster
+        end
+      end
     end
+    @supported_booster_types
   end
 
   def resolve_time(time)

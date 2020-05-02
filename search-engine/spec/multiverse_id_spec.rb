@@ -39,9 +39,12 @@ describe "multiverse ids" do
       when "med" # reported mtgjson bug
       when "phop" # fake set with stuff coming from 2 sources
       when "pmoa" # vanguard weirdness
+      when "sld" # set keeps getting updated
+      when "cmb1"
       when "eld"
         # Something's really messed up here, possibly related to ELD vs CELD
       when "thb"
+      when "iko"
         # Not yet
       else
         set.printings.group_by{|c| !!c.multiverseid}.size.should eq(1), "Set #{set_code} has cards with and without multiverseid"

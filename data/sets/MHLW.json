@@ -1,0 +1,1257 @@
+{
+    "baseSetSize": 25,
+    "cards": [
+        {
+            "artist": "winkla12",
+            "borderColor": "black",
+            "colorIdentity": [
+                "W"
+            ],
+            "colors": [
+                "W"
+            ],
+            "convertedManaCost": 2,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{1}{W}",
+            "name": "Praise the Sun",
+            "number": "1",
+            "originalName": "Praise the Sun",
+            "originalText": "Join Forces \u2014 Starting with you, each player may pay any amount of mana. Each player distributes X +1/+1 counters among any number of creatures they control, where X is the total amount of mana paid this way.",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [
+                {
+                    "date": "2020-04-24",
+                    "text": "Each player announces how they distribute their counters in turn order, starting with the player whose turn it is. Then all counters are put on all creatures at the same time."
+                }
+            ],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Join Forces \u2014 Starting with you, each player may pay any amount of mana. Each player distributes X +1/+1 counters among any number of creatures they control, where X is the total amount of mana paid this way.",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
+            ]
+        },
+        {
+            "artist": "pixivid5149351",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U"
+            ],
+            "colors": [
+                "U"
+            ],
+            "convertedManaCost": 1,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{U}",
+            "name": "Thief's Journey",
+            "number": "2",
+            "originalName": "Thief's Journey",
+            "originalText": "Join forces \u2014 Starting with you, each player may pay any amount of mana. Starting with the next opponent in turn order, each player gains control of a permanent of their choice with converted mana cost X or less, where X is the total amount of mana paid this way.",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [
+                {
+                    "date": "2020-04-24",
+                    "text": "The control-changing effects are applied one at a time, with newer ones overriding older ones."
+                }
+            ],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Join forces \u2014 Starting with you, each player may pay any amount of mana. Starting with the next opponent in turn order, each player gains control of a permanent of their choice with converted mana cost X or less, where X is the total amount of mana paid this way.",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
+            ]
+        },
+        {
+            "artist": "eh-macmillan",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B"
+            ],
+            "colors": [
+                "B"
+            ],
+            "convertedManaCost": 7,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{5}{B}{B}",
+            "name": "Asylum Persecutor",
+            "number": "3",
+            "originalName": "Asylum Persecutor",
+            "originalText": "Flying, trample\nJoin forces \u2014 At the beginning of your upkeep, each player starting with you may pay any amount of mana. Each player loses 10 minus X life, where X is the total amount of mana paid this way.",
+            "originalType": "Creature \u2014 Demon",
+            "power": "7",
+            "rarity": "rare",
+            "rulings": [
+                {
+                    "date": "2020-04-24",
+                    "text": "If X is greater than 10, nothing happens. The players don't gain life."
+                }
+            ],
+            "subtypes": [
+                "Demon"
+            ],
+            "supertypes": [],
+            "text": "Flying, trample\nJoin forces \u2014 At the beginning of your upkeep, each player starting with you may pay any amount of mana. Each player loses 10 minus X life, where X is the total amount of mana paid this way.",
+            "toughness": "7",
+            "type": "Creature \u2014 Demon",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "winkla12",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "convertedManaCost": 1,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{R}",
+            "name": "Soul Burning",
+            "number": "4",
+            "originalName": "Soul Burning",
+            "originalText": "Join forces \u2014 Each player starting with you may pay any amount of mana. Each player exiles the top X cards of their library, where X is the total amount of mana spent this way. Each player may cast cards they exiled this way until the end of their next turn.",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [
+                {
+                    "date": "2020-04-24",
+                    "text": "Players can't play lands exiled this way."
+                }
+            ],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Join forces \u2014 Starting with you, each player may pay any amount of mana. Each player exiles the top X cards of their library, where X is the total amount of mana spent this way. Each player may cast cards they exiled this way until the end of their next turn.",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
+            ]
+        },
+        {
+            "artist": "andrea carbone",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G"
+            ],
+            "colors": [
+                "G"
+            ],
+            "convertedManaCost": 2,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{1}{G}",
+            "name": "Legacy of Sif",
+            "number": "5",
+            "originalName": "Legacy of Sif",
+            "originalText": "Join forces \u2014 Starting with you, each player may pay any amount of mana. Each player creates X 2/2 green Wolf creature tokens, where X is the total amount of mana paid this way.",
+            "originalType": "Sorcery",
+            "rarity": "rare",
+            "rulings": [],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Join forces \u2014 Starting with you, each player may pay any amount of mana. Each player creates X 2/2 green Wolf creature tokens, where X is the total amount of mana paid this way.",
+            "type": "Sorcery",
+            "types": [
+                "Sorcery"
+            ]
+        },
+        {
+            "artist": "tim keil",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G",
+                "U"
+            ],
+            "colors": [
+                "G",
+                "U"
+            ],
+            "convertedManaCost": 4,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{2}{G}{U}",
+            "name": "Alvina, Hunt-Mother",
+            "number": "6",
+            "originalName": "Alvina, Hunt-Mother",
+            "originalText": "Flash\nWhenever an opponent is dealt 5 or more damage, each player other than that player draws a card.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Cat Advisor",
+            "power": "3",
+            "rarity": "mythic",
+            "rulings": [
+                {
+                    "date": "2020-04-24",
+                    "text": "The ability triggers if a player is dealt 5 or more damage total by multiple sources, even if no single one of them dealt 5 or more damage to that player."
+                },
+                {
+                    "date": "2020-04-24",
+                    "text": "Conversely, the ability triggers only once if multiple sources each simultaneously deal 5 or more damage to the same player."
+                },
+                {
+                    "date": "2020-04-24",
+                    "text": "If multiple players are each dealt 5 or more damage simultaneously, the ability will trigger once for each of those players."
+                }
+            ],
+            "subtypes": [
+                "Cat",
+                "Advisor"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Flash\nWhenever an opponent is dealt 5 or more damage, each player other than that player draws a card.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Cat Advisor",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "ariru chi",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G",
+                "W"
+            ],
+            "colors": [
+                "G",
+                "W"
+            ],
+            "convertedManaCost": 5,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{3}{G}{W}",
+            "name": "Artorias, the Wolf Knight",
+            "number": "7",
+            "originalName": "Artorias, the Wolf Knight",
+            "originalText": "If a source would deal damage to another creature, you may prevent that damage. If you do, that source deals that much damage to Artorias, the Wolf Knight instead and you gain that much life.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Demigod Knight",
+            "power": "4",
+            "rarity": "mythic",
+            "rulings": [
+                {
+                    "date": "2020-04-25",
+                    "text": "Any damage redirected this way is still the same damage. For example, redirected combat damage is still combat damage, and redirected damage from a source with deathtouch, lifelink, wither, or infect still has the appropriate effect."
+                },
+                {
+                    "date": "2020-04-25",
+                    "text": "If multiple replacement and/or redirection effects apply to the same damage event, the controller of the creature that would be dealt damage chooses which to apply first."
+                }
+            ],
+            "subtypes": [
+                "Demigod",
+                "Knight"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "If a source would deal damage to a creature other than Artorias, the Wolf Knight, you may have that damage be dealt to Artorias instead. If you do, you gain that much life.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "7",
+            "type": "Legendary Creature \u2014 Demigod Knight",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Dark Souls Concept Art (Edited)",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R",
+                "U"
+            ],
+            "colors": [
+                "R",
+                "U"
+            ],
+            "convertedManaCost": 4,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{2}{U}{R}",
+            "name": "Big Hat Logan",
+            "number": "8",
+            "originalName": "Big Hat Logan",
+            "originalText": "At the beginning of your upkeep, put the top four cards of your library into your graveyard. Until end of turn, you may cast a noncreature card put into your graveyard this way.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Wizard",
+            "power": "3",
+            "rarity": "mythic",
+            "rulings": [
+                {
+                    "date": "2020-04-24",
+                    "text": "You must follow the normal timing permissions and restrictions of the card you cast from your graveyard."
+                },
+                {
+                    "date": "2020-04-24",
+                    "text": "You must pay the costs to cast that card. If it has an alternative cost, you may cast it for that cost instead."
+                },
+                {
+                    "date": "2020-04-24",
+                    "text": "Once you begin to cast the card, losing control of Big Hat Logan won't affect the spell."
+                },
+                {
+                    "date": "2020-04-24",
+                    "text": "If the ability puts an instant card into your graveyard, you have a chance to cast it before any player may attempt to remove that card from your graveyard."
+                }
+            ],
+            "subtypes": [
+                "Human",
+                "Wizard"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "At the beginning of your upkeep, put the top four cards of your library into your graveyard. Until end of turn, you may cast a noncreature card put into your graveyard this way.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Human Wizard",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Sergio Abalo",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "W"
+            ],
+            "colors": [
+                "B",
+                "W"
+            ],
+            "convertedManaCost": 4,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{2}{W}{B}",
+            "name": "Black Iron Tarkus",
+            "number": "9",
+            "originalName": "Black Iron Tarkus",
+            "originalText": "Whenever a creature leaves the battlefield, put a +1/+1 counter on Black Iron Tarkus.\nRemove two +1/+1 counters from Tarkus: It gains indestructible until end of turn.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Knight",
+            "power": "4",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Knight"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Whenever a creature leaves the battlefield, put a +1/+1 counter on Black Iron Tarkus.\nRemove two +1/+1 counters from Tarkus: It gains indestructible until end of turn.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "4",
+            "type": "Legendary Creature \u2014 Human Knight",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "selann",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G",
+                "U"
+            ],
+            "colors": [
+                "G",
+                "U"
+            ],
+            "convertedManaCost": 2,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{G}{U}",
+            "name": "Dusk, Princess of Oolacile",
+            "number": "10",
+            "originalName": "Dusk, Princess of Oolacile",
+            "originalText": "Defender\nAt the beginning of combat on each player's turn, you may pay {2}. If you do, put a +1/+1 counter on target creature that player controls. That creature can't be blocked this turn.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Wizard",
+            "power": "0",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Wizard"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Defender\nAt the beginning of combat on each player's turn, you may pay {2}. If you do, put a +1/+1 counter on target creature that player controls. That creature can't be blocked this turn.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Human Wizard",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "cecetiv",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "G"
+            ],
+            "colors": [
+                "B",
+                "G"
+            ],
+            "convertedManaCost": 3,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{1}{B}{G}",
+            "name": "The Fair Lady",
+            "number": "11",
+            "originalName": "The Fair Lady",
+            "originalText": "Reach\nWhenever a nontoken creature dies, you may pay 2 life. If you do, create a 1/2 green Spider creature token with reach.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Spider Demon",
+            "power": "2",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Spider",
+                "Demon"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Reach\nWhenever a nontoken creature dies, you may pay 2 life. If you do, create a 1/2 green Spider creature token with reach.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Spider Demon",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "white cyanide",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "R"
+            ],
+            "colors": [
+                "B",
+                "R"
+            ],
+            "convertedManaCost": 5,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{3}{B}{R}",
+            "name": "Kalameet, Abyss Dragon",
+            "number": "12",
+            "originalName": "Kalameet, Abyss Dragon",
+            "originalText": "Flying\nIf another source would deal damage to an opponent, it instead deals twice that much damage.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Dragon",
+            "power": "4",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Dragon"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Flying\nIf another source would deal damage to an opponent, it instead deals twice that much damage.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "4",
+            "type": "Legendary Creature \u2014 Dragon",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "ggtuart",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "U"
+            ],
+            "colors": [
+                "B",
+                "U"
+            ],
+            "convertedManaCost": 3,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{1}{U}{B}",
+            "name": "Lady of the Darkling",
+            "number": "13",
+            "originalName": "Lady of the Darkling",
+            "originalText": "Lifelink\nAt the beginning of your end step, if a creature died this turn, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Knight",
+            "power": "2",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Knight"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Lifelink\nAt the beginning of your end step, if a creature died this turn, scry 2.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "4",
+            "type": "Legendary Creature \u2014 Human Knight",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "icedwingsart",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G",
+                "R"
+            ],
+            "colors": [
+                "G",
+                "R"
+            ],
+            "convertedManaCost": 3,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{1}{R}{G}",
+            "name": "Laurentius, Humble Pupil",
+            "number": "14",
+            "originalName": "Laurentius, Humble Pupil",
+            "originalText": "Spells you cast that target creatures cost {2} less to cast.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Shaman",
+            "power": "2",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Shaman"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Spells you cast that target creatures cost {2} less to cast.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "2",
+            "type": "Legendary Creature \u2014 Human Shaman",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "pixivid13034314",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R",
+                "W"
+            ],
+            "colors": [
+                "R",
+                "W"
+            ],
+            "convertedManaCost": 5,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{3}{R}{W}",
+            "name": "Ornstein, Tester of Mortals",
+            "number": "15",
+            "originalName": "Ornstein, Tester of Mortals",
+            "originalText": "Haste, vigilance\nWhenever one or more creatures with power 2 or less block, Ornstein, Tester of Mortals deals 4 damage to each player.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Demigod Knight",
+            "power": "4",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Demigod",
+                "Knight"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Vigilance, haste\nWhenever one or more creatures with power 2 or less block, Ornstein, Tester of Mortals deals 4 damage to each player.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "4",
+            "type": "Legendary Creature \u2014 Demigod Knight",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "zipfelzeu",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "W"
+            ],
+            "colors": [
+                "B",
+                "W"
+            ],
+            "convertedManaCost": 2,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{W}{B}",
+            "name": "Petrus, False Friend",
+            "number": "16",
+            "originalName": "Petrus, False Friend",
+            "originalText": "Whenever a creature enters the battlefield under your control, each opponent loses 1 life and you gain 1 life.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Cleric",
+            "power": "2",
+            "rarity": "mythic",
+            "rulings": [
+                {
+                    "date": "2020-04-24",
+                    "text": "The ability triggers when Petrus enters the battlefield, unless it's not a creature for some reason."
+                }
+            ],
+            "subtypes": [
+                "Human",
+                "Cleric"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Whenever a creature enters the battlefield under your control, each opponent loses 1 life and you gain 1 life.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "2",
+            "type": "Legendary Creature \u2014 Human Cleric",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "inkyh",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "U"
+            ],
+            "colors": [
+                "B",
+                "U"
+            ],
+            "convertedManaCost": 4,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{2}{U}{B}",
+            "name": "Pinwheel, Masked Cabal",
+            "number": "17",
+            "originalName": "Pinwheel, Masked Cabal",
+            "originalText": "Whenever Pinwheel, Masked Cabal attacks, you may discard a card. If you do, create two 2/2 blue Illusion creature tokens with \"When this creature becomes the target of a spell, sacrifice it.\"\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Horror Wizard",
+            "power": "4",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Horror",
+                "Wizard"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Whenever Pinwheel, Masked Cabal attacks, you may discard a card. If you do, create two 2/2 blue Illusion creature tokens with \"When this creature becomes the target of a spell, sacrifice it.\"\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "2",
+            "type": "Legendary Creature \u2014 Horror Wizard",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "ae-rie",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U",
+                "W"
+            ],
+            "colors": [
+                "U",
+                "W"
+            ],
+            "convertedManaCost": 4,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{2}{W}{U}",
+            "name": "Priscilla, Cross-Breed",
+            "number": "18",
+            "originalName": "Priscilla, Cross-Breed",
+            "originalText": "Whenever you cast a noncreature spell, put a +1/+1 counter on Priscilla, Cross-Breed. It gains lifelink and hexproof until end of turn.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Demigod Cleric",
+            "power": "3",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Demigod",
+                "Cleric"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Whenever you cast a noncreature spell, put a +1/+1 counter on Priscilla, Cross-Breed. It gains lifelink and hexproof until end of turn.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Demigod Cleric",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Augusto Kerber",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "R"
+            ],
+            "colors": [
+                "B",
+                "R"
+            ],
+            "convertedManaCost": 3,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{1}{B}{R}",
+            "name": "Quelaag, Chaos Witch",
+            "number": "19",
+            "originalName": "Quelaag, Chaos Witch",
+            "originalText": "Menace\nWhenever Quelaag, Chaos Witch attacks, it deals damage equal to its power to an opponent chosen at random.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Spider Demon",
+            "power": "2",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Spider",
+                "Demon"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Menace\nWhenever Quelaag, Chaos Witch attacks, it deals damage equal to its power to an opponent chosen at random.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "4",
+            "type": "Legendary Creature \u2014 Spider Demon",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "pixivid520517",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G",
+                "R"
+            ],
+            "colors": [
+                "G",
+                "R"
+            ],
+            "convertedManaCost": 4,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{2}{R}{G}",
+            "name": "Quelana, Mother of Fire",
+            "number": "20",
+            "originalName": "Quelana, Mother of Fire",
+            "originalText": "{T}: Add {R}{R}.\n{T}, Exile two cards from your graveyard: Create a 2/2 red and green Shaman creature token with \"{T}: Add {R}.\"\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Shaman",
+            "power": "3",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Shaman"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "{T}: Add {R}{R}.\n{T}, Exile two cards from your graveyard: Create a 2/2 red and green Shaman creature token with \"{T}: Add {R}.\"\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Human Shaman",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "sgjin",
+            "borderColor": "black",
+            "colorIdentity": [
+                "U",
+                "W"
+            ],
+            "colors": [
+                "U",
+                "W"
+            ],
+            "convertedManaCost": 3,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{1}{W}{U}",
+            "name": "Sieglinde, Leal Daughter",
+            "number": "21",
+            "originalName": "Sieglinde, Leal Daughter",
+            "originalText": "Whenever Sieglinde, Leal Daughter deals combat damage to a player, return target creature card with converted mana cost 2 or less from your graveyard to the battlefield.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Knight",
+            "power": "2",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Knight"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Whenever Sieglinde, Leal Daughter deals combat damage to a player, return target creature card with converted mana cost 2 or less from your graveyard to the battlefield.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "4",
+            "type": "Legendary Creature \u2014 Human Knight",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "MicheleGiorgi",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R",
+                "U"
+            ],
+            "colors": [
+                "R",
+                "U"
+            ],
+            "convertedManaCost": 2,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{U}{R}",
+            "name": "Siegmeyer, Errant Ally",
+            "number": "22",
+            "originalName": "Siegmeyer, Errant Ally",
+            "originalText": "At the beginning of combat on your turn, choose an opponent at random. Siegmeyer, Errant Ally attacks that player this combat if able. Whenever Siegmeyer deals combat damage to that player this turn, draw a card.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Knight",
+            "power": "3",
+            "rarity": "mythic",
+            "rulings": [
+                {
+                    "date": "2020-04-25",
+                    "text": "If Siegmeyer can't attack the chosen player or if a cost must be paid to attack them, you can choose who or what to attack, or choose not to attack, as with a regular creature."
+                }
+            ],
+            "subtypes": [
+                "Human",
+                "Knight"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "At the beginning of combat on your turn, choose an opponent at random. Siegmeyer, Errant Ally attacks that player this combat if able. Whenever Siegmeyer deals combat damage to that player this turn, draw a card.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Human Knight",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Gustavo Torqueto",
+            "borderColor": "black",
+            "colorIdentity": [
+                "G",
+                "W"
+            ],
+            "colors": [
+                "G",
+                "W"
+            ],
+            "convertedManaCost": 4,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{2}{G}{W}",
+            "name": "Sif, Great Grey Wolf",
+            "number": "23",
+            "originalName": "Sif, Great Grey Wolf",
+            "originalText": "Vigilance\nEquip abilities you activate cost {3} less to activate.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Wolf",
+            "power": "5",
+            "rarity": "mythic",
+            "rulings": [
+                {
+                    "date": "2020-04-25",
+                    "text": "Sif's second ability reduces only the generic mana in equip abilities. If those costs are only {3}, {2}, or {1}, that equip ability will be free to activate."
+                }
+            ],
+            "subtypes": [
+                "Wolf"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Vigilance\nEquip abilities you activate cost {3} less to activate.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "4",
+            "type": "Legendary Creature \u2014 Wolf",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "touge369",
+            "borderColor": "black",
+            "colorIdentity": [
+                "B",
+                "G"
+            ],
+            "colors": [
+                "B",
+                "G"
+            ],
+            "convertedManaCost": 4,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{2}{B}{G}",
+            "name": "Smough, Grisly Executioner",
+            "number": "24",
+            "originalName": "Smough, Grisly Executioner",
+            "originalText": "Menace\nSmough, Grisly Executioner must be blocked by at least 2 creatures each combat if able.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Warrior",
+            "power": "5",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Warrior"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Menace\nSmough, Grisly Executioner must be blocked by two or more creatures if able.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "5",
+            "type": "Legendary Creature \u2014 Human Warrior",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "artist": "immp",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R",
+                "W"
+            ],
+            "colors": [
+                "R",
+                "W"
+            ],
+            "convertedManaCost": 3,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "manaCost": "{1}{R}{W}",
+            "name": "Solaire, Seeker of Sunlight",
+            "number": "25",
+            "originalName": "Solaire, Seeker of Sunlight",
+            "originalText": "Whenever Solaire, Seeker of Sunlight attacks with exactly one other creature, they both gain double strike until end of turn.\nPartner (You can have two commanders if both have partner.)",
+            "originalType": "Legendary Creature \u2014 Human Knight",
+            "power": "3",
+            "rarity": "mythic",
+            "rulings": [],
+            "subtypes": [
+                "Human",
+                "Knight"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Whenever Solaire, Seeker of Sunlight and exactly one other creature attack, they each gain double strike until end of turn.\nPartner (You can have two commanders if both have partner.)",
+            "toughness": "3",
+            "type": "Legendary Creature \u2014 Human Knight",
+            "types": [
+                "Creature"
+            ]
+        }
+    ],
+    "code": "MHLW",
+    "custom": true,
+    "isOnlineOnly": true,
+    "meta": {
+        "date": "2020-04-30",
+        "setVersion": ".03",
+        "version": "4.6.0"
+    },
+    "name": "Hollows of Lordran Multiplayer Expansion",
+    "releaseDate": "2020-05-01",
+    "tokens": [
+        {
+            "artist": "",
+            "borderColor": "black",
+            "colorIdentity": [],
+            "colors": [],
+            "convertedManaCost": 0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "name": "Illusion",
+            "number": "1",
+            "originalText": "When this creature becomes the target of a spell, sacrifice it.",
+            "originalType": "Token Creature \u2014 Illusion",
+            "power": "2",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Illusion"
+            ],
+            "supertypes": [],
+            "text": "When this creature becomes the target of a spell, sacrifice it.",
+            "toughness": "2",
+            "type": "Token Creature \u2014 Illusion",
+            "types": [
+                "Token",
+                "Creature"
+            ]
+        },
+        {
+            "artist": "gusti_boucher",
+            "borderColor": "black",
+            "colorIdentity": [],
+            "colors": [],
+            "convertedManaCost": 0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "name": "Spider",
+            "number": "2",
+            "originalText": "Reach",
+            "originalType": "Token Creature \u2014 Spider",
+            "power": "1",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Spider"
+            ],
+            "supertypes": [],
+            "text": "Reach",
+            "toughness": "2",
+            "type": "Token Creature \u2014 Spider",
+            "types": [
+                "Token",
+                "Creature"
+            ]
+        },
+        {
+            "artist": "Ren Tu",
+            "borderColor": "black",
+            "colorIdentity": [],
+            "colors": [],
+            "convertedManaCost": 0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "name": "Wolf",
+            "number": "3",
+            "originalType": "Token Creature \u2014 Wolf",
+            "power": "2",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Wolf"
+            ],
+            "supertypes": [],
+            "toughness": "2",
+            "type": "Token Creature \u2014 Wolf",
+            "types": [
+                "Token",
+                "Creature"
+            ]
+        },
+        {
+            "artist": "rakuen_no_musume",
+            "borderColor": "black",
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [],
+            "convertedManaCost": 0,
+            "frameVersion": "2015",
+            "hasFoil": false,
+            "hasNonFoil": true,
+            "isArena": false,
+            "isMtgo": false,
+            "isOnlineOnly": false,
+            "isPaper": false,
+            "layout": "normal",
+            "name": "Shaman",
+            "number": "4",
+            "originalText": "{T}: Add {R}.",
+            "originalType": "Token Creature \u2014 Shaman",
+            "power": "2",
+            "rarity": "common",
+            "rulings": [],
+            "subtypes": [
+                "Shaman"
+            ],
+            "supertypes": [],
+            "text": "{T}: Add {R}.",
+            "toughness": "2",
+            "type": "Token Creature \u2014 Shaman",
+            "types": [
+                "Token",
+                "Creature"
+            ]
+        }
+    ],
+    "totalSetSize": 25,
+    "type": "commander"
+}

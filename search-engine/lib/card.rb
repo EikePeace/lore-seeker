@@ -299,7 +299,7 @@ class Card
     ci = colors.chars
     "#{mana_cost} #{text}".scan(/{(.*?)}/).each do |sym,|
       case sym.downcase
-      when /\A(\d+|[½∞txyzsqpcev])\z/
+      when /\A(\d+|[½∞txyzsqpceav])\z/
         # 12xyz - colorless
         # ½∞ - unset colorless
         # t - tap
@@ -308,6 +308,7 @@ class Card
         # p - generic Phyrexian mana (like on Rage Extractor text)
         # c - colorless mana
         # e - energy
+        # a - acorn
         # v - runic mana (custom)
       when /\A([wubrg])\z/
         ci << $1
@@ -398,6 +399,16 @@ class Card
         "{G} or {W}"
       when "forest island"
         "{G} or {U}"
+      when "forest plains swamp"
+        "{W}, {B}, or {G}"
+      when "forest island mountain"
+        "{G}, {U}, or {R}"
+      when "island mountain plains"
+        "{U}, {R}, or {W}"
+      when "mountain plains swamp"
+        "{R}, {W}, or {B}"
+      when "forest island swamp"
+        "{B}, {G}, or {U}"
       else
         raise "No idea what's correct line for #{basic_land_types.inspect}"
       end

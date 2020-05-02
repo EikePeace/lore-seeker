@@ -77,6 +77,7 @@ describe "Spelling" do
       next if name == "The Ur-Dragon"
       next if name == "Palladia-Mors"
       next if name == "Armored Wolf-Rider"
+      next if name == "Silumgar Spell-Eater"
       # Too complex
       next if name == "Death's-Head Buzzard"
       # I don't even
@@ -85,6 +86,7 @@ describe "Spelling" do
       next if name == "Monkey-"
       next if name == "Rhino-"
       next if name == "Robo-"
+      next if name == "Bat-"
 
       name.should return_cards(name)
       name.gsub("-", "").should return_cards(name)

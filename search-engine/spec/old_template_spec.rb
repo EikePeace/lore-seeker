@@ -8,14 +8,16 @@ describe "Old templates" do
     assert_count_cards %Q[o:"mana pool"], 1
   end
 
+  # Chandra, Gremlin Wrangler (silver-border)
+  # Crovax (avatar)
+  # Firesong and Sunspeaker (legitimate)
   # Sarah's Wings (CMB1)
   it do
-    # "Firesong and Sunspeaker" is an exception
-    assert_count_cards %Q[o:"creature or player"], 3
+    assert_count_cards %Q[o:"creature or player"], 4
   end
 
   it do
-    assert_count_cards %Q[o:"~ can't be countered"], 1
+    assert_count_cards %Q[o:"~ can't be countered"], 0
   end
 
   ### On non-Gatherer cards only

@@ -1205,7 +1205,7 @@
             "hasNonFoil": true,
             "layout": "normal",
             "manaCost": "{W}",
-            "name": "Unbreakable Bond",
+            "name": "ANK:Unbreakable Bond",
             "number": "35",
             "originalName": "Unbreakable Bond",
             "originalText": "Two target creatures you control gain indestructible until end of turn. (You must control at least two creatures to cast this spell.)",
@@ -1897,7 +1897,7 @@
             "hasNonFoil": true,
             "layout": "normal",
             "manaCost": "{1}{U}{U}",
-            "name": "Neutralize",
+            "name": "ANK:Neutralize",
             "number": "55",
             "originalName": "Neutralize",
             "originalText": "Counter target spell. If that spell is countered this way, put it on the bottom of its owner's library instead of into his or her graveyard.",
@@ -2317,7 +2317,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Whenever a land enters the battlefield under your control, if you control no other lands with the same name as that land, draw a card.",
+            "text": "Whenever a land enters the battlefield under your control, if it doesn't have the same name as another land you control, draw a card.",
             "type": "Enchantment",
             "types": [
                 "Enchantment"
@@ -9055,7 +9055,7 @@
     "code": "ANK",
     "custom": true,
     "meta": {
-        "date": "2020-02-20",
+        "date": "2020-03-15",
         "setVersion": "2.3",
         "version": "4.4.1"
     },

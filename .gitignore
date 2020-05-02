@@ -6,9 +6,11 @@ coverage
 tmp
 /decks.json
 /AllSets.json
+data/sets-incoming
 
 # Lore Seeker extensions
 /frontend/public/art
 /frontend/db/schema.rb
 /index/canlander-points-list.json
 /index/xmage-printings/
+/tmp-rulings.json

@@ -7,7 +7,7 @@ describe "Formats" do
     assert_search_equal "f:standard", "legal:standard"
     assert_search_results "f:extended" # Does not exist according to mtgjson
     assert_search_equal_cards "f:standard",
-      %Q[e:grn,rna,war,m20,eld,thb -(Field of the Dead) -(Veil of Summer) -(Oko Thief of Crowns) -(Once Upon Time)]
+      %Q[e:grn,rna,war,m20,eld,thb,iko -(Field of the Dead) -(Veil of Summer) -(Oko Thief of Crowns) -(Once Upon Time)]
     assert_search_equal_cards 'f:"ravnica block"', "e:rav,gp,di"
     assert_search_equal 'f:"ravnica block"', 'legal:"ravnica block"'
     assert_search_equal_cards 'f:"ravnica block"', 'b:ravnica'
@@ -26,6 +26,11 @@ describe "Formats" do
       ]],
     ])
     FormatModern.new.ban_events.should eq([
+      [Date.parse("2020-03-10"),
+        "https://magic.wizards.com/en/articles/archive/news/march-9-2020-banned-and-restricted-announcement",
+      [
+        {:name=>"Once Upon a Time", :new=>"banned", :old=>"legal"},
+      ]],
       [Date.parse("2020-01-14"),
         "https://magic.wizards.com/en/articles/archive/news/january-13-2020-banned-and-restricted-announcement",
       [
@@ -181,7 +186,7 @@ describe "Formats" do
   end
 
   it "historic" do
-    assert_count_cards "banned:historic", 4
+    assert_count_cards "banned:historic", 3
   end
 
   # We don't keep historical legality for Petty Dreadful yet

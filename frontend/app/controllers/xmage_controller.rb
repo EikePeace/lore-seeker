@@ -9,7 +9,8 @@ class TodoSorter
   def sort(results)
     results.sort_by do |c|
       [
-        -c.num_exh_votes
+        -c.num_exh_votes,
+        -$CardDatabase.decks_containing(c).count
       ] + @formats.map{|format| (format.legality(c).nil? ? 3 : format.legality(c).start_with?("banned") ? 2 : (format.legality(c).start_with?("restricted") ? 1 : 0))} + [
         c.commander? ? 0 : (c.brawler? ? 1 : 2),
         c.release_date_i,

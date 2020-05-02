@@ -1,11 +1,48 @@
 {
     "cards": [
         {
+            "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "manaCost": "{1}{R}",
+            "name": "Cavalcade of Calamity",
+            "number": "1",
+            "rarity": "special",
+            "rulings": [
+                {
+                    "date": "2019-01-25",
+                    "text": "A creature with power 0 or less can attack, as long as no rule or effect prohibits it from doing so. Many creatures with 0 power have defender, but not all do."
+                },
+                {
+                    "date": "2019-01-25",
+                    "text": "The power of the attacking creature is checked only when the ability triggers. Once it triggers, Cavalcade of Calamity will deal 1 damage to the appropriate player, planeswalker, or Structure even if the creature's power changes or the creature leaves the battlefield before the ability resolves."
+                },
+                {
+                    "date": "2019-01-25",
+                    "text": "If multiple creatures you control with power 1 or less attack, Cavalcade of Calamity's ability will trigger for each of those creatures. Each ability will cause Cavalcade of Calamity to deal 1 damage to the appropriate player, planeswalker, or Structure."
+                },
+                {
+                    "date": "2020-03-14",
+                    "text": "I have applied functional errata to this card in order to make it work with Structures from Ruins of Doharum. For the official text and new rulings, please look up the card on Gatherer. \u2014Fenhl"
+                }
+            ],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Whenever a creature you control with power 1 or less attacks, Cavalcade of Calamity deals 1 damage to the player, planeswalker, or Structure that creature is attacking.",
+            "type": "Enchantment",
+            "types": [
+                "Enchantment"
+            ]
+        },
+        {
             "colorIdentity": [],
             "colors": [],
             "manaCost": "{2}",
             "name": "Chaos Orb",
-            "number": "1",
+            "number": "2",
             "rarity": "special",
             "reserved": true,
             "rulings": [
@@ -31,7 +68,7 @@
             ],
             "manaCost": "{X}{1}{B}",
             "name": "Drain Life",
-            "number": "2",
+            "number": "3",
             "rarity": "special",
             "rulings": [
                 {
@@ -60,11 +97,11 @@
                 "G"
             ],
             "colors": [
-                "Green"
+                "G"
             ],
             "manaCost": "{3}{G}{G}",
             "name": "Elvish Bard",
-            "number": "3",
+            "number": "4",
             "power": "2",
             "rarity": "special",
             "rulings": [
@@ -95,7 +132,7 @@
             ],
             "manaCost": "{2}{R}",
             "name": "Falling Star",
-            "number": "4",
+            "number": "5",
             "rarity": "special",
             "reserved": true,
             "rulings": [
@@ -121,13 +158,13 @@
             ],
             "manaCost": "{2}{R}{R}",
             "name": "Hellrider",
-            "number": "5",
+            "number": "6",
             "power": "3",
             "rarity": "special",
             "rulings": [
                 {
                     "date": "2017-03-14",
-                    "text": "Creatures you control may attack multiple players and/or planeswalkers. For each attacking creature, Hellrider will deal damage to the corresponding player or planeswalker."
+                    "text": "Creatures you control may attack multiple players, planeswalkers, and/or Structures. For each attacking creature, Hellrider will deal damage to the corresponding player, planeswalker, or Structure."
                 },
                 {
                     "date": "2019-06-09",
@@ -154,7 +191,7 @@
             ],
             "manaCost": "{3}{G}",
             "name": "Joraga Bard",
-            "number": "6",
+            "number": "7",
             "power": "1",
             "rarity": "special",
             "rulings": [
@@ -183,16 +220,16 @@
         },
         {
             "colorIdentity": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "colors": [
-                "R",
-                "G"
+                "G",
+                "R"
             ],
             "manaCost": "{1}{R}{G}",
             "name": "Mage Slayer",
-            "number": "7",
+            "number": "8",
             "rarity": "special",
             "rulings": [
                 {
@@ -201,7 +238,7 @@
                 },
                 {
                     "date": "2009-05-01",
-                    "text": "When the equipped creature attacks, the first ability will trigger. When that ability resolves, that creature will deal damage equal to its power to player, planeswalker, or Structure it's attacking, even if Mage Slayer has left the battlefield or is equipping a different creature by that time."
+                    "text": "When the equipped creature attacks, the first ability will trigger. When that ability resolves, that creature will deal damage equal to its power to the player, planeswalker, or Structure it's attacking, even if Mage Slayer has left the battlefield or is equipping a different creature by that time."
                 },
                 {
                     "date": "2019-06-09",
@@ -223,7 +260,7 @@
             "colors": [],
             "manaCost": "{7}",
             "name": "Myr Battlesphere",
-            "number": "8",
+            "number": "9",
             "power": "4",
             "rarity": "special",
             "rulings": [
@@ -266,7 +303,7 @@
             ],
             "manaCost": "{2}{U}",
             "name": "Portal Mage",
-            "number": "9",
+            "number": "10",
             "power": "2",
             "rarity": "special",
             "rulings": [
@@ -276,15 +313,15 @@
                 },
                 {
                     "date": "2017-08-25",
-                    "text": "Reselecting which player or planeswalker a creature is attacking ignores all requirements, restrictions, and costs associated with attacking."
+                    "text": "Reselecting which player, planeswalker, or Structure a creature is attacking ignores all requirements, restrictions, and costs associated with attacking."
                 },
                 {
                     "date": "2017-08-25",
-                    "text": "Reselecting which player or planeswalker a creature is attacking doesn't cause \"whenever this creature attacks\" abilities to trigger. Notably, the Curses in this set (such as Curse of Vitality) won't trigger while Portal Mage's ability is resolving."
+                    "text": "Reselecting which player, planeswalker, or Structure a creature is attacking doesn't cause \"whenever this creature attacks\" abilities to trigger. Notably, the Curses in this set (such as Curse of Vitality) won't trigger while Portal Mage's ability is resolving."
                 },
                 {
                     "date": "2017-08-25",
-                    "text": "If you reselect which player or planeswalker an attacking creature is attacking, that creature is still considered to have attacked the player or planeswalker as declared, but it is now attacking the new player or planeswalker."
+                    "text": "If you reselect which player, planeswalker, or Structure an attacking creature is attacking, that creature is still considered to have attacked the player, planeswalker, or Structure as declared, but it is now attacking the new player, planeswalker, or Structure."
                 },
                 {
                     "date": "2017-08-25",
@@ -309,6 +346,51 @@
         },
         {
             "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "manaCost": "{2}{R}",
+            "name": "Raid Bombardment",
+            "number": "11",
+            "rarity": "special",
+            "rulings": [
+                {
+                    "date": "2018-12-07",
+                    "text": "The power of the attacking creature is checked only when the ability triggers. Once it triggers, Raid Bombardment will deal 1 damage to the appropriate player, planeswalker, or Structure even if the creature's power changes before the ability resolves."
+                },
+                {
+                    "date": "2018-12-07",
+                    "text": "If you attack with multiple creatures with power 2 or less, Raid Bombardment's ability triggers for each of them separately."
+                },
+                {
+                    "date": "2018-12-07",
+                    "text": "A creature with 0 power can attack, as long as it doesn't also have defender."
+                },
+                {
+                    "date": "2018-12-07",
+                    "text": "If the attacking creature leaves the battlefield before Raid Bombardment's triggered ability resolves, Raid Bombardment deals 1 damage to the player, planeswalker, or Structure that creature was attacking before it left the battlefield."
+                },
+                {
+                    "date": "2018-12-07",
+                    "text": "If a creature is attacking a planeswalker or Structure, and that planeswalker or Structure leaves the battlefield, that attacking creature can still be blocked. If it's unblocked, the attacking creature is still attacking. It simply deals no combat damage."
+                },
+                {
+                    "date": "2020-03-14",
+                    "text": "I have applied functional errata to this card in order to make it work with Structures from Ruins of Doharum. For the official text and new rulings, please look up the card on Gatherer. \u2014Fenhl"
+                }
+            ],
+            "subtypes": [],
+            "supertypes": [],
+            "text": "Whenever a creature you control with power 2 or less attacks, Raid Bombardment deals 1 damage to the player, planeswalker, or Structure that creature is attacking.",
+            "type": "Enchantment",
+            "types": [
+                "Enchantment"
+            ]
+        },
+        {
+            "colorIdentity": [
                 "B",
                 "R"
             ],
@@ -318,7 +400,7 @@
             ],
             "manaCost": "{1}{B}{R}",
             "name": "Rakdos Roustabout",
-            "number": "10",
+            "number": "12",
             "power": "3",
             "rarity": "special",
             "rulings": [
@@ -352,7 +434,7 @@
             ],
             "manaCost": "{3}{U}{U}",
             "name": "Richard Garfield, Ph.D.",
-            "number": "11",
+            "number": "13",
             "power": "2",
             "rarity": "special",
             "rulings": [
@@ -421,14 +503,52 @@
         },
         {
             "colorIdentity": [
+                "R"
+            ],
+            "colors": [
+                "R"
+            ],
+            "manaCost": "{R}",
+            "name": "Scorch Spitter",
+            "number": "14",
+            "power": "1",
+            "rarity": "special",
+            "rulings": [
+                {
+                    "date": "2019-07-12",
+                    "text": "The damage Scorch Spitter deals as its ability resolves isn't combat damage."
+                },
+                {
+                    "date": "2019-07-12",
+                    "text": "If the planeswalker or Structure Scorch Spitter is attacking is reduced to 0 loyalty or stability from the damage caused by its ability, Scorch Spitter continues to attack. It can be blocked, and it won't deal any combat damage if it's not blocked."
+                },
+                {
+                    "date": "2020-03-14",
+                    "text": "I have applied functional errata to this card in order to make it work with Structures from Ruins of Doharum. For the official text and new rulings, please look up the card on Gatherer. \u2014Fenhl"
+                }
+            ],
+            "subtypes": [
+                "Elemental",
+                "Lizard"
+            ],
+            "supertypes": [],
+            "text": "Whenever Scorch Spitter attacks, it deals 1 damage to the player, planeswalker, or Structure it's attacking.",
+            "toughness": "1",
+            "type": "Creature \u2014 Elemental Lizard",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "colorIdentity": [
                 "B"
             ],
             "colors": [
-                "Black"
+                "B"
             ],
             "manaCost": "{X}{2}{B}",
             "name": "Soul Burn",
-            "number": "12",
+            "number": "15",
             "rarity": "special",
             "rulings": [
                 {
@@ -450,14 +570,84 @@
         },
         {
             "colorIdentity": [
+                "G",
+                "R"
+            ],
+            "colors": [
+                "G",
+                "R"
+            ],
+            "manaCost": "{2}{R}{G}",
+            "name": "Tahngarth, First Mate",
+            "number": "16",
+            "power": "5",
+            "rarity": "special",
+            "rulings": [
+                {
+                    "date": "2019-08-23",
+                    "text": "Players can't take any actions between the time you choose to give control of Tahngarth to the attacking player and the time it becomes an attacking creature."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "If Tahngarth gains menace, it can't be blocked at all."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Giving control of Tahngarth to an opponent doesn't cause it to become untapped. This means that Tahngarth may end up attacking several times between your turns."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "If an opponent is attacking a planeswalker or Structure but not that permanent's controller, Tahngarth can't attack that player."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "If an opponent attacks a player, planeswalker, or Strucure but each creature attacking that permanent or player is no longer attacking that permanent or player by the time Tahngarth's ability resolves (most likely because they've left the battlefield), that permanent or player can't be chosen for Tahngarth to attack. If there's no player, planeswalker, or Structure to choose this way but you still choose to give the opponent control of Tahngarth, Tahngarth isn't attacking."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Although Tahngarth is an attacking creature if it uses its triggered ability, it was never declared as an attacking creature. This means that abilities that trigger whenever a creature attacks won't trigger when it changes control and becomes attacking."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Any effects that say that Tahngarth can't attack or can't attack a certain player (such as that of Propaganda, or if Tahngarth gains defender) affect only the declaration of attackers. They won't stop Tahngarth from becoming an attacking creature through its triggered ability."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Tahngarth may end up attacking its owner this way."
+                },
+                {
+                    "date": "2019-08-23",
+                    "text": "Commander damage is tracked for each commander. It doesn't matter who controls the commander as it deals damage. If Tahngarth deals 10 damage to one player while under your control and another 11 damage to that same player while under a third player's control, the player loses the game."
+                },
+                {
+                    "date": "2020-03-15",
+                    "text": "I have applied functional errata to this card in order to make it work with Structures from Ruins of Doharum. For the official text and new rulings, please look up the card on Gatherer. \u2014Fenhl"
+                }
+            ],
+            "subtypes": [
+                "Minotaur",
+                "Warrior"
+            ],
+            "supertypes": [
+                "Legendary"
+            ],
+            "text": "Tahngarth, First Mate can't be blocked by more than one creature.\nWhenever an opponent attacks with one or more creatures, if Tahngarth is tapped, you may have that opponent gain control of Tahngarth until end of combat. If you do, choose a player, planeswalker, or Structure that opponent is attacking. Tahngarth is attacking that permanent or player.",
+            "toughness": "5",
+            "type": "Legendary Creature \u2014 Minotaur Warrior",
+            "types": [
+                "Creature"
+            ]
+        },
+        {
+            "colorIdentity": [
                 "G"
             ],
             "colors": [
-                "Green"
+                "G"
             ],
             "manaCost": "{2}{G}",
             "name": "Yisan, the Wanderer Bard",
-            "number": "13",
+            "number": "17",
             "power": "2",
             "rarity": "special",
             "rulings": [

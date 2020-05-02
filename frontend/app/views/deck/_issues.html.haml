@@ -57,8 +57,10 @@
             only up to #{max} allowed
           - when :ech_commander_not_found
             Commander must be in the sideboard, but none of this deck's sideboard cards are legal commanders
+          - when :ech_size
+            Mainboard and commander(s) must be 100 cards total, but this deck has #{params.first}
           - when :ech_too_many_commanders
-            A deck can only have one commander, but this deck has #{params.first} (support for legendary creatures in the wishboard coming soon™)
+            A deck can only have one commander or two commanders with partner, but this deck has #{params.first} (support for legendary creatures in the wishboard coming soon™)
           - when :fdh_commander
             Commanders must be custom cards, but #{params.first.name} is an official card
           - when :fdh_custom_quota
@@ -114,7 +116,13 @@
             - actual, expected = params
             Deck must contain exactly #{expected} cards, has #{actual}
           - when :unknown_card
-            Unknown card name: #{params.first.name}
+            - if params.first.is_a?(OutdatedCard)
+              Card #{params.first.name} is from
+              = link_to_set(params.first.set) do
+                = params.first.set.name
+              version #{params.first.set_version}, but the current version is #{params.first.set.custom_version}
+            - else
+              Unknown card name: #{params.first.name}
           - when :unknown_game
             Unknown game: #{params.first}
           - when :unknown_legality

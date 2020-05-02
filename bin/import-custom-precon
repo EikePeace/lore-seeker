@@ -169,6 +169,6 @@ if __name__ == '__main__':
         ]
     else:
         precons.append(deck_info)
-    with PRECONS_PATHS[deck_format].open('w', encoding='utf-8') as f:
+    with PRECONS_PATHS[deck_format].open('w', encoding='utf-8', newline='\n') as f:
         json.dump(precons, f, indent=4, sort_keys=True)
         print(file=f)

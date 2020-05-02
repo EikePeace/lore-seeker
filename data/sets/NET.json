@@ -2207,20 +2207,20 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "manaCost": "{4}{U}{U}",
+            "manaCost": "{3}{U}{U}{U}",
             "name": "Full Automation",
             "number": "57",
             "originalName": "Full Automation",
-            "originalText": "Draw two cards, then put any number of artifact cards from your hand onto the battlefield.",
-            "originalType": "Instant",
+            "originalText": "Draw three cards, then put any number of artifact cards from your hand onto the battlefield.",
+            "originalType": "Sorcery",
             "rarity": "mythic",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Draw two cards, then put any number of artifact cards from your hand onto the battlefield.",
-            "type": "Instant",
+            "text": "Draw three cards, then put any number of artifact cards from your hand onto the battlefield.",
+            "type": "Sorcery",
             "types": [
-                "Instant"
+                "Sorcery"
             ]
         },
         {
@@ -5137,13 +5137,13 @@
             "name": "Hired Hit",
             "number": "134",
             "originalName": "Hired Hit",
-            "originalText": "As an additional cost to cast Hired Hit, upload a card from your hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nHired Hit deals 3 damage to any target.",
+            "originalText": "As an additional cost to cast this spell, upload a card from your hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nHired Hit deals 3 damage to any target.",
             "originalType": "Instant",
             "rarity": "common",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "As an additional cost to cast Hired Hit, upload a card from your hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nHired Hit deals 3 damage to any target.",
+            "text": "As an additional cost to cast this spell, upload a card from your hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nHired Hit deals 3 damage to any target.",
             "type": "Instant",
             "types": [
                 "Instant"
@@ -5237,7 +5237,6 @@
                 "R"
             ],
             "convertedManaCost": 4,
-            "flavorText": "\"How strong did you say this glass was, again?\"\n\u2014 BiHelix lab inspector, final words",
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -5250,7 +5249,7 @@
             "name": "Lab Wrecker",
             "number": "137",
             "originalName": "Lab Wrecker",
-            "originalText": "When Lab Wrecker enters the battlefield, you may destroy target artifact or nonbasic land.",
+            "originalText": "When Lab Wrecker enters the battlefield, you may destroy target artifact or nonbasic land.\nIf Lab Wrecker would be put into a zone other than a library from the battlefield, put it on the bottom of its owner's library instead.",
             "originalType": "Creature \u2014 Mutant",
             "power": "3",
             "rarity": "uncommon",
@@ -5259,7 +5258,7 @@
                 "Mutant"
             ],
             "supertypes": [],
-            "text": "When Lab Wrecker enters the battlefield, you may destroy target artifact or nonbasic land.",
+            "text": "When Lab Wrecker enters the battlefield, you may destroy target artifact or nonbasic land.\nIf Lab Wrecker would be put into a zone other than a library from the battlefield, put it on the bottom of its owner's library instead.",
             "toughness": "3",
             "type": "Creature \u2014 Mutant",
             "types": [
@@ -6009,13 +6008,13 @@
             "name": "Torrent Feed",
             "number": "157",
             "originalName": "Torrent Feed",
-            "originalText": "As an additional cost to cast Torrent Feed, upload a card from your hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nDraw two cards.",
+            "originalText": "As an additional cost to cast this spell, upload a card from your hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nDraw two cards.",
             "originalType": "Sorcery",
             "rarity": "common",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "As an additional cost to cast Torrent Feed, upload a card from your hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nDraw two cards.",
+            "text": "As an additional cost to cast this spell, upload a card from your hand. (To upload a card, exile it face-up. Its owner may pay {2} to put it into their hand any time they could cast a sorcery.)\nDraw two cards.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -7118,7 +7117,7 @@
             "name": "Shark Splice",
             "number": "185",
             "originalName": "Shark Splice",
-            "originalText": "This spell costs {1} less to cast for each Mutant you control and for each Mutant card in your graveyard.\nCreate an X/X blue Fish Mutant creature token.",
+            "originalText": "This spell costs {1} less to cast for each Mutant you control and for each Mutant card in your graveyard.\nCreate an X/X blue Shark Mutant creature token.",
             "originalType": "Sorcery",
             "rarity": "uncommon",
             "rulings": [
@@ -7129,7 +7128,7 @@
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "This spell costs {1} less to cast for each Mutant you control and for each Mutant card in your graveyard.\nCreate an X/X blue Fish Mutant creature token.",
+            "text": "This spell costs {1} less to cast for each Mutant you control and for each Mutant card in your graveyard.\nCreate an X/X blue Shark Mutant creature token.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -7882,13 +7881,13 @@
             "name": "Mecha Contract",
             "number": "205",
             "originalName": "Mecha Contract",
-            "originalText": "Search your library for a Vehicle or Pilot card, reveal it, and put it into your hand. Then shuffle your library.",
+            "originalText": "Search your library for a Vehicle or Pilot card, reveal it, put it into your hand, then shuffle your library.",
             "originalType": "Sorcery",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Search your library for a Vehicle or Pilot card, reveal it, and put it into your hand. Then shuffle your library.",
+            "text": "Search your library for a Vehicle or Pilot card, reveal it, put it into your hand, then shuffle your library.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -8457,13 +8456,13 @@
             "name": "Underworld Deeds",
             "number": "219",
             "originalName": "Underworld Deeds",
-            "originalText": "Superiority \u2014 If you have more life than an opponent, you may choose both. Otherwise, choose one \u2014\n\u2022 Destroy target artifact or creature.\n\u2022 Return target artifact or creature card from your graveyard to your hand.",
+            "originalText": "Superiority \u2014 If you have more life than an opponent, choose one or both. Otherwise, choose one \u2014\n\u2022 Destroy target artifact or creature.\n\u2022 Return target artifact or creature card from your graveyard to your hand.",
             "originalType": "Sorcery",
             "rarity": "uncommon",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "Superiority \u2014 If you have more life than an opponent, you may choose both. Otherwise, choose one \u2014\n\u2022 Destroy target artifact or creature.\n\u2022 Return target artifact or creature card from your graveyard to your hand.",
+            "text": "Superiority \u2014 If you have more life than an opponent, choose one or both. Otherwise, choose one \u2014\n\u2022 Destroy target artifact or creature.\n\u2022 Return target artifact or creature card from your graveyard to your hand.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -9038,7 +9037,7 @@
             "name": "Security Drone",
             "number": "236",
             "originalName": "Security Drone",
-            "originalText": "Flying\nDeathtouch",
+            "originalText": "Flying, deathtouch",
             "originalType": "Artifact Creature \u2014 Drone",
             "power": "1",
             "rarity": "common",
@@ -9047,7 +9046,7 @@
                 "Drone"
             ],
             "supertypes": [],
-            "text": "Flying\nDeathtouch",
+            "text": "Flying, deathtouch",
             "toughness": "1",
             "type": "Artifact Creature \u2014 Drone",
             "types": [
@@ -9696,8 +9695,8 @@
     "custom": true,
     "isOnlineOnly": true,
     "meta": {
-        "date": "2020-03-03",
-        "setVersion": "2020-01-01",
+        "date": "2020-05-02",
+        "setVersion": "2020-05-01",
         "version": "4.6.0"
     },
     "name": "Netropolis",
@@ -9748,19 +9747,19 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "name": "Fish Mutant",
+            "name": "Shark Mutant",
             "number": "2",
-            "originalType": "Token Creature \u2014 Fish Mutant",
+            "originalType": "Token Creature \u2014 Shark Mutant",
             "power": "*",
             "rarity": "common",
             "rulings": [],
             "subtypes": [
-                "Fish",
+                "Shark",
                 "Mutant"
             ],
             "supertypes": [],
             "toughness": "*",
-            "type": "Token Creature \u2014 Fish Mutant",
+            "type": "Token Creature \u2014 Shark Mutant",
             "types": [
                 "Token",
                 "Creature"
@@ -9814,14 +9813,14 @@
             "layout": "normal",
             "name": "Uploaded Cards",
             "number": "4",
-            "originalType": "Token",
+            "originalType": "Tracker",
             "rarity": "common",
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "type": "Token",
+            "type": "Tracker",
             "types": [
-                "Token"
+                "Tracker"
             ]
         },
         {

@@ -294,4 +294,16 @@ BanList.for_format("commander") do
     "Iona, Shield of Emeria" => "banned",
     "Painter's Servant" => "legal",
   )
+
+  change(
+    "2020-04-02",
+    "https://mtgcommander.net/index.php/2020/04/20/april-2020-rules-update/",
+    "Lutri, the Spellchaser" => "banned",
+  )
+
+  change(
+    "2020-04-20",
+    "https://mtgcommander.net/index.php/2020/04/20/april-2020-rules-update/",
+    "Flash" => "banned",
+  )
 end

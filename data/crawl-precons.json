@@ -3050,5 +3050,390 @@
             ]
         ],
         "type": "Brawl Deck"
+    },
+    {
+        "brawlers": [
+            [
+                1,
+                "src",
+                "5",
+                "217",
+                "The Masked Benefactor"
+            ]
+        ],
+        "cards": [
+            [
+                1,
+                "src",
+                "5",
+                "203",
+                "Agency Detectives"
+            ],
+            [
+                1,
+                "src",
+                "5",
+                "204",
+                "Ameret, Hope of Night"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "158",
+                "Ancient Uprising"
+            ],
+            [
+                1,
+                "src",
+                "5",
+                "4",
+                "Angelic Embezzler"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "171",
+                "Avatar of Plume de Val"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "118",
+                "Avatar of the Volcano"
+            ],
+            [
+                1,
+                "src",
+                "5",
+                "7",
+                "Bishop of Ameret's Way"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "134a",
+                "Brash Hunter"
+            ],
+            [
+                1,
+                "vst",
+                "2020-05-01",
+                "36",
+                "Travel Together"
+            ],
+            [
+                1,
+                "net",
+                "2020-05-01",
+                "14",
+                "Liberated Armory"
+            ],
+            [
+                1,
+                "src",
+                "5",
+                "228",
+                "Coveted Jewel"
+            ],
+            [
+                1,
+                "sou",
+                "2020-05-01",
+                "6",
+                "Cycle of Creation"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "181",
+                "Cypress, the Wayfarer"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "217",
+                "Echoshells"
+            ],
+            [
+                1,
+                "sou",
+                "2020-05-01",
+                "139a",
+                "Emerabi and Sunnula"
+            ],
+            [
+                1,
+                "sou",
+                "2020-05-01",
+                "211",
+                "Emerabi's Disciple"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "142",
+                "Encore of the Phoenix"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "37",
+                "Wander the Unknown"
+            ],
+            [
+                1,
+                "vst",
+                "2020-05-01",
+                "164",
+                "Evaldi's Masterpiece"
+            ],
+            [
+                1,
+                "src",
+                "5",
+                "19",
+                "Family Man"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "217",
+                "Gift of the Bayou"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "231",
+                "Gilded Lotus"
+            ],
+            [
+                1,
+                "vst",
+                "2020-05-01",
+                "137",
+                "Instincts of the Pack"
+            ],
+            [
+                1,
+                "src",
+                "5",
+                "175",
+                "Jericho's Assistant"
+            ],
+            [
+                1,
+                "sou",
+                "2020-05-01",
+                "181a",
+                "Jobiah, Devoted Farmer"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "16",
+                "Koe and Lai"
+            ],
+            [
+                1,
+                "vst",
+                "2020-05-01",
+                "16",
+                "Last of Us"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "212",
+                "Toahanga, Shifter Champion"
+            ],
+            [
+                1,
+                "vst",
+                "2020-05-01",
+                "204",
+                "Luma, Guiding Star"
+            ],
+            [
+                1,
+                "net",
+                "2020-05-01",
+                "15",
+                "Martial Dictate"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "235",
+                "Soul of New Alores"
+            ],
+            [
+                1,
+                "sou",
+                "2020-05-01",
+                "225",
+                "Sunblessed Orator"
+            ],
+            [
+                1,
+                "net",
+                "2020-05-01",
+                "27",
+                "Rebel Advance"
+            ],
+            [
+                1,
+                "sou",
+                "2020-05-01",
+                "222",
+                "Shemesh, Nomad Chieftain"
+            ],
+            [
+                1,
+                "src",
+                "5",
+                "242",
+                "Baron's Skyscrapers"
+            ],
+            [
+                1,
+                "net",
+                "2020-05-01",
+                "243",
+                "Coruscating Cityscape"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "228",
+                "Crossroads of Paradise"
+            ],
+            [
+                1,
+                "src",
+                "5",
+                "245",
+                "Cultivator's Sanctuary"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "240",
+                "Dangerous Territory"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "232a",
+                "Fogwrapped Cliffs"
+            ],
+            [
+                1,
+                "sou",
+                "2020-05-01",
+                "252",
+                "Imperial Barracks"
+            ],
+            [
+                1,
+                "sou",
+                "2020-05-01",
+                "254",
+                "Mana Confluence"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "245",
+                "Prayer Hall"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "247",
+                "Royal Domain"
+            ],
+            [
+                1,
+                "eau",
+                "2019-08-18",
+                "248",
+                "Sunlit Plaza"
+            ],
+            [
+                1,
+                "net",
+                "2020-05-01",
+                "251",
+                "Vibrant Locale"
+            ],
+            [
+                1,
+                "net",
+                "2020-05-01",
+                "249",
+                "Sprawling Coils"
+            ],
+            [
+                1,
+                "rak",
+                "2020-05-01",
+                "245",
+                "Zephyr Peak"
+            ],
+            [
+                4,
+                "src",
+                "5",
+                "250",
+                "Plains"
+            ],
+            [
+                4,
+                "src",
+                "5",
+                "253",
+                "Mountain"
+            ],
+            [
+                3,
+                "src",
+                "5",
+                "254",
+                "Forest"
+            ]
+        ],
+        "name": "The Perfect Crime",
+        "path": "C:\\Users\\Fenhl\\games\\magic\\format\\custom-brawl\\precon\\The Perfect Crime.cod",
+        "release_date": "2020-05-01",
+        "set_code": "src",
+        "set_name": "Secrets of the River Cities",
+        "sideboard": [
+            [
+                1,
+                "src",
+                "5",
+                "217",
+                "The Masked Benefactor"
+            ]
+        ],
+        "type": "Brawl Deck"
     }
 ]
