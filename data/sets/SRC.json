@@ -1906,7 +1906,16 @@
             "originalText": "Draw two cards. When you do, choose one \u2014\n\u2022 Draw two cards.\n\u2022 You may cast a noncreature card with converted mana cost 4 or less from your hand without paying its mana cost.",
             "originalType": "Sorcery",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-05",
+                    "text": "If you draw fewer than two cards, the reflexive triggered ability doesn't trigger."
+                },
+                {
+                    "date": "2020-05-05",
+                    "text": "If replacement effects cause you to draw three or more cards, the reflexive triggered ability still triggers only once, even if you draw four cards."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Draw two cards. When you do, choose one \u2014\n\u2022 Draw two cards.\n\u2022 You may cast a noncreature card with converted mana cost 4 or less from your hand without paying its mana cost.",
@@ -3378,7 +3387,12 @@
             "originalText": "Each player discards three cards. When they do, choose one \u2014\n\u2022 You draw three cards and you lose 3 life.\n\u2022 Exile two cards from an opponent's graveyard. You may cast those cards for as long as they remains exiled, and you may spend mana as though it were mana of any type to cast those spells.",
             "originalType": "Sorcery",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-05",
+                    "text": "If any player discards fewer than three cards, the reflexive triggered ability doesn't trigger."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Each player discards three cards. When they do, choose one \u2014\n\u2022 You draw three cards and you lose 3 life.\n\u2022 Exile two cards from an opponent's graveyard. You may cast those cards for as long as they remain exiled, and you may spend mana as though it were mana of any type to cast those spells.",
@@ -6097,7 +6111,12 @@
             "originalText": "Exile the top X cards of your library. When you do, choose one \u2014\n\u2022 Until the end of your next turn, you may play cards exiled this way.\n\u2022 Villain's Gambit deals damage to any target equal to the number of cards exiled by Villain's Gambit.",
             "originalType": "Instant",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-05",
+                    "text": "If you exile fewer than X cards, the reflexive triggered ability doesn't trigger."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Exile the top X cards of your library. When you do, choose one \u2014\n\u2022 Until the end of your next turn, you may play cards exiled this way.\n\u2022 Villain's Gambit deals damage to any target equal to the number of cards exiled this way.",
@@ -6930,7 +6949,12 @@
             "originalText": "Exile the top five cards of your library. When you do, choose one \u2014\n\u2022 Put a creature card from among them onto the battlefield.\n\u2022 Create a 6/6 green Horror creature token with trample.",
             "originalType": "Instant",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-05",
+                    "text": "If you exile fewer than five cards, the reflexive triggered ability doesn't trigger."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Exile the top five cards of your library. When you do, choose one \u2014\n\u2022 Put a creature card from among them onto the battlefield.\n\u2022 Create a 6/6 green Horror creature token with trample.",
