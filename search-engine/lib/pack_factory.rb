@@ -312,7 +312,7 @@ class PackFactory
         alara_premium_uncommon: 3,
         alara_premium_rare_mythic: 1,
       })
-    # custom sets
+    # custom sets, see https://gist.github.com/fenhl/8d163733ab92ed718d89975127aac152
     when "ldo", "dhm"
       # Custom sets with default pack distribution, no foils, with basics
       build_pack(set_code, {basic: 1, common_unbalanced: 10, uncommon: 3, rare_mythic: 1})
@@ -341,7 +341,7 @@ class PackFactory
       # 1. no more than 6 cards of a single color in a pack
       # 2. no less than 1 card of a color in a pack
       build_pack(set_code, {basic: 1, common_unbalanced: 10, uncommon: 3, rare_mythic: 1}, pack_class: SimonPack)
-    when "jan", "hlw", "sou", "net"
+    when "jan", "hlw", "sou", "net", "src"
       # These sets have opted into taw's color-balanced algorithm
       build_pack(set_code, {basic: 1, common: 10, uncommon: 3, rare_mythic: 1})
     when "cc18"
