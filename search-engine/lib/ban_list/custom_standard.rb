@@ -60,4 +60,11 @@ BanList.for_format("custom standard") do
     "https://discordapp.com/channels/481200347189084170/564298775942660122/648323101041623110",
     "Zoulev Rites" => "banned",
   )
+
+  change(
+    "2020-06-07",
+    "https://discordapp.com/channels/481200347189084170/564298775942660122/717564282782613534",
+    "Royal Domain" => "banned",
+    "Currency" => "banned",
+  )
 end
