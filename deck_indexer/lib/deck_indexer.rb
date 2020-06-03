@@ -136,16 +136,68 @@ class DeckIndexer
     end
 
     return printings[0] if printings.size == 1
-    # Not unique, but we hopefully got the set right, so we mostly don't care
-    # At some point we should support disambiguation hints upstream
 
-    # Avoid full art basics, precons generally don't have them
-    # They all happen to be before non-full arts in those sets:
-    if %w[bfz ogw akh hou].include?(printings[0][0])
-      return printings[-1]
+    # Not unique, but we have a few more heuristics to try!
+    # If these heuristics are wrong, disambiguation hints can be added upstream
+
+    # Sort them in predictable order, by number
+    printings = printings.sort_by{|sc,c| [sc,c["number"].to_i, c["number"]] }
+
+    # If some printings have special frame effects, and others don't,
+    # use ones without special frame effects
+    min_effects = printings.map{|_,c| c["frame_effects"] || [] }.inject{|a,b| a&b}
+    printings_with_min_effects = printings.select{|_,c| (c["frame_effects"] || []) == min_effects}
+    printings = printings_with_min_effects unless printings_with_min_effects.empty?
+
+    # And same logic for full art cards
+    # This is especially true for basics
+    printings_without_fullart = printings.select{|_,c| !c["fullart"] }
+    printings = printings_without_fullart unless printings_without_fullart.empty?
+
+    # And same logic for borderless cards
+    printings_with_borders = printings.select{|_,c| c["border"] != "borderless" }
+    printings = printings_with_borders unless printings_with_borders.empty?
+
+    return printings[0] if printings.size == 1
+
+    # We know basics are ambiguous, we don't even care
+    allowed_conflicts = [
+      "Plains",
+      "Island",
+      "Swamp",
+      "Mountain",
+      "Forest",
+      "Wastes",
+      "Azorius Guildgate",
+      "Boros Guildgate",
+      "Dimir Guildgate",
+      "Golgari Guildgate",
+      "Gruul Guildgate",
+      "Izzet Guildgate",
+      "Orzhov Guildgate",
+      "Rakdos Guildgate",
+      "Selesnya Guildgate",
+      "Simic Guildgate",
+    ]
+
+    numbers = printings.map{|_, c| c["number"]}
+
+    # Basics and guildgates (without special effects), nobody really cares
+    # which one you'll get
+    if allowed_conflicts.include?(card["name"])
+      return printings[0]
     end
 
-    # Otherwise just get first one
+    # If there are variant cards († or ★), choose non-variant version
+    # If this needs to be reversed, mark it explicitly in the data
+    if numbers.map(&:to_i).uniq.size == 1
+      base_number = numbers.map(&:to_i).uniq[0].to_s
+      base_variant = printings.find{|_, c| c["number"] == base_number}
+      return base_variant if base_variant
+    end
+
+    # Otherwise just get one with lowest number, but print a warning
+    warn "#{deck["set_code"]} #{deck["name"]}: Cannot resolve #{card["name"]}. Candidates are: #{printings.map{|c| [c[0], "/", c[1]["number"]].join }.join(", ")}"
     printings[0]
   end
 

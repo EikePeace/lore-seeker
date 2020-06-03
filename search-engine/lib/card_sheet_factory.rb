@@ -385,14 +385,17 @@ class CardSheetFactory
   end
 
   def vma_special
+    from_query("e:vma r:special", 9)
+  end
+
+  def vma_foil
     # https://magic.wizards.com/en/articles/archive/arcana/vintage-masterss-special-rarity-2014-05-12-0
-    power_9 = from_query("e:vma r:special", 9)
     vma_foil_rare = mix_sheets(
       [rarity("vma", "special", foil: true), 1],
       [rarity("vma", "mythic", foil: true), 2],
       [rarity("vma", "rare", foil: true), 4],
     )
-    vma_foil = CardSheet.new(
+    CardSheet.new(
       [
         vma_foil_rare,
         rarity("vma", "uncommon", foil: true),
@@ -400,7 +403,6 @@ class CardSheetFactory
       ],
       [1, 2, 5],
     )
-    CardSheet.new([power_9, vma_foil], [9, 471])
   end
 
   def soi_dfc_common_uncommon
@@ -594,8 +596,92 @@ class CardSheetFactory
     from_query("e:bbd r:uncommon -has:partner", 70, foil: foil)
   end
 
-  def bbd_uncommon_partner(foil=false)
-    from_query("e:bbd r:uncommon has:partner", 10, foil: foil, kind: PartnerCardSheet)
+  def bbd_mythic_partner_1
+    from_query("e:bbd r:mythic has:partner (number=1 or number=2)", 2)
+  end
+
+  def bbd_rare_partner_1
+    from_query("e:bbd r:rare has:partner (number=3 or number=4)", 2)
+  end
+
+  def bbd_rare_partner_2
+    from_query("e:bbd r:rare has:partner (number=5 or number=6)", 2)
+  end
+
+  def bbd_rare_partner_3
+    from_query("e:bbd r:rare has:partner (number=7 or number=8)", 2)
+  end
+
+  def bbd_rare_partner_4
+    from_query("e:bbd r:rare has:partner (number=9 or number=10)", 2)
+  end
+
+  def bbd_rare_partner_5
+    from_query("e:bbd r:rare has:partner (number=11 or number=12)", 2)
+  end
+
+  def bbd_uncommon_partner_1
+    from_query("e:bbd r:uncommon has:partner (number=13 or number=14)", 2)
+  end
+
+  def bbd_uncommon_partner_2
+    from_query("e:bbd r:uncommon has:partner (number=15 or number=16)", 2)
+  end
+
+  def bbd_uncommon_partner_3
+    from_query("e:bbd r:uncommon has:partner (number=17 or number=18)", 2)
+  end
+
+  def bbd_uncommon_partner_4
+    from_query("e:bbd r:uncommon has:partner (number=19 or number=20)", 2)
+  end
+
+  def bbd_uncommon_partner_5
+    from_query("e:bbd r:uncommon has:partner (number=21 or number=22)", 2)
+  end
+
+  def bbd_foil_mythic_partner_1
+    from_query("e:bbd r:mythic has:partner (number=255 or number=256)", 2, foil: true)
+  end
+
+  def bbd_foil_rare_partner_1
+    from_query("e:bbd r:rare has:partner (number=3 or number=4)", 2, foil: true)
+  end
+
+  def bbd_foil_rare_partner_2
+    from_query("e:bbd r:rare has:partner (number=5 or number=6)", 2, foil: true)
+  end
+
+  def bbd_foil_rare_partner_3
+    from_query("e:bbd r:rare has:partner (number=7 or number=8)", 2, foil: true)
+  end
+
+  def bbd_foil_rare_partner_4
+    from_query("e:bbd r:rare has:partner (number=9 or number=10)", 2, foil: true)
+  end
+
+  def bbd_foil_rare_partner_5
+    from_query("e:bbd r:rare has:partner (number=11 or number=12)", 2, foil: true)
+  end
+
+  def bbd_foil_uncommon_partner_1
+    from_query("e:bbd r:uncommon has:partner (number=13 or number=14)", 2, foil: true)
+  end
+
+  def bbd_foil_uncommon_partner_2
+    from_query("e:bbd r:uncommon has:partner (number=15 or number=16)", 2, foil: true)
+  end
+
+  def bbd_foil_uncommon_partner_3
+    from_query("e:bbd r:uncommon has:partner (number=17 or number=18)", 2, foil: true)
+  end
+
+  def bbd_foil_uncommon_partner_4
+    from_query("e:bbd r:uncommon has:partner (number=19 or number=20)", 2, foil: true)
+  end
+
+  def bbd_foil_uncommon_partner_5
+    from_query("e:bbd r:uncommon has:partner (number=21 or number=22)", 2, foil: true)
   end
 
   def bbd_rare_mythic(foil=false)
@@ -603,18 +689,6 @@ class CardSheetFactory
       [from_query('e:bbd -has:partner r:rare', 43, foil: foil), 2],
       [from_query('e:bbd -has:partner r:mythic', 13, foil: foil), 1],
     )
-  end
-
-  def bbd_rare_mythic_partner
-    sheets = [
-      from_query("e:bbd r:rare has:partner", 10, kind: PartnerCardSheet),
-      from_query("e:bbd r:mythic has:partner is:nonfoilonly", 2, kind: PartnerCardSheet),
-    ]
-    weights = [
-      10,
-      1,
-    ]
-    MixedPartnerCardSheet.new(sheets, weights)
   end
 
   # These foil rates are pretty much total :poopemoji:
@@ -630,20 +704,6 @@ class CardSheetFactory
       1,
     ]
     CardSheet.new(sheets, weights)
-  end
-
-  def bbd_foil_partner
-    sheets = [
-      from_query("e:bbd r:uncommon has:partner", 10, foil: true, kind: PartnerCardSheet),
-      from_query("e:bbd r:rare has:partner", 10, foil: true, kind: PartnerCardSheet),
-      from_query("e:bbd r:mythic has:partner is:foilonly", 2, foil: true, kind: PartnerCardSheet),
-    ]
-    weights = [
-      20,
-      10,
-      1,
-    ]
-    MixedPartnerCardSheet.new(sheets, weights)
   end
 
   def ust_basic(foil: false)

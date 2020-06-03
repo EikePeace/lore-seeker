@@ -12,8 +12,6 @@ require_relative "spelling_suggestions"
 require_relative "physical_card"
 require_relative "card_sheet"
 require_relative "color_balanced_card_sheet"
-require_relative "partner_card_sheet"
-require_relative "mixed_partner_card_sheet"
 require_relative "card_sheet_factory"
 require_relative "pack"
 require_relative "pack_factory"
@@ -174,6 +172,42 @@ class CardDatabase
       matching_name,
       matching_name_part,
     ].find{|s| s.size > 0} || Set[]
+  end
+
+  def resolve_deck_name(deck_name)
+    deck_name = deck_name.strip
+
+    # This is just for debugging, and UI is questionable for it
+    return decks if deck_name == "*"
+
+    if deck_name.include?("/")
+      set_query, deck_query = deck_name.split("/", 2)
+      sets = resolve_editions(set_query.strip)
+      possible_decks = sets.flat_map(&:decks)
+    else
+      possible_decks = decks
+      deck_query = deck_name
+    end
+    deck_query = deck_query.downcase.strip.gsub("'s", "").gsub(",", "")
+
+    return possible_decks if deck_query == "*"
+
+    decks = possible_decks.select do |deck|
+      deck.slug == deck_query
+    end
+    return decks unless decks.empty?
+
+    decks = possible_decks.select do |deck|
+      deck.name.downcase.gsub("'s", "").gsub(",", "") == deck_query
+    end
+    return decks unless decks.empty?
+
+    normalized_query_words = deck_query.split
+
+    possible_decks.select do |deck|
+      normalized_words = deck.name.downcase.gsub("'s", "").gsub(",", "").split
+      normalized_query_words.all?{|qw| normalized_words.include?(qw)}
+    end
   end
 
   def normalize_set_name(name)
