@@ -32,7 +32,7 @@ module ApplicationHelper
     if deck.custom_format.nil?
       link_to(controller: "deck", action: "show", set: deck.set_code, id: deck.slug, &blk)
     else
-      link_to(controller: "deck", action: "show_#{custom_format}", id: deck.slug, &blk)
+      link_to(controller: "deck", action: "show_#{deck.custom_format}", id: deck.slug, &blk)
     end
   end
 
