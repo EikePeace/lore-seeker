@@ -4,8 +4,8 @@ class DeckController < ApplicationController
 
   def index
     @sets = $CardDatabase.sets.values.reject{|s| s.decks.empty?}.sort_by{|s| [-s.release_date.to_i_sort, s.name] }
-    @custom_brawl_precons = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../../data/crawl-precons.json"))
-    @ech_precons = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../../data/ech-precons.json"))
+    @custom_brawl_precons = DeckDatabase.new($CardDatabase).load_custom("crawl")
+    @ech_precons = DeckDatabase.new($CardDatabase).load_custom("ech")
     @title = "Preconstructed Decks"
   end
 
@@ -39,7 +39,7 @@ class DeckController < ApplicationController
   end
 
   def show_crawl
-    @deck = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../../data/crawl-precons.json")).find{|d| d.slug == params[:id]} or return render_404
+    @deck = DeckDatabase.new($CardDatabase).load_custom("crawl").find{|d| d.slug == params[:id]} or return render_404
     @set = @deck.set
 
     @type = @deck.type
@@ -67,7 +67,7 @@ class DeckController < ApplicationController
   end
 
   def show_ech
-    @deck = DeckDatabase.new($CardDatabase).load_custom(Pathname("#{__dir__}/../../../data/ech-precons.json")).find{|d| d.slug == params[:id]} or return render_404
+    @deck = DeckDatabase.new($CardDatabase).load_custom("ech").find{|d| d.slug == params[:id]} or return render_404
     @set = @deck.set
 
     @type = @deck.type

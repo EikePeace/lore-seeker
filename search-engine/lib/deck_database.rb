@@ -26,7 +26,8 @@ class DeckDatabase
     end
   end
 
-  def load_deck(deck, custom=false)
+  def load_deck(deck, custom_format=nil)
+    custom = !custom_format.nil?
     set_code = deck["set_code"]
     set = @db.sets[set_code]
     cards = deck["cards"].map{|c| custom ? resolve_custom(*c) : resolve_card(*c) }
@@ -44,11 +45,13 @@ class DeckDatabase
       sideboard,
       commanders,
       brawlers,
+      custom_format,
     )
     return deck
   end
 
-  def load_custom(path)
-    JSON.parse(path.read).map{ |deck| load_deck(deck, true) }
+  def load_custom(format)
+    path = Pathname("#{__dir__}/../../data/#{format}-precons.json")
+    JSON.parse(path.read).map{ |deck| load_deck(deck, format) }
   end
 end
