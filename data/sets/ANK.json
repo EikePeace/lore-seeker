@@ -695,7 +695,12 @@
             "originalType": "Creature \u2014 Hound Scout",
             "power": "2",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-06",
+                    "text": "If Opener of the Way itself is chosen as the target for its ability, it becomes an unblocked creature with creatures blocking it. Opener of the Way will deal its combat damage to the player or permanent it's attacking, but the creatures blocking it will still deal combat damage to Opener of the Way."
+                }
+            ],
             "subtypes": [
                 "Hound",
                 "Scout"

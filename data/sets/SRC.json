@@ -1906,7 +1906,16 @@
             "originalText": "Draw two cards. When you do, choose one \u2014\n\u2022 Draw two cards.\n\u2022 You may cast a noncreature card with converted mana cost 4 or less from your hand without paying its mana cost.",
             "originalType": "Sorcery",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-05",
+                    "text": "If you draw fewer than two cards, the reflexive triggered ability doesn't trigger."
+                },
+                {
+                    "date": "2020-05-05",
+                    "text": "If replacement effects cause you to draw three or more cards, the reflexive triggered ability still triggers only once, even if you draw four cards."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Draw two cards. When you do, choose one \u2014\n\u2022 Draw two cards.\n\u2022 You may cast a noncreature card with converted mana cost 4 or less from your hand without paying its mana cost.",
@@ -2074,7 +2083,7 @@
             "colors": [
                 "U"
             ],
-            "convertedManaCost": 5,
+            "convertedManaCost": 4,
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -2083,21 +2092,21 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "manaCost": "{3}{U}{U}",
+            "manaCost": "{2}{U}{U}",
             "name": "Endless Paper Trail",
             "number": "54",
             "originalName": "Endless Paper Trail",
             "originalText": "Flash\nFlying\nWhenever Endless Paper Trail enters the battlefield or you sacrifice a Clue, you may pay {U}. If you do, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
             "originalType": "Creature \u2014 Elemental",
-            "power": "5",
+            "power": "4",
             "rarity": "mythic",
             "rulings": [],
             "subtypes": [
                 "Elemental"
             ],
             "supertypes": [],
-            "text": "Flash\nFlying\nWhenever Endless Paper Trail enters the battlefield or you sacrifice a Clue, you may pay {U}. If you do, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
-            "toughness": "4",
+            "text": "Flash\nFlying\nWhenever Endless Paper Trail attacks, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
+            "toughness": "3",
             "type": "Creature \u2014 Elemental",
             "types": [
                 "Creature"
@@ -3378,10 +3387,15 @@
             "originalText": "Each player discards three cards. When they do, choose one \u2014\n\u2022 You draw three cards and you lose 3 life.\n\u2022 Exile two cards from an opponent's graveyard. You may cast those cards for as long as they remains exiled, and you may spend mana as though it were mana of any type to cast those spells.",
             "originalType": "Sorcery",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-05",
+                    "text": "If any player discards fewer than three cards, the reflexive triggered ability doesn't trigger."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
-            "text": "Each player discards three cards. When they do, choose one \u2014\n\u2022 You draw three cards and you lose 3 life.\n\u2022 Exile two cards from an opponent's graveyard. You may cast those cards for as long as they remain exiled, and you may spend mana as though it were mana of any type to cast those spells.",
+            "text": "Each player discards three cards. When one or more players discards one or more cards this way, choose one \u2014\n\u2022 You draw three cards and you lose 3 life.\n\u2022 Exile two cards from an opponent's graveyard. You may cast those cards for as long as they remain exiled, and you may spend mana as though it were mana of any type to cast those spells.",
             "type": "Sorcery",
             "types": [
                 "Sorcery"
@@ -5813,7 +5827,7 @@
                 "Wizard"
             ],
             "supertypes": [],
-            "text": "Flash\nWhen Station Seven Host enters the battlefield, copy target instant or sorcery spell. You may choose new targets for the copy.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may cast it face up while it's exiled this way.)",
+            "text": "Flash\nWhen Station Seven Host enters the battlefield, if you cast it, copy target instant or sorcery spell. You may choose new targets for the copy.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may cast it face up while it's exiled this way.)",
             "toughness": "2",
             "type": "Creature \u2014 Human Wizard",
             "types": [
@@ -6097,7 +6111,12 @@
             "originalText": "Exile the top X cards of your library. When you do, choose one \u2014\n\u2022 Until the end of your next turn, you may play cards exiled this way.\n\u2022 Villain's Gambit deals damage to any target equal to the number of cards exiled by Villain's Gambit.",
             "originalType": "Instant",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-05",
+                    "text": "If you exile fewer than X cards, the reflexive triggered ability doesn't trigger."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Exile the top X cards of your library. When you do, choose one \u2014\n\u2022 Until the end of your next turn, you may play cards exiled this way.\n\u2022 Villain's Gambit deals damage to any target equal to the number of cards exiled this way.",
@@ -6899,7 +6918,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "Whenever a creature enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nAt the beginning of each end step, if you sacrificed three or more Clues this turn, you may put a creature card from your hand onto the battlefield.",
+            "text": "Whenever you cast a creature spell, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nAt the beginning of each end step, if you sacrificed three or more Clues this turn, you may put a creature card from your hand onto the battlefield.",
             "type": "Legendary Enchantment",
             "types": [
                 "Enchantment"
@@ -6930,7 +6949,12 @@
             "originalText": "Exile the top five cards of your library. When you do, choose one \u2014\n\u2022 Put a creature card from among them onto the battlefield.\n\u2022 Create a 6/6 green Horror creature token with trample.",
             "originalType": "Instant",
             "rarity": "rare",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-05-05",
+                    "text": "If you exile fewer than five cards, the reflexive triggered ability doesn't trigger."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Exile the top five cards of your library. When you do, choose one \u2014\n\u2022 Put a creature card from among them onto the battlefield.\n\u2022 Create a 6/6 green Horror creature token with trample.",
@@ -7166,7 +7190,7 @@
             "supertypes": [
                 "Legendary"
             ],
-            "text": "Trample\nAt the beginning of your end step, return a card at random from your graveyard to your hand.\nYou may cast Rhulha, the Aberrant from your graveyard by discarding two cards as an additional cost to cast it.",
+            "text": "Trample\nAt the beginning of your upkeep, return a card at random from your graveyard to your hand.\nYou may cast Rhulha, the Aberrant from your graveyard by discarding two cards as an additional cost to cast it.",
             "toughness": "6",
             "type": "Legendary Creature \u2014 Elder Horror",
             "types": [
@@ -8843,11 +8867,11 @@
             ]
         },
         {
-            "artist": "Aldo Katayanagi",
+            "artist": "Jake W. Bullock",
             "borderColor": "black",
             "colorIdentity": [],
             "colors": [],
-            "convertedManaCost": 6,
+            "convertedManaCost": 4,
             "frameVersion": "2015",
             "hasFoil": false,
             "hasNonFoil": true,
@@ -8856,8 +8880,8 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "manaCost": "{6}",
-            "name": "Coveted Jewel",
+            "manaCost": "{4}",
+            "name": "Swindler's Trinket",
             "number": "228",
             "originalName": "Coveted Jewel",
             "originalText": "When Coveted Jewel enters the battlefield, draw three cards.\n{T}: Add three mana of any one color.\nWhenever one or more creatures an opponent controls attack you and aren't blocked, that player draws three cards and gains control of Coveted Jewel. Untap it.",
@@ -8865,25 +8889,25 @@
             "rarity": "rare",
             "rulings": [
                 {
-                    "date": "2018-07-13",
-                    "text": "A creature attacking a planeswalker you control won\u2019t cause Coveted Jewel\u2019s last ability to trigger."
+                    "date": "2020-06-06",
+                    "text": "Swindler's Trinket's last ability triggers multiple times if multiple creatures deal combat damage to you at the same time."
                 },
                 {
-                    "date": "2018-07-13",
-                    "text": "Coveted Jewel\u2019s last ability triggers after you declare blockers (or declare no blockers at all) if any attacking creatures are unblocked. It doesn\u2019t matter if some attacking creatures were blocked."
+                    "date": "2020-06-06",
+                    "text": "If creatures controlled by multiple players deal combat damage to you at the same time, you choose the order in which each of the abilities resolve, and thus which player ends up with Swindler's Trinket, but each player draws two cards and has a chance to activate its mana ability for each instance of the ability associated with them."
                 },
                 {
-                    "date": "2018-07-13",
-                    "text": "Coveted Jewel\u2019s last ability resolves after blockers are chosen but before combat damage is dealt."
+                    "date": "2020-06-06",
+                    "text": "Creatures dealing combat damage to a planeswalker or Structure you control don't cause the last ability to trigger."
                 },
                 {
-                    "date": "2018-07-13",
-                    "text": "If more than one opponent attacks you at the same time, Coveted Jewel\u2019s last ability triggers for each of them. You choose which player ends up with Coveted Jewel, but each of them draws three cards and has a chance to activate its mana ability."
+                    "date": "2020-06-06",
+                    "text": "A creature with trample can cause the last ability to trigger even if it's blocked."
                 }
             ],
             "subtypes": [],
             "supertypes": [],
-            "text": "When Coveted Jewel enters the battlefield, draw three cards.\n{T}: Add three mana of any one color.\nWhenever one or more creatures an opponent controls attack you and aren't blocked, that player draws three cards and gains control of Coveted Jewel. Untap it.",
+            "text": "Swindler's Trinket enters the battlefield tapped.\nWhen Swindler's Trinket enters the battlefield, draw two cards.\n{T}: Add two mana of any one color.\nWhenever a creature deals combat damage to you, that creature's controller draws two cards and gains control of Swindler's Trinket. Untap it.",
             "type": "Artifact",
             "types": [
                 "Artifact"
@@ -9390,7 +9414,7 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "name": "Baron's Skyscrapers",
+            "name": "Thriving Tower",
             "number": "242",
             "originalName": "Baron's Skyscrapers",
             "originalText": "{T}, Pay 1 life: Add {G} or {W}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
@@ -9399,14 +9423,14 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}, Pay 1 life: Add {G} or {W}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
+            "text": "Thriving Tower enters the battlefield tapped unless you control two or fewer other lands.\n{T}: Add {G} or {W}.",
             "type": "Land",
             "types": [
                 "Land"
             ]
         },
         {
-            "artist": "Sergio Suarez",
+            "artist": "Grazio Ferlito",
             "borderColor": "black",
             "colorIdentity": [
                 "B",
@@ -9422,7 +9446,7 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "name": "Benefactor's Ballroom",
+            "name": "Decadent Hall",
             "number": "243",
             "originalName": "Benefactor's Ballroom",
             "originalText": "{T}, Pay 1 life: Add {B} or {R}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
@@ -9431,14 +9455,14 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}, Pay 1 life: Add {B} or {R}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
+            "text": "Decadent Hall enters the battlefield tapped unless you control two or fewer other lands.\n{T}: Add {B} or {R}.",
             "type": "Land",
             "types": [
                 "Land"
             ]
         },
         {
-            "artist": "Leo Av",
+            "artist": "Wojtek Fus",
             "borderColor": "black",
             "colorIdentity": [
                 "U",
@@ -9454,7 +9478,7 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "name": "Bureaucrat's Office",
+            "name": "Riverside View",
             "number": "244",
             "originalName": "Bureaucrat's Office",
             "originalText": "{T}, Pay 1 life: Add {W} or {U}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
@@ -9463,7 +9487,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}, Pay 1 life: Add {W} or {U}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
+            "text": "Riverside View enters the battlefield tapped unless you control two or fewer other lands.\n{T}: Add {W} or {U}.",
             "type": "Land",
             "types": [
                 "Land"
@@ -9486,7 +9510,7 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "name": "Cultivator's Sanctuary",
+            "name": "Secluded Farmland",
             "number": "245",
             "originalName": "Cultivator's Sanctuary",
             "originalText": "{T}, Pay 1 life: Add {R} or {G}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
@@ -9495,7 +9519,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}, Pay 1 life: Add {R} or {G}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
+            "text": "Secluded Farmland enters the battlefield tapped unless you control two or fewer other lands.\n{T}: Add {R} or {G}.",
             "type": "Land",
             "types": [
                 "Land"
@@ -9556,7 +9580,7 @@
             "isOnlineOnly": false,
             "isPaper": false,
             "layout": "normal",
-            "name": "Rogue's Alleyway",
+            "name": "Dubious Path",
             "number": "247",
             "originalName": "Rogue's Alleyway",
             "originalText": "{T}, Pay 1 life: Add {U} or {B}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
@@ -9565,7 +9589,7 @@
             "rulings": [],
             "subtypes": [],
             "supertypes": [],
-            "text": "{T}, Pay 1 life: Add {U} or {B}.\nUndercover (You may cast this face down as a 2/2 creature for {3}. If it would die, exile it face down without revealing it instead. You may play it face up while it's exiled this way.)",
+            "text": "Dubious Path enters the battlefield tapped unless you control two or fewer other lands.\n{T}: Add {U} or {B}.",
             "type": "Land",
             "types": [
                 "Land"
@@ -9804,8 +9828,8 @@
     "custom": true,
     "isOnlineOnly": true,
     "meta": {
-        "date": "2020-04-30",
-        "setVersion": "5",
+        "date": "2020-06-07",
+        "setVersion": "2020-06-07",
         "version": "4.6.0"
     },
     "name": "Secrets of the River Cities",

@@ -2125,8 +2125,8 @@
 6ed	11	30370eb0-1108-546d-8efe-e0ed202f6e38	Circle of Protection: Red
 6ed	12	e505d3fb-4c55-508e-a681-6f595df09dfd	Circle of Protection: White
 6ed	13	66116358-0cf5-53ae-ba6f-4ecbb5152e82	Crusade
-6ed	14	ceac56ff-f97a-5439-a27b-fafa84b15164	D'Avenant Archer
-6ed	15	dfcadf7a-c58f-5f2f-9bee-9cd368526470	Daraja Griffin
+6ed	14	dfcadf7a-c58f-5f2f-9bee-9cd368526470	Daraja Griffin
+6ed	15	ceac56ff-f97a-5439-a27b-fafa84b15164	D'Avenant Archer
 6ed	16	c548930d-fa4a-5403-b739-2b6d834e13bf	Disenchant
 6ed	17	c722babf-f2a9-5264-a985-dcf41e4a0172	Divine Transformation
 6ed	18	e50d5766-dd33-56b9-9b10-d2404aa7a223	Ekundu Griffin
@@ -4725,44 +4725,26 @@ all	142	33db88a9-b52d-57be-9615-a7c3536d9dfe	Sheltered Valley
 all	143	f7603f72-ba76-5b6a-ba4c-8cd43974a4fe	Soldevi Excavations
 all	144	5ee62f7d-b95e-543c-9800-50865736f1bc	Thawing Glaciers
 ana	1	cf39e7ce-e365-5787-85b6-054bc924eb6f	Angelic Reward
-ana	2	ef66d75f-9251-55a7-80b8-a049aa1c1b0e	Blinding Radiance
 ana	3	c56a8223-eb71-5873-bf81-a2cd38fd5742	Confront the Assault
 ana	5	9c49551a-371c-56fb-a622-869c81fd10c0	Inspiring Commander
 ana	6	90085b7c-c67e-5c4f-9356-a2a58e4a59c4	Knight's Pledge
-ana	7	67e5aef1-454c-56e5-bac9-627a4bad5a02	Loxodon Line Breaker
 ana	8	88dd2d2a-015b-55b7-b004-e74a150dffe6	Sanctuary Cat
 ana	9	67d5c7c3-39f1-50c2-92fb-d34b9a8bf3ac	Serra Angel
 ana	10	ffc3dcc3-d6c1-54eb-bcc7-efbd8933654c	Shrine Keeper
 ana	11	ffb2ed37-e3fb-5f21-a0a5-76e83d1c7a2f	Spiritual Guardian
 ana	12	1237c379-5c0a-58bd-8ccf-7ebd92dedae1	Tactical Advantage
-ana	13	de378f55-5aa6-5947-a7d2-3c9fc373fc2b	Take Vengeance
-ana	14	0280ced9-605e-55eb-91d5-8cba58146ca7	Divination
-ana	16	e1e3f012-f41c-5884-b294-41146a2487b0	Overflowing Insight
 ana	17	4f416b25-9067-5987-9f8c-f994e6dc6be4	River's Favor
 ana	18	3b339227-c24b-584c-babd-3a8cdce8da90	Shorecomber Crab
-ana	19	fff7d4a5-a8f3-52ca-9380-1ca9e8c79b2f	Titanic Pelagosaur
-ana	22	9fb88d97-a328-5d79-822c-aff8014c2757	Waterknot
 ana	23	ca490b5c-8226-534b-9a5d-e93c45587b6c	Zephyr Gull
-ana	24	bad84956-7f5c-5893-ba96-bda716509a83	Altar's Reap
-ana	25	1369569c-57f8-528a-b489-8992524bda2a	Ambition's Cost
-ana	26	18061063-a1ce-58ba-b572-1a6a0d33d6e7	Cruel Cut
-ana	29	da75021a-2ce8-5640-bfe2-202890c46f19	Miasmic Mummy
-ana	31	ad0cbe52-e7a1-5d3c-801c-ef91989b641e	Nimble Pilferer
-ana	33	db9b8a19-93dc-57b5-9d55-044b11773a13	Renegade Demon
 ana	34	2258b3f9-dd2d-53ec-9e11-77928ff46d26	Rise from the Grave
-ana	35	5d359464-90f8-500a-8fcc-0b3bcdd93985	Soulhunter Rakshasa
-ana	36	1b4ceae9-d252-50a6-8609-7b73a4928f22	Chaos Maw
-ana	37	f4e79c2b-dff4-5e75-b802-a8fed5ed36c9	Doublecast
-ana	39	769888c0-2cd8-5b9f-bdda-c309ea10c8d8	Goblin Bruiser
-ana	40	aab8afd8-04be-5eeb-be4f-99165e2dce87	Goblin Gang Leader
-ana	41	c3fada0e-87b7-5b30-af9e-7be0f0d22b4a	Goblin Grenade
-ana	42	491100a8-ed9f-5713-b936-1b793238d659	Ogre Painbringer
 ana	43	e192d981-1c4c-51f9-ba5e-0fe039ed251c	Raging Goblin
-ana	44	8b2a76a1-2663-5154-93f3-c37e43f6795d	Seismic Rupture
-ana	45	98293ed6-6427-5d83-ab8c-2ba83089b6f0	Volcanic Dragon
 ana	46	9c18328e-5562-5641-ba6c-e58344a9018e	Feral Roar
-ana	47	93c545b9-bff2-5003-8e74-e0c5ff3e4836	Rumbling Baloth
 ana	48	8fe84e22-9279-503d-a011-7731e5735391	Treetop Warden
+ana	51	a94da9ad-aaf6-560b-98a0-c818a6dcd1d3	Plains
+ana	52	156d7bcb-1c0b-58a4-985d-df41edbeb5e1	Island
+ana	53	6ab9276b-275f-578a-9b8b-7795931083d7	Swamp
+ana	54	7695408c-5743-5811-a727-73ae9ea29214	Mountain
+ana	55	370a0426-ac58-5c65-9f8b-70bd54ce4354	Forest
 ana	56	5d5ec288-8e3c-5771-b6d7-f3e4afaa44a0	Plains
 ana	57	50b9e8be-b249-553f-bd12-5a932ac13135	Island
 ana	58	9a9a44cb-db72-5411-b9bd-1d19fe628c47	Swamp
@@ -20525,7 +20507,7 @@ iko	222	5789fd3d-c2d2-5671-a33e-b55709a5d1f2	Jegantha, the Wellspring
 iko	223	d8ab1b7e-2694-5fa7-9803-398be91e9562	Jubilant Skybonder
 iko	224	d991ac47-6d1b-531a-bdce-59376601967e	Kaheera, the Orphanguard
 iko	225	91eb3d09-73a5-5a2f-9da7-76444516abf4	Keruga, the Macrosage
-iko	226	600f533b-67ab-5a94-83dd-db3b1491e534	Lurrus of the Dream Den
+iko	226	31558e23-eb7e-5d20-9161-80d66451f9e9	Lurrus of the Dream-Den
 iko	227	14137c88-9efb-5d7f-ac9c-ae9c1a508ccf	Lutri, the Spellchaser
 iko	228	311fc783-d2fa-5f41-88be-34fae35cc77b	Obosh, the Preypiercer
 iko	229	602a2909-4676-5f14-9d73-f4fb15b30739	Proud Wildbonder
@@ -20654,7 +20636,7 @@ iko	351	c0bf1cb6-2105-53c0-a051-7a77866f56cf	Gyruda, Doom of Depths
 iko	352	6255ed85-34d9-5b40-b306-7088b467c916	Jegantha, the Wellspring
 iko	353	3b8a4f5e-8b63-5fe6-8b9a-6ad5c78a1d09	Kaheera, the Orphanguard
 iko	354	55e9502f-260b-5695-afe3-8d91d53178a7	Keruga, the Macrosage
-iko	355	d9ed882a-abd7-5a2d-b0ca-7627aabd9189	Lurrus of the Dream Den
+iko	355	b1feef16-43d6-5241-9aba-1f6313bfa580	Lurrus of the Dream-Den
 iko	356	547282d0-115f-595c-a3b7-67072ca3315b	Lutri, the Spellchaser
 iko	357	ce72f0ba-2059-538b-8966-121764c70bff	Obosh, the Preypiercer
 iko	358	8f699f28-c068-58d3-9878-ea3d068c3fc3	Umori, the Collector
@@ -33389,6 +33371,7 @@ paer	152s	0702f3a6-b6cf-509b-b37d-eb10a0604342	Gonti's Aether Heart
 paer	153s	2f0774e7-e881-53ff-b5d7-b616e86d228a	Heart of Kiran
 paer	154s	c89b0fb0-d56d-5390-945c-c2e12e4b262e	Hope of Ghirapur
 paer	160s	4e4d615a-6584-58bb-baee-12597ca7c767	Inspiring Statuary
+paer	162p	416dd3fd-bcbb-5544-ac5d-a0feff74103a	Lifecrafter's Bestiary
 paer	162s	988fa0e6-de14-5aba-afea-fe25169d92b3	Lifecrafter's Bestiary
 paer	163s	36a43918-db6a-5e21-89d6-d8177b203972	Merchant's Dockhand
 paer	164s	24caa156-08f4-5b3a-8475-926c554c193e	Metallic Mimic
@@ -33456,6 +33439,8 @@ pakh	205s	a01b0406-0645-5849-b106-d285ca799f59	Samut, Voice of Dissent
 pakh	207s	2f4b2d90-f531-5245-b44f-7c0f905f397a	Temmet, Vizier of Naktamun
 pakh	210sa	a0f8aa77-be5b-503c-8414-50abf1d8ba7f	Dusk
 pakh	210sb	fd151972-2c38-504b-875d-9230fc71fb86	Dawn
+pakh	211pa	be53812e-70bd-5033-93d2-88209c5d9a6e	Commit
+pakh	211pb	42df9b05-dceb-5a41-808c-7792b5aecf45	Memory
 pakh	211sa	fd789e41-6bf4-544f-afd2-5cdec86e4a79	Commit
 pakh	211sb	a4871a47-5125-516c-8376-139eca09e98a	Memory
 pakh	212sa	4ecf3159-34ce-57ce-9479-7226e25c5184	Never
@@ -33597,6 +33582,7 @@ pana	BRAWL-201	0609e82a-bc2e-56c4-8924-0e353926b749	Rhys the Redeemed
 pana	BRAWL-202	f0536fc5-1a4b-5b19-8af3-474776fcfde9	Talrand, Sky Summoner
 pana	BRAWL-203	8f14588c-a2b2-587f-999a-24c04aefb55e	The Gitrog Monster
 pana	BRAWL-204	0248bbe5-ccd6-57ac-ab08-08a28c3dc8d9	Bladewing the Risen
+pana	BRAWL-205	aa2aa754-247e-5ff8-934c-3f6160475d35	Hanna, Ship's Navigator
 pana	MIR-101	8deeefa2-1f48-501c-9153-aa0fb25f5c77	Plains
 pana	MIR-102	1dd6ebc4-f07f-5c84-b268-16023049a9df	Island
 pana	MIR-103	797b2dfb-b179-5837-bd55-80eb0a005a68	Swamp
@@ -33612,6 +33598,22 @@ pana	RTR-102	7c65e9ba-58eb-5b82-956d-04710524511c	Island
 pana	RTR-103	f8433525-84a5-5d4a-9732-d231a35239e7	Swamp
 pana	RTR-104	0f66a27a-cfc9-5788-b538-4b4178f9fbdd	Mountain
 pana	RTR-105	acaa3440-a839-54fb-8427-cb52d6825328	Forest
+pana	SLD-101	d259d119-f6e9-57ef-978a-eef985a98994	Plains
+pana	SLD-102	73ca2fd3-13d9-5716-9acb-bc859c8e9ee8	Island
+pana	SLD-103	cb3c4747-7bca-5136-8a75-e44639b82b25	Swamp
+pana	SLD-104	4fb59312-fbb9-5260-a14f-8315dcd7510e	Mountain
+pana	SLD-105	df300049-9051-5f86-bed1-6eb625cdb996	Forest
+pana	UND-101	ebc5c4a9-5aac-5a52-b764-4d93f26f462c	Plains
+pana	UND-102	24902775-3ca5-545a-9846-70bee56bb453	Island
+pana	UND-103	d31fbdc8-2635-5d4c-bb15-2ba7147b835c	Swamp
+pana	UND-104	2c6d7169-acda-5042-af09-e59820b4c1f8	Mountain
+pana	UND-105	703c29bb-91e4-524b-a236-602ba6ae2732	Forest
+pana	UNDF-101	91ac9857-8a98-53d7-b166-1bec1ba133ee	Plains
+pana	UNDF-102	a1d38d79-f8ec-5b55-bb61-09f313b36174	Island
+pana	UNDF-103	4fd888d6-bd43-5285-8066-8ddfcf40af7f	Swamp
+pana	UNDF-104	d76c562e-ed8a-58df-9d62-02340233d229	Mountain
+pana	UNDF-105	e33c919a-a137-5854-88c0-291e3ab21a64	Forest
+pana	5†	5624953c-ee9c-5fa8-a960-164e0fff3455	Beast of Burden
 parc	54	fe3ef3e2-2d22-5c2b-a6aa-23064d50eed6	Plots That Span Centuries
 parc	55	8491be80-300f-5385-bf20-adf6d8e2b806	Perhaps You've Met My Cohort
 parc	56	1d99229a-e9fc-501b-b75b-e76a48cc604c	Your Inescapable Doom
@@ -33698,6 +33700,7 @@ pbfz	151s	68c77688-9120-5573-84b4-fc41185080ff	Radiant Flames
 pbfz	162s	cd8cc65a-dc4b-5c61-9858-06d93eda63c6	Zada, Hedron Grinder
 pbfz	167s	b9c62013-1a17-52b7-a1e7-df9929342f79	From Beyond
 pbfz	170s	efbeb7a6-fb43-530d-b9f6-8ea1ab18c094	Beastcaller Savant
+pbfz	174p	3c6e19dd-d31f-58fe-83d1-e10c0505e11e	Greenwarden of Murasa
 pbfz	174s	f7caeb77-c1da-5e79-97c3-4ce9d13b9114	Greenwarden of Murasa
 pbfz	180s	a33de55e-4eb2-5273-9c70-4c8bf8c33ac2	Nissa's Renewal
 pbfz	181	d846ec46-d0e1-5bce-bf20-3016957535d9	Oran-Rief Hydra
@@ -34667,6 +34670,7 @@ pemn	56sa	7fc8223b-596d-5030-a7de-6465762acc15	Docent of Perfection
 pemn	56sb	316421e8-588c-57ca-9a86-0ad0e1a0f43c	Final Iteration
 pemn	64	69b5853b-9343-588b-b17f-35b0215faaf4	Identity Thief
 pemn	64s	7836a3dd-46a8-5b84-be27-69358ad12639	Identity Thief
+pemn	65p	d532e928-b1f1-5801-974f-9a2316bc09a2	Imprisoned in the Moon
 pemn	65s	5133bd86-25ca-5106-986c-cc333695fab5	Imprisoned in the Moon
 pemn	69s	09113793-c6cb-5f2f-ac17-b964e60e622b	Mausoleum Wanderer
 pemn	70s	0fd79c9d-ea6e-503f-b4ba-e6a05afceaf3	Mind's Dilation
@@ -34702,6 +34706,7 @@ pemn	156s	6509b6d0-bea2-5f12-bec6-bfa3b8f95711	Emrakul's Evangel
 pemn	162s	255e8286-c3e8-52ef-add8-2815de119526	Ishkanah, Grafwidow
 pemn	165s	1bc6c3f9-58e2-558d-9fed-e1e6a5794482	Permeating Mass
 pemn	170s	306ecc28-9073-5807-ba4d-3fc2edcdc6ca	Spirit of the Hunt
+pemn	171p	83291dac-8f4a-5943-beca-732124082038	Splendid Reclamation
 pemn	171s	ff8f0894-8eea-5269-9d89-50b566499437	Splendid Reclamation
 pemn	176	58b5c125-493c-554b-b77c-19a5c5fe1c04	Ulvenwald Observer
 pemn	176s	67f438f0-8f99-5c5e-8321-8cc1d46f3b7a	Ulvenwald Observer
@@ -34748,6 +34753,7 @@ pfrf	56s	39d258d1-adee-56aa-9805-3365f478b842	Torrent Elemental
 pfrf	62	99406d74-68fa-5b97-a37d-72e3606cbea6	Archfiend of Depravity
 pfrf	62s	db7b566c-8923-515f-81df-2338afc02a3b	Archfiend of Depravity
 pfrf	64s	a827820e-0770-58a2-b930-23406b93b628	Brutal Hordechief
+pfrf	65p	7d082660-e64b-5c1e-8090-2d9d3608a1aa	Crux of Fate
 pfrf	74	4ed1129e-e2b0-5333-a9fe-1c65b9766ab3	Mardu Shadowspear
 pfrf	75s	729f82dd-87c0-5174-a39f-a99c67e897f9	Mardu Strike Leader
 pfrf	84s	a5355ab5-47e3-5010-b932-69679c7b0cd9	Soulflayer
@@ -35075,6 +35081,142 @@ pidw	6	19863668-e003-57aa-82bb-95342202311a	Consume Spirit
 pidw	7	dad98336-a0b4-5a83-a03a-c4604391c7dc	Standstill
 pidw	8	eded4c20-7b58-5ce8-a368-b04e70a41c7e	Breath of Malfegor
 pidw	9	b035448e-e6a6-5532-9a4e-d749b60c00ad	Turnabout
+piko	7p	125a2219-23b6-5537-886e-f2241ed7c902	Cubwarden
+piko	7s	f0a31d61-0311-5825-945a-c30a58af1fff	Cubwarden
+piko	11p	65cbac15-584e-5f53-9125-b80b734c0298	Drannith Magistrate
+piko	11s	54532694-7767-5ab4-adbd-2ccadccbe37f	Drannith Magistrate
+piko	19p	a00d067b-d782-5053-9c19-b3d67697471e	Lavabrink Venturer
+piko	19s	e64d327d-bff8-5a93-8d50-1d20621fc16b	Lavabrink Venturer
+piko	21p	1a551a30-da77-5bb6-9cd3-3d9872bc95d0	Luminous Broodmoth
+piko	21s	041d4a1b-1688-5767-8e8f-9b3faa8d6c70	Luminous Broodmoth
+piko	24p	100b0973-9799-5dea-ac49-2421ec2aa617	Mythos of Snapdax
+piko	24s	69e7fc10-6506-58d9-a1c4-44a4116f0a5c	Mythos of Snapdax
+piko	58p	84cbce4c-d138-598a-8291-be73745b76bb	Mythos of Illuna
+piko	58s	e2c7f259-af54-5ce6-8be6-e2694b9100fa	Mythos of Illuna
+piko	66p	d0bbff93-4f48-5029-8f58-f534202b7dec	Sea-Dasher Octopus
+piko	66s	02ed223f-9dfe-5e97-9604-241d86d7bee2	Sea-Dasher Octopus
+piko	67p	30dd422c-44b5-572a-af3a-21bf8e6689c6	Shark Typhoon
+piko	67s	8cbbb093-dd12-555e-89a2-35e4f98c3501	Shark Typhoon
+piko	70p	847c5e3f-f8be-596a-a3fe-ab09a8f8d8e5	Voracious Greatshark
+piko	70s	1c0dac7a-b0b4-5762-a1a2-cffd9a9fbf83	Voracious Greatshark
+piko	84p	21e81de1-bf1a-50ff-9ccf-baa90132a05a	Dirge Bat
+piko	84s	21cd1481-6ec7-56a8-91a0-47b73021ec9a	Dirge Bat
+piko	88p	1d054de0-5662-5800-abba-4da3c9faf61d	Extinction Event
+piko	88s	c4e79ae9-2256-5490-9c72-4570f1d2d155	Extinction Event
+piko	92p	6d602084-b31e-5594-89ef-1157ed54601c	Hunted Nightmare
+piko	92s	050dfeb9-f3df-5ac8-841f-8a7c689ddb6f	Hunted Nightmare
+piko	97p	22369b00-52cd-50d4-aaa4-8ad01b6c8de7	Mythos of Nethroi
+piko	97s	65e3fe4f-0576-526d-8d0a-904725dc1990	Mythos of Nethroi
+piko	114p	014fa103-725f-5225-a6bf-974c72cae317	Everquill Phoenix
+piko	114s	094e16ad-b2f7-5c6b-ba57-b0c489012b3e	Everquill Phoenix
+piko	125p	52ebba99-b924-563d-9f9f-0abd4d06f7a3	Lukka, Coppercoat Outcast
+piko	125s	964f099f-ca5e-528d-b301-a045d107ec36	Lukka, Coppercoat Outcast
+piko	127p	382c3225-2315-5f2b-80f8-54ce0a6e23c7	Mythos of Vadrok
+piko	127s	0d0a5b3c-a389-5d46-b311-b3db3e2c9246	Mythos of Vadrok
+piko	139p	abc0592a-7a10-5ad3-bce6-8a69121bdcfa	Unpredictable Cyclone
+piko	139s	9b4c4fbe-ee6a-5f3c-aefe-4752d573ae15	Unpredictable Cyclone
+piko	141p	d581cfc6-73b4-5195-98b0-0a24cfac2dcb	Yidaro, Wandering Monster
+piko	141s	db8c300d-bb3d-52c7-8db5-1960b77ff303	Yidaro, Wandering Monster
+piko	148p	c5caa09c-6404-51ec-8863-78a73dfb78c2	Colossification
+piko	148s	b921da85-6824-53a6-b1a7-b5e9b64b7ee5	Colossification
+piko	155p	eebd7405-e704-58d4-8793-4323a6397de0	Gemrazer
+piko	155s	783da287-f72e-5cf7-96cc-50106e62a26c	Gemrazer
+piko	162p	05a2cde9-8ce9-5f29-907c-7ca2f6d61761	Kogla, the Titan Ape
+piko	162s	cd4d9019-b63a-51b2-8506-cb7488f0577f	Kogla, the Titan Ape
+piko	168p	5d17e9fc-f3b4-53fd-bf73-5a9199288b9f	Mythos of Brokkos
+piko	168s	270bc865-d6b5-5670-980d-a91236f1203b	Mythos of Brokkos
+piko	175p	c2a4dd0e-fb1f-588f-beb6-3c6f695eb0b8	Vivien, Monsters' Advocate
+piko	175s	838dbb2e-926e-5948-9c1c-a6e5e07d16a6	Vivien, Monsters' Advocate
+piko	179p	b4037aa7-8da8-5210-89b1-4fff4712fa84	Brokkos, Apex of Forever
+piko	179s	3f6ba720-fec0-5fcb-a7d4-c14062da7603	Brokkos, Apex of Forever
+piko	181p	a6f04164-7289-5933-b414-048a34f617a5	Chevill, Bane of Monsters
+piko	181s	4a7112a1-e7bc-533a-8c1d-ad1ea38c16a6	Chevill, Bane of Monsters
+piko	182p	bd1a6e43-62af-527d-bae3-0c5deeaba88d	Death's Oasis
+piko	182s	bf9aaf71-f95f-5eb5-b20e-7fa69e1b551c	Death's Oasis
+piko	184p	530a71b8-4792-5188-bec9-25ee318d43e6	Eerie Ultimatum
+piko	184s	b1f6bc09-c8f8-51ce-b997-ba6204cabdb8	Eerie Ultimatum
+piko	185p	a63300bb-77dc-5aa3-bd9c-fe05059adbfd	Emergent Ultimatum
+piko	185s	a924e85f-5509-556d-a0c0-70b03a341d09	Emergent Ultimatum
+piko	186p	5cc408c4-fa8a-5272-920f-e903c21965ee	Frondland Felidar
+piko	186s	3d64737c-509f-5bc4-b954-7f53b276aaec	Frondland Felidar
+piko	187p	b00fad38-3d0d-5c11-8df0-529b9b308cc1	General Kudro of Drannith
+piko	187s	ab1cfa43-d451-5c09-bae7-3c27a6f86e7f	General Kudro of Drannith
+piko	189p	178de21c-1af1-502e-a76c-21dc00a58421	Genesis Ultimatum
+piko	189s	c9295b79-ec2b-5c2b-a50a-221117e84c9a	Genesis Ultimatum
+piko	190p	17ab8fe5-22fd-5d5a-93c7-0463038a7c60	Illuna, Apex of Wishes
+piko	190s	e0a25071-224e-547d-94ed-8886f2fde947	Illuna, Apex of Wishes
+piko	191p	79a7742f-b4f1-5e16-9ce6-86f3ba0efefb	Inspired Ultimatum
+piko	191s	f545f78f-4c94-5034-bdc8-837cdfed6c56	Inspired Ultimatum
+piko	192p	a35161b2-966c-51e4-b39a-fec04cf46b03	Kinnan, Bonder Prodigy
+piko	192s	e1b5f715-ea82-5afd-846e-ee1f65c4e82d	Kinnan, Bonder Prodigy
+piko	193p	45808723-e61d-5e4b-88f8-3c10351fe952	Labyrinth Raptor
+piko	193s	91db974b-12a1-50e2-b322-20db7dab4e80	Labyrinth Raptor
+piko	195p	325e2ea4-390c-59ad-b508-9a6eefa96669	Narset of the Ancient Way
+piko	195s	72eb3804-3604-57fd-a25d-4bb68a17eb20	Narset of the Ancient Way
+piko	197p	6a5dfca6-0a81-5d75-9954-aa11543f0aa0	Nethroi, Apex of Death
+piko	197s	3fcda019-e04d-57e6-9a3a-7c1c7db566cf	Nethroi, Apex of Death
+piko	198p	d9076f9b-9762-58fa-a380-d1fb5fcd65b6	Offspring's Revenge
+piko	198s	2a7f2362-2e95-5d7a-a258-c53750c48867	Offspring's Revenge
+piko	201p	1ba4cd81-7f04-5016-adf5-487573ad1456	Quartzwood Crasher
+piko	201s	3bbdec2f-f35d-55cf-916f-09774ccfed40	Quartzwood Crasher
+piko	203p	789cd7c3-bef2-5b28-abae-2ccf8ae5c704	Rielle, the Everwise
+piko	203s	9ebb7a6b-68bd-5f13-b367-0cf6c4c45d45	Rielle, the Everwise
+piko	204p	788a382b-e822-5a24-af08-d394c11877dd	Ruinous Ultimatum
+piko	204s	47b285de-2c00-5c2c-92ee-a47dd686b27a	Ruinous Ultimatum
+piko	207p	1741fc29-90e5-56f8-b254-31a5a5bc2b9b	Skycat Sovereign
+piko	207s	e513379f-d346-5142-80ff-8896cceba41d	Skycat Sovereign
+piko	208p	5badcde0-953e-55e9-b43c-5d06216d2816	Slitherwisp
+piko	208s	263bb612-eefd-5c82-b3bb-516e83730b7c	Slitherwisp
+piko	209p	edd1342b-4b5b-51dc-80c1-82e3362f7ca3	Snapdax, Apex of the Hunt
+piko	209s	ff5343a5-1aa0-532f-8e51-967eaa34155d	Snapdax, Apex of the Hunt
+piko	210p	08c7ec53-7a41-531a-8ef5-e87afc873ccd	Song of Creation
+piko	210s	0e045a04-7012-5b57-a4b9-2164f95ece4c	Song of Creation
+piko	212p	b14a8c38-48b5-5f7a-8260-e5363171fe35	Titans' Nest
+piko	212s	d50b7dd7-d3b9-5bb3-b515-e9e6f0504fd8	Titans' Nest
+piko	214p	385510d4-2a81-5c1f-90aa-9ae3dacf2f32	Vadrok, Apex of Thunder
+piko	214s	27ed162b-4820-5ecd-bd31-4613a04a099e	Vadrok, Apex of Thunder
+piko	215p	b0dbb17f-d8ee-5630-935d-0af81dccd565	Whirlwind of Thought
+piko	215s	012ad246-6541-59cf-8869-83d3eb017d40	Whirlwind of Thought
+piko	216p	3911a688-16fd-5a79-a6c3-8febfc103f61	Winota, Joiner of Forces
+piko	216s	25e7d647-42ee-5320-adb8-5b692cd297da	Winota, Joiner of Forces
+piko	220p	371f46cd-b972-5cfd-ae05-6aeec6d90f00	Fiend Artisan
+piko	220s	7967c12e-aba8-5243-9205-d0d2c928d15e	Fiend Artisan
+piko	221p	d3a17ba1-ca80-57fe-8d0c-2410ec366f98	Gyruda, Doom of Depths
+piko	221s	33fdb5fb-c4d0-5730-8af5-9d59e4741e01	Gyruda, Doom of Depths
+piko	222p	5538cc47-50f8-5616-8dad-bf2d43506996	Jegantha, the Wellspring
+piko	222s	dc97cd05-307c-5f12-aa34-1721ee4dc1f3	Jegantha, the Wellspring
+piko	224p	7a2f331e-74f9-53dd-856c-775529e7bf51	Kaheera, the Orphanguard
+piko	224s	f088e079-c1bd-584c-a66c-d213879efdb8	Kaheera, the Orphanguard
+piko	225p	0ce4782d-2a9f-57d0-a7cd-23288191a817	Keruga, the Macrosage
+piko	225s	18ee1ceb-8bcc-5c55-bf60-ffecaf705f2b	Keruga, the Macrosage
+piko	226p	2ad27dbf-d12b-5ecc-9485-3152df087b69	Lurrus of the Dream-Den
+piko	226s	a431143d-f763-5f70-b769-fe36f1a0b69f	Lurrus of the Dream-Den
+piko	227p	60985d05-480c-5df8-b3f1-62f8d2034b5a	Lutri, the Spellchaser
+piko	227s	8846ed36-c008-5477-ba7e-74656100c162	Lutri, the Spellchaser
+piko	228p	13c27a1a-d8fe-5ec5-862f-cb3bf2a59745	Obosh, the Preypiercer
+piko	228s	666142f0-19f5-5166-b396-a25f9bb253b5	Obosh, the Preypiercer
+piko	231p	d8680eff-dc2f-5d32-8966-2f8d2fbacbe4	Umori, the Collector
+piko	231s	036dbd69-2852-54b2-a5ab-603a5243ec5f	Umori, the Collector
+piko	232p	5204c614-575c-51b3-8272-bf6fb457e71f	Yorion, Sky Nomad
+piko	232s	b8e69aeb-1ff1-5380-8d9e-59c3c2f3eda8	Yorion, Sky Nomad
+piko	233p	22ca8666-ebad-59ba-9595-e9237e8ba060	Zirda, the Dawnwaker
+piko	233s	deb29a38-30e4-5211-9229-ff2e9a6abc36	Zirda, the Dawnwaker
+piko	234p	0d4e2223-bff0-5343-9b1e-1dd52d48c3f7	Crystalline Giant
+piko	234s	4d04a38d-1a58-5584-8c59-066fddef0048	Crystalline Giant
+piko	237p	ff35acc5-5dc0-5235-b264-94bcf002ea21	The Ozolith
+piko	237s	3e43d4a6-72f7-53e4-b58d-845f19de95e3	The Ozolith
+piko	245p	9374429b-ecba-5e30-b32a-0a8d1758545b	Bonders' Enclave
+piko	245s	637cc779-fcdc-5aa7-a0be-f0c24cccc6e4	Bonders' Enclave
+piko	248p	601c6890-7004-58e0-8f47-2b9ebdfe011e	Indatha Triome
+piko	248s	41fec54c-2f2e-53f2-a663-eccb9d7359df	Indatha Triome
+piko	250p	f62c2c71-f096-5924-8ab0-cfc9134d2129	Ketria Triome
+piko	250s	bc863eb0-afb9-59ae-9bb7-0d626477ea1e	Ketria Triome
+piko	251p	1be07a35-92d3-5587-a5c8-1bf70e91405b	Raugrin Triome
+piko	251s	cb46b770-163f-5806-917a-7c65822b405a	Raugrin Triome
+piko	253p	2a2ce087-d906-580c-998b-55f878d6c529	Savai Triome
+piko	253s	8a365233-497b-5879-8a9b-e0607fc5e14a	Savai Triome
+piko	259p	432178b3-070a-510d-bf4e-826f84daae29	Zagoth Triome
+piko	259s	1bc839aa-8c40-54fe-b44d-fb6e622d93ec	Zagoth Triome
 pisd	13	11057a60-61ae-54cc-bea3-250765fbdef4	Elite Inquisitor
 pisd	64a	e8063765-9f6f-5ba0-8b6d-3859e93d9e04	Ludevic's Test Subject
 pisd	64b	2b762af9-ce1d-558f-87e2-6dcc8d36dc2c	Ludevic's Abomination
@@ -35122,6 +35264,7 @@ pkld	4s	5e6f3bc0-98d2-5f73-ab5a-245ca97c113b	Angel of Invention
 pkld	5s	4784cc38-3442-5eeb-b07e-3f5404be1da2	Authority of the Consuls
 pkld	8s	2393bff4-91db-5d96-b394-70285b25b2f5	Captured by the Consulate
 pkld	9s	1e23c850-2a43-54bb-9dca-f46be2811785	Cataclysmic Gearhulk
+pkld	15p	1c6e2fe1-8763-5700-b288-92bf1b0a16e8	Fumigate
 pkld	15s	ba8f7be8-d35b-5e7b-add8-f379b5caddd1	Fumigate
 pkld	21s	1975d0df-8cde-50e7-b203-d57b341786f8	Master Trinketeer
 pkld	32s	b4871830-3f93-5751-9ec1-39b60a55bc85	Toolcraft Exemplar
@@ -35201,7 +35344,6 @@ pktk	42s	cb0334c5-b69a-55d6-aa55-8ec1df9106a2	Icy Blast
 pktk	58s	0c4a1a57-09cc-5e68-a886-b81202de31ab	Thousand Winds
 pktk	66s	902b82d8-aafa-5213-922a-22f8b9efe302	Bloodsoaked Champion
 pktk	73s	cf7c639d-c8f7-52e3-a8bf-35e10af51ef2	Grim Haruspex
-pktk	82p	3a66d035-781a-5222-9d41-ec5a2f696bc2	Necropolis Fiend
 pktk	82s	478aebfb-2c64-5403-8c94-adc6f0282708	Necropolis Fiend
 pktk	106s	5f55fa5e-216b-5a2c-9c0b-a538dfe3cb9a	Crater's Claws
 pktk	108s	922e175b-b571-5379-b187-e4f99054acb1	Dragon-Style Twins
@@ -35240,7 +35382,9 @@ pktk	206s	45e1198a-3be9-56a2-badf-e203a9ef608a	Surrak Dragonclaw
 pktk	207s	46dea80c-8171-5edd-9dab-7d560b5a05df	Temur Ascendancy
 pktk	209s	36f45c86-09d7-53fa-ada1-18b73f12d0da	Trap Essence
 pktk	210	f99f0d1e-45e5-5ccd-936f-40ca91f87eea	Utter End
+pktk	210p	ec685ee4-7bc1-5c59-9930-ab8da02df417	Utter End
 pktk	210s	907efacd-41b9-5fe1-a9a7-0827aa47e3a9	Utter End
+pktk	211p	bb285ef4-e644-5768-9389-ad326d3146e8	Villainous Wealth
 pktk	211s	be825648-ca23-52e5-a3b3-4cd6b4a934f1	Villainous Wealth
 pktk	214s	008011b3-9fdb-5f3d-89cb-6198b98954ee	Zurgo Helmsmasher
 pktk	219	788f73d2-db53-57e1-8bd4-093161bd6d73	Dragon Throne of Tarkir
@@ -35414,6 +35558,8 @@ plc	164	53f9e2c7-52cf-50c7-b1c7-23366f3acdf5	Vorosh, the Hunter
 plc	165	ae202ee6-132f-5bab-b7e0-876827384189	Urborg, Tomb of Yawgmoth
 plgm	1	776bd6bb-1327-547a-b782-844dfd38c4e5	Counterspell
 plgm	2	2570e30c-80a4-5d50-a97e-29dd6ea7aa90	Incinerate
+plgs	1	d857d923-4acc-55d6-aceb-01fc68032df2	Reliquary Tower
+plgs	2	136077b9-1742-56a3-8d98-3b38cb7a3e94	Hangarback Walker
 plpa	1	89d4cc0d-2d54-5395-8d27-ac8a1e4f208c	Earwig Squad
 plpa	2	a206787f-e354-5141-a9d5-a504269a666a	Vexing Shusher
 plpa	3	ec2b5d48-eb22-5978-8584-39391f04f31e	Figure of Destiny
@@ -35671,6 +35817,7 @@ pm19	186s	382bcc09-e883-5f66-b992-12d7acd1309b	Goreclaw, Terror of Qal Sisma
 pm19	189s	48941fb1-2b24-5e34-9bad-23027ad0fddd	Hungering Hydra
 pm19	192s	ccf04753-ac4e-52ca-89f3-07e50ff3a95a	Pelakka Wurm
 pm19	194s	fa86d4e9-7cca-5c5a-af62-2911bde058d5	Prodigious Growth
+pm19	200p	0796921c-68b5-5555-aac5-5b0d70962a3a	Runic Armasaur
 pm19	200s	a4478549-71f8-50e9-aa35-47f4f87017b5	Runic Armasaur
 pm19	201s	b26f1b73-9702-5c5a-9aee-d6471609335c	Scapeshift
 pm19	203p	2629df43-4414-582e-8ba9-9c3b7b52911b	Thorn Lieutenant
@@ -36355,6 +36502,7 @@ pori	172s	e7dae955-1dc4-55f2-947f-9ce370ce4747	Dwynen, Gilt-Leaf Daen
 pori	176s	2afb87ee-4f78-553f-9358-218823ec5926	Evolutionary Leap
 pori	177s	4fecbf34-0a9c-5d6d-9cd5-e7758d7b7c87	Gaea's Revenge
 pori	182s	81cce22c-01cb-5018-b741-51c5810f8851	Honored Hierarch
+pori	186p	42c71696-0781-5bb2-8654-c145e3bcf348	Managorger Hydra
 pori	186s	a90820e1-a4f3-56db-8be6-c3c039875027	Managorger Hydra
 pori	189sa	fc6a4c3b-af20-52ed-8276-f4a744f34301	Nissa, Vastwood Seer
 pori	189sb	d76036e4-87e8-56ad-8659-52b72eb029fc	Nissa, Sage Animist
@@ -36502,6 +36650,7 @@ prix	77s	afc0cbb8-39a9-5c8e-bce9-50822672078c	Mastermind's Acquisition
 prix	86p	722bb6cc-e0f7-57ee-965c-62fc43f467b5	Tetzimoc, Primal Death
 prix	86s	3f7e16e7-021d-5ef8-8f4c-510743086fb3	Tetzimoc, Primal Death
 prix	87s	dc7b609e-8ddc-5eff-b93f-32ec375695c6	Tomb Robber
+prix	88p	f18b1a4c-20a2-59b2-81d8-6d6d8f8c079e	Twilight Prophet
 prix	88s	30915649-d8fb-5b92-afc0-0a12f9dd71dc	Twilight Prophet
 prix	90p	d74b1d25-3a1f-502c-be90-51e5291fcabb	Vona's Hunger
 prix	90s	a4c7679b-7e98-51e4-b1de-27773ab97300	Vona's Hunger
@@ -37950,6 +38099,7 @@ prna	76p	01edf33b-eb9f-5d0d-9c0c-3b1586a59312	Gutterbones
 prna	76s	e67384a6-622a-5e3f-baf7-a898d261aca2	Gutterbones
 prna	83p	b1ed8e32-7508-53ec-8f2b-6d052b832a5e	Priest of Forgotten Gods
 prna	83s	8e07fb1a-0436-5cfd-8f9b-4c1c5d7ac695	Priest of Forgotten Gods
+prna	85p	fd8d5e43-a750-54dd-b2e1-6bb59df1e280	Spawn of Mayhem
 prna	92s	1acf5642-20a3-5303-94dd-c2ddf2229391	Amplifire
 prna	99p	e25d0243-174c-5c0f-9126-4bf201a8954e	Electrodominance
 prna	106s	f63cd744-925c-5d25-8c5d-f4eb69ffc3d8	Immolation Shaman
@@ -39026,7 +39176,6 @@ pwar	61s	d8450099-1c26-530a-b58e-61c41c0aa35f	Narset, Parter of Veils
 pwar	61s★	374d87ea-32c4-5793-969f-156f5b9217e2	Narset, Parter of Veils
 pwar	62p	bb7382a4-cc0e-54c0-a532-51c16f0054c9	Narset's Reversal
 pwar	62s	033b7ddf-8771-5b63-bc92-c93cade06ae2	Narset's Reversal
-pwar	66p	8cc3964d-0901-51ff-8850-92aa9707f015	Silent Submersible
 pwar	66s	bd2f1f92-b9db-5e99-8548-7058677c5e8b	Silent Submersible
 pwar	68p	5315b346-698d-50cd-8d84-00e543f2efca	Spark Double
 pwar	68s	161217c2-f7e8-5f2c-8978-2e3c790acf85	Spark Double
@@ -41801,7 +41950,7 @@ shm	275	52acf2ce-ff2e-5a25-b2af-c519e4bb09f6	Mistveil Plains
 shm	276	96dc35bb-2d5b-595a-b1c3-aa20e76deb82	Moonring Island
 shm	277	abe416cd-a855-59ed-9c63-19607e15acc3	Mystic Gate
 shm	278	3f00895a-7da2-5f84-affb-5d94686bd2a7	Reflecting Pool
-shm	278†	79b1dab6-eceb-5a7d-bebc-49af4a32e879	Reflecting Pool
+shm	278★	79b1dab6-eceb-5a7d-bebc-49af4a32e879	Reflecting Pool
 shm	279	f427fdf4-c48c-5b91-80af-5bca9236db19	Sapseep Forest
 shm	280	ac6559e2-88d1-51a8-913f-14ecb0b8d862	Sunken Ruins
 shm	281	e6820ec8-a75a-51a8-ab79-92279f39542b	Wooded Bastion
@@ -41859,15 +42008,28 @@ sld	37	1db35057-c801-52c3-8d77-c1abf44e46f7	Thalia, Guardian of Thraben
 sld	38	33bd5424-df8a-5f03-a3f6-6c7ca544282d	Thalia, Guardian of Thraben
 sld	39	798518ec-54d7-54b0-ad79-1ba07e3c0349	Thalia, Guardian of Thraben
 sld	40	4ecbd33f-6834-5dad-8f46-701cf6c95328	Thalia, Guardian of Thraben
+sld	41	70b747ab-c84d-5763-a1b6-a974f4a2b72d	Spell Pierce
+sld	42	84c044fc-9e32-54c4-98ee-408711473f87	Blood Artist
+sld	43	35a74d1a-a1e8-59d8-a92c-9f209afcf8a7	Eternal Witness
+sld	44	5d9fb85f-c3b4-5b6e-8e7b-40a11a2fd596	Pithing Needle
+sld	45	59037c6a-21cd-5c87-a7db-4d9226bd2363	Inkmoth Nexus
 sld	51	7caf3bd3-f2af-5463-8931-3290b2d7fc7e	Captain Sisay
 sld	52	3ea12775-c9de-5173-ab8f-081e06336d2a	Meren of Clan Nel Toth
 sld	53	40195d69-ca81-5cc7-a5c8-4b587b8ef5ae	Narset, Enlightened Master
 sld	54	c09d18a2-196e-54ea-be53-19f556a8d38f	Oona, Queen of the Fae
 sld	55	73024744-6a9f-522d-9ae9-f016c78bad68	Saskia the Unyielding
+sld	56	1c1ed724-e416-55a0-ae62-239d8bb09e6e	Arcbound Ravager
+sld	57	92b09fb3-643d-5a69-bfe0-668da77deed3	Darksteel Colossus
+sld	58	03f3a469-1970-5d38-a2ae-cf1a3dd22a4f	Walking Ballista
 sld	59	4fe003c5-ec87-5288-824d-e6a597e27823	Squire
 sld	60	67e9c183-9e2d-5502-a826-dc494cb1b4cf	Storm Crow
 sld	61	694d8877-15f8-5671-9041-7139ee5cbca0	Goblin Snowman
 sld	62	3210cd51-4d42-53db-b698-56d998459357	Mudhole
+sld	63	969cd85d-e449-5739-9635-b7e73a40da79	Plains
+sld	64	8e2069b0-acf0-5421-9c60-004de5f18e4e	Island
+sld	65	50d6ac93-8af0-5e14-845b-dbffdee5d45c	Swamp
+sld	66	f33cfcc5-3d26-5431-8193-77651e11e7a4	Mountain
+sld	67	39bb6b08-1bee-5d18-a9e4-8c81df4a0094	Forest
 sld	68	3e5a48d7-01d2-5267-9c87-816090f5f947	Heliod, God of the Sun
 sld	69	4afc4467-77fa-5eb8-a3b7-a34533e6ca80	Karametra, God of Harvests
 sld	70	3da62869-2dd8-5df8-889a-19351fcc8efc	Iroas, God of Victory
@@ -41883,6 +42045,19 @@ sld	79	9f2f4477-4796-5133-82d0-3fa575ef87f2	Keranos, God of Storms
 sld	80	738e3a0e-46bd-5f70-a549-9b7908fc77fa	Nylea, God of the Hunt
 sld	81	302a1136-79aa-5796-9e52-1ff7aa08ade8	Xenagos, God of Revels
 sld	82	d0d49984-898a-5499-8987-1426e73d7e70	Pharika, God of Affliction
+sld	83	2f160d5c-542c-5cb0-8dea-137af718ebdb	Lightning Bolt
+sld	84	2bb29d26-f963-5754-a55a-041e0a2908ad	Lightning Bolt
+sld	85	c5b237fc-747d-5b63-9221-1f8100de846f	Lightning Bolt
+sld	86	113dc63d-6ec6-5e28-aff6-926979e2a785	Lightning Bolt
+sld	87	1e941d08-846d-5c62-89bb-a4d9f6617ae3	Ajani Steadfast
+sld	88	4aacf971-1480-51ff-b7ae-aef4dbfcc933	Domri Rade
+sld	89	e58d4f77-e8a4-5ed3-be17-51640d1e0005	Tamiyo, Field Researcher
+sld	90	87043317-1cca-5e71-8c6a-2486c55126d7	Vraska, Golgari Queen
+sld	91	9ca2474e-4bd5-5def-bc3b-23444966eb2c	Swan Song
+sld	92	2a9fee99-3500-57b0-a184-b11b345101ab	Birds of Paradise
+sld	93	0746df7a-322f-5799-97a5-14d2df17f6be	Gilded Goose
+sld	94	9b22a12e-33ac-513e-8cdd-160b75ea8a28	Baleful Strix
+sld	95	293e769a-c26c-5f35-b3ce-28bb93e4c426	Dovescape
 slu	1	09ed0acb-d5d1-5ced-bdd3-dea09f061b12	Marsh Flats
 slu	2	6f984589-700f-5715-a220-db542369c448	Scalding Tarn
 slu	3	e9a6f647-ccfb-5672-a75c-9b1c9a61c306	Verdant Catacombs
@@ -43462,7 +43637,7 @@ thb	344	4be400b2-455d-502f-8533-9dad49abd7ba	Nyx Lotus
 thb	345	51780d7a-a6e1-5e40-a3bc-770c9cf727ef	Shadowspear
 thb	346	7eb19842-8d1e-5cda-bd42-e3e8b81be328	Labyrinth of Skophos
 thb	347	efa3a4a6-3e82-518d-9cc7-f462b6977285	Temple of Abandon
-thb	347†	1967bce3-cf4f-51cd-ac7f-00eb5ededd25	Temple of Abandon
+thb	347★	1967bce3-cf4f-51cd-ac7f-00eb5ededd25	Temple of Abandon
 thb	348	8d2403db-312d-5b9a-810e-127dd945b25d	Temple of Deceit
 thb	349	46b8d7a5-bcff-5040-ae11-e3e9cb2a4aee	Temple of Enlightenment
 thb	350	fd0b7b81-f859-54b0-912e-c39d77d7802b	Temple of Malice
@@ -48227,9 +48402,9 @@ wc98	bh45	96356cea-4ffe-56df-a8dd-75ed164e73cc	Soltari Monk
 wc98	bh46	478e0feb-9fd4-518d-83c4-0c1d67071dde	Soltari Priest
 wc98	bh64sb	4fa43803-5f2b-5c04-b3bd-b294e34b2746	Spirit Link
 wc98	bh68	2bce5cf3-13cf-5021-b494-8a86fc510357	White Knight
+wc98	bh7asb	51b10035-abf7-5ba2-b71f-2b91077d7328	Armageddon
 wc98	bh7b	274f55d3-725f-5021-bba7-0e4d26a3035a	Aura of Silence
-wc98	bh7sba	51b10035-abf7-5ba2-b71f-2b91077d7328	Armageddon
-wc98	bh7sbb	edbbdabd-bc64-5ccd-b128-18b3ea49ba42	Aura of Silence
+wc98	bh7bsb	edbbdabd-bc64-5ccd-b128-18b3ea49ba42	Aura of Silence
 wc98	bh9	6143855c-84a2-5f11-bb0c-229b72e0cb86	Nomads en-Kor
 wc98	br100	c9040571-b343-566b-9c17-65f4075b85e3	Viashino Sandstalker
 wc98	br101sb	252379e4-a728-538f-a6c1-0dafc3004620	Firestorm
@@ -48727,6 +48902,29 @@ wwk	142	301acfb6-afaf-5a88-94a4-2bc083175aba	Sejiri Steppe
 wwk	143	f9c1d513-a8c7-5e4b-a08b-d7d734bab40f	Smoldering Spires
 wwk	144	eef95fc3-0605-5116-a20f-6ddc9aaa2213	Stirring Wildwood
 wwk	145	085c99bd-7045-5124-91ec-36a62316f180	Tectonic Edge
+xana	2	ef66d75f-9251-55a7-80b8-a049aa1c1b0e	Blinding Radiance
+xana	7	67e5aef1-454c-56e5-bac9-627a4bad5a02	Loxodon Line Breaker
+xana	13	de378f55-5aa6-5947-a7d2-3c9fc373fc2b	Take Vengeance
+xana	14	0280ced9-605e-55eb-91d5-8cba58146ca7	Divination
+xana	16	e1e3f012-f41c-5884-b294-41146a2487b0	Overflowing Insight
+xana	19	fff7d4a5-a8f3-52ca-9380-1ca9e8c79b2f	Titanic Pelagosaur
+xana	22	9fb88d97-a328-5d79-822c-aff8014c2757	Waterknot
+xana	24	bad84956-7f5c-5893-ba96-bda716509a83	Altar's Reap
+xana	25	1369569c-57f8-528a-b489-8992524bda2a	Ambition's Cost
+xana	26	18061063-a1ce-58ba-b572-1a6a0d33d6e7	Cruel Cut
+xana	29	da75021a-2ce8-5640-bfe2-202890c46f19	Miasmic Mummy
+xana	31	ad0cbe52-e7a1-5d3c-801c-ef91989b641e	Nimble Pilferer
+xana	33	db9b8a19-93dc-57b5-9d55-044b11773a13	Renegade Demon
+xana	35	5d359464-90f8-500a-8fcc-0b3bcdd93985	Soulhunter Rakshasa
+xana	36	1b4ceae9-d252-50a6-8609-7b73a4928f22	Chaos Maw
+xana	37	f4e79c2b-dff4-5e75-b802-a8fed5ed36c9	Doublecast
+xana	39	769888c0-2cd8-5b9f-bdda-c309ea10c8d8	Goblin Bruiser
+xana	40	aab8afd8-04be-5eeb-be4f-99165e2dce87	Goblin Gang Leader
+xana	41	c3fada0e-87b7-5b30-af9e-7be0f0d22b4a	Goblin Grenade
+xana	42	491100a8-ed9f-5713-b936-1b793238d659	Ogre Painbringer
+xana	44	8b2a76a1-2663-5154-93f3-c37e43f6795d	Seismic Rupture
+xana	45	98293ed6-6427-5d83-ab8c-2ba83089b6f0	Volcanic Dragon
+xana	47	93c545b9-bff2-5003-8e74-e0c5ff3e4836	Rumbling Baloth
 xln	1	8bda5ce8-2cd7-533e-be13-3fa4de67031e	Adanto Vanguard
 xln	2	6b255fde-f322-58cf-954d-7cab2210b1a1	Ashes of the Abhorrent
 xln	3	428b4aa7-f77c-5aeb-9d25-dd31f67b03d4	Axis of Mortality

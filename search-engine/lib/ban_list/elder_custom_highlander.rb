@@ -56,4 +56,12 @@ BanList.for_format("elder custom highlander") do
     "Belit, Tel'tor Emissary" => "banned",
     "Shape Reality" => "banned",
   )
+
+  change(
+    "2020-06-07",
+    "https://discordapp.com/channels/481200347189084170/564298775942660122/717564282782613534",
+    "Memetic Casting" => "banned",
+    "Dystopilith" => "banned",
+    "Hatseket, Great Archivist" => "legal",
+  )
 end

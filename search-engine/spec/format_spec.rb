@@ -7,7 +7,7 @@ describe "Formats" do
     assert_search_equal "f:standard", "legal:standard"
     assert_search_results "f:extended" # Does not exist according to mtgjson
     assert_search_equal_cards "f:standard",
-      %Q[e:grn,rna,war,m20,eld,thb,iko -(Field of the Dead) -(Veil of Summer) -(Oko Thief of Crowns) -(Once Upon Time)]
+      %Q[e:grn,rna,war,m20,eld,thb,iko -(Field of the Dead) -(Veil of Summer) -(Oko Thief of Crowns) -(Once Upon Time) -(Fires of Invention) -(Agent of Treachery)]
     assert_search_equal_cards 'f:"ravnica block"', "e:rav,gp,di"
     assert_search_equal 'f:"ravnica block"', 'legal:"ravnica block"'
     assert_search_equal_cards 'f:"ravnica block"', 'b:ravnica'
@@ -182,11 +182,11 @@ describe "Formats" do
   end
 
   it "mtgo commander" do
-    assert_count_cards 'banned:vintage legal:"mtgo commander"', 0
+    assert_count_cards 'banned:vintage legal:"mtgo commander"', 1
   end
 
   it "historic" do
-    assert_count_cards "banned:historic", 3
+    assert_count_cards "banned:historic", 5
   end
 
   # We don't keep historical legality for Petty Dreadful yet
