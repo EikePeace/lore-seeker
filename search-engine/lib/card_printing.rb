@@ -26,7 +26,7 @@ class CardPrinting
   attr_reader :card, :set, :date, :release_date
   attr_reader :watermark, :rarity, :artist_name, :multiverseid, :number, :frame, :flavor, :flavor_normalized, :border
   attr_reader :rarity_code, :print_sheet, :partner, :oversized, :frame_effects, :foiling, :spotlight
-  attr_reader :textless, :fullart, :buyabox
+  attr_reader :textless, :fullart, :buyabox, :flavor_name
   attr_reader :printed_name, :printed_text, :printed_typeline
 
   # Performance cache of derived information
@@ -52,6 +52,7 @@ class CardPrinting
       @artist_name = "Unknown"
     end
     @flavor = data["flavor"] || -""
+    @flavor_name = data["flavor_name"]
     @flavor_normalized = @flavor.normalize_accents
     @foiling = data["foiling"]
     @border = data["border"] || @set.border
@@ -148,7 +149,7 @@ class CardPrinting
     related first_regular_release_date reminder_text augment
     display_power display_toughness display_mana_cost
     primary? secondary? front? back? partner? allowed_in_any_number?
-    commander? brawler? custom?
+    commander? brawler? custom? keywords
     num_exh_votes
   ].each do |m|
     eval("def #{m}; @card.#{m}; end")

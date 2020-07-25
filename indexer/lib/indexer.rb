@@ -113,6 +113,7 @@ class Indexer
       # Each set needs unique code, by convention all lowercase
       PatchSetCodes,
       PatchRemoveTokens,
+      PatchReleaseDates,
 
       # This renames cards so it needs to be done early
       PatchPlaytestCards,
@@ -143,6 +144,8 @@ class Indexer
       PatchABUR,
       PatchFrame,
       PatchPartner,
+      PatchBfm,
+      PatchUnstable,
 
       # Reconcile issues
       PatchReconcileForeignNames,
@@ -158,8 +161,6 @@ class Indexer
       PatchArtistNames,
 
       # Not bugs, more like different judgment calls than mtgjson
-      PatchBfm,
-      PatchUnstable,
       PatchUrza,
       PatchFixPromoPrintDates,
       PatchMeldCardNames,
@@ -233,6 +234,7 @@ class Indexer
         "hand", # vanguard
         "hide_mana_cost",
         "is_partner",
+        "keywords",
         "layout",
         "life", # vanguard
         "loyalty",
@@ -261,6 +263,7 @@ class Indexer
           "buyabox",
           "exclude_from_boosters",
           "flavor",
+          "flavor_name",
           "foiling",
           "frame_effects",
           "frame",

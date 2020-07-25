@@ -24,7 +24,13 @@ describe "is:booster" do
           !%W[ced cei tsb itp s00 cp1 cp2 cp3 w16 w17 gk1 ppod ana fmb1].include?(set.code)
         )
       )
-      if should_have_boosters
+      if set_code == "jmp" or set_code == "ajmp"
+        # There are 121 random precon/booster things
+        # These could be modelled as 121 boosters, for total of 2420 one-card sheets
+        # Or as 121 precons
+        # It's not perfect match either way, but I went with 121 precons
+        set.should_not have_boosters, "#{set_pp} should not have boosters yet"
+      elsif should_have_boosters
         set.should have_boosters, "#{set_pp} should have boosters"
       else
         set.should_not have_boosters, "#{set_pp} should not have boosters"
@@ -68,6 +74,8 @@ describe "is:booster" do
         assert_search_equal "e:#{set_code} is:booster", "e:#{set_code} number<=280"
       when "m20"
         assert_search_equal "e:#{set_code} is:booster", "e:#{set_code} number<=280 -number:/†/"
+      when "m21"
+        assert_search_equal "e:#{set_code} is:booster", "e:#{set_code} (number<=274 or t:basic)"
       when "eld"
         assert_search_equal "e:#{set_code} is:booster", "e:#{set_code} number<=269"
       when "grn", "rna"

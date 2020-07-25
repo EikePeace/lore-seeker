@@ -30,7 +30,8 @@ desc "Update mtgjson database"
 task "mtgjson:fetch" do
   unless Pathname("tmp/AllSets.json").exist?
     Pathname("tmp").mkpath
-    sh "wget", "https://www.mtgjson.com/json/AllSets.json", "-O", "tmp/AllSets.json"
+    # sh "wget", "https://www.mtgjson.com/json/AllSets.json", "-O", "tmp/AllSets.json" # v4
+    sh "wget", "https://mtgjson.com/api/v5/AllPrintings.json", "-O", "tmp/AllSets.json" # v5
   end
   if Pathname("data/sets-incoming").exist?
     sh "trash", "data/sets-incoming"
@@ -168,4 +169,31 @@ task "update" do
   sh "./bin/export_decks_data  ~/github/magic-preconstructed-decks-data/decks.json"
   # sh "trash ./tmp/decks.json"
   # sh "trash ./tmp/AllSets.json"
+end
+
+desc "Update decklists only"
+task "update:decks" do
+  Pathname("tmp").mkpath
+  sh "~/github/magic-preconstructed-decks/bin/build_jsons ./tmp/decks.json"
+  sh "./deck_indexer/bin/deck_indexer"
+  sh "./bin/export_decks_data  ~/github/magic-preconstructed-decks-data/decks.json"
+end
+
+desc "Run Rails frontend, localhost only"
+task "rails:localhost" do
+  Dir.chdir("frontend") do
+    sh "bundle exec rails server"
+  end
+end
+
+desc "Run Rails frontend, local network"
+task "rails" do
+  Dir.chdir("frontend") do
+    sh "bundle exec rails server -b 0.0.0.0"
+  end
+end
+
+desc "Run pry with database loaded"
+task "pry" do
+  sh "./search-engine/bin/pry_cards"
 end

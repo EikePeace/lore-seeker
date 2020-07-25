@@ -46,6 +46,8 @@ describe Deck do
       ["box", "Commander Deck"], # MTGO
       ["core", "Spellslinger Starter Kit"],
       ["funny", "Halfdeck"],
+      ["starter", "Jumpstart"], # JMP only
+      ["memorabilia", "World Championship Decks"], # WCxx
     ]
 
     db.sets.each do |set_code, set|
