@@ -2552,8 +2552,8 @@
             "rarity": "uncommon",
             "rulings": [
                 {
-                    "date": "2019-12-08",
-                    "text": "All three cards are journeyed at the same time. If any of them are face-up cards with premonition, you don't cast them."
+                    "date": "2020-08-14",
+                    "text": "The cards are journeyed one at a time. For example, if the second card from the top is a face-up card with premonition, you cast the card, then journey the card that was originally third from the top. This is a change from previous rulings."
                 }
             ],
             "subtypes": [],
@@ -5672,8 +5672,8 @@
             "rarity": "uncommon",
             "rulings": [
                 {
-                    "date": "2019-12-09",
-                    "text": "Both cards are journeyed at the same time. If the second one is a face-up card with premonition, you don't cast it."
+                    "date": "2020-08-14",
+                    "text": "The cards are journeyed one at a time. If the second card from the top is a face-up card with premonition, you cast the card, then journey the card that was originally third from the top. This is a change from previous rulings."
                 }
             ],
             "subtypes": [],
@@ -8116,8 +8116,8 @@
             "rarity": "mythic",
             "rulings": [
                 {
-                    "date": "2019-12-09",
-                    "text": "Both cards are journeyed at the same time. If the second one is a face-up card with premonition, you don't cast it."
+                    "date": "2020-08-14",
+                    "text": "The cards are journeyed one at a time. If the second card from the top is a face-up card with premonition, you cast the card, then journey the card that was originally third from the top. This is a change from previous rulings."
                 }
             ],
             "subtypes": [
