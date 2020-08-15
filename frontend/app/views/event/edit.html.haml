@@ -9,28 +9,28 @@
       = f.text_field(:name, class: "form-control")
   -#TODO summary (markdown)
   .form-group.row
-    = label_tag(:rel, "REL", class: "col-2 col-form-label")
+    = f.label(:rel, "REL", class: "col-2 col-form-label")
     .col-10
       = f.select :rel, options_for_select([["Regular", "reg"], ["Competitive", "comp"], ["Professional", "prof"]], @event.rel)
   -#TODO state transition dates
   .form-group.row
-    = label_tag(:announcement, "Publish on", class: "col-2 col-form-label")
+    = f.label(:announcement, "Publish on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, model: @event, field_name: :announcement
   .form-group.row
-    = label_tag(:mainboard_submissions, "Open mainboard submissions on", class: "col-2 col-form-label")
+    = f.label(:mainboard_submissions, "Open mainboard submissions on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, model: @event, field_name: :mainboard_submissions
   .form-group.row
-    = label_tag(:sideboard_submissions, "Close mainboard submissions and open sideboard submissions on", class: "col-2 col-form-label")
+    = f.label(:sideboard_submissions, "Close mainboard submissions and open sideboard submissions on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, model: @event, field_name: :sideboard_submissions
   .form-group.row
-    = label_tag(:start, "Start on", class: "col-2 col-form-label")
+    = f.label(:start, "Start on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, model: @event, field_name: :start
   .form-group.row
-    = label_tag(:end, "End on", class: "col-2 col-form-label")
+    = f.label(:end, "End on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, model: @event, field_name: :end
   .form-group.row
