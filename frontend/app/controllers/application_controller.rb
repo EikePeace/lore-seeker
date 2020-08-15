@@ -48,20 +48,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def aware_datetime_field(form, field_name)
-    tag.div(class: "input-group") do
-      form.date_field("#{field_name}_date", class: "form-control") +
-      form.date_field("#{field_name}_time", class: "form-control", step: 1) +
-      tag.div(class: "input-group-append") do
-        tag.div(class: "input-group-text") do
-          Time.zone.name #TODO allow modifying timezone?
-        end
-      end
-    end
-
-    form.datetime_select
-  end
-
   def custard_guild_id
     481200347189084170
   end
