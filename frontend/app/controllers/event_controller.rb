@@ -21,7 +21,7 @@ class EventController < ApplicationController
     return redirect_to(action: "index", alert: "Missing event URL.") unless params[:slug].present?
     return redirect_to(action: "index", alert: "Invalid event URL. Only ASCII digits, lowercase letters, and hyphens allowed. Maximum 32 characters.") unless params[:slug] =~ /^[0-9a-z-]{1,32}$/
     return redirect_to(action: "index", alert: "An event already exists at that URL.") if Event.where(slug: params[:slug]).first.present?
-    event = Event.create_by!(slug: params[:slug], name: params[:name])
+    event = Event.create(slug: params[:slug], name: params[:name])
     redirect_to action: "edit", id: event.slug
   end
 
