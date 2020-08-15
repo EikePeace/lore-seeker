@@ -14,6 +14,10 @@ class Event < ApplicationRecord
     nil #TODO
   end
 
+  def can_edit?
+    signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
+  end
+
   def rel_pretty
     case self.rel
     when "reg"

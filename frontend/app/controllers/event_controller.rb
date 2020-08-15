@@ -2,7 +2,7 @@ class EventController < ApplicationController
   def index
     @title = "Events"
     @can_create = signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
-    all_events = Event.order(:start)
+    all_events = Event.order(:start).select{|e| e.state != :setup || e.can_edit? }
     started_events, @upcoming_events = all_events.partition{|e| e.start.present? && e.start <= DateTime.current }
     @past_events, @current_events = started_events.partition{|e| e.end.present? && e.end <= DateTime.current }
   end
@@ -14,7 +14,6 @@ class EventController < ApplicationController
       return
     end
     @title = @event.name
-    @can_edit = signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
   end
 
   def create
@@ -41,8 +40,7 @@ class EventController < ApplicationController
       return
     end
     @title = "Editing #{@event.name}"
-    @can_edit = signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
-    return redirect_to(action: "show", id: @event.slug, alert: "You are not authorized to edit this event.") if !@can_edit
+    return redirect_to(action: "show", id: @event.slug, alert: "You are not authorized to edit this event.") unless @event.can_edit?
     if request.post?
       params.permit!
       @event.update!(params[:event])
