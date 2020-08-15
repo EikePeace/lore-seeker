@@ -18,15 +18,15 @@ class EventController < ApplicationController
 
   def create
     unless params[:slug].present?
-      flash.danger = "Missing event URL."
+      flash[:danger] = "Missing event URL."
       return redirect_to action: "index"
     end
     unless params[:slug] =~ /^[0-9a-z-]{1,32}$/
-      flash.danger = "Invalid event URL. Only ASCII digits, lowercase letters, and hyphens allowed. Maximum 32 characters."
+      flash[:danger] = "Invalid event URL. Only ASCII digits, lowercase letters, and hyphens allowed. Maximum 32 characters."
       return redirect_to action: "index"
     end
     if Event.where(slug: params[:slug]).first.present?
-      flash.danger = "An event already exists at that URL."
+      flash[:danger] = "An event already exists at that URL."
       return redirect_to action: "index"
     end
     event = Event.create(slug: params[:slug], name: params[:name])
@@ -41,7 +41,7 @@ class EventController < ApplicationController
     end
     @title = "Editing #{@event.name}"
     unless @event.can_edit?(current_user)
-      flash.danger = "You are not authorized to edit this event."
+      flash[:danger] = "You are not authorized to edit this event."
       return redirect_to action: "show", id: @event.slug
     end
     if request.post?
@@ -58,7 +58,7 @@ class EventController < ApplicationController
       return
     end
     unless event.can_edit?(current_user)
-      flash.danger = "You are not authorized to edit this event."
+      flash[:danger] = "You are not authorized to edit this event."
       return redirect_to action: "show", id: event.slug
     end
     event.state = params[:state].to_sym
