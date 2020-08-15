@@ -14,6 +14,7 @@ class SessionController < ApplicationController
   def preferences
     return redirect_to("/auth/discord") unless signed_in?
     if request.post?
+      params.permit!
       current_user.update!(params[:user])
     end
     @title = "Preferences"

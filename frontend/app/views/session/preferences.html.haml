@@ -1,7 +1,7 @@
 %h1 Preferences
 = form_with method: :post, url: {controller: "session", action: "preferences"}, model: @user do |f|
   .form-group.row
-    = label_tag(:sort, "Default sorting", class: "col-2 col-form-label")
+    = f.label(:sort, "Default sorting", class: "col-2 col-form-label")
     .col-10
       .input-group
         .input-group-prepend
@@ -13,7 +13,7 @@
           Syntax Help
         for details.
   .form-group.row
-    = label_tag(:sort, "Default view", class: "col-2 col-form-label")
+    = f.label(:view, "Default view", class: "col-2 col-form-label")
     .col-10
       = f.select(:view, options_for_select(@views.map{|view| [view, view] }, @user.view), {}, {class: "form-control custom-select"})
   .form-group.row
