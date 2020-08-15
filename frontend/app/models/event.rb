@@ -145,10 +145,12 @@ class Event < ApplicationRecord
   private
 
   def get_date(value)
+    return nil unless value.present?
     value.strftime("%Y-%m-%d")
   end
 
   def get_time(value)
+    return nil unless value.present?
     value.strftime("%H:%M:%S")
   end
 
