@@ -40,11 +40,14 @@ class EventController < ApplicationController
       return
     end
     @title = "Editing #{@event.name}"
-    return redirect_to(action: "show", id: @event.slug, alert: "You are not authorized to edit this event.") unless @event.can_edit?
+    unless @event.can_edit?
+      flash.danger = "You are not authorized to edit this event."
+      return redirect_to action: "show", id: @event.slug
+    end
     if request.post?
       params.permit!
       @event.update!(params[:event])
-      return redirect_to(action: "show", id: @event.slug)
+      return redirect_to action: "show", id: @event.slug
     end
   end
 
@@ -54,8 +57,10 @@ class EventController < ApplicationController
       render_404
       return
     end
-    can_edit = signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
-    return redirect_to(action: "show", id: event.slug, alert: "You are not authorized to edit this event.") if !can_edit
+    unless event.can_edit?
+      flash.danger = "You are not authorized to edit this event."
+      return redirect_to action: "show", id: event.slug
+    end
     event.state = params[:state].to_sym
     event.save!
     redirect_to action: "show", id: event.slug
