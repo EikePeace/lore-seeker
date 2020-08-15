@@ -1,6 +1,6 @@
 %h1
   = @event.name
-  - if @event.can_edit?
+  - if @event.can_edit?(current_user)
     = link_to({controller: "event", action: "edit", id: @event.slug}, class: "btn btn-outline-primary") do
       Edit
 %p
@@ -18,7 +18,7 @@
 - when :setup
   %h2
     Being set up
-    - if @event.can_edit?
+    - if @event.can_edit?(current_user)
       = link_to({controller: "event", action: "set_state", id: @event.slug, state: "announced"}, class: "btn btn-outline-primary") do
         Publish
   - if @event.announcement.present?
@@ -34,7 +34,7 @@
 - when :announced
   %h2
     Announced
-    - if @event.can_edit?
+    - if @event.can_edit?(current_user)
       = link_to({controller: "event", action: "set_state", id: @event.slug, state: "mainboards"}, class: "btn btn-outline-primary") do
         Open Mainboard Submissions
   - if @event.mainboard_submissions.present?
@@ -48,7 +48,7 @@
 - when :mainboards
   %h2
     Mainboard submissions open
-    - if @event.can_edit?
+    - if @event.can_edit?(current_user)
       = link_to({controller: "event", action: "set_state", id: @event.slug, state: "sideboards"}, class: "btn btn-outline-primary") do
         Move to Sideboard Submissions
   %p #{@event.signups.size} players so far.
@@ -70,7 +70,7 @@
 - when :sideboards
   %h2
     Sideboard submissions open
-    - if @event.can_edit?
+    - if @event.can_edit?(current_user)
       = link_to({controller: "event", action: "set_state", id: @event.slug, state: "bracket"}, class: "btn btn-outline-primary") do
         Start Event
   %p #{@event.signups.size} players signed up.
@@ -94,7 +94,7 @@
 - when :bracket
   %h2
     Currently running
-    - if @event.can_edit?
+    - if @event.can_edit?(current_user)
       = link_to({controller: "event", action: "set_state", id: @event.slug, state: "ended"}, class: "btn btn-outline-primary") do
         End
   %p #{@event.signups.size} players signed up.

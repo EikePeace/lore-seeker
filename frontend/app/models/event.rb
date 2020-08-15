@@ -14,8 +14,8 @@ class Event < ApplicationRecord
     nil #TODO
   end
 
-  def can_edit?
-    signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
+  def can_edit?(user)
+    (!!user) && user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
   end
 
   def rel_pretty
@@ -147,6 +147,14 @@ class Event < ApplicationRecord
   end
 
   private
+
+  def custard_guild_id
+    481200347189084170
+  end
+
+  def custard_organizer_role_id
+    481201599335628800
+  end
 
   def get_date(value)
     return nil unless value.present?
