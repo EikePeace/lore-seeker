@@ -12,6 +12,9 @@ class ApplicationController < ActionController::Base
     render file: "#{Rails.root}/public/403.html", layout: false, status: 403
   end
 
+  # Lore Seeker extension: bootstrap flash types
+  add_flash_types :danger, :warning, :success, :info
+
   protected
 
   def current_user

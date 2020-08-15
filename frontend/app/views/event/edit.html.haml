@@ -1,7 +1,7 @@
 %h1
   Editing event #{@event.slug}
-    = link_to({action: "show", id: @event.slug}, class: "btn btn-outline-danger") do
-      Cancel
+  = link_to({action: "show", id: @event.slug}, class: "btn btn-outline-danger") do
+    Cancel
 = form_with method: :post, url: {controller: "event", action: "edit"}, model: @event do |f|
   .form-group.row
     = label_tag(:name, "Name", class: "col-2 col-form-label")
