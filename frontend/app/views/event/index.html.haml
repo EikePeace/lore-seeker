@@ -18,17 +18,17 @@
       .col-sm-2
       .col-sm-10
         = submit_tag("Create Official Custom Standard Event", name: nil, class: "btn btn-outline-primary")
-- if @upcoming_events.present?
-  %h2 Upcoming Events
-  %ul
-    - @upcoming_events.each do |event|
-      %li
-        = link_to action: "show", id: event.slug do
-          = event.name
 - if @current_events.present?
   %h2 Current Events
   %ul
     - @current_events.each do |event|
+      %li
+        = link_to action: "show", id: event.slug do
+          = event.name
+- if @upcoming_events.present?
+  %h2 Upcoming Events
+  %ul
+    - @upcoming_events.each do |event|
       %li
         = link_to action: "show", id: event.slug do
           = event.name
