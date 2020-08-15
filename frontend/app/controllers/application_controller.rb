@@ -36,7 +36,40 @@ class ApplicationController < ActionController::Base
     Color.color_identity_name(color_identity)
   end
 
-  helper_method :current_user, :dev?, :signed_in?, :exh_card, :color_identity_name
+  def indef_article(text, caps: false)
+    # may not be correct for words starting with <u> pronounced as [ju]
+    if "AEIOUaeiou".include?(text[0])
+      caps ? "An" : "an"
+    else
+      caps ? "A" : "a"
+    end
+  end
+
+  def aware_datetime_field(form, field_name)
+    content_tag(:div, class: "input-group") do
+      form.date_field("#{field_name}_date", class: "form-control") +
+      form.date_field("#{field_name}_time", class: "form-control", step: 1) +
+      content_tag(:div, class: "input-group-append") do
+        content_tag(:div, class: "input-group-text") do
+          Time.zone.name #TODO allow modifying timezone?
+        end
+      end
+    end
+
+    form.datetime_select
+  end
+
+  def custard_guild_id
+    481200347189084170
+  end
+
+  def custard_organizer_role_id
+    481201599335628800
+  end
+
+  helper_method :current_user, :dev?, :signed_in?, :exh_card
+  helper_method :color_identity_name, :indef_article, :aware_datetime_field
+  helper_method :custard_guild_id, :custard_organizer_role_id
 
   def current_user=(user)
     @current_user = user

@@ -3,6 +3,9 @@
   = render "layouts/head"
   %body{"data-turbolinks" => content_for?(:disable_turbolinks) ? "false" : nil}
     .container{class: @empty_page ? "empty_page" : ""}
+      - flash.each do |type, msg|
+        .alert{:class => "alert-#{type}"}
+          = msg
       - if dev?
         .alert.alert-warning
           This is the development instance of Lore Seeker. Unless you want to test new features or see upcoming card changes, please use

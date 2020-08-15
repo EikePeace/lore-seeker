@@ -1,5 +1,43 @@
 %h1 Events
-%ul
-  %li
-    %a{href: "/event/cssl"}
-      Custom Standard Sealed League
+- if @can_create
+  %h2 Create Event
+  = form_tag("/event/create", method: :post, enforce_utf8: true) do
+    .form-group.row
+      = label_tag(:name, "Name", class: "col-2 col-form-label")
+      .col-10
+        = text_field_tag(:name, class: "form-control")
+    .form-group.row
+      = label_tag(:slug, "URL", class: "col-2 col-form-label")
+      .col-10
+        .input-group
+          .input-group-prepend
+            .input-group-text https://lore-seeker.cards/event/
+          = text_field_tag(:slug, class: "form-control")
+        %small.form-text Lowercase letters, numbers, and hyphens only. Maximum 32 characters. Cannot be changed later.
+    .form-group.row
+      .col-sm-2
+      .col-sm-10
+        = submit_tag("Create Official Custom Standard Event", name: nil, class: "btn btn-outline-primary")
+- if @upcoming_events.present?
+  %h2 Upcoming Events
+  %ul
+    - @upcoming_events.each do |event|
+      %li
+        = link_to action: "show", id: event.slug do
+          = event.name
+- if @current_events.present?
+  %h2 Current Events
+  %ul
+    - @current_events.each do |event|
+      %li
+        = link_to action: "show", id: event.slug do
+          = event.name
+- if @past_events.present?
+  %h2 Past Events
+  %ul
+    - @past_events.each do |event|
+      %li
+        = link_to action: "show", id: event.slug do
+          = event.name
+- if !@upcoming_events.present? && !@current_events.present? && !@past_events.present?
+  %p No events have been created yet.

@@ -14,9 +14,7 @@ class SessionController < ApplicationController
   def preferences
     return redirect_to("/auth/discord") unless signed_in?
     if request.post?
-      current_user.sort = params[:user][:sort]
-      current_user.view = params[:user][:view]
-      current_user.save!
+      current_user.update!(params[:user])
     end
     @title = "Preferences"
     @user = current_user
