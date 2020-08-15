@@ -13,23 +13,23 @@
     .col-10
       = f.select :rel, options_for_select([["Regular", "reg"], ["Competitive", "comp"], ["Professional", "prof"]], "reg")
   .form-group.row
-    = label_tag(:announcement, "Publish on", class: "form-col-2 col-form-label")
+    = label_tag(:announcement, "Publish on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, field_name: :announcement
   .form-group.row
-    = label_tag(:mainboard_submissions, "Open mainboard submissions on", class: "form-col-2 col-form-label")
+    = label_tag(:mainboard_submissions, "Open mainboard submissions on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, field_name: :mainboard_submissions
   .form-group.row
-    = label_tag(:sideboard_submissions, "Close mainboard submissions and open sideboard submissions on", class: "form-col-2 col-form-label")
+    = label_tag(:sideboard_submissions, "Close mainboard submissions and open sideboard submissions on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, field_name: :sideboard_submissions
   .form-group.row
-    = label_tag(:start, "Start on", class: "form-col-2 col-form-label")
+    = label_tag(:start, "Start on", class: "ol-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, field_name: :start
   .form-group.row
-    = label_tag(:end, "End on", class: "form-col-2 col-form-label")
+    = label_tag(:end, "End on", class: "col-2 col-form-label")
     .col-10
       = render "event/aware_datetime_field", form: f, field_name: :end
   .form-group.row
