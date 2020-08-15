@@ -32,15 +32,15 @@ class Event < ApplicationRecord
   end
 
   def state
-    if self.end <= DateTime.current
+    if self.end.present? && self.end <= DateTime.current
       :ended
-    elsif self.start <= DateTime.current
+    elsif self.start.present? && self.start <= DateTime.current
       :bracket
-    elsif self.sideboard_submissions <= DateTime.current
+    elsif self.sideboard_submissions.present? && self.sideboard_submissions <= DateTime.current
       :sideboards
-    elsif self.mainboard_submissions <= DateTime.current
+    elsif self.mainboard_submissions.present? && self.mainboard_submissions <= DateTime.current
       :mainboards
-    elsif self.announcement <= DateTime.current
+    elsif self.announcement.present? && self.announcement <= DateTime.current
       :announced
     else
       :setup
