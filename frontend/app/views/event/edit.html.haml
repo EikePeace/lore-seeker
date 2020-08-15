@@ -11,7 +11,7 @@
   .form-group.row
     = label_tag(:rel, "REL", class: "col-2 col-form-label")
     .col-10
-      = f.select :rel, options_for_select([["Regular", "reg"], ["Competitive", "comp"], ["Professional", "prof"]])
+      = f.select :rel, options_for_select([["Regular", "reg"], ["Competitive", "comp"], ["Professional", "prof"]], @event.rel)
   -#TODO state transition dates
   -#.form-group.row
   -#  = label_tag(:announcement, "Publish on", class: "col-2 col-form-label")
