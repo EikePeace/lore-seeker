@@ -9,6 +9,10 @@ class EventController < ApplicationController
 
   def show
     @event = Event.find_by(slug: params[:id])
+    unless @event
+      render_404
+      return
+    end
     @title = @event.name
     @can_edit = signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
   end
@@ -23,6 +27,10 @@ class EventController < ApplicationController
 
   def edit
     @event = Event.find_by(slug: params[:id])
+    unless @event
+      render_404
+      return
+    end
     @title = "Editing #{@event.name}"
     @can_edit = signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
     return redirect_to(action: "show", id: @event.slug, alert: "You are not authorized to edit this event.") if !@can_edit
@@ -34,9 +42,14 @@ class EventController < ApplicationController
 
   def set_state
     event = Event.find_by(slug: params[:id])
+    unless event
+      render_404
+      return
+    end
     can_edit = signed_in? && current_user.role_ids(custard_guild_id).include?(custard_organizer_role_id)
     return redirect_to(action: "show", id: event.slug, alert: "You are not authorized to edit this event.") if !can_edit
     event.state = params[:state].to_sym
     event.save!
+    redirect_to action: "show", id: event.slug
   end
 end
