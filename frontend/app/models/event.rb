@@ -167,6 +167,7 @@ class Event < ApplicationRecord
   end
 
   def update_date(prev, value)
+    return nil unless value.present?
     if prev.present?
       prev_time = prev.seconds_since_midnight.seconds
     else
@@ -176,6 +177,7 @@ class Event < ApplicationRecord
   end
 
   def update_time(prev, value)
+    return nil unless value.present?
     if prev.present?
       prev_date = prev.to_date
     else
