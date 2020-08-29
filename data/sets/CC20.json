@@ -2672,11 +2672,8 @@
                 "isOnlineOnly": false,
                 "layout": "normal",
                 "manaCost": "{1}{U}",
-                "name": "Tetheleeg's Shifter",
+                "name": "Tethaleeg's Shifter",
                 "number": "75",
-                "originalName": "Tetheleeg's Shifter",
-                "originalText": "You may have Tetheleeg's Shifter enter the battlefield as a copy of any creature on the battlefield with converted mana cost 3 or less.",
-                "originalType": "Creature \u2014 Shapeshifter",
                 "power": "0",
                 "rarity": "rare",
                 "rulings": [],
@@ -2684,7 +2681,7 @@
                     "Shapeshifter"
                 ],
                 "supertypes": [],
-                "text": "You may have Tetheleeg's Shifter enter the battlefield as a copy of a creature on the battlefield with converted mana cost 3 or less.",
+                "text": "You may have Tethaleeg's Shifter enter the battlefield as a copy of a creature on the battlefield with converted mana cost 3 or less.",
                 "toughness": "0",
                 "type": "Creature \u2014 Shapeshifter",
                 "types": [
@@ -4678,14 +4675,14 @@
                 "rulings": [],
                 "subtypes": [
                     "Dwarf",
-                    "Warrior"
+                    "Artificer"
                 ],
                 "supertypes": [
                     "Legendary"
                 ],
                 "text": "Whenever an Equipment enters the battlefield under your control for the first time each turn, create a 2/2 red Dragon creature token with flying. Attach that Equipment to that token.",
                 "toughness": "4",
-                "type": "Legendary Creature \u2014 Dwarf Warrior",
+                "type": "Legendary Creature \u2014 Dwarf Artificer",
                 "types": [
                     "Creature"
                 ]
@@ -8288,7 +8285,7 @@
                 "supertypes": [
                     "Legendary"
                 ],
-                "text": "Whenever Teketh deals combat damage to a player, you may exile target instant, sorcery, or artifact card from that player's graveyard. You may cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell. When you cast an instant or sorcery spell this way, exile it instead of putting it into your graveyard as it resolves.",
+                "text": "Whenever Teketh deals combat damage to a player, you may exile target instant, sorcery, or artifact card from that player's graveyard. You may cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell. When you cast an instant or sorcery spell this way, exile it instead of putting it into its owner's graveyard as it resolves.",
                 "toughness": "3",
                 "type": "Legendary Creature \u2014 Human Rogue",
                 "types": [
