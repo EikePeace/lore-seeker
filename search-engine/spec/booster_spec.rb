@@ -21,7 +21,7 @@ describe "is:booster" do
       should_have_boosters = (
         %W[mb1 cmb1].include?(set_code) or (
           !(set_types_with_boosters & set.types).empty? and
-          !%W[ced cei tsb itp s00 cp1 cp2 cp3 w16 w17 gk1 ppod ana fmb1].include?(set.code)
+          !%W[ced cei tsb itp s00 cp1 cp2 cp3 w16 w17 gk1 ppod ana fmb1 anb akr].include?(set.code)
         )
       )
       if set_code == "jmp" or set_code == "ajmp"
@@ -92,6 +92,8 @@ describe "is:booster" do
         assert_search_equal "e:#{set_code} is:booster", "e:#{set_code} (-t:basic or -number:/a/)"
       when "war"
         assert_search_equal "e:#{set_code} is:booster", "e:#{set_code} number<=264 -number:/†|★/"
+      when "2xm"
+        assert_search_equal "e:#{set_code} is:booster", "e:#{set_code} number<=332"
       when "arn", "shm"
         # They include † cards
         assert_search_equal "e:#{set_code} is:booster", "e:#{set_code}"
