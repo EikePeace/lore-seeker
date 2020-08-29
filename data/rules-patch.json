@@ -514,6 +514,20 @@
         },
         {
             "sets": [
+                "NET",
+                "CC20"
+            ],
+            "comment": "For the arm keyword action and {card:Gunrunning}, Equipment tokens can be created attached to permanents",
+            "rules": [
+                {
+                    "type": "insert",
+                    "rule": "301.5e",
+                    "text": "If an effect attempts to put an Equipment onto the battlefield attached to an object or player it can't legally equip, the Equipment simply enters the battlefield unattached."
+                }
+            ]
+        },
+        {
+            "sets": [
                 "EAU"
             ],
             "comment": "The official rules say every Vehicle card has a crew ability. {card:Soul of New Alores} does not",
@@ -996,7 +1010,7 @@
                         "text": "Arm",
                         "subrules": [
                             "To arm a creature, create a colorless Equipment artifact token named Weapon attached to that creature. The token has “Equipped creature gets +1/+1” and equip {2}.",
-                            "An object that's not a creature or not on the battlefield can't be armed. If a player attempts to do so, the Equipment token is not created.",
+                            "An object that's not a creature or not on the battlefield can't be armed. If a player attempts to do so, the Equipment token is not created. This is an exception to rule 301.5e.",
                             "If an ability causes a creature to enter the battlefield armed, this means “If this object would enter the battlefield, instead it enters the battlefield and you simultaneously arm it.” The object and the token enter the battlefield simultaneously, and the object is never on the battlefield unequipped. See rule 603.6b."
                         ]
                     }

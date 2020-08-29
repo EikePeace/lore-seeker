@@ -352,7 +352,7 @@ class PackFactory
         alara_premium_rare_mythic: 1,
       })
     # custom sets, see https://gist.github.com/fenhl/8d163733ab92ed718d89975127aac152
-    when "ldo", "dhm"
+    when "ldo", "dhm", "cc20"
       # Custom sets with default pack distribution, no foils, with basics
       build_pack(set_code, {basic: 1, common_unbalanced: 10, uncommon: 3, rare_mythic: 1})
     when "dms", "vst"

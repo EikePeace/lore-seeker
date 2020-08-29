@@ -106,6 +106,8 @@ class FormatECH < FormatStandard
       "2019-05-29" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "eau", "sou"],
       "2020-01-01" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "eau", "sou", "src"],
       "2020-05-01" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "eau", "sou", "src", "mhlw"],
+      "2020-09-01" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "eau", "sou", "src", "mhlw", "cc20"],
+      "2021-01-01" => ["ayr", "dms", "ank", "ldo", "tsl", "vln", "jan", "cc18", "hlw", "vst", "dhm", "rak", "net", "sou", "src", "mhlw", "cc20"], #TODO add new set form 2021-01-01
     }
   end
 end

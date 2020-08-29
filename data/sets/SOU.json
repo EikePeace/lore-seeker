@@ -2528,7 +2528,12 @@
             "originalText": "Put target nonland permanent on top of its owner's library. Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")",
             "originalType": "Sorcery",
             "rarity": "common",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-08-29",
+                    "text": "If the target is illegal as Obviate starts to resolve, no token is created."
+                }
+            ],
             "subtypes": [],
             "supertypes": [],
             "text": "Put target nonland permanent on top of its owner's library. Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")",
