@@ -82,6 +82,7 @@ class XmageController < ApplicationController
       Format["custom eternal"].new
     ]
     page = [1, params[:page].to_i].max
+    #TODO special section for unknown implemented cards in Lore Seeker custom sets, if any (possible typos)
     #TODO special section for reprints of implemented cards, if any
     search = "st:custom is:mainfront -game:xmage"
     query = Query.new(search, dev: dev?)
@@ -91,7 +92,6 @@ class XmageController < ApplicationController
       with_best_printing_and_rotation_info(printings)
     end
     @cards = @cards.paginate(page: page, per_page: 100)
-    #TODO special section for vanilla and french vanilla cards, if any
   end
 
   def vote

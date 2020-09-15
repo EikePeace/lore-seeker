@@ -1,0 +1,6 @@
+.input-group
+  = form.date_field("#{field_name}_date", class: "form-control", value: model.send("#{field_name}_date"))
+  = form.time_field("#{field_name}_time", class: "form-control", step: 1, value: model.send("#{field_name}_time"))
+  .input-group-append
+    .input-group-text
+      = Time.zone.name

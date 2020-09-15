@@ -18,6 +18,7 @@ class ConditionIsKeywordsoup < ConditionNickname
       # custom
       "atares amplifier",
       "blade of choices",
+      "necrohelix splicing",
       "playful bottlenose",
     ]
   end

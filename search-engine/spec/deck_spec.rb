@@ -46,11 +46,15 @@ describe Deck do
       ["box", "Commander Deck"], # MTGO
       ["core", "Spellslinger Starter Kit"],
       ["funny", "Halfdeck"],
+      ["draft innovation", "Jumpstart"], # JMP only
+      ["memorabilia", "World Championship Decks"], # WCxx
     ]
 
     db.sets.each do |set_code, set|
       set.decks.each do |deck|
-        (allowed_combinations & set.types.map{|st| [st, deck.type]}).should_not be_empty
+        allowed_set_types = allowed_combinations.select{|_,dt| dt == deck.type}.map(&:first)
+        (allowed_set_types & set.types).should_not be_empty,
+          "Deck #{deck.name} has type:\n  #{deck.type}\nIt is allowed for set types:\n  #{allowed_set_types.join(", ")}\nbut set #{set.code} #{set.name} has types:\n  #{set.types.join(", ")}"
       end
     end
   end
@@ -68,7 +72,7 @@ describe Deck do
       .select{|set|
         ![
           "cm1", "opca", "oe01", "ohop", "phop", "oarc", "parc", "opc2",
-          "ocmd", "oc13", "oc14", "oc15", "oc16", "oc17", "oc18", "oc19",
+          "ocmd", "oc13", "oc14", "oc15", "oc16", "oc17", "oc18", "oc19", "oc20",
         ].include?(set.code)
       }
   end
@@ -78,6 +82,12 @@ describe Deck do
       set.decks.each do |deck|
         deck.release_date.should eq(set.release_date), "#{deck.name} for #{set.name}"
       end
+    end
+  end
+
+  it "all decks have release date" do
+    db.decks.each do |deck|
+      deck.release_date.should_not eq(nil), "#{deck.name} for #{deck.set.name}"
     end
   end
 

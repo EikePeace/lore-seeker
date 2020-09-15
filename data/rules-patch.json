@@ -1,6 +1,6 @@
 {
-    "base": "2020-04-17",
-    "effective": "2020-05-01",
+    "base": "2020-08-07",
+    "effective": "2020-09-01",
     "patches": [
         {
             "sets": [
@@ -514,6 +514,20 @@
         },
         {
             "sets": [
+                "NET",
+                "CC20"
+            ],
+            "comment": "For the arm keyword action and {card:Gunrunning}, Equipment tokens can be created attached to permanents",
+            "rules": [
+                {
+                    "type": "insert",
+                    "rule": "301.5e",
+                    "text": "If an effect attempts to put an Equipment onto the battlefield attached to an object or player it can't legally equip, the Equipment simply enters the battlefield unattached."
+                }
+            ]
+        },
+        {
+            "sets": [
                 "EAU"
             ],
             "comment": "The official rules say every Vehicle card has a crew ability. {card:Soul of New Alores} does not",
@@ -996,7 +1010,7 @@
                         "text": "Arm",
                         "subrules": [
                             "To arm a creature, create a colorless Equipment artifact token named Weapon attached to that creature. The token has “Equipped creature gets +1/+1” and equip {2}.",
-                            "An object that's not a creature or not on the battlefield can't be armed. If a player attempts to do so, the Equipment token is not created.",
+                            "An object that's not a creature or not on the battlefield can't be armed. If a player attempts to do so, the Equipment token is not created. This is an exception to rule 301.5e.",
                             "If an ability causes a creature to enter the battlefield armed, this means “If this object would enter the battlefield, instead it enters the battlefield and you simultaneously arm it.” The object and the token enter the battlefield simultaneously, and the object is never on the battlefield unequipped. See rule 603.6b."
                         ]
                     }
@@ -1171,7 +1185,7 @@
                             "Premonition is a keyword that represents a static ability that functions while the card with premonition is in a player's hand. “Premonition N—[cost]” means “If you could begin to cast this card by putting it onto the stack from your hand and your library has at least N cards in it, you may pay [cost] and put it onto your library beneath the Nth card of your library. This card becomes face up in your library. This action doesn't use the stack.”",
                             "Cards that are put into a player's library by the premonition ability are put into the library face up. This is an exception to rule 401.2. Players should keep face-up cards in an orientation separate from the orientation of cards in a library that are not face up or otherwise easily visible to all players.",
                             "As a face-up card with premonition becomes the top card of a player's library, that player casts it without paying its mana cost if able. If that player can't, they turn the face-up card face down instead and it becomes the top card of their library. It is no longer face up.",
-                            "If a one-shot effect causes a player to reveal (or look at, see rule 701.14d), shuffle, or change the order of a card or cards in a library, at least one of which is face up, each such card is turned face down, and then the cards are revealed, shuffled, or reordered.",
+                            "If a one-shot effect causes a player to reveal (or look at, see rule 701.16d), shuffle, or change the order of a card or cards in a library, at least one of which is face up, each such card is turned face down, and then the cards are revealed, shuffled, or reordered.",
                             "If a continuous effect causes a face-up card to be revealed, that card is both revealed and face up. If the card somehow ceases to be revealed, the card remains face up.",
                             "If a one-shot effect causes a card to be put into the library “face up beneath the top N cards of [a player's] library,” that player puts that card into their library using the process described above."
                         ]

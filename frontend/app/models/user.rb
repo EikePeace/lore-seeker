@@ -21,14 +21,28 @@ class User < ApplicationRecord
     return JSON.load(user_path) if !user_path.nil?
   end
 
+  def guild_profile_data(guild_id)
+    user_path = Pathname.new("/usr/local/share/fenhl/lore-seeker/profiles") + guild_id.to_s + "#{self.uid}.json"
+    return JSON.load(user_path) if user_path.exist?
+  end
+
   def username
     profile = profile_data
-    return profile_data["username"] if !profile.nil?
+    return profile["username"] if !profile.nil?
   end
 
   def discrim
     profile = profile_data
-    return profile_data["discriminator"] if !profile.nil?
+    return profile["discriminator"] if !profile.nil?
+  end
+
+  def role_ids(guild_id)
+    profile = guild_profile_data(guild_id)
+    if profile.nil?
+      []
+    else
+      profile["roles"]
+    end
   end
 
   def to_s

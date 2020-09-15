@@ -63,7 +63,7 @@ class Card
   attr_reader :partial_color_identity, :cmc, :text, :text_normalized, :power, :toughness, :loyalty, :stability, :extra
   attr_reader :hand, :life, :rulings, :foreign_names, :foreign_names_normalized, :stemmed_name
   attr_reader :mana_hash, :typeline, :funny, :color_indicator, :color_indicator_set, :related
-  attr_reader :reminder_text, :augment, :display_power, :display_toughness, :display_mana_cost
+  attr_reader :reminder_text, :augment, :display_power, :display_toughness, :display_mana_cost, :keywords
 
   def initialize(data)
     @printings = []
@@ -117,6 +117,9 @@ class Card
       @typeline += " - #{data["subtypes"].join(" ")}"
     end
     @typeline = -@typeline
+    if data["keywords"]
+      @keywords = data["keywords"].map{|k| -k}
+    end
     calculate_mana_hash
     calculate_color_indicator
     calculate_reminder_text

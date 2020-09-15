@@ -3,11 +3,16 @@
   = render "layouts/head"
   %body{"data-turbolinks" => content_for?(:disable_turbolinks) ? "false" : nil}
     .container{class: @empty_page ? "empty_page" : ""}
+      - flash.each do |type, msg|
+        .alert{:class => "alert-#{type}"}
+          = msg
       - if dev?
         .alert.alert-warning
           This is the development instance of Lore Seeker. Unless you want to test new features or see upcoming card changes, please use
           %a{href: "https://lore-seeker.cards/"} the main instance
           instead.
+      .alert.alert-info
+        I am looking for help with reviewing sets and/or maintaining Lore Seeker and the Big Custom Box. If you're interested, please contact me in #general in the Custom Standard Discord. —Fenhl
       .row.logo_row
         .col-12.col-md-6
           %h1

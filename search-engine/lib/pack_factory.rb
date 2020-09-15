@@ -141,13 +141,19 @@ class PackFactory
       build_pack_with_random_foil(set_code, :foil, :nonland_common, {basic_or_common_land: 1, nonland_common: 10, uncommon: 3, rare_mythic: 1})
     when "iko"
       # This works almost like M19/M20, but one of the common lands seems to be on common not on land sheet
-      build_pack_with_random_foil(set_code, :foil, :nongainland_common, {basic_or_gainland: 1, nongainland_common: 10, uncommon: 3, rare_mythic: 1})
+      # gainlands x6, basics x4
+      build_pack_with_random_foil(set_code, :foil, :nongainland_common, {iko_basic_or_gainland: 1, nongainland_common: 10, uncommon: 3, rare_mythic: 1})
+    when "m21"
+      # gainlands x6, basics x3
+      build_pack_with_random_foil(set_code, :foil, :nongainland_common, {m21_basic_or_gainland: 1, nongainland_common: 10, uncommon: 3, rare_mythic: 1})
     when "ala"
       build_pack_with_random_foil(set_code, :foil, :common_unbalanced, {basic: 1, common_unbalanced: 10, uncommon: 3, rare_mythic: 1})
     when "arb"
       build_pack_with_random_foil(set_code, :foil, :common_unbalanced, {common_unbalanced: 11, uncommon: 3, rare_mythic: 1})
     when "mma", "mm2", "mm3", "ema", "ima", "a25", "uma"
       build_pack(set_code, {common: 10, uncommon: 3, rare_mythic: 1, foil: 1})
+    when "2xm"
+      build_pack(set_code, {common: 8, uncommon: 3, rare_mythic: 2, foil: 2})
     when "dgm"
       build_pack_with_random_foil(set_code, :foil, :dgm_common, {dgm_common: 10, uncommon: 3, dgm_rare_mythic: 1, dgm_land: 1})
     when "frf"
@@ -348,7 +354,7 @@ class PackFactory
         alara_premium_rare_mythic: 1,
       })
     # custom sets, see https://gist.github.com/fenhl/8d163733ab92ed718d89975127aac152
-    when "ldo", "dhm"
+    when "ldo", "dhm", "cc20"
       # Custom sets with default pack distribution, no foils, with basics
       build_pack(set_code, {basic: 1, common_unbalanced: 10, uncommon: 3, rare_mythic: 1})
     when "dms", "vst"

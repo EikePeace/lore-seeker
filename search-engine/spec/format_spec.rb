@@ -7,7 +7,18 @@ describe "Formats" do
     assert_search_equal "f:standard", "legal:standard"
     assert_search_results "f:extended" # Does not exist according to mtgjson
     assert_search_equal_cards "f:standard",
-      %Q[e:grn,rna,war,m20,eld,thb,iko -(Field of the Dead) -(Veil of Summer) -(Oko Thief of Crowns) -(Once Upon Time) -(Fires of Invention) -(Agent of Treachery)]
+      %Q[e:grn,rna,war,m20,eld,thb,iko,m21
+        -(Field of the Dead)
+        -(Veil of Summer)
+        -(Oko Thief of Crowns)
+        -(Once Upon Time)
+        -(Fires of Invention)
+        -(Agent of Treachery)
+        -(Wilderness Reclamation)
+        -(Growth Spiral)
+        -(Teferi, Time Raveler)
+        -(Cauldron Familiar)
+    ]
     assert_search_equal_cards 'f:"ravnica block"', "e:rav,gp,di"
     assert_search_equal 'f:"ravnica block"', 'legal:"ravnica block"'
     assert_search_equal_cards 'f:"ravnica block"', 'b:ravnica'
@@ -26,6 +37,11 @@ describe "Formats" do
       ]],
     ])
     FormatModern.new.ban_events.should eq([
+      [Date.parse("2020-07-13"),
+        "https://magic.wizards.com/en/articles/archive/news/july-13-2020-banned-and-restricted-announcement-2020-07-13",
+      [
+        {:name=>"Arcum's Astrolabe", :new=>"banned", :old=>"legal"},
+      ]],
       [Date.parse("2020-03-10"),
         "https://magic.wizards.com/en/articles/archive/news/march-9-2020-banned-and-restricted-announcement",
       [
@@ -177,8 +193,8 @@ describe "Formats" do
   # We don't have all historical legality for Duel Commander yet,
   # maybe add it at some later point
   it "duel commander" do
-    assert_count_cards 'banned:"duel commander"', 63
-    assert_count_cards 'restricted:"duel commander"', 21
+    assert_count_cards 'banned:"duel commander"', 72
+    assert_count_cards 'restricted:"duel commander"', 20
   end
 
   it "mtgo commander" do
@@ -186,7 +202,7 @@ describe "Formats" do
   end
 
   it "historic" do
-    assert_count_cards "banned:historic", 5
+    assert_count_cards "banned:historic", 11
   end
 
   # We don't keep historical legality for Petty Dreadful yet
@@ -228,6 +244,7 @@ describe "Formats" do
       banned:pauper or
       banned:duel or
       banned:brawl or
+      banned:historic or
       banned:"Mirrodin Block" or
       banned:"Urza Block" or
       banned:"Ice Age Block" or
@@ -267,6 +284,17 @@ describe "Formats" do
   it "banned:* time:nph" do
     assert_search_exclude "banned:* time:rtr", "Splinter Twin"
     assert_search_include "banned:* time:war", "Splinter Twin"
+  end
+
+  it "racist cards are banned in all official formats" do
+    assert_search_results "is:racist f:legacy"
+    assert_search_results "is:racist f:vintage"
+    assert_search_results "is:racist f:pauper"
+    assert_search_results "is:racist f:modern"
+    assert_search_results "is:racist f:commander"
+    assert_search_results "is:racist f:\"mtgo commander\""
+    assert_search_results "is:racist f:pioneer"
+    assert_search_results "is:racist f:standard"
   end
 
   ## TODO - Extended, and various weirdo formats

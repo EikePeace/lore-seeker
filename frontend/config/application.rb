@@ -29,6 +29,9 @@ module Frontend
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore, config.session_options
     config.middleware.delete ActionDispatch::Flash
+
+    # Lore Seeker extension: time zone support
+    config.time_zone = "UTC"
   end
 end
 

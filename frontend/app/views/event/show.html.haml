@@ -1,0 +1,118 @@
+%h1
+  = @event.name
+  - if @event.can_edit?(current_user)
+    = link_to({controller: "event", action: "edit", id: @event.slug}, class: "btn btn-outline-primary") do
+      Edit
+%p
+  - if @event.official?
+    An official
+    = link_to @event.format.format_pretty_name, controller: "format", action: "show", id: @event.format.format_name.parameterize
+    tournament
+  - else
+    = indef_article(@event.format.format_pretty_name, caps: true)
+    = link_to @event.format.format_pretty_name, controller: "format", action: "show", id: @event.format.format_name.parameterize
+    tournament run by #{@event.organizer}
+-#TODO summary (markdown)
+%p This event is judged at #{@event.rel_pretty} REL.
+- case @event.state
+- when :setup
+  %h2
+    Being set up
+    - if @event.can_edit?(current_user)
+      = link_to({controller: "event", action: "set_state", id: @event.slug, state: "announced"}, class: "btn btn-outline-success") do
+        Publish
+  - if @event.announcement.present?
+    %p Will be published on #{@event.announcement}.
+  - if @event.mainboard_submissions.present?
+    %p Mainboard submissions open on #{@event.mainboard_submissions}.
+  - if @event.sideboard_submissions.present?
+    %p Mainboard submissions close and sideboard submissions open on #{@event.sideboard_submissions}.
+  - if @event.start.present?
+    %p Starts on #{@event.start}.
+  - if @event.end.present?
+    %p Ends on #{@event.end}.
+- when :announced
+  %h2
+    Announced
+    - if @event.can_edit?(current_user)
+      = link_to({controller: "event", action: "set_state", id: @event.slug, state: "mainboards"}, class: "btn btn-outline-success") do
+        Open Mainboard Submissions
+  - if @event.mainboard_submissions.present?
+    %p Mainboard submissions open on #{@event.mainboard_submissions}.
+  - if @event.sideboard_submissions.present?
+    %p Mainboard submissions close and sideboard submissions open on #{@event.sideboard_submissions}.
+  - if @event.start.present?
+    %p Starts on #{@event.start}.
+  - if @event.end.present?
+    %p Ends on #{@event.end}.
+- when :mainboards
+  %h2
+    Mainboard submissions open
+    - if @event.can_edit?(current_user)
+      = link_to({controller: "event", action: "set_state", id: @event.slug, state: "sideboards"}, class: "btn btn-outline-success") do
+        Move to Sideboard Submissions
+  %p #{@event.signups.size} players so far.
+  - if @event.sideboard_submissions.present?
+    %p Mainboard submissions close and sideboard submissions open on #{@event.sideboard_submissions}.
+  - if @event.start.present?
+    %p Starts on #{@event.start}.
+  - if @event.end.present?
+    %p Ends on #{@event.end}.
+  - if signed_in?
+    %h2
+      - if @event.signups.any?{|signup| signup.user == current_user }
+        Edit mainboard
+      - else
+        Sign up
+    %p Coming soon™
+    -#TODO mainboard submission form
+    - if @event.signups.any?{|signup| signup.user == current_user }
+      -#TODO resign button
+  - else
+    %h2 Sign up
+    %p
+      %a{href: "/auth/discord"} Sign in with Discord
+      to sign up for this event
+- when :sideboards
+  %h2
+    Sideboard submissions open
+    - if @event.can_edit?(current_user)
+      = link_to({controller: "event", action: "set_state", id: @event.slug, state: "bracket"}, class: "btn btn-outline-success") do
+        Start Event
+  %p #{@event.signups.size} players signed up.
+  - if @event.start.present?
+    %p Starts on #{@event.start}.
+  - if @event.end.present?
+    %p Ends on #{@event.end}.
+  -#TODO show decklists
+  %h2 Submit/edit sideboard
+  - if signed_in?
+    - if @event.signups.any?{|signup| signup.user == current_user }
+      %p Coming soon™
+      -#TODO sideboard submission form
+      -#TODO resign button
+    - else
+      %p You did not sign up for this event.
+  - else
+    %p
+      %a{href: "/auth/discord"} Sign in with Discord
+      to submit your sideboard
+- when :bracket
+  %h2
+    Currently running
+    - if @event.can_edit?(current_user)
+      = link_to({controller: "event", action: "set_state", id: @event.slug, state: "ended"}, class: "btn btn-outline-success") do
+        End
+  %p #{@event.signups.size} players signed up.
+  - if @event.challonge.present?
+    %p
+      %a{href: @event.challonge} View bracket on Challonge
+  - if @event.end.present?
+    %p Ends on #{@event.end}.
+  -#TODO show decklists
+- when :ended
+  %h2 Ended
+  %p #{@event.signups.size} players signed up.
+  -#TODO show decklists
+- else
+  %h2 Error: unknown event state: #{@event.state}

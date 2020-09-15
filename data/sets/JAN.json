@@ -3514,7 +3514,12 @@
             "originalType": "Creature \u2014 Crocodile Horror",
             "power": "1",
             "rarity": "uncommon",
-            "rulings": [],
+            "rulings": [
+                {
+                    "date": "2020-08-29",
+                    "text": "The ability checks whether the card is a creature in the graveyard. It doesn't matter whether it was a creature in the zone it came from."
+                }
+            ],
             "subtypes": [
                 "Crocodile",
                 "Horror"

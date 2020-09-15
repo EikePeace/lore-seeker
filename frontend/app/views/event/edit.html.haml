@@ -1,0 +1,39 @@
+%h1
+  Editing event #{@event.slug}
+  = link_to({action: "show", id: @event.slug}, class: "btn btn-outline-danger") do
+    Cancel
+= form_with method: :post, url: {controller: "event", action: "edit"}, model: @event do |f|
+  .form-group.row
+    = f.label(:name, "Name", class: "col-2 col-form-label")
+    .col-10
+      = f.text_field(:name, class: "form-control")
+  -#TODO summary (markdown)
+  .form-group.row
+    = f.label(:rel, "REL", class: "col-2 col-form-label")
+    .col-10
+      = f.select :rel, options_for_select([["Regular", "reg"], ["Competitive", "comp"], ["Professional", "prof"]], @event.rel)
+  -#TODO state transition dates
+  .form-group.row
+    = f.label(:announcement, "Publish on", class: "col-2 col-form-label")
+    .col-10
+      = render "event/aware_datetime_field", form: f, model: @event, field_name: :announcement
+  .form-group.row
+    = f.label(:mainboard_submissions, "Open mainboard submissions on", class: "col-2 col-form-label")
+    .col-10
+      = render "event/aware_datetime_field", form: f, model: @event, field_name: :mainboard_submissions
+  .form-group.row
+    = f.label(:sideboard_submissions, "Close mainboard submissions and open sideboard submissions on", class: "col-2 col-form-label")
+    .col-10
+      = render "event/aware_datetime_field", form: f, model: @event, field_name: :sideboard_submissions
+  .form-group.row
+    = f.label(:start, "Start on", class: "col-2 col-form-label")
+    .col-10
+      = render "event/aware_datetime_field", form: f, model: @event, field_name: :start
+  .form-group.row
+    = f.label(:end, "End on", class: "col-2 col-form-label")
+    .col-10
+      = render "event/aware_datetime_field", form: f, model: @event, field_name: :end
+  .form-group.row
+    .col-2
+    .col-10
+      = f.submit("Save", class: "btn btn-outline-primary")

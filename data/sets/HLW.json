@@ -1980,8 +1980,8 @@
             "rarity": "rare",
             "rulings": [
                 {
-                    "date": "2018-01-23",
-                    "text": "All three cards are journeyed at the same time. If any of them are face-up cards with premonition, you don't cast them."
+                    "date": "2020-08-14",
+                    "text": "The cards are journeyed one at a time. For example, if the second card from the top is a face-up card with premonition, you cast the card, then journey the card that was originally third from the top. This is a change from previous rulings."
                 }
             ],
             "subtypes": [],
@@ -5734,12 +5734,12 @@
             "rarity": "rare",
             "rulings": [
                 {
-                    "date": "2019-12-16",
-                    "text": "Both cards are journeyed at the same time. If the second one is a face-up card with premonition, you don't cast it."
-                },
-                {
                     "date": "2019-12-29",
                     "text": "If you targeted at least one creature with Jolly Cooperation and none of the targets are legal as it starts to resolve, none of its effects happen. You don't get any additional phases and you don't journey."
+                },
+                {
+                    "date": "2020-08-14",
+                    "text": "The cards are journeyed one at a time. If the second card from the top is a face-up card with premonition, you cast the card, then journey the card that was originally third from the top. This is a change from previous rulings."
                 }
             ],
             "subtypes": [],
@@ -7168,8 +7168,8 @@
             "rarity": "mythic",
             "rulings": [
                 {
-                    "date": "2018-01-23",
-                    "text": "All cards are journeyed at the same time. If any of them are face-up cards with premonition, you don't cast them."
+                    "date": "2020-08-14",
+                    "text": "The cards are journeyed one at a time. For example, if the second card from the top is a face-up card with premonition, you cast the card, then journey the card that was originally third from the top. This is a change from previous rulings."
                 }
             ],
             "subtypes": [],

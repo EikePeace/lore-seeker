@@ -154,36 +154,44 @@ class ExportFormatterExperimental < ExportFormatter
   def serialize_sheet(sheet)
     ev = integerize_evs sheet.probabilities
 
+    foil_status = ev.keys.map(&:foil).uniq
+    raise "Sheet must be all-foil or all-nonfoil" unless foil_status == [true] or foil_status == [false]
+
     cards = ev.map do |e, w|
       [
         uuid_for(e.set_code, e.number),
-        {
-          foil: e.foil,
-          weight: w,
-        }
+        w
       ]
     end.sort_by(&:first)
 
-    unless cards.map(&:first).all_different?
-      raise "UUID not unique (foil and nonfoil on same sheet)"
-    end
+    # unless cards.map(&:first).all_different?
+    #   raise "UUID not unique (foil and nonfoil on same sheet)"
+    # end
+
     cards = cards.to_h
 
     {
       balanceColors: sheet.is_a?(ColorBalancedCardSheet) ? true : nil,
-      totalWeight: cards.values.map{|x| x[:weight]}.sum,
       cards: cards,
+      foil: foil_status[0],
+      totalWeight: cards.values.sum,
     }.compact
   end
 
-  def serialize_subpack(pack, weight, sheets)
-    result = super
-    result[:sheets] = result[:sheets].transform_keys(&:camelize)
+  def simplify_name(name, set_code)
+    name.gsub(/\A(#{set_code}_)*(mb1_)?(explicit_)*/i, "").gsub(/_unbalanced/, "").camelize
+  end
+
+  def serialize_subpack(pack, weight, sheets, set_code)
+    result = super(pack, weight, sheets)
+    result[:contents] = result.delete(:sheets).transform_keys{|n| simplify_name(n, set_code) }
     result
   end
 
-  def serialize_sheets(sheets)
-    super.transform_keys(&:camelize)
+  def serialize_sheets(sheets, set_code)
+    result = super(sheets)
+    raise unless result.keys.map{|n| simplify_name(n, set_code)}.all_different?
+    result.transform_keys{|n| simplify_name(n, set_code)}
   end
 
   def data
@@ -193,13 +201,17 @@ class ExportFormatterExperimental < ExportFormatter
       booster_type = booster.code.split("-", 2)[1] || "default"
       booster = flatten_pack(booster)
       sheets = extract_sheets(booster)
+      serialized_sheets = serialize_sheets(sheets, booster.set_code)
+      total_weight = booster.packs.values.sum
+
       result[set_code] ||= {}
       result[set_code][booster_type] = {
         name: booster_type == "default" ? nil : booster.name,
         boosters: booster.packs.map{|subpack, weight|
-          serialize_subpack(subpack, weight, sheets)
+          serialize_subpack(subpack, weight, sheets, booster.set_code)
         },
-        sheets: serialize_sheets(sheets),
+        boostersTotalWeight: total_weight,
+        sheets: serialized_sheets,
       }.compact
     end
     result

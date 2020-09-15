@@ -12,6 +12,9 @@ class ApplicationController < ActionController::Base
     render file: "#{Rails.root}/public/403.html", layout: false, status: 403
   end
 
+  # Lore Seeker extension: bootstrap flash types
+  add_flash_types :danger, :warning, :success, :info
+
   protected
 
   def current_user
@@ -36,7 +39,26 @@ class ApplicationController < ActionController::Base
     Color.color_identity_name(color_identity)
   end
 
-  helper_method :current_user, :dev?, :signed_in?, :exh_card, :color_identity_name
+  def indef_article(text, caps: false)
+    # may not be correct for words starting with <u> pronounced as [ju]
+    if "AEIOUaeiou".include?(text[0])
+      caps ? "An" : "an"
+    else
+      caps ? "A" : "a"
+    end
+  end
+
+  def custard_guild_id
+    481200347189084170
+  end
+
+  def custard_organizer_role_id
+    481201599335628800
+  end
+
+  helper_method :current_user, :dev?, :signed_in?, :exh_card
+  helper_method :color_identity_name, :indef_article, :aware_datetime_field
+  helper_method :custard_guild_id, :custard_organizer_role_id
 
   def current_user=(user)
     @current_user = user

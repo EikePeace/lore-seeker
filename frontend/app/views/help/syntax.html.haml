@@ -175,6 +175,11 @@
       = search_help %Q[ft:"Jaya Ballard"], %Q[cards with "Jaya Ballard" in flavor text]
       = search_help "lore:gideon", %Q[cards mentioning gideon in name, type, or flavor text]
 
+    %h4 Search by flavor name
+    %ul
+      = search_help %Q[fn:*], "cards with any flavor name"
+      = search_help %Q[fn:mothra], "cards with flavor name including mothra (full words only)"
+
     %h4 Search by artist
     %ul
       = search_help %Q[a:argyle], "cards with art drawn by (Steve) Argyle"
@@ -399,6 +404,11 @@
       = search_help 'n:/.{30}/', "cards with names of 30 or more characters"
       = search_help 'rulings:/twitter/', "cards with twitter mentioned in rulings"
 
+    %h4 Search by keyword
+    %div It will generally return creatures and vehicles who have given keyword, and skip cards which merely interact with that keyword without having it themselves.
+    %ul
+      = search_help "keyword:flying", "cards with flying keyword"
+
     %h4 Search by game
     %ul
       = search_help "game:paper", "cards available as tournament-legal paper cards (not oversized or gold-bordered)"
@@ -431,6 +441,7 @@
       = search_help 'deck:"AKH/Gideon"', "cards in Gideon planeswalker deck for Amonkhet"
       = search_help 'deck:"Innistrad / *', "cards in any deck for Innistrad set"
       = search_help 'deck:"ISD/*', "cards in any deck for Innistrad set"
+      = search_help 'deck:"Brian Selden"', "cards in Brian Selden's World Championship deck"
       = search_help 'deck:"*', "cards in any deck"
 
     %h4 Time travel
@@ -469,6 +480,11 @@
       = search_help "sort:rand", "shuffle results"
       = search_help "sort:-number", "sort results by set name and collector number, backwards"
       = search_help "sort:pow,-tou,color", "sort results by power (highest first), then toughness (lowest first), then color"
+
+    %h4 Display all printings
+    %div If multiple printings of same card match, by default only one is shown (with most recent Standard-legal printing having priority). You can choose to see all printings with <code>++</code>:
+    %ul
+      = search_help "++ birds of paradise", "search for all printings of Birds of Paradise"
 
     %h4 Display results
     %div By default results are displayed in detailed format when only one card matches, or in more concise format otherwise. You can select another format.
