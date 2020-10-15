@@ -54,7 +54,7 @@ GLOBAL_KEYS = [
 BASE_PATH = pathlib.Path(os.environ.get('LORESEEKERDATA', '/usr/local/share/fenhl/lore-seeker'))
 CONFIG_PATH = BASE_PATH / 'config.json'
 PIDFILE_PATH = BASE_PATH / 'pidfile'
-DISCORD_BIN = pathlib.Path('/opt/git/github.com/fenhl/lore-seeker-discord/master/target/release/lore-seeker')
+DISCORD_BIN = pathlib.Path('/opt/git/github.com/cs-ech/lore-seeker-discord/master/target/release/lore-seeker')
 
 def cmd(args, *, announce=False, wait=True, check=True, **kwargs):
     if announce:
@@ -169,7 +169,7 @@ def run(*, do_discord=None, do_name_check=True, path=None, port=18803, verbose=F
 if __name__ == '__main__':
     arguments = docopt.docopt(__doc__)
     if arguments['discord']:
-        # quick alias for starting the Discord bot (https://github.com/fenhl/lore-seeker-discord)
+        # quick alias for starting the Discord bot (https://github.com/cs-ech/lore-seeker-discord)
         sys.exit(subprocess.run([str(DISCORD_BIN), *arguments['<command>']]).returncode)
     elif arguments['name-check']:
         sys.exit(int(not name_check(verbose=not arguments['--quiet'])))
