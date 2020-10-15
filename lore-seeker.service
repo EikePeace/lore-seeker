@@ -1,6 +1,6 @@
 [Unit]
 Description=Lore Seeker search engine
-Documentation=https://github.com/fenhl/lore-seeker
+Documentation=https://github.com/cs-ech/lore-seeker
 After=network.target
 
 [Service]
