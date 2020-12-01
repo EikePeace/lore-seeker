@@ -9,8 +9,8 @@ class FormatChocoEternal < FormatStandard
 
   def rotation_schedule
     {
-      "2020-06-01" => [["mh1", "ayr", "soi", "ths", "bng", "jou", "hlw", "shm", "eve", "bfz", "grn", "rna",], []],
-      "2021-01-01" => [["mh1", "ayr", "soi", "ths", "bng", "jou", "hlw", "shm", "eve", "bfz", "grn", "rna", "dom"], []],
+      "2020-06-01" => ["mh1", "ayr", "soi", "ths", "bng", "jou", "hlw", "shm", "eve", "bfz", "grn", "rna",],
+      "2021-01-01" => ["mh1", "ayr", "soi", "ths", "bng", "jou", "hlw", "shm", "eve", "bfz", "grn", "rna", "dom",],
     }
   end
 end
