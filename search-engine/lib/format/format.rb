@@ -249,6 +249,9 @@ class Format
         "custombrawl"                => FormatCustomBrawl,
         "crawl"                      => FormatCustomBrawl,
         "cb"                         => FormatCustomBrawl,
+        "chocoeternal"               => FormatChocoEternal,
+        "chocet"                     => FormatChocoEternal,
+        "choco"                      => FormatChocoEternal,
       }
     end
 
