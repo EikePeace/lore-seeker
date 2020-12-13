@@ -263,7 +263,7 @@ def build_name_map(ver_dir, old, new):
         rename_path = ver_dir / f'name-changes-v{old_version}.txt'
         if rename_path.exists():
             if yesno(f'using existing card name mapping {rename_path}, edit now?'):
-                subprocess.run(['nano', str(rename_path)], check=True)
+                edit_file(rename_path)
         else:
             with rename_path.open('w', encoding='utf-8') as f:
                 print('# name mapping between old version with errata and new version with errata', file=f)
@@ -277,7 +277,7 @@ def build_name_map(ver_dir, old, new):
                 for new_card in new['data']['cards']:
                     if any(old_card['name'] == new_card['name'] for old_card in old['data']['cards']):
                         print(f'{new_card["name"]} => {new_card["name"]}', file=f) #TODO remove these for brevity
-            subprocess.run(['nano', str(rename_path)], check=True)
+            edit_file(rename_path)
         name_map = parse_name_map(rename_path)[0]
         for new_card in new['data']['cards']:
             if new_card['name'] not in name_map:
@@ -415,13 +415,19 @@ def edit(original):
         f.write(original)
         tmp = pathlib.Path(f.name)
     if platform.system() == 'Windows':
-        subprocess.run([str(pathlib.Path.home() / 'AppData' / 'Local' / 'atom' / 'bin' / 'atom.cmd'), '--wait', str(tmp)], check=True)
+        subprocess.run(['C:\\Program Files\\Microsoft VS Code\\bin\\code.md', '--wait', str(tmp)], check=True)
     else:
         subprocess.run(['nano', str(tmp)], check=True)
     with tmp.open(encoding='utf-8') as f:
         edited = f.read()
     tmp.unlink()
     return edited
+
+def edit_file(path):
+    if platform.system() == 'Windows':
+        subprocess.run(['C:\\Program Files\\Microsoft VS Code\\bin\\code.md', '--wait', str(path)], check=True)
+    else:
+        subprocess.run(['nano', str(path)], check=True)
 
 def edit_rulings(card_name, old_rulings):
     rulings_path = STAGE / 'tmp-rulings.json'
