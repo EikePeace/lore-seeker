@@ -1,4 +1,4 @@
-10e	1	5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c	Ancestor's Chosen
+ 10e	1	5f8287b1-5bb6-5f4c-ad17-316a40d5bb0c	Ancestor's Chosen
 10e	1★	b7c19924-b4bf-56fc-aa73-f586e940bd42	Ancestor's Chosen
 10e	2	57aaebc1-850c-503d-9f6e-bb8d00d8bf7c	Angel of Mercy
 10e	2★	8fd4e2eb-3eb4-50ea-856b-ef638fa47f8a	Angel of Mercy
