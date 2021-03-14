@@ -5,8 +5,8 @@ After=network.target
 
 [Service]
 Restart=always
-ExecStartPre=/usr/bin/git fetch origin
-ExecStartPre=/usr/bin/git reset --hard origin/lore-seeker
+#ExecStartPre=/usr/bin/git fetch origin
+#ExecStartPre=/usr/bin/git reset --hard origin/lore-seeker
 ExecStart=/usr/local/share/fenhl/lore-seeker/repo/bin/lore-seeker
 ExecStop=/usr/local/share/fenhl/lore-seeker/repo/bin/lore-seeker stop
 WorkingDirectory=/usr/local/share/fenhl/lore-seeker/repo
